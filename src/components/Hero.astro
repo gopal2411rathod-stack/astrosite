@@ -1,0 +1,132 @@
+---
+const stats = [
+    { value: "23+", label: "Years of Tech Mastery" },
+    { value: "95%", label: "Client Retention" },
+    { value: "2500+", label: "Global Deployments" },
+    { value: "4500+", label: "Architects & Engineers" }
+];
+---
+<section class="hero">
+    <div class="absolute-glow"></div>
+    <div class="container relative-z">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <span class="badge"><i class="fas fa-bolt"></i> Next-Gen AI Implementation</span>
+                <h1>Next-Gen <span>Digital Solutions</span> Engineered.</h1>
+                <p>We build scalable enterprise eCommerce engines, intelligent automation frameworks, and custom digital transformation platforms designed for modern market dominance.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn-premium">Initiate Roadmap <i class="fas fa-arrow-right"></i></a>
+                    <a href="#services" class="btn-secondary">Explore Capabilities</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-card">
+            <div class="stats-grid">
+                {stats.map(stat => (
+                    <div class="stat-item">
+                        <div class="stat-number">{stat.value}</div>
+                        <div class="stat-label">{stat.label}</div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero {
+        background: radial-gradient(circle at top right, #112240 0%, var(--primary) 70%);
+        color: var(--white);
+        padding: 220px 0 140px 0;
+        position: relative;
+        overflow: hidden;
+    }
+    .absolute-glow {
+        position: absolute;
+        top: -10%;
+        right: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(255, 46, 52, 0.12) 0%, transparent 70%);
+        pointer-events: none;
+    }
+    .relative-z { position: relative; z-index: 5; }
+    .badge {
+        background: rgba(255, 46, 52, 0.1);
+        border: 1px solid rgba(255, 46, 52, 0.25);
+        color: var(--accent);
+        padding: 6px 16px;
+        border-radius: 100px;
+        font-size: 0.85rem;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+    .hero h1 {
+        font-size: 4.2rem;
+        line-height: 1.1;
+        font-weight: 800;
+        letter-spacing: -0.04em;
+        margin-bottom: 25px;
+    }
+    .hero h1 span {
+        background: linear-gradient(to right, #FFF, #FF8386);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .hero p {
+        font-size: 1.25rem;
+        color: #94A3B8;
+        max-width: 680px;
+        margin-bottom: 40px;
+        font-weight: 400;
+    }
+    .hero-actions { display: flex; gap: 20px; align-items: center; }
+    .btn-secondary {
+        color: var(--white);
+        font-weight: 600;
+        font-size: 0.95rem;
+        border-bottom: 2px solid rgba(255,255,255,0.2);
+        padding: 8px 0;
+        transition: all 0.3s ease;
+    }
+    .btn-secondary:hover { border-bottom-color: var(--accent); color: var(--accent); }
+
+    /* Stats Card Glassmorphism */
+    .stats-card {
+        background: rgba(11, 21, 40, 0.6);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 24px;
+        padding: 40px;
+        margin-top: 80px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    .stats-grid { display: grid; grid-template-cols: repeat(4, 1fr); gap: 30px; }
+    .stat-item { text-align: center; position: relative; }
+    .stat-item:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        right: -15px;
+        top: 20%;
+        height: 60%;
+        width: 1px;
+        background: rgba(255,255,255,0.1);
+    }
+    .stat-number { font-size: 2.8rem; font-weight: 800; color: var(--white); letter-spacing: -0.02em; }
+    .stat-label { color: #64748B; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; margin-top: 4px; }
+
+    @media (max-width: 992px) {
+        .hero h1 { font-size: 3rem; }
+        .stats-grid { grid-template-cols: repeat(2, 1fr); gap: 40px; }
+        .stat-item:not(:last-child)::after { display: none; }
+    }
+    @media (max-width: 576px) {
+        .hero h1 { font-size: 2.4rem; }
+        .stats-grid { grid-template-cols: 1fr; }
+        .hero-actions { flex-direction: column; align-items: flex-start; }
+    }
+</style>

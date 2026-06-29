@@ -1,0 +1,62 @@
+<section class="consultation" id="contact">
+    <div class="container split-wrapper">
+        <div class="info-side">
+            <span class="section-tag" style="color:#FF6B6F; border-color: rgba(255,107,111,0.3)">Let's Collaborate</span>
+            <h2>Have a system requirement? Let's trace a blueprint.</h2>
+            <p>Connect with a solutions architect immediately for direct deployment analysis.</p>
+            <div class="contact-details">
+                <div class="detail-row"><i class="fas fa-envelope"></i><span>growth@brainvire.com</span></div>
+                <div class="detail-row"><i class="fas fa-map-marker-alt"></i><span>Plano Tech Corridor, Texas</span></div>
+            </div>
+        </div>
+        <div class="form-side">
+            <form class="premium-form">
+                <div class="input-row">
+                    <div class="input-group"><input type="text" placeholder="Full Name" required /></div>
+                    <div class="input-group"><input type="email" placeholder="Corporate Email" required /></div>
+                </div>
+                <div class="input-group"><input type="text" placeholder="Organizational Domain Vertical" /></div>
+                <div class="input-group"><textarea placeholder="Briefly detail your architectural scale requirements..." required></textarea></div>
+                <button type="submit" class="btn-premium" style="justify-content: center; width: 100%;">Transmit Parameters <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<style>
+    .consultation { background: #070E1B; color: var(--white); padding: 120px 0; }
+    .split-wrapper { display: grid; grid-template-cols: 1fr 1fr; gap: 8px; align-items: center; }
+    .info-side { padding-right: 40px; }
+    .info-side h2 { font-size: 2.8rem; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 20px; line-height: 1.2; }
+    .info-side p { color: #94A3B8; font-size: 1.1rem; margin-bottom: 40px; }
+    
+    .contact-details { display: flex; flex-direction: column; gap: 20px; }
+    .detail-row { display: flex; align-items: center; gap: 15px; font-weight: 500; }
+    .detail-row i { color: var(--accent); font-size: 1.2rem; }
+
+    .premium-form { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 50px; border-radius: 24px; backdrop-filter: blur(20px); }
+    .input-row { display: grid; grid-template-cols: 1fr 1fr; gap: 20px; }
+    .input-group { margin-bottom: 20px; }
+    .premium-form input, .premium-form textarea {
+        width: 100%;
+        background: rgba(255,255,255,0.04);
+        border: 1px solid rgba(255,255,255,0.1);
+        padding: 16px 20px;
+        border-radius: 12px;
+        color: var(--white);
+        font-family: var(--font-main);
+        outline: none;
+        transition: all 0.3s ease;
+    }
+    .premium-form input:focus, .premium-form textarea:focus { border-color: var(--accent); background: rgba(255,255,255,0.07); }
+    .premium-form textarea { height: 120px; resize: none; }
+
+    @media (max-width: 992px) {
+        .split-wrapper { grid-template-cols: 1fr; gap: 60px; }
+        .info-side { padding-right: 0; }
+        .premium-form { padding: 30px; }
+    }
+    @media (max-width: 576px) {
+        .input-row { grid-template-cols: 1fr; }
+    }
+</style>

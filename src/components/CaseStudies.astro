@@ -1,0 +1,84 @@
+---
+const cases = [
+    {
+        tag: "Automated Supply Logic",
+        title: "Scaling Adobe Infrastructure across 20+ Union Co-op Footprints",
+        metric: "99.99% Uptime",
+        desc: "Engineered automated supplier architectures configuring live barcode parsing frameworks."
+    },
+    {
+        tag: "Enterprise Core Integration",
+        title: "Arresting Endpoint Latency Profiles for Dubai Refreshment Architecture",
+        metric: "-45% Overhead",
+        desc: "Configured resilient proactive SAP maintenance blueprints running 24/7 endpoint defense protocols."
+    }
+];
+---
+<section class="cases" id="cases">
+    <div class="container">
+        <span class="section-tag">Validation Matrix</span>
+        <h2 class="section-title">Case Transformations</h2>
+        
+        <div class="cases-grid">
+            {cases.map(item => (
+                <div class="case-card">
+                    <div class="case-image-mock">
+                        <span class="case-metric">{item.metric}</span>
+                    </div>
+                    <div class="case-body">
+                        <span class="case-meta-tag">{item.tag}</span>
+                        <h3>{item.title}</h3>
+                        <p>{item.desc}</p>
+                        <a href="#" class="case-link">Deconstruct Project Architecture <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    .cases { padding: 120px 0; }
+    .cases-grid { display: grid; grid-template-cols: repeat(2, 1fr); gap: 40px; margin-top: 50px; }
+    
+    .case-card {
+        border-radius: 24px;
+        background: var(--white);
+        border: 1px solid #E2E8F0;
+        overflow: hidden;
+        transition: all 0.4s var(--transition-cubic);
+    }
+    .case-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 30px 60px rgba(15, 23, 42, 0.08);
+    }
+    .case-image-mock {
+        height: 240px;
+        background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+        position: relative;
+        padding: 30px;
+        display: flex;
+        align-items: flex-end;
+    }
+    .case-metric {
+        background: var(--white);
+        color: var(--primary);
+        padding: 8px 18px;
+        border-radius: 100px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .case-body { padding: 40px; }
+    .case-meta-tag { color: var(--accent); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 10px; }
+    .case-body h3 { font-size: 1.5rem; font-weight: 800; color: var(--primary); margin-bottom: 15px; letter-spacing: -0.02em; }
+    .case-body p { color: var(--text-muted); margin-bottom: 25px; font-size: 1rem; }
+    
+    .case-link { font-weight: 600; color: var(--primary); display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; }
+    .case-link i { transition: transform 0.2s ease; }
+    .case-card:hover .case-link i { transform: translateX(4px); color: var(--accent); }
+
+    @media (max-width: 992px) {
+        .cases-grid { grid-template-cols: 1fr; }
+    }
+</style>
