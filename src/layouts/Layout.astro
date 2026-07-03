@@ -1,124 +1,33 @@
 ---
+
+import Navbar from "../components/Navbar.astro";
+import "../styles/global.css";
+
+
 interface Props {
-	title: string;
+  title?: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const {
+  title = "YourCompany - Retail & Service Software",
+  description = "Software for automotive, autoparts, and hardware retail, plus Odoo and Shopify implementation services.",
+} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Digital Transformation Partner" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+  </body>
 </html>
-
-<style is:global>
-	:root {
-		--primary: #060D1A;
-		--primary-light: #0B1528;
-		--accent: #FF2E34;
-		--accent-glow: rgba(255, 46, 52, 0.4);
-		--text-dark: #0F172A;
-		--text-muted: #475569;
-		--bg-light: #F8FAFC;
-		--white: #FFFFFF;
-		--font-main: 'Plus Jakarta Sans', sans-serif;
-		--transition-cubic: cubic-bezier(0.16, 1, 0.3, 1);
-	}
-
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-
-	html {
-		scroll-behavior: smooth;
-	}
-
-	body {
-		font-family: var(--font-main);
-		color: var(--text-dark);
-		line-height: 1.6;
-		overflow-x: hidden;
-		background-color: var(--white);
-	}
-
-	.container {
-		max-width: 1280px;
-		margin: 0 auto;
-		padding: 0 30px;
-	}
-
-	.section-tag {
-		color: var(--accent);
-		font-weight: 700;
-		text-transform: uppercase;
-		font-size: 0.8rem;
-		letter-spacing: 3px;
-		display: inline-flex;
-		align-items: center;
-		gap: 8px;
-		margin-bottom: 15px;
-	}
-
-	.section-tag::before {
-		content: '';
-		width: 12px;
-		height: 2px;
-		background: var(--accent);
-		display: inline-block;
-	}
-
-	.section-title {
-		font-size: 2.8rem;
-		color: var(--primary);
-		font-weight: 800;
-		letter-spacing: -0.03em;
-		line-height: 1.2;
-		margin-bottom: 20px;
-	}
-
-	/* Premium Interactive Button */
-	.btn-premium {
-		display: inline-flex;
-		align-items: center;
-		gap: 10px;
-		background: var(--accent);
-		color: var(--white);
-		padding: 14px 32px;
-		border-radius: 100px;
-		font-weight: 600;
-		font-size: 0.95rem;
-		box-shadow: 0 4px 20px var(--accent-glow);
-		transition: all 0.4s var(--transition-cubic);
-		border: 1px solid transparent;
-		cursor: pointer;
-	}
-
-	.btn-premium:hover {
-		transform: translateY(-3px) scale(1.02);
-		box-shadow: 0 8px 30px var(--accent-glow);
-		background: #E01B21;
-	}
-
-	.btn-premium i {
-		transition: transform 0.3s ease;
-	}
-
-	.btn-premium:hover i {
-		transform: translateX(4px);
-	}
-</style>
