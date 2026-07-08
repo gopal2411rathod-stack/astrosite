@@ -1,0 +1,125 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+interface Card {
+  title: string;
+  text: string;
+  id?: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  keywords: string;
+  path: string;
+  eyebrow: string;
+  h1: string;
+  intro: string;
+  primaryCta?: string;
+  secondaryCta?: string;
+  sections: {
+    eyebrow?: string;
+    title: string;
+    text: string;
+    cards?: Card[];
+  }[];
+  faq?: Card[];
+}
+
+const {
+  title,
+  description,
+  keywords,
+  path,
+  eyebrow,
+  h1,
+  intro,
+  primaryCta = "Get a Quote",
+  secondaryCta = "Explore Services",
+  sections,
+  faq = [],
+} = Astro.props;
+
+const faqSchema = faq.length
+  ? {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faq.map((item) => ({
+        "@type": "Question",
+        name: item.title,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.text,
+        },
+      })),
+    }
+  : undefined;
+---
+
+<Layout title={title} description={description} keywords={keywords} path={path} schema={faqSchema}>
+  <section class="page-hero section">
+    <div class="container narrow">
+      <p class="eyebrow">{eyebrow}</p>
+      <h1>{h1}</h1>
+      <p class="lead">{intro}</p>
+      <div class="hero-actions">
+        <a class="button" href="/contact-us/">{primaryCta}</a>
+        <a class="button button-ghost" href="/services/">{secondaryCta}</a>
+      </div>
+    </div>
+  </section>
+
+  {sections.map((section, index) => (
+    <section class:list={["section", index % 2 === 1 && "soft-section"]}>
+      <div class="container">
+        <div class="section-heading">
+          {section.eyebrow && <p class="eyebrow">{section.eyebrow}</p>}
+          <h2>{section.title}</h2>
+          <p>{section.text}</p>
+        </div>
+        {section.cards && (
+          <div class="card-grid">
+            {section.cards.map((card) => (
+              <article class="feature-card" id={card.id}>
+                <span class="card-icon" aria-hidden="true">{card.title.slice(0, 1)}</span>
+                <h3>{card.title}</h3>
+                <p>{card.text}</p>
+              </article>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+  ))}
+
+  {faq.length > 0 && (
+    <section class="section soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Common questions</h2>
+          <p>Clear answers before you start a conversation with the Hegrix team.</p>
+        </div>
+        <div class="faq-list">
+          {faq.map((item) => (
+            <details>
+              <summary>{item.title}</summary>
+              <p>{item.text}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="section final-cta">
+    <div class="container split-cta">
+      <div>
+        <p class="eyebrow">Next step</p>
+        <h2>Ready to plan your Hegrix project?</h2>
+        <p>Share your goals and we will map the right technology, timeline and launch path.</p>
+      </div>
+      <a class="button" href="/contact-us/">Start a project</a>
+    </div>
+  </section>
+</Layout>

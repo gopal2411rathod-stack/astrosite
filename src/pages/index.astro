@@ -1,315 +1,265 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-const modules = [
-  { code: "SOL-01", type: "Solution", name: "Automotive Software", desc: "Service bays, sales, and inventory in one system.", href: "/solutions/automotive" },
-  { code: "SOL-02", type: "Solution", name: "Autoparts Software", desc: "Catalog, price, and move parts without guesswork.", href: "/solutions/autoparts" },
-  { code: "SOL-03", type: "Solution", name: "Hardware Store Software", desc: "Point of sale and stock control built for hardware retail.", href: "/solutions/hardware-store" },
-  { code: "SVC-01", type: "Service", name: "Odoo Service", desc: "Implementation, customization, and support for Odoo.", href: "/services/odoo" },
-  { code: "SVC-02", type: "Service", name: "Shopify Service", desc: "Storefront build, migration, and ongoing Shopify support.", href: "/services/shopify" },
+const services = [
+  ["Custom Software Development", "Plan, design and build secure platforms tailored to your workflows, users and growth targets."],
+  ["eCommerce Development", "Launch high-converting storefronts, B2B portals and headless commerce experiences with clean operations behind them."],
+  ["Marketplace Development", "Create vendor onboarding, product catalogs, commissions, fulfillment and dashboards for multi-sided businesses."],
+  ["ERP & CRM Development", "Connect teams, customers, inventory, finance and reporting through practical ERP and CRM systems."],
+  ["AI & Automation", "Automate repetitive work, knowledge retrieval, document processing and internal decision support with responsible AI."],
+  ["Cloud & DevOps", "Ship reliable applications with scalable infrastructure, observability, CI/CD and performance monitoring."],
+];
+
+const solutions = [
+  ["B2B Commerce", "Quote workflows, bulk ordering, negotiated pricing and account-level buying experiences."],
+  ["Inventory & POS", "Real-time stock, purchasing, barcode workflows and retail operations in one system."],
+  ["Customer Portals", "Self-service dashboards for orders, tickets, invoices, documents and project visibility."],
+];
+
+const industries = ["Retail", "Automotive", "Manufacturing", "Healthcare", "Logistics", "Real Estate"];
+const tech = ["Astro", "React", "Next.js", "Node.js", "Laravel", "Python", "Odoo", "Shopify", "AWS", "PostgreSQL"];
+const process = ["Discover", "Plan", "Design", "Build", "Test", "Launch", "Optimize"];
+const faqs = [
+  ["How quickly can Hegrix start?", "Most discovery calls can be scheduled within two business days. After scope alignment, the delivery team can usually begin within one to two weeks."],
+  ["Do you provide SEO-friendly development?", "Yes. Hegrix builds semantic pages, clean URLs, structured metadata, fast layouts and accessible components from the start."],
+  ["Can you modernize an existing system?", "Yes. We can audit your current platform, prioritize risks and migrate in stages so the business keeps moving."],
+];
+const blogs = [
+  ["How to Plan a Scalable B2B Commerce Platform", "/blog/"],
+  ["ERP Integration Mistakes That Slow Growing Teams", "/blog/"],
+  ["Where AI Automation Creates the Fastest Business Value", "/blog/"],
 ];
 ---
 
-<Layout>
-  <!-- Hero -->
+<Layout
+  title="Hegrix | Custom Software, Commerce, AI and ERP Development Company"
+  description="Hegrix builds premium custom software, ecommerce platforms, marketplaces, ERP, CRM, AI automation and mobile apps for growth-focused businesses."
+  keywords="Hegrix, custom software development company, ecommerce development, marketplace development, AI automation, ERP CRM development"
+  path="/"
+>
   <section class="hero">
-    <div class="wrap hero-inner">
-      <div class="hero-copy">
-        <p class="eyebrow">Retail & Service Software</p>
-        <h1>Built for the parts you sell<br />and the systems you run on.</h1>
-        <p class="hero-sub">
-          Purpose-built software for automotive, autoparts, and hardware retail -
-          plus hands-on Odoo and Shopify implementation when you need a partner, not just a platform.
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Premium software development company</p>
+        <h1>Digital platforms engineered for growth, automation and scale.</h1>
+        <p class="lead">
+          Hegrix designs and develops high-performance ecommerce, marketplace, ERP,
+          CRM, AI automation and mobile solutions for businesses that need more than
+          a template.
         </p>
         <div class="hero-actions">
-          <a href="/contact" class="btn-primary">Talk to us</a>
-          <a href="#directory" class="btn-secondary">View the directory</a>
+          <a class="button" href="/contact-us/">Get a Quote</a>
+          <a class="button button-ghost" href="/portfolio/">View Our Work</a>
+        </div>
+        <div class="trust-row" aria-label="Trust signals">
+          <span class="trust-pill">Free consultation</span>
+          <span class="trust-pill">NDA available</span>
+          <span class="trust-pill">SEO-ready delivery</span>
         </div>
       </div>
 
-      <div class="hero-panel" aria-hidden="true">
-        <p class="panel-label">Live status</p>
-        <div class="panel-row"><span>Inventory sync</span><span class="dot dot-on"></span></div>
-        <div class="panel-row"><span>POS terminals</span><span class="dot dot-on"></span></div>
-        <div class="panel-row"><span>Storefront</span><span class="dot dot-on"></span></div>
-        <div class="panel-row"><span>Support queue</span><span class="dot dot-idle"></span></div>
+      <div class="platform-visual" aria-label="Hegrix platform dashboard illustration">
+        <div class="dashboard-card">
+          <p>Commerce command center</p>
+          <div class="visual-bars"><span></span><span></span><span></span></div>
+        </div>
+        <div class="metric-row">
+          <div class="metric"><strong>98%</strong><span>Launch quality</span></div>
+          <div class="metric"><strong>42%</strong><span>Faster ops</span></div>
+          <div class="metric"><strong>24/7</strong><span>Monitoring</span></div>
+        </div>
+        <div class="dashboard-card">
+          <p>AI workflow active</p>
+          <div class="visual-bars"><span></span><span></span><span></span></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Module directory: the signature element, doubles as a real index -->
-  <section class="directory" id="directory">
-    <div class="wrap">
-      <p class="eyebrow">Directory</p>
-      <h2>Solutions and services, indexed.</h2>
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Trusted by ambitious teams</p>
+        <h2>Built for companies that value reliability, clarity and measurable outcomes.</h2>
+      </div>
+      <div class="logo-cloud" aria-label="Representative client categories">
+        <span>Retail</span><span>SaaS</span><span>Health</span><span>Auto</span><span>ERP</span><span>AI</span>
+      </div>
+    </div>
+  </section>
 
-      <div class="directory-grid">
-        {modules.map((m) => (
-          <a class="module-card" href={m.href}>
-            <div class="module-top">
-              <span class="module-code">{m.code}</span>
-              <span class="module-type">{m.type}</span>
-            </div>
-            <h3 class="module-name">{m.name}</h3>
-            <p class="module-desc">{m.desc}</p>
-            <span class="module-arrow" aria-hidden="true">&rarr;</span>
+  <section class="section soft-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Services</p>
+        <h2>Everything needed to plan, build and grow a serious digital platform.</h2>
+        <p>Each service is designed around business outcomes, clean architecture and long-term maintainability.</p>
+      </div>
+      <div class="card-grid">
+        {services.map(([title, text]) => (
+          <article class="feature-card">
+            <span class="card-icon" aria-hidden="true">{title.slice(0, 1)}</span>
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split-band">
+      <div class="section-heading">
+        <p class="eyebrow">Solutions</p>
+        <h2>Business software shaped around the way your team sells, serves and operates.</h2>
+        <p>Hegrix connects customer experience with internal operations so growth does not create chaos.</p>
+        <div class="hero-actions"><a class="button" href="/solutions/">Explore Solutions</a></div>
+      </div>
+      <div class="card-grid">
+        {solutions.map(([title, text]) => (
+          <article class="feature-card">
+            <span class="card-icon" aria-hidden="true">{title.slice(0, 1)}</span>
+            <h3>{title}</h3>
+            <p>{text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Why choose Hegrix</p>
+        <h2>Senior thinking, conversion-aware design and dependable engineering in one team.</h2>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><strong>120+</strong><span>Projects planned and delivered</span></div>
+        <div class="stat-card"><strong>12+</strong><span>Industries supported</span></div>
+        <div class="stat-card"><strong>35+</strong><span>Product and engineering specialists</span></div>
+        <div class="stat-card"><strong>98%</strong><span>Client satisfaction target</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Industries we serve</p>
+        <h2>Practical platforms for industries with real operational complexity.</h2>
+      </div>
+      <div class="card-grid">
+        {industries.map((industry) => (
+          <a class="feature-card" href="/industries/">
+            <span class="card-icon" aria-hidden="true">{industry.slice(0, 1)}</span>
+            <h3>{industry}</h3>
+            <p>Digital systems tailored to the workflows, buying journeys and reporting needs of {industry.toLowerCase()} teams.</p>
           </a>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta-band">
-    <div class="wrap cta-inner">
-      <div>
-        <p class="eyebrow">Get started</p>
-        <h2>Tell us what you run today.</h2>
+  <section class="section soft-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Portfolio</p>
+        <h2>Selected project patterns Hegrix can deliver.</h2>
       </div>
-      <a href="/contact" class="btn-primary">Talk to us</a>
+      <div class="card-grid">
+        <article class="case-card"><h3>B2B Ordering Portal</h3><p>Account pricing, quote approval, inventory visibility and self-service ordering for sales teams.</p></article>
+        <article class="case-card"><h3>AI Document Workflow</h3><p>OCR extraction, approval queues and ERP posting to reduce manual finance operations.</p></article>
+        <article class="case-card"><h3>Marketplace Operations Hub</h3><p>Vendor onboarding, catalog controls, commission tracking and customer dashboards.</p></article>
+      </div>
     </div>
   </section>
 
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <span>&copy; {new Date().getFullYear()} YourCompany</span>
-      <span class="footer-links">
-        <a href="/contact">Contact</a>
-      </span>
+  <section class="section">
+    <div class="container split-band">
+      <div class="section-heading">
+        <p class="eyebrow">Technologies</p>
+        <h2>Modern tools chosen for performance, security and maintainability.</h2>
+        <p>We select platforms based on the product strategy, not trends alone.</p>
+      </div>
+      <div class="logo-cloud">
+        {tech.map((item) => <span>{item}</span>)}
+      </div>
     </div>
-  </footer>
+  </section>
+
+  <section class="section soft-section">
+    <div class="container split-band">
+      <div class="section-heading">
+        <p class="eyebrow">Process</p>
+        <h2>A clear delivery path from idea to launch and ongoing optimization.</h2>
+      </div>
+      <div class="process-list">
+        {process.map((item, index) => (
+          <div class="process-item">
+            <span>{index + 1}</span>
+            <div><h3>{item}</h3><p>Structured collaboration keeps scope, quality and timelines visible.</p></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Client testimonials</p>
+        <h2>Trust is built through thoughtful communication and dependable delivery.</h2>
+      </div>
+      <div class="card-grid">
+        <article class="testimonial-card"><p>"Hegrix brought structure to our roadmap and helped us launch a cleaner customer experience."</p><h3>Operations Director</h3></article>
+        <article class="testimonial-card"><p>"Their team translated a complex workflow into software our staff actually wanted to use."</p><h3>Retail Founder</h3></article>
+        <article class="testimonial-card"><p>"Performance, SEO and maintainability were considered from day one."</p><h3>Marketing Lead</h3></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">FAQs</p>
+        <h2>Useful answers for project owners.</h2>
+      </div>
+      <div class="faq-list">
+        {faqs.map(([title, text]) => (
+          <details>
+            <summary>{title}</summary>
+            <p>{text}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Latest blogs</p>
+        <h2>Insights for better digital decisions.</h2>
+      </div>
+      <div class="card-grid">
+        {blogs.map(([title, href]) => (
+          <a class="blog-card" href={href}>
+            <h3>{title}</h3>
+            <p>Read practical guidance from the Hegrix team.</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section final-cta">
+    <div class="container split-cta">
+      <div>
+        <p class="eyebrow">Contact CTA</p>
+        <h2>Have a platform idea, bottleneck or modernization goal?</h2>
+        <p>Book a free consultation and get a clear next-step plan from Hegrix.</p>
+      </div>
+      <a class="button button-light" href="/contact-us/">Get a Quote</a>
+    </div>
+  </section>
 </Layout>
-
-<style>
-  /* Hero */
-  .hero {
-    background: var(--ink);
-    color: var(--paper);
-  }
-
-  .hero-inner {
-    padding: 88px 32px 96px;
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 48px;
-    align-items: center;
-  }
-
-  .hero-copy h1 {
-    font-size: clamp(2.1rem, 4vw, 3.2rem);
-    margin: 18px 0 24px;
-    color: var(--paper);
-  }
-
-  .hero-sub {
-    font-size: 1.05rem;
-    color: rgba(239, 241, 238, 0.7);
-    max-width: 46ch;
-    margin-bottom: 32px;
-  }
-
-  .hero-actions {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    background: var(--signal);
-    color: var(--ink);
-    padding: 14px 24px;
-    border-radius: var(--radius);
-    transition: filter 0.15s ease;
-  }
-
-  .btn-primary:hover {
-    filter: brightness(1.08);
-  }
-
-  .btn-secondary {
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--paper);
-    padding: 14px 24px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: var(--radius);
-    transition: border-color 0.15s ease;
-  }
-
-  .btn-secondary:hover {
-    border-color: var(--signal);
-  }
-
-  .hero-panel {
-    background: var(--ink-soft);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: var(--radius);
-    padding: 20px;
-  }
-
-  .panel-label {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(239, 241, 238, 0.45);
-    margin-bottom: 14px;
-  }
-
-  .panel-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    padding: 10px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-  }
-
-  .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-  }
-
-  .dot-on {
-    background: #6fbf73;
-  }
-
-  .dot-idle {
-    background: var(--signal);
-  }
-
-  /* Directory */
-  .directory {
-    padding: 88px 0;
-  }
-
-  .directory h2 {
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    margin: 14px 0 40px;
-  }
-
-  .directory-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-
-  .module-card {
-    position: relative;
-    display: block;
-    background: var(--paper-raised);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 22px 20px 26px;
-    transition: border-color 0.15s ease, transform 0.15s ease;
-  }
-
-  .module-card:hover {
-    border-color: var(--signal);
-    transform: translateY(-2px);
-  }
-
-  .module-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 14px;
-  }
-
-  .module-code {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--signal);
-  }
-
-  .module-type {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--steel);
-  }
-
-  .module-name {
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-  }
-
-  .module-desc {
-    font-size: 0.88rem;
-    color: var(--steel);
-    line-height: 1.5;
-    margin-bottom: 18px;
-  }
-
-  .module-arrow {
-    font-family: var(--font-mono);
-    color: var(--ink);
-  }
-
-  /* CTA band */
-  .cta-band {
-    background: var(--deep-blue);
-    color: var(--paper);
-  }
-
-  .cta-inner {
-    padding: 56px 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-
-  .cta-inner h2 {
-    color: var(--paper);
-    font-size: clamp(1.4rem, 2.6vw, 1.9rem);
-    margin-top: 8px;
-  }
-
-  .cta-inner .eyebrow {
-    color: var(--signal);
-  }
-
-  /* Footer */
-  .site-footer {
-    background: var(--ink);
-    color: rgba(239, 241, 238, 0.6);
-  }
-
-  .footer-inner {
-    padding: 24px 32px;
-    display: flex;
-    justify-content: space-between;
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-  }
-
-  .footer-links a:hover {
-    color: var(--signal);
-  }
-
-  @media (max-width: 900px) {
-    .hero-inner {
-      grid-template-columns: 1fr;
-    }
-    .directory-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
-  @media (max-width: 600px) {
-    .directory-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-</style>

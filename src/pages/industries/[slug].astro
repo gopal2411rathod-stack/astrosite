@@ -1,0 +1,42 @@
+---
+import SeoPage from "../../components/SeoPage.astro";
+import { industryPages } from "../../data/catalog";
+
+export function getStaticPaths() {
+  return industryPages.map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+
+const sections = [
+  {
+    eyebrow: "Industry detail",
+    title: `${page.title} built around real workflows.`,
+    text: page.description,
+    cards: [
+      { title: "Customer Experience", text: "Design buying, booking, ordering or service journeys that are clear and conversion-focused." },
+      { title: "Operations", text: "Connect teams, inventory, documents, reporting and approvals with practical digital workflows." },
+      { title: "Scalable Technology", text: "Use secure, fast and maintainable architecture that supports industry-specific growth." },
+    ],
+  },
+  {
+    eyebrow: "Related services",
+    title: "Match industry needs with the right Hegrix capabilities.",
+    text: "Common fits include custom software, ecommerce, marketplaces, ERP and CRM, AI automation, portals and cloud infrastructure.",
+  },
+];
+---
+
+<SeoPage
+  title={`${page.title} | Hegrix`}
+  description={`${page.description} Hegrix builds industry-specific software with premium UX, SEO-friendly structure and scalable engineering.`}
+  keywords={`${page.keyword}, Hegrix, industry software development`}
+  path={`/industries/${page.slug}/`}
+  eyebrow="Hegrix Industry"
+  h1={page.title}
+  intro={`${page.description} Hegrix creates digital platforms that fit your industry, customers and operational reality.`}
+  sections={sections}
+/>

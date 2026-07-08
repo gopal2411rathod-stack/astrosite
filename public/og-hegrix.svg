@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Hegrix digital platforms engineered for growth">
+  <rect width="1200" height="630" fill="#f5f9ff"/>
+  <circle cx="1010" cy="120" r="220" fill="#eaf3ff"/>
+  <rect x="72" y="72" width="1056" height="486" rx="42" fill="#071a3d"/>
+  <rect x="110" y="112" width="86" height="86" rx="24" fill="#0b55d9"/>
+  <path d="M132 136h18v25h28v-25h18v62h-18v-24h-28v24h-18v-62Z" fill="#fff"/>
+  <text x="224" y="162" fill="#fff" font-family="Arial, sans-serif" font-size="42" font-weight="800">Hegrix</text>
+  <text x="110" y="286" fill="#fff" font-family="Arial, sans-serif" font-size="70" font-weight="900">Digital platforms</text>
+  <text x="110" y="366" fill="#bde3ff" font-family="Arial, sans-serif" font-size="54" font-weight="800">engineered for growth.</text>
+  <text x="110" y="438" fill="#dbeafe" font-family="Arial, sans-serif" font-size="28">Software, commerce, ERP, CRM and AI automation</text>
+  <rect x="774" y="150" width="260" height="250" rx="28" fill="#0b55d9"/>
+  <rect x="814" y="198" width="180" height="18" rx="9" fill="#fff" opacity=".75"/>
+  <rect x="814" y="244" width="130" height="18" rx="9" fill="#fff" opacity=".45"/>
+  <rect x="814" y="290" width="158" height="18" rx="9" fill="#fff" opacity=".6"/>
+  <circle cx="866" cy="386" r="48" fill="#1fb6ff"/>
+</svg>

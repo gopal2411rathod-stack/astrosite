@@ -1,0 +1,47 @@
+---
+import SeoPage from "../../components/SeoPage.astro";
+import { servicePages } from "../../data/catalog";
+
+export function getStaticPaths() {
+  return servicePages.map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+
+const sections = [
+  {
+    eyebrow: "Service detail",
+    title: `${page.title} designed for measurable business outcomes.`,
+    text: page.description,
+    cards: [
+      { title: "Discovery", text: "We map goals, users, workflows, integrations and technical risks before development starts." },
+      { title: "UX and Architecture", text: "Hegrix creates clear user journeys and scalable technical foundations for long-term growth." },
+      { title: "Build and Optimize", text: "Your solution is developed, tested, launched and improved with performance and SEO in mind." },
+    ],
+  },
+  {
+    eyebrow: "Internal links",
+    title: "Plan this service with the right solution path.",
+    text: "Explore related Hegrix solutions, industries and case studies to understand how this service becomes a complete business platform.",
+    cards: [
+      { title: "Solutions", text: "Connect this service to B2B commerce, portals, ERP integration or AI automation." },
+      { title: "Industries", text: "See how the service applies to retail, automotive, manufacturing, healthcare and more." },
+      { title: "Contact", text: "Share your project goals and get a practical roadmap from Hegrix." },
+    ],
+  },
+];
+---
+
+<SeoPage
+  title={`${page.title} Services | Hegrix`}
+  description={`${page.description} Work with Hegrix for strategy, design, development, launch and optimization.`}
+  keywords={`${page.keyword}, Hegrix, software development company`}
+  path={`/services/${page.slug}/`}
+  eyebrow="Hegrix Service"
+  h1={page.title}
+  intro={`${page.description} Hegrix delivers this service with clean UX, reliable engineering, SEO-friendly structure and conversion-focused execution.`}
+  sections={sections}
+/>

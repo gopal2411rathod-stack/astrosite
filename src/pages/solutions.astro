@@ -1,0 +1,40 @@
+---
+import SeoPage from "../components/SeoPage.astro";
+
+const sections = [
+  {
+    eyebrow: "Business solutions",
+    title: "Digital solutions built around outcomes.",
+    text: "Hegrix creates software that improves revenue operations, customer self-service, team productivity and decision visibility.",
+    cards: [
+      { id: "b2b-commerce", title: "B2B Commerce Platform", text: "Account pricing, quote requests, approval flows, bulk orders and order tracking for business buyers." },
+      { id: "marketplace-platform", title: "Multi-Vendor Marketplace", text: "Vendor onboarding, catalog management, commissions, payouts, fulfillment and moderation." },
+      { id: "inventory-pos", title: "Inventory & POS System", text: "Stock control, purchasing, barcode workflows, point-of-sale and multi-location reporting." },
+      { id: "customer-portal", title: "Customer Portal", text: "Secure dashboards for tickets, invoices, projects, orders, documents and communication." },
+      { id: "erp-integration", title: "ERP Integration", text: "Connect ecommerce, finance, inventory, CRM and analytics into a single operating view." },
+      { id: "ai-automation", title: "AI Business Automation", text: "Reduce repetitive work with intelligent assistants, OCR, routing and knowledge retrieval." },
+    ],
+  },
+  {
+    eyebrow: "Internal links",
+    title: "Every solution connects to your service strategy.",
+    text: "Solution pages should link naturally to Services, Industries, Case Studies and Contact Us to support SEO and conversion paths.",
+    cards: [
+      { title: "Services", text: "Show how Hegrix builds and supports each solution." },
+      { title: "Industries", text: "Explain where each solution creates the most value." },
+      { title: "Case Studies", text: "Use proof and measurable results to increase trust." },
+    ],
+  },
+];
+---
+
+<SeoPage
+  title="Business Software Solutions | Hegrix"
+  description="Discover Hegrix solutions for B2B commerce, marketplaces, inventory, POS, customer portals, ERP integration and AI automation."
+  keywords="business software solutions, B2B commerce platform, marketplace solution, ERP integration"
+  path="/solutions/"
+  eyebrow="Solutions"
+  h1="Business software solutions shaped around how your company operates."
+  intro="Hegrix turns complex sales, service and operational workflows into scalable digital systems."
+  sections={sections}
+/>

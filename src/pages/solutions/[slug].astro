@@ -1,0 +1,42 @@
+---
+import SeoPage from "../../components/SeoPage.astro";
+import { solutionPages } from "../../data/catalog";
+
+export function getStaticPaths() {
+  return solutionPages.map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+
+const sections = [
+  {
+    eyebrow: "Solution detail",
+    title: `${page.title} for teams that need cleaner operations and better customer journeys.`,
+    text: page.description,
+    cards: [
+      { title: "Business Fit", text: "We define the users, workflows, permissions, reports and conversion goals the solution must support." },
+      { title: "Platform Design", text: "Hegrix creates the interface, data model and integrations needed for a dependable launch." },
+      { title: "Growth Ready", text: "The solution is built for performance, SEO, accessibility, maintainability and future iteration." },
+    ],
+  },
+  {
+    eyebrow: "Recommended next step",
+    title: "Turn this solution into a project roadmap.",
+    text: "Hegrix can connect this solution with custom software development, ecommerce, ERP, CRM, AI automation and industry-specific workflows.",
+  },
+];
+---
+
+<SeoPage
+  title={`${page.title} | Hegrix Business Software Solution`}
+  description={`${page.description} Hegrix designs and develops scalable business software solutions for growth-focused teams.`}
+  keywords={`${page.keyword}, Hegrix solutions, business software solutions`}
+  path={`/solutions/${page.slug}/`}
+  eyebrow="Hegrix Solution"
+  h1={page.title}
+  intro={`${page.description} Hegrix helps you plan, design and build this solution around your business model and customer experience.`}
+  sections={sections}
+/>

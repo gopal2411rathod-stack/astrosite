@@ -1,0 +1,32 @@
+---
+import SeoPage from "../components/SeoPage.astro";
+
+const sections = [
+  {
+    eyebrow: "Terms",
+    title: "Terms for using the Hegrix website.",
+    text: "These terms describe acceptable use of the website, intellectual property, service inquiries, external links, limitations and updates.",
+    cards: [
+      { title: "Website Use", text: "Visitors agree to use the website lawfully and avoid activity that harms security, availability or content integrity." },
+      { title: "Intellectual Property", text: "Website content, brand elements and design assets belong to Hegrix unless otherwise stated." },
+      { title: "Service Information", text: "Website content is informational and does not create a service agreement until a written contract is executed." },
+      { title: "External Links", text: "Hegrix may link to third-party websites but is not responsible for their content or policies." },
+      { title: "Limitation", text: "The website is provided as available. Hegrix aims for accuracy but does not guarantee uninterrupted access." },
+      { title: "Updates", text: "Terms may be updated over time. Continued website use means acceptance of the latest version." },
+    ],
+  },
+];
+---
+
+<SeoPage
+  title="Terms and Conditions | Hegrix"
+  description="Review Hegrix terms and conditions for website use, content, service inquiries, intellectual property and limitations."
+  keywords="Hegrix terms and conditions, website terms"
+  path="/terms-and-conditions/"
+  eyebrow="Terms & Conditions"
+  h1="Terms and Conditions"
+  intro="These terms provide a practical website terms structure for Hegrix and should be reviewed by legal counsel before final publication."
+  sections={sections}
+  primaryCta="Contact Hegrix"
+  secondaryCta="Read Privacy Policy"
+/>

@@ -1,0 +1,30 @@
+---
+import SeoPage from "../components/SeoPage.astro";
+
+const sections = [
+  {
+    eyebrow: "Selected work",
+    title: "Portfolio examples that show how Hegrix thinks.",
+    text: "Use this page to showcase real projects as they become available. The structure is ready for SEO-friendly portfolio entries.",
+    cards: [
+      { title: "B2B Commerce Portal", text: "A self-service ordering experience with quote requests, account pricing and ERP-backed inventory." },
+      { title: "Operations Dashboard", text: "A reporting hub connecting finance, orders, support and inventory into one leadership view." },
+      { title: "AI Document Processor", text: "A workflow that extracts, validates and routes documents to reduce manual back-office effort." },
+      { title: "Marketplace Platform", text: "A vendor-driven commerce system with onboarding, catalog controls and commission reporting." },
+      { title: "Mobile Field App", text: "A fast mobile interface for field teams that need tasks, notes and customer history on the move." },
+      { title: "Headless Storefront", text: "A fast content-rich ecommerce experience optimized for SEO and Core Web Vitals." },
+    ],
+  },
+];
+---
+
+<SeoPage
+  title="Software Development Portfolio | Hegrix"
+  description="View Hegrix portfolio examples across ecommerce, marketplaces, AI automation, dashboards, mobile apps and custom software."
+  keywords="software development portfolio, ecommerce portfolio, custom software projects"
+  path="/portfolio/"
+  eyebrow="Portfolio"
+  h1="Selected work that reflects strategic design and dependable engineering."
+  intro="Explore the kinds of digital platforms Hegrix can design, build and optimize for growth-focused companies."
+  sections={sections}
+/>

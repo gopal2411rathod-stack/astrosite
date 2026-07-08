@@ -1,0 +1,35 @@
+---
+import SeoPage from "../components/SeoPage.astro";
+
+const sections = [
+  {
+    eyebrow: "Careers",
+    title: "Build meaningful software with a focused team.",
+    text: "Hegrix looks for people who care about craft, communication and software that genuinely helps users.",
+    cards: [
+      { title: "Product Designer", text: "Shape user journeys, interfaces and design systems for business-critical platforms." },
+      { title: "Frontend Engineer", text: "Build fast, accessible and responsive experiences with modern frontend tools." },
+      { title: "Backend Engineer", text: "Create secure APIs, integrations, data models and automation workflows." },
+      { title: "SEO Strategist", text: "Improve technical SEO, content architecture and conversion journeys for clients." },
+      { title: "Project Lead", text: "Keep discovery, delivery, quality and communication moving with clarity." },
+      { title: "QA Engineer", text: "Protect product quality through testing, accessibility checks and release discipline." },
+    ],
+  },
+  {
+    eyebrow: "Hiring process",
+    title: "Simple, respectful and skill-focused.",
+    text: "Candidates should understand the role, expectations, interview stages and decision timeline before investing time.",
+  },
+];
+---
+
+<SeoPage
+  title="Careers at Hegrix | Software and Digital Product Jobs"
+  description="Join Hegrix and help build premium software, ecommerce, ERP, CRM, AI automation and mobile platforms."
+  keywords="Hegrix careers, software developer jobs, UI UX jobs, digital product careers"
+  path="/careers/"
+  eyebrow="Careers"
+  h1="Build meaningful software with Hegrix."
+  intro="Join a team focused on thoughtful design, clean engineering and practical digital transformation."
+  sections={sections}
+/>

@@ -1,0 +1,32 @@
+---
+import SeoPage from "../components/SeoPage.astro";
+
+const faq = [
+  { title: "What does Hegrix build?", text: "Hegrix builds custom software, ecommerce platforms, marketplaces, ERP and CRM systems, AI automation workflows, mobile apps and cloud-backed digital products." },
+  { title: "How much does a project cost?", text: "Cost depends on scope, integrations, design complexity, timeline and support needs. Hegrix starts with discovery to define a realistic estimate." },
+  { title: "Will we own the source code?", text: "Yes. Project ownership terms are defined in the agreement, and source code ownership can be transferred according to the contract." },
+  { title: "Do you provide ongoing support?", text: "Yes. Hegrix can provide maintenance, monitoring, SEO improvements, performance optimization and feature development after launch." },
+  { title: "Can Hegrix improve an existing website?", text: "Yes. We can audit UX, SEO, performance, accessibility, technical architecture and conversion paths before recommending improvements." },
+  { title: "Do you sign NDAs?", text: "Yes. Hegrix can sign an NDA before reviewing confidential product, customer or business information." },
+];
+
+const sections = [
+  {
+    eyebrow: "Answers",
+    title: "Frequently asked questions before starting a project.",
+    text: "This page supports buyers, improves SEO with FAQPage schema and links visitors toward Services, Solutions and Contact Us.",
+  },
+];
+---
+
+<SeoPage
+  title="Software Development FAQ | Hegrix"
+  description="Find answers about Hegrix pricing, timelines, ownership, support, SEO, accessibility and software development process."
+  keywords="software development FAQ, Hegrix FAQ, software project questions"
+  path="/faq/"
+  eyebrow="FAQ"
+  h1="Questions before we start?"
+  intro="Here are clear answers about how Hegrix plans, builds, launches and supports digital platforms."
+  sections={sections}
+  faq={faq}
+/>

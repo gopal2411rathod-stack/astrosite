@@ -1,0 +1,37 @@
+---
+import SeoPage from "../components/SeoPage.astro";
+
+const sections = [
+  {
+    eyebrow: "Who we are",
+    title: "A product-minded software partner for teams that need dependable execution.",
+    text: "Hegrix combines strategy, UX, engineering and optimization so your digital platform supports real business growth.",
+    cards: [
+      { title: "Strategy First", text: "We clarify users, workflows, revenue goals and technical risks before writing production code." },
+      { title: "Senior Delivery", text: "Experienced designers and engineers shape systems that are easy to use, extend and maintain." },
+      { title: "Long-Term Support", text: "After launch, Hegrix helps improve performance, SEO, reliability and new feature delivery." },
+    ],
+  },
+  {
+    eyebrow: "Values",
+    title: "Built on clarity, ownership and measurable progress.",
+    text: "Our process keeps stakeholders aligned through clear milestones, transparent communication and practical technical decisions.",
+    cards: [
+      { title: "Transparent Roadmaps", text: "Know what is being built, why it matters and when it will ship." },
+      { title: "Quality Standards", text: "Accessibility, security, speed and clean UX are part of the baseline." },
+      { title: "Business Outcomes", text: "We focus on conversion, operational efficiency and customer experience." },
+    ],
+  },
+];
+---
+
+<SeoPage
+  title="About Hegrix | Software Development Company"
+  description="Learn about Hegrix, a premium software development company building ecommerce, ERP, CRM, AI automation and mobile platforms."
+  keywords="about Hegrix, software development company, digital product development team"
+  path="/about-us/"
+  eyebrow="About Hegrix"
+  h1="We build reliable digital systems for growing businesses."
+  intro="Hegrix helps companies design, develop and scale software platforms that improve customer experience and operational performance."
+  sections={sections}
+/>

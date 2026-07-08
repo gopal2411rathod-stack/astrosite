@@ -1,39 +1,83 @@
-<footer>
-    <div class="container footer-grid">
-        <div class="footer-brand">
-            <a href="#" class="logo-f">brainvire<span>.</span></a>
-            <p>High-yield digital transformation architects deploying intelligent application infrastructure globally.</p>
-        </div>
-        <div class="footer-links-col">
-            <h4>Solutions</h4>
-            <a href="#">Headless Commerce</a>
-            <a href="#">Machine Processing AI</a>
-            <a href="#">Cloud Automation</a>
-        </div>
-        <div class="footer-links-col">
-            <h4>Global Offices</h4>
-            <p>North America (HQ)</p>
-            <p>Middle East (EMEA)</p>
-            <p>Asia Pacific (APAC)</p>
-        </div>
+---
+import { industryPages, servicePages, solutionPages } from "../data/catalog";
+
+const columns = [
+  {
+    title: "Company",
+    links: [
+      ["About Us", "/about-us/"],
+      ["Careers", "/careers/"],
+      ["Contact Us", "/contact-us/"],
+      ["Portfolio", "/portfolio/"],
+      ["Case Studies", "/case-studies/"],
+    ],
+  },
+  {
+    title: "Services",
+    links: servicePages.map((item) => [item.title, `/services/${item.slug}/`]),
+  },
+  {
+    title: "Solutions",
+    links: solutionPages.slice(0, 5).map((item) => [item.title, `/solutions/${item.slug}/`]),
+  },
+  {
+    title: "Industries",
+    links: industryPages.slice(0, 5).map((item) => [item.title, `/industries/${item.slug}/`]),
+  },
+];
+---
+
+<footer class="footer">
+  <div class="container footer-cta">
+    <div>
+      <p class="eyebrow">Ready to build</p>
+      <h2>Let Hegrix turn your next platform idea into a scalable product.</h2>
     </div>
-    <div class="container footer-bottom">
-        <p>&copy; 2026 Brainvire Inc. System Architecture Replica.</p>
+    <a class="button button-light" href="/contact-us/">Book a free consultation</a>
+  </div>
+
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand footer-logo" href="/">
+        <span class="brand-mark">H</span>
+        <span class="brand-text">Hegrix</span>
+      </a>
+      <p>
+        Hegrix is a premium software development company building commerce, ERP, CRM,
+        AI automation and mobile platforms for ambitious businesses.
+      </p>
+      <form class="newsletter" aria-label="Newsletter subscription" onsubmit="event.preventDefault();">
+        <label for="newsletter-email">Get practical digital growth insights</label>
+        <div>
+          <input id="newsletter-email" type="email" placeholder="you@company.com" />
+          <button type="submit">Subscribe</button>
+        </div>
+      </form>
     </div>
+
+    {columns.map((column) => (
+      <div class="footer-column">
+        <h3>{column.title}</h3>
+        {column.links.map(([label, href]) => <a href={href}>{label}</a>)}
+      </div>
+    ))}
+    <div class="footer-column">
+      <h3>Resources</h3>
+      <a href="/blog/">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/privacy-policy/">Privacy Policy</a>
+      <a href="/terms-and-conditions/">Terms &amp; Conditions</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>Contact: <a href="mailto:hello@hegrix.com">hello@hegrix.com</a> | +1 (555) 018-2048</p>
+    <p>
+      <a href="https://www.linkedin.com/company/hegrix">LinkedIn</a>
+      <a href="https://x.com/hegrix">X</a>
+      <a href="https://www.youtube.com/@hegrix">YouTube</a>
+    </p>
+    <p>Copyright {new Date().getFullYear()} Hegrix. All rights reserved.</p>
+  </div>
 </footer>
-
-<style>
-    footer { background: #040810; padding: 100px 0 40px 0; color: #64748B; border-top: 1px solid rgba(255,255,255,0.05); }
-    .footer-grid { display: grid; grid-template-cols: 2fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
-    .logo-f { font-size: 1.8rem; font-weight: 800; color: var(--white); letter-spacing: -0.04em; margin-bottom: 20px; display: inline-block; }
-    .logo-f span { color: var(--accent); }
-    .footer-brand p { max-width: 320px; font-size: 0.95rem; line-height: 1.6; }
-    .footer-links-col h4 { color: var(--white); font-weight: 700; margin-bottom: 20px; font-size: 1rem; }
-    .footer-links-col a, .footer-links-col p { display: block; margin-bottom: 12px; font-size: 0.95rem; transition: color 0.2s ease; }
-    .footer-links-col a:hover { color: var(--white); }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 30px; font-size: 0.85rem; text-align: center; }
-
-    @media (max-width: 768px) {
-        .footer-grid { grid-template-cols: 1fr; gap: 40px; }
-    }
-</style>

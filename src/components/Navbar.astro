@@ -1,422 +1,72 @@
 ---
-// src/components/Navbar.astro
-const solutions = [
-  { code: "SOL-01", name: "Automotive Software", href: "/solutions/automotive", desc: "Run service bays, sales, and inventory in one system." },
-  { code: "SOL-02", name: "Autoparts Software", href: "/solutions/autoparts", desc: "Catalog, price, and move parts without guesswork." },
-  { code: "SOL-03", name: "Hardware Store Software", href: "/solutions/hardware-store", desc: "Point of sale and stock control built for hardware retail." },
-];
-
-const services = [
-  { code: "SVC-01", name: "Odoo Service", href: "/services/odoo", desc: "Implementation, customization, and support for Odoo." },
-  { code: "SVC-02", name: "Shopify Service", href: "/services/shopify", desc: "Storefront build, migration, and ongoing Shopify support." },
-];
+import { industryPages, servicePages, solutionPages } from "../data/catalog";
 ---
 
-<header class="nav">
-  <div class="nav-inner wrap">
-    <a href="/" class="brand">
-      <span class="brand-mark">/&gt;</span>
-      <span class="brand-name">YourCompany</span>
+<header class="site-header">
+  <div class="nav-shell container">
+    <a class="brand" href="/" aria-label="Hegrix home">
+      <span class="brand-mark">H</span>
+      <span class="brand-text">Hegrix</span>
     </a>
 
-    <nav class="links" aria-label="Primary">
-      <a href="/" class="link">Home</a>
-
-      <div class="dropdown">
-        <button class="link dropdown-trigger" aria-expanded="false" aria-controls="menu-solutions">
-          Solutions
-          <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="dropdown-panel" id="menu-solutions">
-          <ul>
-            {solutions.map((item) => (
-              <li>
-                <a href={item.href}>
-                  <span class="item-code">{item.code}</span>
-                  <span class="item-body">
-                    <span class="item-name">{item.name}</span>
-                    <span class="item-desc">{item.desc}</span>
-                  </span>
-                </a>
-              </li>
-            ))}
-          </ul>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="/">Home</a>
+      <div class="nav-group">
+        <a href="/services/">Services</a>
+        <div class="mega-panel">
+          {servicePages.map((item) => <a href={`/services/${item.slug}/`}>{item.title}</a>)}
         </div>
       </div>
-
-      <div class="dropdown">
-        <button class="link dropdown-trigger" aria-expanded="false" aria-controls="menu-services">
-          Services
-          <svg class="chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="dropdown-panel" id="menu-services">
-          <ul>
-            {services.map((item) => (
-              <li>
-                <a href={item.href}>
-                  <span class="item-code">{item.code}</span>
-                  <span class="item-body">
-                    <span class="item-name">{item.name}</span>
-                    <span class="item-desc">{item.desc}</span>
-                  </span>
-                </a>
-              </li>
-            ))}
-          </ul>
+      <div class="nav-group">
+        <a href="/solutions/">Solutions</a>
+        <div class="mega-panel">
+          {solutionPages.map((item) => <a href={`/solutions/${item.slug}/`}>{item.title}</a>)}
         </div>
       </div>
-
-      <a href="/contact" class="link">Contact</a>
+      <div class="nav-group">
+        <a href="/industries/">Industries</a>
+        <div class="mega-panel compact">
+          {industryPages.map((item) => <a href={`/industries/${item.slug}/`}>{item.title}</a>)}
+        </div>
+      </div>
+      <a href="/portfolio/">Portfolio</a>
+      <a href="/case-studies/">Case Studies</a>
+      <a href="/blog/">Blog</a>
+      <a href="/about-us/">About Us</a>
+      <a href="/contact-us/">Contact Us</a>
     </nav>
 
-    <a href="/contact" class="cta">Get in touch</a>
+    <a class="quote-button" href="/contact-us/">Get a Quote</a>
 
-    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" id="menu-toggle">
-      <span></span><span></span><span></span>
+    <button class="menu-button" id="menu-button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
   </div>
 
-  <!-- Mobile menu -->
-  <div class="mobile-panel" id="mobile-panel">
-    <a href="/" class="mobile-link">Home</a>
-
-    <div class="mobile-group">
-      <p class="mobile-heading">Solutions</p>
-      {solutions.map((item) => (
-        <a href={item.href} class="mobile-sublink">
-          <span class="item-code">{item.code}</span> {item.name}
-        </a>
-      ))}
-    </div>
-
-    <div class="mobile-group">
-      <p class="mobile-heading">Services</p>
-      {services.map((item) => (
-        <a href={item.href} class="mobile-sublink">
-          <span class="item-code">{item.code}</span> {item.name}
-        </a>
-      ))}
-    </div>
-
-    <a href="/contact" class="mobile-link">Contact</a>
-  </div>
+  <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="/services/">Services</a>
+    <a href="/solutions/">Solutions</a>
+    <a href="/industries/">Industries</a>
+    <a href="/portfolio/">Portfolio</a>
+    <a href="/case-studies/">Case Studies</a>
+    <a href="/blog/">Blog</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/careers/">Careers</a>
+    <a href="/faq/">FAQ</a>
+    <a href="/contact-us/" class="mobile-cta">Get a Quote</a>
+  </nav>
 </header>
 
-<style>
-  .nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: var(--ink);
-    color: var(--paper);
-    height: var(--nav-height);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  }
-
-  .nav-inner {
-    height: var(--nav-height);
-    display: flex;
-    align-items: center;
-    gap: 32px;
-  }
-
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--font-mono);
-    font-weight: 500;
-    font-size: 1rem;
-    letter-spacing: 0.02em;
-    margin-right: auto;
-  }
-
-  .brand-mark {
-    color: var(--signal);
-    font-family: var(--font-mono);
-  }
-
-  .links {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    height: 100%;
-  }
-
-  .link {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    height: 100%;
-    padding: 0 16px;
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: rgba(239, 241, 238, 0.75);
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    transition: color 0.15s ease;
-  }
-
-  .link::after {
-    content: "";
-    position: absolute;
-    left: 16px;
-    right: 16px;
-    bottom: 0;
-    height: 2px;
-    background: var(--signal);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.2s ease;
-  }
-
-  .link:hover,
-  .dropdown:hover .dropdown-trigger,
-  .dropdown-trigger[aria-expanded="true"] {
-    color: var(--paper);
-  }
-
-  .link:hover::after,
-  .dropdown-trigger[aria-expanded="true"]::after {
-    transform: scaleX(1);
-  }
-
-  .chevron {
-    transition: transform 0.2s ease;
-  }
-
-  .dropdown-trigger[aria-expanded="true"] .chevron {
-    transform: rotate(180deg);
-  }
-
-  .dropdown {
-    height: 100%;
-    position: relative;
-  }
-
-  .dropdown-panel {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -6px);
-    width: 340px;
-    background: var(--ink-soft);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: var(--radius);
-    padding: 8px;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
-  }
-
-  .dropdown:hover .dropdown-panel,
-  .dropdown-panel.is-open {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(-50%, 0);
-  }
-
-  .dropdown-panel ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .dropdown-panel li + li {
-    border-top: 1px solid rgba(255, 255, 255, 0.06);
-  }
-
-  .dropdown-panel a {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 12px 10px;
-    border-radius: var(--radius);
-    transition: background 0.15s ease;
-  }
-
-  .dropdown-panel a:hover {
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  .item-code {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    color: var(--signal);
-    padding-top: 2px;
-    flex-shrink: 0;
-  }
-
-  .item-body {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
-
-  .item-name {
-    font-family: var(--font-body);
-    font-weight: 600;
-    font-size: 0.88rem;
-    color: var(--paper);
-    text-transform: none;
-    letter-spacing: normal;
-  }
-
-  .item-desc {
-    font-family: var(--font-body);
-    font-size: 0.78rem;
-    color: rgba(239, 241, 238, 0.55);
-    line-height: 1.4;
-  }
-
-  .cta {
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    background: var(--signal);
-    color: var(--ink);
-    padding: 10px 18px;
-    border-radius: var(--radius);
-    white-space: nowrap;
-    transition: filter 0.15s ease;
-  }
-
-  .cta:hover {
-    filter: brightness(1.08);
-  }
-
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    width: 32px;
-    height: 32px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-  }
-
-  .menu-toggle span {
-    display: block;
-    height: 2px;
-    background: var(--paper);
-    border-radius: 2px;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-  }
-
-  .menu-toggle[aria-expanded="true"] span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-  .menu-toggle[aria-expanded="true"] span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-toggle[aria-expanded="true"] span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-
-  .mobile-panel {
-    display: none;
-    flex-direction: column;
-    background: var(--ink);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 8px 24px 24px;
-  }
-
-  .mobile-panel.is-open {
-    display: flex;
-  }
-
-  .mobile-link {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--paper);
-    padding: 16px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  }
-
-  .mobile-group {
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  }
-
-  .mobile-heading {
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--signal);
-    margin-bottom: 8px;
-  }
-
-  .mobile-sublink {
-    display: block;
-    font-size: 0.9rem;
-    color: rgba(239, 241, 238, 0.85);
-    padding: 8px 0;
-  }
-
-  .mobile-sublink .item-code {
-    padding-top: 0;
-  }
-
-  @media (max-width: 860px) {
-    .links,
-    .cta {
-      display: none;
-    }
-    .menu-toggle {
-      display: flex;
-    }
-  }
-</style>
-
 <script>
-  // Dropdown toggle for keyboard/touch users; hover still works via CSS.
-  const triggers = document.querySelectorAll<HTMLButtonElement>(".dropdown-trigger");
+  const button = document.getElementById("menu-button");
+  const menu = document.getElementById("mobile-menu");
 
-  triggers.forEach((trigger) => {
-    const panel = trigger.nextElementSibling as HTMLElement | null;
-    if (!panel) return;
-
-    trigger.addEventListener("click", () => {
-      const isOpen = trigger.getAttribute("aria-expanded") === "true";
-
-      triggers.forEach((t) => t.setAttribute("aria-expanded", "false"));
-      document.querySelectorAll(".dropdown-panel").forEach((p) => p.classList.remove("is-open"));
-
-      if (!isOpen) {
-        trigger.setAttribute("aria-expanded", "true");
-        panel.classList.add("is-open");
-      }
-    });
-  });
-
-  document.addEventListener("click", (e) => {
-    const target = e.target as Node;
-    const isInsideDropdown = Array.from(document.querySelectorAll(".dropdown")).some((d) => d.contains(target));
-    if (!isInsideDropdown) {
-      triggers.forEach((t) => t.setAttribute("aria-expanded", "false"));
-      document.querySelectorAll(".dropdown-panel").forEach((p) => p.classList.remove("is-open"));
-    }
-  });
-
-  // Mobile menu toggle
-  const menuToggle = document.getElementById("menu-toggle");
-  const mobilePanel = document.getElementById("mobile-panel");
-
-  menuToggle?.addEventListener("click", () => {
-    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-expanded", String(!isOpen));
-    mobilePanel?.classList.toggle("is-open");
+  button?.addEventListener("click", () => {
+    const isOpen = button.getAttribute("aria-expanded") === "true";
+    button.setAttribute("aria-expanded", String(!isOpen));
+    menu?.classList.toggle("is-open", !isOpen);
   });
 </script>

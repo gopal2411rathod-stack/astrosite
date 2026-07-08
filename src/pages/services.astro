@@ -1,0 +1,47 @@
+---
+import SeoPage from "../components/SeoPage.astro";
+
+const sections = [
+  {
+    eyebrow: "Core services",
+    title: "End-to-end software development services.",
+    text: "From discovery to launch, Hegrix covers the capabilities needed to build modern, SEO-friendly and conversion-focused digital platforms.",
+    cards: [
+      { id: "custom-software", title: "Custom Software Development", text: "Workflow platforms, portals, SaaS products and internal systems built around your exact business process." },
+      { id: "ecommerce", title: "eCommerce Development", text: "Fast storefronts, B2B commerce, checkout optimization, product catalogs and integrations." },
+      { id: "marketplace", title: "Marketplace Development", text: "Vendor management, commissions, product moderation, order flows and marketplace dashboards." },
+      { id: "erp-crm", title: "ERP & CRM Development", text: "Implementation, customization and integration for connected sales, operations and reporting." },
+      { id: "mobile-apps", title: "Mobile App Development", text: "Responsive mobile experiences and app interfaces that support field teams and customers." },
+      { id: "ai-automation", title: "AI & Automation", text: "Document processing, AI assistants, knowledge search, workflow routing and operational automation." },
+      { id: "cloud-devops", title: "Cloud & DevOps", text: "Infrastructure, deployment workflows, observability and performance monitoring for reliable products." },
+    ],
+  },
+  {
+    eyebrow: "Engagement",
+    title: "Flexible delivery models for different project stages.",
+    text: "Choose a focused discovery sprint, full product build, dedicated team or continuous optimization partnership.",
+    cards: [
+      { title: "Discovery Sprint", text: "Validate scope, roadmap, UX structure, risks and launch priorities." },
+      { title: "Full Build", text: "Design, develop, test and launch your product with a complete Hegrix team." },
+      { title: "Optimization Retainer", text: "Improve performance, SEO, conversion rate, reliability and features after launch." },
+    ],
+  },
+];
+
+const faq = [
+  { title: "Which technologies does Hegrix use?", text: "We commonly use Astro, React, Next.js, Node.js, Laravel, Python, Shopify, Odoo, AWS and modern databases depending on the project." },
+  { title: "Do you handle design and development?", text: "Yes. Hegrix can manage UX strategy, UI design, frontend, backend, integrations, testing and launch." },
+];
+---
+
+<SeoPage
+  title="Software Development Services | Hegrix"
+  description="Explore Hegrix services including custom software, ecommerce, marketplace, ERP, CRM, mobile app, AI automation and cloud development."
+  keywords="software development services, ecommerce development services, AI automation services, ERP CRM development"
+  path="/services/"
+  eyebrow="Services"
+  h1="End-to-end software development services for modern businesses."
+  intro="Hegrix helps you plan, design, build and optimize digital platforms that are fast, accessible, scalable and ready for growth."
+  sections={sections}
+  faq={faq}
+/>

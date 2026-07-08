@@ -1,0 +1,32 @@
+---
+import SeoPage from "../components/SeoPage.astro";
+
+const sections = [
+  {
+    eyebrow: "Privacy",
+    title: "How Hegrix handles information.",
+    text: "This policy explains the types of information collected through the website, how it may be used and how visitors can contact Hegrix about privacy questions.",
+    cards: [
+      { title: "Information Collected", text: "Contact forms may collect name, email, company, service interest and project details submitted by visitors." },
+      { title: "Use of Information", text: "Information is used to respond to inquiries, provide services, improve website quality and maintain business communication." },
+      { title: "Data Protection", text: "Hegrix uses reasonable administrative and technical safeguards to protect submitted information." },
+      { title: "Cookies and Analytics", text: "The website may use privacy-conscious analytics to understand performance and improve user experience." },
+      { title: "Third Parties", text: "Information is not sold. Limited service providers may support hosting, email, analytics or operations." },
+      { title: "Contact", text: "Privacy questions can be sent to hello@hegrix.com." },
+    ],
+  },
+];
+---
+
+<SeoPage
+  title="Privacy Policy | Hegrix"
+  description="Read the Hegrix privacy policy explaining how website and inquiry information may be collected, used and protected."
+  keywords="Hegrix privacy policy, website privacy policy"
+  path="/privacy-policy/"
+  eyebrow="Privacy Policy"
+  h1="Privacy Policy"
+  intro="Hegrix respects visitor and client privacy. This page provides a production-ready privacy policy structure to review with legal counsel."
+  sections={sections}
+  primaryCta="Contact Hegrix"
+  secondaryCta="Read Terms"
+/>

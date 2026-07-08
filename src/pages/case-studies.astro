@@ -1,0 +1,32 @@
+---
+import SeoPage from "../components/SeoPage.astro";
+
+const sections = [
+  {
+    eyebrow: "Proof",
+    title: "Case studies built around challenge, approach and result.",
+    text: "Strong case studies improve trust, SEO and conversion by showing how Hegrix solves real business problems.",
+    cards: [
+      { title: "Commerce Modernization", text: "Challenge: slow buying process. Approach: redesigned catalog and ordering flow. Result: faster buyer self-service." },
+      { title: "ERP Workflow Automation", text: "Challenge: manual duplicate entry. Approach: integration and validation rules. Result: cleaner operations." },
+      { title: "Customer Portal Launch", text: "Challenge: high support volume. Approach: self-service dashboard. Result: fewer repetitive support requests." },
+    ],
+  },
+  {
+    eyebrow: "Recommended structure",
+    title: "Every case study should answer the buyer's real questions.",
+    text: "Include business context, technical constraints, UX decisions, integrations, timeline, measurable outcomes and links to related services.",
+  },
+];
+---
+
+<SeoPage
+  title="Software Development Case Studies | Hegrix"
+  description="Explore Hegrix case study formats showing challenges, solutions and outcomes across commerce, ERP, CRM, AI and custom software."
+  keywords="software development case studies, ecommerce case study, ERP automation case study"
+  path="/case-studies/"
+  eyebrow="Case Studies"
+  h1="Real problems, practical solutions and measurable results."
+  intro="Hegrix case studies are structured to build confidence through clear context, thoughtful execution and business outcomes."
+  sections={sections}
+/>

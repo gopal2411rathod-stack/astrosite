@@ -1,0 +1,30 @@
+---
+import SeoPage from "../components/SeoPage.astro";
+
+const sections = [
+  {
+    eyebrow: "Insights",
+    title: "Software, commerce, AI and growth articles.",
+    text: "The Hegrix blog should educate buyers, support SEO clusters and link visitors to relevant services and solutions.",
+    cards: [
+      { title: "How to Plan a Scalable B2B Commerce Platform", text: "Learn the UX, catalog, pricing and integration decisions that matter before development starts." },
+      { title: "ERP Integration Mistakes That Slow Growing Teams", text: "Avoid the common data, ownership and workflow problems that hurt adoption." },
+      { title: "Where AI Automation Creates Business Value", text: "Identify practical AI use cases across support, finance, operations and sales." },
+      { title: "Core Web Vitals for B2B Websites", text: "Understand how speed, stability and interaction quality affect SEO and conversion." },
+      { title: "Marketplace Features Buyers Expect", text: "Plan vendor onboarding, payments, moderation, reviews and customer trust systems." },
+      { title: "How to Choose a Software Development Partner", text: "Questions to ask before investing in custom software or a platform rebuild." },
+    ],
+  },
+];
+---
+
+<SeoPage
+  title="Software, eCommerce and AI Blog | Hegrix"
+  description="Read Hegrix insights on custom software, ecommerce, ERP, CRM, AI automation, Core Web Vitals and digital growth strategy."
+  keywords="software development blog, ecommerce blog, AI automation insights, digital transformation blog"
+  path="/blog/"
+  eyebrow="Blog"
+  h1="Insights for better software, commerce and automation decisions."
+  intro="Practical articles from Hegrix to help business leaders plan smarter digital platforms."
+  sections={sections}
+/>

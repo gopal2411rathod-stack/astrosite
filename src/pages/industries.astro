@@ -1,0 +1,35 @@
+---
+import SeoPage from "../components/SeoPage.astro";
+
+const sections = [
+  {
+    eyebrow: "Industry expertise",
+    title: "Software for industries with real workflows and real pressure.",
+    text: "Hegrix adapts strategy, UX and architecture to each industry rather than forcing generic software patterns.",
+    cards: [
+      { id: "retail", title: "Retail", text: "Commerce, POS, inventory, loyalty, reporting and customer experience platforms." },
+      { id: "automotive", title: "Automotive", text: "Parts catalogs, service workflows, quote tools, dealership portals and stock visibility." },
+      { id: "manufacturing", title: "Manufacturing", text: "Production dashboards, supplier workflows, order tracking and ERP integrations." },
+      { id: "healthcare", title: "Healthcare", text: "Secure portals, appointment workflows, document management and operational reporting." },
+      { id: "logistics", title: "Logistics", text: "Shipment dashboards, route visibility, partner portals and automation workflows." },
+      { id: "real-estate", title: "Real Estate", text: "Lead management, property portals, booking tools and CRM-connected websites." },
+    ],
+  },
+  {
+    eyebrow: "Conversion path",
+    title: "Each industry page should guide visitors to relevant services.",
+    text: "Use internal links from industries to Services, Solutions and Case Studies so visitors quickly see the right proof and next step.",
+  },
+];
+---
+
+<SeoPage
+  title="Industry-Specific Software Solutions | Hegrix"
+  description="Hegrix builds software solutions for retail, automotive, manufacturing, healthcare, logistics, real estate and other growing industries."
+  keywords="industry software solutions, retail software development, automotive software, healthcare software development"
+  path="/industries/"
+  eyebrow="Industries"
+  h1="Software solutions for industries where reliability matters."
+  intro="From retail operations to healthcare portals, Hegrix builds digital systems that match your industry, users and growth model."
+  sections={sections}
+/>
