@@ -10,13 +10,18 @@
             </div>
         </div>
         <div class="form-side">
-            <form class="premium-form">
+            <form
+                class="premium-form"
+                action="mailto:info@hegrix.com?subject=Project%20inquiry%20from%20Hegrix.com"
+                method="post"
+                enctype="text/plain"
+            >
                 <div class="input-row">
-                    <div class="input-group"><input type="text" placeholder="Full Name" required /></div>
-                    <div class="input-group"><input type="email" placeholder="Corporate Email" required /></div>
+                    <div class="input-group"><input type="text" name="name" placeholder="Full Name" required /></div>
+                    <div class="input-group"><input type="email" name="email" placeholder="Corporate Email" required /></div>
                 </div>
-                <div class="input-group"><input type="text" placeholder="Organizational Domain Vertical" /></div>
-                <div class="input-group"><textarea placeholder="Briefly detail your architectural scale requirements..." required></textarea></div>
+                <div class="input-group"><input type="text" name="organization_domain" placeholder="Organizational Domain Vertical" /></div>
+                <div class="input-group"><textarea name="message" placeholder="Briefly detail your architectural scale requirements..." required></textarea></div>
                 <button type="submit" class="btn-premium" style="justify-content: center; width: 100%;">Transmit Parameters <i class="fas fa-paper-plane"></i></button>
             </form>
         </div>
