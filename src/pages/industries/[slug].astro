@@ -2,6 +2,8 @@
 import SeoPage from "../../components/SeoPage.astro";
 import { industryPages } from "../../data/catalog";
 
+export const prerender = true;
+
 export function getStaticPaths() {
   return industryPages.map((page) => ({
     params: { slug: page.slug },
@@ -40,3 +42,4 @@ const sections = [
   intro={`${page.description} Hegrix creates digital platforms that fit your industry, customers and operational reality.`}
   sections={sections}
 />
+

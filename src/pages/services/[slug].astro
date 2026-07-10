@@ -2,6 +2,8 @@
 import SeoPage from "../../components/SeoPage.astro";
 import { servicePages } from "../../data/catalog";
 
+export const prerender = true;
+
 export function getStaticPaths() {
   return servicePages.map((page) => ({
     params: { slug: page.slug },
@@ -45,3 +47,4 @@ const sections = [
   intro={`${page.description} Hegrix delivers this service with clean UX, reliable engineering, SEO-friendly structure and conversion-focused execution.`}
   sections={sections}
 />
+

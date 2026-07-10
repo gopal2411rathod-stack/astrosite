@@ -27,37 +27,153 @@ import Layout from "../layouts/Layout.astro";
         <p>Best internal links: review our <a href="/services/">services</a>, <a href="/solutions/">solutions</a> and <a href="/case-studies/">case studies</a> before your call.</p>
       </div>
 
-      <form
-        class="contact-form"
-        action="mailto:gopal2411rathod@gmail.com?subject=Project%20inquiry%20from%20Hegrix.com"
-        method="post"
-        enctype="text/plain"
-        aria-label="Project inquiry form"
-      >
+      <form class="contact-form lead-form" aria-label="Lead generation form">
         <label>
-          Full name
-          <input type="text" name="name" placeholder="Your name" required />
+          Full Name
+          <input type="text" name="fullName" placeholder="Your full name" autocomplete="name" required />
         </label>
         <label>
-          Work email
-          <input type="email" name="email" placeholder="you@company.com" required />
+          Company Name
+          <input type="text" name="companyName" placeholder="Your company" autocomplete="organization" required />
         </label>
         <label>
-          Service interest
-          <select name="service">
-            <option>Custom software development</option>
-            <option>eCommerce development</option>
-            <option>Marketplace development</option>
-            <option>ERP or CRM development</option>
-            <option>AI automation</option>
+          Email Address
+          <input type="email" name="email" placeholder="you@company.com" autocomplete="email" required />
+        </label>
+        <label>
+          Mobile Number
+          <div class="phone-input">
+            <select name="countryCode" aria-label="Country code" required>
+              <option value="+91">India +91</option>
+              <option value="+1">United States +1</option>
+              <option value="+44">United Kingdom +44</option>
+              <option value="+61">Australia +61</option>
+              <option value="+971">United Arab Emirates +971</option>
+              <option value="+65">Singapore +65</option>
+              <option value="+49">Germany +49</option>
+              <option value="+33">France +33</option>
+              <option value="+81">Japan +81</option>
+              <option value="+86">China +86</option>
+              <option value="+880">Bangladesh +880</option>
+              <option value="+94">Sri Lanka +94</option>
+              <option value="+977">Nepal +977</option>
+              <option value="+27">South Africa +27</option>
+              <option value="+55">Brazil +55</option>
+              <option value="+52">Mexico +52</option>
+              <option value="+39">Italy +39</option>
+              <option value="+34">Spain +34</option>
+              <option value="+31">Netherlands +31</option>
+              <option value="+966">Saudi Arabia +966</option>
+            </select>
+            <input type="tel" name="mobileNumber" placeholder="98765 43210" autocomplete="tel-national" required />
+          </div>
+        </label>
+        <label>
+          Country
+          <select name="country" autocomplete="country-name" required>
+            <option value="">Select country</option>
+            <option>India</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Australia</option>
+            <option>United Arab Emirates</option>
+            <option>Singapore</option>
+            <option>Germany</option>
+            <option>France</option>
+            <option>Japan</option>
+            <option>China</option>
+            <option>Bangladesh</option>
+            <option>Sri Lanka</option>
+            <option>Nepal</option>
+            <option>South Africa</option>
+            <option>Brazil</option>
+            <option>Mexico</option>
+            <option>Italy</option>
+            <option>Spain</option>
+            <option>Netherlands</option>
+            <option>Saudi Arabia</option>
           </select>
         </label>
         <label>
-          Project brief
+          Description/Message
           <textarea name="message" placeholder="Tell us what you want to build or improve." required></textarea>
         </label>
-        <button class="button" type="submit">Send Project Brief</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <button class="button" type="submit">Submit</button>
       </form>
     </div>
   </section>
+
+  <div class="success-popup" role="dialog" aria-modal="true" aria-labelledby="lead-success-title" hidden>
+    <div class="success-popup__panel">
+      <button class="success-popup__close" type="button" aria-label="Close confirmation">&times;</button>
+      <h2 id="lead-success-title">Thank you!</h2>
+      <p>Thank you! Your request has been submitted successfully. Our team will contact you shortly.</p>
+    </div>
+  </div>
 </Layout>
+
+<script>
+  const leadForm = document.querySelector(".lead-form");
+  const statusMessage = document.querySelector(".form-status");
+  const successPopup = document.querySelector(".success-popup");
+  const closePopupButton = document.querySelector(".success-popup__close");
+
+  const showPopup = () => {
+    successPopup?.removeAttribute("hidden");
+  };
+
+  const hidePopup = () => {
+    successPopup?.setAttribute("hidden", "");
+  };
+
+  closePopupButton?.addEventListener("click", hidePopup);
+  successPopup?.addEventListener("click", (event) => {
+    if (event.target === successPopup) {
+      hidePopup();
+    }
+  });
+
+  leadForm?.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!(leadForm instanceof HTMLFormElement)) {
+      return;
+    }
+
+    const submitButton = leadForm.querySelector("button[type='submit']");
+    const formData = new FormData(leadForm);
+    const payload = Object.fromEntries(formData.entries());
+
+    if (statusMessage) {
+      statusMessage.textContent = "";
+    }
+
+    submitButton?.setAttribute("disabled", "");
+
+    try {
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Please check the form and try again.");
+      }
+
+      leadForm.reset();
+      showPopup();
+    } catch (error) {
+      if (statusMessage) {
+        statusMessage.textContent = error instanceof Error ? error.message : "Something went wrong. Please try again.";
+      }
+    } finally {
+      submitButton?.removeAttribute("disabled");
+    }
+  });
+</script>

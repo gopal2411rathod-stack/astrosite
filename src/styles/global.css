@@ -856,3 +856,78 @@ summary:focus-visible {
     animation-duration: 0.001ms !important;
   }
 }
+
+.phone-input {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.48fr) 1fr;
+  gap: 10px;
+}
+
+.form-status {
+  min-height: 22px;
+  color: #b42318;
+  font-weight: 750;
+}
+
+.contact-form button[disabled] {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
+.success-popup[hidden] {
+  display: none;
+}
+
+.success-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(7, 26, 61, 0.58);
+}
+
+.success-popup__panel {
+  position: relative;
+  width: min(100%, 520px);
+  padding: 34px;
+  border-radius: var(--radius);
+  background: white;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.success-popup__panel p {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 1.04rem;
+}
+
+.success-popup__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--blue-950);
+  background: white;
+  font-size: 1.45rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 680px) {
+  .phone-input {
+    grid-template-columns: 1fr;
+  }
+
+  .success-popup__panel {
+    padding: 30px 22px;
+  }
+}
