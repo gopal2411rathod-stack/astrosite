@@ -1,5 +1,6 @@
 import type { APIRoute } from "astro";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
 import { dirname, join } from "node:path";
 import { randomUUID } from "node:crypto";
 import net from "node:net";
@@ -9,7 +10,8 @@ export const prerender = false;
 
 const successMessage = "Thank you! Your request has been submitted successfully. Our team will contact you shortly.";
 const recipientEmail = process.env.LEAD_EMAIL_TO || "gopal2411rathod@gmail.com";
-const leadsFile = join(process.cwd(), ".data", "leads.json");
+const leadsDirectory = process.env.LEAD_STORAGE_DIR || (process.env.VERCEL ? tmpdir() : join(process.cwd(), ".data"));
+const leadsFile = join(leadsDirectory, "leads.json");
 
 type LeadPayload = {
   fullName?: unknown;
@@ -277,7 +279,6 @@ export const POST: APIRoute = async ({ request }) => {
 
   return jsonResponse({ message: successMessage });
 };
-
 
 
 
