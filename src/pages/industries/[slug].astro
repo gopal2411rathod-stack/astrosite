@@ -1,4 +1,5 @@
 ---
+import Layout from "../../layouts/Layout.astro";
 import SeoPage from "../../components/SeoPage.astro";
 import { industryPages } from "../../data/catalog";
 
@@ -12,6 +13,7 @@ export function getStaticPaths() {
 }
 
 const { page } = Astro.props;
+const isAutomotive = page.slug === "automotive";
 
 const sections = [
   {
@@ -30,16 +32,314 @@ const sections = [
     text: "Common fits include custom software, ecommerce, marketplaces, ERP and CRM, AI automation, portals and cloud infrastructure.",
   },
 ];
+
+const automotiveChallenges = [
+  "Complex supply chains",
+  "Thousands of spare parts and components",
+  "Production scheduling delays",
+  "Inventory shortages or excess stock",
+  "Quality and compliance pressure",
+  "Manual procurement processes",
+  "Limited real-time operational visibility",
+  "Warranty and service complexity",
+  "Demand forecasting gaps",
+  "Rising operating costs",
+];
+
+const automotiveCapabilities = [
+  { title: "Production Planning", text: "Manage manufacturing orders, bills of materials, routing, work centers and production schedules." },
+  { title: "Inventory Management", text: "Track raw materials, spare parts, finished goods and warehouse stock in real time." },
+  { title: "Procurement Management", text: "Automate purchase requests, quotations, approvals and purchase orders to keep production moving." },
+  { title: "Supplier Management", text: "Monitor supplier performance, delivery schedules, pricing and quality metrics from one dashboard." },
+  { title: "Quality Control", text: "Add inspection checkpoints across manufacturing to support consistent quality and compliance." },
+  { title: "Sales Management", text: "Handle quotations, orders, invoices, dealer pricing and customer relationships in one platform." },
+  { title: "Warehouse Management", text: "Improve warehouse accuracy with barcode support, transfers, batch tracking and location visibility." },
+  { title: "Maintenance Management", text: "Schedule preventive maintenance for machinery and equipment to reduce downtime." },
+  { title: "Accounting & Finance", text: "Manage payables, receivables, taxation, budgets, reporting and cash flow with better visibility." },
+  { title: "CRM", text: "Track leads, inquiries, opportunities and after-sales support to strengthen customer relationships." },
+  { title: "Analytics & Dashboards", text: "See sales, inventory, production, procurement, profitability and operations in real time." },
+];
+
+const automotiveBenefits = [
+  "Increase production efficiency",
+  "Reduce operational costs",
+  "Improve inventory accuracy",
+  "Enhance supply chain visibility",
+  "Accelerate procurement processes",
+  "Improve customer satisfaction",
+  "Reduce production downtime",
+  "Support quality compliance",
+  "Enable data-driven decisions",
+  "Scale operations with confidence",
+];
+
+const automotiveAudiences = [
+  "Automotive Manufacturers",
+  "Auto Parts Manufacturers",
+  "Spare Parts Distributors",
+  "Vehicle Dealerships",
+  "Auto Component Suppliers",
+  "Service & Repair Centers",
+  "Fleet Management Companies",
+  "Automotive Equipment Manufacturers",
+];
+
+const automotiveServices = [
+  "ERP Consulting",
+  "Business Process Analysis",
+  "ERP Implementation",
+  "Module Customization",
+  "Data Migration",
+  "Third-Party Integrations",
+  "User Training",
+  "Ongoing Technical Support",
+  "Performance Optimization",
+];
+
+const automotiveFaq = [
+  {
+    title: "What is Automotive ERP?",
+    text: "Automotive ERP is an integrated business management system that connects manufacturing, inventory, procurement, finance, sales, quality control and customer management into a single platform.",
+  },
+  {
+    title: "Can the ERP be customized?",
+    text: "Yes. The solution can be tailored to your workflows, approval processes, reporting requirements and industry-specific operations.",
+  },
+  {
+    title: "Does it support multiple warehouses?",
+    text: "Yes. You can manage multiple warehouses, locations, stock transfers and inventory movements from a centralized system.",
+  },
+  {
+    title: "Can it integrate with existing software?",
+    text: "Yes. The ERP can integrate with accounting systems, ecommerce platforms, payment gateways, logistics providers, CRM tools and other third-party applications.",
+  },
+  {
+    title: "Is the solution cloud-based?",
+    text: "Yes. Hegrix can support cloud-hosted and on-premise deployment options based on business requirements.",
+  },
+  {
+    title: "Do you provide implementation and support?",
+    text: "Yes. Hegrix provides implementation, training, customization and ongoing support to help teams adopt the ERP successfully.",
+  },
+];
+
+const automotiveSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Automotive ERP Software Solutions",
+    provider: {
+      "@type": "Organization",
+      name: "Hegrix",
+      url: "https://hegrix.com",
+    },
+    areaServed: "Global",
+    serviceType: "Automotive ERP implementation and customization",
+    description: "ERP software solutions for automotive manufacturers, auto parts suppliers, dealerships, distributors and service centers.",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: automotiveFaq.map((item) => ({
+      "@type": "Question",
+      name: item.title,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.text,
+      },
+    })),
+  },
+];
 ---
 
-<SeoPage
-  title={`${page.title} | Hegrix`}
-  description={`${page.description} Hegrix builds industry-specific software with premium UX, SEO-friendly structure and scalable engineering.`}
-  keywords={`${page.keyword}, Hegrix, industry software development`}
-  path={`/industries/${page.slug}/`}
-  eyebrow="Hegrix Industry"
-  h1={page.title}
-  intro={`${page.description} Hegrix creates digital platforms that fit your industry, customers and operational reality.`}
-  sections={sections}
-/>
+{isAutomotive ? (
+  <Layout
+    title="Automotive ERP Software Solutions | Hegrix"
+    description="Modern Automotive ERP software for manufacturers, auto parts suppliers, dealerships, distributors and service centers."
+    keywords="automotive ERP software solutions, automotive ERP, auto parts ERP, dealership ERP, automotive manufacturing ERP"
+    path="/industries/automotive/"
+    schema={automotiveSchema}
+  >
+    <section class="automotive-hero">
+      <div class="container automotive-hero__grid">
+        <div>
+          <p class="eyebrow">Automotive ERP Software Solutions</p>
+          <h1>Transform your automotive business with an intelligent ERP solution.</h1>
+          <p class="lead">
+            Drive operational excellence with a connected ERP platform for manufacturers, auto parts suppliers,
+            dealerships, distributors and service centers.
+          </p>
+          <p class="automotive-hero__copy">
+            Streamline production, optimize inventory, improve supply chain visibility and deliver better customer
+            experiences from one integrated operating system.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="/contact-us/">Book a free consultation</a>
+            <a class="button button-ghost" href="#features">Explore features</a>
+          </div>
+        </div>
+        <div class="erp-visual" aria-label="Automotive ERP dashboard preview">
+          <div class="erp-visual__top">
+            <span>ERP Command Center</span>
+            <strong>Live</strong>
+          </div>
+          <div class="erp-visual__metrics">
+            <div><strong>98%</strong><span>Inventory accuracy</span></div>
+            <div><strong>24/7</strong><span>Operational visibility</span></div>
+            <div><strong>11</strong><span>Core modules</span></div>
+          </div>
+          <div class="erp-flow">
+            <span>Procurement</span>
+            <span>Production</span>
+            <span>Warehouse</span>
+            <span>Sales</span>
+          </div>
+          <div class="erp-visual__panel">
+            <p>Production schedule</p>
+            <div class="visual-bars"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-band">
+        <div class="section-heading">
+          <p class="eyebrow">Industry challenges</p>
+          <h2>Automotive operations move fast, and disconnected systems slow everything down.</h2>
+          <p>
+            Without an integrated ERP, production, procurement, inventory, finance and service teams often work from
+            separate data, creating delays, cost leakage and missed decisions.
+          </p>
+        </div>
+        <div class="check-grid">
+          {automotiveChallenges.map((item) => <span>{item}</span>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Our solution</p>
+          <h2>Centralize every aspect of automotive operations.</h2>
+          <p>
+            Hegrix helps you connect inventory, production, purchasing, sales, warehouses, quality, maintenance,
+            accounting, CRM and analytics with real-time dashboards and automated workflows.
+          </p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card"><strong>ERP</strong><span>One connected operating platform</span></div>
+          <div class="stat-card"><strong>BOM</strong><span>Manufacturing orders and routing</span></div>
+          <div class="stat-card"><strong>CRM</strong><span>Lead, sales and service lifecycle</span></div>
+          <div class="stat-card"><strong>BI</strong><span>Real-time reporting and decisions</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Industry-specific features</p>
+          <h2>ERP modules built around automotive workflows.</h2>
+          <p>
+            Choose the capabilities that match your operation, then tailor approvals, reports, integrations and roles
+            around how your team works.
+          </p>
+        </div>
+        <div class="card-grid automotive-feature-grid">
+          {automotiveCapabilities.map((card) => (
+            <article class="feature-card">
+              <span class="card-icon" aria-hidden="true">{card.title.slice(0, 1)}</span>
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container split-band">
+        <div class="section-heading">
+          <p class="eyebrow">Business benefits</p>
+          <h2>Improve control, speed and visibility across the automotive value chain.</h2>
+          <p>
+            The right ERP reduces manual work, improves inventory confidence, keeps production aligned and gives leaders
+            a clearer view of cost, quality and performance.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="/contact-us/">Talk to an ERP expert</a>
+          </div>
+        </div>
+        <div class="check-grid">
+          {automotiveBenefits.map((item) => <span>{item}</span>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-column-lists">
+        <div>
+          <div class="section-heading">
+            <p class="eyebrow">Who can benefit?</p>
+            <h2>Built for automotive businesses with operational complexity.</h2>
+          </div>
+          <div class="check-grid compact">
+            {automotiveAudiences.map((item) => <span>{item}</span>)}
+          </div>
+        </div>
+        <div>
+          <div class="section-heading">
+            <p class="eyebrow">Implementation services</p>
+            <h2>Guidance from planning through adoption.</h2>
+          </div>
+          <div class="check-grid compact">
+            {automotiveServices.map((item) => <span>{item}</span>)}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Frequently asked questions</h2>
+          <p>Clear answers before you plan your Automotive ERP implementation.</p>
+        </div>
+        <div class="faq-list">
+          {automotiveFaq.map((item) => (
+            <details>
+              <summary>{item.title}</summary>
+              <p>{item.text}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="container split-cta">
+        <div>
+          <p class="eyebrow">Get started</p>
+          <h2>Empower your automotive business with modern ERP.</h2>
+          <p>Book a free consultation and discover how Hegrix can streamline operations and support long-term growth.</p>
+        </div>
+        <a class="button button-light" href="/contact-us/">Book a consultation</a>
+      </div>
+    </section>
+  </Layout>
+) : (
+  <SeoPage
+    title={`${page.title} | Hegrix`}
+    description={`${page.description} Hegrix builds industry-specific software with premium UX, SEO-friendly structure and scalable engineering.`}
+    keywords={`${page.keyword}, Hegrix, industry software development`}
+    path={`/industries/${page.slug}/`}
+    eyebrow="Hegrix Industry"
+    h1={page.title}
+    intro={`${page.description} Hegrix creates digital platforms that fit your industry, customers and operational reality.`}
+    sections={sections}
+  />
+)}
 

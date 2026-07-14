@@ -922,6 +922,174 @@ summary:focus-visible {
   cursor: pointer;
 }
 
+.automotive-hero {
+  padding: 92px 0;
+  background:
+    radial-gradient(circle at 84% 10%, rgba(31, 182, 255, 0.16), transparent 26%),
+    linear-gradient(180deg, var(--blue-050), white);
+}
+
+.automotive-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
+  gap: 52px;
+  align-items: center;
+}
+
+.automotive-hero__copy {
+  max-width: 760px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 1.04rem;
+}
+
+.erp-visual {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  min-height: 480px;
+  padding: 28px;
+  border-radius: 30px;
+  color: white;
+  background: linear-gradient(145deg, var(--blue-950), var(--blue-700));
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.erp-visual::before {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 22px;
+}
+
+.erp-visual > * {
+  position: relative;
+}
+
+.erp-visual__top,
+.erp-visual__metrics,
+.erp-flow,
+.erp-visual__panel {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+}
+
+.erp-visual__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  font-weight: 900;
+}
+
+.erp-visual__top strong {
+  padding: 5px 10px;
+  border-radius: 999px;
+  color: var(--blue-950);
+  background: #bde3ff;
+  font-size: 0.82rem;
+}
+
+.erp-visual__metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 14px;
+  border-radius: 18px;
+}
+
+.erp-visual__metrics div {
+  min-height: 102px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.erp-visual__metrics strong {
+  display: block;
+  font-size: 1.55rem;
+  line-height: 1.1;
+}
+
+.erp-visual__metrics span,
+.erp-flow span,
+.erp-visual__panel p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.erp-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 14px;
+  border-radius: 18px;
+}
+
+.erp-flow span {
+  display: grid;
+  place-items: center;
+  min-height: 58px;
+  padding: 8px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 800;
+  text-align: center;
+}
+
+.erp-visual__panel {
+  align-self: end;
+  padding: 18px;
+  border-radius: 18px;
+}
+
+.check-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.check-grid span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 54px;
+  padding: 13px 15px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  color: var(--blue-950);
+  background: white;
+  font-weight: 800;
+}
+
+.check-grid span::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--success);
+}
+
+.check-grid.compact {
+  grid-template-columns: 1fr;
+}
+
+.two-column-lists {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 38px;
+  align-items: start;
+}
+
+.automotive-feature-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 @media (max-width: 680px) {
   .phone-input {
     grid-template-columns: 1fr;
@@ -929,5 +1097,35 @@ summary:focus-visible {
 
   .success-popup__panel {
     padding: 30px 22px;
+  }
+}
+
+@media (max-width: 1220px) {
+  .automotive-hero__grid,
+  .two-column-lists {
+    grid-template-columns: 1fr;
+  }
+
+  .erp-visual {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 680px) {
+  .automotive-hero {
+    padding: 64px 0;
+  }
+
+  .erp-visual {
+    min-height: auto;
+    padding: 18px;
+    border-radius: 22px;
+  }
+
+  .erp-visual__metrics,
+  .erp-flow,
+  .check-grid,
+  .automotive-feature-grid {
+    grid-template-columns: 1fr;
   }
 }

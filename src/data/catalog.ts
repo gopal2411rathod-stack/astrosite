@@ -85,9 +85,9 @@ export const industryPages = [
   },
   {
     slug: "automotive",
-    title: "Automotive Software Solutions",
-    description: "Parts catalogs, service workflows, quote tools, dealership portals and stock visibility.",
-    keyword: "automotive software solutions",
+    title: "Automotive ERP Software Solutions",
+    description: "ERP for automotive manufacturers, parts suppliers, dealerships, distributors and service centers.",
+    keyword: "automotive ERP software solutions",
   },
   {
     slug: "manufacturing",
