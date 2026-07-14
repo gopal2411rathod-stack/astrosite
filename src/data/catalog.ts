@@ -92,7 +92,7 @@ export const industryPages = [
   {
     slug: "manufacturing",
     title: "Manufacturing Software Solutions",
-    description: "Production dashboards, supplier workflows, order tracking and ERP integrations.",
+    description: "ERP, production planning, inventory, quality, supplier and analytics software for modern manufacturers.",
     keyword: "manufacturing software solutions",
   },
   {

@@ -14,6 +14,7 @@ export function getStaticPaths() {
 
 const { page } = Astro.props;
 const isAutomotive = page.slug === "automotive";
+const isManufacturing = page.slug === "manufacturing";
 
 const sections = [
   {
@@ -141,6 +142,125 @@ const automotiveSchema = [
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: automotiveFaq.map((item) => ({
+      "@type": "Question",
+      name: item.title,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.text,
+      },
+    })),
+  },
+];
+
+const manufacturingChallenges = [
+  "Manual production planning",
+  "Limited shop floor visibility",
+  "Raw material shortages",
+  "Excess inventory and carrying costs",
+  "Supplier delivery delays",
+  "Quality inspection gaps",
+  "Disconnected finance and operations",
+  "Machine downtime and maintenance issues",
+  "Slow order tracking",
+  "Inaccurate production costing",
+];
+
+const manufacturingCapabilities = [
+  { title: "Production Planning", text: "Plan jobs, capacity, work orders, routings and schedules with clearer control over production flow." },
+  { title: "MRP & BOM Management", text: "Manage bills of materials, material requirements, component availability and production dependencies." },
+  { title: "Inventory Control", text: "Track raw materials, WIP, finished goods, stock movements and reorder levels across locations." },
+  { title: "Shop Floor Tracking", text: "Monitor job progress, machine activity, labor usage and production status from real-time dashboards." },
+  { title: "Quality Management", text: "Create inspection workflows, non-conformance tracking, approvals and quality records for compliance." },
+  { title: "Procurement Automation", text: "Automate purchase requests, supplier quotations, approvals and purchase orders." },
+  { title: "Supplier Management", text: "Track vendor performance, lead times, pricing, delivery reliability and quality scores." },
+  { title: "Warehouse Management", text: "Improve receiving, picking, transfers, barcode workflows and inventory accuracy." },
+  { title: "Maintenance Management", text: "Schedule preventive maintenance, track breakdowns and reduce equipment downtime." },
+  { title: "Costing & Finance", text: "Connect production costs, purchasing, inventory valuation, invoices and financial reporting." },
+  { title: "Analytics & BI", text: "Measure output, downtime, scrap, margins, order status, inventory health and supplier performance." },
+  { title: "Customer & Order Management", text: "Manage quotes, sales orders, delivery commitments and customer communication in one flow." },
+];
+
+const manufacturingBenefits = [
+  "Improve production efficiency",
+  "Reduce material waste",
+  "Increase inventory accuracy",
+  "Improve on-time delivery",
+  "Strengthen quality compliance",
+  "Reduce machine downtime",
+  "Connect finance and operations",
+  "Improve supplier accountability",
+  "Enable real-time decision-making",
+  "Scale manufacturing operations confidently",
+];
+
+const manufacturingAudiences = [
+  "Discrete Manufacturers",
+  "Process Manufacturers",
+  "Industrial Equipment Manufacturers",
+  "Consumer Goods Manufacturers",
+  "Electronics Manufacturers",
+  "Textile & Apparel Manufacturers",
+  "Packaging Manufacturers",
+  "Fabrication & Assembly Units",
+];
+
+const manufacturingServices = [
+  "Manufacturing ERP Consulting",
+  "Process Mapping",
+  "ERP Implementation",
+  "MRP and BOM Setup",
+  "Shop Floor Workflow Design",
+  "Inventory Migration",
+  "Third-Party Integrations",
+  "User Training",
+  "Reporting and Dashboard Setup",
+];
+
+const manufacturingFaq = [
+  {
+    title: "What is manufacturing software?",
+    text: "Manufacturing software helps companies manage production planning, inventory, purchasing, quality, maintenance, costing, orders and reporting from one connected system.",
+  },
+  {
+    title: "Can manufacturing ERP be customized?",
+    text: "Yes. Hegrix can customize workflows, approvals, BOM logic, production stages, quality checks, dashboards and integrations around your manufacturing process.",
+  },
+  {
+    title: "Does it support inventory and warehouse management?",
+    text: "Yes. Manufacturing software can track raw materials, WIP, finished goods, warehouses, stock transfers, barcode workflows and reorder levels.",
+  },
+  {
+    title: "Can it help with production planning?",
+    text: "Yes. The system can support production schedules, work orders, capacity planning, routings, material requirements and job progress tracking.",
+  },
+  {
+    title: "Can it integrate with accounting or ecommerce tools?",
+    text: "Yes. Hegrix can integrate manufacturing workflows with accounting systems, CRM tools, ecommerce platforms, logistics providers and analytics tools.",
+  },
+  {
+    title: "Do you provide implementation and support?",
+    text: "Yes. Hegrix provides consulting, implementation, customization, data migration, user training and ongoing technical support.",
+  },
+];
+
+const manufacturingSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Manufacturing Software Solutions",
+    provider: {
+      "@type": "Organization",
+      name: "Hegrix",
+      url: "https://hegrix.com",
+    },
+    areaServed: "Global",
+    serviceType: "Manufacturing ERP and production management software",
+    description: "Manufacturing software solutions for production planning, MRP, BOM, inventory, shop floor tracking, quality, maintenance, finance and analytics.",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: manufacturingFaq.map((item) => ({
       "@type": "Question",
       name: item.title,
       acceptedAnswer: {
@@ -325,6 +445,184 @@ const automotiveSchema = [
           <p class="eyebrow">Get started</p>
           <h2>Empower your automotive business with modern ERP.</h2>
           <p>Book a free consultation and discover how Hegrix can streamline operations and support long-term growth.</p>
+        </div>
+        <a class="button button-light" href="/contact-us/">Book a consultation</a>
+      </div>
+    </section>
+  </Layout>
+) : isManufacturing ? (
+  <Layout
+    title="Manufacturing Software Solutions | ERP, MRP & Production Management | Hegrix"
+    description="Manufacturing software solutions for ERP, MRP, production planning, inventory, quality control, shop floor tracking, supplier management and analytics."
+    keywords="manufacturing software solutions, manufacturing ERP software, production management software, MRP software, inventory management for manufacturing"
+    path="/industries/manufacturing/"
+    schema={manufacturingSchema}
+  >
+    <section class="automotive-hero industry-hero manufacturing-hero">
+      <div class="container automotive-hero__grid industry-hero__grid">
+        <div>
+          <p class="eyebrow">Manufacturing Software Solutions</p>
+          <h1>Build a smarter, faster and more connected manufacturing operation.</h1>
+          <p class="lead">
+            Hegrix designs manufacturing ERP and production management systems that connect planning, inventory,
+            procurement, shop floor activity, quality, maintenance, finance and analytics.
+          </p>
+          <p class="automotive-hero__copy industry-hero__copy">
+            Replace disconnected spreadsheets and manual follow-ups with real-time manufacturing visibility, automated
+            workflows and reliable data for better decisions.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="/contact-us/">Get a manufacturing ERP consultation</a>
+            <a class="button button-ghost" href="#manufacturing-features">View capabilities</a>
+          </div>
+        </div>
+        <div class="erp-visual manufacturing-visual" aria-label="Manufacturing software dashboard preview">
+          <div class="erp-visual__top">
+            <span>Factory Operations Hub</span>
+            <strong>Live</strong>
+          </div>
+          <div class="erp-visual__metrics">
+            <div><strong>MRP</strong><span>Material planning</span></div>
+            <div><strong>OEE</strong><span>Shop floor visibility</span></div>
+            <div><strong>QC</strong><span>Quality checkpoints</span></div>
+          </div>
+          <div class="erp-flow">
+            <span>Plan</span>
+            <span>Procure</span>
+            <span>Produce</span>
+            <span>Deliver</span>
+          </div>
+          <div class="erp-visual__panel">
+            <p>Production performance</p>
+            <div class="visual-bars"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-band">
+        <div class="section-heading">
+          <p class="eyebrow">Manufacturing challenges</p>
+          <h2>Growth gets harder when production, inventory and finance are not connected.</h2>
+          <p>
+            Manufacturing teams need accurate material data, reliable schedules, quality visibility and clear cost
+            tracking. When these workflows live in separate tools, delays and waste become expensive.
+          </p>
+        </div>
+        <div class="check-grid">
+          {manufacturingChallenges.map((item) => <span>{item}</span>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Connected manufacturing platform</p>
+          <h2>Control production from quote to delivery.</h2>
+          <p>
+            Hegrix builds manufacturing software that gives teams one operating view across work orders, BOMs,
+            inventory, suppliers, quality checks, maintenance tasks, costing and reports.
+          </p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card"><strong>MRP</strong><span>Material planning and BOM control</span></div>
+          <div class="stat-card"><strong>WIP</strong><span>Work-in-progress tracking</span></div>
+          <div class="stat-card"><strong>QC</strong><span>Inspection and compliance records</span></div>
+          <div class="stat-card"><strong>BI</strong><span>Production and cost analytics</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="manufacturing-features">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Manufacturing software capabilities</p>
+          <h2>Everything needed to plan, produce, track and improve.</h2>
+          <p>
+            Select the modules your operation needs now, then extend into deeper automation, integrations and analytics
+            as the business grows.
+          </p>
+        </div>
+        <div class="card-grid automotive-feature-grid">
+          {manufacturingCapabilities.map((card) => (
+            <article class="feature-card">
+              <span class="card-icon" aria-hidden="true">{card.title.slice(0, 1)}</span>
+              <h3>{card.title}</h3>
+              <p>{card.text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container split-band">
+        <div class="section-heading">
+          <p class="eyebrow">Business outcomes</p>
+          <h2>Turn operational data into better production decisions.</h2>
+          <p>
+            Manufacturing software should do more than store records. It should help teams reduce waste, improve
+            delivery performance, protect margins and act before small problems become production delays.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="/contact-us/">Plan your manufacturing system</a>
+          </div>
+        </div>
+        <div class="check-grid">
+          {manufacturingBenefits.map((item) => <span>{item}</span>)}
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-column-lists">
+        <div>
+          <div class="section-heading">
+            <p class="eyebrow">Who it is for</p>
+            <h2>Manufacturing software for teams that need control and scale.</h2>
+          </div>
+          <div class="check-grid compact">
+            {manufacturingAudiences.map((item) => <span>{item}</span>)}
+          </div>
+        </div>
+        <div>
+          <div class="section-heading">
+            <p class="eyebrow">Implementation services</p>
+            <h2>From workflow discovery to rollout and support.</h2>
+          </div>
+          <div class="check-grid compact">
+            {manufacturingServices.map((item) => <span>{item}</span>)}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Manufacturing software questions</h2>
+          <p>Useful answers before you modernize production workflows.</p>
+        </div>
+        <div class="faq-list">
+          {manufacturingFaq.map((item) => (
+            <details>
+              <summary>{item.title}</summary>
+              <p>{item.text}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="container split-cta">
+        <div>
+          <p class="eyebrow">Next step</p>
+          <h2>Ready to modernize manufacturing operations?</h2>
+          <p>Share your production workflow and Hegrix will map the right ERP, MRP, inventory and reporting path.</p>
         </div>
         <a class="button button-light" href="/contact-us/">Book a consultation</a>
       </div>
