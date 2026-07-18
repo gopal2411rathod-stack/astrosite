@@ -1,5 +1,5 @@
 ---
-import SeoPage from "../../components/SeoPage.astro";
+import Layout from "../../layouts/Layout.astro";
 import { servicePages } from "../../data/catalog";
 
 export const prerender = true;
@@ -13,38 +13,182 @@ export function getStaticPaths() {
 
 const { page } = Astro.props;
 
-const sections = [
+const serviceName = page.title.replace(" Services", "");
+const shortCode = serviceName
+  .split(/\s+/)
+  .map((word) => word.replace(/[^A-Za-z0-9]/g, "").slice(0, 1))
+  .join("")
+  .slice(0, 4)
+  .toUpperCase();
+
+const relatedServices = servicePages.filter((item) => item.slug !== page.slug).slice(0, 3);
+
+const schema = [
   {
-    eyebrow: "Service detail",
-    title: `${page.title} designed for measurable business outcomes.`,
-    text: page.description,
-    cards: [
-      { title: "Discovery", text: "We map goals, users, workflows, integrations and technical risks before development starts." },
-      { title: "UX and Architecture", text: "Hegrix creates clear user journeys and scalable technical foundations for long-term growth." },
-      { title: "Build and Optimize", text: "Your solution is developed, tested, launched and improved with performance and SEO in mind." },
-    ],
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: page.title,
+    provider: {
+      "@type": "Organization",
+      name: "Hegrix",
+      url: "https://hegrix.com",
+    },
+    areaServed: "Global",
+    serviceType: page.title,
+    description: page.description,
+    url: `https://hegrix.com/services/${page.slug}/`,
   },
   {
-    eyebrow: "Internal links",
-    title: "Plan this service with the right solution path.",
-    text: "Explore related Hegrix solutions, industries and case studies to understand how this service becomes a complete business platform.",
-    cards: [
-      { title: "Solutions", text: "Connect this service to B2B commerce, portals, ERP integration or AI automation." },
-      { title: "Industries", text: "See how the service applies to retail, automotive, manufacturing, healthcare and more." },
-      { title: "Contact", text: "Share your project goals and get a practical roadmap from Hegrix." },
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `What is included in ${page.title}?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `Hegrix supports strategy, UX planning, implementation, integrations, testing, launch and continuous improvement for ${page.title}.`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: `Can Hegrix customize ${page.title} around my business?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. Hegrix maps your workflows, users, data and growth goals before designing a custom implementation plan.",
+        },
+      },
     ],
   },
 ];
 ---
 
-<SeoPage
-  title={`${page.title} Services | Hegrix`}
-  description={`${page.description} Work with Hegrix for strategy, design, development, launch and optimization.`}
-  keywords={`${page.keyword}, Hegrix, software development company`}
+<Layout
+  title={`${page.title} | Professional ${serviceName} Company | Hegrix`}
+  description={`${page.description} Hegrix provides planning, design, development, integration, launch and optimization for growth-focused businesses.`}
+  keywords={`${page.keyword}, ${page.title}, Hegrix services`}
   path={`/services/${page.slug}/`}
-  eyebrow="Hegrix Service"
-  h1={page.title}
-  intro={`${page.description} Hegrix delivers this service with clean UX, reliable engineering, SEO-friendly structure and conversion-focused execution.`}
-  sections={sections}
-/>
+  schema={schema}
+>
+  <section class="service-detail-hero">
+    <div class="container service-detail-hero__grid">
+      <div>
+        <p class="eyebrow">Hegrix Service</p>
+        <h1>{page.title}</h1>
+        <p class="lead">
+          {page.description} Hegrix delivers this service with clean UX, reliable engineering, SEO-friendly structure,
+          measurable workflows and long-term support.
+        </p>
+        <div class="hero-actions">
+          <a class="button" href="/contact-us/">Start a project</a>
+          <a class="button button-ghost" href="/services/">Explore all services</a>
+        </div>
+      </div>
 
+      <div class="service-command-card" aria-label={`${page.title} delivery dashboard preview`}>
+        <div class="service-command-card__badge">{shortCode || "HX"}</div>
+        <div class="service-command-card__rows">
+          <span>Discovery and roadmap</span>
+          <span>UX, architecture and workflow design</span>
+          <span>Development, integrations and QA</span>
+          <span>Launch, analytics and optimization</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Delivery approach</p>
+        <h2>Built around business outcomes, not just tasks.</h2>
+        <p>Every service page has a practical delivery path so your team understands the plan before development begins.</p>
+      </div>
+      <div class="card-grid service-detail-grid">
+        <article class="feature-card">
+          <span class="card-icon" aria-hidden="true">1</span>
+          <h3>Discovery</h3>
+          <p>We map goals, users, workflows, competitors, SEO needs, integrations and technical risks.</p>
+        </article>
+        <article class="feature-card">
+          <span class="card-icon" aria-hidden="true">2</span>
+          <h3>Design & Architecture</h3>
+          <p>We create user journeys, interface structure, data models and scalable technical foundations.</p>
+        </article>
+        <article class="feature-card">
+          <span class="card-icon" aria-hidden="true">3</span>
+          <h3>Build & Optimize</h3>
+          <p>We develop, test, launch and improve the solution with performance, accessibility and conversion in mind.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="container split-band">
+      <div class="section-heading">
+        <p class="eyebrow">What you get</p>
+        <h2>A complete service experience from strategy to support.</h2>
+        <p>
+          Hegrix keeps the work structured, transparent and practical so your service investment becomes a usable,
+          measurable business asset.
+        </p>
+      </div>
+      <div class="check-grid">
+        <span>Clear project roadmap and scope</span>
+        <span>Responsive, accessible user experience</span>
+        <span>SEO-friendly page and content structure</span>
+        <span>Secure integrations and clean data flow</span>
+        <span>Performance-focused development</span>
+        <span>Launch support and continuous improvement</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Related services</p>
+        <h2>Plan the next step in your digital roadmap.</h2>
+      </div>
+      <div class="industry-related-links">
+        {relatedServices.map((item) => (
+          <a href={`/services/${item.slug}/`}>
+            <span>{item.title}</span>
+            <strong aria-hidden="true">-&gt;</strong>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">FAQ</p>
+        <h2>Common questions about {page.title}.</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>What is included in {page.title}?</summary>
+          <p>Hegrix supports strategy, UX planning, implementation, integrations, testing, launch and continuous improvement.</p>
+        </details>
+        <details>
+          <summary>Can this service be customized for my business?</summary>
+          <p>Yes. We map your workflows, users, systems and goals before designing a practical implementation path.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section final-cta">
+    <div class="container split-cta">
+      <div>
+        <p class="eyebrow">Next step</p>
+        <h2>Ready to plan {page.title}?</h2>
+        <p>Share your goals and Hegrix will map the right service scope, timeline and launch path.</p>
+      </div>
+      <a class="button button-light" href="/contact-us/">Talk to Hegrix</a>
+    </div>
+  </section>
+</Layout>

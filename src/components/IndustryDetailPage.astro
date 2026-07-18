@@ -1,0 +1,185 @@
+---
+import Layout from "../layouts/Layout.astro";
+import type { IndustryDetail } from "../data/industryDetails";
+
+interface Props {
+  detail: IndustryDetail;
+}
+
+const { detail } = Astro.props;
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: detail.eyebrow,
+    provider: {
+      "@type": "Organization",
+      name: "Hegrix",
+      url: "https://hegrix.com",
+    },
+    areaServed: "Global",
+    serviceType: detail.eyebrow,
+    description: detail.metaDescription,
+    url: `https://hegrix.com/industries/${detail.slug}/`,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: detail.faq.map((item) => ({
+      "@type": "Question",
+      name: item.title,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.text,
+      },
+    })),
+  },
+];
+---
+
+<Layout
+  title={detail.metaTitle}
+  description={detail.metaDescription}
+  keywords={detail.keywords}
+  path={`/industries/${detail.slug}/`}
+  schema={schema}
+>
+  <section class="industry-detail-hero">
+    <div class="container industry-detail-hero__grid">
+      <div>
+        <p class="eyebrow">{detail.eyebrow}</p>
+        <h1>{detail.title}</h1>
+        <p class="lead">{detail.subtitle}</p>
+        <div class="hero-actions">
+          <a class="button" href="/contact-us/">{detail.primaryCta}</a>
+          <a class="button button-ghost" href={detail.relatedLinks[0].href}>{detail.secondaryCta}</a>
+        </div>
+      </div>
+
+      <div class="industry-command-card" aria-label={`${detail.eyebrow} dashboard preview`}>
+        <div class="industry-command-card__top">
+          <span>{detail.heroTag}</span>
+          <strong>Live</strong>
+        </div>
+        <div class="industry-command-card__metrics">
+          {detail.metrics.map((metric) => (
+            <div>
+              <strong>{metric.value}</strong>
+              <span>{metric.label}</span>
+            </div>
+          ))}
+        </div>
+        <div class="industry-command-card__flow">
+          {detail.capabilities.slice(0, 4).map((item) => <span>{item.title}</span>)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split-band">
+      <div class="section-heading">
+        <p class="eyebrow">Industry challenges</p>
+        <h2>Replace disconnected tools with one clear operating workflow.</h2>
+        <p>
+          Hegrix starts with the real bottlenecks in your industry, then designs software that improves visibility,
+          accountability and customer experience.
+        </p>
+      </div>
+      <div class="check-grid">
+        {detail.challenges.map((item) => <span>{item}</span>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">What we build</p>
+        <h2>Purpose-built capabilities for {detail.eyebrow.replace(" Software Solutions", "").toLowerCase()} teams.</h2>
+        <p>
+          Choose the modules that match your first release, then extend the platform with automation, integrations and
+          analytics as the business grows.
+        </p>
+      </div>
+      <div class="card-grid industry-detail-grid">
+        {detail.capabilities.map((card) => (
+          <article class="feature-card">
+            <span class="card-icon" aria-hidden="true">{card.title.slice(0, 1)}</span>
+            <h3>{card.title}</h3>
+            <p>{card.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container two-column-lists">
+      <div>
+        <div class="section-heading">
+          <p class="eyebrow">Business outcomes</p>
+          <h2>Make the work faster, clearer and easier to measure.</h2>
+        </div>
+        <div class="check-grid compact">
+          {detail.outcomes.map((item) => <span>{item}</span>)}
+        </div>
+      </div>
+      <div>
+        <div class="section-heading">
+          <p class="eyebrow">Implementation services</p>
+          <h2>Support from strategy to launch and improvement.</h2>
+        </div>
+        <div class="check-grid compact">
+          {detail.services.map((item) => <span>{item}</span>)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Internal links</p>
+        <h2>Explore related Hegrix services and solutions.</h2>
+      </div>
+      <div class="industry-related-links">
+        {detail.relatedLinks.map((link) => (
+          <a href={link.href}>
+            <span>{link.label}</span>
+            <strong aria-hidden="true">-&gt;</strong>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">FAQ</p>
+        <h2>Common questions about {detail.eyebrow.toLowerCase()}.</h2>
+      </div>
+      <div class="faq-list">
+        {detail.faq.map((item) => (
+          <details>
+            <summary>{item.title}</summary>
+            <p>{item.text}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section final-cta">
+    <div class="container split-cta">
+      <div>
+        <p class="eyebrow">Next step</p>
+        <h2>Ready to build a better {detail.eyebrow.replace(" Software Solutions", "").toLowerCase()} platform?</h2>
+        <p>Tell us about your workflow, users and goals. Hegrix will help map the right software roadmap.</p>
+      </div>
+      <a class="button button-light" href="/contact-us/">{detail.primaryCta}</a>
+    </div>
+  </section>
+</Layout>

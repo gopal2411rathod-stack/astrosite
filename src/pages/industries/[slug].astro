@@ -1,7 +1,9 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import SeoPage from "../../components/SeoPage.astro";
+import IndustryDetailPage from "../../components/IndustryDetailPage.astro";
 import { industryPages } from "../../data/catalog";
+import { industryDetailPages } from "../../data/industryDetails";
 
 export const prerender = true;
 
@@ -15,6 +17,7 @@ export function getStaticPaths() {
 const { page } = Astro.props;
 const isAutomotive = page.slug === "automotive";
 const isManufacturing = page.slug === "manufacturing";
+const industryDetail = industryDetailPages[page.slug];
 
 const sections = [
   {
@@ -272,7 +275,9 @@ const manufacturingSchema = [
 ];
 ---
 
-{isAutomotive ? (
+{industryDetail ? (
+  <IndustryDetailPage detail={industryDetail} />
+) : isAutomotive ? (
   <Layout
     title="Automotive ERP Software Solutions | Hegrix"
     description="Modern Automotive ERP software for manufacturers, auto parts suppliers, dealerships, distributors and service centers."

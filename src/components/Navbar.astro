@@ -1,5 +1,5 @@
 ---
-import { industryPages, solutionPages } from "../data/catalog";
+import { industryPages, servicePages, solutionPages } from "../data/catalog";
 
 const megaServiceCategories = [
   {
@@ -308,14 +308,17 @@ const megaIndustryCategories = [
   },
 ];
 
-const serviceHref = (service: string) => `/contact-us/?service=${encodeURIComponent(service)}`;
+const serviceHref = (service: string) => {
+  const match = servicePages.find((page) => page.title.toLowerCase() === service.toLowerCase());
+  return match ? `/services/${match.slug}/` : `/contact-us/?service=${encodeURIComponent(service)}`;
+};
 const solutionHref = (service: string) => {
   const match = solutionPages.find((solution) => solution.title.toLowerCase() === service.toLowerCase());
   return match ? `/solutions/${match.slug}/` : `/contact-us/?solution=${encodeURIComponent(service)}`;
 };
 const industryHref = (service: string) => {
   const industrySlugMap: Record<string, string> = {
-    automobile: "automotive",
+    automobile: "automobile",
     automotive: "automotive",
     manufacturing: "manufacturing",
     logistics: "logistics",
