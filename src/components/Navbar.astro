@@ -1,5 +1,342 @@
 ---
-import { industryPages, servicePages, solutionPages } from "../data/catalog";
+import { industryPages, solutionPages } from "../data/catalog";
+
+const megaServiceCategories = [
+  {
+    label: "Odoo Services",
+    title: "Odoo Services",
+    groups: [
+      {
+        heading: "ERP Development",
+        services: ["Odoo Development", "Odoo Consulting Services", "Hire Odoo Developer", "Odoo Implementation Services", "Odoo Migration Services"],
+      },
+      {
+        heading: "Customization",
+        services: ["Odoo Customization Services", "Odoo Custom App Development", "Odoo Theme Development Services"],
+      },
+      {
+        heading: "Integrations",
+        services: ["Odoo Multi-Platform Integration", "Odoo Payment Method Development", "Odoo Shipping Method Development"],
+      },
+      {
+        heading: "Advanced Solutions",
+        services: ["Odoo SaaS Development", "Odoo Mobile App Development", "Odoo Support & Maintenance Services"],
+      },
+    ],
+  },
+  {
+    label: "AI & ML",
+    title: "AI & ML",
+    groups: [
+      {
+        heading: "Artificial Intelligence",
+        services: ["AI Chatbots", "Generative AI", "Machine Learning", "Computer Vision"],
+      },
+      {
+        heading: "Automation",
+        services: ["NLP Solutions", "AI Automation", "Workflow Automation"],
+      },
+    ],
+  },
+  {
+    label: "Cloud Services",
+    title: "Cloud Services",
+    groups: [
+      {
+        heading: "Cloud Platforms",
+        services: ["AWS", "Microsoft Azure", "Google Cloud"],
+      },
+      {
+        heading: "DevOps",
+        services: ["DevOps", "Kubernetes", "Docker"],
+      },
+    ],
+  },
+  {
+    label: "Digital Marketing",
+    title: "Digital Marketing",
+    groups: [
+      {
+        heading: "Marketing Services",
+        services: ["SEO", "Google Ads", "Social Media Marketing"],
+      },
+      {
+        heading: "Growth",
+        services: ["Email Marketing", "Content Marketing", "Analytics"],
+      },
+    ],
+  },
+  {
+    label: "Web Development",
+    title: "Web Development",
+    groups: [
+      {
+        heading: "Frontend",
+        services: ["React Development", "Next.js Development"],
+      },
+      {
+        heading: "Backend",
+        services: ["Laravel Development", "PHP Development", "Node.js Development"],
+      },
+      {
+        heading: "Web Solutions",
+        services: ["Custom Website Development", "CMS Development", "API Development"],
+      },
+    ],
+  },
+];
+
+const megaSolutionCategories = [
+  {
+    label: "Commerce",
+    title: "Commerce Solutions",
+    groups: [
+      {
+        heading: "B2B Commerce",
+        services: ["B2B Commerce Platform", "Quote & Approval Workflows", "Bulk Ordering Portals", "Account-Based Pricing"],
+      },
+      {
+        heading: "eCommerce",
+        services: ["Headless Commerce", "Custom Storefronts", "Checkout Optimization", "Product Catalog Systems"],
+      },
+      {
+        heading: "Related Solutions",
+        services: ["ERP Integration", "Customer Portal", "Inventory & POS System"],
+      },
+    ],
+  },
+  {
+    label: "Marketplaces",
+    title: "Marketplace Solutions",
+    groups: [
+      {
+        heading: "Multi-Vendor Platforms",
+        services: ["Multi-Vendor Marketplace", "Vendor Onboarding", "Commission Management", "Marketplace Dashboards"],
+      },
+      {
+        heading: "Operations",
+        services: ["Catalog Moderation", "Order Routing", "Seller Payouts", "Fulfillment Workflows"],
+      },
+      {
+        heading: "Related Solutions",
+        services: ["B2B Commerce Platform", "Customer Portal", "AI Business Automation"],
+      },
+    ],
+  },
+  {
+    label: "Operations",
+    title: "Operations Solutions",
+    groups: [
+      {
+        heading: "Inventory & POS",
+        services: ["Inventory & POS System", "Barcode Workflows", "Multi-Location Stock", "Purchasing Automation"],
+      },
+      {
+        heading: "Manufacturing & Logistics",
+        services: ["Production Dashboards", "Supplier Workflows", "Shipment Visibility", "Route Tracking"],
+      },
+      {
+        heading: "Related Solutions",
+        services: ["ERP Integration", "AI Business Automation", "Customer Portal"],
+      },
+    ],
+  },
+  {
+    label: "Portals",
+    title: "Portal Solutions",
+    groups: [
+      {
+        heading: "Customer Portals",
+        services: ["Customer Portal", "Order Tracking Portals", "Invoice & Document Portals", "Support Ticket Portals"],
+      },
+      {
+        heading: "Business Portals",
+        services: ["Partner Portals", "Dealer Portals", "Vendor Portals", "Employee Self-Service Portals"],
+      },
+      {
+        heading: "Related Solutions",
+        services: ["B2B Commerce Platform", "ERP Integration", "AI Business Automation"],
+      },
+    ],
+  },
+  {
+    label: "ERP & Integration",
+    title: "ERP & Integration Solutions",
+    groups: [
+      {
+        heading: "ERP Integration",
+        services: ["ERP Integration", "CRM Integration", "Accounting Integration", "Inventory Integration"],
+      },
+      {
+        heading: "Data & Automation",
+        services: ["API Integration", "Workflow Synchronization", "Reporting Pipelines", "Legacy System Modernization"],
+      },
+      {
+        heading: "Related Solutions",
+        services: ["Inventory & POS System", "Customer Portal", "B2B Commerce Platform"],
+      },
+    ],
+  },
+  {
+    label: "AI Automation",
+    title: "AI Business Automation",
+    groups: [
+      {
+        heading: "AI Workflows",
+        services: ["AI Business Automation", "Document Processing", "Knowledge Search", "AI Assistants"],
+      },
+      {
+        heading: "Process Automation",
+        services: ["Approval Routing", "OCR Extraction", "Task Automation", "Decision Support"],
+      },
+      {
+        heading: "Related Solutions",
+        services: ["ERP Integration", "Customer Portal", "Inventory & POS System"],
+      },
+    ],
+  },
+];
+
+const megaIndustryCategories = [
+  {
+    label: "Commerce & Retail",
+    title: "Commerce & Retail Industries",
+    groups: [
+      {
+        heading: "Customer Commerce",
+        services: ["Retail", "Real Estate", "Diamond & Jewelry", "Travel & Hospitality"],
+      },
+      {
+        heading: "Digital Platforms",
+        services: ["eCommerce Platforms", "Booking Portals", "Customer Loyalty Systems"],
+      },
+      {
+        heading: "Related Solutions",
+        services: ["B2B Commerce Platform", "Customer Portal", "Inventory & POS System"],
+      },
+    ],
+  },
+  {
+    label: "Automobile",
+    title: "Automobile & Manufacturing",
+    groups: [
+      {
+        heading: "Industrial Operations",
+        services: ["Automobile", "Automotive", "Manufacturing", "Logistics"],
+      },
+      {
+        heading: "Core Workflows",
+        services: ["Production Planning", "Inventory Management", "Supplier Portals"],
+      },
+      {
+        heading: "Related Solutions",
+        services: ["ERP Integration", "AI Business Automation", "Inventory & POS System"],
+      },
+    ],
+  },
+  {
+    label: "Media",
+    title: "Media & Entertainment",
+    groups: [
+      {
+        heading: "Creative Industries",
+        services: ["Media & Entertainment", "Advertising"],
+      },
+      {
+        heading: "Growth Platforms",
+        services: ["Campaign Management", "Content Portals", "Audience Dashboards"],
+      },
+      {
+        heading: "Related Solutions",
+        services: ["Customer Portal", "AI Business Automation", "B2B Commerce Platform"],
+      },
+    ],
+  },
+  {
+    label: "Healthcare",
+    title: "Healthcare & Wellness",
+    groups: [
+      {
+        heading: "Healthcare Systems",
+        services: ["Healthcare", "Patient Portals", "Appointment Management"],
+      },
+      {
+        heading: "Operations",
+        services: ["Document Workflows", "Clinic Dashboards", "Reporting Systems"],
+      },
+      {
+        heading: "Related Solutions",
+        services: ["Customer Portal", "AI Business Automation", "ERP Integration"],
+      },
+    ],
+  },
+  {
+    label: "Finance",
+    title: "Finance & Professional Services",
+    groups: [
+      {
+        heading: "Finance Platforms",
+        services: ["Finance Software Solutions", "Approval Workflows", "Client Portals"],
+      },
+      {
+        heading: "Automation",
+        services: ["Invoice Automation", "Reporting Dashboards", "Document Processing"],
+      },
+      {
+        heading: "Related Solutions",
+        services: ["AI Business Automation", "ERP Integration", "Customer Portal"],
+      },
+    ],
+  },
+  {
+    label: "Education",
+    title: "Education & Learning",
+    groups: [
+      {
+        heading: "Education Platforms",
+        services: ["Education Software Solutions", "Learning Portals", "Admissions Workflows"],
+      },
+      {
+        heading: "Institution Tools",
+        services: ["Student Dashboards", "Course Management", "Communication Portals"],
+      },
+      {
+        heading: "Related Solutions",
+        services: ["Customer Portal", "AI Business Automation", "Cloud & DevOps"],
+      },
+    ],
+  },
+];
+
+const serviceHref = (service: string) => `/contact-us/?service=${encodeURIComponent(service)}`;
+const solutionHref = (service: string) => {
+  const match = solutionPages.find((solution) => solution.title.toLowerCase() === service.toLowerCase());
+  return match ? `/solutions/${match.slug}/` : `/contact-us/?solution=${encodeURIComponent(service)}`;
+};
+const industryHref = (service: string) => {
+  const industrySlugMap: Record<string, string> = {
+    automobile: "automotive",
+    automotive: "automotive",
+    manufacturing: "manufacturing",
+    logistics: "logistics",
+    "real estate": "real-estate",
+    retail: "retail",
+    healthcare: "healthcare",
+    finance: "finance",
+    education: "education",
+    "travel & hospitality": "travel-hospitality",
+    "diamond & jewelry": "diamond-jewelry",
+    "media & entertainment": "media-entertainment",
+    advertising: "advertising",
+  };
+  const normalized = service.toLowerCase().replace(/\s+software solutions$/, "");
+  const directSlug = industrySlugMap[normalized];
+  if (directSlug) {
+    return `/industries/${directSlug}/`;
+  }
+  const match = industryPages.find((industry) => industry.title.toLowerCase() === service.toLowerCase());
+  return match ? `/industries/${match.slug}/` : `/contact-us/?industry=${encodeURIComponent(service)}`;
+};
 ---
 
 <header class="site-header">
@@ -11,22 +348,166 @@ import { industryPages, servicePages, solutionPages } from "../data/catalog";
 
     <nav class="desktop-nav" aria-label="Primary navigation">
       <a href="/">Home</a>
-      <div class="nav-group">
-        <a href="/services/">Services</a>
-        <div class="mega-panel">
-          {servicePages.map((item) => <a href={`/services/${item.slug}/`}>{item.title}</a>)}
+      <div class="nav-group service-mega-group">
+        <a href="/services/" aria-haspopup="true" aria-expanded="false">Services</a>
+        <div class="enterprise-mega" aria-label="Services mega menu">
+          <div class="enterprise-mega__sidebar" role="tablist" aria-label="Service categories">
+            {megaServiceCategories.map((category, index) => (
+              <button
+                type="button"
+                class:list={["enterprise-mega__category", index === 0 && "is-active"]}
+                data-mega-category={String(index)}
+                role="tab"
+                aria-selected={index === 0 ? "true" : "false"}
+                aria-controls={`mega-service-panel-${index}`}
+              >
+                {category.label}
+              </button>
+            ))}
+          </div>
+
+          <div class="enterprise-mega__content">
+            {megaServiceCategories.map((category, index) => (
+              <div
+                class:list={["enterprise-mega__panel", index === 0 && "is-active"]}
+                id={`mega-service-panel-${index}`}
+                data-mega-panel={String(index)}
+                role="tabpanel"
+                aria-hidden={index === 0 ? "false" : "true"}
+              >
+                <h2>{category.title}</h2>
+                <div class="enterprise-mega__divider"></div>
+                <div class="enterprise-mega__grid">
+                  {category.groups.map((group) => (
+                    <section class="enterprise-mega__section">
+                      <h3>{group.heading}</h3>
+                      <div class="enterprise-mega__links">
+                        {group.services.map((service) => (
+                          <a href={serviceHref(service)}>
+                            <span>{service}</span>
+                            <span aria-hidden="true">-&gt;</span>
+                          </a>
+                        ))}
+                      </div>
+                    </section>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            <form class="enterprise-mega__search" action="/contact-us/" method="get" role="search">
+              <input type="search" name="service" placeholder="Search services..." aria-label="Search services" />
+              <button type="submit" aria-label="Search services">Go</button>
+            </form>
+          </div>
         </div>
       </div>
-      <div class="nav-group">
-        <a href="/solutions/">Solutions</a>
-        <div class="mega-panel">
-          {solutionPages.map((item) => <a href={`/solutions/${item.slug}/`}>{item.title}</a>)}
+      <div class="nav-group service-mega-group">
+        <a href="/solutions/" aria-haspopup="true" aria-expanded="false">Solutions</a>
+        <div class="enterprise-mega solution-mega" aria-label="Solutions mega menu">
+          <div class="enterprise-mega__sidebar" role="tablist" aria-label="Solution categories">
+            {megaSolutionCategories.map((category, index) => (
+              <button
+                type="button"
+                class:list={["enterprise-mega__category", index === 0 && "is-active"]}
+                data-mega-category={String(index)}
+                role="tab"
+                aria-selected={index === 0 ? "true" : "false"}
+                aria-controls={`mega-solution-panel-${index}`}
+              >
+                {category.label}
+              </button>
+            ))}
+          </div>
+
+          <div class="enterprise-mega__content">
+            {megaSolutionCategories.map((category, index) => (
+              <div
+                class:list={["enterprise-mega__panel", index === 0 && "is-active"]}
+                id={`mega-solution-panel-${index}`}
+                data-mega-panel={String(index)}
+                role="tabpanel"
+                aria-hidden={index === 0 ? "false" : "true"}
+              >
+                <h2>{category.title}</h2>
+                <div class="enterprise-mega__divider"></div>
+                <div class="enterprise-mega__grid">
+                  {category.groups.map((group) => (
+                    <section class="enterprise-mega__section">
+                      <h3>{group.heading}</h3>
+                      <div class="enterprise-mega__links">
+                        {group.services.map((service) => (
+                          <a href={solutionHref(service)}>
+                            <span>{service}</span>
+                            <span aria-hidden="true">-&gt;</span>
+                          </a>
+                        ))}
+                      </div>
+                    </section>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            <form class="enterprise-mega__search" action="/contact-us/" method="get" role="search">
+              <input type="search" name="solution" placeholder="Search solutions..." aria-label="Search solutions" />
+              <button type="submit" aria-label="Search solutions">Go</button>
+            </form>
+          </div>
         </div>
       </div>
-      <div class="nav-group">
-        <a href="/industries/">Industries</a>
-        <div class="mega-panel compact">
-          {industryPages.map((item) => <a href={`/industries/${item.slug}/`}>{item.title}</a>)}
+      <div class="nav-group service-mega-group">
+        <a href="/industries/" aria-haspopup="true" aria-expanded="false">Industries</a>
+        <div class="enterprise-mega industry-mega" aria-label="Industries mega menu">
+          <div class="enterprise-mega__sidebar" role="tablist" aria-label="Industry categories">
+            {megaIndustryCategories.map((category, index) => (
+              <button
+                type="button"
+                class:list={["enterprise-mega__category", index === 0 && "is-active"]}
+                data-mega-category={String(index)}
+                role="tab"
+                aria-selected={index === 0 ? "true" : "false"}
+                aria-controls={`mega-industry-panel-${index}`}
+              >
+                {category.label}
+              </button>
+            ))}
+          </div>
+
+          <div class="enterprise-mega__content">
+            {megaIndustryCategories.map((category, index) => (
+              <div
+                class:list={["enterprise-mega__panel", index === 0 && "is-active"]}
+                id={`mega-industry-panel-${index}`}
+                data-mega-panel={String(index)}
+                role="tabpanel"
+                aria-hidden={index === 0 ? "false" : "true"}
+              >
+                <h2>{category.title}</h2>
+                <div class="enterprise-mega__divider"></div>
+                <div class="enterprise-mega__grid">
+                  {category.groups.map((group) => (
+                    <section class="enterprise-mega__section">
+                      <h3>{group.heading}</h3>
+                      <div class="enterprise-mega__links">
+                        {group.services.map((service) => (
+                          <a href={industryHref(service)}>
+                            <span>{service}</span>
+                            <span aria-hidden="true">-&gt;</span>
+                          </a>
+                        ))}
+                      </div>
+                    </section>
+                  ))}
+                </div>
+              </div>
+            ))}
+
+            <form class="enterprise-mega__search" action="/contact-us/" method="get" role="search">
+              <input type="search" name="industry" placeholder="Search industries..." aria-label="Search industries" />
+              <button type="submit" aria-label="Search industries">Go</button>
+            </form>
+          </div>
         </div>
       </div>
       <a href="/portfolio/">Portfolio</a>
@@ -47,9 +528,60 @@ import { industryPages, servicePages, solutionPages } from "../data/catalog";
 
   <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile navigation">
     <a href="/">Home</a>
-    <a href="/services/">Services</a>
-    <a href="/solutions/">Solutions</a>
-    <a href="/industries/">Industries</a>
+    <details class="mobile-service-accordion">
+      <summary>Services</summary>
+      <div class="mobile-service-list">
+        {megaServiceCategories.map((category) => (
+          <details>
+            <summary>{category.label}</summary>
+            <div>
+              {category.groups.map((group) => (
+                <section>
+                  <h3>{group.heading}</h3>
+                  {group.services.map((service) => <a href={serviceHref(service)}>{service}</a>)}
+                </section>
+              ))}
+            </div>
+          </details>
+        ))}
+      </div>
+    </details>
+    <details class="mobile-service-accordion">
+      <summary>Solutions</summary>
+      <div class="mobile-service-list">
+        {megaSolutionCategories.map((category) => (
+          <details>
+            <summary>{category.label}</summary>
+            <div>
+              {category.groups.map((group) => (
+                <section>
+                  <h3>{group.heading}</h3>
+                  {group.services.map((service) => <a href={solutionHref(service)}>{service}</a>)}
+                </section>
+              ))}
+            </div>
+          </details>
+        ))}
+      </div>
+    </details>
+    <details class="mobile-service-accordion">
+      <summary>Industries</summary>
+      <div class="mobile-service-list">
+        {megaIndustryCategories.map((category) => (
+          <details>
+            <summary>{category.label}</summary>
+            <div>
+              {category.groups.map((group) => (
+                <section>
+                  <h3>{group.heading}</h3>
+                  {group.services.map((service) => <a href={industryHref(service)}>{service}</a>)}
+                </section>
+              ))}
+            </div>
+          </details>
+        ))}
+      </div>
+    </details>
     <a href="/portfolio/">Portfolio</a>
     <a href="/case-studies/">Case Studies</a>
     <a href="/blog/">Blog</a>
@@ -63,10 +595,60 @@ import { industryPages, servicePages, solutionPages } from "../data/catalog";
 <script>
   const button = document.getElementById("menu-button");
   const menu = document.getElementById("mobile-menu");
+  const megaGroups = document.querySelectorAll(".service-mega-group");
 
   button?.addEventListener("click", () => {
     const isOpen = button.getAttribute("aria-expanded") === "true";
     button.setAttribute("aria-expanded", String(!isOpen));
     menu?.classList.toggle("is-open", !isOpen);
+  });
+
+  megaGroups.forEach((group) => {
+    const trigger = group.querySelector(":scope > a");
+    const categories = group.querySelectorAll("[data-mega-category]");
+    const panels = group.querySelectorAll("[data-mega-panel]");
+
+    const activateCategory = (index) => {
+      categories.forEach((category) => {
+        const isActive = category.getAttribute("data-mega-category") === index;
+        category.classList.toggle("is-active", isActive);
+        category.setAttribute("aria-selected", String(isActive));
+      });
+
+      panels.forEach((panel) => {
+        const isActive = panel.getAttribute("data-mega-panel") === index;
+        panel.classList.toggle("is-active", isActive);
+        panel.setAttribute("aria-hidden", String(!isActive));
+      });
+    };
+
+    categories.forEach((category) => {
+      const index = category.getAttribute("data-mega-category");
+      category.addEventListener("mouseenter", () => activateCategory(index));
+      category.addEventListener("focus", () => activateCategory(index));
+      category.addEventListener("click", () => activateCategory(index));
+      category.addEventListener("keydown", (event) => {
+        if (event.key !== "ArrowDown" && event.key !== "ArrowUp") {
+          return;
+        }
+
+        event.preventDefault();
+        const current = Array.from(categories).indexOf(category);
+        const next =
+          event.key === "ArrowDown"
+            ? (current + 1) % categories.length
+            : (current - 1 + categories.length) % categories.length;
+        categories[next]?.focus();
+      });
+    });
+
+    group.addEventListener("mouseenter", () => trigger?.setAttribute("aria-expanded", "true"));
+    group.addEventListener("mouseleave", () => trigger?.setAttribute("aria-expanded", "false"));
+    group.addEventListener("focusin", () => trigger?.setAttribute("aria-expanded", "true"));
+    group.addEventListener("focusout", (event) => {
+      if (!group.contains(event.relatedTarget)) {
+        trigger?.setAttribute("aria-expanded", "false");
+      }
+    });
   });
 </script>

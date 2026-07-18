@@ -1,30 +1,99 @@
 ---
-import SeoPage from "../components/SeoPage.astro";
+import Layout from "../layouts/Layout.astro";
+import { blogPosts } from "../data/blog";
 
-const sections = [
-  {
-    eyebrow: "Insights",
-    title: "Software, commerce, AI and growth articles.",
-    text: "The Hegrix blog should educate buyers, support SEO clusters and link visitors to relevant services and solutions.",
-    cards: [
-      { title: "How to Plan a Scalable B2B Commerce Platform", text: "Learn the UX, catalog, pricing and integration decisions that matter before development starts." },
-      { title: "ERP Integration Mistakes That Slow Growing Teams", text: "Avoid the common data, ownership and workflow problems that hurt adoption." },
-      { title: "Where AI Automation Creates Business Value", text: "Identify practical AI use cases across support, finance, operations and sales." },
-      { title: "Core Web Vitals for B2B Websites", text: "Understand how speed, stability and interaction quality affect SEO and conversion." },
-      { title: "Marketplace Features Buyers Expect", text: "Plan vendor onboarding, payments, moderation, reviews and customer trust systems." },
-      { title: "How to Choose a Software Development Partner", text: "Questions to ask before investing in custom software or a platform rebuild." },
-    ],
-  },
-];
+const featuredPost = blogPosts[0];
+const remainingPosts = blogPosts.slice(1);
+const categories = Array.from(new Set(blogPosts.map((post) => post.category)));
+
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "Hegrix Blog",
+  description: "Software, ecommerce, ERP, AI automation and digital growth insights from Hegrix.",
+  url: "https://hegrix.com/blog/",
+  blogPost: blogPosts.map((post) => ({
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: {
+      "@type": "Organization",
+      name: "Hegrix",
+    },
+    url: `https://hegrix.com/blog/${post.slug}/`,
+  })),
+};
 ---
 
-<SeoPage
+<Layout
   title="Software, eCommerce and AI Blog | Hegrix"
-  description="Read Hegrix insights on custom software, ecommerce, ERP, CRM, AI automation, Core Web Vitals and digital growth strategy."
-  keywords="software development blog, ecommerce blog, AI automation insights, digital transformation blog"
+  description="Read practical Hegrix insights on custom software, ecommerce, ERP, CRM, AI automation, Core Web Vitals and digital growth strategy."
+  keywords="software development blog, ecommerce blog, AI automation insights, ERP integration, digital transformation blog"
   path="/blog/"
-  eyebrow="Blog"
-  h1="Insights for better software, commerce and automation decisions."
-  intro="Practical articles from Hegrix to help business leaders plan smarter digital platforms."
-  sections={sections}
-/>
+  schema={blogSchema}
+>
+  <section class="blog-hero section">
+    <div class="container blog-hero__grid">
+      <div>
+        <p class="eyebrow">Hegrix Blog</p>
+        <h1>Insights for better software, commerce and automation decisions.</h1>
+        <p class="lead">
+          Practical articles for business leaders planning custom software, ecommerce platforms, ERP integrations,
+          AI automation and high-performing websites.
+        </p>
+        <div class="blog-category-row" aria-label="Blog categories">
+          {categories.map((category) => <a href={`#${category.toLowerCase().replaceAll(" ", "-")}`}>{category}</a>)}
+        </div>
+      </div>
+
+      <a class="blog-featured-card" href={`/blog/${featuredPost.slug}/`} aria-label={`Read ${featuredPost.title}`}>
+        <span class="blog-card__visual">{featuredPost.heroLabel}</span>
+        <span class="blog-card__meta">{featuredPost.category} / {featuredPost.readTime}</span>
+        <h2>{featuredPost.title}</h2>
+        <p>{featuredPost.excerpt}</p>
+        <span class="blog-card__link">Read article -&gt;</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Latest articles</p>
+        <h2>Guides for planning, building and improving digital platforms.</h2>
+        <p>Browse practical ideas across commerce, ERP, AI, SEO, marketplaces and software delivery.</p>
+      </div>
+
+      <div class="blog-layout">
+        <div class="blog-list">
+          {remainingPosts.map((post) => (
+            <article class="blog-card" id={post.category.toLowerCase().replaceAll(" ", "-")}>
+              <a href={`/blog/${post.slug}/`} aria-label={`Read ${post.title}`}>
+                <span class="blog-card__visual">{post.heroLabel}</span>
+                <span class="blog-card__meta">{post.category} / {post.date} / {post.readTime}</span>
+                <h3>{post.title}</h3>
+                <p>{post.excerpt}</p>
+                <span class="blog-card__link">Read article -&gt;</span>
+              </a>
+            </article>
+          ))}
+        </div>
+
+        <aside class="blog-sidebar" aria-label="Blog sidebar">
+          <div class="blog-sidebar__panel">
+            <h2>Popular topics</h2>
+            <div class="blog-topic-list">
+              {categories.map((category) => <a href={`#${category.toLowerCase().replaceAll(" ", "-")}`}>{category}</a>)}
+            </div>
+          </div>
+          <div class="blog-sidebar__panel blog-sidebar__cta">
+            <h2>Planning a project?</h2>
+            <p>Share your requirements and Hegrix will help map the right platform, workflow and launch path.</p>
+            <a class="button" href="/contact-us/">Talk to Hegrix</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</Layout>

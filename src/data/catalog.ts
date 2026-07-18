@@ -113,4 +113,40 @@ export const industryPages = [
     description: "Lead management, property portals, booking tools and CRM-connected websites.",
     keyword: "real estate software solutions",
   },
+  {
+    slug: "finance",
+    title: "Finance Software Solutions",
+    description: "Secure portals, approval workflows, dashboards, reporting and automation for finance teams.",
+    keyword: "finance software solutions",
+  },
+  {
+    slug: "education",
+    title: "Education Software Solutions",
+    description: "Learning portals, admissions workflows, student dashboards and institution management systems.",
+    keyword: "education software solutions",
+  },
+  {
+    slug: "travel-hospitality",
+    title: "Travel & Hospitality Software Solutions",
+    description: "Booking platforms, customer portals, operations dashboards and guest experience systems.",
+    keyword: "travel hospitality software solutions",
+  },
+  {
+    slug: "diamond-jewelry",
+    title: "Diamond & Jewelry Software Solutions",
+    description: "Inventory, certification, order management, CRM, ecommerce and reporting systems for diamond and jewelry businesses.",
+    keyword: "diamond jewelry software solutions",
+  },
+  {
+    slug: "media-entertainment",
+    title: "Media & Entertainment Software Solutions",
+    description: "Content platforms, streaming workflows, booking systems, campaign tools and audience engagement portals.",
+    keyword: "media entertainment software solutions",
+  },
+  {
+    slug: "advertising",
+    title: "Advertising Software Solutions",
+    description: "Campaign management, client portals, reporting dashboards, creative workflows and marketing automation systems.",
+    keyword: "advertising software solutions",
+  },
 ];

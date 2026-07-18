@@ -1,0 +1,114 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { blogPosts } from "../../data/blog";
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const relatedPosts = blogPosts.filter((item) => item.slug !== post.slug).slice(0, 3);
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: post.title,
+  description: post.excerpt,
+  datePublished: post.date,
+  dateModified: post.date,
+  keywords: post.keywords,
+  author: {
+    "@type": "Organization",
+    name: "Hegrix",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hegrix",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://hegrix.com/favicon.svg",
+    },
+  },
+  mainEntityOfPage: `https://hegrix.com/blog/${post.slug}/`,
+};
+---
+
+<Layout
+  title={`${post.title} | Hegrix Blog`}
+  description={post.excerpt}
+  keywords={post.keywords}
+  path={`/blog/${post.slug}/`}
+  schema={articleSchema}
+>
+  <article class="blog-post">
+    <header class="blog-post-hero section">
+      <div class="container narrow">
+        <a class="blog-back-link" href="/blog/">Back to blog</a>
+        <p class="eyebrow">{post.category}</p>
+        <h1>{post.title}</h1>
+        <p class="lead">{post.excerpt}</p>
+        <div class="blog-post-meta">
+          <span>{post.author}</span>
+          <span>{post.date}</span>
+          <span>{post.readTime}</span>
+        </div>
+        <div class="blog-post-visual" aria-hidden="true">
+          <span>{post.heroLabel}</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container blog-post-layout">
+        <div class="blog-post-content">
+          {post.sections.map((section) => (
+            <section>
+              <h2>{section.heading}</h2>
+              {section.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+              {section.points && (
+                <ul>
+                  {section.points.map((point) => <li>{point}</li>)}
+                </ul>
+              )}
+            </section>
+          ))}
+        </div>
+
+        <aside class="blog-post-aside" aria-label="Article help">
+          <div>
+            <h2>Need help with this?</h2>
+            <p>Hegrix can help plan, design and build the platform or automation workflow discussed in this article.</p>
+            <a class="button" href="/contact-us/">Start a project</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </article>
+
+  <section class="section soft-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Keep reading</p>
+        <h2>Related articles</h2>
+      </div>
+      <div class="card-grid">
+        {relatedPosts.map((item) => (
+          <article class="blog-card">
+            <a href={`/blog/${item.slug}/`} aria-label={`Read ${item.title}`}>
+              <span class="blog-card__visual">{item.heroLabel}</span>
+              <span class="blog-card__meta">{item.category} / {item.readTime}</span>
+              <h3>{item.title}</h3>
+              <p>{item.excerpt}</p>
+              <span class="blog-card__link">Read article -&gt;</span>
+            </a>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
