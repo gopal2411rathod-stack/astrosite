@@ -1,89 +1,121 @@
 ---
 import { industryPages, servicePages, solutionPages } from "../data/catalog";
 
+const pickLinks = (titles: string[], base: "services" | "solutions" | "industries") => {
+  const source = base === "services" ? servicePages : base === "solutions" ? solutionPages : industryPages;
+  return titles
+    .map((title) => {
+      const match = source.find((item) => item.title.toLowerCase() === title.toLowerCase());
+      return match ? [match.title, `/${base}/${match.slug}/`] : undefined;
+    })
+    .filter(Boolean) as string[][];
+};
+
 const columns = [
+  {
+    title: "Services",
+    links: pickLinks(
+      ["Odoo Development", "AI Chatbots", "AWS", "SEO", "React Development", "API Development"],
+      "services"
+    ),
+  },
+  {
+    title: "Solutions",
+    links: solutionPages.map((item) => [item.title, `/solutions/${item.slug}/`]),
+  },
+  {
+    title: "Industries",
+    links: pickLinks(
+      [
+        "Automotive ERP Software Solutions",
+        "Real Estate Software Solutions",
+        "Diamond & Jewelry Software Solutions",
+        "Media & Entertainment Software Solutions",
+        "Logistics Software Solutions",
+        "Advertising Software Solutions",
+      ],
+      "industries"
+    ),
+  },
   {
     title: "Company",
     links: [
       ["About Us", "/about-us/"],
-      ["Careers", "/careers/"],
-      ["Contact Us", "/contact-us/"],
       ["Portfolio", "/portfolio/"],
       ["Case Studies", "/case-studies/"],
+      ["Blog", "/blog/"],
+      ["Careers", "/careers/"],
+      ["Contact Us", "/contact-us/"],
     ],
-  },
-  {
-    title: "Services",
-    links: servicePages.map((item) => [item.title, `/services/${item.slug}/`]),
-  },
-  {
-    title: "Solutions",
-    links: solutionPages.slice(0, 5).map((item) => [item.title, `/solutions/${item.slug}/`]),
-  },
-  {
-    title: "Industries",
-    links: industryPages.slice(0, 5).map((item) => [item.title, `/industries/${item.slug}/`]),
   },
 ];
 ---
 
 <footer class="footer">
-  <div class="container footer-cta">
-    <div>
-      <p class="eyebrow">Ready to build</p>
-      <h2>Let Hegrix turn your next platform idea into a scalable product.</h2>
-    </div>
-    <a class="button button-light" href="/contact-us/">Book a free consultation</a>
-  </div>
-
-  <div class="container footer-grid">
-    <div class="footer-brand">
-      <a class="brand footer-logo" href="/">
-        <span class="brand-mark">H</span>
-        <span class="brand-text">Hegrix</span>
-      </a>
-      <p>
-        Hegrix is a premium software development company building commerce, ERP, CRM,
-        AI automation and mobile platforms for ambitious businesses.
-      </p>
-      <form
-        class="newsletter"
-        action="mailto:info@hegrix.com?subject=Newsletter%20subscription"
-        method="post"
-        enctype="text/plain"
-        aria-label="Newsletter subscription"
-      >
-        <label for="newsletter-email">Get practical digital growth insights</label>
-        <div>
-          <input id="newsletter-email" name="email" type="email" placeholder="you@company.com" required />
-          <button type="submit">Subscribe</button>
-        </div>
-      </form>
-    </div>
-
-    {columns.map((column) => (
-      <div class="footer-column">
-        <h3>{column.title}</h3>
-        {column.links.map(([label, href]) => <a href={href}>{label}</a>)}
+  <div class="container footer-shell">
+    <div class="footer-cta">
+      <div>
+        <p class="eyebrow">Ready to build</p>
+        <h2>Let Hegrix turn your next platform idea into a scalable product.</h2>
+        <p>Plan your software, ERP, AI, ecommerce or automation project with a senior delivery team.</p>
       </div>
-    ))}
-    <div class="footer-column">
-      <h3>Resources</h3>
-      <a href="/blog/">Blog</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/privacy-policy/">Privacy Policy</a>
-      <a href="/terms-and-conditions/">Terms &amp; Conditions</a>
-      <a href="/sitemap.xml">Sitemap</a>
+      <a class="button button-light" href="/contact-us/">Book a free consultation</a>
     </div>
-  </div>
 
-  <div class="container footer-bottom">
-    <p>Contact: <a href="mailto:info@hegrix.com">info@hegrix.com</a> | +91 82384 56194</p>
-    <p>
-      <a href="https://www.linkedin.com/company/hegrix">LinkedIn</a>
-      <a href="https://x.com/hegrix">X</a>
-      <a href="https://www.youtube.com/@hegrix">YouTube</a>
-    </p>
-    <p>Copyright {new Date().getFullYear()} Hegrix. All rights reserved.</p>
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="brand footer-logo" href="/">
+          <span class="brand-mark">H</span>
+          <span class="brand-text">Hegrix</span>
+        </a>
+        <p>
+          Hegrix builds premium software, ecommerce, Odoo, ERP, AI automation and cloud platforms for growth-focused
+          businesses.
+        </p>
+
+        <div class="footer-contact-card">
+          <a href="mailto:info@hegrix.com">info@hegrix.com</a>
+          <a href="tel:+918238456194">+91 82384 56194</a>
+          <span>Ahmedabad, India / Global delivery</span>
+        </div>
+
+        <form
+          class="newsletter"
+          action="mailto:info@hegrix.com?subject=Newsletter%20subscription"
+          method="post"
+          enctype="text/plain"
+          aria-label="Newsletter subscription"
+        >
+          <label for="newsletter-email">Digital growth insights</label>
+          <div>
+            <input id="newsletter-email" name="email" type="email" placeholder="you@company.com" required />
+            <button type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="footer-links-grid">
+        {columns.map((column) => (
+          <div class="footer-column">
+            <h3>{column.title}</h3>
+            {column.links.map(([label, href]) => <a href={href}>{label}</a>)}
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>Copyright {new Date().getFullYear()} Hegrix. All rights reserved.</p>
+      <p>
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/terms-and-conditions/">Terms</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </p>
+      <p>
+        <a href="https://www.linkedin.com/company/hegrix">LinkedIn</a>
+        <a href="https://x.com/hegrix">X</a>
+        <a href="https://www.youtube.com/@hegrix">YouTube</a>
+      </p>
+    </div>
   </div>
 </footer>
