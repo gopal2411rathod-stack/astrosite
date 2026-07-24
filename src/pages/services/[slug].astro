@@ -12,6 +12,7 @@ export function getStaticPaths() {
 }
 
 const { page } = Astro.props;
+const isOdooImplementation = page.slug === "odoo-implementation-services";
 
 const serviceName = page.title.replace(" Services", "");
 const shortCode = serviceName
@@ -22,6 +23,55 @@ const shortCode = serviceName
   .toUpperCase();
 
 const relatedServices = servicePages.filter((item) => item.slug !== page.slug).slice(0, 3);
+
+const odooImplementationFaq = [
+  {
+    title: "What is included in Odoo implementation services?",
+    text: "Hegrix covers business process discovery, module selection, Odoo configuration, workflow setup, data migration, integrations, testing, user training and launch support.",
+  },
+  {
+    title: "Can Odoo be customized for my business workflows?",
+    text: "Yes. Hegrix can customize Odoo modules, forms, approvals, dashboards, reports and integrations around your exact sales, inventory, finance, manufacturing or service workflow.",
+  },
+  {
+    title: "How long does an Odoo implementation take?",
+    text: "Timeline depends on modules, data quality, integrations and workflow complexity. A focused implementation can start in weeks, while larger ERP rollouts need phased planning.",
+  },
+  {
+    title: "Do you provide support after Odoo goes live?",
+    text: "Yes. Hegrix provides post-launch support, bug fixes, optimization, user help, performance tuning and continuous improvement after go-live.",
+  },
+];
+
+const odooImplementationSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Odoo Implementation Services",
+    provider: {
+      "@type": "Organization",
+      name: "Hegrix",
+      url: "https://hegrix.com",
+    },
+    areaServed: "Global",
+    serviceType: "Odoo ERP implementation, configuration, migration and support",
+    description:
+      "Professional Odoo implementation services for ERP setup, module configuration, workflow automation, data migration, integrations, training and launch support.",
+    url: "https://hegrix.com/services/odoo-implementation-services/",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: odooImplementationFaq.map((item) => ({
+      "@type": "Question",
+      name: item.title,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.text,
+      },
+    })),
+  },
+];
 
 const schema = [
   {
@@ -63,6 +113,189 @@ const schema = [
 ];
 ---
 
+{isOdooImplementation ? (
+  <Layout
+    title="Odoo Implementation Services | Odoo ERP Setup, Migration & Support | Hegrix"
+    description="Professional Odoo implementation services for ERP setup, module configuration, workflow automation, data migration, integrations, training and launch support."
+    keywords="Odoo implementation services, Odoo ERP implementation, Odoo setup, Odoo migration, Odoo customization, Odoo consultant"
+    path="/services/odoo-implementation-services/"
+    schema={odooImplementationSchema}
+  >
+    <section class="odoo-implementation-hero">
+      <div class="container odoo-implementation-hero__grid">
+        <div>
+          <p class="eyebrow">Odoo Implementation Services</p>
+          <h1>Implement Odoo ERP with clarity, control and confidence.</h1>
+          <p class="lead">
+            Hegrix helps businesses configure, customize and launch Odoo ERP around real workflows across sales,
+            inventory, finance, manufacturing, CRM, ecommerce and operations.
+          </p>
+          <div class="hero-actions">
+            <a class="button" href="/contact-us/">Book an Odoo consultation</a>
+            <a class="button button-ghost" href="/services/odoo-customization-services/">Explore customization</a>
+          </div>
+          <div class="odoo-trust-row" aria-label="Odoo implementation trust factors">
+            <span>Process-first ERP rollout</span>
+            <span>Migration and integration support</span>
+            <span>Training and post-launch care</span>
+          </div>
+        </div>
+
+        <div class="odoo-command-card" aria-label="Odoo implementation dashboard preview">
+          <div class="odoo-command-card__top">
+            <span>ODOO</span>
+            <strong>Implementation Plan</strong>
+          </div>
+          <div class="odoo-command-card__metrics">
+            <div><strong>01</strong><span>Discovery</span></div>
+            <div><strong>02</strong><span>Configuration</span></div>
+            <div><strong>03</strong><span>Go-live</span></div>
+          </div>
+          <div class="odoo-command-card__flow">
+            <span>Sales / CRM</span>
+            <span>Inventory / Purchase</span>
+            <span>Accounting / Reports</span>
+            <span>Integrations / Training</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Why Hegrix</p>
+          <h2>Odoo implementation should fit your business, not force your team into a generic setup.</h2>
+          <p>
+            We start with process mapping and practical rollout planning, then configure Odoo around the people,
+            approvals, data and reports your business needs every day.
+          </p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card"><strong>ERP</strong><span>End-to-end Odoo setup</span></div>
+          <div class="stat-card"><strong>CRM</strong><span>Sales and customer workflows</span></div>
+          <div class="stat-card"><strong>API</strong><span>Third-party integrations</span></div>
+          <div class="stat-card"><strong>BI</strong><span>Dashboards and reporting</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container split-band">
+        <div class="section-heading">
+          <p class="eyebrow">Implementation scope</p>
+          <h2>Everything needed for a structured Odoo ERP rollout.</h2>
+          <p>
+            From module planning to go-live support, Hegrix keeps the implementation organized, documented and ready
+            for adoption.
+          </p>
+        </div>
+        <div class="check-grid">
+          <span>Business process discovery and workflow mapping</span>
+          <span>Odoo module selection and configuration</span>
+          <span>Sales, CRM, inventory, purchase and accounting setup</span>
+          <span>Data migration, validation and cleanup support</span>
+          <span>Custom reports, dashboards and approval flows</span>
+          <span>Payment, shipping, ecommerce and third-party integrations</span>
+          <span>User roles, permissions and access planning</span>
+          <span>Training, testing, go-live and post-launch support</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Our approach</p>
+          <h2>A phased Odoo implementation process built to reduce risk.</h2>
+          <p>Clear stages help your team understand what is happening, what is required and when the system is ready.</p>
+        </div>
+        <div class="odoo-process-grid">
+          <article><span>1</span><h3>Discovery & Audit</h3><p>Review current systems, workflows, pain points, data and business goals.</p></article>
+          <article><span>2</span><h3>Solution Blueprint</h3><p>Define modules, roles, customizations, integrations, reports and rollout phases.</p></article>
+          <article><span>3</span><h3>Configuration</h3><p>Set up Odoo modules, workflows, access rules, data structures and business settings.</p></article>
+          <article><span>4</span><h3>Migration & Testing</h3><p>Migrate data, validate records, test processes and resolve issues before launch.</p></article>
+          <article><span>5</span><h3>Training & Go-live</h3><p>Train users, support adoption and launch with a controlled go-live checklist.</p></article>
+          <article><span>6</span><h3>Support & Optimization</h3><p>Improve reports, performance, workflows and integrations after real usage begins.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container two-column-lists">
+        <div>
+          <div class="section-heading">
+            <p class="eyebrow">Best fit</p>
+            <h2>Built for teams that need connected operations.</h2>
+          </div>
+          <div class="check-grid compact">
+            <span>Manufacturing and distribution companies</span>
+            <span>Retail and ecommerce businesses</span>
+            <span>Automotive and spare parts operations</span>
+            <span>Service, logistics and field teams</span>
+            <span>Companies replacing spreadsheets or legacy ERP</span>
+          </div>
+        </div>
+        <div>
+          <div class="section-heading">
+            <p class="eyebrow">Trust factors</p>
+            <h2>Designed for adoption, reliability and long-term scale.</h2>
+          </div>
+          <div class="check-grid compact">
+            <span>Business-first planning before configuration</span>
+            <span>Clear documentation and implementation roadmap</span>
+            <span>Secure role-based access and data handling</span>
+            <span>Testing before launch, support after launch</span>
+            <span>Integration-ready architecture for future growth</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Related Odoo services</p>
+          <h2>Extend your Odoo ERP with the right next capability.</h2>
+        </div>
+        <div class="industry-related-links">
+          <a href="/services/odoo-customization-services/"><span>Odoo Customization Services</span><strong aria-hidden="true">-&gt;</strong></a>
+          <a href="/services/odoo-migration-services/"><span>Odoo Migration Services</span><strong aria-hidden="true">-&gt;</strong></a>
+          <a href="/services/odoo-multi-platform-integration/"><span>Odoo Multi-Platform Integration</span><strong aria-hidden="true">-&gt;</strong></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Odoo implementation questions</h2>
+          <p>Useful answers before you plan your Odoo ERP rollout with Hegrix.</p>
+        </div>
+        <div class="faq-list">
+          {odooImplementationFaq.map((item) => (
+            <details>
+              <summary>{item.title}</summary>
+              <p>{item.text}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="container split-cta">
+        <div>
+          <p class="eyebrow">Start with a roadmap</p>
+          <h2>Ready to implement Odoo ERP the right way?</h2>
+          <p>Share your workflows, current tools and goals. Hegrix will help map a practical Odoo implementation path.</p>
+        </div>
+        <a class="button button-light" href="/contact-us/">Book an Odoo consultation</a>
+      </div>
+    </section>
+  </Layout>
+) : (
 <Layout
   title={`${page.title} | Professional ${serviceName} Company | Hegrix`}
   description={`${page.description} Hegrix provides planning, design, development, integration, launch and optimization for growth-focused businesses.`}
@@ -192,3 +425,4 @@ const schema = [
     </div>
   </section>
 </Layout>
+)}

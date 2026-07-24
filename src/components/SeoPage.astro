@@ -1,5 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { servicePages, solutionPages, industryPages } from "../data/catalog";
+
+const getCardHref = (title: string) => {
+  const service = servicePages.find((s) => s.title.toLowerCase() === title.toLowerCase());
+  if (service) return `/services/${service.slug}/`;
+
+  const solution = solutionPages.find((s) => s.title.toLowerCase() === title.toLowerCase());
+  if (solution) return `/solutions/${solution.slug}/`;
+
+  const industry = industryPages.find((s) => s.title.toLowerCase() === title.toLowerCase());
+  if (industry) return `/industries/${industry.slug}/`;
+
+  return null;
+};
 
 interface Card {
   title: string;
@@ -79,13 +93,17 @@ const faqSchema = faq.length
         </div>
         {section.cards && (
           <div class="card-grid">
-            {section.cards.map((card) => (
-              <article class="feature-card" id={card.id}>
-                <span class="card-icon" aria-hidden="true">{card.title.slice(0, 1)}</span>
-                <h3>{card.title}</h3>
-                <p>{card.text}</p>
-              </article>
-            ))}
+            {section.cards.map((card) => {
+              const href = getCardHref(card.title);
+              const Tag = href ? "a" : "article";
+              return (
+                <Tag class="feature-card" id={card.id} href={href || undefined}>
+                  <span class="card-icon" aria-hidden="true">{card.title.slice(0, 1)}</span>
+                  <h3>{card.title}</h3>
+                  <p>{card.text}</p>
+                </Tag>
+              );
+            })}
           </div>
         )}
       </div>

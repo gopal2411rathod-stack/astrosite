@@ -1,4 +1,5 @@
 import { industryPages, servicePages, solutionPages } from "../data/catalog";
+import { blogPosts } from "../data/blog";
 
 const pages = [
   "/",
@@ -12,6 +13,7 @@ const pages = [
   "/portfolio/",
   "/case-studies/",
   "/blog/",
+  ...blogPosts.map((post) => `/blog/${post.slug}/`),
   "/careers/",
   "/contact-us/",
   "/faq/",

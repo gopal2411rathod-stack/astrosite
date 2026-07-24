@@ -275,9 +275,7 @@ const manufacturingSchema = [
 ];
 ---
 
-{industryDetail ? (
-  <IndustryDetailPage detail={industryDetail} />
-) : isAutomotive ? (
+{isAutomotive ? (
   <Layout
     title="Automotive ERP Software Solutions | Hegrix"
     description="Modern Automotive ERP software for manufacturers, auto parts suppliers, dealerships, distributors and service centers."
@@ -633,6 +631,8 @@ const manufacturingSchema = [
       </div>
     </section>
   </Layout>
+) : industryDetail ? (
+  <IndustryDetailPage detail={industryDetail} />
 ) : (
   <SeoPage
     title={`${page.title} | Hegrix`}

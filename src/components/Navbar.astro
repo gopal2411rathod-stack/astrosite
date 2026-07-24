@@ -317,6 +317,14 @@ const solutionHref = (service: string) => {
   return match ? `/solutions/${match.slug}/` : `/contact-us/?solution=${encodeURIComponent(service)}`;
 };
 const industryHref = (service: string) => {
+  const serviceMatch = servicePages.find((page) => page.title.toLowerCase() === service.toLowerCase());
+  if (serviceMatch) {
+    return `/services/${serviceMatch.slug}/`;
+  }
+  const solutionMatch = solutionPages.find((solution) => solution.title.toLowerCase() === service.toLowerCase());
+  if (solutionMatch) {
+    return `/solutions/${solutionMatch.slug}/`;
+  }
   const industrySlugMap: Record<string, string> = {
     automobile: "automobile",
     automotive: "automotive",

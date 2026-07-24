@@ -8,26 +8,76 @@ import Layout from "../layouts/Layout.astro";
   keywords="contact Hegrix, software development quote, ecommerce development consultation"
   path="/contact-us/"
 >
-  <section class="page-hero section">
-    <div class="container narrow">
-      <p class="eyebrow">Contact Hegrix</p>
-      <h1>Let us talk about your project, goals and next best step.</h1>
-      <p class="lead">Share a few details and the Hegrix team will respond with a practical path for discovery, scope and delivery.</p>
+  <section class="contact-hero">
+    <div class="container contact-hero__grid">
+      <div>
+        <p class="eyebrow">Contact Hegrix</p>
+        <h1>Tell us what you want to build. We will help shape the right path.</h1>
+        <p class="lead">
+          Share your project details and Hegrix will respond with a practical roadmap for discovery, scope, technology
+          and delivery.
+        </p>
+        <div class="contact-hero__stats" aria-label="Hegrix consultation highlights">
+          <span><strong>24h</strong> Response window</span>
+          <span><strong>Global</strong> Delivery support</span>
+          <span><strong>Senior</strong> Project guidance</span>
+        </div>
+      </div>
+
+      <div class="contact-hero-card" aria-label="Consultation process">
+        <span>01</span>
+        <h2>Project Consultation</h2>
+        <p>Software, Odoo, ERP, AI automation, ecommerce, cloud, marketing and custom platform planning.</p>
+        <div>
+          <strong>What happens next</strong>
+          <small>We review your message, understand the business goal, then suggest a clear next step.</small>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="container contact-grid">
-      <div class="section-heading">
-        <p class="eyebrow">Project consultation</p>
-        <h2>Start with clarity.</h2>
-        <p>Email: <a href="mailto:info@hegrix.com">info@hegrix.com</a></p>
-        <p>Phone: +91 82384 56194</p>
-        <p>Business hours: Monday to Friday, 9:00 AM to 6:00 PM</p>
-        <p>Best internal links: review our <a href="/services/">services</a>, <a href="/solutions/">solutions</a> and <a href="/case-studies/">case studies</a> before your call.</p>
+    <div class="container contact-premium-grid">
+      <div class="contact-info-panel">
+        <div class="section-heading">
+          <p class="eyebrow">Project consultation</p>
+          <h2>Start with clarity.</h2>
+          <p>Use the form for project inquiries, partnerships, support, or a new product idea.</p>
+        </div>
+
+        <div class="contact-methods">
+          <a href="mailto:info@hegrix.com">
+            <span>Email</span>
+            <strong>info@hegrix.com</strong>
+          </a>
+          <a href="tel:+918238456194">
+            <span>Phone</span>
+            <strong>+91 82384 56194</strong>
+          </a>
+          <div>
+            <span>Business hours</span>
+            <strong>Mon to Fri, 9:00 AM to 6:00 PM</strong>
+          </div>
+        </div>
+
+        <div class="contact-routing-card">
+          <h3>Helpful before your call</h3>
+          <p>Review our core capabilities so we can discuss the right direction faster.</p>
+          <div>
+            <a href="/services/">Services</a>
+            <a href="/solutions/">Solutions</a>
+            <a href="/case-studies/">Case Studies</a>
+          </div>
+        </div>
       </div>
 
       <form class="contact-form lead-form" aria-label="Lead generation form">
+        <div class="contact-form__header">
+          <p class="eyebrow">Send inquiry</p>
+          <h2>Request a consultation</h2>
+          <p>All fields are required so our team can understand your request clearly.</p>
+        </div>
+
         <label>
           Full Name
           <input type="text" name="fullName" placeholder="Your full name" autocomplete="name" required />
@@ -101,6 +151,33 @@ import Layout from "../layouts/Layout.astro";
         <p class="form-status" role="status" aria-live="polite"></p>
         <button class="button" type="submit">Submit</button>
       </form>
+    </div>
+  </section>
+
+  <section class="section soft-section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">How we work</p>
+        <h2>A calmer way to start a technical project.</h2>
+        <p>We keep the first step focused on understanding the business problem, not overwhelming you with jargon.</p>
+      </div>
+      <div class="contact-process-grid">
+        <article>
+          <span>1</span>
+          <h3>Share your goals</h3>
+          <p>Tell us what you want to build, improve, automate or integrate.</p>
+        </article>
+        <article>
+          <span>2</span>
+          <h3>Get a practical response</h3>
+          <p>We review your details and suggest the best service, solution and delivery path.</p>
+        </article>
+        <article>
+          <span>3</span>
+          <h3>Plan the roadmap</h3>
+          <p>We align scope, timeline, budget range, technical risks and launch priorities.</p>
+        </article>
+      </div>
     </div>
   </section>
 
