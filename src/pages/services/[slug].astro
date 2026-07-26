@@ -13,6 +13,7 @@ export function getStaticPaths() {
 
 const { page } = Astro.props;
 const isOdooImplementation = page.slug === "odoo-implementation-services";
+const isOdooMigration = page.slug === "odoo-migration-services";
 
 const serviceName = page.title.replace(" Services", "");
 const shortCode = serviceName
@@ -43,6 +44,33 @@ const odooImplementationFaq = [
   },
 ];
 
+const odooMigrationFaq = [
+  {
+    title: "How long does Odoo migration take?",
+    text: "Most Odoo migrations take between 2 to 4 weeks depending on database size, version gap, and custom module complexity.",
+  },
+  {
+    title: "Will my data be safe during migration?",
+    text: "Yes. We execute a zero data loss strategy with complete database backups, staging trial runs, and automated record verification scripts.",
+  },
+  {
+    title: "Can you migrate custom modules?",
+    text: "Yes. Our certified Python developers refactor custom Odoo apps, views, models, and workflows to ensure 100% compatibility with the latest Odoo version.",
+  },
+  {
+    title: "Can you migrate from Community to Enterprise?",
+    text: "Yes. We upgrade Odoo Community databases to Odoo Enterprise seamlessly, unlocking advanced accounting, barcode, and mobile capabilities.",
+  },
+  {
+    title: "Do you support older Odoo versions?",
+    text: "Yes. We support migration from legacy versions including Odoo 10, 11, 12, 13, 14, 15, 16, and 17 to Odoo 18.",
+  },
+  {
+    title: "Do you provide support after migration?",
+    text: "Yes. We provide 24/7 post-launch hypercare, system monitoring, performance tuning, user training, and ongoing technical support.",
+  },
+];
+
 const odooImplementationSchema = [
   {
     "@context": "https://schema.org",
@@ -63,6 +91,36 @@ const odooImplementationSchema = [
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: odooImplementationFaq.map((item) => ({
+      "@type": "Question",
+      name: item.title,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.text,
+      },
+    })),
+  },
+];
+
+const odooMigrationSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Odoo Migration Services",
+    provider: {
+      "@type": "Organization",
+      name: "Hegrix",
+      url: "https://hegrix.com",
+    },
+    areaServed: "Global",
+    serviceType: "Odoo version upgrade, database migration, cloud migration, and module compatibility",
+    description:
+      "Enterprise Odoo migration services to upgrade your Odoo ERP to the latest version with zero data loss, custom module compatibility, and minimal downtime.",
+    url: "https://hegrix.com/services/odoo-migration-services/",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: odooMigrationFaq.map((item) => ({
       "@type": "Question",
       name: item.title,
       acceptedAnswer: {
@@ -121,179 +179,1504 @@ const schema = [
     path="/services/odoo-implementation-services/"
     schema={odooImplementationSchema}
   >
-    <section class="odoo-implementation-hero">
-      <div class="container odoo-implementation-hero__grid">
-        <div>
-          <p class="eyebrow">Odoo Implementation Services</p>
-          <h1>Implement Odoo ERP with clarity, control and confidence.</h1>
-          <p class="lead">
-            Hegrix helps businesses configure, customize and launch Odoo ERP around real workflows across sales,
-            inventory, finance, manufacturing, CRM, ecommerce and operations.
-          </p>
-          <div class="hero-actions">
-            <a class="button" href="/contact-us/">Book an Odoo consultation</a>
-            <a class="button button-ghost" href="/services/odoo-customization-services/">Explore customization</a>
-          </div>
-          <div class="odoo-trust-row" aria-label="Odoo implementation trust factors">
-            <span>Process-first ERP rollout</span>
-            <span>Migration and integration support</span>
-            <span>Training and post-launch care</span>
+    <div class="odoo-landing-wrapper">
+      {/* Main Hero Section */}
+      <section class="odoo-hero-section">
+        {/* Background Effects */}
+        <div class="odoo-bg-glow odoo-bg-glow--top-left" aria-hidden="true"></div>
+        <div class="odoo-bg-glow odoo-bg-glow--top-right" aria-hidden="true"></div>
+        <div class="odoo-bg-dots" aria-hidden="true"></div>
+
+        <div class="container odoo-hero-container">
+          <div class="odoo-hero-grid">
+            
+            {/* Left Marketing Column */}
+            <div class="odoo-hero-content">
+              <div class="odoo-pill-badge">
+                <span class="odoo-badge-star">⭐</span>
+                <span>Odoo Implementation Experts</span>
+              </div>
+
+              <h1 class="odoo-hero-heading">
+                Smart Odoo Implementation.<br />
+                <span class="odoo-gradient-text">Stronger Business.</span>
+              </h1>
+
+              <p class="odoo-hero-subheading">
+                We help businesses implement, customize, optimize, migrate, and support Odoo ERP solutions that improve efficiency, automate operations, and accelerate business growth.
+              </p>
+
+              <div class="odoo-feature-badges" aria-label="Key highlights">
+                <div class="odoo-feature-tag">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Certified Experts</span>
+                </div>
+                <div class="odoo-feature-tag">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Fast Implementation</span>
+                </div>
+                <div class="odoo-feature-tag">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Ongoing Support</span>
+                </div>
+              </div>
+
+              <div class="odoo-hero-cta-group">
+                <a href="/contact-us/" class="odoo-btn-primary">
+                  <span>Get Free Consultation</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <a href="/portfolio/" class="odoo-btn-secondary">
+                  <span>View Our Work</span>
+                </a>
+              </div>
+
+              <div class="odoo-social-proof">
+                <div class="odoo-stars" aria-label="5 out of 5 stars">
+                  <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <div class="odoo-rating-meta">
+                  <strong>4.9/5 Rating</strong>
+                  <span class="odoo-dot-sep">•</span>
+                  <span>120+ Reviews</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Laptop Column with Floating Glass Cards */}
+            <div class="odoo-hero-visual-wrap">
+              {/* Dotted Connection Lines SVG */}
+              <svg class="odoo-connector-lines" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M 100 80 Q 200 120 280 200" stroke="#0b55d9" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="4 4" />
+                <path d="M 90 220 Q 180 240 260 270" stroke="#0b55d9" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="4 4" />
+                <path d="M 110 360 Q 200 340 270 320" stroke="#0b55d9" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="4 4" />
+                <path d="M 120 490 Q 220 440 300 380" stroke="#0b55d9" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="4 4" />
+                
+                <path d="M 700 80 Q 600 120 520 200" stroke="#0b55d9" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="4 4" />
+                <path d="M 710 220 Q 620 240 540 270" stroke="#0b55d9" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="4 4" />
+                <path d="M 690 360 Q 600 340 530 320" stroke="#0b55d9" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="4 4" />
+                <path d="M 680 490 Q 580 440 500 380" stroke="#0b55d9" stroke-opacity="0.25" stroke-width="2" stroke-dasharray="4 4" />
+              </svg>
+
+              {/* 8 Floating Glass Cards */}
+              <div class="odoo-glass-card glass-crm">
+                <div class="glass-icon glass-icon--crm">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </div>
+                <span>CRM</span>
+              </div>
+
+              <div class="odoo-glass-card glass-sales">
+                <div class="glass-icon glass-icon--sales">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                </div>
+                <span>Sales</span>
+              </div>
+
+              <div class="odoo-glass-card glass-inventory">
+                <div class="glass-icon glass-icon--inventory">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </div>
+                <span>Inventory</span>
+              </div>
+
+              <div class="odoo-glass-card glass-accounting">
+                <div class="glass-icon glass-icon--accounting">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                </div>
+                <span>Accounting</span>
+              </div>
+
+              <div class="odoo-glass-card glass-purchase">
+                <div class="glass-icon glass-icon--purchase">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                </div>
+                <span>Purchase</span>
+              </div>
+
+              <div class="odoo-glass-card glass-manufacturing">
+                <div class="glass-icon glass-icon--manufacturing">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                </div>
+                <span>Manufacturing</span>
+              </div>
+
+              <div class="odoo-glass-card glass-hr">
+                <div class="glass-icon glass-icon--hr">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>
+                <span>HR</span>
+              </div>
+
+              <div class="odoo-glass-card glass-pos">
+                <div class="glass-icon glass-icon--pos">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                </div>
+                <span>POS</span>
+              </div>
+
+              {/* Large Modern MacBook Laptop Mockup */}
+              <div class="macbook-mockup">
+                <div class="macbook-screen-bezel">
+                  <div class="macbook-camera"></div>
+                  <div class="macbook-display">
+                    {/* Live Odoo ERP Dashboard UI */}
+                    <div class="odoo-app-window">
+                      {/* Dashboard Header */}
+                      <header class="odoo-app-header">
+                        <div class="odoo-header-left">
+                          <button class="odoo-app-switcher" title="Apps" aria-label="Apps">
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                          </button>
+                          <span class="odoo-app-title">Odoo Enterprise ERP</span>
+                          <nav class="odoo-app-nav">
+                            <span class="active">Dashboard</span>
+                            <span>CRM</span>
+                            <span>Sales</span>
+                            <span>Inventory</span>
+                            <span>Accounting</span>
+                          </nav>
+                        </div>
+                        <div class="odoo-header-right">
+                          <div class="odoo-search-bar">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#9CA3AF" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            <span>Search apps, sales, invoices...</span>
+                          </div>
+                          <div class="odoo-user-avatar">HX</div>
+                        </div>
+                      </header>
+
+                      {/* Main App Container */}
+                      <div class="odoo-app-body">
+                        {/* Sidebar */}
+                        <aside class="odoo-app-sidebar">
+                          <div class="sidebar-item active">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                            <span>Overview</span>
+                          </div>
+                          <div class="sidebar-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                            <span>CRM</span>
+                          </div>
+                          <div class="sidebar-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                            <span>Sales</span>
+                          </div>
+                          <div class="sidebar-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                            <span>Inventory</span>
+                          </div>
+                          <div class="sidebar-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect></svg>
+                            <span>Accounting</span>
+                          </div>
+                          <div class="sidebar-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                            <span>Manufacturing</span>
+                          </div>
+                          <div class="sidebar-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                            <span>Analytics</span>
+                          </div>
+                        </aside>
+
+                        {/* Content Area */}
+                        <div class="odoo-dashboard-content">
+                          {/* KPI Cards */}
+                          <div class="odoo-kpi-grid">
+                            <div class="odoo-kpi-card">
+                              <div class="kpi-header">
+                                <span>Total Revenue</span>
+                                <span class="kpi-trend positive">+18.4%</span>
+                              </div>
+                              <div class="kpi-value">$2,485,900</div>
+                              <div class="kpi-sub">vs last month</div>
+                            </div>
+                            <div class="odoo-kpi-card">
+                              <div class="kpi-header">
+                                <span>Sales Orders</span>
+                                <span class="kpi-trend positive">+12.2%</span>
+                              </div>
+                              <div class="kpi-value">1,420</div>
+                              <div class="kpi-sub">342 active shipments</div>
+                            </div>
+                            <div class="odoo-kpi-card">
+                              <div class="kpi-header">
+                                <span>Invoices Paid</span>
+                                <span class="kpi-trend positive">98.5%</span>
+                              </div>
+                              <div class="kpi-value">$1,890,400</div>
+                              <div class="kpi-sub">Avg payment: 4 days</div>
+                            </div>
+                            <div class="odoo-kpi-card">
+                              <div class="kpi-header">
+                                <span>Manufacturing</span>
+                                <span class="kpi-trend positive">99.2%</span>
+                              </div>
+                              <div class="kpi-value">8,640 units</div>
+                              <div class="kpi-sub">12 active work orders</div>
+                            </div>
+                          </div>
+
+                          {/* Charts Grid */}
+                          <div class="odoo-charts-grid">
+                            <div class="odoo-chart-panel">
+                              <div class="panel-header">
+                                <div>
+                                  <h4>Revenue & Growth Analytics</h4>
+                                  <span class="panel-subtitle">Real-time Odoo ERP metrics</span>
+                                </div>
+                                <div class="chart-legend">
+                                  <span class="legend-item"><i class="dot dot-blue"></i> Revenue</span>
+                                  <span class="legend-item"><i class="dot dot-cyan"></i> Profit</span>
+                                </div>
+                              </div>
+                              <div class="svg-chart-container">
+                                <svg viewBox="0 0 400 130" fill="none" class="revenue-chart-svg">
+                                  <defs>
+                                    <linearGradient id="blueGradient" x1="0" y1="0" x2="0" y2="1">
+                                      <stop offset="0%" stop-color="#0b55d9" stop-opacity="0.35"/>
+                                      <stop offset="100%" stop-color="#0b55d9" stop-opacity="0.0"/>
+                                    </linearGradient>
+                                    <linearGradient id="cyanGradient" x1="0" y1="0" x2="0" y2="1">
+                                      <stop offset="0%" stop-color="#1fb6ff" stop-opacity="0.25"/>
+                                      <stop offset="100%" stop-color="#1fb6ff" stop-opacity="0.0"/>
+                                    </linearGradient>
+                                  </defs>
+                                  <line x1="0" y1="30" x2="400" y2="30" stroke="#F3F4F6" stroke-dasharray="3 3"/>
+                                  <line x1="0" y1="70" x2="400" y2="70" stroke="#F3F4F6" stroke-dasharray="3 3"/>
+                                  <line x1="0" y1="110" x2="400" y2="110" stroke="#F3F4F6" stroke-dasharray="3 3"/>
+
+                                  <path d="M0,105 Q50,65 100,80 T200,35 T300,45 T400,15 L400,125 L0,125 Z" fill="url(#blueGradient)"/>
+                                  <path d="M0,115 Q50,85 100,95 T200,60 T300,70 T400,40 L400,125 L0,125 Z" fill="url(#cyanGradient)"/>
+
+                                  <path d="M0,105 Q50,65 100,80 T200,35 T300,45 T400,15" stroke="#0b55d9" stroke-width="2.5" fill="none"/>
+                                  <path d="M0,115 Q50,85 100,95 T200,60 T300,70 T400,40" stroke="#1fb6ff" stroke-width="2" fill="none"/>
+
+                                  <circle cx="100" cy="80" r="3.5" fill="#0b55d9" stroke="#FFF" stroke-width="1.5"/>
+                                  <circle cx="200" cy="35" r="3.5" fill="#0b55d9" stroke="#FFF" stroke-width="1.5"/>
+                                  <circle cx="300" cy="45" r="3.5" fill="#0b55d9" stroke="#FFF" stroke-width="1.5"/>
+                                  <circle cx="400" cy="15" r="3.5" fill="#0b55d9" stroke="#FFF" stroke-width="1.5"/>
+                                </svg>
+                              </div>
+                            </div>
+
+                            <div class="odoo-chart-panel donut-panel">
+                              <div class="panel-header">
+                                <h4>Module Share</h4>
+                              </div>
+                              <div class="donut-container">
+                                <svg viewBox="0 0 100 100" class="donut-svg">
+                                  <circle cx="50" cy="50" r="36" stroke="#EAF3FF" stroke-width="14" fill="none"/>
+                                  <circle cx="50" cy="50" r="36" stroke="#0b55d9" stroke-width="14" fill="none" stroke-dasharray="130 230" stroke-dashoffset="0"/>
+                                  <circle cx="50" cy="50" r="36" stroke="#1fb6ff" stroke-width="14" fill="none" stroke-dasharray="55 230" stroke-dashoffset="-130"/>
+                                  <circle cx="50" cy="50" r="36" stroke="#22C55E" stroke-width="14" fill="none" stroke-dasharray="40 230" stroke-dashoffset="-185"/>
+                                </svg>
+                                <div class="donut-center-text">
+                                  <strong>100%</strong>
+                                  <span>Automated</span>
+                                </div>
+                              </div>
+                              <div class="donut-legend">
+                                <div><span class="dot dot-blue"></span> Sales & CRM (58%)</div>
+                                <div><span class="dot dot-cyan"></span> Inventory (25%)</div>
+                                <div><span class="dot dot-green"></span> Accounting (17%)</div>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Recent Activities & Invoices Table */}
+                          <div class="odoo-table-panel">
+                            <div class="panel-header">
+                              <h4>Recent Activities & Invoices</h4>
+                              <span class="table-badge">Live Sync</span>
+                            </div>
+                            <div class="mini-table">
+                              <div class="table-row table-head">
+                                <span>Customer / Partner</span>
+                                <span>Module</span>
+                                <span>Amount</span>
+                                <span>Status</span>
+                              </div>
+                              <div class="table-row">
+                                <span class="cust-name">GlobalTech Enterprise</span>
+                                <span>Sales & CRM</span>
+                                <strong>$48,500.00</strong>
+                                <span class="status-pill status-success">Completed</span>
+                              </div>
+                              <div class="table-row">
+                                <span class="cust-name">Zenith Logistics Inc.</span>
+                                <span>Inventory & POS</span>
+                                <strong>$24,120.00</strong>
+                                <span class="status-pill status-progress">Processing</span>
+                              </div>
+                              <div class="table-row">
+                                <span class="cust-name">Apex Manufacturing</span>
+                                <span>MRP & Accounting</span>
+                                <strong>$92,800.00</strong>
+                                <span class="status-pill status-success">Completed</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Laptop Base */}
+                <div class="macbook-base">
+                  <div class="macbook-notch"></div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
 
-        <div class="odoo-command-card" aria-label="Odoo implementation dashboard preview">
-          <div class="odoo-command-card__top">
-            <span>ODOO</span>
-            <strong>Implementation Plan</strong>
+        {/* Bottom Statistics Section */}
+        <div class="container odoo-stats-outer">
+          <div class="odoo-stats-card">
+            <div class="odoo-stat-item">
+              <div class="stat-icon-wrapper">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </div>
+              <div class="stat-number">100+</div>
+              <div class="stat-label">Successful Projects</div>
+            </div>
+
+            <div class="stat-divider"></div>
+
+            <div class="odoo-stat-item">
+              <div class="stat-icon-wrapper">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div class="stat-number">50+</div>
+              <div class="stat-label">Happy Clients</div>
+            </div>
+
+            <div class="stat-divider"></div>
+
+            <div class="odoo-stat-item">
+              <div class="stat-icon-wrapper">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Industries Served</div>
+            </div>
+
+            <div class="stat-divider"></div>
+
+            <div class="odoo-stat-item">
+              <div class="stat-icon-wrapper">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <polyline points="12 8 12 12 15 15"></polyline>
+                </svg>
+              </div>
+              <div class="stat-number">24/7</div>
+              <div class="stat-label">Support</div>
+            </div>
+
+            <div class="stat-divider"></div>
+
+            <div class="odoo-stat-item">
+              <div class="stat-icon-wrapper">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <div class="stat-number">4.9/5</div>
+              <div class="stat-label">Client Rating</div>
+            </div>
           </div>
-          <div class="odoo-command-card__metrics">
-            <div><strong>01</strong><span>Discovery</span></div>
-            <div><strong>02</strong><span>Configuration</span></div>
-            <div><strong>03</strong><span>Go-live</span></div>
-          </div>
-          <div class="odoo-command-card__flow">
-            <span>Sales / CRM</span>
-            <span>Inventory / Purchase</span>
-            <span>Accounting / Reports</span>
-            <span>Integrations / Training</span>
+
+          {/* Trusted Logos Bar */}
+          <div class="odoo-trusted-section">
+            <p class="trusted-title">Trusted by Growing Businesses</p>
+            <div class="trusted-logos-row">
+              <div class="logo-item">
+                <svg width="100" height="28" viewBox="0 0 100 28" fill="none"><text x="0" y="21" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="18" fill="#9CA3AF" letter-spacing="1">ACME</text></svg>
+              </div>
+              <div class="logo-item">
+                <svg width="120" height="28" viewBox="0 0 120 28" fill="none"><text x="0" y="21" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="17" fill="#9CA3AF" letter-spacing="0.5">GlobalTech</text></svg>
+              </div>
+              <div class="logo-item">
+                <svg width="145" height="28" viewBox="0 0 145 28" fill="none"><text x="0" y="21" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="16" fill="#9CA3AF" letter-spacing="0.5">Zenith Industries</text></svg>
+              </div>
+              <div class="logo-item">
+                <svg width="100" height="28" viewBox="0 0 100 28" fill="none"><text x="0" y="21" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="18" fill="#9CA3AF" letter-spacing="1">Nexora</text></svg>
+              </div>
+              <div class="logo-item">
+                <svg width="145" height="28" viewBox="0 0 145 28" fill="none"><text x="0" y="21" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="16" fill="#9CA3AF" letter-spacing="0.5">Vertex Solutions</text></svg>
+              </div>
+              <div class="logo-item">
+                <svg width="155" height="28" viewBox="0 0 155 28" fill="none"><text x="0" y="21" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="15" fill="#9CA3AF" letter-spacing="0.5">BrightWay Logistics</text></svg>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="section">
+      </section>
+    </div>
+
+    {/* SECTION 1 – Why Choose Us */}
+    <section class="odoo-section odoo-why-section">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Why Hegrix</p>
-          <h2>Odoo implementation should fit your business, not force your team into a generic setup.</h2>
-          <p>
-            We start with process mapping and practical rollout planning, then configure Odoo around the people,
-            approvals, data and reports your business needs every day.
-          </p>
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Why Choose Us</p>
+          <h2 class="odoo-section-title">Why Choose Hegrix for Your Odoo Implementation</h2>
+          <p class="odoo-section-desc">Partner with certified ERP architects and engineers who deliver tailored, scalable, and risk-free Odoo implementations.</p>
         </div>
-        <div class="stats-grid">
-          <div class="stat-card"><strong>ERP</strong><span>End-to-end Odoo setup</span></div>
-          <div class="stat-card"><strong>CRM</strong><span>Sales and customer workflows</span></div>
-          <div class="stat-card"><strong>API</strong><span>Third-party integrations</span></div>
-          <div class="stat-card"><strong>BI</strong><span>Dashboards and reporting</span></div>
+        <div class="odoo-why-grid">
+          <div class="odoo-why-card">
+            <div class="odoo-card-icon icon-purple">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15l-2 5l9-11h-7l2-5l-9 11h7z"></path></svg>
+            </div>
+            <h3>Certified Odoo Experts</h3>
+            <p>Certified ERP architects mapping your exact operational requirements into standard & custom Odoo modules.</p>
+          </div>
+          <div class="odoo-why-card">
+            <div class="odoo-card-icon icon-blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <h3>End-to-End Implementation</h3>
+            <p>Complete lifecycle coverage from business discovery and process design to UAT, deployment, and adoption.</p>
+          </div>
+          <div class="odoo-why-card">
+            <div class="odoo-card-icon icon-teal">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <h3>Industry-Specific Solutions</h3>
+            <p>Pre-configured industry workflows for manufacturing, retail, healthcare, construction, and logistics.</p>
+          </div>
+          <div class="odoo-why-card">
+            <div class="odoo-card-icon icon-green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3>Secure Data Migration</h3>
+            <p>Flawless ETL data migration from legacy ERPs, SAP, QuickBooks, Salesforce, Excel, and custom databases.</p>
+          </div>
+          <div class="odoo-why-card">
+            <div class="odoo-card-icon icon-amber">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            </div>
+            <h3>Custom Development</h3>
+            <p>Bespoke Python module development, custom API integrations, approval chains, and executive BI reports.</p>
+          </div>
+          <div class="odoo-why-card">
+            <div class="odoo-card-icon icon-rose">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <h3>Post-Go-Live Support</h3>
+            <p>Dedicated 24/7 hypercare support, user training, performance monitoring, and continuous optimization.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section soft-section">
-      <div class="container split-band">
-        <div class="section-heading">
-          <p class="eyebrow">Implementation scope</p>
-          <h2>Everything needed for a structured Odoo ERP rollout.</h2>
-          <p>
-            From module planning to go-live support, Hegrix keeps the implementation organized, documented and ready
-            for adoption.
-          </p>
-        </div>
-        <div class="check-grid">
-          <span>Business process discovery and workflow mapping</span>
-          <span>Odoo module selection and configuration</span>
-          <span>Sales, CRM, inventory, purchase and accounting setup</span>
-          <span>Data migration, validation and cleanup support</span>
-          <span>Custom reports, dashboards and approval flows</span>
-          <span>Payment, shipping, ecommerce and third-party integrations</span>
-          <span>User roles, permissions and access planning</span>
-          <span>Training, testing, go-live and post-launch support</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
+    {/* SECTION 2 – Odoo Implementation Process */}
+    <section class="odoo-section odoo-process-section">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Our approach</p>
-          <h2>A phased Odoo implementation process built to reduce risk.</h2>
-          <p>Clear stages help your team understand what is happening, what is required and when the system is ready.</p>
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Implementation Process</p>
+          <h2 class="odoo-section-title">Our Proven 8-Step Odoo Implementation Roadmap</h2>
+          <p class="odoo-section-desc">A structured, low-risk rollout process designed to ensure seamless data migration and maximum user adoption.</p>
         </div>
-        <div class="odoo-process-grid">
-          <article><span>1</span><h3>Discovery & Audit</h3><p>Review current systems, workflows, pain points, data and business goals.</p></article>
-          <article><span>2</span><h3>Solution Blueprint</h3><p>Define modules, roles, customizations, integrations, reports and rollout phases.</p></article>
-          <article><span>3</span><h3>Configuration</h3><p>Set up Odoo modules, workflows, access rules, data structures and business settings.</p></article>
-          <article><span>4</span><h3>Migration & Testing</h3><p>Migrate data, validate records, test processes and resolve issues before launch.</p></article>
-          <article><span>5</span><h3>Training & Go-live</h3><p>Train users, support adoption and launch with a controlled go-live checklist.</p></article>
-          <article><span>6</span><h3>Support & Optimization</h3><p>Improve reports, performance, workflows and integrations after real usage begins.</p></article>
+        <div class="odoo-timeline">
+          <div class="odoo-timeline-step">
+            <div class="step-num">01</div>
+            <div class="step-content">
+              <h3>Discovery</h3>
+              <p>Mapping business goals, current workflows, pain points, and data sources.</p>
+            </div>
+          </div>
+          <div class="odoo-timeline-step">
+            <div class="step-num">02</div>
+            <div class="step-content">
+              <h3>Business Analysis</h3>
+              <p>Process gap analysis, module selection, and functional scope definition.</p>
+            </div>
+          </div>
+          <div class="odoo-timeline-step">
+            <div class="step-num">03</div>
+            <div class="step-content">
+              <h3>Solution Planning</h3>
+              <p>Designing system architecture, approval flows, and implementation roadmap.</p>
+            </div>
+          </div>
+          <div class="odoo-timeline-step">
+            <div class="step-num">04</div>
+            <div class="step-content">
+              <h3>Customization</h3>
+              <p>Module setup, custom app development, reports, and third-party integrations.</p>
+            </div>
+          </div>
+          <div class="odoo-timeline-step">
+            <div class="step-num">05</div>
+            <div class="step-content">
+              <h3>Data Migration</h3>
+              <p>Data cleansing, field mapping, ETL pipeline execution, and validation checks.</p>
+            </div>
+          </div>
+          <div class="odoo-timeline-step">
+            <div class="step-num">06</div>
+            <div class="step-content">
+              <h3>Testing</h3>
+              <p>End-to-end UAT, performance stress tests, security audits, and verification.</p>
+            </div>
+          </div>
+          <div class="odoo-timeline-step">
+            <div class="step-num">07</div>
+            <div class="step-content">
+              <h3>User Training</h3>
+              <p>Role-based team training, video tutorials, and change management guides.</p>
+            </div>
+          </div>
+          <div class="odoo-timeline-step">
+            <div class="step-num">08</div>
+            <div class="step-content">
+              <h3>Go Live & Support</h3>
+              <p>Controlled production launch, hypercare monitoring, and continuous support.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section soft-section">
-      <div class="container two-column-lists">
-        <div>
-          <div class="section-heading">
-            <p class="eyebrow">Best fit</p>
-            <h2>Built for teams that need connected operations.</h2>
-          </div>
-          <div class="check-grid compact">
-            <span>Manufacturing and distribution companies</span>
-            <span>Retail and ecommerce businesses</span>
-            <span>Automotive and spare parts operations</span>
-            <span>Service, logistics and field teams</span>
-            <span>Companies replacing spreadsheets or legacy ERP</span>
-          </div>
-        </div>
-        <div>
-          <div class="section-heading">
-            <p class="eyebrow">Trust factors</p>
-            <h2>Designed for adoption, reliability and long-term scale.</h2>
-          </div>
-          <div class="check-grid compact">
-            <span>Business-first planning before configuration</span>
-            <span>Clear documentation and implementation roadmap</span>
-            <span>Secure role-based access and data handling</span>
-            <span>Testing before launch, support after launch</span>
-            <span>Integration-ready architecture for future growth</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
+    {/* SECTION 3 – Odoo Modules We Implement */}
+    <section class="odoo-section odoo-modules-section">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Related Odoo services</p>
-          <h2>Extend your Odoo ERP with the right next capability.</h2>
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Modules We Implement</p>
+          <h2 class="odoo-section-title">Comprehensive Odoo Module Suite</h2>
+          <p class="odoo-section-desc">We configure and integrate all core Odoo apps to centralize your operations into one unified platform.</p>
         </div>
-        <div class="industry-related-links">
-          <a href="/services/odoo-customization-services/"><span>Odoo Customization Services</span><strong aria-hidden="true">-&gt;</strong></a>
-          <a href="/services/odoo-migration-services/"><span>Odoo Migration Services</span><strong aria-hidden="true">-&gt;</strong></a>
-          <a href="/services/odoo-multi-platform-integration/"><span>Odoo Multi-Platform Integration</span><strong aria-hidden="true">-&gt;</strong></a>
+        <div class="odoo-modules-grid">
+          <div class="odoo-module-card">
+            <div class="mod-icon mod-crm"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></div>
+            <h3>CRM</h3>
+            <p>Lead scoring, automated pipelines, activity tracking, and sales forecasting.</p>
+          </div>
+          <div class="odoo-module-card">
+            <div class="mod-icon mod-sales"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+            <h3>Sales</h3>
+            <p>Quotation builder, e-signatures, automated pricing rules, and customer portals.</p>
+          </div>
+          <div class="odoo-module-card">
+            <div class="mod-icon mod-inventory"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></div>
+            <h3>Inventory</h3>
+            <p>Real-time multi-warehouse stock, barcode scanning, and automated reordering.</p>
+          </div>
+          <div class="odoo-module-card">
+            <div class="mod-icon mod-accounting"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line></svg></div>
+            <h3>Accounting</h3>
+            <p>Double-entry bookkeeping, automated invoicing, bank sync, and tax reports.</p>
+          </div>
+          <div class="odoo-module-card">
+            <div class="mod-icon mod-purchase"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></div>
+            <h3>Purchase</h3>
+            <p>RFQs, vendor management, automated purchase orders, and approval chains.</p>
+          </div>
+          <div class="odoo-module-card">
+            <div class="mod-icon mod-mfg"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
+            <h3>Manufacturing</h3>
+            <p>Work centers, multi-level BOMs, MRP scheduling, and quality control.</p>
+          </div>
+          <div class="odoo-module-card">
+            <div class="mod-icon mod-hr"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+            <h3>HR</h3>
+            <p>Employee profiles, attendance, leave management, payroll, and recruitment.</p>
+          </div>
+          <div class="odoo-module-card">
+            <div class="mod-icon mod-pos"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg></div>
+            <h3>POS</h3>
+            <p>Retail & restaurant point-of-sale with offline support and register sync.</p>
+          </div>
+          <div class="odoo-module-card">
+            <div class="mod-icon mod-project"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></div>
+            <h3>Project</h3>
+            <p>Gantt charts, task dependencies, timesheets, and milestone billing.</p>
+          </div>
+          <div class="odoo-module-card">
+            <div class="mod-icon mod-website"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line></svg></div>
+            <h3>Website</h3>
+            <p>Drag-and-drop website builder, eCommerce store, and client portals.</p>
+          </div>
+          <div class="odoo-module-card">
+            <div class="mod-icon mod-marketing"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
+            <h3>Marketing</h3>
+            <p>Email campaigns, social media marketing, and automated customer journeys.</p>
+          </div>
+          <div class="odoo-module-card">
+            <div class="mod-icon mod-helpdesk"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg></div>
+            <h3>Helpdesk</h3>
+            <p>Ticket routing, SLA management, self-service knowledgebase, and support portals.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section soft-section">
+    {/* SECTION 4 – Industries We Serve */}
+    <section class="odoo-section odoo-industries-section">
       <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">FAQ</p>
-          <h2>Odoo implementation questions</h2>
-          <p>Useful answers before you plan your Odoo ERP rollout with Hegrix.</p>
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Industries We Serve</p>
+          <h2 class="odoo-section-title">Tailored Odoo Solutions for Every Industry</h2>
+          <p class="odoo-section-desc">Pre-packaged industry configurations built to address sector-specific compliance, workflows, and reporting.</p>
         </div>
-        <div class="faq-list">
-          {odooImplementationFaq.map((item) => (
-            <details>
-              <summary>{item.title}</summary>
-              <p>{item.text}</p>
-            </details>
-          ))}
+        <div class="odoo-industries-grid">
+          <div class="odoo-ind-card">
+            <div class="ind-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg></div>
+            <h3>Manufacturing</h3>
+            <p>BOM, work centers, MRP scheduling, scrap management, and quality control.</p>
+          </div>
+          <div class="odoo-ind-card">
+            <div class="ind-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><rect x="1" y="3" width="22" height="18" rx="2"></rect><line x1="1" y1="9" x2="23" y2="9"></line></svg></div>
+            <h3>Retail</h3>
+            <p>Omnichannel POS, barcode scanning, centralized inventory, and loyalty rewards.</p>
+          </div>
+          <div class="odoo-ind-card">
+            <div class="ind-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
+            <h3>Healthcare</h3>
+            <p>Patient portals, medical stock management, asset tracking, and compliant billing.</p>
+          </div>
+          <div class="odoo-ind-card">
+            <div class="ind-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg></div>
+            <h3>Construction</h3>
+            <p>Project cost control, subcontractor billing, equipment maintenance, and bidding.</p>
+          </div>
+          <div class="odoo-ind-card">
+            <div class="ind-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg></div>
+            <h3>Logistics</h3>
+            <p>Fleet tracking, route optimization, automated shipping rates, and WMS.</p>
+          </div>
+          <div class="odoo-ind-card">
+            <div class="ind-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg></div>
+            <h3>Education</h3>
+            <p>Student portals, course enrollment, automated tuition billing, and attendance.</p>
+          </div>
+          <div class="odoo-ind-card">
+            <div class="ind-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M6 3h12v4H6z"></path></svg></div>
+            <h3>Hospitality</h3>
+            <p>Reservation management, table POS, kitchen display system, and procurement.</p>
+          </div>
+          <div class="odoo-ind-card">
+            <div class="ind-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></div>
+            <h3>Wholesale</h3>
+            <p>B2B buyer portals, matrix pricing, multi-currency invoicing, and drop shipping.</p>
+          </div>
+          <div class="odoo-ind-card">
+            <div class="ind-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M20 7h-7L10 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path></svg></div>
+            <h3>Professional Services</h3>
+            <p>Timesheet tracking, project profitability, milestone invoicing, and resource allocation.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section final-cta">
-      <div class="container split-cta">
-        <div>
-          <p class="eyebrow">Start with a roadmap</p>
-          <h2>Ready to implement Odoo ERP the right way?</h2>
-          <p>Share your workflows, current tools and goals. Hegrix will help map a practical Odoo implementation path.</p>
+    {/* SECTION 5 – Benefits of Odoo Implementation */}
+    <section class="odoo-section odoo-benefits-section">
+      <div class="container">
+        <div class="odoo-benefits-split">
+          <div class="odoo-benefits-visual">
+            <div class="benefits-dashboard-mock">
+              <div class="benefits-mock-header">
+                <span class="mock-dot red"></span>
+                <span class="mock-dot yellow"></span>
+                <span class="mock-dot green"></span>
+                <span class="mock-title">Odoo Operations Intelligence</span>
+              </div>
+              <div class="benefits-mock-body">
+                <div class="b-metric-row">
+                  <div class="b-card">
+                    <span>Process Automation</span>
+                    <strong>94.2%</strong>
+                  </div>
+                  <div class="b-card">
+                    <span>Cost Savings</span>
+                    <strong class="text-green">-38%</strong>
+                  </div>
+                </div>
+                <div class="b-chart-area">
+                  <svg viewBox="0 0 300 100" fill="none" class="b-chart-svg">
+                    <path d="M0,80 Q50,40 100,60 T200,20 T300,10 L300,100 L0,100 Z" fill="rgba(11, 85, 217, 0.15)"/>
+                    <path d="M0,80 Q50,40 100,60 T200,20 T300,10" stroke="#0B55D9" stroke-width="3" fill="none"/>
+                  </svg>
+                </div>
+                <div class="b-status-list">
+                  <div><span>Sales & Inventory Sync</span><strong class="tag-live">Live</strong></div>
+                  <div><span>Automated Invoicing</span><strong class="tag-live">Active</strong></div>
+                  <div><span>Real-Time BI Reports</span><strong class="tag-live">Syncing</strong></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="odoo-benefits-content">
+            <p class="odoo-section-eyebrow">Measurable ROI</p>
+            <h2 class="odoo-section-title">Key Benefits of Implementing Odoo ERP</h2>
+            <p class="odoo-section-desc">Consolidate disparate systems into one unified engine that scales with your ambition.</p>
+            
+            <div class="benefits-list">
+              <div class="b-item">
+                <div class="b-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                <div>
+                  <h3>Automate Business Processes</h3>
+                  <p>Eliminate manual data entry and connect sales, inventory, purchasing, and finance into seamless automated workflows.</p>
+                </div>
+              </div>
+              <div class="b-item">
+                <div class="b-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                <div>
+                  <h3>Increase Productivity</h3>
+                  <p>Empower your team with a single source of operational truth, reducing administrative overhead by up to 45%.</p>
+                </div>
+              </div>
+              <div class="b-item">
+                <div class="b-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                <div>
+                  <h3>Reduce Operational Costs</h3>
+                  <p>Replace multiple expensive software subscriptions with a single integrated, cost-effective Odoo ERP suite.</p>
+                </div>
+              </div>
+              <div class="b-item">
+                <div class="b-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                <div>
+                  <h3>Real-Time Reporting</h3>
+                  <p>Gain total financial and operational visibility with real-time executive dashboards and customizable BI reports.</p>
+                </div>
+              </div>
+              <div class="b-item">
+                <div class="b-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                <div>
+                  <h3>Better Customer Experience</h3>
+                  <p>Speed up order fulfillment, provide self-service portals, and deliver flawless service across every customer touchpoint.</p>
+                </div>
+              </div>
+              <div class="b-item">
+                <div class="b-check"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                <div>
+                  <h3>Scalable ERP Platform</h3>
+                  <p>Modular architecture that scales effortlessly as you add new product lines, warehouses, or international subsidiaries.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <a class="button button-light" href="/contact-us/">Book an Odoo consultation</a>
       </div>
     </section>
+
+    {/* SECTION 6 – Case Studies */}
+    <section class="odoo-section odoo-cases-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Case Studies</p>
+          <h2 class="odoo-section-title">Real Results from Our Odoo Implementations</h2>
+          <p class="odoo-section-desc">Explore how growth-focused companies transformed their operations with Hegrix.</p>
+        </div>
+        <div class="odoo-cases-grid">
+          <div class="odoo-case-card">
+            <div class="case-badge">Manufacturing</div>
+            <h3>Apex Manufacturing Co.</h3>
+            <div class="case-meta">
+              <div><strong>Challenge:</strong> Disconnected spreadsheets caused 40% inventory stockouts & shipping delays.</div>
+              <div><strong>Solution:</strong> Custom Odoo MRP, Inventory & Accounting with barcode scanning.</div>
+              <div><strong>Result:</strong> 99.4% stock accuracy and 35% reduction in production cycle time.</div>
+            </div>
+            <div class="case-stat">
+              <span class="stat-big">+35%</span>
+              <span class="stat-txt">Production Efficiency</span>
+            </div>
+            <a href="/portfolio/" class="case-link">Read Case Study &rarr;</a>
+          </div>
+
+          <div class="odoo-case-card">
+            <div class="case-badge">Retail & E-Commerce</div>
+            <h3>Zenith Global Retail</h3>
+            <div class="case-meta">
+              <div><strong>Challenge:</strong> Managing 25 retail stores & online store with separate stock databases.</div>
+              <div><strong>Solution:</strong> Multi-warehouse Odoo POS, E-Commerce & CRM integration.</div>
+              <div><strong>Result:</strong> Instant real-time stock sync and 4.8x faster checkout processing.</div>
+            </div>
+            <div class="case-stat">
+              <span class="stat-big">4.8x</span>
+              <span class="stat-txt">Faster Checkout Speed</span>
+            </div>
+            <a href="/portfolio/" class="case-link">Read Case Study &rarr;</a>
+          </div>
+
+          <div class="odoo-case-card">
+            <div class="case-badge">Logistics</div>
+            <h3>Nexora Logistics Inc.</h3>
+            <div class="case-meta">
+              <div><strong>Challenge:</strong> Manual billing process taking 5 business days per monthly cycle.</div>
+              <div><strong>Solution:</strong> Automated Odoo Invoicing, Fleet Management & Customer Portal.</div>
+              <div><strong>Result:</strong> Billing reduced from 5 days to 2 hours with 100% portal visibility.</div>
+            </div>
+            <div class="case-stat">
+              <span class="stat-big">90%</span>
+              <span class="stat-txt">Faster Monthly Billing</span>
+            </div>
+            <a href="/portfolio/" class="case-link">Read Case Study &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 7 – Client Testimonials */}
+    <section class="odoo-section odoo-testimonials-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Client Testimonials</p>
+          <h2 class="odoo-section-title">Trusted by Business Leaders Worldwide</h2>
+          <p class="odoo-section-desc">Here is what our clients have to say about partnering with Hegrix for Odoo ERP.</p>
+        </div>
+        <div class="odoo-testi-grid">
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Hegrix transformed our factory operations with Odoo MRP. Their team mapped our exact manufacturing workflows and delivered the project on time and within budget."</p>
+            <div class="testi-user">
+              <div class="avatar-circle">DM</div>
+              <div>
+                <strong>David Miller</strong>
+                <span>CTO, Apex Manufacturing Co.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Migrating 25 retail stores to Odoo POS seemed daunting, but Hegrix handled data migration and staff training effortlessly. Stock synchronization is now 100% instantaneous."</p>
+            <div class="testi-user">
+              <div class="avatar-circle">SJ</div>
+              <div>
+                <strong>Sarah Jenkins</strong>
+                <span>VP of Operations, Zenith Retail</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-quote">"Our monthly billing cycle dropped from 5 days to 2 hours thanks to Hegrix's custom Odoo invoice automation. The ROI on this implementation was achieved in just 3 months."</p>
+            <div class="testi-user">
+              <div class="avatar-circle">MV</div>
+              <div>
+                <strong>Marcus Vance</strong>
+                <span>Managing Director, Nexora Logistics</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 8 – Frequently Asked Questions */}
+    <section class="odoo-section odoo-faq-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">FAQ</p>
+          <h2 class="odoo-section-title">Frequently Asked Questions</h2>
+          <p class="odoo-section-desc">Got questions about implementing Odoo ERP? Here are clear answers.</p>
+        </div>
+        <div class="odoo-faq-accordion">
+          <details class="faq-item">
+            <summary class="faq-question">What is Odoo Implementation?</summary>
+            <div class="faq-answer">
+              <p>Odoo Implementation is the end-to-end process of auditing your workflows, selecting required Odoo modules, configuring settings, customizing apps, migrating existing data, integrating third-party tools, testing, and training your team for go-live.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">How long does an Odoo implementation take?</summary>
+            <div class="faq-answer">
+              <p>Timelines depend on complexity. Standard Odoo implementations typically take 4 to 8 weeks, while complex enterprise rollouts with custom Python apps and multi-system integrations take 3 to 6 months.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">What is included in Hegrix's Odoo implementation service?</summary>
+            <div class="faq-answer">
+              <p>Our service includes business process mapping, module configuration, custom app development, data migration (ETL), API integrations, UAT testing, role-based user training, go-live deployment, and 24/7 post-launch support.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Do you migrate existing data from our current software?</summary>
+            <div class="faq-answer">
+              <p>Yes. We securely migrate your master records, financial history, inventory levels, customer CRM data, and open orders from legacy ERPs, SAP, QuickBooks, Salesforce, Excel, or SQL databases with zero data loss.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Do you provide user training for our team?</summary>
+            <div class="faq-answer">
+              <p>Yes. We conduct role-based interactive training sessions for your administrators, department heads, and end-users, backed by custom user manuals and video reference guides.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-question">Do you offer post-launch support and maintenance?</summary>
+            <div class="faq-answer">
+              <p>Yes. Hegrix provides ongoing SLA support, server health monitoring, Odoo updates, bug fixes, user assistance, and continuous workflow optimization after your system goes live.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 9 – Final Call to Action */}
+    <section class="odoo-section odoo-final-cta-section">
+      <div class="container">
+        <div class="final-cta-card">
+          <div class="cta-bg-pattern"></div>
+          <h2>Ready to Transform Your Business with Odoo?</h2>
+          <p>Book a free consultation with our certified Odoo experts and receive a customized implementation roadmap tailored to your operational goals.</p>
+          <div class="cta-buttons">
+            <a href="/contact-us/" class="odoo-btn-primary button-cta-white">Book Free Consultation</a>
+            <a href="/contact-us/" class="odoo-btn-secondary button-cta-outline">Contact Our Experts</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 10 – Contact Form */}
+    <section class="odoo-section odoo-contact-form-section">
+      <div class="container">
+        <div class="odoo-form-wrapper">
+          <div class="form-header text-center">
+            <p class="odoo-section-eyebrow">Get Started Today</p>
+            <h2>Get Your Custom Odoo Implementation Roadmap</h2>
+            <p>Fill out the form below to speak with an Odoo consultant within 24 hours.</p>
+          </div>
+          <form class="odoo-lead-form" action="/api/leads/" method="POST">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required placeholder="John Doe" />
+              </div>
+              <div class="form-group">
+                <label for="email">Work Email *</label>
+                <input type="email" id="email" name="email" required placeholder="john@company.com" />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000" />
+              </div>
+              <div class="form-group">
+                <label for="company">Company Name</label>
+                <input type="text" id="company" name="company" placeholder="Acme Inc." />
+              </div>
+              <div class="form-group full-width">
+                <label for="industry">Industry</label>
+                <select id="industry" name="industry">
+                  <option value="">Select your industry</option>
+                  <option value="Manufacturing">Manufacturing</option>
+                  <option value="Retail">Retail & E-Commerce</option>
+                  <option value="Healthcare">Healthcare</option>
+                  <option value="Construction">Construction</option>
+                  <option value="Logistics">Logistics & Supply Chain</option>
+                  <option value="Education">Education</option>
+                  <option value="Hospitality">Hospitality</option>
+                  <option value="Wholesale">Wholesale & Distribution</option>
+                  <option value="Professional Services">Professional Services</option>
+                </select>
+              </div>
+              <div class="form-group full-width">
+                <label for="message">Project Requirements / Current ERP Challenges</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us about your current systems, team size, and main goals for Odoo implementation..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="odoo-btn-primary form-submit-btn">Get Free Consultation</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 11 – Related Services */}
+    <section class="odoo-section odoo-related-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Related Services</p>
+          <h2 class="odoo-section-title">Explore Related Odoo & ERP Services</h2>
+          <p class="odoo-section-desc">Extend your ERP capabilities with our specialized technical offerings.</p>
+        </div>
+        <div class="odoo-related-grid">
+          <a href="/services/odoo-customization-services/" class="rel-card">
+            <h3>Odoo Customization</h3>
+            <p>Tailor forms, approval workflows, fields, and custom business logic around your processes.</p>
+            <span class="rel-arrow">&rarr;</span>
+          </a>
+          <a href="/services/odoo-development/" class="rel-card">
+            <h3>Odoo Development</h3>
+            <p>Build custom Odoo modules, Python backend logic, and specialized web apps.</p>
+            <span class="rel-arrow">&rarr;</span>
+          </a>
+          <a href="/services/odoo-migration-services/" class="rel-card">
+            <h3>Odoo Migration</h3>
+            <p>Migrate seamlessly to the latest Odoo version or from legacy ERP systems.</p>
+            <span class="rel-arrow">&rarr;</span>
+          </a>
+          <a href="/services/odoo-multi-platform-integration/" class="rel-card">
+            <h3>Odoo Integration</h3>
+            <p>Connect Odoo with Shopify, WooCommerce, payment gateways, shipping carriers, and APIs.</p>
+            <span class="rel-arrow">&rarr;</span>
+          </a>
+          <a href="/services/odoo-support-maintenance-services/" class="rel-card">
+            <h3>Odoo Support & Maintenance</h3>
+            <p>24/7 hypercare support SLAs, server health monitoring, updates, and bug fixes.</p>
+            <span class="rel-arrow">&rarr;</span>
+          </a>
+          <a href="/services/odoo-consulting-services/" class="rel-card">
+            <h3>Odoo Training & Consulting</h3>
+            <p>Customized role-based training programs and technical advisory for operational teams.</p>
+            <span class="rel-arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 12 – Latest Insights */}
+    <section class="odoo-section odoo-insights-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Latest Insights</p>
+          <h2 class="odoo-section-title">Odoo ERP Guides & Industry Insights</h2>
+          <p class="odoo-section-desc">Read expert articles on ERP planning, module customization, and digital transformation.</p>
+        </div>
+        <div class="odoo-insights-grid">
+          <article class="insight-card">
+            <div class="insight-img-ph img-benefits"></div>
+            <div class="insight-body">
+              <span class="insight-tag">ERP Strategy</span>
+              <h3>Why Growing Businesses Are Switching to Odoo ERP in 2026</h3>
+              <p>Discover how open-source flexibility and modular architecture make Odoo the top ERP choice for scaling companies.</p>
+              <a href="/blog/" class="insight-link">Read Article &rarr;</a>
+            </div>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-img-ph img-vs"></div>
+            <div class="insight-body">
+              <span class="insight-tag">ERP Comparison</span>
+              <h3>Odoo vs SAP: Choosing the Right ERP for Mid-Market Enterprises</h3>
+              <p>A comprehensive comparison of total cost of ownership, implementation speed, and module flexibility.</p>
+              <a href="/blog/" class="insight-link">Read Article &rarr;</a>
+            </div>
+          </article>
+
+          <article class="insight-card">
+            <div class="insight-img-ph img-guide"></div>
+            <div class="insight-body">
+              <span class="insight-tag">Implementation Guide</span>
+              <h3>The Step-by-Step Guide to Successful ERP Implementation</h3>
+              <p>Learn how to avoid common data migration pitfalls and ensure seamless user adoption across departments.</p>
+              <a href="/blog/" class="insight-link">Read Article &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </Layout>
+) : isOdooMigration ? (
+  <Layout
+    title="Odoo Migration Services | Zero Data Loss ERP Upgrade & Cloud Migration | Hegrix"
+    description="Enterprise Odoo migration services to upgrade your Odoo ERP to the latest version with zero data loss, custom module compatibility, and minimal downtime."
+    keywords="Odoo migration services, Odoo version upgrade, Odoo 18 migration, Odoo Community to Enterprise migration, Odoo database migration, Odoo cloud migration"
+    path="/services/odoo-migration-services/"
+    schema={odooMigrationSchema}
+  >
+    <div class="odoo-landing-wrapper">
+      {/* Hero Section */}
+      <section class="odoo-hero-section odoo-migration-hero">
+        <div class="odoo-bg-glow odoo-bg-glow--top-left" aria-hidden="true"></div>
+        <div class="odoo-bg-glow odoo-bg-glow--top-right" aria-hidden="true"></div>
+        <div class="odoo-bg-dots" aria-hidden="true"></div>
+
+        <div class="container odoo-hero-container">
+          <div class="odoo-hero-grid">
+            <div class="odoo-hero-content">
+              <div class="odoo-pill-badge">
+                <span class="odoo-badge-star">🏆</span>
+                <span>Trusted Odoo Migration Experts</span>
+              </div>
+              <h1 class="odoo-hero-heading">
+                Upgrade Your Odoo ERP <span class="odoo-gradient-text">Without Risk, Downtime, or Data Loss</span>
+              </h1>
+              <p class="odoo-hero-subheading">
+                As experienced Odoo migration specialists, we help businesses upgrade to the latest Odoo version with secure database migration, seamless module compatibility, and minimal business disruption. Our proven migration process ensures your data remains accurate, secure, and fully operational throughout the transition.
+              </p>
+              <div class="odoo-hero-cta-group">
+                <a href="/contact-us/" class="odoo-btn-primary">Book Free Migration Consultation</a>
+                <a href="/contact-us/" class="odoo-btn-secondary">Request Migration Assessment</a>
+              </div>
+              <div class="odoo-feature-badges">
+                <span class="odoo-feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 200+ Successful Odoo Migrations</span>
+                <span class="odoo-feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Certified Odoo Experts</span>
+                <span class="odoo-feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> 99.9% Migration Success Rate</span>
+                <span class="odoo-feature-tag"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg> Zero Data Loss Strategy</span>
+              </div>
+            </div>
+
+            {/* Laptop Mockup with Live Migration Visual */}
+            <div class="odoo-hero-visual-wrap">
+              <div class="odoo-glass-card glass-crm"><div class="glass-icon glass-icon--sales">🗄️</div> Database Migration</div>
+              <div class="odoo-glass-card glass-sales"><div class="glass-icon glass-icon--crm">🚀</div> Version Upgrade</div>
+              <div class="odoo-glass-card glass-inventory"><div class="glass-icon glass-icon--inventory">🧩</div> Module Compatibility</div>
+              <div class="odoo-glass-card glass-accounting"><div class="glass-icon glass-icon--accounting">⚡</div> Performance Optimization</div>
+              <div class="odoo-glass-card glass-purchase"><div class="glass-icon glass-icon--purchase">☁️</div> Cloud Migration</div>
+              <div class="odoo-glass-card glass-manufacturing"><div class="glass-icon glass-icon--manufacturing">✅</div> Data Validation</div>
+
+              <div class="macbook-mockup">
+                <div class="macbook-screen-bezel">
+                  <div class="macbook-camera"></div>
+                  <div class="macbook-display">
+                    <div class="odoo-app-window">
+                      <div class="odoo-app-header">
+                        <div class="odoo-header-left">
+                          <button class="odoo-app-switcher"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></button>
+                          <span class="odoo-app-title">Odoo Upgrade Center v18.0</span>
+                        </div>
+                        <div class="odoo-header-right">
+                          <div class="odoo-search-bar">🔍 Migration Status: Live</div>
+                          <div class="odoo-user-avatar">HX</div>
+                        </div>
+                      </div>
+                      <div class="odoo-app-body">
+                        <div class="odoo-app-sidebar">
+                          <div class="sidebar-item active">Overview</div>
+                          <div class="sidebar-item">Database</div>
+                          <div class="sidebar-item">Modules</div>
+                          <div class="sidebar-item">Validation</div>
+                        </div>
+                        <div class="odoo-dashboard-content">
+                          <div class="odoo-kpi-grid">
+                            <div class="odoo-kpi-card"><div class="kpi-header"><span>Target Version</span></div><div class="kpi-value">Odoo 18.0 Enterprise</div></div>
+                            <div class="odoo-kpi-card"><div class="kpi-header"><span>Records Cleared</span><span class="kpi-trend positive">100%</span></div><div class="kpi-value">1,482,900</div></div>
+                            <div class="odoo-kpi-card"><div class="kpi-header"><span>Downtime</span><span class="kpi-trend positive">&lt;45 Min</span></div><div class="kpi-value">0.00% Error</div></div>
+                            <div class="odoo-kpi-card"><div class="kpi-header"><span>Custom Modules</span><span class="kpi-trend positive">14/14</span></div><div class="kpi-value">Verified</div></div>
+                          </div>
+                          <div class="odoo-charts-grid">
+                            <div class="odoo-chart-panel">
+                              <div class="panel-header"><h4>Database ETL Progress</h4><span class="panel-subtitle">PostgreSQL Migration Pipeline</span></div>
+                              <svg viewBox="0 0 300 70" fill="none" class="revenue-chart-svg"><path d="M0,50 L50,40 L100,20 L150,15 L200,10 L300,5" stroke="#0B55D9" stroke-width="2.5" fill="none"/></svg>
+                            </div>
+                            <div class="odoo-chart-panel text-center">
+                              <div class="panel-header"><h4>Schema Sync</h4></div>
+                              <div class="donut-container">
+                                <svg viewBox="0 0 36 36" class="donut-svg"><path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#EAF3FF" stroke-width="4"/><path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831" fill="none" stroke="#0B55D9" stroke-width="4" stroke-dasharray="100, 100"/></svg>
+                                <div class="donut-center-text"><strong>100%</strong></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="macbook-base"><div class="macbook-notch"></div></div>
+              </div>
+            </div>
+          </div>
+
+          {/* Stats Bar */}
+          <div class="odoo-stats-outer">
+            <div class="odoo-stats-card">
+              <div class="odoo-stat-item"><div class="stat-icon-wrapper"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg></div><div class="stat-number">200+</div><div class="stat-label">Migration Projects</div></div>
+              <div class="stat-divider"></div>
+              <div class="odoo-stat-item"><div class="stat-icon-wrapper"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></div><div class="stat-number">100+</div><div class="stat-label">Happy Clients</div></div>
+              <div class="stat-divider"></div>
+              <div class="odoo-stat-item"><div class="stat-icon-wrapper"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div><div class="stat-number">99.9%</div><div class="stat-label">Success Rate</div></div>
+              <div class="stat-divider"></div>
+              <div class="odoo-stat-item"><div class="stat-icon-wrapper"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div><div class="stat-number">10+</div><div class="stat-label">Years Experience</div></div>
+              <div class="stat-divider"></div>
+              <div class="odoo-stat-item"><div class="stat-icon-wrapper"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div><div class="stat-number">24/7</div><div class="stat-label">Technical Support</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US */}
+      <section class="odoo-section odoo-why-section">
+        <div class="container">
+          <div class="odoo-section-header">
+            <p class="odoo-section-eyebrow">Why Choose Us</p>
+            <h2 class="odoo-section-title">Why Businesses Trust Us for Odoo Migration</h2>
+            <p class="odoo-section-desc">We combine deep technical expertise with proven migration strategies to deliver smooth, secure, and future-ready Odoo upgrades.</p>
+          </div>
+          <div class="odoo-why-grid">
+            <div class="odoo-why-card"><div class="odoo-card-icon icon-purple"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15l-2 5l9-11h-7l2-5l-9 11h7z"></path></svg></div><h3>Certified Odoo Migration Specialists</h3><p>Our consultants have extensive experience migrating complex Odoo environments across multiple industries.</p></div>
+            <div class="odoo-why-card"><div class="odoo-card-icon icon-blue"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div><h3>Zero Data Loss Migration</h3><p>We use proven backup, validation, and verification methods to ensure complete data integrity.</p></div>
+            <div class="odoo-why-card"><div class="odoo-card-icon icon-teal"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div><h3>Minimal Business Downtime</h3><p>Our migration strategy minimizes operational interruptions and keeps your business running.</p></div>
+            <div class="odoo-why-card"><div class="odoo-card-icon icon-green"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline></svg></div><h3>Complete Module Compatibility</h3><p>We upgrade standard and custom modules while maintaining full functionality.</p></div>
+            <div class="odoo-why-card"><div class="odoo-card-icon icon-amber"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg></div><h3>Cloud & On-Premise Expertise</h3><p>Whether you are moving to cloud infrastructure or upgrading your on-premise server, we have got you covered.</p></div>
+            <div class="odoo-why-card"><div class="odoo-card-icon icon-rose"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div><h3>Post-Migration Support</h3><p>We provide optimization, monitoring, user training, and technical support after deployment.</p></div>
+          </div>
+        </div>
+      </section>
+
+      {/* OUR MIGRATION SERVICES */}
+      <section class="odoo-section odoo-modules-section">
+        <div class="container">
+          <div class="odoo-section-header">
+            <p class="odoo-section-eyebrow">Our Services</p>
+            <h2 class="odoo-section-title">Our Comprehensive Odoo Migration Services</h2>
+            <p class="odoo-section-desc">Tailored technical migration capabilities covering every aspect of your Odoo ERP upgrade.</p>
+          </div>
+          <div class="odoo-modules-grid">
+            <div class="odoo-module-card"><div class="mod-icon mod-sales">🚀</div><h3>Odoo Version Upgrade</h3><p>Seamlessly upgrade from Odoo 12/13/14/15/16/17 to the latest Odoo 18 Enterprise.</p></div>
+            <div class="odoo-module-card"><div class="mod-icon mod-crm">⚡</div><h3>Community to Enterprise</h3><p>Unlock advanced features, mobile apps, and enterprise accounting modules.</p></div>
+            <div class="odoo-module-card"><div class="mod-icon mod-accounting">💎</div><h3>Enterprise Version Upgrade</h3><p>Upgrade existing Odoo Enterprise databases with full schema integrity.</p></div>
+            <div class="odoo-module-card"><div class="mod-icon mod-inventory">🗄️</div><h3>Database Migration</h3><p>Secure PostgreSQL data structure conversion, indexing, and field mapping.</p></div>
+            <div class="odoo-module-card"><div class="mod-icon mod-purchase">🖥️</div><h3>Server Migration</h3><p>Move your Odoo server instance to high-performance dedicated hardware.</p></div>
+            <div class="odoo-module-card"><div class="mod-icon mod-mfg">☁️</div><h3>Cloud Migration</h3><p>Migrate on-premise Odoo to AWS, Google Cloud, Azure, or Odoo.sh platform.</p></div>
+            <div class="odoo-module-card"><div class="mod-icon mod-hr">🧩</div><h3>Custom Module Migration</h3><p>Port custom Python code, views, and workflows to the newest Odoo API standards.</p></div>
+            <div class="odoo-module-card"><div class="mod-icon mod-pos">🔗</div><h3>Third-Party Integration</h3><p>Reconnect payment gateways, shipping APIs, CRM tools, and eCommerce stores.</p></div>
+            <div class="odoo-module-card"><div class="mod-icon mod-project">🧹</div><h3>Data Cleanup</h3><p>Remove duplicate records, audit legacy data, and optimize storage efficiency.</p></div>
+            <div class="odoo-module-card"><div class="mod-icon mod-website">📈</div><h3>Performance Optimization</h3><p>PostgreSQL query tuning, caching, indexing, and page load acceleration.</p></div>
+            <div class="odoo-module-card"><div class="mod-icon mod-marketing">🔒</div><h3>Security Enhancement</h3><p>SSL setup, role-based access audits, and system vulnerability hardening.</p></div>
+            <div class="odoo-module-card"><div class="mod-icon mod-helpdesk">🎓</div><h3>User Training</h3><p>Role-based training workshops and user guides on the updated Odoo interface.</p></div>
+          </div>
+        </div>
+      </section>
+
+      {/* OUR PROVEN MIGRATION PROCESS */}
+      <section class="odoo-section odoo-process-section">
+        <div class="container">
+          <div class="odoo-section-header">
+            <p class="odoo-section-eyebrow">Proven Process</p>
+            <h2 class="odoo-section-title">Our Proven 9-Step Migration Roadmap</h2>
+            <p class="odoo-section-desc">A structured methodology that guarantees zero data loss and minimal downtime for your business.</p>
+          </div>
+          <div class="odoo-timeline">
+            <div class="odoo-timeline-step"><div class="step-num">01</div><div class="step-content"><h3>Migration Assessment</h3><p>Analyze your current Odoo environment, database size, and custom code.</p></div></div>
+            <div class="odoo-timeline-step"><div class="step-num">02</div><div class="step-content"><h3>Migration Planning</h3><p>Prepare a detailed migration roadmap with risk mitigation strategies.</p></div></div>
+            <div class="odoo-timeline-step"><div class="step-num">03</div><div class="step-content"><h3>Complete Backup</h3><p>Secure all databases, media files, and business information before migration.</p></div></div>
+            <div class="odoo-timeline-step"><div class="step-num">04</div><div class="step-content"><h3>Test Migration</h3><p>Perform trial migration in an isolated staging environment for validation.</p></div></div>
+            <div class="odoo-timeline-step"><div class="step-num">05</div><div class="step-content"><h3>Module Testing</h3><p>Verify all standard and custom Python modules, views, and APIs.</p></div></div>
+            <div class="odoo-timeline-step"><div class="step-num">06</div><div class="step-content"><h3>Data Validation</h3><p>Check records, financial balances, attachments, and reports for accuracy.</p></div></div>
+            <div class="odoo-timeline-step"><div class="step-num">07</div><div class="step-content"><h3>Production Migration</h3><p>Execute the final production migration during scheduled low-traffic hours.</p></div></div>
+            <div class="odoo-timeline-step"><div class="step-num">08</div><div class="step-content"><h3>Go Live</h3><p>Launch the upgraded Odoo system smoothly with active hypercare monitoring.</p></div></div>
+            <div class="odoo-timeline-step"><div class="step-num">09</div><div class="step-content"><h3>Post Migration Support</h3><p>Performance monitoring, user assistance, and continuous technical support.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      {/* BENEFITS */}
+      <section class="odoo-section odoo-benefits-section">
+        <div class="container">
+          <div class="odoo-section-header">
+            <p class="odoo-section-eyebrow">Value Proposition</p>
+            <h2 class="odoo-section-title">Why Upgrade to the Latest Odoo Version?</h2>
+            <p class="odoo-section-desc">Unlock modern capabilities, superior security, and 3x faster ERP performance.</p>
+          </div>
+          <div class="odoo-why-grid">
+            <div class="odoo-why-card"><h3>Latest Odoo Features</h3><p>Access advanced AI features, updated accounting modules, and improved site builder tools.</p></div>
+            <div class="odoo-why-card"><h3>Improved Performance</h3><p>Experience up to 3x faster page loads and optimized database querying speeds.</p></div>
+            <div class="odoo-why-card"><h3>Enhanced Security</h3><p>Protect your business data with the latest security patches and encrypted connections.</p></div>
+            <div class="odoo-why-card"><h3>Better User Experience</h3><p>Enjoy a sleek, mobile-responsive UI designed for team productivity and speed.</p></div>
+            <div class="odoo-why-card"><h3>Faster Reports</h3><p>Generate real-time financial, sales, and inventory analytics in seconds.</p></div>
+            <div class="odoo-why-card"><h3>Improved Automation</h3><p>Streamline cross-department approval flows, automated emails, and inventory reordering.</p></div>
+            <div class="odoo-why-card"><h3>Lower Maintenance Costs</h3><p>Eliminate legacy system bugs, outdated dependencies, and expensive workarounds.</p></div>
+            <div class="odoo-why-card"><h3>Future-Proof Platform</h3><p>Keep your ERP stack modern, fully supported, and ready for long-term growth.</p></div>
+          </div>
+        </div>
+      </section>
+
+      {/* CASE STUDIES */}
+      <section class="odoo-section odoo-cases-section">
+        <div class="container">
+          <div class="odoo-section-header">
+            <p class="odoo-section-eyebrow">Case Studies</p>
+            <h2 class="odoo-section-title">Odoo Migration Success Stories</h2>
+            <p class="odoo-section-desc">See how we helped enterprise clients upgrade their Odoo ERP with zero data loss.</p>
+          </div>
+          <div class="odoo-cases-grid">
+            <div class="odoo-case-card">
+              <div class="case-badge">Manufacturing</div>
+              <h3>Apex Manufacturing Co.</h3>
+              <div class="case-meta">
+                <div><strong>Challenge:</strong> Legacy Odoo 14 with 500GB database and 15 custom modules facing performance bottlenecks.</div>
+                <div><strong>Solution:</strong> Staging ETL migration, custom module porting to Odoo 18, and query tuning.</div>
+                <div><strong>Result:</strong> Zero data loss, less than 1 hour downtime, and 45% faster ERP response time.</div>
+              </div>
+              <div class="case-stat"><span class="stat-big">&lt;1 Hr</span><span class="stat-txt">Downtime Achieved</span></div>
+              <a href="/portfolio/" class="case-link">Read Case Study &rarr;</a>
+            </div>
+
+            <div class="odoo-case-card">
+              <div class="case-badge">Retail & E-Commerce</div>
+              <h3>Zenith Global Retail</h3>
+              <div class="case-meta">
+                <div><strong>Challenge:</strong> Outgrown Odoo 15 Community edition; needed advanced Accounting & POS features.</div>
+                <div><strong>Solution:</strong> Migration from Odoo 15 Community to Odoo 18 Enterprise on cloud hosting.</div>
+                <div><strong>Result:</strong> 100% financial data accuracy, multi-currency support, and instant POS sync across 18 stores.</div>
+              </div>
+              <div class="case-stat"><span class="stat-big">100%</span><span class="stat-txt">Data Accuracy</span></div>
+              <a href="/portfolio/" class="case-link">Read Case Study &rarr;</a>
+            </div>
+
+            <div class="odoo-case-card">
+              <div class="case-badge">Logistics</div>
+              <h3>Nexora Logistics Inc.</h3>
+              <div class="case-meta">
+                <div><strong>Challenge:</strong> Server crashes during peak shipping hours on legacy on-premise Odoo 13 setup.</div>
+                <div><strong>Solution:</strong> Migrated Odoo 13 to Odoo 18 Enterprise hosted on auto-scaling AWS servers.</div>
+                <div><strong>Result:</strong> 99.99% system uptime, 3.2x faster shipment processing, and automated backups.</div>
+              </div>
+              <div class="case-stat"><span class="stat-big">99.99%</span><span class="stat-txt">Cloud Uptime</span></div>
+              <a href="/portfolio/" class="case-link">Read Case Study &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section class="odoo-section odoo-testimonials-section">
+        <div class="container">
+          <div class="odoo-section-header">
+            <p class="odoo-section-eyebrow">Client Feedback</p>
+            <h2 class="odoo-section-title">What Our Clients Say About Our Migration</h2>
+            <p class="odoo-section-desc">Hear directly from business leaders who upgraded their Odoo ERP with Hegrix.</p>
+          </div>
+          <div class="odoo-testi-grid">
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"Our migration from Odoo 14 to Odoo 18 was seamless, with no disruption to our daily operations. The team handled database scripts and custom modules professionally."</p>
+              <div class="testi-user"><div class="avatar-circle">AG</div><div><strong>Arthur Pendelton</strong><span>CEO, Apex Global</span></div></div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"Upgrading our 18 retail stores from Odoo Community to Enterprise was completed over the weekend. Zero data loss and our staff loves the new interface."</p>
+              <div class="testi-user"><div class="avatar-circle">ER</div><div><strong>Elena Rostova</strong><span>Operations Lead, Zenith Retail</span></div></div>
+            </div>
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"Hegrix migrated our heavy logistics database to AWS cloud in record time. Downtime was under 45 minutes and system speed doubled."</p>
+              <div class="testi-user"><div class="avatar-circle">MK</div><div><strong>Michael Chen</strong><span>CTO, Nexora Logistics</span></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ ACCORDION */}
+      <section class="odoo-section odoo-faq-section">
+        <div class="container">
+          <div class="odoo-section-header">
+            <p class="odoo-section-eyebrow">FAQ</p>
+            <h2 class="odoo-section-title">Frequently Asked Questions</h2>
+            <p class="odoo-section-desc">Clear answers to common questions about Odoo migration and version upgrades.</p>
+          </div>
+          <div class="odoo-faq-accordion">
+            <details class="faq-item"><summary class="faq-question">How long does Odoo migration take?</summary><div class="faq-answer"><p>Most Odoo migrations take between 2 to 4 weeks depending on database size, version gap, and custom module complexity.</p></div></details>
+            <details class="faq-item"><summary class="faq-question">Will my data be safe during migration?</summary><div class="faq-answer"><p>Yes. We execute a zero data loss strategy with complete database backups, staging trial runs, and automated record verification scripts.</p></div></details>
+            <details class="faq-item"><summary class="faq-question">Can you migrate custom modules?</summary><div class="faq-answer"><p>Yes. Our certified Python developers refactor custom Odoo apps, views, models, and workflows to ensure 100% compatibility with the latest Odoo version.</p></div></details>
+            <details class="faq-item"><summary class="faq-question">Can you migrate from Community to Enterprise?</summary><div class="faq-answer"><p>Yes. We specialize in upgrading Odoo Community databases to Odoo Enterprise, unlocking advanced features like full accounting, barcode, and mobile apps.</p></div></details>
+            <details class="faq-item"><summary class="faq-question">Do you support older Odoo versions?</summary><div class="faq-answer"><p>Yes. We support migration from legacy versions including Odoo 10, 11, 12, 13, 14, 15, 16, and 17 to Odoo 18.</p></div></details>
+            <details class="faq-item"><summary class="faq-question">Do you provide support after migration?</summary><div class="faq-answer"><p>Yes. We provide 24/7 post-launch hypercare, system monitoring, performance tuning, user training, and ongoing technical support.</p></div></details>
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA BANNER */}
+      <section class="odoo-section odoo-final-cta-section">
+        <div class="container">
+          <div class="final-cta-card">
+            <h2>Ready to Upgrade Your Odoo ERP?</h2>
+            <p>Partner with experienced Odoo migration experts and ensure a smooth, secure, and successful upgrade.</p>
+            <div class="cta-buttons">
+              <a href="/contact-us/" class="odoo-btn-primary button-cta-white">Book Free Consultation</a>
+              <a href="/contact-us/" class="odoo-btn-secondary button-cta-outline">Talk to Our Experts</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTACT FORM */}
+      <section class="odoo-section odoo-contact-form-section">
+        <div class="container">
+          <div class="odoo-form-wrapper">
+            <div class="form-header text-center">
+              <p class="odoo-section-eyebrow">Get Assessment</p>
+              <h2>Get Your Free Odoo Migration Assessment</h2>
+              <p>Fill out the form below to receive a custom migration roadmap and estimate from our certified specialists.</p>
+            </div>
+            <form class="odoo-lead-form" action="/api/leads/" method="POST">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="m-name">Full Name *</label>
+                  <input type="text" id="m-name" name="name" required placeholder="John Doe" />
+                </div>
+                <div class="form-group">
+                  <label for="m-email">Business Email *</label>
+                  <input type="email" id="m-email" name="email" required placeholder="john@company.com" />
+                </div>
+                <div class="form-group">
+                  <label for="m-phone">Phone Number</label>
+                  <input type="tel" id="m-phone" name="phone" placeholder="+1 (555) 000-0000" />
+                </div>
+                <div class="form-group">
+                  <label for="m-company">Company</label>
+                  <input type="text" id="m-company" name="company" placeholder="Acme Corporation" />
+                </div>
+                <div class="form-group">
+                  <label for="m-current">Current Odoo Version</label>
+                  <select id="m-current" name="current_version">
+                    <option value="">Select Current Version</option>
+                    <option value="Odoo 17">Odoo 17</option>
+                    <option value="Odoo 16">Odoo 16</option>
+                    <option value="Odoo 15">Odoo 15</option>
+                    <option value="Odoo 14">Odoo 14</option>
+                    <option value="Odoo 13">Odoo 13</option>
+                    <option value="Odoo 12 or older">Odoo 12 or older</option>
+                    <option value="Community Edition">Community Edition</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="m-target">Target Version</label>
+                  <select id="m-target" name="target_version">
+                    <option value="Odoo 18 Enterprise">Odoo 18 Enterprise (Recommended)</option>
+                    <option value="Odoo 18 Community">Odoo 18 Community</option>
+                    <option value="Odoo 17 Enterprise">Odoo 17 Enterprise</option>
+                    <option value="Cloud Odoo.sh">Odoo.sh Cloud</option>
+                  </select>
+                </div>
+                <div class="form-group full-width">
+                  <label for="m-message">Project Requirements & Custom Modules</label>
+                  <textarea id="m-message" name="message" rows="4" placeholder="Mention database size, custom modules, third-party integrations, or hosting requirements..."></textarea>
+                </div>
+              </div>
+              <button type="submit" class="odoo-btn-primary form-submit-btn">Get Free Migration Consultation</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
   </Layout>
 ) : (
 <Layout
