@@ -1,37 +1,550 @@
 ---
-import SeoPage from "../components/SeoPage.astro";
+import Layout from "../layouts/Layout.astro";
 
-const sections = [
+const stats = [
+  { number: "500+", label: "Projects Delivered" },
+  { number: "200+", label: "Global Enterprise Clients" },
+  { number: "98%", label: "Client SLA Retention" },
+  { number: "15+", label: "Countries Served" },
+  { number: "10+", label: "Years Engineering Experience" },
+];
+
+const timeline = [
   {
-    eyebrow: "Who we are",
-    title: "A product-minded software partner for teams that need dependable execution.",
-    text: "Hegrix combines strategy, UX, engineering and optimization so your digital platform supports real business growth.",
-    cards: [
-      { title: "Strategy First", text: "We clarify users, workflows, revenue goals and technical risks before writing production code." },
-      { title: "Senior Delivery", text: "Experienced designers and engineers shape systems that are easy to use, extend and maintain." },
-      { title: "Long-Term Support", text: "After launch, Hegrix helps improve performance, SEO, reliability and new feature delivery." },
-    ],
+    year: "2014",
+    title: "Company Founded",
+    desc: "Established with a mission to build clean, high-performance web applications and custom software.",
   },
   {
-    eyebrow: "Values",
-    title: "Built on clarity, ownership and measurable progress.",
-    text: "Our process keeps stakeholders aligned through clear milestones, transparent communication and practical technical decisions.",
-    cards: [
-      { title: "Transparent Roadmaps", text: "Know what is being built, why it matters and when it will ship." },
-      { title: "Quality Standards", text: "Accessibility, security, speed and clean UX are part of the baseline." },
-      { title: "Business Outcomes", text: "We focus on conversion, operational efficiency and customer experience." },
-    ],
+    year: "2017",
+    title: "ERP & Odoo Expansion",
+    desc: "Expanded team with certified Python and Odoo architects, launching full enterprise system capabilities.",
+  },
+  {
+    year: "2020",
+    title: "Cloud & DevOps Division",
+    desc: "Introduced enterprise cloud infrastructure, continuous deployment pipelines, and 24/7 SLA monitoring.",
+  },
+  {
+    year: "2023",
+    title: "AI Automation & Integration",
+    desc: "Integrated AI workflows, predictive analytics, document automation, and multi-vendor commerce engines.",
+  },
+  {
+    year: "2026",
+    title: "Global Enterprise Leader",
+    desc: "500+ successful deployments across North America, Europe, Middle East, and APAC.",
   },
 ];
+
+const values = [
+  {
+    iconType: "transparency",
+    title: "Radical Transparency",
+    desc: "Clear roadmaps, open communication, and real-time sprint tracking with no hidden technical debt.",
+  },
+  {
+    iconType: "craftsmanship",
+    title: "Senior Engineering Craftsmanship",
+    desc: "Built by experienced architects using clean architecture, rigorous testing, and resilient security standards.",
+  },
+  {
+    iconType: "outcome",
+    title: "Business Outcome Driven",
+    desc: "Every feature, API, and database model is engineered around measurable revenue growth and operational efficiency.",
+  },
+  {
+    iconType: "security",
+    title: "Enterprise Reliability & Security",
+    desc: "ISO-aligned processes, strict data governance, automated backups, and 99.9% uptime guarantees.",
+  },
+  {
+    iconType: "ai",
+    title: "Continuous AI Innovation",
+    desc: "Leveraging cutting-edge machine learning and process automation to give clients a decisive market edge.",
+  },
+  {
+    iconType: "partnership",
+    title: "Long-Term Strategic Partnership",
+    desc: "We stay aligned with your growth through ongoing system optimization, hypercare support, and scaling advisory.",
+  },
+];
+
+const team = [
+  {
+    initials: "AM",
+    name: "Alex Morgan",
+    role: "Founder & CEO",
+    bio: "12+ years leading enterprise digital transformations and software product strategy.",
+    linkedin: "https://www.linkedin.com/company/hegrix",
+  },
+  {
+    initials: "SC",
+    name: "Sophia Chen",
+    role: "VP of Engineering & ERP",
+    bio: "Certified Odoo architect and Python specialist with 10+ years scaling enterprise backbones.",
+    linkedin: "https://www.linkedin.com/company/hegrix",
+  },
+  {
+    initials: "MV",
+    name: "Marcus Vance",
+    role: "Chief Cloud & AI Officer",
+    bio: "AWS & Kubernetes certified cloud lead specializing in high-throughput microservices and AI automation.",
+    linkedin: "https://www.linkedin.com/company/hegrix",
+  },
+  {
+    initials: "ER",
+    name: "Elena Rostova",
+    role: "Head of Product & UX",
+    bio: "Design leader obsessed with creating frictionless workflows for complex business management software.",
+    linkedin: "https://www.linkedin.com/company/hegrix",
+  },
+];
+
+const culturePillars = [
+  {
+    iconType: "growth",
+    title: "Continuous Growth",
+    desc: "We invest heavily in ongoing certifications, R&D in AI technologies, and technical mastery.",
+  },
+  {
+    iconType: "global",
+    title: "Global Collaboration",
+    desc: "Remote-first mindset with engineering hubs operating across multiple time zones for seamless delivery.",
+  },
+  {
+    iconType: "autonomy",
+    title: "Engineering Autonomy",
+    desc: "Empowered teams encouraged to explore modern frameworks, optimize algorithms, and solve hard problems.",
+  },
+  {
+    iconType: "pacing",
+    title: "Sustainable Pacing",
+    desc: "We prioritize deep focus work, clear sprint boundaries, and long-term team well-being over burn-out.",
+  },
+];
+
+const techWall = [
+  { category: "ERP Systems", items: ["Odoo Certified", "SAP Integration", "Microsoft Dynamics"] },
+  { category: "Frontend Stack", items: ["React", "Next.js", "Astro", "Vue.js", "TypeScript"] },
+  { category: "Backend Engineering", items: ["Python", "Node.js", "FastAPI", "Django", "PostgreSQL"] },
+  { category: "Cloud & DevOps", items: ["AWS", "Azure", "Docker", "Kubernetes", "CI/CD Pipelines"] },
+  { category: "AI & Automation", items: ["LLM Workflows", "Predictive Analytics", "Document OCR", "Python ML"] },
+];
+
+const testimonials = [
+  {
+    stars: "★★★★★",
+    body: "Hegrix transformed our fragmented supply chain and manual accounting into a single unified Odoo ERP platform. Their technical depth and business clarity were second to none.",
+    author: "David Miller",
+    position: "CTO, Apex Industrial Solutions",
+    avatar: "DM",
+  },
+  {
+    stars: "★★★★★",
+    body: "Partnering with Hegrix allowed us to launch our multi-vendor marketplace 3 months ahead of schedule. Their senior engineers felt like a natural extension of our leadership team.",
+    author: "Sarah Jenkins",
+    position: "VP of Digital, Zenith Commerce",
+    avatar: "SJ",
+  },
+  {
+    stars: "★★★★★",
+    body: "From custom cloud microservices to AI invoice processing, Hegrix has delivered exceptional reliability. Our operational overhead dropped by 35% in year one.",
+    author: "Robert Taylor",
+    position: "Head of IT, Nexora Logistics Global",
+    avatar: "RT",
+  },
+];
+
+const faqs = [
+  {
+    q: "What types of companies does Hegrix partner with?",
+    a: "We work with scaling mid-market enterprises, B2B/B2C commerce brands, industrial manufacturers, logistics providers, and growth-stage tech companies looking for senior engineering execution.",
+  },
+  {
+    q: "How does Hegrix ensure project quality and timeline adherence?",
+    a: "We operate in structured 2-week agile sprints with transparent roadmaps, continuous integration testing, and dedicated technical account management. You always know what is built, tested, and shipped.",
+  },
+  {
+    q: "Does Hegrix provide post-launch support and SLA management?",
+    a: "Yes. We offer continuous SLA maintenance plans, security monitoring, infrastructure patching, and ongoing performance optimization so your platform scales smoothly.",
+  },
+  {
+    q: "Who owns the intellectual property (IP) of custom code?",
+    a: "You do. Upon project completion and payment, 100% of the custom code, architecture diagrams, and intellectual property rights are fully transferred to your company.",
+  },
+  {
+    q: "Can Hegrix augment our existing engineering or IT team?",
+    a: "Absolutely. We offer flexible engagement models including full turn-key platform delivery, dedicated developer pods, and specialized ERP advisory teams.",
+  },
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: f.a,
+    },
+  })),
+};
 ---
 
-<SeoPage
-  title="About Hegrix | Software Development Company"
-  description="Learn about Hegrix, a premium software development company building ecommerce, ERP, CRM, AI automation and mobile platforms."
-  keywords="about Hegrix, software development company, digital product development team"
+<Layout
+  title="About Hegrix | Enterprise Software, Cloud & AI Automation Company"
+  description="Learn about Hegrix, a premier enterprise software development company building Odoo ERP, custom software, cloud infrastructure, AI automation, and mobile platforms."
+  keywords="about Hegrix, software development company, Odoo ERP partners, AI automation, digital product development team"
   path="/about-us/"
-  eyebrow="About Hegrix"
-  h1="We build reliable digital systems for growing businesses."
-  intro="Hegrix helps companies design, develop and scale software platforms that improve customer experience and operational performance."
-  sections={sections}
-/>
+  schema={faqSchema}
+>
+  <div class="about-wrapper">
+    {/* SECTION 1 – Hero Section */}
+    <section class="home-hero-section">
+      <div class="home-hero-glow glow-1"></div>
+      <div class="home-hero-glow glow-2"></div>
+      <div class="home-hero-dots"></div>
+
+      <div class="container">
+        <div class="home-hero-grid">
+          <div>
+            <div class="hero-pill">
+              <span class="hero-pill-dot"></span>
+              <span>Who We Are & What Drives Us</span>
+            </div>
+
+            <h1 class="home-hero-title">
+              We Build <span class="hero-gradient-text">Dependable Digital Systems</span> for Scaling Enterprise Leaders.
+            </h1>
+
+            <p class="home-hero-desc">
+              Hegrix combines strategic product design, senior ERP engineering, cloud infrastructure, and AI automation to transform operational bottlenecks into sustainable growth engines.
+            </p>
+
+            <div class="home-hero-btns">
+              <a href="/contact-us/" class="home-btn-primary">
+                Schedule Consultation &rarr;
+              </a>
+              <a href="#team" class="home-btn-secondary">
+                Meet Leadership Team
+              </a>
+            </div>
+
+            <div class="home-hero-tags">
+              <span>✓ Certified Engineers</span>
+              <span>✓ Product-Minded Delivery</span>
+              <span>✓ 24/7 SLA Support</span>
+            </div>
+          </div>
+
+          <div class="home-hero-visual">
+            <div class="visual-card-main">
+              <div class="card-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="card-title">Hegrix Operational Framework</span>
+              </div>
+              <div class="card-body">
+                <div class="code-line"><span class="k">const</span> enterprise = <span class="k">new</span> HegrixPartner();</div>
+                <div class="code-line"><span class="f">await</span> enterprise.auditSystemWorkflows();</div>
+                <div class="code-line"><span class="f">await</span> enterprise.deployCustomPlatform(&#123;</div>
+                <div class="code-line tab"><span class="p">erp:</span> <span class="s">"Odoo Certified Enterprise"</span>,</div>
+                <div class="code-line tab"><span class="p">cloud:</span> <span class="s">"AWS Kubernetes Cluster"</span>,</div>
+                <div class="code-line tab"><span class="p">ai:</span> <span class="s">"Automated Document Pipelines"</span>,</div>
+                <div class="code-line"><span class="f">&#125;);</span></div>
+                <div class="code-line status-line">
+                  <span class="status-dot"></span> <span class="s">System Status: Optimal Performance (99.99%)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-top-right">
+              <span class="badge-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </span>
+              <div>
+                <strong>10+ Years</strong>
+                <span>Engineering Craft</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-left">
+              <span class="badge-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1FB6FF" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </span>
+              <div>
+                <strong>98% Retention</strong>
+                <span>SLA Partner Satisfaction</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 2 – Impact Metrics Counter Bar */}
+    <section class="about-stats-bar">
+      <div class="container">
+        <div class="about-stats-grid">
+          {stats.map((s) => (
+            <div class="about-stat-item">
+              <div class="about-stat-number">{s.number}</div>
+              <div class="about-stat-label">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 3 – Mission & Vision */}
+    <section class="home-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Strategic Purpose</p>
+          <h2 class="home-title">Engineered to Support Your Growth at Every Stage</h2>
+          <p class="home-desc">Our foundation rests on clarity, senior execution, and delivering software that impacts your bottom line.</p>
+        </div>
+
+        <div class="mission-vision-grid">
+          <div class="mission-card">
+            <div class="svg-icon-box lg">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M8 12h8"></path></svg>
+            </div>
+            <h3>Our Mission</h3>
+            <p>To eliminate operational complexity for expanding businesses by engineering reliable, scalable, and intuitive software platforms.</p>
+            <ul class="mv-list">
+              <li>Turn manual, fragmented processes into unified automated workflows</li>
+              <li>Ensure zero data loss and seamless legacy migrations</li>
+              <li>Deliver clean code that is easy to extend and maintain</li>
+            </ul>
+          </div>
+
+          <div class="vision-card">
+            <div class="svg-icon-box lg cyan-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-3.05 11a22.35 22.35 0 0 1-3.95 2z"></path></svg>
+            </div>
+            <h3>Our Vision</h3>
+            <p>To set the global benchmark for enterprise software development—where technical mastery meets true business alignment.</p>
+            <ul class="mv-list">
+              <li>Pioneer practical enterprise AI and workflow automation</li>
+              <li>Maintain an unyielding standard for performance, speed, and security</li>
+              <li>Build long-term technology partnerships grounded in trust</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 4 – Growth Timeline */}
+    <section class="home-section home-alt-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Our Journey</p>
+          <h2 class="home-title">A Decade of Continuous Innovation</h2>
+          <p class="home-desc">From our humble beginnings to a trusted global digital transformation partner.</p>
+        </div>
+
+        <div class="about-timeline-grid">
+          {timeline.map((t) => (
+            <div class="about-timeline-card">
+              <span class="timeline-year-badge">{t.year}</span>
+              <h3>{t.title}</h3>
+              <p>{t.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 5 – Core Values */}
+    <section class="home-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Guiding Principles</p>
+          <h2 class="home-title">The Values Behind Every Line of Code</h2>
+          <p class="home-desc">We operate by standards that guarantee accountability, code quality, and predictable outcomes.</p>
+        </div>
+
+        <div class="about-values-grid">
+          {values.map((v) => (
+            <div class="about-value-card">
+              <div class="svg-icon-box">
+                {v.iconType === "transparency" && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                )}
+                {v.iconType === "craftsmanship" && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                )}
+                {v.iconType === "outcome" && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                )}
+                {v.iconType === "security" && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                )}
+                {v.iconType === "ai" && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                )}
+                {v.iconType === "partnership" && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                )}
+              </div>
+              <h3>{v.title}</h3>
+              <p>{v.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 6 – Tech Stack & Certified Expertise */}
+    <section class="home-section home-alt-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Technical Mastery</p>
+          <h2 class="home-title">Modern Technologies We Command</h2>
+          <p class="home-desc">We combine industry-standard enterprise frameworks with modern cloud infrastructure.</p>
+        </div>
+
+        <div class="tech-wall-grid">
+          {techWall.map((t) => (
+            <div class="tech-category-card">
+              <h3>{t.category}</h3>
+              <div class="tech-tags">
+                {t.items.map((item) => (
+                  <span class="tech-tag">{item}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 7 – Leadership & Team */}
+    <section class="home-section" id="team">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Leadership</p>
+          <h2 class="home-title">Meet the Minds Shaping Hegrix</h2>
+          <p class="home-desc">Experienced architects, design directors, and engineers committed to your success.</p>
+        </div>
+
+        <div class="about-team-grid">
+          {team.map((m) => (
+            <div class="about-team-card">
+              <div class="team-avatar-box">{m.initials}</div>
+              <h3 class="team-name">{m.name}</h3>
+              <span class="team-role-tag">{m.role}</span>
+              <p class="team-bio">{m.bio}</p>
+              <a href={m.linkedin} target="_blank" rel="noopener noreferrer" class="team-social-link">
+                LinkedIn Profile &rarr;
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 8 – Culture & Careers */}
+    <section class="home-section home-alt-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Life at Hegrix</p>
+          <h2 class="home-title">Built for Senior Engineering Excellence</h2>
+          <p class="home-desc">We foster a culture of deep work, technical autonomy, and continuous learning.</p>
+        </div>
+
+        <div class="about-culture-grid">
+          {culturePillars.map((c) => (
+            <div class="about-culture-card">
+              <div class="svg-icon-box">
+                {c.iconType === "growth" && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                )}
+                {c.iconType === "global" && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                )}
+                {c.iconType === "autonomy" && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                )}
+                {c.iconType === "pacing" && (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                )}
+              </div>
+              <h3>{c.title}</h3>
+              <p>{c.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="/careers/" class="home-btn-secondary">Explore Career Opportunities &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 9 – Client Testimonials */}
+    <section class="home-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Client Feedback</p>
+          <h2 class="home-title">Trusted by Tech & Business Executives</h2>
+          <p class="home-desc">Here is what executive partners say about building digital platforms with Hegrix.</p>
+        </div>
+
+        <div class="home-testi-grid">
+          {testimonials.map((t) => (
+            <div class="home-testi-card">
+              <div class="testi-stars">{t.stars}</div>
+              <p class="testi-body">"{t.body}"</p>
+              <div class="testi-author">
+                <div class="author-avatar">{t.avatar}</div>
+                <div>
+                  <strong>{t.author}</strong>
+                  <span>{t.position}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 10 – FAQ */}
+    <section class="home-section home-alt-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">FAQ</p>
+          <h2 class="home-title">Frequently Asked Questions</h2>
+          <p class="home-desc">Clear answers about how we collaborate, contract, and deliver digital systems.</p>
+        </div>
+
+        <div class="about-faq-grid">
+          {faqs.map((item) => (
+            <details class="about-faq-item">
+              <summary>{item.q}</summary>
+              <p>{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 11 – Final CTA */}
+    <section class="home-section home-final-cta">
+      <div class="container">
+        <div class="home-cta-card">
+          <h2>Ready to Build Your Enterprise Platform with Hegrix?</h2>
+          <p>Share your vision and business goals with our strategic engineering team. We will outline the optimal roadmap and timeline.</p>
+          <div class="home-cta-btns">
+            <a href="/contact-us/" class="home-btn-primary btn-white">Schedule Strategic Audit &rarr;</a>
+            <a href="/services/" class="home-btn-secondary btn-outline">Explore Our Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

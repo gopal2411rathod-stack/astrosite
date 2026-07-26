@@ -1,11 +1,21 @@
 ---
 import { industryPages, servicePages, solutionPages } from "../data/catalog";
 
-const pickLinks = (titles: string[], base: "services" | "solutions" | "industries") => {
-  const source = base === "services" ? servicePages : base === "solutions" ? solutionPages : industryPages;
+const pickLinks = (
+  titles: string[],
+  base: "services" | "solutions" | "industries",
+) => {
+  const source =
+    base === "services"
+      ? servicePages
+      : base === "solutions"
+        ? solutionPages
+        : industryPages;
   return titles
     .map((title) => {
-      const match = source.find((item) => item.title.toLowerCase() === title.toLowerCase());
+      const match = source.find(
+        (item) => item.title.toLowerCase() === title.toLowerCase(),
+      );
       return match ? [match.title, `/${base}/${match.slug}/`] : undefined;
     })
     .filter(Boolean) as string[][];
@@ -15,13 +25,23 @@ const columns = [
   {
     title: "Services",
     links: pickLinks(
-      ["Odoo Development", "AI Chatbots", "AWS", "SEO", "React Development", "API Development"],
-      "services"
+      [
+        "Odoo Development",
+        "AI Chatbots",
+        "AWS",
+        "SEO",
+        "React Development",
+        "API Development",
+      ],
+      "services",
     ),
   },
   {
     title: "Solutions",
-    links: solutionPages.map((item) => [item.title, `/solutions/${item.slug}/`]),
+    links: solutionPages.map((item) => [
+      item.title,
+      `/solutions/${item.slug}/`,
+    ]),
   },
   {
     title: "Industries",
@@ -34,7 +54,7 @@ const columns = [
         "Logistics Software Solutions",
         "Advertising Software Solutions",
       ],
-      "industries"
+      "industries",
     ),
   },
   {
@@ -53,68 +73,136 @@ const columns = [
 
 <footer class="footer">
   <div class="container footer-shell">
-    <div class="footer-cta">
-      <div>
-        <p class="eyebrow">Ready to build</p>
-        <h2>Let Hegrix turn your next platform idea into a scalable product.</h2>
-        <p>Plan your software, ERP, AI, ecommerce or automation project with a senior delivery team.</p>
-      </div>
-      <a class="button button-light" href="/contact-us/">Book a free consultation</a>
-    </div>
-
+    <!-- Main Footer Section -->
     <div class="footer-main">
-      <div class="footer-brand">
-        <a class="brand footer-logo" href="/">
-          <img src="/images/logo-white.svg" alt="HEGRIX" class="brand-logo-img" height="34" />
+      <div class="footer-brand-col">
+        <a class="footer-logo" href="/" aria-label="Hegrix Home">
+          <img
+            src="/images/logo-white.svg"
+            alt="HEGRIX"
+            class="brand-logo-img"
+            height="36"
+          />
         </a>
-        <p>
-          Hegrix builds premium software, ecommerce, Odoo, ERP, AI automation and cloud platforms for growth-focused
-          businesses.
+
+        <p class="brand-description">
+          Hegrix engineers premium software, enterprise Odoo ERP solutions, AI automation pipelines, and scalable cloud platforms for forward-thinking global businesses.
         </p>
 
-        <div class="footer-contact-card">
-          <a href="mailto:info@hegrix.com">info@hegrix.com</a>
-          <a href="tel:+918238456194">+91 82384 56194</a>
-          <span>Ahmedabad, India / Global delivery</span>
+        <!-- Live Status Pill -->
+        <div class="system-status-pill">
+          <span class="status-indicator"></span>
+          <span>All Engineering Systems Operational</span>
         </div>
 
-        <form
-          class="newsletter"
-          action="mailto:info@hegrix.com?subject=Newsletter%20subscription"
-          method="post"
-          enctype="text/plain"
-          aria-label="Newsletter subscription"
-        >
-          <label for="newsletter-email">Digital growth insights</label>
-          <div>
-            <input id="newsletter-email" name="email" type="email" placeholder="you@company.com" required />
-            <button type="submit">Subscribe</button>
+        <!-- Contact Links -->
+        <div class="footer-contact-grid">
+          <a href="mailto:info@hegrix.com" class="contact-item">
+            <div class="contact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </svg>
+            </div>
+            <span>info@hegrix.com</span>
+          </a>
+
+          <a href="tel:+918238456194" class="contact-item">
+            <div class="contact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              </svg>
+            </div>
+            <span>+91 82384 56194</span>
+          </a>
+
+          <div class="contact-item static">
+            <div class="contact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <span>Ahmedabad, India & Global Delivery</span>
           </div>
-        </form>
+        </div>
       </div>
 
+      <!-- Links Columns Grid -->
       <div class="footer-links-grid">
-        {columns.map((column) => (
-          <div class="footer-column">
-            <h3>{column.title}</h3>
-            {column.links.map(([label, href]) => <a href={href}>{label}</a>)}
-          </div>
-        ))}
+        {
+          columns.map((column) => (
+            <div class="footer-column">
+              <h3>{column.title}</h3>
+              <ul class="footer-links-list">
+                {column.links.map(([label, href]) => (
+                  <li>
+                    <a href={href}>
+                      <span class="link-arrow">→</span>
+                      <span class="link-label">{label}</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))
+        }
       </div>
     </div>
 
+    <!-- Footer Bottom Bar -->
     <div class="footer-bottom">
-      <p>Copyright {new Date().getFullYear()} Hegrix. All rights reserved.</p>
-      <p>
-        <a href="/privacy-policy/">Privacy</a>
-        <a href="/terms-and-conditions/">Terms</a>
-        <a href="/sitemap.xml">Sitemap</a>
-      </p>
-      <p>
-        <a href="https://www.linkedin.com/company/hegrix">LinkedIn</a>
-        <a href="https://x.com/hegrix">X</a>
-        <a href="https://www.youtube.com/@hegrix">YouTube</a>
-      </p>
+      <div class="footer-bottom-left">
+        <p>© {new Date().getFullYear()} Hegrix Technologies. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="/privacy-policy/">Privacy Policy</a>
+          <span class="dot-separator">•</span>
+          <a href="/terms-and-conditions/">Terms of Service</a>
+          <span class="dot-separator">•</span>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-right">
+        <!-- Social Icons -->
+        <div class="social-links">
+          <a href="https://www.linkedin.com/company/hegrix" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a href="https://x.com/hegrix" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <a href="https://www.youtube.com/@hegrix" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Back to top -->
+        <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+          <span>Back to top</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </footer>
+
+<script>
+  const backToTopBtn = document.getElementById('back-to-top');
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+</script>

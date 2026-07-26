@@ -13,73 +13,73 @@ const services = [
   {
     title: "Odoo ERP",
     desc: "End-to-end Odoo implementation, custom Python module development, and workflow automation.",
-    icon: "⚙️",
+    iconType: "odoo",
     link: "/services/odoo-implementation-services/",
   },
   {
     title: "ERP Consulting",
     desc: "Strategic process auditing, roadmap architecture, and expert ERP rollout advisory.",
-    icon: "📊",
+    iconType: "consulting",
     link: "/services/odoo-consulting-services/",
   },
   {
     title: "Custom Software",
     desc: "Tailored web, desktop, and enterprise software built for unique operational workflows.",
-    icon: "💻",
+    iconType: "software",
     link: "/services/custom-software-development/",
   },
   {
     title: "Web Development",
     desc: "High-converting, SEO-optimized web applications and portal platforms using modern frameworks.",
-    icon: "🌐",
+    iconType: "web",
     link: "/services/custom-website-development/",
   },
   {
     title: "Mobile Apps",
     desc: "Native and cross-platform iOS & Android mobile applications for field & consumer teams.",
-    icon: "📱",
+    iconType: "mobile",
     link: "/services/odoo-mobile-app-development/",
   },
   {
     title: "Cloud Solutions",
     desc: "Cloud migration, server infrastructure, Kubernetes, and 24/7 DevOps management.",
-    icon: "☁️",
+    iconType: "cloud",
     link: "/services/cloud-devops/",
   },
   {
     title: "AI Automation",
     desc: "Machine learning, predictive analytics, intelligent chatbots, and workflow automation.",
-    icon: "🤖",
+    iconType: "ai",
     link: "/services/ai-automation/",
   },
   {
     title: "Business Intelligence",
     desc: "Real-time executive dashboards, data warehousing, and custom reporting pipelines.",
-    icon: "📈",
+    iconType: "bi",
     link: "/services/analytics/",
   },
   {
     title: "Marketplace Development",
     desc: "Multi-vendor e-commerce marketplaces with seller portals and automated commission engines.",
-    icon: "🛍️",
+    iconType: "marketplace",
     link: "/services/marketplace-development/",
   },
   {
     title: "E-commerce Solutions",
     desc: "Scalable B2B & B2C e-commerce stores with omnichannel inventory synchronization.",
-    icon: "🛒",
+    iconType: "ecommerce",
     link: "/services/ecommerce-development/",
   },
   {
     title: "Dedicated Developers",
     desc: "Augment your engineering team with certified Odoo, Python, React, and Cloud developers.",
-    icon: "👨‍💻",
+    iconType: "developers",
     link: "/services/hire-odoo-developer/",
   },
   {
     title: "Support & Maintenance",
     desc: "Dedicated SLA support, server health monitoring, security updates, and hypercare.",
-    icon: "🛠️",
+    iconType: "support",
     link: "/services/odoo-support-maintenance-services/",
   },
 ];
@@ -88,51 +88,51 @@ const whyUs = [
   {
     title: "Certified Experts",
     desc: "Certified Odoo architects, senior Python engineers, and cloud specialists with decade-plus experience.",
-    icon: "🏅",
+    iconType: "experts",
   },
   {
     title: "Business-Focused Solutions",
     desc: "Technology engineered around real operational outcomes, revenue growth, and staff efficiency.",
-    icon: "🎯",
+    iconType: "solutions",
   },
   {
     title: "Agile Development",
     desc: "Rapid 2-week sprint iterations with continuous deployment, testing, and feedback loops.",
-    icon: "⚡",
+    iconType: "agile",
   },
   {
     title: "Transparent Communication",
     desc: "Real-time project tracking, dedicated account managers, and clear documentation.",
-    icon: "💬",
+    iconType: "comm",
   },
   {
     title: "Scalable Architecture",
     desc: "Modular software design built to expand seamlessly across new entities, regions, and users.",
-    icon: "🏗️",
+    iconType: "architecture",
   },
   {
     title: "Long-Term Partnership",
     desc: "Ongoing optimization, feature upgrades, and strategic advisory long after go-live.",
-    icon: "🤝",
+    iconType: "partnership",
   },
   {
     title: "24/7 Support",
     desc: "Continuous system health monitoring, SLA guarantees, and rapid incident resolution.",
-    icon: "🛡️",
+    iconType: "support",
   },
 ];
 
 const industries = [
-  { name: "Manufacturing", desc: "Discrete & process MRP, BOM, work center tracking, and quality control.", icon: "🏭" },
-  { name: "Retail", desc: "Omnichannel POS, barcode scanning, multi-warehouse stock, and loyalty rewards.", icon: "🏷️" },
-  { name: "Healthcare", desc: "Patient portals, medical inventory, asset tracking, and compliant billing.", icon: "🏥" },
-  { name: "Construction", desc: "Project cost control, subcontractor invoicing, equipment tracking, and bidding.", icon: "🏗️" },
-  { name: "Education", desc: "Student portals, course enrollment, automated tuition billing, and attendance.", icon: "🎓" },
-  { name: "Finance", desc: "Double-entry accounting, automated reconciliation, tax compliance, and analytics.", icon: "💳" },
-  { name: "Logistics", desc: "Fleet management, route optimization, shipping carrier APIs, and WMS.", icon: "🚛" },
-  { name: "Real Estate", desc: "Property listings, lease management, tenant portals, and maintenance tracking.", icon: "🏢" },
-  { name: "Hospitality", desc: "Reservation engines, table POS, kitchen displays, and vendor procurement.", icon: "🏨" },
-  { name: "Wholesale", desc: "B2B buyer portals, volume pricing matrices, multi-currency invoicing, and drop shipping.", icon: "📦" },
+  { name: "Manufacturing", desc: "Discrete & process MRP, BOM, work center tracking, and quality control.", iconType: "manufacturing" },
+  { name: "Retail", desc: "Omnichannel POS, barcode scanning, multi-warehouse stock, and loyalty rewards.", iconType: "retail" },
+  { name: "Healthcare", desc: "Patient portals, medical inventory, asset tracking, and compliant billing.", iconType: "healthcare" },
+  { name: "Construction", desc: "Project cost control, subcontractor invoicing, equipment tracking, and bidding.", iconType: "construction" },
+  { name: "Education", desc: "Student portals, course enrollment, automated tuition billing, and attendance.", iconType: "education" },
+  { name: "Finance", desc: "Double-entry accounting, automated reconciliation, tax compliance, and analytics.", iconType: "finance" },
+  { name: "Logistics", desc: "Fleet management, route optimization, shipping carrier APIs, and WMS.", iconType: "logistics" },
+  { name: "Real Estate", desc: "Property listings, lease management, tenant portals, and maintenance tracking.", iconType: "realestate" },
+  { name: "Hospitality", desc: "Reservation engines, table POS, kitchen displays, and vendor procurement.", iconType: "hospitality" },
+  { name: "Wholesale", desc: "B2B buyer portals, volume pricing matrices, multi-currency invoicing, and drop shipping.", iconType: "wholesale" },
 ];
 
 const techWall = [
@@ -270,7 +270,20 @@ const processSteps = [
         <div class="home-services-grid">
           {services.map((s) => (
             <a href={s.link} class="home-service-card">
-              <div class="service-icon-box">{s.icon}</div>
+              <div class="service-icon-box">
+                {s.iconType === "odoo" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>}
+                {s.iconType === "consulting" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>}
+                {s.iconType === "software" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>}
+                {s.iconType === "web" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>}
+                {s.iconType === "mobile" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>}
+                {s.iconType === "cloud" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>}
+                {s.iconType === "ai" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>}
+                {s.iconType === "bi" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>}
+                {s.iconType === "marketplace" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>}
+                {s.iconType === "ecommerce" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>}
+                {s.iconType === "developers" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>}
+                {s.iconType === "support" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>}
+              </div>
               <h3>{s.title}</h3>
               <p>{s.desc}</p>
               <span class="service-learn-more">Learn More &rarr;</span>
@@ -293,7 +306,15 @@ const processSteps = [
           {whyUs.map((w, idx) => (
             <div class={`why-row ${idx % 2 === 1 ? 'reverse' : ''}`}>
               <div class="why-visual">
-                <div class="why-icon-badge">{w.icon}</div>
+                <div class="why-icon-badge">
+                  {w.iconType === "experts" && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>}
+                  {w.iconType === "solutions" && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>}
+                  {w.iconType === "agile" && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>}
+                  {w.iconType === "comm" && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>}
+                  {w.iconType === "architecture" && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>}
+                  {w.iconType === "partnership" && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>}
+                  {w.iconType === "support" && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>}
+                </div>
               </div>
               <div class="why-content">
                 <h3>{w.title}</h3>
@@ -316,7 +337,18 @@ const processSteps = [
         <div class="home-industries-grid">
           {industries.map((ind) => (
             <a href="/industries/" class="home-ind-card">
-              <div class="ind-icon">{ind.icon}</div>
+              <div class="ind-icon">
+                {ind.iconType === "manufacturing" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 20h20M5 20V8l5 3V8l5 3V4h5v16H5z"></path></svg>}
+                {ind.iconType === "retail" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>}
+                {ind.iconType === "healthcare" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>}
+                {ind.iconType === "construction" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 21h18M5 21V7l8-4v18M13 11h8v10H13z"></path></svg>}
+                {ind.iconType === "education" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>}
+                {ind.iconType === "finance" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>}
+                {ind.iconType === "logistics" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>}
+                {ind.iconType === "realestate" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>}
+                {ind.iconType === "hospitality" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 2h-3a5 5 0 0 0-5 5v14h8V7a5 5 0 0 0-5-5z"></path><path d="M6 18h2v3H6z"></path></svg>}
+                {ind.iconType === "wholesale" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline></svg>}
+              </div>
               <h3>{ind.name}</h3>
               <p>{ind.desc}</p>
             </a>
