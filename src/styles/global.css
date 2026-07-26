@@ -6715,3 +6715,403 @@ summary:focus-visible {
   border-radius: 16px;
 }
 
+/* Problems vs Solutions Split Layout */
+.problems-solutions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 40px;
+}
+
+.ps-column-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #E5E7EB;
+}
+
+.ps-column-header.problem-header {
+  border-color: #FCA5A5;
+}
+
+.ps-column-header.solution-header {
+  border-color: #86EFAC;
+}
+
+.ps-column-header h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #071A3D;
+}
+
+.ps-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ps-card {
+  border-radius: 14px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: all 0.25s ease;
+}
+
+.ps-card.problem {
+  background: #FEF2F2;
+  border: 1px solid #FEE2E2;
+  color: #991B1B;
+}
+
+.ps-card.problem:hover {
+  border-color: #EF4444;
+  transform: translateX(-3px);
+}
+
+.ps-card.solution {
+  background: #F0FDF4;
+  border: 1px solid #DCFCE7;
+  color: #166534;
+}
+
+.ps-card.solution:hover {
+  border-color: #22C55E;
+  transform: translateX(3px);
+}
+
+.ps-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.ps-card.problem .ps-icon {
+  background: #FEE2E2;
+  color: #DC2626;
+}
+
+.ps-card.solution .ps-icon {
+  background: #DCFCE7;
+  color: #16A34A;
+}
+
+.ps-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #071A3D;
+}
+
+@media (max-width: 768px) {
+  .problems-solutions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Odoo Consulting & Enterprise Landing Page Comprehensive Design System
+   ========================================================================== */
+
+.odoo-hero-visual-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.macbook-mockup {
+  width: 100%;
+  max-width: 440px;
+  background: #1E293B;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 25px 50px -12px rgba(7, 26, 61, 0.25);
+  border: 1px solid #334155;
+  position: relative;
+  z-index: 1;
+}
+
+.macbook-screen-bezel {
+  background: #0F172A;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #1E293B;
+}
+
+.macbook-camera {
+  width: 6px;
+  height: 6px;
+  background: #334155;
+  border-radius: 50%;
+  margin: 6px auto;
+}
+
+.macbook-display {
+  background: #0F172A;
+  padding: 12px;
+}
+
+.odoo-app-window {
+  background: #1E293B;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.odoo-app-header {
+  background: #0F172A;
+  padding: 8px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 12px;
+  font-weight: 700;
+  color: #94A3B8;
+}
+
+.odoo-kpi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.odoo-kpi-card {
+  background: #0F172A;
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.odoo-kpi-card span {
+  font-size: 11px;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.odoo-kpi-card strong {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* Floating Glass Cards */
+.odoo-glass-card {
+  position: absolute;
+  z-index: 3;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(11, 85, 217, 0.15);
+  border-radius: 12px;
+  padding: 8px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 25px rgba(7, 26, 61, 0.1);
+  font-size: 13px;
+  font-weight: 700;
+  color: #071A3D;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.odoo-glass-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 35px rgba(11, 85, 217, 0.2);
+  border-color: #0B55D9;
+}
+
+.glass-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #EAF3FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Stats Bar */
+.home-stats-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(135deg, #071A3D 0%, #09265C 100%);
+  border-radius: 20px;
+  padding: 32px 24px;
+  color: #FFFFFF;
+  box-shadow: 0 20px 45px rgba(7, 26, 61, 0.15);
+  margin: 10px 0;
+}
+
+.home-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.stat-big-num {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1FB6FF;
+  letter-spacing: -0.5px;
+}
+
+.stat-small-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #E2E8F0;
+}
+
+.stat-vert-line {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Section Header Typography */
+.odoo-section-eyebrow {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0B55D9;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 8px;
+}
+
+.odoo-section-title {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 800;
+  color: #071A3D;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.odoo-section-desc {
+  font-size: 17px;
+  color: #4B5563;
+  line-height: 1.6;
+}
+
+/* Timeline Process */
+.odoo-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.timeline-step {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 18px;
+  padding: 24px 20px;
+  transition: all 0.3s ease;
+}
+
+.timeline-step:hover {
+  border-color: #0B55D9;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(11, 85, 217, 0.08);
+}
+
+.step-num {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0B55D9;
+  background: #EAF3FF;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+/* Module Cards */
+.module-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.module-card:hover {
+  border-color: #0B55D9;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(11, 85, 217, 0.08);
+}
+
+.module-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #071A3D;
+}
+
+.module-card p {
+  font-size: 14px;
+  color: #4B5563;
+  line-height: 1.5;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1024px) {
+  .odoo-glass-card {
+    position: static !important;
+    margin: 4px;
+  }
+
+  .odoo-hero-visual-wrap {
+    flex-wrap: wrap;
+    min-height: auto;
+  }
+
+  .odoo-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-stats-card {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .stat-vert-line {
+    display: none;
+  }
+
+  .home-stat-item {
+    min-width: 45%;
+  }
+}
+
+@media (max-width: 640px) {
+  .odoo-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .home-stat-item {
+    min-width: 100%;
+  }
+}
+
+
+
