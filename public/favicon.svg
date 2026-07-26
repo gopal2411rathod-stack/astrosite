@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Hegrix">
-  <rect width="64" height="64" rx="16" fill="#0b55d9"/>
-  <path d="M18 18h8v11h12V18h8v28h-8V35H26v11h-8V18Z" fill="#fff"/>
-  <path d="M48 16 36 28h9L33 48" fill="none" stroke="#1fb6ff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect x="38" y="2" width="20" height="20" fill="#0075CD" />
+  <path d="M 4 2 H 24 V 62 H 4 Z 
+           M 24 30 H 60 V 62 H 42 V 44 A 9 9 0 0 0 24 44 Z" fill="#000000" />
 </svg>

@@ -1,246 +1,520 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
+const stats = [
+  { number: "500+", label: "Projects Delivered" },
+  { number: "200+", label: "Happy Clients" },
+  { number: "15+", label: "Countries Served" },
+  { number: "98%", label: "Client Satisfaction" },
+  { number: "10+", label: "Years Experience" },
+];
+
 const services = [
-  ["Custom Software Development", "Plan, design and build secure platforms tailored to your workflows, users and growth targets."],
-  ["eCommerce Development", "Launch high-converting storefronts, B2B portals and headless commerce experiences with clean operations behind them."],
-  ["Marketplace Development", "Create vendor onboarding, product catalogs, commissions, fulfillment and dashboards for multi-sided businesses."],
-  ["ERP & CRM Development", "Connect teams, customers, inventory, finance and reporting through practical ERP and CRM systems."],
-  ["AI & Automation", "Automate repetitive work, knowledge retrieval, document processing and internal decision support with responsible AI."],
-  ["Cloud & DevOps", "Ship reliable applications with scalable infrastructure, observability, CI/CD and performance monitoring."],
+  {
+    title: "Odoo ERP",
+    desc: "End-to-end Odoo implementation, custom Python module development, and workflow automation.",
+    icon: "⚙️",
+    link: "/services/odoo-implementation-services/",
+  },
+  {
+    title: "ERP Consulting",
+    desc: "Strategic process auditing, roadmap architecture, and expert ERP rollout advisory.",
+    icon: "📊",
+    link: "/services/odoo-consulting-services/",
+  },
+  {
+    title: "Custom Software",
+    desc: "Tailored web, desktop, and enterprise software built for unique operational workflows.",
+    icon: "💻",
+    link: "/services/custom-software-development/",
+  },
+  {
+    title: "Web Development",
+    desc: "High-converting, SEO-optimized web applications and portal platforms using modern frameworks.",
+    icon: "🌐",
+    link: "/services/custom-website-development/",
+  },
+  {
+    title: "Mobile Apps",
+    desc: "Native and cross-platform iOS & Android mobile applications for field & consumer teams.",
+    icon: "📱",
+    link: "/services/odoo-mobile-app-development/",
+  },
+  {
+    title: "Cloud Solutions",
+    desc: "Cloud migration, server infrastructure, Kubernetes, and 24/7 DevOps management.",
+    icon: "☁️",
+    link: "/services/cloud-devops/",
+  },
+  {
+    title: "AI Automation",
+    desc: "Machine learning, predictive analytics, intelligent chatbots, and workflow automation.",
+    icon: "🤖",
+    link: "/services/ai-automation/",
+  },
+  {
+    title: "Business Intelligence",
+    desc: "Real-time executive dashboards, data warehousing, and custom reporting pipelines.",
+    icon: "📈",
+    link: "/services/analytics/",
+  },
+  {
+    title: "Marketplace Development",
+    desc: "Multi-vendor e-commerce marketplaces with seller portals and automated commission engines.",
+    icon: "🛍️",
+    link: "/services/marketplace-development/",
+  },
+  {
+    title: "E-commerce Solutions",
+    desc: "Scalable B2B & B2C e-commerce stores with omnichannel inventory synchronization.",
+    icon: "🛒",
+    link: "/services/ecommerce-development/",
+  },
+  {
+    title: "Dedicated Developers",
+    desc: "Augment your engineering team with certified Odoo, Python, React, and Cloud developers.",
+    icon: "👨‍💻",
+    link: "/services/hire-odoo-developer/",
+  },
+  {
+    title: "Support & Maintenance",
+    desc: "Dedicated SLA support, server health monitoring, security updates, and hypercare.",
+    icon: "🛠️",
+    link: "/services/odoo-support-maintenance-services/",
+  },
 ];
 
-const solutions = [
-  ["B2B Commerce", "Quote workflows, bulk ordering, negotiated pricing and account-level buying experiences."],
-  ["Inventory & POS", "Real-time stock, purchasing, barcode workflows and retail operations in one system."],
-  ["Customer Portals", "Self-service dashboards for orders, tickets, invoices, documents and project visibility."],
+const whyUs = [
+  {
+    title: "Certified Experts",
+    desc: "Certified Odoo architects, senior Python engineers, and cloud specialists with decade-plus experience.",
+    icon: "🏅",
+  },
+  {
+    title: "Business-Focused Solutions",
+    desc: "Technology engineered around real operational outcomes, revenue growth, and staff efficiency.",
+    icon: "🎯",
+  },
+  {
+    title: "Agile Development",
+    desc: "Rapid 2-week sprint iterations with continuous deployment, testing, and feedback loops.",
+    icon: "⚡",
+  },
+  {
+    title: "Transparent Communication",
+    desc: "Real-time project tracking, dedicated account managers, and clear documentation.",
+    icon: "💬",
+  },
+  {
+    title: "Scalable Architecture",
+    desc: "Modular software design built to expand seamlessly across new entities, regions, and users.",
+    icon: "🏗️",
+  },
+  {
+    title: "Long-Term Partnership",
+    desc: "Ongoing optimization, feature upgrades, and strategic advisory long after go-live.",
+    icon: "🤝",
+  },
+  {
+    title: "24/7 Support",
+    desc: "Continuous system health monitoring, SLA guarantees, and rapid incident resolution.",
+    icon: "🛡️",
+  },
 ];
 
-const industries = ["Retail", "Automotive", "Manufacturing", "Healthcare", "Logistics", "Real Estate"];
-const tech = ["Astro", "React", "Next.js", "Node.js", "Laravel", "Python", "Odoo", "Shopify", "AWS", "PostgreSQL"];
-const process = ["Discover", "Plan", "Design", "Build", "Test", "Launch", "Optimize"];
-const faqs = [
-  ["How quickly can Hegrix start?", "Most discovery calls can be scheduled within two business days. After scope alignment, the delivery team can usually begin within one to two weeks."],
-  ["Do you provide SEO-friendly development?", "Yes. Hegrix builds semantic pages, clean URLs, structured metadata, fast layouts and accessible components from the start."],
-  ["Can you modernize an existing system?", "Yes. We can audit your current platform, prioritize risks and migrate in stages so the business keeps moving."],
+const industries = [
+  { name: "Manufacturing", desc: "Discrete & process MRP, BOM, work center tracking, and quality control.", icon: "🏭" },
+  { name: "Retail", desc: "Omnichannel POS, barcode scanning, multi-warehouse stock, and loyalty rewards.", icon: "🏷️" },
+  { name: "Healthcare", desc: "Patient portals, medical inventory, asset tracking, and compliant billing.", icon: "🏥" },
+  { name: "Construction", desc: "Project cost control, subcontractor invoicing, equipment tracking, and bidding.", icon: "🏗️" },
+  { name: "Education", desc: "Student portals, course enrollment, automated tuition billing, and attendance.", icon: "🎓" },
+  { name: "Finance", desc: "Double-entry accounting, automated reconciliation, tax compliance, and analytics.", icon: "💳" },
+  { name: "Logistics", desc: "Fleet management, route optimization, shipping carrier APIs, and WMS.", icon: "🚛" },
+  { name: "Real Estate", desc: "Property listings, lease management, tenant portals, and maintenance tracking.", icon: "🏢" },
+  { name: "Hospitality", desc: "Reservation engines, table POS, kitchen displays, and vendor procurement.", icon: "🏨" },
+  { name: "Wholesale", desc: "B2B buyer portals, volume pricing matrices, multi-currency invoicing, and drop shipping.", icon: "📦" },
 ];
-const blogs = [
-  ["How to Plan a Scalable B2B Commerce Platform", "/blog/"],
-  ["ERP Integration Mistakes That Slow Growing Teams", "/blog/"],
-  ["Where AI Automation Creates the Fastest Business Value", "/blog/"],
+
+const techWall = [
+  { category: "ERP", items: ["Odoo", "SAP", "Microsoft Dynamics"] },
+  { category: "Frontend", items: ["React", "Next.js", "Vue", "Angular"] },
+  { category: "Backend", items: ["Python", "Node.js", "Laravel", "PHP"] },
+  { category: "Mobile", items: ["Flutter", "React Native", "iOS", "Android"] },
+  { category: "Cloud", items: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"] },
+  { category: "Databases", items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"] },
+];
+
+const processSteps = [
+  { step: "01", title: "Discover", desc: "Deep-dive operational audit, workflow mapping, and goals alignment." },
+  { step: "02", title: "Plan", desc: "Technical architecture design, module selection, and project roadmap." },
+  { step: "03", title: "Design", desc: "User-centric UI/UX mockups, data flow diagrams, and prototype approval." },
+  { step: "04", title: "Develop", desc: "Phased agile development, custom module coding, and API integrations." },
+  { step: "05", title: "Test", desc: "Rigorous UAT, performance stress testing, security audit, and data validation." },
+  { step: "06", title: "Deploy", desc: "Controlled production rollout with automated database migration and zero downtime." },
+  { step: "07", title: "Support", desc: "Hypercare launch assistance, user training, and 24/7 SLA maintenance." },
 ];
 ---
 
 <Layout
-  title="Hegrix | Custom Software, Commerce, Best AI and ERP Development Company"
-  description="Hegrix builds premium custom software, ecommerce platforms, marketplaces, ERP, CRM, AI automation and mobile apps for growth-focused businesses."
-  keywords="Hegrix, custom software development company, ecommerce development, marketplace development, AI automation, ERP CRM development"
+  title="Hegrix | Enterprise Digital Transformation, Odoo ERP & AI Solutions"
+  description="Hegrix delivers enterprise digital transformation through Odoo ERP implementation, custom software development, AI automation, cloud services, and mobile apps."
+  keywords="Hegrix, digital transformation company, Odoo ERP implementation, custom software development, AI automation, cloud services"
   path="/"
 >
-  <section class="hero">
-    <div class="container hero-centered">
-      <p class="hero-kicker">Strategize. Optimize. Grow.</p>
-      <h1>Building powerful digital systems for modern businesses</h1>
-      <p class="hero-copy">
-        Hegrix helps you plan, design and build software, Odoo ERP, ecommerce, AI automation and cloud platforms that
-        move your business forward.
-      </p>
-      <div class="hero-actions hero-actions--center">
-        <a class="button hero-primary" href="/services/">Discover our services</a>
-        <a class="button hero-secondary" href="/contact-us/">Get a quote now</a>
-      </div>
-      <div class="hero-trust-line" aria-label="Trust signals">
-        <span>Odoo & ERP</span>
-        <span>AI Automation</span>
-        <span>Cloud & DevOps</span>
-      </div>
-    </div>
-  </section>
+  <div class="home-wrapper">
+    {/* SECTION 1 – Hero Section */}
+    <section class="home-hero-section">
+      <div class="home-hero-glow glow-1" aria-hidden="true"></div>
+      <div class="home-hero-glow glow-2" aria-hidden="true"></div>
+      <div class="home-hero-dots" aria-hidden="true"></div>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Trusted by ambitious teams</p>
-        <h2>Built for companies that value reliability, clarity and measurable outcomes.</h2>
-      </div>
-      <div class="logo-cloud" aria-label="Representative client categories">
-        <span>Retail</span><span>SaaS</span><span>Health</span><span>Auto</span><span>ERP</span><span>AI</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="section soft-section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Services</p>
-        <h2>Everything needed to plan, build and grow a serious digital platform.</h2>
-        <p>Each service is designed around business outcomes, clean architecture and long-term maintainability.</p>
-      </div>
-      <div class="card-grid">
-        {services.map(([title, text]) => (
-          <article class="feature-card">
-            <span class="card-icon" aria-hidden="true">{title.slice(0, 1)}</span>
-            <h3>{title}</h3>
-            <p>{text}</p>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container split-band">
-      <div class="section-heading">
-        <p class="eyebrow">Solutions</p>
-        <h2>Business software shaped around the way your team sells, serves and operates.</h2>
-        <p>Hegrix connects customer experience with internal operations so growth does not create chaos.</p>
-        <div class="hero-actions"><a class="button" href="/solutions/">Explore Solutions</a></div>
-      </div>
-      <div class="card-grid">
-        {solutions.map(([title, text]) => (
-          <article class="feature-card">
-            <span class="card-icon" aria-hidden="true">{title.slice(0, 1)}</span>
-            <h3>{title}</h3>
-            <p>{text}</p>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section soft-section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Why choose Hegrix</p>
-        <h2>Senior thinking, conversion-aware design and dependable engineering in one team.</h2>
-      </div>
-      <div class="stats-grid">
-        <div class="stat-card"><strong>120+</strong><span>Projects planned and delivered</span></div>
-        <div class="stat-card"><strong>12+</strong><span>Industries supported</span></div>
-        <div class="stat-card"><strong>35+</strong><span>Product and engineering specialists</span></div>
-        <div class="stat-card"><strong>98%</strong><span>Client satisfaction target</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Industries we serve</p>
-        <h2>Practical platforms for industries with real operational complexity.</h2>
-      </div>
-      <div class="card-grid">
-        {industries.map((industry) => (
-          <a class="feature-card" href="/industries/">
-            <span class="card-icon" aria-hidden="true">{industry.slice(0, 1)}</span>
-            <h3>{industry}</h3>
-            <p>Digital systems tailored to the workflows, buying journeys and reporting needs of {industry.toLowerCase()} teams.</p>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section soft-section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Portfolio</p>
-        <h2>Selected project patterns Hegrix can deliver.</h2>
-      </div>
-      <div class="card-grid">
-        <article class="case-card"><h3>B2B Ordering Portal</h3><p>Account pricing, quote approval, inventory visibility and self-service ordering for sales teams.</p></article>
-        <article class="case-card"><h3>AI Document Workflow</h3><p>OCR extraction, approval queues and ERP posting to reduce manual finance operations.</p></article>
-        <article class="case-card"><h3>Marketplace Operations Hub</h3><p>Vendor onboarding, catalog controls, commission tracking and customer dashboards.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container split-band">
-      <div class="section-heading">
-        <p class="eyebrow">Technologies</p>
-        <h2>Modern tools chosen for performance, security and maintainability.</h2>
-        <p>We select platforms based on the product strategy, not trends alone.</p>
-      </div>
-      <div class="logo-cloud">
-        {tech.map((item) => <span>{item}</span>)}
-      </div>
-    </div>
-  </section>
-
-  <section class="section soft-section">
-    <div class="container split-band">
-      <div class="section-heading">
-        <p class="eyebrow">Process</p>
-        <h2>A clear delivery path from idea to launch and ongoing optimization.</h2>
-      </div>
-      <div class="process-list">
-        {process.map((item, index) => (
-          <div class="process-item">
-            <span>{index + 1}</span>
-            <div><h3>{item}</h3><p>Structured collaboration keeps scope, quality and timelines visible.</p></div>
+      <div class="container">
+        <div class="home-hero-grid">
+          <div class="home-hero-content">
+            <div class="hero-pill">
+              <span class="pill-star">✨</span>
+              <span>Enterprise Digital Transformation</span>
+            </div>
+            <h1 class="home-hero-title">
+              Empowering Businesses Through <span class="hero-gradient-text">Intelligent Digital Solutions</span>
+            </h1>
+            <p class="home-hero-desc">
+              From Odoo ERP implementation to AI-powered automation and custom software development, we help businesses streamline operations, improve productivity, and accelerate growth with scalable technology solutions.
+            </p>
+            <div class="home-hero-btns">
+              <a href="/contact-us/" class="home-btn-primary">Start Your Project &rarr;</a>
+              <a href="/contact-us/" class="home-btn-secondary">Book Free Consultation</a>
+            </div>
+            <div class="home-hero-tags">
+              <span>✔ Odoo ERP</span>
+              <span>✔ AI & Automation</span>
+              <span>✔ Custom Software</span>
+              <span>✔ Cloud Infrastructure</span>
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Client testimonials</p>
-        <h2>Trust is built through thoughtful communication and dependable delivery.</h2>
-      </div>
-      <div class="card-grid">
-        <article class="testimonial-card"><p>"Hegrix brought structure to our roadmap and helped us launch a cleaner customer experience."</p><h3>Operations Director</h3></article>
-        <article class="testimonial-card"><p>"Their team translated a complex workflow into software our staff actually wanted to use."</p><h3>Retail Founder</h3></article>
-        <article class="testimonial-card"><p>"Performance, SEO and maintainability were considered from day one."</p><h3>Marketing Lead</h3></article>
-      </div>
-    </div>
-  </section>
+          {/* 3D Dashboard Mockup Visual */}
+          <div class="home-hero-visual">
+            <div class="floating-badge badge-crm">📊 CRM</div>
+            <div class="floating-badge badge-sales">💼 Sales</div>
+            <div class="floating-badge badge-inventory">📦 Inventory</div>
+            <div class="floating-badge badge-accounting">💳 Accounting</div>
+            <div class="floating-badge badge-mfg">🏭 Manufacturing</div>
+            <div class="floating-badge badge-analytics">📈 Analytics</div>
+            <div class="floating-badge badge-cloud">☁️ Cloud</div>
+            <div class="floating-badge badge-ai">🤖 AI</div>
+            <div class="floating-badge badge-auto">⚡ Automation</div>
 
-  <section class="section soft-section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">FAQs</p>
-        <h2>Useful answers for project owners.</h2>
+            <div class="home-3d-card">
+              <div class="card-glass-header">
+                <div class="header-dots"><span></span><span></span><span></span></div>
+                <span class="header-label">Hegrix Enterprise Operating System v4.0</span>
+              </div>
+              <div class="card-glass-body">
+                <div class="mock-kpi-row">
+                  <div class="mock-kpi"><span>Operations Efficiency</span><strong>+94.8%</strong></div>
+                  <div class="mock-kpi"><span>Active Users</span><strong>12,450</strong></div>
+                  <div class="mock-kpi"><span>AI Automation</span><strong>Active</strong></div>
+                </div>
+                <div class="mock-graph-box">
+                  <div class="graph-title">Real-Time Enterprise Intelligence</div>
+                  <svg viewBox="0 0 320 80" class="hero-graph-svg">
+                    <path d="M0,60 Q40,20 80,45 T160,15 T240,30 T320,5 L320,80 L0,80 Z" fill="rgba(11, 85, 217, 0.15)"/>
+                    <path d="M0,60 Q40,20 80,45 T160,15 T240,30 T320,5" stroke="#0B55D9" stroke-width="3" fill="none"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="faq-list">
-        {faqs.map(([title, text]) => (
-          <details>
-            <summary>{title}</summary>
-            <p>{text}</p>
-          </details>
-        ))}
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Latest blogs</p>
-        <h2>Insights for better digital decisions.</h2>
-      </div>
-      <div class="card-grid">
-        {blogs.map(([title, href]) => (
-          <a class="blog-card" href={href}>
-            <h3>{title}</h3>
-            <p>Read practical guidance from the Hegrix team.</p>
-          </a>
-        ))}
-      </div>
-    </div>
-  </section>
+    {/* SECTION 2 – Trusted Worldwide & Stats */}
+    <section class="home-stats-section">
+      <div class="container">
+        <div class="home-stats-card">
+          {stats.map((stat, idx) => (
+            <>
+              <div class="home-stat-item">
+                <div class="stat-big-num">{stat.number}</div>
+                <div class="stat-small-label">{stat.label}</div>
+              </div>
+              {idx < stats.length - 1 && <div class="stat-vert-line"></div>}
+            </>
+          ))}
+        </div>
 
-  <section class="section final-cta">
-    <div class="container split-cta">
-      <div>
-        <p class="eyebrow">Contact CTA</p>
-        <h2>Have a platform idea, bottleneck or modernization goal?</h2>
-        <p>Book a free consultation and get a clear next-step plan from Hegrix.</p>
+        <div class="home-logos-bar">
+          <p class="logos-title">Trusted by Ambitious Enterprises & Global Brands</p>
+          <div class="logos-row">
+            <span>ACME Enterprise</span>
+            <span>GlobalTech</span>
+            <span>Zenith Industries</span>
+            <span>Nexora Global</span>
+            <span>Vertex Solutions</span>
+            <span>BrightWay Logistics</span>
+          </div>
+        </div>
       </div>
-      <a class="button button-light" href="/contact-us/">Get a Quote</a>
-    </div>
-  </section>
+    </section>
+
+    {/* SECTION 3 – Our Services */}
+    <section class="home-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Services</p>
+          <h2 class="home-title">Enterprise Digital Services</h2>
+          <p class="home-desc">Complete end-to-end technology capabilities designed to transform your operations and drive growth.</p>
+        </div>
+        <div class="home-services-grid">
+          {services.map((s) => (
+            <a href={s.link} class="home-service-card">
+              <div class="service-icon-box">{s.icon}</div>
+              <h3>{s.title}</h3>
+              <p>{s.desc}</p>
+              <span class="service-learn-more">Learn More &rarr;</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 4 – Why Choose Us */}
+    <section class="home-section home-alt-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Why Choose Us</p>
+          <h2 class="home-title">Why Global Enterprises Partner With Hegrix</h2>
+          <p class="home-desc">We combine deep domain expertise, senior engineering talent, and business-first strategy.</p>
+        </div>
+
+        <div class="why-us-staggered">
+          {whyUs.map((w, idx) => (
+            <div class={`why-row ${idx % 2 === 1 ? 'reverse' : ''}`}>
+              <div class="why-visual">
+                <div class="why-icon-badge">{w.icon}</div>
+              </div>
+              <div class="why-content">
+                <h3>{w.title}</h3>
+                <p>{w.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 5 – Industries */}
+    <section class="home-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Industries</p>
+          <h2 class="home-title">Tailored Digital Solutions for Every Sector</h2>
+          <p class="home-desc">Deep industry expertise to solve specific compliance, operational, and reporting challenges.</p>
+        </div>
+        <div class="home-industries-grid">
+          {industries.map((ind) => (
+            <a href="/industries/" class="home-ind-card">
+              <div class="ind-icon">{ind.icon}</div>
+              <h3>{ind.name}</h3>
+              <p>{ind.desc}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 6 – Technology Expertise Wall */}
+    <section class="home-section home-alt-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Technology Stack</p>
+          <h2 class="home-title">Enterprise Technology Stack</h2>
+          <p class="home-desc">Modern, robust platforms chosen for speed, security, scalability, and maintainability.</p>
+        </div>
+        <div class="tech-wall-grid">
+          {techWall.map((t) => (
+            <div class="tech-cat-card">
+              <h3>{t.category}</h3>
+              <div class="tech-pills">
+                {t.items.map((item) => (
+                  <span class="tech-pill">{item}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 7 – Featured Success Stories */}
+    <section class="home-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Success Stories</p>
+          <h2 class="home-title">Featured Business Transformations</h2>
+          <p class="home-desc">Explore how growth-focused companies unlocked new efficiency with Hegrix digital solutions.</p>
+        </div>
+        <div class="home-cases-grid">
+          <div class="home-case-card">
+            <span class="case-tag">Manufacturing & ERP</span>
+            <h3>Global Manufacturing Enterprise</h3>
+            <div class="case-split-details">
+              <div><strong>Challenge:</strong> 40% inventory discrepancies across 5 factories due to legacy spreadsheets.</div>
+              <div><strong>Solution:</strong> End-to-end Odoo MRP, Inventory, and Accounting setup with barcode automation.</div>
+              <div><strong>Result:</strong> 99.4% stock accuracy, +35% production efficiency, and $1.2M annual savings.</div>
+            </div>
+            <div class="case-stat-box">
+              <span class="big-stat">+35%</span>
+              <span class="lbl-stat">Production Efficiency</span>
+            </div>
+          </div>
+
+          <div class="home-case-card">
+            <span class="case-tag">Omnichannel Retail</span>
+            <h3>Zenith Global Retail Chain</h3>
+            <div class="case-split-details">
+              <div><strong>Challenge:</strong> Disconnected stock between 25 physical retail outlets and online e-commerce storefront.</div>
+              <div><strong>Solution:</strong> Unified Odoo POS, E-Commerce, and CRM setup hosted on cloud infrastructure.</div>
+              <div><strong>Result:</strong> Instant real-time stock sync, 4.8x faster checkout speed, and zero stockouts.</div>
+            </div>
+            <div class="case-stat-box">
+              <span class="big-stat">4.8x</span>
+              <span class="lbl-stat">Faster Checkout Speed</span>
+            </div>
+          </div>
+
+          <div class="home-case-card">
+            <span class="case-tag">Logistics & AI</span>
+            <h3>Nexora Logistics Corporation</h3>
+            <div class="case-split-details">
+              <div><strong>Challenge:</strong> Manual billing process taking 5 business days per monthly invoicing cycle.</div>
+              <div><strong>Solution:</strong> Automated Odoo Invoicing, AI Document Processing, and Customer Portal.</div>
+              <div><strong>Result:</strong> Monthly billing reduced from 5 days to 2 hours with 99.99% cloud uptime.</div>
+            </div>
+            <div class="case-stat-box">
+              <span class="big-stat">90%</span>
+              <span class="lbl-stat">Faster Monthly Billing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 8 – Client Testimonials */}
+    <section class="home-section home-alt-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Testimonials</p>
+          <h2 class="home-title">What Enterprise Leaders Say</h2>
+          <p class="home-desc">Real feedback from executive partners who accelerated their business with Hegrix.</p>
+        </div>
+        <div class="home-testi-grid">
+          <div class="home-testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-body">"Hegrix brought structure to our enterprise software roadmap and helped us launch a clean customer portal experience in record time."</p>
+            <div class="testi-author">
+              <div class="author-avatar">DM</div>
+              <div><strong>David Miller</strong><span>CTO, Apex Manufacturing</span></div>
+            </div>
+          </div>
+
+          <div class="home-testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-body">"Their team translated a highly complex retail workflow into software our store staff actually loved to use. Zero downtime during launch."</p>
+            <div class="testi-author">
+              <div class="author-avatar">SJ</div>
+              <div><strong>Sarah Jenkins</strong><span>VP of Operations, Zenith Retail</span></div>
+            </div>
+          </div>
+
+          <div class="home-testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-body">"The Odoo ERP and AI automation Hegrix built eliminated hundreds of hours of manual finance work every month. Exceptional technical team."</p>
+            <div class="testi-author">
+              <div class="author-avatar">MV</div>
+              <div><strong>Marcus Vance</strong><span>Managing Director, Nexora Logistics</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 9 – Our Process */}
+    <section class="home-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Delivery Process</p>
+          <h2 class="home-title">Our Proven 7-Step Delivery Methodology</h2>
+          <p class="home-desc">A disciplined, transparent process from initial discovery to deployment and continuous growth.</p>
+        </div>
+        <div class="home-process-grid">
+          {processSteps.map((p) => (
+            <div class="process-card">
+              <div class="process-num">{p.step}</div>
+              <h3>{p.title}</h3>
+              <p>{p.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 10 – Latest Insights */}
+    <section class="home-section home-alt-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Latest Insights</p>
+          <h2 class="home-title">Digital Transformation Guides</h2>
+          <p class="home-desc">Articles, whitepapers, and guides on Odoo ERP, AI automation, and cloud architecture.</p>
+        </div>
+        <div class="home-blog-grid">
+          <article class="home-blog-card">
+            <div class="blog-img-box b1"></div>
+            <div class="blog-content">
+              <span class="blog-tag">B2B Commerce</span>
+              <h3>How to Plan a Scalable B2B Commerce Platform</h3>
+              <p>Key architectural steps to connect self-service ordering portals with back-office ERP systems.</p>
+              <a href="/blog/" class="blog-link">Read Guide &rarr;</a>
+            </div>
+          </article>
+
+          <article class="home-blog-card">
+            <div class="blog-img-box b2"></div>
+            <div class="blog-content">
+              <span class="blog-tag">ERP Strategy</span>
+              <h3>ERP Integration Mistakes That Slow Growing Teams</h3>
+              <p>How to avoid common data synchronization traps when implementing enterprise ERP systems.</p>
+              <a href="/blog/" class="blog-link">Read Guide &rarr;</a>
+            </div>
+          </article>
+
+          <article class="home-blog-card">
+            <div class="blog-img-box b3"></div>
+            <div class="blog-content">
+              <span class="blog-tag">AI & Automation</span>
+              <h3>Where AI Automation Creates the Fastest Business Value</h3>
+              <p>Practical enterprise use cases for document processing, intelligent routing, and predictive analytics.</p>
+              <a href="/blog/" class="blog-link">Read Guide &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 11 – Final CTA */}
+    <section class="home-section home-final-cta">
+      <div class="container">
+        <div class="home-cta-card">
+          <h2>Let's Build Your Next Digital Success Story</h2>
+          <p>Partner with our experts to transform your business using modern ERP, AI, cloud, and custom software solutions.</p>
+          <div class="home-cta-btns">
+            <a href="/contact-us/" class="home-btn-primary btn-white">Schedule Consultation &rarr;</a>
+            <a href="/contact-us/" class="home-btn-secondary btn-outline">Contact Our Team</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 </Layout>
