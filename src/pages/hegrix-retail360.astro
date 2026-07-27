@@ -1,0 +1,769 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const retail360Faq = [
+  {
+    title: "Can Hegrix Retail360 manage multiple retail stores?",
+    text: "Yes. Hegrix Retail360 provides centralized multi-store management, allowing you to control pricing, inventory transfers, sales dashboards, and staff permissions across dozens of physical locations and online storefronts in real time."
+  },
+  {
+    title: "Does it support hardware barcode scanners and thermal receipt printers?",
+    text: "Yes. The Odoo POS engine in Hegrix Retail360 offers native plug-and-play support for USB & Bluetooth barcode scanners, scales, cash drawers, customer displays, and thermal receipt printers."
+  },
+  {
+    title: "Can Hegrix Retail360 integrate with Shopify or WooCommerce?",
+    text: "Yes. We deploy bidirectional connectors that automatically sync products, stock levels, customer data, and orders between Shopify, WooCommerce, Amazon, and your Odoo core database."
+  },
+  {
+    title: "Can I manage inventory in real time across online and offline channels?",
+    text: "Absoluely. Every POS transaction or online sale immediately adjusts global stock records, preventing overselling and inventory mismatches across all channels."
+  },
+  {
+    title: "Does it support customer loyalty programs and gift cards?",
+    text: "Yes. Retail360 includes built-in customer loyalty tiers, points accumulation, promotional coupon codes, digital gift cards, and targeted marketing automation."
+  },
+  {
+    title: "Can it automate purchasing and vendor reordering?",
+    text: "Yes. You can define minimum stock rules for every product line. When stock dips below thresholds, Retail360 automatically generates automated Purchase Orders (POs) for vendor approval."
+  }
+];
+
+const retail360Schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Hegrix Retail360",
+    operatingSystem: "Cloud, Web, Linux, Windows, iOS, Android",
+    applicationCategory: "BusinessApplication",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+    description: "Complete retail business management platform powered by Odoo ERP. Inventory, POS, eCommerce, CRM, accounting & live analytics.",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: retail360Faq.map((item) => ({
+      "@type": "Question",
+      name: item.title,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.text,
+      },
+    })),
+  },
+];
+---
+
+<Layout
+  title="Hegrix Retail360 | Retail ERP Software Powered by Odoo"
+  description="Hegrix Retail360 is an all-in-one retail management software powered by Odoo ERP. POS, inventory management, multi-store stock, eCommerce, CRM, and real-time analytics."
+  keywords="Retail ERP Software, Odoo Retail ERP, Retail Management Software, POS Management System, Inventory Management Software, Multi Store ERP, Retail Business Automation, Retail ERP Solution, Retail Inventory Management, Odoo POS, Omnichannel Retail ERP, Retail CRM"
+  path="/hegrix-retail360/"
+  schema={retail360Schema}
+>
+  <div class="odoo-landing-wrapper">
+    {/* SECTION 1 — HERO */}
+    <section class="odoo-hero-section">
+      <div class="odoo-bg-glow odoo-bg-glow--top-left" aria-hidden="true"></div>
+      <div class="odoo-bg-glow odoo-bg-glow--top-right" aria-hidden="true"></div>
+      <div class="odoo-bg-dots" aria-hidden="true"></div>
+
+      <div class="container odoo-hero-container">
+        <div class="odoo-hero-grid">
+          <div class="odoo-hero-content">
+            <div class="odoo-pill-badge">
+              <span class="odoo-badge-star">🛍️</span>
+              <span>Retail ERP Solution Powered by Odoo</span>
+            </div>
+
+            <h1 class="odoo-hero-heading">
+              Hegrix Retail360<br />
+              <span class="odoo-gradient-text">Transform Your Retail Business with Intelligent ERP Solutions.</span>
+            </h1>
+
+            <p class="odoo-hero-subheading">
+              Hegrix Retail360 is a complete retail management solution powered by Odoo ERP. From inventory and POS to eCommerce, accounting, CRM, and analytics, manage every aspect of your retail business from one intelligent platform.
+            </p>
+
+            <div class="odoo-feature-badges" aria-label="Key highlights">
+              <div class="odoo-feature-tag">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>250+ Retail Projects</span>
+              </div>
+              <div class="odoo-feature-tag">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>99% Client Satisfaction</span>
+              </div>
+              <div class="odoo-feature-tag">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>24/7 SLA Support</span>
+              </div>
+              <div class="odoo-feature-tag">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Certified Odoo Experts</span>
+              </div>
+            </div>
+
+            <div class="odoo-hero-cta-group">
+              <a href="#demo-form" class="odoo-btn-primary">
+                <span>Book Free Demo</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="/contact-us/" class="odoo-btn-secondary">
+                <span>Talk to Retail Expert</span>
+              </a>
+            </div>
+
+            <div class="odoo-social-proof">
+              <div class="odoo-stars">
+                <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <div class="odoo-rating-meta">
+                <strong>4.9/5 Rating</strong>
+                <span class="odoo-dot-sep">•</span>
+                <span>250+ Retail Stores</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side 3D Dashboard Visual */}
+          <div class="odoo-hero-visual-wrap">
+            <div class="macbook-mockup">
+              <div class="macbook-screen-bezel">
+                <div class="macbook-camera"></div>
+                <div class="macbook-display">
+                  <div class="odoo-app-window">
+                    <header class="odoo-app-header">
+                      <span class="odoo-app-title">Hegrix Retail360 Operations Center</span>
+                    </header>
+                    <div class="odoo-app-body" style="padding: 16px;">
+                      <div class="odoo-kpi-grid">
+                        <div class="odoo-kpi-card">
+                          <span>Inventory Accuracy</span>
+                          <strong style="color: #22C55E;">99.8%</strong>
+                        </div>
+                        <div class="odoo-kpi-card">
+                          <span>POS Speed</span>
+                          <strong style="color: #0B55D9;">2x Faster</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating Module Tags */}
+            <div class="odoo-glass-card" style="top: 0px; left: -15px;">
+              <div class="glass-icon">📦</div><span>Inventory</span>
+            </div>
+            <div class="odoo-glass-card" style="top: 70px; right: -15px;">
+              <div class="glass-icon">💳</div><span>POS Terminal</span>
+            </div>
+            <div class="odoo-glass-card" style="top: 160px; left: -25px;">
+              <div class="glass-icon">📈</div><span>Sales Analytics</span>
+            </div>
+            <div class="odoo-glass-card" style="top: 250px; right: -20px;">
+              <div class="glass-icon">👥</div><span>Retail CRM</span>
+            </div>
+            <div class="odoo-glass-card" style="top: 340px; left: -10px;">
+              <div class="glass-icon">💰</div><span>Accounting</span>
+            </div>
+            <div class="odoo-glass-card" style="top: 400px; right: -5px;">
+              <div class="glass-icon">🏬</div><span>Warehouse WMS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 2 — WHY RETAIL360 */}
+    <section class="odoo-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Product Purpose</p>
+          <h2 class="odoo-section-title">Built Specifically for Modern Retail Businesses</h2>
+          <p class="odoo-section-desc">Unlike generic ERP software, Hegrix Retail360 is designed around the daily challenges of retail businesses, helping you simplify operations, improve customer experiences, and increase profitability.</p>
+        </div>
+
+        <div class="odoo-why-grid">
+          <div class="odoo-why-card">
+            <div class="why-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg></div>
+            <h3>Inventory Management</h3>
+            <p>Real-time stock tracking across stores and central warehouses with automated barcode scanning and low-stock reorder triggers.</p>
+          </div>
+          <div class="odoo-why-card">
+            <div class="why-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg></div>
+            <h3>Point of Sale (POS)</h3>
+            <p>Lightning-fast cloud and offline POS terminal engineered for high-concurrency barcode billing, receipts, and split payments.</p>
+          </div>
+          <div class="odoo-why-card">
+            <div class="why-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></div>
+            <h3>Omnichannel Commerce</h3>
+            <p>Unify physical store POS terminals with Shopify, WooCommerce, and mobile apps into one live inventory database.</p>
+          </div>
+          <div class="odoo-why-card">
+            <div class="why-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M13 11h8v10H13z"></path></svg></div>
+            <h3>Warehouse Management (WMS)</h3>
+            <p>Multi-location stock transfers, bin location tracking, pick-pack-ship automation, and stock aging analytics.</p>
+          </div>
+          <div class="odoo-why-card">
+            <div class="why-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div>
+            <h3>Customer Loyalty & Rewards</h3>
+            <p>Reward repeat buyers with automated points accumulation, tier levels, digital gift cards, and targeted SMS/email offers.</p>
+          </div>
+          <div class="odoo-why-card">
+            <div class="why-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
+            <h3>Business Analytics & BI</h3>
+            <p>Real-time executive dashboards highlighting gross margins, top-selling SKUs, store profitability, and cashier performance.</p>
+          </div>
+          <div class="odoo-why-card">
+            <div class="why-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7" r="4"></circle></svg></div>
+            <h3>Purchase Management</h3>
+            <p>Automate vendor POs, RFQs, cost comparison, and automated reordering based on historical sales velocity.</p>
+          </div>
+          <div class="odoo-why-card">
+            <div class="why-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+            <h3>Financial Management</h3>
+            <p>Double-entry accounting, automated bank reconciliation, daily cashier closing reports, and tax compliance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 3 — RETAIL CHALLENGES SOLVED */}
+    <section class="odoo-section home-alt-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Transformation</p>
+          <h2 class="odoo-section-title">Retail Challenges We Solve</h2>
+          <p class="odoo-section-desc">Turning traditional retail friction into modern automated efficiency.</p>
+        </div>
+
+        <div class="problems-solutions-grid">
+          <div class="ps-column-header problem-header">
+            <h3>❌ Retail Problems</h3>
+          </div>
+          <div class="ps-column-header solution-header">
+            <h3>✅ Hegrix Retail360 Solutions</h3>
+          </div>
+
+          <div class="ps-card-list">
+            <div class="ps-card problem"><span class="ps-icon">✕</span><span class="ps-text">Frequent Stock Shortages & Overstocking</span></div>
+            <div class="ps-card problem"><span class="ps-icon">✕</span><span class="ps-text">Inventory Mismatch Between Stores</span></div>
+            <div class="ps-card problem"><span class="ps-icon">✕</span><span class="ps-text">Slow Manual Billing & Queue Delays</span></div>
+            <div class="ps-card problem"><span class="ps-icon">✕</span><span class="ps-text">Disconnected Online & Offline Stores</span></div>
+            <div class="ps-card problem"><span class="ps-icon">✕</span><span class="ps-text">Poor Customer Retention & Loyalty</span></div>
+            <div class="ps-card problem"><span class="ps-icon">✕</span><span class="ps-text">Delayed Sales & Margin Reporting</span></div>
+            <div class="ps-card problem"><span class="ps-icon">✕</span><span class="ps-text">Purchase Reordering Delays</span></div>
+            <div class="ps-card problem"><span class="ps-icon">✕</span><span class="ps-text">Warehouse Misplacement & Shrinkage</span></div>
+          </div>
+
+          <div class="ps-card-list">
+            <div class="ps-card solution"><span class="ps-icon">✓</span><span class="ps-text">Real-Time Automated Stock Replenishment</span></div>
+            <div class="ps-card solution"><span class="ps-icon">✓</span><span class="ps-text">Unified Multi-Store Stock Matrix</span></div>
+            <div class="ps-card solution"><span class="ps-icon">✓</span><span class="ps-text">Fast Barcode Scanning & POS Billing</span></div>
+            <div class="ps-card solution"><span class="ps-icon">✓</span><span class="ps-text">Unified Omnichannel Inventory Engine</span></div>
+            <div class="ps-card solution"><span class="ps-icon">✓</span><span class="ps-text">Integrated Retail Loyalty & Gift Cards</span></div>
+            <div class="ps-card solution"><span class="ps-icon">✓</span><span class="ps-text">Live Executive BI Reports & Dashboards</span></div>
+            <div class="ps-card solution"><span class="ps-icon">✓</span><span class="ps-text">Automated Smart Purchasing & POs</span></div>
+            <div class="ps-card solution"><span class="ps-icon">✓</span><span class="ps-text">Barcode-Driven WMS & Audit Trails</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 4 — KEY FEATURES (BENTO GRID) */}
+    <section class="odoo-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Platform Capabilities</p>
+          <h2 class="odoo-section-title">Everything You Need to Scale Your Retail Business</h2>
+          <p class="odoo-section-desc">Explore the powerful features built into Hegrix Retail360.</p>
+        </div>
+
+        <div class="bento-grid">
+          <div class="bento-card featured wide">
+            <div>
+              <div class="glass-icon" style="margin-bottom: 12px;">📊</div>
+              <h3>Real-Time Sales Dashboard & BI</h3>
+              <p>Get a instant top-down view of total daily revenue, gross margins, average cart size, and store performance across all channels.</p>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <div>
+              <div class="glass-icon" style="margin-bottom: 12px;">🏷️</div>
+              <h3>Barcode Scanning</h3>
+              <p>Instant product lookup, price tag printing, and rapid inventory audit scanning.</p>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <div>
+              <div class="glass-icon" style="margin-bottom: 12px;">💳</div>
+              <h3>Cloud & Offline POS</h3>
+              <p>Process sales smoothly even when your internet connection drops.</p>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <div>
+              <div class="glass-icon" style="margin-bottom: 12px;">🏬</div>
+              <h3>Multi-Store Engine</h3>
+              <p>Manage pricing, promotions, and transfers across 100+ stores from one login.</p>
+            </div>
+          </div>
+
+          <div class="bento-card featured">
+            <div>
+              <div class="glass-icon" style="margin-bottom: 12px;">🤖</div>
+              <h3>AI Automated Workflows</h3>
+              <p>Predictive stock forecasting and automated replenishment purchase orders.</p>
+            </div>
+          </div>
+
+          <div class="bento-card wide">
+            <div>
+              <div class="glass-icon" style="margin-bottom: 12px;">🌐</div>
+              <h3>eCommerce Integration</h3>
+              <p>Sync inventory, orders, and customer accounts automatically with Shopify, WooCommerce, or custom web portals.</p>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <div>
+              <div class="glass-icon" style="margin-bottom: 12px;">🎁</div>
+              <h3>Loyalty & Gift Cards</h3>
+              <p>Increase repeat orders with tier-based rewards and digital vouchers.</p>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <div>
+              <div class="glass-icon" style="margin-bottom: 12px;">🏭</div>
+              <h3>Warehouse WMS</h3>
+              <p>Optimize pick-pack-ship routines and multi-bin storage management.</p>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <div>
+              <div class="glass-icon" style="margin-bottom: 12px;">📈</div>
+              <h3>Financial Accounting</h3>
+              <p>Automated journal entries, tax calculations, and double-entry P&L reports.</p>
+            </div>
+          </div>
+
+          <div class="bento-card">
+            <div>
+              <div class="glass-icon" style="margin-bottom: 12px;">👥</div>
+              <h3>Retail CRM</h3>
+              <p>Track customer purchase histories, preferences, and automated follow-ups.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 5 — WHO IS IT FOR */}
+    <section class="odoo-section home-alt-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Tailored Verticals</p>
+          <h2 class="odoo-section-title">Designed for Every Retail Sector</h2>
+          <p class="odoo-section-desc">Hegrix Retail360 includes specialized modules optimized for your specific retail niche.</p>
+        </div>
+
+        <div class="odoo-industries-grid">
+          <div class="odoo-ind-card"><h3>Fashion Retail</h3><p>Manage size, color, and style variant matrices with automated seasonal stock planning.</p></div>
+          <div class="odoo-ind-card"><h3>Supermarkets & Grocery</h3><p>High-volume barcode POS billing, weighing scale integration, and batch expiration tracking.</p></div>
+          <div class="odoo-ind-card"><h3>Electronics Stores</h3><p>Serial number tracking, warranty management, repair ticketing, and trade-in pricing.</p></div>
+          <div class="odoo-ind-card"><h3>Furniture Stores</h3><p>Custom order tracking, delivery scheduling, deposit billing, and assembly management.</p></div>
+          <div class="odoo-ind-card"><h3>Pharmacies</h3><p>Batch tracking, prescription validation, unit-of-measure conversions, and expiration alerts.</p></div>
+          <div class="odoo-ind-card"><h3>Luxury Brands</h3><p>VIP clienteling, serialized authenticity tracking, and white-glove customer care.</p></div>
+          <div class="odoo-ind-card"><h3>Sports Stores</h3><p>Variant management, equipment rental workflows, and seasonal inventory clearance.</p></div>
+          <div class="odoo-ind-card"><h3>Cosmetics & Beauty</h3><p>Shade matrix tracking, bundle kits, expiration monitoring, and loyalty promotions.</p></div>
+          <div class="odoo-ind-card"><h3>Jewelry Stores</h3><p>Carat/weight metal tracking, custom appraisal certificates, and vault security stock sync.</p></div>
+          <div class="odoo-ind-card"><h3>Book Stores</h3><p>ISBN barcode lookup, author/genre cataloging, and special customer pre-orders.</p></div>
+          <div class="odoo-ind-card"><h3>Wholesale Retail</h3><p>B2B buyer pricing tiers, matrix quoting, volume discounts, and credit limits.</p></div>
+          <div class="odoo-ind-card"><h3>Department Stores</h3><p>Multi-concession tracking, inter-department transfers, and consolidated cashier closing.</p></div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 6 — HOW HEGRIX RETAIL360 WORKS */}
+    <section class="odoo-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Implementation</p>
+          <h2 class="odoo-section-title">How Hegrix Retail360 Is Deployed</h2>
+          <p class="odoo-section-desc">A structured 10-step path from initial audit to go-live and ongoing growth.</p>
+        </div>
+
+        <div class="odoo-timeline">
+          <div class="timeline-step"><div class="step-num">01</div><h3>Business Discovery</h3><p>Analyze your store network, SKUs, and sales channels.</p></div>
+          <div class="timeline-step"><div class="step-num">02</div><h3>Retail Analysis</h3><p>Audit current POS hardware, spreadsheets, and WMS gaps.</p></div>
+          <div class="timeline-step"><div class="step-num">03</div><h3>Solution Planning</h3><p>Design multi-store architecture and workflow blueprints.</p></div>
+          <div class="timeline-step"><div class="step-num">04</div><h3>Customization</h3><p>Configure Odoo modules, receipt templates, and POS screens.</p></div>
+          <div class="timeline-step"><div class="step-num">05</div><h3>Data Migration</h3><p>Clean and import master product SKUs, pricing, and historical records.</p></div>
+          <div class="timeline-step"><div class="step-num">06</div><h3>System Testing</h3><p>Conduct offline POS stress testing, scanner tests, and API validation.</p></div>
+          <div class="timeline-step"><div class="step-num">07</div><h3>Staff Training</h3><p>Train cashiers, warehouse teams, and managers with hands-on role guides.</p></div>
+          <div class="timeline-step"><div class="step-num">08</div><h3>Go-Live Cutover</h3><p>Seamless zero-downtime production rollout across all stores.</p></div>
+          <div class="timeline-step"><div class="step-num">09</div><h3>Hypercare</h3><p>On-site and remote technical support during initial go-live weeks.</p></div>
+          <div class="timeline-step"><div class="step-num">10</div><h3>Continuous Support</h3><p>24/7 SLA monitoring, system tuning, and regular feature updates.</p></div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 7 — WHY CHOOSE HEGRIX */}
+    <section class="odoo-section home-alt-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Advantage</p>
+          <h2 class="odoo-section-title">Why Leading Retailers Partner with Hegrix</h2>
+          <p class="odoo-section-desc">We combine certified Odoo engineering with deep retail industry expertise.</p>
+        </div>
+
+        <div class="about-culture-grid">
+          <div class="about-culture-card">
+            <div class="svg-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+            <h3>Certified Odoo Experts</h3>
+            <p>Our team consists of certified Python developers and Odoo ERP architects with 10+ years of deployment experience.</p>
+          </div>
+          <div class="about-culture-card">
+            <div class="svg-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 21h18M5 21V7l8-4v18M13 11h8v10H13z"></path></svg></div>
+            <h3>Retail Specialists</h3>
+            <p>We understand store operations, barcode workflows, cashier speed, and inventory shrink prevention firsthand.</p>
+          </div>
+          <div class="about-culture-card">
+            <div class="svg-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+            <h3>Agile Development</h3>
+            <p>Rapid 2-week sprint iterations with bi-weekly demo milestones so you see continuous progress.</p>
+          </div>
+          <div class="about-culture-card">
+            <div class="svg-icon-box"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
+            <h3>Dedicated Project Manager</h3>
+            <p>Single point of contact for clear communication, timeline tracking, and risk mitigation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 8 — BUSINESS IMPACT (BEFORE & AFTER) */}
+    <section class="odoo-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Measurable Impact</p>
+          <h2 class="odoo-section-title">Transform Your Retail Operations</h2>
+          <p class="odoo-section-desc">See the clear difference Hegrix Retail360 makes to your bottom line.</p>
+        </div>
+
+        <div class="ba-container">
+          <div class="ba-card ba-before">
+            <span class="ba-badge">BEFORE Retail360</span>
+            <div class="ba-list">
+              <div class="ba-item"><span class="ba-icon">✕</span><span>Excel Sheets & Manual Recordkeeping</span></div>
+              <div class="ba-item"><span class="ba-icon">✕</span><span>Inaccurate Stock Counts & Overstock</span></div>
+              <div class="ba-item"><span class="ba-icon">✕</span><span>Slow Checkout Lines & POS Lag</span></div>
+              <div class="ba-item"><span class="ba-icon">✕</span><span>Frequent Pricing & Inventory Errors</span></div>
+              <div class="ba-item"><span class="ba-icon">✕</span><span>Disconnected Online & Offline Stores</span></div>
+              <div class="ba-item"><span class="ba-icon">✕</span><span>Poor Customer Experience & High Churn</span></div>
+            </div>
+          </div>
+
+          <div class="ba-card ba-after">
+            <span class="ba-badge">AFTER Retail360</span>
+            <div class="ba-list">
+              <div class="ba-item"><span class="ba-icon">✓</span><span>Centralized Odoo Single Source of Truth</span></div>
+              <div class="ba-item"><span class="ba-icon">✓</span><span>Real-Time Multi-Store Inventory Sync</span></div>
+              <div class="ba-item"><span class="ba-icon">✓</span><span>Fast Barcode POS & Instant Receipts</span></div>
+              <div class="ba-item"><span class="ba-icon">✓</span><span>Live Gross Margin & Sales Reporting</span></div>
+              <div class="ba-item"><span class="ba-icon">✓</span><span>Unified Omnichannel Customer Experience</span></div>
+              <div class="ba-item"><span class="ba-icon">✓</span><span>Higher Customer Satisfaction & Loyalty</span></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Animated Impact Stats */}
+        <div class="about-stats-bar" style="margin-top: 40px;">
+          <div class="about-stats-grid">
+            <div class="about-stat-item">
+              <div class="about-stat-number">99%</div>
+              <div class="about-stat-label">Inventory Accuracy</div>
+            </div>
+            <div class="about-stat-item">
+              <div class="about-stat-number">2x</div>
+              <div class="about-stat-label">Faster Checkout Speed</div>
+            </div>
+            <div class="about-stat-item">
+              <div class="about-stat-number">70%</div>
+              <div class="about-stat-label">Reduced Manual Work</div>
+            </div>
+            <div class="about-stat-item">
+              <div class="about-stat-number">35%</div>
+              <div class="about-stat-label">Sales Growth</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 9 — CASE STUDIES */}
+    <section class="odoo-section home-alt-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Success Stories</p>
+          <h2 class="odoo-section-title">Retail Success Stories</h2>
+          <p class="odoo-section-desc">Discover how top retailers scaled operations with Hegrix Retail360.</p>
+        </div>
+
+        <div class="odoo-cases-grid">
+          <div class="odoo-case-card">
+            <div class="case-badge">Fashion Retail</div>
+            <h3>Vogue Apparel Co.</h3>
+            <p style="font-size: 14px; color: #4B5563;">Unified 20 fashion boutiques and online store into a single Odoo inventory matrix.</p>
+            <div class="case-stat"><span class="stat-big">+65%</span><span class="stat-txt">Inventory Accuracy Improved</span></div>
+            <a href="/case-studies/" class="home-btn-secondary" style="font-size: 14px; padding: 10px 16px; text-align: center;">View Case Study &rarr;</a>
+          </div>
+
+          <div class="odoo-case-card">
+            <div class="case-badge">Supermarkets</div>
+            <h3>FreshMart Supermarkets</h3>
+            <p style="font-size: 14px; color: #4B5563;">Deployed high-speed barcode POS terminals with scale integration across 12 hypermarkets.</p>
+            <div class="case-stat"><span class="stat-big">+45%</span><span class="stat-txt">Checkout Speed Improved</span></div>
+            <a href="/case-studies/" class="home-btn-secondary" style="font-size: 14px; padding: 10px 16px; text-align: center;">View Case Study &rarr;</a>
+          </div>
+
+          <div class="odoo-case-card">
+            <div class="case-badge">Electronics</div>
+            <h3>TechZone Electronics</h3>
+            <p style="font-size: 14px; color: #4B5563;">Automated serial number warranty tracking and omnichannel stock synchronization.</p>
+            <div class="case-stat"><span class="stat-big">+32%</span><span class="stat-txt">Annual Revenue Increase</span></div>
+            <a href="/case-studies/" class="home-btn-secondary" style="font-size: 14px; padding: 10px 16px; text-align: center;">View Case Study &rarr;</a>
+          </div>
+
+          <div class="odoo-case-card">
+            <div class="case-badge">Furniture</div>
+            <h3>Urban Living Furniture</h3>
+            <p style="font-size: 14px; color: #4B5563;">Streamlined multi-bin WMS warehouse picking and customer delivery scheduling.</p>
+            <div class="case-stat"><span class="stat-big">+50%</span><span class="stat-txt">Warehouse Efficiency Improved</span></div>
+            <a href="/case-studies/" class="home-btn-secondary" style="font-size: 14px; padding: 10px 16px; text-align: center;">View Case Study &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 10 — CLIENT TESTIMONIALS */}
+    <section class="odoo-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Client Feedback</p>
+          <h2 class="odoo-section-title">What Retail Leaders Say About Retail360</h2>
+        </div>
+
+        <div class="odoo-testi-grid">
+          <div class="home-testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-body">"Hegrix Retail360 completely transformed our multi-store inventory. We cut stock discrepancies by 99% and our cashiers can process checkout lines twice as fast!"</p>
+            <div class="testi-author">
+              <div class="author-avatar">RKS</div>
+              <div><strong>Rajesh Sharma</strong><span>VP Operations, FreshMart</span></div>
+            </div>
+          </div>
+          <div class="home-testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-body">"The seamless sync between our physical POS and Shopify store was a game changer. Hegrix delivered a flawless system on schedule."</p>
+            <div class="testi-author">
+              <div class="author-avatar">EL</div>
+              <div><strong>Elena Laurent</strong><span>Founder, Vogue Apparel</span></div>
+            </div>
+          </div>
+          <div class="home-testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-body">"Serialized warranty tracking and barcode scanning cut our customer return processing time from 15 minutes to 30 seconds."</p>
+            <div class="testi-author">
+              <div class="author-avatar">KP</div>
+              <div><strong>Karan Patel</strong><span>Managing Director, TechZone</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 11 — FAQ */}
+    <section class="odoo-section home-alt-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">FAQ</p>
+          <h2 class="odoo-section-title">Frequently Asked Questions</h2>
+          <p class="odoo-section-desc">Everything you need to know about deploying Hegrix Retail360.</p>
+        </div>
+
+        <div class="about-faq-grid">
+          {retail360Faq.map((faq) => (
+            <details class="about-faq-item">
+              <summary>{faq.title}</summary>
+              <p>{faq.text}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 12 — LATEST INSIGHTS */}
+    <section class="odoo-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Knowledge</p>
+          <h2 class="odoo-section-title">Latest Insights & Retail Strategy Guides</h2>
+        </div>
+
+        <div class="odoo-insights-grid">
+          <article class="insight-card">
+            <div class="insight-img-ph img-benefits"></div>
+            <div class="insight-body">
+              <span class="insight-tag">Retail Trends</span>
+              <h3>Future of Retail ERP</h3>
+              <p>How cloud-native POS and AI automation are reshaping modern retail store operations.</p>
+              <a href="/blog/" class="insight-link">Read Guide &rarr;</a>
+            </div>
+          </article>
+          <article class="insight-card">
+            <div class="insight-img-ph img-vs"></div>
+            <div class="insight-body">
+              <span class="insight-tag">Inventory Control</span>
+              <h3>Retail Inventory Best Practices</h3>
+              <p>Proven strategies to eliminate stockouts, prevent shrinkage, and optimize warehouse turns.</p>
+              <a href="/blog/" class="insight-link">Read Guide &rarr;</a>
+            </div>
+          </article>
+          <article class="insight-card">
+            <div class="insight-img-ph img-guide"></div>
+            <div class="insight-body">
+              <span class="insight-tag">Odoo ERP</span>
+              <h3>How Odoo Improves Retail Operations</h3>
+              <p>A comprehensive breakdown of Odoo POS, WMS, and accounting integration for retailers.</p>
+              <a href="/blog/" class="insight-link">Read Guide &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 13 — FINAL CTA */}
+    <section class="odoo-section home-alt-section">
+      <div class="container">
+        <div class="final-cta-card">
+          <h2>Ready to Modernize Your Retail Business?</h2>
+          <p>Schedule a free consultation and discover how Hegrix Retail360 can help you automate operations, improve customer experiences, and grow your retail business.</p>
+          <div class="cta-buttons">
+            <a href="#demo-form" class="home-btn-primary button-cta-white">Book Free Demo &rarr;</a>
+            <a href="/contact-us/" class="home-btn-secondary button-cta-outline">Talk to Retail Experts</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 14 — CONTACT FORM */}
+    <section class="odoo-section" id="demo-form">
+      <div class="container">
+        <div class="odoo-form-wrapper">
+          <div class="form-header text-center" style="text-align: center;">
+            <h2>Request Free Hegrix Retail360 Demo</h2>
+            <p>Fill out the form below and a senior retail ERP specialist will prepare a customized demo for your team.</p>
+          </div>
+          <form action="/contact-us/" method="GET">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="r-name">Full Name *</label>
+                <input type="text" id="r-name" name="name" placeholder="Jane Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="r-email">Business Email *</label>
+                <input type="email" id="r-email" name="email" placeholder="jane@retailstore.com" required />
+              </div>
+              <div class="form-group">
+                <label for="r-phone">Phone Number *</label>
+                <input type="tel" id="r-phone" name="phone" placeholder="+1 (555) 000-0000" required />
+              </div>
+              <div class="form-group">
+                <label for="r-company">Company / Store Name *</label>
+                <input type="text" id="r-company" name="company" placeholder="Retail Store Name" required />
+              </div>
+              <div class="form-group">
+                <label for="r-stores">Number of Stores *</label>
+                <select id="r-stores" name="stores" required>
+                  <option value="1 Store">1 Store</option>
+                  <option value="2-5 Stores">2-5 Stores</option>
+                  <option value="6-20 Stores">6-20 Stores</option>
+                  <option value="20+ Stores">20+ Stores</option>
+                  <option value="Online Only">Online Only (eCommerce)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="r-software">Current Software</label>
+                <input type="text" id="r-software" name="software" placeholder="e.g. QuickBooks, Excel, Tally, Custom POS" />
+              </div>
+              <div class="form-group full-width">
+                <label for="r-challenges">Key Business Challenges</label>
+                <input type="text" id="r-challenges" name="challenges" placeholder="e.g. Inventory mismatch, slow checkout, multi-store stock sync" />
+              </div>
+              <div class="form-group full-width">
+                <label for="r-message">Message / Demo Notes</label>
+                <textarea id="r-message" name="message" rows="4" placeholder="Tell us about your retail operations, POS needs, or hardware setup..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="home-btn-primary form-submit-btn">Request Free Consultation &rarr;</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 15 — RELATED INDUSTRY SOLUTIONS */}
+    <section class="odoo-section home-alt-section">
+      <div class="container">
+        <div class="odoo-section-header">
+          <p class="odoo-section-eyebrow">Industry Ecosystem</p>
+          <h2 class="odoo-section-title">Explore Related 360 Industry Solutions</h2>
+          <p class="odoo-section-desc">Industry-specific Odoo ERP platforms built by Hegrix engineers.</p>
+        </div>
+
+        <div class="odoo-related-grid">
+          <a href="/solutions/inventory-pos-system/" class="rel-card">
+            <div><h3>Hegrix Manufacturing360</h3><p>MRP, BOM tracking, shop floor execution, and quality control.</p></div>
+            <span class="rel-arrow">&rarr;</span>
+          </a>
+          <a href="/solutions/customer-portal/" class="rel-card">
+            <div><h3>Hegrix Healthcare360</h3><p>Patient portals, medical stock control, asset tracking, and compliant billing.</p></div>
+            <span class="rel-arrow">&rarr;</span>
+          </a>
+          <a href="/solutions/erp-integration/" class="rel-card">
+            <div><h3>Hegrix Logistics360</h3><p>WMS, route optimization, fleet tracking, and carrier API integration.</p></div>
+            <span class="rel-arrow">&rarr;</span>
+          </a>
+          <a href="/solutions/b2b-commerce-platform/" class="rel-card">
+            <div><h3>Hegrix Wholesale360</h3><p>B2B buyer pricing tiers, matrix quoting, volume discounts, and credit limits.</p></div>
+            <span class="rel-arrow">&rarr;</span>
+          </a>
+          <a href="/solutions/multi-vendor-marketplace/" class="rel-card">
+            <div><h3>Hegrix Hospitality360</h3><p>Reservation engines, table POS, kitchen displays, and procurement.</p></div>
+            <span class="rel-arrow">&rarr;</span>
+          </a>
+          <a href="/solutions/ai-business-automation/" class="rel-card">
+            <div><h3>Hegrix Education360</h3><p>Student portals, course enrollment, automated tuition billing, and attendance.</p></div>
+            <span class="rel-arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

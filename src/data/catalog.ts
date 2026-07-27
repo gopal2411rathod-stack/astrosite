@@ -314,6 +314,12 @@ export const solutionPages = [
     description: "Reduce repetitive work with intelligent assistants, OCR, routing and knowledge retrieval.",
     keyword: "AI business automation",
   },
+  {
+    slug: "hegrix-retail360",
+    title: "Hegrix Retail360",
+    description: "Complete retail business management platform powered by Odoo ERP. Inventory, POS, eCommerce, CRM, accounting & live analytics.",
+    keyword: "Retail ERP software Odoo",
+  },
 ];
 
 export const industryPages = [
