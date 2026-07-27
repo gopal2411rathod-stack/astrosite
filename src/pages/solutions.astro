@@ -1,40 +1,439 @@
 ---
-import SeoPage from "../components/SeoPage.astro";
+import Layout from "../layouts/Layout.astro";
+import { solutionPages } from "../data/catalog";
 
-const sections = [
+const solutionsFaq = [
   {
-    eyebrow: "Business solutions",
-    title: "Digital solutions built around outcomes.",
-    text: "Hegrix creates software that improves revenue operations, customer self-service, team productivity and decision visibility.",
-    cards: [
-      { id: "b2b-commerce", title: "B2B Commerce Platform", text: "Account pricing, quote requests, approval flows, bulk orders and order tracking for business buyers." },
-      { id: "marketplace-platform", title: "Multi-Vendor Marketplace", text: "Vendor onboarding, catalog management, commissions, payouts, fulfillment and moderation." },
-      { id: "inventory-pos", title: "Inventory & POS System", text: "Stock control, purchasing, barcode workflows, point-of-sale and multi-location reporting." },
-      { id: "customer-portal", title: "Customer Portal", text: "Secure dashboards for tickets, invoices, projects, orders, documents and communication." },
-      { id: "erp-integration", title: "ERP Integration", text: "Connect ecommerce, finance, inventory, CRM and analytics into a single operating view." },
-      { id: "ai-automation", title: "AI Business Automation", text: "Reduce repetitive work with intelligent assistants, OCR, routing and knowledge retrieval." },
-    ],
+    title: "How does Hegrix customize solutions for our business workflows?",
+    text: "We start with a thorough discovery audit of your existing processes, software stack, and growth goals before designing a custom digital solution architecture tailored to your business model."
   },
   {
-    eyebrow: "Internal links",
-    title: "Every solution connects to your service strategy.",
-    text: "Solution pages should link naturally to Services, Industries, Case Studies and Contact Us to support SEO and conversion paths.",
-    cards: [
-      { title: "Services", text: "Show how Hegrix builds and supports each solution." },
-      { title: "Industries", text: "Explain where each solution creates the most value." },
-      { title: "Case Studies", text: "Use proof and measurable results to increase trust." },
-    ],
+    title: "How long does a typical solution implementation take?",
+    text: "Timeline depends on scope and integrations. Focused solution rollouts take 4 to 8 weeks, while large-scale enterprise commerce or ERP platforms follow phased milestone sprints."
   },
+  {
+    title: "Can Hegrix integrate solutions with our legacy ERP/CRM?",
+    text: "Yes. We specialize in building secure REST and GraphQL API middleware to connect your B2B commerce, marketplace, POS, or customer portal with SAP, Odoo, Salesforce, QuickBooks, or custom databases."
+  },
+  {
+    title: "Who owns the code and intellectual property?",
+    text: "You own 100% of the custom code, design assets, database schemas, and IP rights upon project completion and delivery."
+  },
+  {
+    title: "Do you offer post-launch maintenance and SLA support?",
+    text: "Yes. We provide 24/7 server monitoring, security patching, bug fixes, performance tuning, and ongoing feature enhancement under dedicated SLA support."
+  }
+];
+
+const solutionsSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Enterprise Digital Software Solutions",
+    provider: {
+      "@type": "Organization",
+      name: "Hegrix",
+      url: "https://hegrix.com",
+    },
+    areaServed: "Global",
+    serviceType: "B2B Commerce, Multi-Vendor Marketplace, Inventory & POS, Customer Portal, ERP Integration, and AI Business Automation",
+    description: "Discover Hegrix enterprise software solutions built around measurable outcomes—B2B commerce, marketplaces, POS systems, customer portals, ERP integration, and AI automation.",
+    url: "https://hegrix.com/solutions/",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: solutionsFaq.map((item) => ({
+      "@type": "Question",
+      name: item.title,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.text,
+      },
+    })),
+  },
+];
+
+const techStackPills = [
+  "React & Next.js",
+  "Node.js & Python",
+  "Odoo 18 Certified",
+  "AWS & Azure Cloud",
+  "PostgreSQL & Redis",
+  "GraphQL & REST APIs",
+  "Docker & Kubernetes",
+  "AI & OpenAI LLMs",
 ];
 ---
 
-<SeoPage
-  title="Business Software Solutions | Hegrix"
-  description="Discover Hegrix solutions for B2B commerce, marketplaces, inventory, POS, customer portals, ERP integration and AI automation."
-  keywords="business software solutions, B2B commerce platform, marketplace solution, ERP integration"
+<Layout
+  title="Enterprise Software Solutions | B2B Commerce, Marketplaces & ERP Integration | Hegrix"
+  description="Transform your revenue operations with Hegrix digital software solutions—B2B commerce platforms, multi-vendor marketplaces, POS systems, customer portals, ERP integration, and AI automation."
+  keywords="business software solutions, B2B commerce platform, multi-vendor marketplace, inventory POS system, customer portal, ERP integration, AI automation"
   path="/solutions/"
-  eyebrow="Solutions"
-  h1="Business software solutions shaped around how your company operates."
-  intro="Hegrix turns complex sales, service and operational workflows into scalable digital systems."
-  sections={sections}
-/>
+  schema={solutionsSchema}
+>
+  <div class="about-wrapper">
+    {/* SECTION 1 – Hero Section */}
+    <section class="home-hero-section">
+      <div class="home-hero-glow glow-1"></div>
+      <div class="home-hero-glow glow-2"></div>
+      <div class="home-hero-dots"></div>
+
+      <div class="container">
+        <div class="home-hero-grid">
+          <div>
+            <div class="hero-pill">
+              <span class="hero-pill-dot"></span>
+              <span>Enterprise Digital Solutions</span>
+            </div>
+
+            <h1 class="home-hero-title">
+              Tailored Business Software Solutions <span class="hero-gradient-text">Built for Outcomes.</span>
+            </h1>
+
+            <p class="home-hero-desc">
+              Hegrix turns complex sales, service, and operational bottlenecks into scalable digital platforms—combining B2B commerce, multi-vendor marketplaces, POS systems, customer portals, ERP integration, and AI automation.
+            </p>
+
+            <div class="home-hero-btns">
+              <a href="/contact-us/" class="home-btn-primary">
+                Schedule Free Solution Audit &rarr;
+              </a>
+              <a href="/case-studies/" class="home-btn-secondary">
+                Explore Case Studies
+              </a>
+            </div>
+
+            <div class="home-hero-tags">
+              <span>✓ Scalable Architecture</span>
+              <span>✓ 2-Week Agile Delivery</span>
+              <span>✓ 100% IP Ownership</span>
+              <span>✓ 24/7 SLA Support</span>
+            </div>
+          </div>
+
+          <div class="home-hero-visual">
+            <div class="visual-card-main">
+              <div class="card-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="card-title">Hegrix Solution Delivery Engine</span>
+              </div>
+              <div class="card-body">
+                <div class="code-line"><span class="k">const</span> engine = <span class="k">new</span> SolutionArchitecture();</div>
+                <div class="code-line"><span class="f">await</span> engine.auditWorkflow();</div>
+                <div class="code-line"><span class="f">await</span> engine.deployPlatform(&#123;</div>
+                <div class="code-line tab"><span class="p">core:</span> <span class="s">"B2B Commerce & ERP Sync"</span>,</div>
+                <div class="code-line tab"><span class="p">performance:</span> <span class="s">"Sub-Second TTFB"</span>,</div>
+                <div class="code-line tab"><span class="p">status:</span> <span class="s">"Production Ready"</span>,</div>
+                <div class="code-line"><span class="f">&#125;);</span></div>
+                <div class="code-line status-line">
+                  <span class="status-dot"></span> <span class="s">System Health: 99.99% Operational</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-top-right">
+              <span class="badge-icon">⚡</span>
+              <div>
+                <strong>High Throughput</strong>
+                <span>Sub-Second Response</span>
+              </div>
+            </div>
+
+            <div class="floating-badge badge-bottom-left">
+              <span class="badge-icon">🛡️</span>
+              <div>
+                <strong>Enterprise Security</strong>
+                <span>ISO & SOC Compliant</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 2 – Impact Metrics Bar */}
+    <section class="about-stats-bar">
+      <div class="container">
+        <div class="about-stats-grid">
+          <div class="about-stat-item">
+            <div class="about-stat-number">99.9%</div>
+            <div class="about-stat-label">System Uptime SLA</div>
+          </div>
+          <div class="about-stat-item">
+            <div class="about-stat-number">3.5x</div>
+            <div class="about-stat-label">Average Client ROI</div>
+          </div>
+          <div class="about-stat-item">
+            <div class="about-stat-number">200+</div>
+            <div class="about-stat-label">Enterprise Deployments</div>
+          </div>
+          <div class="about-stat-item">
+            <div class="about-stat-number">15+</div>
+            <div class="about-stat-label">Industries Served</div>
+          </div>
+          <div class="about-stat-item">
+            <div class="about-stat-number">10+</div>
+            <div class="about-stat-label">Years Engineering Experience</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 3 – Core Solutions Spectrum */}
+    <section class="home-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Solutions Spectrum</p>
+          <h2 class="home-title">Purpose-Built Software Platforms for Growth</h2>
+          <p class="home-desc">Engineered around your exact operational workflows, revenue models, and scale.</p>
+        </div>
+
+        <div class="about-values-grid">
+          {solutionPages.map((sol, i) => (
+            <div class="about-value-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div class="svg-icon-box">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    {i === 0 && <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"></path>}
+                    {i === 1 && <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>}
+                    {i === 2 && <path d="M2 7h20M2 12h20M2 17h20"></path>}
+                    {i === 3 && <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>}
+                    {i === 4 && <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>}
+                    {i === 5 && <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>}
+                  </svg>
+                </div>
+                <h3>{sol.title}</h3>
+                <p>{sol.description}</p>
+              </div>
+
+              <div style="margin-top: 20px;">
+                <a href={`/solutions/${sol.slug}/`} class="home-btn-secondary" style="font-size: 14px; padding: 10px 18px; width: 100%; text-align: center;">
+                  Explore Solution &rarr;
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 4 – Delivery Methodology */}
+    <section class="home-section home-alt-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Delivery Framework</p>
+          <h2 class="home-title">Our Proven 6-Step Solution Process</h2>
+          <p class="home-desc">From initial workflow audit to production deployment and 24/7 hypercare.</p>
+        </div>
+
+        <div class="home-process-grid">
+          <div class="process-card">
+            <div class="process-num">01</div>
+            <h3>Discovery & Audit</h3>
+            <p>We analyze your business workflows, tech stack, data silos, and integration goals.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-num">02</div>
+            <h3>Architecture Blueprint</h3>
+            <p>Designing technical blueprints, system data flows, API specifications, and roadmap milestones.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-num">03</div>
+            <h3>UX/UI Design System</h3>
+            <p>Creating user journeys, interactive prototypes, and role-based permissions before coding.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-num">04</div>
+            <h3>Agile Development</h3>
+            <p>Building in rapid 2-week sprint cycles with continuous integration and bi-weekly demos.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-num">05</div>
+            <h3>Integration & Security QA</h3>
+            <p>Rigorous stress testing, database regression, OWASP security scans, and UAT sign-off.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-num">06</div>
+            <h3>Launch & SLA Support</h3>
+            <p>Zero-downtime production deployment, team onboarding, and 24/7 continuous SLA support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 5 – Why Choose Hegrix Solutions */}
+    <section class="home-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Strategic Value</p>
+          <h2 class="home-title">Why Enterprise Leaders Choose Hegrix Solutions</h2>
+          <p class="home-desc">We combine senior technical execution with business outcome accountability.</p>
+        </div>
+
+        <div class="about-culture-grid">
+          <div class="about-culture-card">
+            <div class="svg-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <h3>Revenue Acceleration</h3>
+            <p>Faster order processing, automated quotes, self-service portals, and frictionless buyer journeys that boost conversions.</p>
+          </div>
+
+          <div class="about-culture-card">
+            <div class="svg-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3>Operational Cost Reduction</h3>
+            <p>Eliminate manual spreadsheets, duplicate data entry, and fragmented tools with a single integrated system.</p>
+          </div>
+
+          <div class="about-culture-card">
+            <div class="svg-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+            </div>
+            <h3>Real-Time Data Sync</h3>
+            <p>Seamless bidirectional data flow between your web frontend, mobile apps, ERP, CRM, and accounting software.</p>
+          </div>
+
+          <div class="about-culture-card">
+            <div class="svg-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <h3>Scalable Cloud Engine</h3>
+            <p>Cloud-native architecture designed to handle 10x traffic surges and expanding multi-entity operations effortlessly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 6 – Industries We Transform */}
+    <section class="home-section home-alt-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Industry Alignment</p>
+          <h2 class="home-title">Solutions Built for Specialized Industries</h2>
+          <p class="home-desc">Discover how our software solutions power operations across core global verticals.</p>
+        </div>
+
+        <div class="odoo-industries-grid">
+          <a href="/industries/retail/" class="odoo-ind-card">
+            <div class="ind-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path></svg></div>
+            <h3>Retail & Commerce</h3>
+            <p>Omnichannel POS, barcode scanning, centralized inventory, and self-service portals.</p>
+          </a>
+          <a href="/industries/manufacturing/" class="odoo-ind-card">
+            <div class="ind-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M2 20h20M5 20V8l7-5 7 5v12"></path></svg></div>
+            <h3>Manufacturing</h3>
+            <p>Production scheduling, BOM tracking, supplier portals, and ERP integrations.</p>
+          </a>
+          <a href="/industries/logistics/" class="odoo-ind-card">
+            <div class="ind-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon></svg></div>
+            <h3>Logistics & Supply Chain</h3>
+            <p>Fleet tracking, route optimization, automated shipping rate APIs, and WMS sync.</p>
+          </a>
+          <a href="/industries/healthcare/" class="odoo-ind-card">
+            <div class="ind-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
+            <h3>Healthcare</h3>
+            <p>Patient portals, medical stock management, asset tracking, and compliant billing.</p>
+          </a>
+          <a href="/industries/real-estate/" class="odoo-ind-card">
+            <div class="ind-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M6 3h12v4H6z"></path></svg></div>
+            <h3>Real Estate & Construction</h3>
+            <p>Tenant portals, project cost control, subcontractor billing, and bidding management.</p>
+          </a>
+          <a href="/industries/finance/" class="odoo-ind-card">
+            <div class="ind-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+            <h3>Finance & Professional Services</h3>
+            <p>Automated invoicing, client portals, double-entry reconciliation, and analytics.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 7 – Client Feedback & Proof */}
+    <section class="home-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Client Feedback</p>
+          <h2 class="home-title">Trusted by Global Tech Leaders</h2>
+        </div>
+
+        <div class="home-testi-grid" style="max-width: 800px; margin: 0 auto;">
+          <div class="home-testi-card">
+            <div class="testi-stars">★★★★★</div>
+            <p class="testi-body">"Hegrix designed and deployed our B2B Commerce Platform and ERP integration seamlessly. Their senior engineers delivered a complex multi-warehouse stock sync with zero downtime."</p>
+            <div class="testi-author">
+              <div class="author-avatar">HX</div>
+              <div>
+                <strong>Alexander Wright</strong>
+                <span>Chief Product Officer, Enterprise Commerce Group</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 8 – Technology Stack Wall */}
+    <section class="home-section home-alt-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">Technology Core</p>
+          <h2 class="home-title">Battle-Tested Technologies We Master</h2>
+          <p class="home-desc">Enterprise frameworks and modern cloud tools chosen for sub-second speeds and security.</p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 800px; margin: 0 auto;">
+          {techStackPills.map((tech) => (
+            <span class="tech-tag" style="font-size: 15px; padding: 10px 20px;">
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 9 – Solutions FAQ */}
+    <section class="home-section">
+      <div class="container">
+        <div class="home-section-header">
+          <p class="home-eyebrow">FAQ</p>
+          <h2 class="home-title">Frequently Asked Questions</h2>
+          <p class="home-desc">Clear answers about planning, building, and launching Hegrix digital solutions.</p>
+        </div>
+
+        <div class="about-faq-grid">
+          {solutionsFaq.map((faq) => (
+            <details class="about-faq-item">
+              <summary>{faq.title}</summary>
+              <p>{faq.text}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* SECTION 10 – Final CTA */}
+    <section class="home-section home-final-cta">
+      <div class="container">
+        <div class="home-cta-card">
+          <h2>Ready to Build a Custom Digital Solution?</h2>
+          <p>Schedule a strategic solution audit with Hegrix architects. We will outline the optimal scope, architecture, and deployment timeline.</p>
+          <div class="home-cta-btns">
+            <a href="/contact-us/" class="home-btn-primary btn-white">Schedule Free Solution Audit &rarr;</a>
+            <a href="/services/" class="home-btn-secondary btn-outline">Explore All Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>
