@@ -156,10 +156,28 @@ export const servicePages = [
     keyword: "Docker services",
   },
   {
+    slug: "digital-marketing-services",
+    title: "Digital Marketing Services",
+    description: "Comprehensive data-driven digital marketing strategies across search, paid media, social, content, CRO, brand management, and influencer channels.",
+    keyword: "digital marketing services",
+  },
+  {
+    slug: "search-engine-optimization",
+    title: "Search Engine Optimization",
+    description: "Technical SEO, strategic keyword mapping, content optimization, authority link building, and Core Web Vitals performance tuning.",
+    keyword: "search engine optimization services",
+  },
+  {
     slug: "seo",
     title: "SEO",
     description: "Technical SEO, on-page optimization, content planning, performance improvements and search visibility strategy.",
     keyword: "SEO services",
+  },
+  {
+    slug: "paid-advertising",
+    title: "Paid Advertising",
+    description: "High-ROI Google Ads, Meta Ads (Facebook/Instagram), LinkedIn Ads, shopping campaigns, and performance retargeting.",
+    keyword: "paid advertising services",
   },
   {
     slug: "google-ads",
@@ -174,6 +192,12 @@ export const servicePages = [
     keyword: "social media marketing services",
   },
   {
+    slug: "specialized-ecommerce-seo",
+    title: "Specialized eCommerce SEO",
+    description: "Faceted navigation SEO, product page optimization, schema markup, and conversion-ready search optimization for Shopify, WooCommerce, Magento & Amazon.",
+    keyword: "eCommerce SEO services",
+  },
+  {
     slug: "email-marketing",
     title: "Email Marketing",
     description: "Email campaigns, automation flows, segmentation, templates, analytics and lead nurturing workflows.",
@@ -184,6 +208,24 @@ export const servicePages = [
     title: "Content Marketing",
     description: "SEO-friendly content strategy, landing pages, blog planning, conversion copy and authority-building campaigns.",
     keyword: "content marketing services",
+  },
+  {
+    slug: "conversion-rate-optimization",
+    title: "Conversion Rate Optimization",
+    description: "Landing page UX audits, heatmaps, visitor behavioral analysis, A/B split testing, and conversion funnel optimization.",
+    keyword: "conversion rate optimization services",
+  },
+  {
+    slug: "brand-management",
+    title: "Brand Management",
+    description: "Brand identity guidelines, positioning strategy, multi-channel reputation management, visual consistency, and trust signals.",
+    keyword: "brand management services",
+  },
+  {
+    slug: "influencer-marketing",
+    title: "Influencer Marketing",
+    description: "Micro & macro creator sourcing, product seeding, contract negotiation, UGC creation, and trackable referral ROI attribution.",
+    keyword: "influencer marketing services",
   },
   {
     slug: "analytics",
