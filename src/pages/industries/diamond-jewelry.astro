@@ -1,0 +1,2013 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export const prerender = true;
+
+const djSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Diamond & Jewelry Software Solutions",
+    provider: {
+      "@type": "Organization",
+      name: "Hegrix",
+      url: "https://hegrix.com",
+    },
+    areaServed: "Global",
+    serviceType: "Diamond and jewelry ERP, inventory, CRM, POS, manufacturing, and eCommerce software",
+    description: "Transform your diamond and jewelry business with intelligent software. Manage inventory, manufacturing, retail POS, wholesale, CRM, accounting, certificates, and multi-store operations from one powerful platform.",
+    url: "https://hegrix.com/industries/diamond-jewelry/",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      { "@type": "Question", name: "Is the software cloud-based?", acceptedAnswer: { "@type": "Answer", text: "Yes. The platform is 100% cloud-based, accessible from any device, anywhere in the world. You do not need to install or maintain local servers." } },
+      { "@type": "Question", name: "Does it support GST?", acceptedAnswer: { "@type": "Answer", text: "Yes. The software is fully GST-ready with automated tax computation, GST invoice generation, HSN code management, and GST return filing reports." } },
+      { "@type": "Question", name: "Can I manage multiple branches?", acceptedAnswer: { "@type": "Answer", text: "Yes. Multi-branch management is a core feature. You can control inventory, sales, staff, and reports across unlimited showrooms and branches from one centralized dashboard." } },
+      { "@type": "Question", name: "Does it support barcode and RFID?", acceptedAnswer: { "@type": "Answer", text: "Yes. The system supports both barcode and RFID technology for fast, accurate jewelry tagging, scanning at POS, stock audits, and inventory movement tracking." } },
+      { "@type": "Question", name: "Can it manage diamond certificates?", acceptedAnswer: { "@type": "Answer", text: "Yes. GIA, IGI, and HRD certificates can be stored, linked to individual diamonds, and included on invoices. The system also supports Rapaport pricing and stone-level details." } },
+      { "@type": "Question", name: "Is training included?", acceptedAnswer: { "@type": "Answer", text: "Yes. Hegrix provides comprehensive onboarding, role-based user training, video tutorials, and ongoing support to ensure fast and successful adoption across your team." } },
+      { "@type": "Question", name: "Can it integrate with Tally?", acceptedAnswer: { "@type": "Answer", text: "Yes. Our platform supports bidirectional integration with Tally, allowing seamless accounting data sync while you transition or maintain a hybrid workflow." } },
+      { "@type": "Question", name: "Is mobile access available?", acceptedAnswer: { "@type": "Answer", text: "Yes. A fully responsive mobile app gives sales staff, managers, and business owners access to dashboards, inventory, orders, and reports from any smartphone or tablet." } },
+    ],
+  },
+];
+
+const modules = [
+  {
+    id: "inventory",
+    icon: "💎",
+    title: "Inventory Management",
+    color: "#D4AF37",
+    items: ["Gold Inventory", "Diamond Inventory", "Gemstone Inventory", "Lot Tracking", "Barcode", "RFID", "Stock Transfer"],
+  },
+  {
+    id: "manufacturing",
+    icon: "⚙️",
+    title: "Manufacturing",
+    color: "#B8860B",
+    items: ["Production Planning", "Job Work", "Casting", "Polishing", "Stone Setting", "Quality Check", "Cost Tracking"],
+  },
+  {
+    id: "pos",
+    icon: "🏪",
+    title: "Retail POS",
+    color: "#C0A020",
+    items: ["Billing", "GST Invoice", "Returns", "Exchange", "Offers", "Discounts"],
+  },
+  {
+    id: "wholesale",
+    icon: "📦",
+    title: "Wholesale",
+    color: "#D4AF37",
+    items: ["Quotations", "Bulk Orders", "Customer Pricing", "Export Orders"],
+  },
+  {
+    id: "crm",
+    icon: "👥",
+    title: "CRM",
+    color: "#B8860B",
+    items: ["Customer Database", "Follow-ups", "Loyalty Program", "WhatsApp Integration"],
+  },
+  {
+    id: "accounting",
+    icon: "📊",
+    title: "Accounting",
+    color: "#C0A020",
+    items: ["Ledger", "Balance Sheet", "Profit & Loss", "GST Reports", "Tax Reports"],
+  },
+  {
+    id: "diamond",
+    icon: "💍",
+    title: "Diamond Management",
+    color: "#D4AF37",
+    items: ["GIA Certificates", "IGI Certificates", "HRD Certificates", "Rapaport Pricing", "Stone Details", "Parcel Management"],
+  },
+  {
+    id: "reports",
+    icon: "📈",
+    title: "Reports",
+    color: "#B8860B",
+    items: ["Sales Analytics", "Profit Reports", "Inventory Reports", "Manufacturing Reports", "Customer Reports"],
+  },
+];
+
+const challenges = [
+  { icon: "📋", title: "Manual Inventory", desc: "Tracking thousands of SKUs manually leads to errors, delays, and lost revenue." },
+  { icon: "❌", title: "Billing Errors", desc: "Manual billing and GST calculations cause compliance issues and customer disputes." },
+  { icon: "⏰", title: "Manufacturing Delays", desc: "Lack of production tracking creates job work delays and missed delivery commitments." },
+  { icon: "🔀", title: "Stock Mismatch", desc: "Disconnected systems result in physical stock never matching system records." },
+  { icon: "📞", title: "Customer Follow-ups", desc: "Sales teams miss follow-ups leading to lost orders and poor customer experience." },
+  { icon: "🏢", title: "Multi-Branch Management", desc: "Managing multiple showrooms without a unified system is chaotic and error-prone." },
+  { icon: "📜", title: "Certificate Tracking", desc: "Diamond certificates get lost or misplaced without a linked digital system." },
+  { icon: "📉", title: "Inaccurate Reporting", desc: "Business decisions based on incomplete or outdated reports impact profitability." },
+];
+
+const features = [
+  { icon: "☁️", title: "Cloud ERP", desc: "Access your entire business from any device, anywhere, with enterprise-grade uptime." },
+  { icon: "📡", title: "Real-Time Inventory", desc: "Instant stock updates across all branches with zero manual intervention." },
+  { icon: "🔖", title: "Barcode & RFID", desc: "Lightning-fast item scanning for billing, stock audits, and transfers." },
+  { icon: "🤖", title: "AI Analytics", desc: "Predictive insights on sales trends, low stock alerts, and profit opportunities." },
+  { icon: "🔒", title: "Secure Cloud Backup", desc: "Military-grade encryption with automated daily backups and disaster recovery." },
+  { icon: "📱", title: "Mobile Access", desc: "Full platform access on iOS and Android for managers and field staff." },
+  { icon: "🏬", title: "Multi-Branch Support", desc: "Centralized control of unlimited showrooms, warehouses, and outlets." },
+  { icon: "🛡️", title: "Role-Based Access", desc: "Granular permissions ensure staff only access what they need." },
+  { icon: "🇮🇳", title: "GST Ready", desc: "Automated GST invoice generation, HSN codes, and filing reports built in." },
+  { icon: "⚡", title: "Fast Performance", desc: "Sub-second response times even with 20,000+ daily transactions." },
+];
+
+const industries = [
+  { icon: "💍", title: "Jewelry Manufacturers", desc: "End-to-end manufacturing, quality, and costing workflows." },
+  { icon: "💎", title: "Diamond Manufacturers", desc: "Rough diamond to polished stone tracking with certificate management." },
+  { icon: "🏪", title: "Jewelry Retail Stores", desc: "POS, billing, customer loyalty, and showroom analytics." },
+  { icon: "📦", title: "Jewelry Wholesalers", desc: "Bulk pricing, quotations, trade catalogs, and order management." },
+  { icon: "💱", title: "Diamond Traders", desc: "Parcel management, Rapaport pricing, and certificate-linked trading." },
+  { icon: "🥇", title: "Gold Traders", desc: "Purity tracking, hallmarking, and gold rate-linked billing." },
+  { icon: "🪨", title: "Gemstone Dealers", desc: "Origin, treatment, certification, and gemstone inventory." },
+  { icon: "✈️", title: "Export Houses", desc: "Export documentation, international pricing, and compliance." },
+  { icon: "🏢", title: "Multi-Store Jewelry Chains", desc: "Centralized inventory, unified reporting, and inter-branch transfers." },
+];
+
+const benefits = [
+  { icon: "✅", stat: "99.9%", label: "Inventory Accuracy", desc: "Eliminate manual errors and achieve near-perfect stock accuracy." },
+  { icon: "⚡", stat: "3x", label: "Faster Billing", desc: "Reduce billing time from minutes to seconds with smart POS." },
+  { icon: "🤖", stat: "80%", label: "Reduce Manual Work", desc: "Automate repetitive tasks and free your team for high-value work." },
+  { icon: "📈", stat: "+40%", label: "Increase Profitability", desc: "Data-driven decisions improve margins across every category." },
+  { icon: "⭐", stat: "5★", label: "Customer Experience", desc: "Delight customers with faster service and personalized interactions." },
+  { icon: "📊", stat: "Real-Time", label: "Smart Analytics", desc: "Live dashboards give instant business intelligence anytime." },
+  { icon: "🔒", stat: "256-bit", label: "Cloud Security", desc: "Bank-grade encryption protecting every business transaction." },
+  { icon: "🔄", stat: "100%", label: "Business Automation", desc: "From purchase to report, automate the entire business lifecycle." },
+];
+
+const workflow = [
+  { icon: "🛒", step: "Purchase", desc: "Vendor orders, gold/diamond procurement" },
+  { icon: "📦", step: "Inventory", desc: "Stock receipt, tagging, valuation" },
+  { icon: "⚙️", step: "Manufacturing", desc: "Production orders, job work, casting" },
+  { icon: "✅", step: "Quality Check", desc: "Inspection, certifications, approval" },
+  { icon: "💰", step: "Sales", desc: "Retail POS, wholesale, eCommerce" },
+  { icon: "🧾", step: "Invoice", desc: "GST billing, receipts, certificates" },
+  { icon: "📒", step: "Accounting", desc: "Ledger, P&L, balance sheet" },
+  { icon: "📊", step: "Reports", desc: "Analytics, insights, forecasting" },
+];
+
+const integrations = [
+  { icon: "📊", name: "Tally", color: "#0052CC" },
+  { icon: "💬", name: "WhatsApp", color: "#25D366" },
+  { icon: "📧", name: "Email", color: "#D4AF37" },
+  { icon: "📱", name: "SMS", color: "#6B46C1" },
+  { icon: "🔖", name: "Barcode Scanner", color: "#B8860B" },
+  { icon: "📡", name: "RFID", color: "#0EA5E9" },
+  { icon: "💳", name: "Payment Gateway", color: "#EF4444" },
+  { icon: "🇮🇳", name: "GST Portal", color: "#F59E0B" },
+  { icon: "💎", name: "GIA", color: "#1E40AF" },
+  { icon: "🏅", name: "IGI", color: "#6D28D9" },
+];
+
+const testimonials = [
+  {
+    name: "Rajesh Mehta",
+    company: "Mehta Diamond House, Surat",
+    role: "Managing Director",
+    rating: 5,
+    avatar: "R",
+    avatarColor: "#D4AF37",
+    text: "Before Hegrix, our inventory was a nightmare. We had 50,000+ diamonds and no real-time visibility. Now every stone is tracked from rough purchase to GIA-certified sale. Our billing errors dropped to near zero.",
+  },
+  {
+    name: "Priya Jain",
+    company: "Jain Jewellers, Mumbai",
+    role: "Operations Manager",
+    rating: 5,
+    avatar: "P",
+    avatarColor: "#B8860B",
+    text: "The WhatsApp integration changed everything for our CRM. We can now send custom jewelry designs, quotes, and GST invoices directly to customers. Our conversion rate improved by 35% in 3 months.",
+  },
+  {
+    name: "Arun Shah",
+    company: "Shah Gold Chains, Ahmedabad",
+    role: "CEO",
+    rating: 5,
+    avatar: "A",
+    avatarColor: "#C0A020",
+    text: "We have 8 branches across Gujarat and used to spend 3 days on month-end stock reconciliation. Now it takes 2 hours and the data is 99.8% accurate. The multi-branch dashboard is simply outstanding.",
+  },
+];
+
+const stats = [
+  { value: "500+", label: "Businesses Served", icon: "🏢" },
+  { value: "20K+", label: "Daily Transactions", icon: "⚡" },
+  { value: "99.9%", label: "Accuracy Rate", icon: "✅" },
+  { value: "24/7", label: "Expert Support", icon: "🛡️" },
+  { value: "15+", label: "Years Experience", icon: "⭐" },
+];
+---
+
+<Layout
+  title="Diamond & Jewelry Software Solutions | Inventory, Manufacturing, POS & CRM | Hegrix"
+  description="Transform your diamond and jewelry business with intelligent software. Manage inventory, manufacturing, retail POS, wholesale, CRM, accounting, diamond certificates, and multi-store operations from one powerful platform."
+  keywords="diamond jewelry software solutions, jewelry inventory software, diamond inventory system, jewelry POS software, jewelry ERP, diamond certificate management, jewelry manufacturing software, GST jewelry billing, RFID jewelry software"
+  path="/industries/diamond-jewelry/"
+  schema={djSchema}
+>
+  <div class="dj-page">
+
+    <!-- ======================== HERO ======================== -->
+    <section class="dj-hero">
+      <div class="dj-hero-glow dj-hero-glow--tl" aria-hidden="true"></div>
+      <div class="dj-hero-glow dj-hero-glow--tr" aria-hidden="true"></div>
+      <div class="dj-sparkles" aria-hidden="true">
+        <span class="spark spark-1">✦</span>
+        <span class="spark spark-2">◆</span>
+        <span class="spark spark-3">✦</span>
+        <span class="spark spark-4">◇</span>
+        <span class="spark spark-5">✦</span>
+        <span class="spark spark-6">◆</span>
+        <span class="spark spark-7">✦</span>
+        <span class="spark spark-8">◇</span>
+      </div>
+
+      <div class="container dj-hero-inner">
+        <div class="dj-hero-content">
+          <div class="dj-eyebrow-badge">
+            <span class="dj-badge-gem">💎</span>
+            <span>Diamond & Jewelry Software Solutions</span>
+          </div>
+
+          <h1 class="dj-hero-title">
+            Transform Your Diamond & Jewelry Business with
+            <span class="dj-gold-text"> Intelligent Software</span>
+          </h1>
+
+          <p class="dj-hero-subtitle">
+            Manage inventory, manufacturing, retail, wholesale, CRM, accounting, certifications, and multi-store operations from one powerful platform built exclusively for the jewelry industry.
+          </p>
+
+          <div class="dj-hero-tags">
+            <span class="dj-tag">✓ GST Ready</span>
+            <span class="dj-tag">✓ Cloud-Based</span>
+            <span class="dj-tag">✓ GIA / IGI / HRD</span>
+            <span class="dj-tag">✓ Multi-Branch</span>
+          </div>
+
+          <div class="dj-hero-cta">
+            <a href="/contact-us/" class="dj-btn-primary">
+              <span>Book a Free Demo</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="/contact-us/" class="dj-btn-secondary">Contact Sales</a>
+          </div>
+
+          <div class="dj-hero-proof">
+            <div class="dj-stars">★★★★★</div>
+            <span class="dj-proof-text"><strong>4.9/5</strong> · Trusted by 500+ jewelry businesses</span>
+          </div>
+        </div>
+
+        <!-- Dashboard Visual -->
+        <div class="dj-hero-visual">
+          <div class="dj-dashboard-card">
+            <div class="dj-dash-header">
+              <span class="dj-dash-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Jewelry Operations Center
+              </span>
+              <span class="dj-live-badge">● LIVE</span>
+            </div>
+            <div class="dj-dash-kpis">
+              <div class="dj-kpi">
+                <span class="dj-kpi-val" style="color:#D4AF37">₹2.8 Cr</span>
+                <span class="dj-kpi-lbl">Today's Sales</span>
+              </div>
+              <div class="dj-kpi">
+                <span class="dj-kpi-val" style="color:#22C55E">99.8%</span>
+                <span class="dj-kpi-lbl">Inventory Acc.</span>
+              </div>
+              <div class="dj-kpi">
+                <span class="dj-kpi-val" style="color:#0EA5E9">1,248</span>
+                <span class="dj-kpi-lbl">Active Orders</span>
+              </div>
+              <div class="dj-kpi">
+                <span class="dj-kpi-val" style="color:#F59E0B">3,892</span>
+                <span class="dj-kpi-lbl">Certificates</span>
+              </div>
+            </div>
+            <div class="dj-dash-chart">
+              <div class="dj-chart-label">Revenue Analytics</div>
+              <div class="dj-bars">
+                <div class="dj-bar" style="height:40%"><span>Mon</span></div>
+                <div class="dj-bar" style="height:65%"><span>Tue</span></div>
+                <div class="dj-bar" style="height:50%"><span>Wed</span></div>
+                <div class="dj-bar" style="height:80%"><span>Thu</span></div>
+                <div class="dj-bar" style="height:70%"><span>Fri</span></div>
+                <div class="dj-bar dj-bar--active" style="height:95%"><span>Sat</span></div>
+                <div class="dj-bar" style="height:60%"><span>Sun</span></div>
+              </div>
+            </div>
+            <div class="dj-dash-modules">
+              <span class="dj-dash-mod">📦 Inventory</span>
+              <span class="dj-dash-mod">⚙️ Manufacturing</span>
+              <span class="dj-dash-mod">🏪 POS</span>
+              <span class="dj-dash-mod">💎 Diamonds</span>
+            </div>
+          </div>
+
+          <!-- Floating Cards -->
+          <div class="dj-float-card" style="top:-20px;right:-30px;" aria-hidden="true">
+            <span>💎</span><span>Diamond Certificates</span>
+          </div>
+          <div class="dj-float-card" style="top:140px;left:-40px;" aria-hidden="true">
+            <span>💍</span><span>Manufacturing Live</span>
+          </div>
+          <div class="dj-float-card" style="bottom:60px;right:-30px;" aria-hidden="true">
+            <span>📊</span><span>GST Reports Ready</span>
+          </div>
+          <div class="dj-float-card" style="bottom:-20px;left:-20px;" aria-hidden="true">
+            <span>🥇</span><span>Gold Rate Synced</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== TRUSTED BY ======================== -->
+    <section class="dj-trusted">
+      <div class="container">
+        <p class="dj-trusted-label">Trusted by Jewelry Manufacturers, Retailers & Diamond Traders</p>
+        <div class="dj-trusted-logos">
+          {["Surat Diamond Exchange", "Jaipur Gems House", "Mumbai Gold Traders", "Delhi Jewels Co.", "Chennai Diamonds", "Kolkata Goldsmiths"].map(name => (
+            <div class="dj-logo-chip">{name}</div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== CHALLENGES ======================== -->
+    <section class="dj-section dj-section--light">
+      <div class="container">
+        <div class="dj-section-head">
+          <p class="dj-eyebrow">Industry Challenges</p>
+          <h2>Problems Costing You Time & Money Every Day</h2>
+          <p>The jewelry industry operates with extreme complexity. Manual processes, disconnected systems, and lack of real-time data create costly inefficiencies.</p>
+        </div>
+        <div class="dj-challenge-grid">
+          {challenges.map(c => (
+            <div class="dj-challenge-card">
+              <span class="dj-challenge-icon" aria-hidden="true">{c.icon}</span>
+              <h3>{c.title}</h3>
+              <p>{c.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== WHY CHOOSE ======================== -->
+    <section class="dj-section">
+      <div class="container">
+        <div class="dj-section-head">
+          <p class="dj-eyebrow">Why Choose Our Solution</p>
+          <h2>Everything Your Jewelry Business Needs in One Platform</h2>
+          <p>Purpose-built for the jewelry industry with features no generic ERP can offer.</p>
+        </div>
+        <div class="dj-features-grid">
+          {features.map(f => (
+            <article class="dj-feature-card">
+              <span class="dj-feature-icon" aria-hidden="true">{f.icon}</span>
+              <h3>{f.title}</h3>
+              <p>{f.desc}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== MODULES ======================== -->
+    <section class="dj-section dj-section--dark" id="modules">
+      <div class="container">
+        <div class="dj-section-head dj-section-head--light">
+          <p class="dj-eyebrow dj-eyebrow--gold">Complete Modules</p>
+          <h2 class="dj-title--white">A Complete Jewelry Business Suite</h2>
+          <p class="dj-desc--muted">Every module your business needs, designed to work together seamlessly.</p>
+        </div>
+        <div class="dj-modules-grid">
+          {modules.map(mod => (
+            <div class="dj-module-card" id={mod.id}>
+              <div class="dj-module-header" style={`border-color: ${mod.color}`}>
+                <span class="dj-module-icon" aria-hidden="true">{mod.icon}</span>
+                <h3 class="dj-module-title">{mod.title}</h3>
+              </div>
+              <ul class="dj-module-list">
+                {mod.items.map(item => (
+                  <li>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== INDUSTRIES ======================== -->
+    <section class="dj-section dj-section--light">
+      <div class="container">
+        <div class="dj-section-head">
+          <p class="dj-eyebrow">Industries We Serve</p>
+          <h2>Built for Every Segment of the Jewelry Trade</h2>
+          <p>Whether you're a manufacturer, retailer, trader, or export house, our platform adapts to your exact workflow.</p>
+        </div>
+        <div class="dj-industry-grid">
+          {industries.map(ind => (
+            <div class="dj-industry-card">
+              <span class="dj-industry-icon" aria-hidden="true">{ind.icon}</span>
+              <h3>{ind.title}</h3>
+              <p>{ind.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== BENEFITS ======================== -->
+    <section class="dj-section">
+      <div class="container">
+        <div class="dj-section-head">
+          <p class="dj-eyebrow">Business Benefits</p>
+          <h2>Real Results for Jewelry Businesses Like Yours</h2>
+          <p>Our clients see measurable improvements within weeks of going live.</p>
+        </div>
+        <div class="dj-benefits-grid">
+          {benefits.map(b => (
+            <div class="dj-benefit-card">
+              <span class="dj-benefit-icon" aria-hidden="true">{b.icon}</span>
+              <div class="dj-benefit-stat">{b.stat}</div>
+              <h3>{b.label}</h3>
+              <p>{b.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== WORKFLOW ======================== -->
+    <section class="dj-section dj-section--gold-light">
+      <div class="container">
+        <div class="dj-section-head">
+          <p class="dj-eyebrow">Business Workflow</p>
+          <h2>Your Entire Business Process, Automated End-to-End</h2>
+          <p>From purchasing raw materials to generating reports, every step is connected and tracked in real time.</p>
+        </div>
+        <div class="dj-workflow">
+          {workflow.map((w, i) => (
+            <div class="dj-workflow-item">
+              <div class="dj-workflow-bubble">
+                <span class="dj-workflow-icon" aria-hidden="true">{w.icon}</span>
+              </div>
+              <div class="dj-workflow-text">
+                <strong>{w.step}</strong>
+                <span>{w.desc}</span>
+              </div>
+              {i < workflow.length - 1 && (
+                <div class="dj-workflow-arrow" aria-hidden="true">
+                  <span class="dj-arrow-line"></span>
+                  <span class="dj-arrow-head">▶</span>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+        <div class="dj-workflow-mobile">
+          {workflow.map((w, i) => (
+            <div class="dj-workflow-mobile-item">
+              <div class="dj-workflow-mobile-dot">
+                <span aria-hidden="true">{w.icon}</span>
+              </div>
+              <div class="dj-workflow-mobile-content">
+                <strong>{w.step}</strong>
+                <span>{w.desc}</span>
+              </div>
+              {i < workflow.length - 1 && (
+                <div class="dj-workflow-mobile-line" aria-hidden="true"></div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== STATISTICS ======================== -->
+    <section class="dj-section dj-section--dark">
+      <div class="container">
+        <div class="dj-section-head dj-section-head--light">
+          <p class="dj-eyebrow dj-eyebrow--gold">Our Impact</p>
+          <h2 class="dj-title--white">Numbers That Speak for Themselves</h2>
+        </div>
+        <div class="dj-stats-grid">
+          {stats.map(s => (
+            <div class="dj-stat-card">
+              <span class="dj-stat-icon" aria-hidden="true">{s.icon}</span>
+              <div class="dj-stat-value" data-target={s.value}>{s.value}</div>
+              <div class="dj-stat-label">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== INTEGRATIONS ======================== -->
+    <section class="dj-section dj-section--light">
+      <div class="container">
+        <div class="dj-section-head">
+          <p class="dj-eyebrow">Integrations</p>
+          <h2>Connects with the Tools Your Business Already Uses</h2>
+          <p>Plug-and-play integrations with industry-leading platforms for accounting, communication, payments, and certifications.</p>
+        </div>
+        <div class="dj-integrations-grid">
+          {integrations.map(intg => (
+            <div class="dj-integration-card">
+              <span class="dj-integration-icon" aria-hidden="true" style={`color:${intg.color}`}>{intg.icon}</span>
+              <span class="dj-integration-name">{intg.name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== TESTIMONIALS ======================== -->
+    <section class="dj-section">
+      <div class="container">
+        <div class="dj-section-head">
+          <p class="dj-eyebrow">Testimonials</p>
+          <h2>What Jewelry Business Owners Say About Us</h2>
+          <p>Real success stories from jewelry manufacturers, retailers, and diamond traders across India.</p>
+        </div>
+        <div class="dj-testimonials-grid">
+          {testimonials.map(t => (
+            <div class="dj-testimonial-card">
+              <div class="dj-testimonial-stars">
+                {"★".repeat(t.rating)}
+              </div>
+              <blockquote class="dj-testimonial-text">"{t.text}"</blockquote>
+              <div class="dj-testimonial-author">
+                <div class="dj-testimonial-avatar" style={`background: ${t.avatarColor}`}>{t.avatar}</div>
+                <div class="dj-testimonial-meta">
+                  <strong>{t.name}</strong>
+                  <span>{t.role}, {t.company}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== FAQ ======================== -->
+    <section class="dj-section dj-section--light">
+      <div class="container dj-faq-container">
+        <div class="dj-section-head">
+          <p class="dj-eyebrow">FAQ</p>
+          <h2>Frequently Asked Questions</h2>
+          <p>Everything you need to know before getting started with Hegrix Jewelry Software.</p>
+        </div>
+        <div class="dj-faq-list">
+          {djSchema[1].mainEntity.map((item) => (
+            <details class="dj-faq-item">
+              <summary class="dj-faq-summary">
+                {item.name}
+                <span class="dj-faq-icon" aria-hidden="true">+</span>
+              </summary>
+              <div class="dj-faq-body">{item.acceptedAnswer.text}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== FINAL CTA ======================== -->
+    <section class="dj-final-cta">
+      <div class="dj-cta-glow" aria-hidden="true"></div>
+      <div class="dj-sparkles dj-sparkles--cta" aria-hidden="true">
+        <span class="spark spark-1">✦</span>
+        <span class="spark spark-3">◆</span>
+        <span class="spark spark-6">✦</span>
+      </div>
+      <div class="container dj-cta-inner">
+        <h2 class="dj-cta-title">
+          Ready to Modernize Your
+          <span class="dj-gold-text"> Jewelry Business?</span>
+        </h2>
+        <p class="dj-cta-desc">
+          Join 500+ jewelry businesses already running smarter operations with Hegrix. Book a personalized demo today and see the platform in action.
+        </p>
+        <div class="dj-cta-actions">
+          <a href="/contact-us/" class="dj-btn-primary dj-btn-primary--large">
+            <span>Schedule Demo</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="/contact-us/" class="dj-btn-outline">Talk to an Expert</a>
+        </div>
+        <p class="dj-cta-note">No credit card required · Free onboarding · 24/7 support</p>
+      </div>
+    </section>
+
+  </div>
+</Layout>
+
+<style>
+  /* =========================================
+     GLOBAL PAGE WRAPPER
+     ========================================= */
+  :root {
+    --gold: #D4AF37;
+    --gold-dark: #B8860B;
+    --gold-light: #F5E6A3;
+    --charcoal: #1A1A2E;
+    --charcoal-mid: #16213E;
+    --white: #ffffff;
+    --off-white: #FAFAF8;
+    --gray-100: #F5F5F0;
+    --gray-200: #E8E8E0;
+    --gray-600: #6B7280;
+    --gray-800: #1F2937;
+    --radius-lg: 20px;
+    --radius-md: 12px;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+    --shadow-md: 0 8px 24px rgba(0,0,0,0.1);
+    --shadow-gold: 0 8px 32px rgba(212,175,55,0.25);
+    --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dj-page {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--gray-800);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  .dj-gold-text {
+    background: linear-gradient(135deg, #D4AF37 0%, #F5E6A3 50%, #B8860B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* =========================================
+     HERO
+     ========================================= */
+  .dj-hero {
+    background: linear-gradient(135deg, #0D0D1A 0%, #1A1A2E 40%, #16213E 70%, #0D0D1A 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0 80px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .dj-hero-glow {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    pointer-events: none;
+  }
+
+  .dj-hero-glow--tl {
+    width: 600px;
+    height: 600px;
+    top: -200px;
+    left: -200px;
+    background: radial-gradient(circle, rgba(212,175,55,0.18) 0%, transparent 70%);
+  }
+
+  .dj-hero-glow--tr {
+    width: 500px;
+    height: 500px;
+    top: -100px;
+    right: -150px;
+    background: radial-gradient(circle, rgba(184,134,11,0.12) 0%, transparent 70%);
+  }
+
+  /* Sparkle effects */
+  .dj-sparkles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .spark {
+    position: absolute;
+    color: var(--gold);
+    font-size: 12px;
+    animation: sparkFloat 4s ease-in-out infinite;
+    opacity: 0.6;
+  }
+
+  .spark-1 { top: 10%; left: 5%; animation-delay: 0s; font-size: 16px; }
+  .spark-2 { top: 20%; right: 8%; animation-delay: 0.5s; font-size: 10px; }
+  .spark-3 { top: 40%; left: 2%; animation-delay: 1s; font-size: 8px; }
+  .spark-4 { top: 60%; right: 5%; animation-delay: 1.5s; font-size: 14px; }
+  .spark-5 { top: 75%; left: 8%; animation-delay: 2s; font-size: 10px; }
+  .spark-6 { top: 85%; right: 12%; animation-delay: 2.5s; font-size: 12px; }
+  .spark-7 { top: 30%; left: 48%; animation-delay: 3s; font-size: 8px; }
+  .spark-8 { top: 65%; left: 45%; animation-delay: 3.5s; font-size: 14px; }
+
+  @keyframes sparkFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.4; }
+    50% { transform: translateY(-12px) rotate(15deg); opacity: 0.9; }
+  }
+
+  .dj-hero-inner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .dj-eyebrow-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212,175,55,0.15);
+    border: 1px solid rgba(212,175,55,0.4);
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 24px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--gold-light);
+    letter-spacing: 0.02em;
+  }
+
+  .dj-badge-gem { font-size: 16px; }
+
+  .dj-hero-title {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--white);
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+  }
+
+  .dj-hero-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.7;
+    margin-bottom: 28px;
+    max-width: 520px;
+  }
+
+  .dj-hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 36px;
+  }
+
+  .dj-tag {
+    padding: 5px 14px;
+    background: rgba(212,175,55,0.1);
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 100px;
+    font-size: 12.5px;
+    color: var(--gold-light);
+    font-weight: 500;
+  }
+
+  .dj-hero-cta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .dj-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #D4AF37, #B8860B);
+    color: #000;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(212,175,55,0.4);
+    transition: var(--transition);
+    letter-spacing: 0.01em;
+  }
+
+  .dj-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(212,175,55,0.5);
+    filter: brightness(1.1);
+  }
+
+  .dj-btn-primary--large {
+    padding: 16px 36px;
+    font-size: 16px;
+    border-radius: 14px;
+  }
+
+  .dj-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.1);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+    transition: var(--transition);
+  }
+
+  .dj-btn-secondary:hover {
+    background: rgba(255,255,255,0.18);
+    transform: translateY(-2px);
+  }
+
+  .dj-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--white);
+    padding: 16px 32px;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    border: 2px solid rgba(212,175,55,0.6);
+    transition: var(--transition);
+  }
+
+  .dj-btn-outline:hover {
+    background: rgba(212,175,55,0.1);
+    border-color: var(--gold);
+    transform: translateY(-2px);
+  }
+
+  .dj-hero-proof {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .dj-stars {
+    color: var(--gold);
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .dj-proof-text {
+    color: rgba(255,255,255,0.6);
+    font-size: 13.5px;
+  }
+
+  .dj-proof-text strong { color: rgba(255,255,255,0.9); }
+
+  /* Dashboard Visual */
+  .dj-hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dj-dashboard-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(212,175,55,0.25);
+    border-radius: var(--radius-lg);
+    padding: 24px;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(212,175,55,0.1);
+  }
+
+  .dj-dash-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .dj-dash-title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gold);
+  }
+
+  .dj-live-badge {
+    background: rgba(34,197,94,0.15);
+    color: #22C55E;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 100px;
+    border: 1px solid rgba(34,197,94,0.3);
+    letter-spacing: 0.05em;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
+
+  .dj-dash-kpis {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .dj-kpi {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .dj-kpi-val {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .dj-kpi-lbl {
+    font-size: 10px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 500;
+  }
+
+  .dj-dash-chart {
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .dj-chart-label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .dj-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 6px;
+    height: 70px;
+  }
+
+  .dj-bar {
+    flex: 1;
+    background: rgba(212,175,55,0.3);
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    transition: background var(--transition);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .dj-bar--active {
+    background: linear-gradient(180deg, #D4AF37, #B8860B);
+  }
+
+  .dj-bar span {
+    position: absolute;
+    bottom: -18px;
+    font-size: 8px;
+    color: rgba(255,255,255,0.4);
+    font-weight: 500;
+  }
+
+  .dj-dash-modules {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .dj-dash-mod {
+    background: rgba(212,175,55,0.1);
+    border: 1px solid rgba(212,175,55,0.2);
+    color: var(--gold-light);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 100px;
+  }
+
+  /* Floating Cards */
+  .dj-float-card {
+    position: absolute;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(212,175,55,0.3);
+    border-radius: 10px;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--white);
+    white-space: nowrap;
+    animation: floatUp 3s ease-in-out infinite;
+    box-shadow: var(--shadow-gold);
+  }
+
+  .dj-float-card:nth-child(2) { animation-delay: 0.5s; }
+  .dj-float-card:nth-child(3) { animation-delay: 1s; }
+  .dj-float-card:nth-child(4) { animation-delay: 1.5s; }
+
+  @keyframes floatUp {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  /* =========================================
+     TRUSTED BY
+     ========================================= */
+  .dj-trusted {
+    background: var(--gray-100);
+    padding: 40px 0;
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .dj-trusted-label {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gray-600);
+    margin-bottom: 24px;
+  }
+
+  .dj-trusted-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dj-logo-chip {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--gray-600);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+
+  .dj-logo-chip:hover {
+    border-color: var(--gold);
+    color: var(--gold-dark);
+    box-shadow: 0 4px 12px rgba(212,175,55,0.15);
+  }
+
+  /* =========================================
+     SECTIONS
+     ========================================= */
+  .dj-section {
+    padding: 96px 0;
+  }
+
+  .dj-section--light {
+    background: var(--gray-100);
+  }
+
+  .dj-section--dark {
+    background: linear-gradient(135deg, #0D0D1A 0%, #1A1A2E 60%, #16213E 100%);
+  }
+
+  .dj-section--gold-light {
+    background: linear-gradient(135deg, #FFFDF0 0%, #FFF8D0 50%, #FFFDF0 100%);
+  }
+
+  .dj-section-head {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 64px;
+  }
+
+  .dj-section-head--light h2 {
+    color: var(--white);
+  }
+
+  .dj-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold-dark);
+    background: rgba(212,175,55,0.1);
+    padding: 5px 14px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(212,175,55,0.3);
+  }
+
+  .dj-eyebrow--gold {
+    color: var(--gold);
+    background: rgba(212,175,55,0.15);
+    border-color: rgba(212,175,55,0.4);
+  }
+
+  .dj-section-head h2 {
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 800;
+    color: var(--gray-800);
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  .dj-title--white { color: var(--white) !important; }
+
+  .dj-section-head p {
+    font-size: 1.05rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+
+  .dj-desc--muted { color: rgba(255,255,255,0.55) !important; }
+
+  /* =========================================
+     CHALLENGE CARDS
+     ========================================= */
+  .dj-challenge-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+
+  .dj-challenge-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+  }
+
+  .dj-challenge-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--gold);
+  }
+
+  .dj-challenge-icon {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  .dj-challenge-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 8px;
+  }
+
+  .dj-challenge-card p {
+    font-size: 13.5px;
+    color: var(--gray-600);
+    line-height: 1.6;
+  }
+
+  /* =========================================
+     FEATURES GRID
+     ========================================= */
+  .dj-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .dj-feature-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 28px 22px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dj-feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-dark));
+    transform: scaleX(0);
+    transition: var(--transition);
+  }
+
+  .dj-feature-card:hover::before { transform: scaleX(1); }
+
+  .dj-feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(212,175,55,0.15);
+    border-color: var(--gold);
+  }
+
+  .dj-feature-icon {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  .dj-feature-card h3 {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 8px;
+  }
+
+  .dj-feature-card p {
+    font-size: 13px;
+    color: var(--gray-600);
+    line-height: 1.6;
+  }
+
+  /* =========================================
+     MODULES GRID
+     ========================================= */
+  .dj-modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+
+  .dj-module-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(212,175,55,0.15);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition);
+    backdrop-filter: blur(8px);
+  }
+
+  .dj-module-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212,175,55,0.4);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(212,175,55,0.15);
+  }
+
+  .dj-module-header {
+    padding: 20px 24px 16px;
+    border-bottom: 1px solid rgba(212,175,55,0.2);
+    border-left: 3px solid var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .dj-module-icon { font-size: 22px; }
+
+  .dj-module-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--white);
+  }
+
+  .dj-module-list {
+    list-style: none;
+    padding: 16px 24px 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .dj-module-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+  }
+
+  /* =========================================
+     INDUSTRY CARDS
+     ========================================= */
+  .dj-industry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .dj-industry-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    text-align: center;
+  }
+
+  .dj-industry-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-gold);
+    border-color: var(--gold);
+  }
+
+  .dj-industry-icon {
+    font-size: 36px;
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  .dj-industry-card h3 {
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 8px;
+  }
+
+  .dj-industry-card p {
+    font-size: 12.5px;
+    color: var(--gray-600);
+    line-height: 1.6;
+  }
+
+  /* =========================================
+     BENEFITS
+     ========================================= */
+  .dj-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .dj-benefit-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 28px 22px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    text-align: center;
+  }
+
+  .dj-benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-gold);
+    border-color: var(--gold);
+  }
+
+  .dj-benefit-icon {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .dj-benefit-stat {
+    font-size: 1.8rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #D4AF37, #B8860B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 6px;
+    line-height: 1;
+  }
+
+  .dj-benefit-card h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin-bottom: 8px;
+  }
+
+  .dj-benefit-card p {
+    font-size: 12.5px;
+    color: var(--gray-600);
+    line-height: 1.6;
+  }
+
+  /* =========================================
+     WORKFLOW
+     ========================================= */
+  .dj-workflow {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+    overflow-x: auto;
+    padding: 20px 0 10px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) transparent;
+  }
+
+  .dj-workflow-item {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .dj-workflow-bubble {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #D4AF37, #B8860B);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(212,175,55,0.4);
+    flex-shrink: 0;
+    transition: var(--transition);
+  }
+
+  .dj-workflow-bubble:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 30px rgba(212,175,55,0.5);
+  }
+
+  .dj-workflow-icon { font-size: 24px; }
+
+  .dj-workflow-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 12px;
+    text-align: center;
+    position: absolute;
+    top: 68px;
+    width: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .dj-workflow-item > div:first-child {
+    position: relative;
+  }
+
+  .dj-workflow-text strong {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gray-800);
+    white-space: nowrap;
+  }
+
+  .dj-workflow-text span {
+    display: block;
+    font-size: 10px;
+    color: var(--gray-600);
+    margin-top: 2px;
+    white-space: nowrap;
+  }
+
+  .dj-workflow-arrow {
+    display: flex;
+    align-items: center;
+    padding: 0 4px;
+    flex-shrink: 0;
+  }
+
+  .dj-arrow-line {
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: linear-gradient(90deg, #D4AF37, #B8860B);
+    position: relative;
+  }
+
+  .dj-arrow-head {
+    font-size: 10px;
+    color: var(--gold-dark);
+    margin-left: -2px;
+  }
+
+  /* Mobile workflow */
+  .dj-workflow-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .dj-workflow-mobile-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+  }
+
+  .dj-workflow-mobile-dot {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #D4AF37, #B8860B);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+    z-index: 1;
+    box-shadow: 0 4px 16px rgba(212,175,55,0.3);
+  }
+
+  .dj-workflow-mobile-content {
+    padding: 12px 0;
+  }
+
+  .dj-workflow-mobile-content strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gray-800);
+  }
+
+  .dj-workflow-mobile-content span {
+    font-size: 12.5px;
+    color: var(--gray-600);
+  }
+
+  .dj-workflow-mobile-line {
+    position: absolute;
+    left: 24px;
+    top: 48px;
+    width: 2px;
+    height: 32px;
+    background: linear-gradient(180deg, var(--gold), rgba(212,175,55,0.2));
+  }
+
+  /* =========================================
+     STATS
+     ========================================= */
+  .dj-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px;
+  }
+
+  .dj-stat-card {
+    text-align: center;
+    padding: 32px 20px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(212,175,55,0.2);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(8px);
+    transition: var(--transition);
+  }
+
+  .dj-stat-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212,175,55,0.5);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+  }
+
+  .dj-stat-icon {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .dj-stat-value {
+    font-size: 2.2rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #D4AF37, #F5E6A3, #B8860B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .dj-stat-label {
+    font-size: 13px;
+    color: rgba(255,255,255,0.55);
+    font-weight: 500;
+  }
+
+  /* =========================================
+     INTEGRATIONS
+     ========================================= */
+  .dj-integrations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+  }
+
+  .dj-integration-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    padding: 20px 16px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .dj-integration-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--gold);
+  }
+
+  .dj-integration-icon {
+    font-size: 32px;
+    display: block;
+  }
+
+  .dj-integration-name {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--gray-800);
+  }
+
+  /* =========================================
+     TESTIMONIALS
+     ========================================= */
+  .dj-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .dj-testimonial-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .dj-testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    font-size: 120px;
+    color: rgba(212,175,55,0.08);
+    font-family: Georgia, serif;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  .dj-testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-gold);
+    border-color: var(--gold);
+  }
+
+  .dj-testimonial-stars {
+    color: var(--gold);
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+  }
+
+  .dj-testimonial-text {
+    font-size: 14.5px;
+    color: var(--gray-600);
+    line-height: 1.75;
+    margin: 0 0 24px;
+    font-style: normal;
+  }
+
+  .dj-testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .dj-testimonial-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 16px;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+
+  .dj-testimonial-meta strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gray-800);
+  }
+
+  .dj-testimonial-meta span {
+    font-size: 12px;
+    color: var(--gray-600);
+  }
+
+  /* =========================================
+     FAQ
+     ========================================= */
+  .dj-faq-container {
+    max-width: 800px;
+  }
+
+  .dj-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .dj-faq-item {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: var(--transition);
+  }
+
+  .dj-faq-item:hover {
+    border-color: var(--gold);
+    box-shadow: 0 4px 16px rgba(212,175,55,0.1);
+  }
+
+  .dj-faq-item[open] {
+    border-color: var(--gold);
+  }
+
+  .dj-faq-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 22px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gray-800);
+    cursor: pointer;
+    list-style: none;
+    gap: 16px;
+    user-select: none;
+  }
+
+  .dj-faq-summary::-webkit-details-marker { display: none; }
+
+  .dj-faq-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    transition: var(--transition);
+  }
+
+  .dj-faq-item[open] .dj-faq-icon {
+    transform: rotate(45deg);
+  }
+
+  .dj-faq-body {
+    padding: 0 22px 20px;
+    font-size: 14px;
+    color: var(--gray-600);
+    line-height: 1.7;
+    border-top: 1px solid var(--gray-200);
+    padding-top: 16px;
+  }
+
+  /* =========================================
+     FINAL CTA
+     ========================================= */
+  .dj-final-cta {
+    background: linear-gradient(135deg, #0D0D1A 0%, #1A1A2E 50%, #0D0D1A 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .dj-cta-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(212,175,55,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .dj-sparkles--cta .spark { animation-duration: 3s; }
+
+  .dj-cta-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .dj-cta-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
+
+  .dj-cta-desc {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .dj-cta-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+  }
+
+  .dj-cta-note {
+    font-size: 13px;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* =========================================
+     RESPONSIVE
+     ========================================= */
+  @media (max-width: 900px) {
+    .dj-hero-inner {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .dj-hero-visual {
+      order: -1;
+    }
+
+    .dj-float-card {
+      display: none;
+    }
+
+    .dj-workflow {
+      display: none;
+    }
+
+    .dj-workflow-mobile {
+      display: flex;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .dj-hero {
+      padding: 80px 0 60px;
+    }
+
+    .dj-hero-title {
+      font-size: 1.8rem;
+    }
+
+    .dj-section {
+      padding: 64px 0;
+    }
+
+    .dj-modules-grid,
+    .dj-features-grid,
+    .dj-challenge-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .dj-stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dj-hero-cta {
+      flex-direction: column;
+    }
+
+    .dj-btn-primary,
+    .dj-btn-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  /* =========================================
+     SCROLL ANIMATIONS
+     ========================================= */
+  @media (prefers-reduced-motion: no-preference) {
+    .dj-challenge-card,
+    .dj-feature-card,
+    .dj-module-card,
+    .dj-industry-card,
+    .dj-benefit-card,
+    .dj-stat-card,
+    .dj-testimonial-card,
+    .dj-integration-card {
+      animation: fadeUp 0.6s ease-out both;
+    }
+
+    .dj-challenge-card:nth-child(1) { animation-delay: 0.05s; }
+    .dj-challenge-card:nth-child(2) { animation-delay: 0.1s; }
+    .dj-challenge-card:nth-child(3) { animation-delay: 0.15s; }
+    .dj-challenge-card:nth-child(4) { animation-delay: 0.2s; }
+    .dj-challenge-card:nth-child(5) { animation-delay: 0.25s; }
+    .dj-challenge-card:nth-child(6) { animation-delay: 0.3s; }
+    .dj-challenge-card:nth-child(7) { animation-delay: 0.35s; }
+    .dj-challenge-card:nth-child(8) { animation-delay: 0.4s; }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+
+<script>
+  // Counter animation for stats
+  function animateCounters() {
+    const statValues = document.querySelectorAll('.dj-stat-value');
+    statValues.forEach(el => {
+      el.style.opacity = '1';
+    });
+  }
+
+  // Intersection Observer for fade-up animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('dj-visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.dj-stat-card').forEach(el => observer.observe(el));
+
+  // Animate counters when stats section comes into view
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounters();
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const statsSection = document.querySelector('.dj-stats-grid');
+  if (statsSection) statsObserver.observe(statsSection);
+
+  // FAQ icon toggle
+  document.querySelectorAll('.dj-faq-item').forEach(details => {
+    const icon = details.querySelector('.dj-faq-icon');
+    if (icon) {
+      details.addEventListener('toggle', () => {
+        icon.textContent = details.open ? '×' : '+';
+      });
+    }
+  });
+</script>
