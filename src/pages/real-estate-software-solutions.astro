@@ -1,0 +1,2789 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const faqList = [
+  {
+    question: "Is the real estate software cloud-based?",
+    answer: "Yes, our platform is 100% cloud-based. You can access property listings, sales pipelines, rental records, and analytics anytime, anywhere from any browser or mobile device with zero server maintenance required."
+  },
+  {
+    question: "Can I manage multiple projects and property types simultaneously?",
+    answer: "Absolutely. The platform supports multi-project management across residential apartments, villas, commercial complexes, plotting layouts, and mixed-use developments from a single centralized dashboard."
+  },
+  {
+    question: "Does the solution include comprehensive rental management?",
+    answer: "Yes. It covers tenant onboarding, lease agreement tracking, automated rent collection reminders, maintenance request ticketing, lease renewals, and vacant unit tracking."
+  },
+  {
+    question: "How does the system track and follow up on customer inquiries?",
+    answer: "Our built-in CRM automatically captures inquiries from your website, property portals, WhatsApp, and social campaigns. It assigns leads to sales reps and triggers automated follow-up reminders."
+  },
+  {
+    question: "Does it include a dedicated CRM for real estate agents and sales teams?",
+    answer: "Yes. The CRM is built specifically for real estate, featuring buyer preferences matching, site visit scheduling, communication logs, quotation generation, and deal stage tracking."
+  },
+  {
+    question: "Can the platform manage contracts, agreements, and legal documents?",
+    answer: "Yes. It includes digital document management with custom templates for booking forms, sales agreements, lease contracts, payment receipts, and automated e-signature workflows."
+  },
+  {
+    question: "Is mobile access available for site managers and field agents?",
+    answer: "Yes, we provide native iOS and Android mobile apps. Field agents can conduct site visits, capture client feedback, collect token payments, and upload construction progress photos in real time."
+  },
+  {
+    question: "Do you provide implementation, data migration, and team training?",
+    answer: "Yes. Our expert implementation team handles custom setup, legacy data migration, third-party API integration, role-based user configuration, and comprehensive hands-on staff training."
+  }
+];
+
+const schemaData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Hegrix Real Estate Software Solutions",
+    operatingSystem: "Cloud, Web, Linux, Windows, iOS, Android",
+    applicationCategory: "BusinessApplication",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    },
+    description: "Enterprise Real Estate ERP & CRM software for developers, builders, property management firms, and agencies. Manage listings, leads, sales, rentals, projects, and finance.",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqList.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  },
+];
+---
+
+<Layout
+  title="Real Estate Software Solutions | Enterprise ERP & CRM for Developers & Builders"
+  description="Transform your real estate business with our intelligent B2B SaaS platform. Manage properties, leads, sales CRM, rentals, construction projects, and financial reports."
+  keywords="Real Estate Software Solutions, Real Estate ERP, Real Estate CRM, Property Management Software, Real Estate Builder Software, Tenant Management System, Real Estate Sales Pipeline"
+  path="/real-estate-software-solutions/"
+  schema={schemaData}
+>
+  <div class="re-wrapper">
+
+    <!-- 1. HERO SECTION -->
+    <section class="re-hero">
+      <div class="re-hero-glow-1" aria-hidden="true"></div>
+      <div class="re-hero-glow-2" aria-hidden="true"></div>
+      <div class="re-container">
+        
+        <div class="re-hero-top">
+          <div class="re-badge">
+            <span class="re-badge-dot"></span>
+            <span>Next-Gen Enterprise Real Estate SaaS</span>
+          </div>
+
+          <h1 class="re-hero-title">
+            Transform Your Real Estate Business with <span class="re-gradient-text">Intelligent Software</span>
+          </h1>
+
+          <p class="re-hero-subtitle">
+            Manage properties, leads, sales, CRM, rentals, contracts, finance, construction projects, and customer relationships—all from one unified, powerful platform.
+          </p>
+
+          <div class="re-hero-cta-group">
+            <button class="re-btn re-btn-primary js-open-demo-modal">
+              <span>Book a Free Demo</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="/contact-us/" class="re-btn re-btn-secondary">
+              <span>Contact Sales</span>
+            </a>
+          </div>
+
+          <div class="re-hero-trust-tags">
+            <div class="re-trust-tag">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>500+ Global Clients</span>
+            </div>
+            <div class="re-trust-tag">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>100K+ Active Properties</span>
+            </div>
+            <div class="re-trust-tag">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>99.9% Uptime SLA</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HERO DASHBOARD ILLUSTRATION / MOCKUP -->
+        <div class="re-hero-dashboard">
+          <div class="re-dash-window">
+            <div class="re-dash-header">
+              <div class="re-dash-dots">
+                <span class="re-dash-dot red"></span>
+                <span class="re-dash-dot yellow"></span>
+                <span class="re-dash-dot green"></span>
+              </div>
+              <div class="re-dash-search">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <span>Search projects, leads, units, invoices...</span>
+              </div>
+              <div class="re-dash-user">
+                <span class="re-status-online"></span>
+                <span class="re-user-name">Executive Suite</span>
+              </div>
+            </div>
+
+            <div class="re-dash-body">
+              <!-- Sidebar mockup -->
+              <div class="re-dash-sidebar">
+                <div class="re-side-item active">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                  <span>Overview</span>
+                </div>
+                <div class="re-side-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                  <span>Properties</span>
+                </div>
+                <div class="re-side-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  <span>Leads & CRM</span>
+                </div>
+                <div class="re-side-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                  <span>Sales & Bookings</span>
+                </div>
+                <div class="re-side-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>Projects & Map</span>
+                </div>
+                <div class="re-side-item">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                  <span>Rentals & Finance</span>
+                </div>
+              </div>
+
+              <!-- Main Content Grid -->
+              <div class="re-dash-main">
+                <!-- Top Metric Cards -->
+                <div class="re-metrics-row">
+                  <div class="re-metric-card">
+                    <div class="re-metric-icon blue">🏢</div>
+                    <div class="re-metric-info">
+                      <span class="re-metric-label">Property Inventory</span>
+                      <div class="re-metric-value">4,280 <span class="re-pill green">+12%</span></div>
+                      <span class="re-metric-sub">Across 18 Projects</span>
+                    </div>
+                  </div>
+
+                  <div class="re-metric-card">
+                    <div class="re-metric-icon emerald">📈</div>
+                    <div class="re-metric-info">
+                      <span class="re-metric-label">Sales Revenue</span>
+                      <div class="re-metric-value">$42.8M <span class="re-pill green">+24.5%</span></div>
+                      <span class="re-metric-sub">This Quarter</span>
+                    </div>
+                  </div>
+
+                  <div class="re-metric-card">
+                    <div class="re-metric-icon purple">⚡</div>
+                    <div class="re-metric-info">
+                      <span class="re-metric-label">Active Leads</span>
+                      <div class="re-metric-value">1,840 <span class="re-pill blue">86 Site Visits</span></div>
+                      <span class="re-metric-sub">Hot Conversion</span>
+                    </div>
+                  </div>
+
+                  <div class="re-metric-card">
+                    <div class="re-metric-icon amber">🔑</div>
+                    <div class="re-metric-info">
+                      <span class="re-metric-label">Occupancy Rate</span>
+                      <div class="re-metric-value">96.4% <span class="re-pill green">Rental Yield</span></div>
+                      <span class="re-metric-sub">342 Units Leased</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Middle Visualization Row -->
+                <div class="re-dash-viz-row">
+                  <!-- Sales Analytics Chart -->
+                  <div class="re-viz-card chart-card">
+                    <div class="re-card-header">
+                      <h3>Sales Analytics & Forecast</h3>
+                      <span class="re-time-badge">2026 YTD</span>
+                    </div>
+                    <div class="re-bar-chart">
+                      <div class="re-bar-col"><div class="re-bar" style="height: 45%;"></div><span>Jan</span></div>
+                      <div class="re-bar-col"><div class="re-bar" style="height: 60%;"></div><span>Feb</span></div>
+                      <div class="re-bar-col"><div class="re-bar" style="height: 75%;"></div><span>Mar</span></div>
+                      <div class="re-bar-col"><div class="re-bar" style="height: 65%;"></div><span>Apr</span></div>
+                      <div class="re-bar-col"><div class="re-bar" style="height: 90%;"></div><span>May</span></div>
+                      <div class="re-bar-col"><div class="re-bar highlight" style="height: 100%;"></div><span>Jun</span></div>
+                    </div>
+                  </div>
+
+                  <!-- Lead Pipeline Widget -->
+                  <div class="re-viz-card pipeline-card">
+                    <div class="re-card-header">
+                      <h3>Lead Pipeline Status</h3>
+                      <span class="re-live-pulse">LIVE</span>
+                    </div>
+                    <div class="re-pipeline-stages">
+                      <div class="re-stage-item">
+                        <div class="re-stage-top"><span>New Inquiries</span><strong>420</strong></div>
+                        <div class="re-progress-bar"><div class="re-progress-fill" style="width: 85%;"></div></div>
+                      </div>
+                      <div class="re-stage-item">
+                        <div class="re-stage-top"><span>Site Visits Completed</span><strong>186</strong></div>
+                        <div class="re-progress-bar"><div class="re-progress-fill" style="width: 65%;"></div></div>
+                      </div>
+                      <div class="re-stage-item">
+                        <div class="re-stage-top"><span>Booking Token Recd.</span><strong>94</strong></div>
+                        <div class="re-progress-bar"><div class="re-progress-fill" style="width: 45%;"></div></div>
+                      </div>
+                      <div class="re-stage-item">
+                        <div class="re-stage-top"><span>Agreements Signed</span><strong>68</strong></div>
+                        <div class="re-progress-bar"><div class="re-progress-fill green" style="width: 32%;"></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Floating Interactive Badges -->
+                <div class="re-dash-floating-badge float-1">
+                  <span class="icon">📍</span>
+                  <div class="txt">
+                    <strong>Skyline Heights Villa</strong>
+                    <small>Unit 402 • Token Approved</small>
+                  </div>
+                </div>
+
+                <div class="re-dash-floating-badge float-2">
+                  <span class="icon">💰</span>
+                  <div class="txt">
+                    <strong>Rental Collection</strong>
+                    <small>$142,500 Collected Today</small>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. TRUSTED BY SECTION -->
+    <section class="re-trusted">
+      <div class="re-container">
+        <p class="re-trusted-heading">Trusted by Leading Real Estate Developers, Builders & Property Management Firms</p>
+        <div class="re-logos-grid">
+          <div class="re-logo-item">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v8h4"/><path d="M18 9h2a2 2 0 0 1 2 2v11h-4"/></svg>
+            <span>Apex Realty Group</span>
+          </div>
+          <div class="re-logo-item">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span>Pinnacle Developers</span>
+          </div>
+          <div class="re-logo-item">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/></svg>
+            <span>Crestview Estates</span>
+          </div>
+          <div class="re-logo-item">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Urban Heights Infra</span>
+          </div>
+          <div class="re-logo-item">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            <span>Horizon Property Mgt</span>
+          </div>
+          <div class="re-logo-item">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11"/></svg>
+            <span>Metroplex Infra</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. BUSINESS CHALLENGES SECTION -->
+    <section class="re-challenges">
+      <div class="re-container">
+        <div class="re-section-header">
+          <span class="re-sub-eyebrow">Industry Pain Points</span>
+          <h2>Solving Key Real Estate & Construction Challenges</h2>
+          <p>Traditional real estate workflows rely on fragmented spreadsheets and manual follow-ups. Our platform replaces friction with automated, connected SaaS solutions.</p>
+        </div>
+
+        <div class="re-challenges-grid">
+          <div class="re-challenge-card">
+            <div class="re-ch-icon">⚠️</div>
+            <h3>Manual Property Management</h3>
+            <p>Disconnected inventory tracking leads to double bookings, inaccurate unit availability, and delayed unit releases.</p>
+            <div class="re-ch-solution">
+              <span>Solution:</span> Centralized real-time inventory engine across all sites and sales teams.
+            </div>
+          </div>
+
+          <div class="re-challenge-card">
+            <div class="re-ch-icon">📉</div>
+            <h3>Lost Sales Leads</h3>
+            <p>Unorganized lead capture from websites, portals, and brokers results in missed buyer follow-ups and lost revenue.</p>
+            <div class="re-ch-solution">
+              <span>Solution:</span> Automated lead routing, instant WhatsApp triggers, and pipeline tracking.
+            </div>
+          </div>
+
+          <div class="re-challenge-card">
+            <div class="re-ch-icon">📞</div>
+            <h3>Poor Customer Follow-up</h3>
+            <p>Sales reps fail to log site visit feedback, call logs, and buyer preferences, hurting overall conversion rates.</p>
+            <div class="re-ch-solution">
+              <span>Solution:</span> Real Estate CRM with scheduled reminders, automated SMS, and call history.
+            </div>
+          </div>
+
+          <div class="re-challenge-card">
+            <div class="re-ch-icon">🏢</div>
+            <h3>Rental Tracking Issues</h3>
+            <p>Tracking tenant leases, rent escalations, security deposits, and maintenance tickets manually creates cash flow bottlenecks.</p>
+            <div class="re-ch-solution">
+              <span>Solution:</span> Automated lease agreements, recurring rent invoicing, and tenant portals.
+            </div>
+          </div>
+
+          <div class="re-challenge-card">
+            <div class="re-ch-icon">🚧</div>
+            <h3>Delayed Project Updates</h3>
+            <p>Construction updates, material usage, and contractor milestones remain isolated from sales and buyer teams.</p>
+            <div class="re-ch-solution">
+              <span>Solution:</span> Real-time construction project tracking with milestone reporting.
+            </div>
+          </div>
+
+          <div class="re-challenge-card">
+            <div class="re-ch-icon">📄</div>
+            <h3>Complex Contract Management</h3>
+            <p>Managing allotment letters, legal contracts, and payment installment schedules manually slows down closings.</p>
+            <div class="re-ch-solution">
+              <span>Solution:</span> Digital contract generator with e-signature and milestone-linked payment plans.
+            </div>
+          </div>
+
+          <div class="re-challenge-card">
+            <div class="re-ch-icon">💳</div>
+            <h3>Payment Collection Bottlenecks</h3>
+            <p>High overdue payment ratios due to lack of automated payment reminders and payment gateway options.</p>
+            <div class="re-ch-solution">
+              <span>Solution:</span> Automated payment gateway integration with instant digital receipts.
+            </div>
+          </div>
+
+          <div class="re-challenge-card">
+            <div class="re-ch-icon">📊</div>
+            <h3>Multi-Project Complexity</h3>
+            <p>Managing multiple residential, commercial, and land projects simultaneously creates executive reporting chaos.</p>
+            <div class="re-ch-solution">
+              <span>Solution:</span> Multi-tenant executive dashboard with group-level financial & sales insights.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. WHY CHOOSE OUR SOLUTION -->
+    <section class="re-why">
+      <div class="re-container">
+        <div class="re-section-header">
+          <span class="re-sub-eyebrow">Enterprise Features</span>
+          <h2>Why Choose Our Real Estate SaaS Platform?</h2>
+          <p>Engineered with cloud flexibility, bank-grade security, and specialized real estate modules to accelerate business growth.</p>
+        </div>
+
+        <div class="re-why-grid">
+          <div class="re-why-card">
+            <div class="re-why-icon">☁️</div>
+            <h3>Cloud-Based ERP</h3>
+            <p>Access your entire business data securely from any location with high-availability cloud infrastructure and zero hardware costs.</p>
+          </div>
+
+          <div class="re-why-card">
+            <div class="re-why-icon">🎯</div>
+            <h3>CRM for Real Estate</h3>
+            <p>Purpose-built CRM tailored for buyer preferences, site visits, broker commissions, and automated follow-up sequences.</p>
+          </div>
+
+          <div class="re-why-card">
+            <div class="re-why-icon">🏰</div>
+            <h3>Property Inventory</h3>
+            <p>Live interactive unit grid showing available, booked, blocked, and handed-over apartments, villas, and commercial spaces.</p>
+          </div>
+
+          <div class="re-why-card">
+            <div class="re-why-icon">⚡</div>
+            <h3>Lead Management</h3>
+            <p>Capture, score, assign, and convert leads seamlessly from digital campaigns, property portals, and channel partners.</p>
+          </div>
+
+          <div class="re-why-card">
+            <div class="re-why-icon">🤖</div>
+            <h3>AI Analytics</h3>
+            <p>Predictive sales forecasting, lead conversion scoring, price optimization, and customer churn analysis powered by AI.</p>
+          </div>
+
+          <div class="re-why-card">
+            <div class="re-why-icon">📱</div>
+            <h3>Mobile Access</h3>
+            <p>Native iOS & Android mobile apps for site engineers, sales representatives, channel partners, and property managers.</p>
+          </div>
+
+          <div class="re-why-card">
+            <div class="re-why-icon">🏙️</div>
+            <h3>Multi-Project Management</h3>
+            <p>Seamlessly control multiple ongoing townships, commercial towers, plotting projects, and rental portfolios in one view.</p>
+          </div>
+
+          <div class="re-why-card">
+            <div class="re-why-icon">🔒</div>
+            <h3>Secure Cloud Backup</h3>
+            <p>Bank-grade AES 256-bit encryption, role-based access control, automated backups, and full SOC2 & GDPR compliance.</p>
+          </div>
+
+          <div class="re-why-card">
+            <div class="re-why-icon">📑</div>
+            <h3>Document Management</h3>
+            <p>Centralized repository for title deeds, floor plans, approval permits, buyer KYC documents, and agreement templates.</p>
+          </div>
+
+          <div class="re-why-card">
+            <div class="re-why-icon">⚙️</div>
+            <h3>Automated Workflows</h3>
+            <p>Automate repetitive administrative tasks like booking approval, payment reminder notifications, and commission payouts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. COMPLETE SOFTWARE MODULES (INTERACTIVE TABS) -->
+    <section class="re-modules" id="modules">
+      <div class="re-container">
+        <div class="re-section-header">
+          <span class="re-sub-eyebrow">Comprehensive Platform</span>
+          <h2>Complete Real Estate Software Modules</h2>
+          <p>Everything your real estate enterprise needs to manage properties, sales, CRM, rentals, construction, finance, and intelligence.</p>
+        </div>
+
+        <div class="re-modules-container">
+          <!-- Module Tabs Navigation -->
+          <div class="re-module-nav js-module-nav">
+            <button class="re-mod-tab active" data-target="mod-prop">
+              <span>🏢 Property Management</span>
+            </button>
+            <button class="re-mod-tab" data-target="mod-lead">
+              <span>🎯 Lead Management</span>
+            </button>
+            <button class="re-mod-tab" data-target="mod-crm">
+              <span>🤝 Real Estate CRM</span>
+            </button>
+            <button class="re-mod-tab" data-target="mod-sales">
+              <span>💼 Sales & Booking</span>
+            </button>
+            <button class="re-mod-tab" data-target="mod-rental">
+              <span>🔑 Rental Management</span>
+            </button>
+            <button class="re-mod-tab" data-target="mod-proj">
+              <span>🚧 Project Management</span>
+            </button>
+            <button class="re-mod-tab" data-target="mod-fin">
+              <span>📊 Finance & Accounting</span>
+            </button>
+            <button class="re-mod-tab" data-target="mod-rep">
+              <span>📈 Reports & Analytics</span>
+            </button>
+          </div>
+
+          <!-- Module Content Panels -->
+          <div class="re-module-panels">
+
+            <!-- Panel 1: Property Management -->
+            <div class="re-mod-panel active" id="mod-prop">
+              <div class="re-mod-grid">
+                <div class="re-mod-info">
+                  <h3>Property Management Module</h3>
+                  <p>Gain absolute control over your real estate inventory. Track availability, unit configurations, pricing tiers, floor plans, and amenities across all locations.</p>
+                  <ul class="re-check-list">
+                    <li><span>Residential Properties</span> – High-rise apartments, villas, townhouses</li>
+                    <li><span>Commercial Properties</span> – Office spaces, retail hubs, tech parks</li>
+                    <li><span>Land Management</span> – Plot layout mapping, land bank tracking</li>
+                    <li><span>Property Availability</span> – Real-time color-coded unit matrix</li>
+                    <li><span>Floor Plans & Views</span> – Architectural layouts and 3D virtual tours</li>
+                    <li><span>Property Gallery</span> – High-resolution image & video hosting</li>
+                  </ul>
+                </div>
+                <div class="re-mod-visual">
+                  <div class="re-preview-card">
+                    <div class="re-prev-header">
+                      <span>Live Unit Availability Matrix</span>
+                      <span class="re-tag green">Interactive</span>
+                    </div>
+                    <div class="re-unit-grid">
+                      <div class="re-unit sold">A-101<br><small>Sold</small></div>
+                      <div class="re-unit avail">A-102<br><small>Avail</small></div>
+                      <div class="re-unit hold">A-103<br><small>Hold</small></div>
+                      <div class="re-unit avail">A-104<br><small>Avail</small></div>
+                      <div class="re-unit sold">B-201<br><small>Sold</small></div>
+                      <div class="re-unit sold">B-202<br><small>Sold</small></div>
+                      <div class="re-unit avail">B-203<br><small>Avail</small></div>
+                      <div class="re-unit avail">B-204<br><small>Avail</small></div>
+                    </div>
+                    <div class="re-legend">
+                      <span class="lg-item"><i class="dot avail"></i> Available</span>
+                      <span class="lg-item"><i class="dot hold"></i> On Hold</span>
+                      <span class="lg-item"><i class="dot sold"></i> Booked</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 2: Lead Management -->
+            <div class="re-mod-panel" id="mod-lead">
+              <div class="re-mod-grid">
+                <div class="re-mod-info">
+                  <h3>Lead Management Module</h3>
+                  <p>Capture 100% of incoming inquiries across marketing channels. Automatically score, route, and nurture prospects to maximize sales conversion rates.</p>
+                  <ul class="re-check-list">
+                    <li><span>Website & Portal Leads</span> – Sync 99acres, Magicbricks, Zillow & Facebook</li>
+                    <li><span>Inquiry Tracking</span> – Source attribution & UTM performance analytics</li>
+                    <li><span>Lead Assignment</span> – Auto round-robin routing to site representatives</li>
+                    <li><span>Sales Pipeline Stage</span> – Visual Kanban board with stage movement</li>
+                    <li><span>Automated Follow-ups</span> – WhatsApp & email drip campaigns</li>
+                    <li><span>Lead Conversion Metrics</span> – Real-time conversion velocity reports</li>
+                  </ul>
+                </div>
+                <div class="re-mod-visual">
+                  <div class="re-preview-card">
+                    <div class="re-prev-header">
+                      <span>Lead Kanban Pipeline</span>
+                      <span class="re-tag blue">Real-time</span>
+                    </div>
+                    <div class="re-kanban-preview">
+                      <div class="kb-col">
+                        <h4>Inquiry (12)</h4>
+                        <div class="kb-card">David Miller • 3 BHK</div>
+                        <div class="kb-card">Sarah Connor • Penthouse</div>
+                      </div>
+                      <div class="kb-col">
+                        <h4>Site Visit (5)</h4>
+                        <div class="kb-card highlight">Robert Vance • Commercial</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 3: CRM -->
+            <div class="re-mod-panel" id="mod-crm">
+              <div class="re-mod-grid">
+                <div class="re-mod-info">
+                  <h3>Real Estate CRM Module</h3>
+                  <p>Build lifelong relationships with buyers and investors. Maintain 360-degree customer records, communication logs, and integrated messaging channels.</p>
+                  <ul class="re-check-list">
+                    <li><span>360° Customer Profiles</span> – Complete budget, preference & history timeline</li>
+                    <li><span>Communication History</span> – Integrated call logs, email threads & notes</li>
+                    <li><span>Meeting & Visit Scheduler</span> – Calendar sync with automated SMS alerts</li>
+                    <li><span>WhatsApp API Integration</span> – Send brochures, quotes & receipts instantly</li>
+                    <li><span>Email Automation</span> – Personalized updates, construction milestone alerts</li>
+                    <li><span>Customer Document Storage</span> – ID proofs, tax cards, and signed forms</li>
+                  </ul>
+                </div>
+                <div class="re-mod-visual">
+                  <div class="re-preview-card">
+                    <div class="re-prev-header">
+                      <span>WhatsApp & CRM Interaction</span>
+                      <span class="re-tag emerald">Connected</span>
+                    </div>
+                    <div class="re-chat-preview">
+                      <div class="chat-msg incoming">Hi, I'm interested in the 3 BHK Luxury Villa layout.</div>
+                      <div class="chat-msg outgoing">Hello! Sent you the PDF brochure & floor plans via WhatsApp. Would you like to schedule a site visit this Saturday?</div>
+                      <div class="chat-status">✓ Sent via WhatsApp Business API</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 4: Sales Management -->
+            <div class="re-mod-panel" id="mod-sales">
+              <div class="re-mod-grid">
+                <div class="re-mod-info">
+                  <h3>Sales & Booking Management Module</h3>
+                  <p>Streamline unit booking, pricing calculation, installment schedules, legal agreements, and channel partner commissions from booking to possession.</p>
+                  <ul class="re-check-list">
+                    <li><span>Property Booking Engine</span> – Instant unit blocking & token payment</li>
+                    <li><span>Quotation Generator</span> – Auto-calculate base price, tax, parking & club fees</li>
+                    <li><span>Custom Agreement Builder</span> – Milestone-linked booking contracts</li>
+                    <li><span>Installment Schedule Tracker</span> – Construction-linked payment plans</li>
+                    <li><span>Commission Tracking</span> – Channel partner & internal agent payouts</li>
+                    <li><span>Sales Forecasting</span> – Executive revenue projections & pipeline reports</li>
+                  </ul>
+                </div>
+                <div class="re-mod-visual">
+                  <div class="re-preview-card">
+                    <div class="re-prev-header">
+                      <span>Automated Installment Plan</span>
+                      <span class="re-tag purple">Calculated</span>
+                    </div>
+                    <div class="re-calc-preview">
+                      <div class="calc-row"><span>Token Advance (10%)</span><strong>$45,000</strong></div>
+                      <div class="calc-row"><span>Plinth Construction (15%)</span><strong>$67,500</strong></div>
+                      <div class="calc-row"><span>Slab Completion (25%)</span><strong>$112,500</strong></div>
+                      <div class="calc-row highlight"><span>Possession Handover (50%)</span><strong>$225,000</strong></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 5: Rental Management -->
+            <div class="re-mod-panel" id="mod-rental">
+              <div class="re-mod-grid">
+                <div class="re-mod-info">
+                  <h3>Rental Management Module</h3>
+                  <p>Automate property leasing, tenant relationship management, rent collection invoicing, lease escalation, and maintenance service ticket tracking.</p>
+                  <ul class="re-check-list">
+                    <li><span>Tenant Lifecycle Management</span> – Screening, background checks & lease onboarding</li>
+                    <li><span>Digital Lease Agreements</span> – Auto-renewal clauses, security deposit tracking</li>
+                    <li><span>Automated Rent Collection</span> – Auto payment reminders & online payment links</li>
+                    <li><span>Maintenance Requests</span> – Tenant portal ticketing & contractor dispatch</li>
+                    <li><span>Lease Expiry Alerts</span> – 90-day renewal notifications for property managers</li>
+                    <li><span>Vacant Property Dashboard</span> – Turnaround time tracking for unleased units</li>
+                  </ul>
+                </div>
+                <div class="re-mod-visual">
+                  <div class="re-preview-card">
+                    <div class="re-prev-header">
+                      <span>Tenant Rent & Maintenance Hub</span>
+                      <span class="re-tag emerald">96.4% Leased</span>
+                    </div>
+                    <div class="re-rent-preview">
+                      <div class="rent-item">
+                        <span>Apt 12B • Lease Active</span>
+                        <strong class="green">$2,800 / mo • Paid</strong>
+                      </div>
+                      <div class="rent-item">
+                        <span>Suite 404 • Due in 3 days</span>
+                        <strong class="amber">$4,200 / mo • Pending</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 6: Project Management -->
+            <div class="re-mod-panel" id="mod-proj">
+              <div class="re-mod-grid">
+                <div class="re-mod-info">
+                  <h3>Project & Construction Management</h3>
+                  <p>Connect construction site engineering with enterprise planning. Track progress timelines, contractor work logs, budget expenditure, and material supply.</p>
+                  <ul class="re-check-list">
+                    <li><span>Construction Progress Tracking</span> – Site photo updates & percentage completion</li>
+                    <li><span>Budget vs Actual Costing</span> – Cost overrun alerts & financial variance analysis</li>
+                    <li><span>Task & Milestone Planning</span> – Gantt chart view for site engineers</li>
+                    <li><span>Contractor Management</span> – Work order approvals & billing verification</li>
+                    <li><span>Material Inventory Tracking</span> – Cement, steel, equipment usage logs</li>
+                    <li><span>Project Timeline Dashboard</span> – Customer-facing milestone updates</li>
+                  </ul>
+                </div>
+                <div class="re-mod-visual">
+                  <div class="re-preview-card">
+                    <div class="re-prev-header">
+                      <span>Construction Timeline & Progress</span>
+                      <span class="re-tag blue">88% Complete</span>
+                    </div>
+                    <div class="re-proj-progress">
+                      <div class="proj-step">
+                        <span>Foundation & Excavation</span>
+                        <div class="bar"><div class="fill green" style="width: 100%;"></div></div>
+                      </div>
+                      <div class="proj-step">
+                        <span>Superstructure & Slabs</span>
+                        <div class="bar"><div class="fill green" style="width: 100%;"></div></div>
+                      </div>
+                      <div class="proj-step">
+                        <span>Finishing & Plumbing</span>
+                        <div class="bar"><div class="fill blue" style="width: 75%;"></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 7: Finance -->
+            <div class="re-mod-panel" id="mod-fin">
+              <div class="re-mod-grid">
+                <div class="re-mod-info">
+                  <h3>Finance & Accounting Module</h3>
+                  <p>Comprehensive real estate financial accounting software. Seamlessly handle buyer invoices, installment collections, vendor payables, tax reports, and P&L.</p>
+                  <ul class="re-check-list">
+                    <li><span>Automated Invoicing</span> – GST, VAT & sales tax compliant tax invoices</li>
+                    <li><span>Payment Gateway Sync</span> – Instant reconciliation with Stripe, Razorpay & Banks</li>
+                    <li><span>Vendor & Expense Tracking</span> – Supplier bills, contractor payments & petty cash</li>
+                    <li><span>Profit & Loss Reports</span> – Project-wise profitability & balance sheet</li>
+                    <li><span>Tax Compliance Reports</span> – Automated tax summary & audit trails</li>
+                    <li><span>Executive Financial Dashboard</span> – Cash flow forecasts & yield metrics</li>
+                  </ul>
+                </div>
+                <div class="re-mod-visual">
+                  <div class="re-preview-card">
+                    <div class="re-prev-header">
+                      <span>Financial Performance Summary</span>
+                      <span class="re-tag green">Audited</span>
+                    </div>
+                    <div class="re-fin-summary">
+                      <div class="fin-stat"><span>Gross Collections</span><strong>$14.2M</strong></div>
+                      <div class="fin-stat"><span>Vendor Payables</span><strong>$3.8M</strong></div>
+                      <div class="fin-stat highlight"><span>Net Operating Profit</span><strong>$10.4M</strong></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Panel 8: Reports -->
+            <div class="re-mod-panel" id="mod-rep">
+              <div class="re-mod-grid">
+                <div class="re-mod-info">
+                  <h3>Reports & Business Analytics Module</h3>
+                  <p>Empower leadership with real-time business intelligence. Generate automated executive summaries, sales performance reports, and occupancy trends.</p>
+                  <ul class="re-check-list">
+                    <li><span>Sales Performance Analytics</span> – Rep performance, deal size & closing speeds</li>
+                    <li><span>Revenue & Cash Flow Reports</span> – Historical revenue vs target comparisons</li>
+                    <li><span>Property Performance Metrics</span> – Absorption rate & price per sq.ft trends</li>
+                    <li><span>Occupancy & Lease Yield</span> – Rental yield & vacancy rate analytics</li>
+                    <li><span>Lead Source ROI</span> – Marketing spend efficiency per acquired buyer</li>
+                    <li><span>Custom Executive Dashboards</span> – Scheduled PDF & email report delivery</li>
+                  </ul>
+                </div>
+                <div class="re-mod-visual">
+                  <div class="re-preview-card">
+                    <div class="re-prev-header">
+                      <span>Executive BI Summary</span>
+                      <span class="re-tag purple">Automated</span>
+                    </div>
+                    <div class="re-rep-preview">
+                      <div class="rep-bar-wrap">
+                        <div class="rep-bar-item"><span style="height: 60%;"></span><small>Q1</small></div>
+                        <div class="rep-bar-item"><span style="height: 80%;"></span><small>Q2</small></div>
+                        <div class="rep-bar-item"><span style="height: 95%;"></span><small>Q3</small></div>
+                        <div class="rep-bar-item highlight"><span style="height: 100%;"></span><small>Q4</small></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. INDUSTRIES WE SERVE -->
+    <section class="re-industries">
+      <div class="re-container">
+        <div class="re-section-header">
+          <span class="re-sub-eyebrow">Target Industries</span>
+          <h2>Tailored Solutions for Real Estate Verticals</h2>
+          <p>Whether you develop luxury high-rises, build residential townships, or manage commercial portfolios, our platform scales with your business.</p>
+        </div>
+
+        <div class="re-ind-grid">
+          <div class="re-ind-card">
+            <div class="re-ind-icon">🏙️</div>
+            <h3>Real Estate Developers</h3>
+            <p>End-to-end management for mega residential and commercial township projects from pre-launch to possession.</p>
+          </div>
+
+          <div class="re-ind-card">
+            <div class="re-ind-icon">🔨</div>
+            <h3>Property Builders</h3>
+            <p>Streamline plot sales, villa construction, site engineering, material inventory, and contractor payouts.</p>
+          </div>
+
+          <div class="re-ind-card">
+            <div class="re-ind-icon">🏗️</div>
+            <h3>Construction Companies</h3>
+            <p>Track project timelines, contractor milestone billing, labor attendance, and material supply chains.</p>
+          </div>
+
+          <div class="re-ind-card">
+            <div class="re-ind-icon">🏬</div>
+            <h3>Property Management Firms</h3>
+            <p>Automate multi-tenant leasing, maintenance requests, rent escalation, and tenant portal interactions.</p>
+          </div>
+
+          <div class="re-ind-card">
+            <div class="re-ind-icon">🤝</div>
+            <h3>Real Estate Agencies & Brokers</h3>
+            <p>Empower property agents with lead CRM, property listings matching, commission tracking, and mobile apps.</p>
+          </div>
+
+          <div class="re-ind-card">
+            <div class="re-ind-icon">🏢</div>
+            <h3>Commercial Property Owners</h3>
+            <p>Manage tech parks, retail shopping malls, warehouse spaces, lease schedules, and utility charge billing.</p>
+          </div>
+
+          <div class="re-ind-card">
+            <div class="re-ind-icon">🏡</div>
+            <h3>Housing Societies & RWA</h3>
+            <p>Simplify maintenance collection, visitor security management, facility booking, and resident complaints.</p>
+          </div>
+
+          <div class="re-ind-card">
+            <div class="re-ind-icon">🔑</div>
+            <h3>Rental & Coliving Businesses</h3>
+            <p>Manage short-term & long-term tenant leases, deposit refunds, digital room allocation, and automated bills.</p>
+          </div>
+
+          <div class="re-ind-card">
+            <div class="re-ind-icon">🌉</div>
+            <h3>Infrastructure Companies</h3>
+            <p>Organize large-scale land acquisitions, government compliance filings, project budgets, and partner contracts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. BUSINESS BENEFITS -->
+    <section class="re-benefits">
+      <div class="re-container">
+        <div class="re-section-header">
+          <span class="re-sub-eyebrow">Proven Business ROI</span>
+          <h2>Transformative Business Benefits</h2>
+          <p>Our customers experience dramatic efficiency gains, faster property sales cycles, and increased profit margins.</p>
+        </div>
+
+        <div class="re-ben-grid">
+          <div class="re-ben-card">
+            <div class="re-ben-stat">3x</div>
+            <h3>Faster Sales Process</h3>
+            <p>Accelerate inventory selection, digital booking token collection, and agreement generation.</p>
+          </div>
+
+          <div class="re-ben-card">
+            <div class="re-ben-stat">+45%</div>
+            <h3>Better Lead Conversion</h3>
+            <p>Instant lead response via WhatsApp and automated CRM follow-up schedules prevent lost prospects.</p>
+          </div>
+
+          <div class="re-ben-card">
+            <div class="re-ben-stat">100%</div>
+            <h3>Centralized Property Data</h3>
+            <p>Single source of truth for unit availability, floor plans, pricing, and client records across all departments.</p>
+          </div>
+
+          <div class="re-ben-card">
+            <div class="re-ben-stat">98%</div>
+            <h3>Improved Customer Experience</h3>
+            <p>Deliver transparent construction updates, digital invoices, and instant customer portal access.</p>
+          </div>
+
+          <div class="re-ben-card">
+            <div class="re-ben-stat">Live</div>
+            <h3>Real-Time Reports</h3>
+            <p>Get instant executive dashboards on revenue, cash flow, unsold inventory, and sales agent performance.</p>
+          </div>
+
+          <div class="re-ben-card">
+            <div class="re-ben-stat">+60%</div>
+            <h3>Increased Productivity</h3>
+            <p>Automate administrative tasks, commission calculation, and document generation for site teams.</p>
+          </div>
+
+          <div class="re-ben-card">
+            <div class="re-ben-stat">-75%</div>
+            <h3>Reduced Manual Work</h3>
+            <p>Eliminate redundant manual spreadsheet entry and manual payment reconciliation work.</p>
+          </div>
+
+          <div class="re-ben-card">
+            <div class="re-ben-stat">256-bit</div>
+            <h3>Secure Cloud Storage</h3>
+            <p>Keep sensitive legal agreements, buyer KYC files, and financial records safe with bank-level encryption.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. WORKFLOW SECTION -->
+    <section class="re-workflow">
+      <div class="re-container">
+        <div class="re-section-header">
+          <span class="re-sub-eyebrow">End-To-End Journey</span>
+          <h2>Automated Real Estate Sales & Delivery Workflow</h2>
+          <p>A seamless 8-step pipeline that guides buyers from initial inquiry all the way to key possession handover.</p>
+        </div>
+
+        <div class="re-wf-pipeline">
+          <div class="re-wf-step">
+            <div class="re-wf-num">01</div>
+            <div class="re-wf-icon">📩</div>
+            <h4>Lead Inquiry</h4>
+            <p>Auto-captured from web, ads & portals</p>
+          </div>
+
+          <div class="re-wf-arrow">→</div>
+
+          <div class="re-wf-step">
+            <div class="re-wf-num">02</div>
+            <div class="re-wf-icon">🔍</div>
+            <h4>Property Matching</h4>
+            <p>AI matches budget & preferences</p>
+          </div>
+
+          <div class="re-wf-arrow">→</div>
+
+          <div class="re-wf-step">
+            <div class="re-wf-num">03</div>
+            <div class="re-wf-icon">🚗</div>
+            <h4>Site Visit</h4>
+            <p>Scheduled & logged in CRM app</p>
+          </div>
+
+          <div class="re-wf-arrow">→</div>
+
+          <div class="re-wf-step">
+            <div class="re-wf-num">04</div>
+            <div class="re-wf-icon">🧾</div>
+            <h4>Quotation</h4>
+            <p>Itemized cost sheet generated</p>
+          </div>
+
+          <div class="re-wf-arrow">→</div>
+
+          <div class="re-wf-step">
+            <div class="re-wf-num">05</div>
+            <div class="re-wf-icon">📌</div>
+            <h4>Booking Token</h4>
+            <p>Online payment & unit lock</p>
+          </div>
+
+          <div class="re-wf-arrow">→</div>
+
+          <div class="re-wf-step">
+            <div class="re-wf-num">06</div>
+            <div class="re-wf-icon">✍️</div>
+            <h4>Agreement</h4>
+            <p>Digital signing & allotment letter</p>
+          </div>
+
+          <div class="re-wf-arrow">→</div>
+
+          <div class="re-wf-step">
+            <div class="re-wf-num">07</div>
+            <div class="re-wf-icon">💳</div>
+            <h4>Milestone Payment</h4>
+            <p>Construction-linked installments</p>
+          </div>
+
+          <div class="re-wf-arrow">→</div>
+
+          <div class="re-wf-step">
+            <div class="re-wf-num">08</div>
+            <div class="re-wf-icon">🔑</div>
+            <h4>Possession</h4>
+            <p>Key handover & warranty tracking</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. DASHBOARD SHOWCASE (TABBED SCREEN PREVIEWS) -->
+    <section class="re-showcase">
+      <div class="re-container">
+        <div class="re-section-header">
+          <span class="re-sub-eyebrow">Software Interface</span>
+          <h2>Designed for Power & Simplicity</h2>
+          <p>Explore high-fidelity software views tailored for executives, sales teams, property managers, and field staff.</p>
+        </div>
+
+        <div class="re-showcase-wrapper js-showcase-wrapper">
+          <div class="re-sc-tabs">
+            <button class="re-sc-tab active" data-view="view-exec">Executive Dashboard</button>
+            <button class="re-sc-tab" data-view="view-inv">Property Listings</button>
+            <button class="re-sc-tab" data-view="view-crm">Sales CRM</button>
+            <button class="re-sc-tab" data-view="view-rent">Rental Management</button>
+            <button class="re-sc-tab" data-view="view-proj">Project Construction</button>
+            <button class="re-sc-tab" data-view="view-mob">Mobile App</button>
+          </div>
+
+          <div class="re-sc-viewport">
+            <div class="re-mockup-frame">
+              <div class="re-frame-top">
+                <div class="dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+                <div class="url-bar">https://app.hegrixrealestate.com/dashboard</div>
+              </div>
+              <div class="re-frame-body">
+                <div class="re-sc-view active" id="view-exec">
+                  <div class="re-mock-content">
+                    <div class="mock-hdr">
+                      <h2>Executive Overview — All Projects</h2>
+                      <span class="badge blue">Live Data Sync</span>
+                    </div>
+                    <div class="mock-stats-3">
+                      <div class="m-card"><span>Total Revenue</span><strong>$128.4M</strong></div>
+                      <div class="m-card"><span>Total Inventory</span><strong>12,450 Units</strong></div>
+                      <div class="m-card"><span>Avg Closing Speed</span><strong>14 Days</strong></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="re-sc-view" id="view-inv">
+                  <div class="re-mock-content">
+                    <div class="mock-hdr">
+                      <h2>Property Inventory & Floor Plans</h2>
+                      <span class="badge emerald">Interactive Grid</span>
+                    </div>
+                    <p class="mock-desc">Real-time availability of residential apartments, commercial offices, and villas with 3D virtual tour attachments.</p>
+                  </div>
+                </div>
+
+                <div class="re-sc-view" id="view-crm">
+                  <div class="re-mock-content">
+                    <div class="mock-hdr">
+                      <h2>Real Estate Lead CRM & WhatsApp Hub</h2>
+                      <span class="badge blue">Automated Nurture</span>
+                    </div>
+                    <p class="mock-desc">Track buyer interest scores, automated site visit follow-ups, and instant WhatsApp document sharing.</p>
+                  </div>
+                </div>
+
+                <div class="re-sc-view" id="view-rent">
+                  <div class="re-mock-content">
+                    <div class="mock-hdr">
+                      <h2>Tenant Lease & Rent Collection Engine</h2>
+                      <span class="badge emerald">Recurring Revenue</span>
+                    </div>
+                    <p class="mock-desc">Manage lease contracts, security deposit escrows, and automated digital rent collection receipts.</p>
+                  </div>
+                </div>
+
+                <div class="re-sc-view" id="view-proj">
+                  <div class="re-mock-content">
+                    <div class="mock-hdr">
+                      <h2>Construction Progress & Milestone Tracking</h2>
+                      <span class="badge purple">Site Engineering</span>
+                    </div>
+                    <p class="mock-desc">Monitor slab completions, contractor milestone billing, and material inventory consumption in real time.</p>
+                  </div>
+                </div>
+
+                <div class="re-sc-view" id="view-mob">
+                  <div class="re-mock-content">
+                    <div class="mock-hdr">
+                      <h2>Native Mobile Apps for iOS & Android</h2>
+                      <span class="badge amber">On-The-Go</span>
+                    </div>
+                    <p class="mock-desc">Empower field agents to conduct site visits, capture client signatures, and upload construction site photos directly from smartphones.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 10. INTEGRATIONS SECTION -->
+    <section class="re-integrations">
+      <div class="re-container">
+        <div class="re-section-header">
+          <span class="re-sub-eyebrow">Seamless Connectivity</span>
+          <h2>Powerful Integrations with Tools You Trust</h2>
+          <p>Connect your real estate ERP with leading messaging platforms, map engines, payment gateways, and cloud software.</p>
+        </div>
+
+        <div class="re-int-grid">
+          <div class="re-int-card">
+            <div class="re-int-icon">💬</div>
+            <h3>WhatsApp API</h3>
+            <p>Automated chat, brochure delivery & payment links.</p>
+          </div>
+          <div class="re-int-card">
+            <div class="re-int-icon">🗺️</div>
+            <h3>Google Maps</h3>
+            <p>Location pin embedding & site direction routes.</p>
+          </div>
+          <div class="re-int-card">
+            <div class="re-int-icon">✉️</div>
+            <h3>Email Marketing</h3>
+            <p>Mailchimp & SendGrid automated drip campaigns.</p>
+          </div>
+          <div class="re-int-card">
+            <div class="re-int-icon">📱</div>
+            <h3>SMS Gateways</h3>
+            <p>Instant SMS alerts for site visits & payment dues.</p>
+          </div>
+          <div class="re-int-card">
+            <div class="re-int-icon">💳</div>
+            <h3>Payment Gateways</h3>
+            <p>Stripe, Razorpay, PayPal & Direct Bank ACH.</p>
+          </div>
+          <div class="re-int-card">
+            <div class="re-int-icon">📅</div>
+            <h3>Google Calendar</h3>
+            <p>Site visit calendar sync for sales reps.</p>
+          </div>
+          <div class="re-int-card">
+            <div class="re-int-icon">📕</div>
+            <h3>Accounting Software</h3>
+            <p>QuickBooks, Xero, Tally & Odoo Finance sync.</p>
+          </div>
+          <div class="re-int-card">
+            <div class="re-int-icon">⚙️</div>
+            <h3>Enterprise ERP</h3>
+            <p>SAP, Oracle & Odoo backend connectors.</p>
+          </div>
+          <div class="re-int-card">
+            <div class="re-int-icon">🔌</div>
+            <h3>Rest APIs</h3>
+            <p>Developer APIs for custom web portal integrations.</p>
+          </div>
+          <div class="re-int-card">
+            <div class="re-int-icon">☁️</div>
+            <h3>Cloud Storage</h3>
+            <p>Google Drive, AWS S3 & Dropbox file sync.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. STATISTICS SECTION -->
+    <section class="re-stats">
+      <div class="re-container">
+        <div class="re-stats-grid">
+          <div class="re-stat-box">
+            <div class="re-stat-num">500+</div>
+            <div class="re-stat-lbl">Enterprise Clients</div>
+          </div>
+          <div class="re-stat-box">
+            <div class="re-stat-num">100,000+</div>
+            <div class="re-stat-lbl">Properties Managed</div>
+          </div>
+          <div class="re-stat-box">
+            <div class="re-stat-num">1 Million+</div>
+            <div class="re-stat-lbl">Leads Processed</div>
+          </div>
+          <div class="re-stat-box">
+            <div class="re-stat-num">99.9%</div>
+            <div class="re-stat-lbl">Data Security SLA</div>
+          </div>
+          <div class="re-stat-box">
+            <div class="re-stat-num">24/7</div>
+            <div class="re-stat-lbl">Customer Support</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. TESTIMONIALS -->
+    <section class="re-testimonials">
+      <div class="re-container">
+        <div class="re-section-header">
+          <span class="re-sub-eyebrow">Client Success</span>
+          <h2>Loved by Real Estate Leaders</h2>
+          <p>Discover how top real estate developers and builders digitized their business with our software.</p>
+        </div>
+
+        <div class="re-test-grid">
+          <div class="re-test-card">
+            <div class="re-stars">★★★★★</div>
+            <p class="re-quote">"This platform transformed our sales operation across 14 residential projects. Lead conversion jumped by 42% in the first quarter thanks to the WhatsApp CRM integration!"</p>
+            <div class="re-author">
+              <div class="re-avatar">RK</div>
+              <div class="re-author-info">
+                <strong>Rajesh Khanna</strong>
+                <span>Managing Director, Apex Realty Developers</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="re-test-card">
+            <div class="re-stars">★★★★★</div>
+            <p class="re-quote">"Managing rental collection for our commercial office complexes used to take 2 weeks every month. Now automated invoicing and tenant payment links collect 95% of rent on day one."</p>
+            <div class="re-author">
+              <div class="re-avatar">VP</div>
+              <div class="re-author-info">
+                <strong>Vikram Patel</strong>
+                <span>Head of Asset Management, Crestview Estates</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="re-test-card">
+            <div class="re-stars">★★★★★</div>
+            <p class="re-quote">"The site engineering module keeps our construction progress perfectly aligned with buyer payment installment triggers. Unmatched visibility for our executive board."</p>
+            <div class="re-author">
+              <div class="re-avatar">SM</div>
+              <div class="re-author-info">
+                <strong>Sophia Martinez</strong>
+                <span>Chief Technology Officer, Pinnacle Builders</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. FAQ SECTION -->
+    <section class="re-faq">
+      <div class="re-container">
+        <div class="re-section-header">
+          <span class="re-sub-eyebrow">Got Questions?</span>
+          <h2>Frequently Asked Questions</h2>
+          <p>Find answers to common questions about our Real Estate Software Solutions.</p>
+        </div>
+
+        <div class="re-faq-list">
+          {faqList.map((faq) => (
+            <details class="re-faq-item">
+              <summary class="re-faq-question">
+                <span>{faq.question}</span>
+                <svg class="re-faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="re-faq-answer">
+                <p>{faq.answer}</p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. FINAL CTA -->
+    <section class="re-cta-section">
+      <div class="re-container">
+        <div class="re-cta-box">
+          <div class="re-cta-glow"></div>
+          <h2>Ready to Digitize Your Real Estate Business?</h2>
+          <p>Manage properties, customers, sales, rentals, contracts, and construction projects with one intelligent, cloud-based platform.</p>
+          <div class="re-cta-btns">
+            <button class="re-btn re-btn-primary js-open-demo-modal">
+              <span>Schedule a Demo</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <a href="/contact-us/" class="re-btn re-btn-secondary">
+              <span>Talk to an Expert</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO MODAL POPUP -->
+    <div class="re-modal-overlay js-demo-modal" aria-hidden="true">
+      <div class="re-modal-card">
+        <button class="re-modal-close js-close-demo-modal" aria-label="Close modal">✕</button>
+        <h3>Book a Free Live Demo</h3>
+        <p>Get a personalized walkthrough of our Real Estate SaaS platform with a solutions expert.</p>
+        <form class="re-modal-form" onsubmit="event.preventDefault(); alert('Thank you! Our real estate specialist will contact you shortly.'); document.querySelector('.js-demo-modal').classList.remove('active');">
+          <div class="re-form-group">
+            <label>Full Name *</label>
+            <input type="text" placeholder="John Doe" required />
+          </div>
+          <div class="re-form-group">
+            <label>Work Email *</label>
+            <input type="email" placeholder="john@company.com" required />
+          </div>
+          <div class="re-form-group">
+            <label>Phone Number *</label>
+            <input type="tel" placeholder="+1 (555) 000-0000" required />
+          </div>
+          <div class="re-form-group">
+            <label>Business Type</label>
+            <select>
+              <option>Real Estate Developer</option>
+              <option>Property Builder</option>
+              <option>Property Management Firm</option>
+              <option>Real Estate Agency / Broker</option>
+              <option>Commercial Property Owner</option>
+            </select>
+          </div>
+          <button type="submit" class="re-btn re-btn-primary w-full">Request Demo Now</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</Layout>
+
+<script>
+  // Client-side interactions
+  document.addEventListener('DOMContentLoaded', () => {
+    // Module Tabs
+    const modTabs = document.querySelectorAll('.js-module-nav .re-mod-tab');
+    const modPanels = document.querySelectorAll('.re-mod-panel');
+
+    modTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetId = tab.getAttribute('data-target');
+        modTabs.forEach(t => t.classList.remove('active'));
+        modPanels.forEach(p => p.classList.remove('active'));
+        
+        tab.classList.add('active');
+        const targetPanel = document.getElementById(targetId);
+        if (targetPanel) targetPanel.classList.add('active');
+      });
+    });
+
+    // Showcase Tabs
+    const scTabs = document.querySelectorAll('.re-sc-tab');
+    const scViews = document.querySelectorAll('.re-sc-view');
+
+    scTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const viewId = tab.getAttribute('data-view');
+        scTabs.forEach(t => t.classList.remove('active'));
+        scViews.forEach(v => v.classList.remove('active'));
+
+        tab.classList.add('active');
+        const targetView = document.getElementById(viewId);
+        if (targetView) targetView.classList.add('active');
+      });
+    });
+
+    // Modal Trigger
+    const modal = document.querySelector('.js-demo-modal');
+    const openBtns = document.querySelectorAll('.js-open-demo-modal');
+    const closeBtn = document.querySelector('.js-close-demo-modal');
+
+    openBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (modal) modal.classList.add('active');
+      });
+    });
+
+    if (closeBtn && modal) {
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+      });
+    }
+
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('active');
+      });
+    }
+  });
+</script>
+
+<style>
+  /* DESIGN SYSTEM & CONSTANTS */
+  :root {
+    --re-blue: #2563eb;
+    --re-blue-hover: #1d4ed8;
+    --re-emerald: #10b981;
+    --re-emerald-hover: #059669;
+    --re-ink: #0f172a;
+    --re-slate: #475569;
+    --re-light-bg: #f8fafc;
+    --re-blue-light: #eff6ff;
+    --re-emerald-light: #ecfdf5;
+    --re-border: #e2e8f0;
+    --re-radius: 18px;
+    --re-radius-sm: 12px;
+    --re-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.1);
+  }
+
+  .re-wrapper {
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    color: var(--re-ink);
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+
+  .re-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* TYPOGRAPHY & BUTTONS */
+  .re-section-header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 56px auto;
+  }
+
+  .re-sub-eyebrow {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--re-blue);
+    background: var(--re-blue-light);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+  }
+
+  .re-section-header h2 {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-weight: 800;
+    color: var(--re-ink);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+
+  .re-section-header p {
+    font-size: 1.125rem;
+    color: var(--re-slate);
+    line-height: 1.6;
+  }
+
+  .re-gradient-text {
+    background: linear-gradient(135deg, var(--re-blue) 0%, var(--re-emerald) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .re-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 14px 28px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: none;
+    text-decoration: none;
+  }
+
+  .re-btn-primary {
+    background: linear-gradient(135deg, var(--re-blue) 0%, #1d4ed8 100%);
+    color: #ffffff;
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
+  }
+
+  .re-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px -5px rgba(37, 99, 235, 0.5);
+  }
+
+  .re-btn-secondary {
+    background: #ffffff;
+    color: var(--re-ink);
+    border: 1px solid var(--re-border);
+  }
+
+  .re-btn-secondary:hover {
+    background: var(--re-light-bg);
+    border-color: #cbd5e1;
+    transform: translateY(-2px);
+  }
+
+  .w-full {
+    width: 100%;
+  }
+
+  /* 1. HERO SECTION */
+  .re-hero {
+    position: relative;
+    padding: 80px 0 100px 0;
+    background: radial-gradient(circle at 50% 0%, #f0f7ff 0%, #ffffff 70%);
+  }
+
+  .re-hero-glow-1 {
+    position: absolute;
+    top: -100px;
+    left: 10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.12) 0%, rgba(255,255,255,0) 70%);
+    pointer-events: none;
+  }
+
+  .re-hero-glow-2 {
+    position: absolute;
+    top: 100px;
+    right: 10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, rgba(255,255,255,0) 70%);
+    pointer-events: none;
+  }
+
+  .re-hero-top {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 60px auto;
+  }
+
+  .re-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--re-blue);
+    margin-bottom: 24px;
+  }
+
+  .re-badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--re-emerald);
+    box-shadow: 0 0 10px var(--re-emerald);
+  }
+
+  .re-hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--re-ink);
+    margin-bottom: 20px;
+  }
+
+  .re-hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    color: var(--re-slate);
+    line-height: 1.6;
+    margin-bottom: 36px;
+  }
+
+  .re-hero-cta-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .re-hero-trust-tags {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    font-size: 0.925rem;
+    font-weight: 600;
+    color: #334155;
+  }
+
+  .re-trust-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* HERO DASHBOARD MOCKUP */
+  .re-hero-dashboard {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .re-dash-window {
+    background: #ffffff;
+    border-radius: var(--re-radius);
+    border: 1px solid var(--re-border);
+    box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.15);
+    overflow: hidden;
+  }
+
+  .re-dash-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: #f8fafc;
+    border-bottom: 1px solid var(--re-border);
+  }
+
+  .re-dash-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .re-dash-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .re-dash-dot.red { background: #ef4444; }
+  .re-dash-dot.yellow { background: #f59e0b; }
+  .re-dash-dot.green { background: #10b981; }
+
+  .re-dash-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid var(--re-border);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    width: 320px;
+  }
+
+  .re-dash-user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .re-status-online {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--re-emerald);
+  }
+
+  .re-dash-body {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    min-height: 480px;
+  }
+
+  .re-dash-sidebar {
+    background: #f8fafc;
+    border-right: 1px solid var(--re-border);
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .re-side-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--re-slate);
+    cursor: pointer;
+  }
+
+  .re-side-item.active, .re-side-item:hover {
+    background: var(--re-blue-light);
+    color: var(--re-blue);
+    font-weight: 600;
+  }
+
+  .re-dash-main {
+    padding: 24px;
+    background: #ffffff;
+    position: relative;
+  }
+
+  .re-metrics-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .re-metric-card {
+    background: #ffffff;
+    border: 1px solid var(--re-border);
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  }
+
+  .re-metric-icon {
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .re-metric-icon.blue { background: var(--re-blue-light); }
+  .re-metric-icon.emerald { background: var(--re-emerald-light); }
+  .re-metric-icon.purple { background: #f3e8ff; }
+  .re-metric-icon.amber { background: #fef3c7; }
+
+  .re-metric-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #64748b;
+  }
+
+  .re-metric-value {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--re-ink);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .re-pill {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 999px;
+  }
+
+  .re-pill.green { background: #dcfce7; color: #15803d; }
+  .re-pill.blue { background: #dbeafe; color: #1d4ed8; }
+
+  .re-metric-sub {
+    font-size: 0.75rem;
+    color: #94a3b8;
+  }
+
+  /* VIZ ROW */
+  .re-dash-viz-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 20px;
+  }
+
+  .re-viz-card {
+    background: #f8fafc;
+    border: 1px solid var(--re-border);
+    border-radius: 12px;
+    padding: 18px;
+  }
+
+  .re-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .re-card-header h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+
+  .re-time-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--re-blue);
+    background: #ffffff;
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 1px solid var(--re-border);
+  }
+
+  .re-live-pulse {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #ef4444;
+    background: #fee2e2;
+    padding: 3px 8px;
+    border-radius: 999px;
+  }
+
+  .re-bar-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 140px;
+    padding-top: 10px;
+  }
+
+  .re-bar-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    height: 100%;
+    justify-content: flex-end;
+    width: 28px;
+  }
+
+  .re-bar {
+    width: 100%;
+    background: #cbd5e1;
+    border-radius: 6px;
+    transition: height 0.5s ease;
+  }
+
+  .re-bar.highlight {
+    background: linear-gradient(180deg, var(--re-blue) 0%, #1d4ed8 100%);
+  }
+
+  .re-bar-col span {
+    font-size: 0.7rem;
+    color: #64748b;
+  }
+
+  .re-pipeline-stages {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .re-stage-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+  }
+
+  .re-progress-bar {
+    height: 8px;
+    background: #e2e8f0;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+
+  .re-progress-fill {
+    height: 100%;
+    background: var(--re-blue);
+    border-radius: 999px;
+  }
+
+  .re-progress-fill.green {
+    background: var(--re-emerald);
+  }
+
+  /* Floating Badges */
+  .re-dash-floating-badge {
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid var(--re-border);
+    padding: 10px 16px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+    animation: float 4s ease-in-out infinite alternate;
+  }
+
+  .re-dash-floating-badge.float-1 {
+    top: 40px;
+    right: -20px;
+  }
+
+  .re-dash-floating-badge.float-2 {
+    bottom: 20px;
+    left: -20px;
+  }
+
+  .re-dash-floating-badge .txt {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .re-dash-floating-badge strong {
+    font-size: 0.8rem;
+    color: var(--re-ink);
+  }
+
+  .re-dash-floating-badge small {
+    font-size: 0.7rem;
+    color: #64748b;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-8px); }
+  }
+
+  /* 2. TRUSTED BY SECTION */
+  .re-trusted {
+    padding: 50px 0;
+    border-top: 1px solid var(--re-border);
+    border-bottom: 1px solid var(--re-border);
+    background: var(--re-light-bg);
+  }
+
+  .re-trusted-heading {
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    margin-bottom: 30px;
+  }
+
+  .re-logos-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .re-logo-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #334155;
+  }
+
+  /* 3. BUSINESS CHALLENGES SECTION */
+  .re-challenges {
+    padding: 100px 0;
+  }
+
+  .re-challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 24px;
+  }
+
+  .re-challenge-card {
+    background: #ffffff;
+    border: 1px solid var(--re-border);
+    border-radius: var(--re-radius);
+    padding: 28px;
+    transition: all 0.3s ease;
+  }
+
+  .re-challenge-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -15px rgba(0,0,0,0.08);
+    border-color: #cbd5e1;
+  }
+
+  .re-ch-icon {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  .re-challenge-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--re-ink);
+  }
+
+  .re-challenge-card p {
+    font-size: 0.95rem;
+    color: var(--re-slate);
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+
+  .re-ch-solution {
+    font-size: 0.875rem;
+    color: var(--re-blue);
+    background: var(--re-blue-light);
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+
+  .re-ch-solution span {
+    font-weight: 700;
+  }
+
+  /* 4. WHY CHOOSE OUR SOLUTION */
+  .re-why {
+    padding: 100px 0;
+    background: var(--re-light-bg);
+  }
+
+  .re-why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .re-why-card {
+    background: #ffffff;
+    border: 1px solid var(--re-border);
+    border-radius: var(--re-radius);
+    padding: 28px;
+    transition: all 0.3s ease;
+  }
+
+  .re-why-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--re-shadow);
+    border-color: rgba(37, 99, 235, 0.3);
+  }
+
+  .re-why-icon {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+  }
+
+  .re-why-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .re-why-card p {
+    font-size: 0.925rem;
+    color: var(--re-slate);
+    line-height: 1.5;
+  }
+
+  /* 5. COMPLETE SOFTWARE MODULES */
+  .re-modules {
+    padding: 100px 0;
+  }
+
+  .re-modules-container {
+    background: #ffffff;
+    border: 1px solid var(--re-border);
+    border-radius: var(--re-radius);
+    box-shadow: 0 20px 50px -10px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+
+  .re-module-nav {
+    display: flex;
+    overflow-x: auto;
+    background: #f8fafc;
+    border-bottom: 1px solid var(--re-border);
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .re-mod-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--re-slate);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+  }
+
+  .re-mod-tab.active, .re-mod-tab:hover {
+    background: #ffffff;
+    color: var(--re-blue);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+
+  .re-module-panels {
+    padding: 40px;
+  }
+
+  .re-mod-panel {
+    display: none;
+  }
+
+  .re-mod-panel.active {
+    display: block;
+  }
+
+  .re-mod-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .re-mod-info h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 14px;
+    color: var(--re-ink);
+  }
+
+  .re-mod-info p {
+    font-size: 1.05rem;
+    color: var(--re-slate);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+
+  .re-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .re-check-list li {
+    font-size: 0.95rem;
+    color: #334155;
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .re-check-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--re-emerald);
+    font-weight: 900;
+    font-size: 1.1rem;
+  }
+
+  .re-check-list li span {
+    font-weight: 700;
+    color: var(--re-ink);
+  }
+
+  .re-preview-card {
+    background: #f8fafc;
+    border: 1px solid var(--re-border);
+    border-radius: 14px;
+    padding: 24px;
+  }
+
+  .re-prev-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .re-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+
+  .re-tag.green { background: #dcfce7; color: #15803d; }
+  .re-tag.blue { background: #dbeafe; color: #1d4ed8; }
+  .re-tag.purple { background: #f3e8ff; color: #7e22ce; }
+  .re-tag.emerald { background: #ecfdf5; color: #047857; }
+
+  /* Unit grid mockup */
+  .re-unit-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .re-unit {
+    padding: 12px 6px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  .re-unit.avail { background: #dcfce7; color: #15803d; border: 1px solid #86efac; }
+  .re-unit.hold { background: #fef3c7; color: #b45309; border: 1px solid #fde047; }
+  .re-unit.sold { background: #fee2e2; color: #b91c1c; border: 1px solid #fca5a5; }
+
+  .re-legend {
+    display: flex;
+    gap: 16px;
+    font-size: 0.75rem;
+    color: #64748b;
+  }
+
+  .lg-item { display: flex; align-items: center; gap: 6px; }
+  .lg-item i.dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .lg-item i.dot.avail { background: #22c55e; }
+  .lg-item i.dot.hold { background: #f59e0b; }
+  .lg-item i.dot.sold { background: #ef4444; }
+
+  /* Kanban mockup */
+  .re-kanban-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .kb-col {
+    background: #ffffff;
+    border: 1px solid var(--re-border);
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .kb-col h4 { font-size: 0.8rem; margin-bottom: 10px; color: #64748b; }
+  .kb-card { background: #f1f5f9; padding: 8px; border-radius: 6px; font-size: 0.75rem; margin-bottom: 6px; }
+  .kb-card.highlight { background: var(--re-blue-light); border: 1px solid #bfdbfe; color: var(--re-blue); font-weight: 600; }
+
+  /* Chat mockup */
+  .re-chat-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .chat-msg { padding: 12px 14px; border-radius: 12px; font-size: 0.85rem; max-width: 85%; }
+  .chat-msg.incoming { background: #ffffff; border: 1px solid var(--re-border); align-self: flex-start; }
+  .chat-msg.outgoing { background: var(--re-emerald-light); border: 1px solid #a7f3d0; color: #065f46; align-self: flex-end; }
+  .chat-status { font-size: 0.75rem; color: #059669; text-align: right; }
+
+  /* Calc mockup */
+  .re-calc-preview { display: flex; flex-direction: column; gap: 10px; }
+  .calc-row { display: flex; justify-content: space-between; padding: 10px; background: #ffffff; border-radius: 8px; font-size: 0.85rem; border: 1px solid var(--re-border); }
+  .calc-row.highlight { background: var(--re-blue-light); border-color: #93c5fd; }
+
+  /* Rent mockup */
+  .re-rent-preview { display: flex; flex-direction: column; gap: 10px; }
+  .rent-item { display: flex; justify-content: space-between; padding: 12px; background: #ffffff; border-radius: 8px; font-size: 0.85rem; border: 1px solid var(--re-border); }
+
+  /* Project mockup */
+  .re-proj-progress { display: flex; flex-direction: column; gap: 14px; }
+  .proj-step { display: flex; flex-direction: column; gap: 6px; font-size: 0.85rem; }
+  .proj-step .bar { height: 8px; background: #e2e8f0; border-radius: 999px; overflow: hidden; }
+  .proj-step .fill { height: 100%; border-radius: 999px; }
+  .proj-step .fill.green { background: var(--re-emerald); }
+  .proj-step .fill.blue { background: var(--re-blue); }
+
+  /* Finance mockup */
+  .re-fin-summary { display: flex; flex-direction: column; gap: 10px; }
+  .fin-stat { display: flex; justify-content: space-between; padding: 12px; background: #ffffff; border-radius: 8px; font-size: 0.875rem; border: 1px solid var(--re-border); }
+  .fin-stat.highlight { background: var(--re-emerald-light); border-color: #a7f3d0; color: #065f46; font-weight: 700; }
+
+  /* Reports mockup */
+  .re-rep-preview { height: 140px; display: flex; align-items: flex-end; }
+  .rep-bar-wrap { display: flex; align-items: flex-end; justify-content: space-around; width: 100%; height: 100%; }
+  .rep-bar-item { display: flex; flex-direction: column; align-items: center; gap: 6px; height: 100%; justify-content: flex-end; }
+  .rep-bar-item span { width: 32px; background: #cbd5e1; border-radius: 6px; }
+  .rep-bar-item.highlight span { background: var(--re-blue); }
+
+  /* 6. INDUSTRIES WE SERVE */
+  .re-industries {
+    padding: 100px 0;
+    background: var(--re-light-bg);
+  }
+
+  .re-ind-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .re-ind-card {
+    background: #ffffff;
+    border: 1px solid var(--re-border);
+    border-radius: var(--re-radius);
+    padding: 28px;
+    transition: all 0.3s ease;
+  }
+
+  .re-ind-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+    border-color: var(--re-blue);
+  }
+
+  .re-ind-icon {
+    font-size: 2.4rem;
+    margin-bottom: 16px;
+  }
+
+  .re-ind-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  .re-ind-card p {
+    font-size: 0.925rem;
+    color: var(--re-slate);
+    line-height: 1.5;
+  }
+
+  /* 7. BUSINESS BENEFITS */
+  .re-benefits {
+    padding: 100px 0;
+  }
+
+  .re-ben-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+
+  .re-ben-card {
+    background: #ffffff;
+    border: 1px solid var(--re-border);
+    border-radius: var(--re-radius);
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .re-ben-stat {
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: var(--re-blue);
+    margin-bottom: 12px;
+  }
+
+  .re-ben-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .re-ben-card p {
+    font-size: 0.925rem;
+    color: var(--re-slate);
+    line-height: 1.5;
+  }
+
+  /* 8. WORKFLOW SECTION */
+  .re-workflow {
+    padding: 100px 0;
+    background: var(--re-light-bg);
+  }
+
+  .re-wf-pipeline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 20px 0;
+  }
+
+  .re-wf-step {
+    background: #ffffff;
+    border: 1px solid var(--re-border);
+    border-radius: 14px;
+    padding: 20px 16px;
+    min-width: 130px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    position: relative;
+  }
+
+  .re-wf-num {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--re-blue);
+    margin-bottom: 6px;
+  }
+
+  .re-wf-icon {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+
+  .re-wf-step h4 {
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .re-wf-step p {
+    font-size: 0.75rem;
+    color: var(--re-slate);
+    line-height: 1.3;
+  }
+
+  .re-wf-arrow {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    font-weight: 700;
+  }
+
+  /* 9. DASHBOARD SHOWCASE */
+  .re-showcase {
+    padding: 100px 0;
+  }
+
+  .re-sc-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+
+  .re-sc-tab {
+    padding: 10px 20px;
+    border-radius: 999px;
+    border: 1px solid var(--re-border);
+    background: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--re-slate);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .re-sc-tab.active, .re-sc-tab:hover {
+    background: var(--re-blue);
+    color: #ffffff;
+    border-color: var(--re-blue);
+  }
+
+  .re-mockup-frame {
+    background: #ffffff;
+    border: 1px solid var(--re-border);
+    border-radius: var(--re-radius);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .re-frame-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px;
+    background: #f1f5f9;
+    border-bottom: 1px solid var(--re-border);
+  }
+
+  .re-frame-top .dots { display: flex; gap: 6px; }
+  .re-frame-top .dots span { width: 10px; height: 10px; border-radius: 50%; }
+  .re-frame-top .dots .r { background: #ef4444; }
+  .re-frame-top .dots .y { background: #f59e0b; }
+  .re-frame-top .dots .g { background: #10b981; }
+
+  .re-frame-top .url-bar {
+    background: #ffffff;
+    border: 1px solid var(--re-border);
+    padding: 4px 14px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: #64748b;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .re-frame-body {
+    padding: 40px;
+    min-height: 280px;
+  }
+
+  .re-sc-view { display: none; }
+  .re-sc-view.active { display: block; }
+
+  .mock-hdr { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+  .mock-hdr h2 { font-size: 1.4rem; font-weight: 800; }
+  .mock-stats-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+  .m-card { background: var(--re-light-bg); padding: 18px; border-radius: 12px; border: 1px solid var(--re-border); }
+  .m-card span { font-size: 0.8rem; color: #64748b; display: block; margin-bottom: 4px; }
+  .m-card strong { font-size: 1.2rem; color: var(--re-ink); }
+  .mock-desc { font-size: 1.05rem; color: var(--re-slate); line-height: 1.6; }
+
+  /* 10. INTEGRATIONS SECTION */
+  .re-integrations {
+    padding: 100px 0;
+    background: var(--re-light-bg);
+  }
+
+  .re-int-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .re-int-card {
+    background: #ffffff;
+    border: 1px solid var(--re-border);
+    border-radius: 14px;
+    padding: 22px;
+    transition: all 0.25s ease;
+  }
+
+  .re-int-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  }
+
+  .re-int-icon { font-size: 2rem; margin-bottom: 12px; }
+  .re-int-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px; }
+  .re-int-card p { font-size: 0.85rem; color: var(--re-slate); line-height: 1.4; }
+
+  /* 11. STATISTICS SECTION */
+  .re-stats {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+  }
+
+  .re-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    text-align: center;
+  }
+
+  .re-stat-num {
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 900;
+    color: #38bdf8;
+    margin-bottom: 8px;
+  }
+
+  .re-stat-lbl {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #94a3b8;
+  }
+
+  /* 12. TESTIMONIALS */
+  .re-testimonials {
+    padding: 100px 0;
+  }
+
+  .re-test-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+  }
+
+  .re-test-card {
+    background: #ffffff;
+    border: 1px solid var(--re-border);
+    border-radius: var(--re-radius);
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .re-stars { color: #f59e0b; font-size: 1.1rem; margin-bottom: 16px; }
+  .re-quote { font-size: 1rem; color: #334155; line-height: 1.6; margin-bottom: 24px; font-style: italic; }
+
+  .re-author { display: flex; align-items: center; gap: 14px; }
+  .re-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--re-blue);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+
+  .re-author-info strong { display: block; font-size: 0.95rem; color: var(--re-ink); }
+  .re-author-info span { font-size: 0.8rem; color: var(--re-slate); }
+
+  /* 13. FAQ SECTION */
+  .re-faq {
+    padding: 100px 0;
+    background: var(--re-light-bg);
+  }
+
+  .re-faq-list {
+    max-width: 840px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .re-faq-item {
+    background: #ffffff;
+    border: 1px solid var(--re-border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .re-faq-question {
+    padding: 20px 24px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--re-ink);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  .re-faq-question::-webkit-details-marker { display: none; }
+
+  .re-faq-answer {
+    padding: 0 24px 20px 24px;
+    font-size: 1rem;
+    color: var(--re-slate);
+    line-height: 1.6;
+  }
+
+  .re-faq-item[open] .re-faq-icon {
+    transform: rotate(180deg);
+  }
+
+  .re-faq-icon {
+    transition: transform 0.25s ease;
+  }
+
+  /* 14. FINAL CTA */
+  .re-cta-section {
+    padding: 100px 0;
+  }
+
+  .re-cta-box {
+    position: relative;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border-radius: 24px;
+    padding: 64px 32px;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden;
+  }
+
+  .re-cta-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, rgba(0,0,0,0) 70%);
+    pointer-events: none;
+  }
+
+  .re-cta-box h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 16px;
+  }
+
+  .re-cta-box p {
+    font-size: 1.15rem;
+    color: #cbd5e1;
+    max-width: 680px;
+    margin: 0 auto 36px auto;
+  }
+
+  .re-cta-btns {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  /* MODAL POPUP */
+  .re-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .re-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .re-modal-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 36px;
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+  }
+
+  .re-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #f1f5f9;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .re-modal-card h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 6px; }
+  .re-modal-card p { font-size: 0.9rem; color: var(--re-slate); margin-bottom: 24px; }
+
+  .re-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  .re-form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--re-ink);
+  }
+
+  .re-form-group input, .re-form-group select {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid var(--re-border);
+    font-size: 0.95rem;
+  }
+
+  /* MEDIA QUERIES FOR RESPONSIVENESS */
+  @media (max-width: 992px) {
+    .re-dash-body { grid-template-columns: 1fr; }
+    .re-dash-sidebar { display: none; }
+    .re-mod-grid { grid-template-columns: 1fr; }
+    .re-dash-viz-row { grid-template-columns: 1fr; }
+    .re-dash-floating-badge { display: none; }
+  }
+
+  @media (max-width: 600px) {
+    .re-module-panels { padding: 20px; }
+    .re-unit-grid { grid-template-columns: repeat(2, 1fr); }
+    .mock-stats-3 { grid-template-columns: 1fr; }
+    .re-cta-box { padding: 40px 20px; }
+  }
+</style>

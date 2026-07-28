@@ -362,6 +362,12 @@ export const solutionPages = [
     description: "Complete retail business management platform powered by Odoo ERP. Inventory, POS, eCommerce, CRM, accounting & live analytics.",
     keyword: "Retail ERP software Odoo",
   },
+  {
+    slug: "real-estate-software-solutions",
+    title: "Real Estate Software Solutions",
+    description: "All-in-one real estate ERP & CRM platform to manage properties, sales, leads, rentals, contracts, projects, finance, and customer relationships.",
+    keyword: "Real Estate Software Solutions",
+  },
 ];
 
 export const industryPages = [
