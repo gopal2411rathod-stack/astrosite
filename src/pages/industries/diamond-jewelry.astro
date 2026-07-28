@@ -35,192 +35,6 @@ const djSchema = [
     })),
   },
 ];
-
-const challenges = [
-  { title: "Manual Inventory", desc: "Tracking thousands of SKUs manually leads to errors, stock mismatches, and lost revenue every day." },
-  { title: "Billing Errors", desc: "Manual GST calculations and billing cause compliance issues, customer disputes, and costly corrections." },
-  { title: "Manufacturing Delays", desc: "Lack of production tracking creates job work delays and missed delivery commitments to customers." },
-  { title: "Stock Mismatch", desc: "Disconnected systems mean physical stock never matches system records, hurting business decisions." },
-  { title: "Customer Follow-ups", desc: "Sales teams miss follow-ups leading to lost orders and poor customer relationship management." },
-  { title: "Multi-Branch Management", desc: "Managing multiple showrooms without a unified system is chaotic and impossible to scale." },
-  { title: "Certificate Tracking", desc: "Diamond certificates get lost or misplaced without a linked digital system for each stone." },
-  { title: "Inaccurate Reporting", desc: "Decisions based on incomplete or outdated reports directly damage profitability and growth." },
-];
-
-const features = [
-  {
-    title: "Cloud ERP",
-    desc: "Access your entire jewelry business from any device, anywhere, with enterprise-grade uptime.",
-    svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>`,
-  },
-  {
-    title: "Real-Time Inventory",
-    desc: "Instant stock updates across all branches with zero manual intervention and live visibility.",
-    svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`,
-  },
-  {
-    title: "Barcode & RFID",
-    desc: "Lightning-fast item scanning for billing, stock audits, and inventory transfers across branches.",
-    svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5v14M7 5v14M11 5v14M15 5v14M19 5v14M21 9h-3M21 15h-3M3 9H1M3 15H1"/></svg>`,
-  },
-  {
-    title: "AI Analytics",
-    desc: "Predictive insights on sales trends, low-stock alerts, and profit opportunities powered by data.",
-    svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>`,
-  },
-  {
-    title: "Secure Cloud Backup",
-    desc: "Military-grade encryption with automated daily backups and full disaster recovery protection.",
-    svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
-  },
-  {
-    title: "Mobile Access",
-    desc: "Full platform access on iOS and Android for managers and field staff, anytime anywhere.",
-    svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>`,
-  },
-  {
-    title: "Multi-Branch Support",
-    desc: "Centralized control of unlimited showrooms, warehouses, and retail outlets from one system.",
-    svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
-  },
-  {
-    title: "Role-Based Access",
-    desc: "Granular permissions ensure staff only see and modify what they are authorized to access.",
-    svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`,
-  },
-  {
-    title: "GST Ready",
-    desc: "Automated GST invoice generation, HSN codes, and return filing reports built directly in.",
-    svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>`,
-  },
-  {
-    title: "Fast Performance",
-    desc: "Sub-second response times even at peak load with 20,000+ daily transactions processed.",
-    svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
-  },
-];
-
-const modules = [
-  {
-    title: "Inventory Management",
-    svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>`,
-    items: ["Gold Inventory", "Diamond Inventory", "Gemstone Inventory", "Lot Tracking", "Barcode Support", "RFID Integration", "Stock Transfer"],
-  },
-  {
-    title: "Manufacturing",
-    svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M5.34 17.66l-1.41 1.41M22 12h-2M4 12H2m17.07 7.07l-1.41-1.41M5.34 6.34L3.93 4.93M12 22v-2M12 4V2"/></svg>`,
-    items: ["Production Planning", "Job Work", "Casting & Polishing", "Stone Setting", "Quality Check", "Cost Tracking"],
-  },
-  {
-    title: "Retail POS",
-    svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>`,
-    items: ["Fast Billing", "GST Invoice", "Returns & Exchange", "Offers & Discounts", "Receipt Printing"],
-  },
-  {
-    title: "Wholesale",
-    svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>`,
-    items: ["Quotations", "Bulk Orders", "Customer Pricing", "Export Orders"],
-  },
-  {
-    title: "CRM",
-    svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-    items: ["Customer Database", "Follow-ups", "Loyalty Program", "WhatsApp Integration"],
-  },
-  {
-    title: "Accounting",
-    svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>`,
-    items: ["Ledger", "Balance Sheet", "Profit & Loss", "GST Reports", "Tax Reports"],
-  },
-  {
-    title: "Diamond Management",
-    svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/></svg>`,
-    items: ["GIA Certificates", "IGI Certificates", "HRD Certificates", "Rapaport Pricing", "Stone Details", "Parcel Management"],
-  },
-  {
-    title: "Reports & Analytics",
-    svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>`,
-    items: ["Sales Analytics", "Profit Reports", "Inventory Reports", "Manufacturing Reports", "Customer Reports"],
-  },
-];
-
-const industries = [
-  { title: "Jewelry Manufacturers", desc: "End-to-end manufacturing, quality control, and costing workflows.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M5.34 17.66l-1.41 1.41M22 12h-2M4 12H2m17.07 7.07l-1.41-1.41M5.34 6.34L3.93 4.93M12 22v-2M12 4V2"/></svg>` },
-  { title: "Diamond Manufacturers", desc: "Rough to polished stone tracking with full certificate management.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/></svg>` },
-  { title: "Jewelry Retail Stores", desc: "POS, billing, customer loyalty, and showroom analytics in one platform.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>` },
-  { title: "Jewelry Wholesalers", desc: "Bulk pricing, trade catalogs, quotations, and order management.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>` },
-  { title: "Diamond Traders", desc: "Parcel management, Rapaport pricing, and certificate-linked trading.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>` },
-  { title: "Gold Traders", desc: "Purity tracking, hallmarking, and gold rate-linked billing workflows.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>` },
-  { title: "Gemstone Dealers", desc: "Origin, treatment, certification, and gemstone inventory management.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>` },
-  { title: "Export Houses", desc: "Export documentation, international pricing, and trade compliance.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>` },
-  { title: "Multi-Store Jewelry Chains", desc: "Centralized inventory, unified reporting, and inter-branch transfers.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>` },
-];
-
-const benefits = [
-  { stat: "99.9%", label: "Inventory Accuracy", desc: "Eliminate manual errors and achieve near-perfect stock accuracy across branches.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>` },
-  { stat: "3x", label: "Faster Billing", desc: "Reduce billing time from minutes to seconds with smart barcode POS.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>` },
-  { stat: "80%", label: "Less Manual Work", desc: "Automate repetitive tasks and free your team for customer-facing work.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M5.34 17.66l-1.41 1.41M22 12h-2M4 12H2m17.07 7.07l-1.41-1.41M5.34 6.34L3.93 4.93M12 22v-2M12 4V2"/></svg>` },
-  { stat: "+40%", label: "Higher Profitability", desc: "Data-driven decisions on pricing, margins, and category performance.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>` },
-  { stat: "5★", label: "Customer Experience", desc: "Delight customers with faster service and personalized loyalty interactions.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>` },
-  { stat: "Live", label: "Smart Analytics", desc: "Real-time dashboards give instant business intelligence whenever you need it.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>` },
-  { stat: "256b", label: "Cloud Security", desc: "Bank-grade encryption protecting every business transaction and customer record.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>` },
-  { stat: "100%", label: "Business Automation", desc: "From purchase order to final report, automate the entire business lifecycle.", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>` },
-];
-
-const workflow = [
-  { step: "01", label: "Purchase", desc: "Vendor orders, gold & diamond procurement", svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>` },
-  { step: "02", label: "Inventory", desc: "Stock receipt, tagging, and valuation", svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>` },
-  { step: "03", label: "Manufacturing", desc: "Production orders, casting, and polishing", svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M5.34 17.66l-1.41 1.41M22 12h-2M4 12H2"/></svg>` },
-  { step: "04", label: "Quality Check", desc: "Inspection, certifications, and approval", svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>` },
-  { step: "05", label: "Sales", desc: "Retail POS, wholesale, eCommerce orders", svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>` },
-  { step: "06", label: "Invoice", desc: "GST billing, receipts, and certificates", svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>` },
-  { step: "07", label: "Accounting", desc: "Ledger, P&L, balance sheet, GST filing", svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>` },
-  { step: "08", label: "Reports", desc: "Analytics, insights, and forecasting", svg: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>` },
-];
-
-const integrations = [
-  { name: "Tally", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>` },
-  { name: "WhatsApp", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>` },
-  { name: "Email", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>` },
-  { name: "SMS", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="13" x2="12" y2="13"/></svg>` },
-  { name: "Barcode Scanner", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5v14M7 5v14M11 5v14M15 5v14M19 5v14M21 9h-3M21 15h-3M3 9H1M3 15H1"/></svg>` },
-  { name: "RFID", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6C1 6 5 2 12 2s11 4 11 4"/><path d="M1 12s4-3 11-3 11 3 11 3"/><path d="M1 18s4-4 11-4 11 4 11 4"/><circle cx="12" cy="21" r="1"/></svg>` },
-  { name: "Payment Gateway", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>` },
-  { name: "GST Portal", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/></svg>` },
-  { name: "GIA", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg>` },
-  { name: "IGI", svg: `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>` },
-];
-
-const stats = [
-  { value: "500+", label: "Businesses Served", svg: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>` },
-  { value: "20K+", label: "Daily Transactions", svg: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>` },
-  { value: "99.9%", label: "Accuracy Rate", svg: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>` },
-  { value: "24/7", label: "Expert Support", svg: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>` },
-  { value: "15+", label: "Years Experience", svg: `<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>` },
-];
-
-const testimonials = [
-  {
-    name: "Rajesh Mehta",
-    company: "Mehta Diamond House, Surat",
-    role: "Managing Director",
-    initials: "RM",
-    text: "Before Hegrix, our inventory was a nightmare. We had 50,000+ diamonds and no real-time visibility. Now every stone is tracked from rough purchase to GIA-certified sale. Billing errors dropped to near zero.",
-  },
-  {
-    name: "Priya Jain",
-    company: "Jain Jewellers, Mumbai",
-    role: "Operations Manager",
-    initials: "PJ",
-    text: "The WhatsApp integration changed everything for our CRM. We send custom jewelry designs, quotes, and GST invoices directly to customers. Our conversion rate improved by 35% in just 3 months.",
-  },
-  {
-    name: "Arun Shah",
-    company: "Shah Gold Chains, Ahmedabad",
-    role: "CEO",
-    initials: "AS",
-    text: "We have 8 branches and used to spend 3 days on month-end reconciliation. Now it takes 2 hours and the data is 99.8% accurate. The multi-branch dashboard is simply outstanding.",
-  },
-];
 ---
 
 <Layout
@@ -231,1013 +45,1223 @@ const testimonials = [
   schema={djSchema}
 >
 
-  <!-- HERO -->
-  <section class="dj-hero">
-    <div class="container dj-hero-grid">
-      <div class="dj-hero-left">
-        <p class="eyebrow">Diamond & Jewelry Software Solutions</p>
-        <h1>Transform Your Diamond & Jewelry Business with Intelligent Software</h1>
-        <p class="lead">
+<div class="dj-page">
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section class="dj-hero-section">
+    <div class="container dj-hero-wrap">
+
+      <!-- Left: Text -->
+      <div class="dj-hero-text">
+        <p class="dj-eyebrow">Diamond &amp; Jewelry Software Solutions</p>
+        <h1 class="dj-hero-h1">
+          Transform Your Diamond &amp; Jewelry Business with
+          <span class="dj-accent"> Intelligent Software</span>
+        </h1>
+        <p class="dj-hero-sub">
           Manage inventory, manufacturing, retail, wholesale, CRM, accounting, certifications, and multi-store operations from one powerful platform built exclusively for the jewelry industry.
         </p>
-        <p class="dj-hero-copy">
-          Purpose-built for manufacturers, retailers, traders, and export houses — with GST, GIA/IGI/HRD certificate management, RFID, barcode, and real-time analytics included.
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="/contact-us/">Book a Free Demo</a>
-          <a class="button button-ghost" href="/contact-us/">Contact Sales</a>
+        <div class="dj-hero-chips">
+          <span>✓ GST Ready</span>
+          <span>✓ Cloud-Based</span>
+          <span>✓ GIA / IGI / HRD</span>
+          <span>✓ Multi-Branch</span>
         </div>
+        <div class="dj-hero-actions">
+          <a href="/contact-us/" class="dj-btn-primary">Book a Free Demo</a>
+          <a href="/contact-us/" class="dj-btn-ghost">Contact Sales</a>
+        </div>
+        <p class="dj-hero-proof">⭐⭐⭐⭐⭐ &nbsp;<strong>4.9/5</strong> · Trusted by 500+ jewelry businesses</p>
       </div>
 
-      <div class="dj-hero-visual" aria-label="Jewelry Business Platform dashboard preview">
-        <div class="dj-dash-top">
-          <span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg>
+      <!-- Right: Dashboard mock -->
+      <div class="dj-hero-card">
+        <div class="dj-card-top">
+          <span class="dj-card-label">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg>
             Jewelry Operations Center
           </span>
-          <strong class="dj-live">● LIVE</strong>
+          <span class="dj-live-dot">● LIVE</span>
         </div>
-        <div class="dj-dash-kpis">
-          <div class="dj-kpi">
-            <strong>₹2.8 Cr</strong>
-            <span>Today's Sales</span>
-          </div>
-          <div class="dj-kpi">
-            <strong>99.8%</strong>
-            <span>Inventory Acc.</span>
-          </div>
-          <div class="dj-kpi">
-            <strong>1,248</strong>
-            <span>Active Orders</span>
-          </div>
-          <div class="dj-kpi">
-            <strong>3,892</strong>
-            <span>Certificates</span>
-          </div>
+
+        <div class="dj-kpi-row">
+          <div class="dj-kpi"><strong>₹2.8 Cr</strong><span>Today's Sales</span></div>
+          <div class="dj-kpi"><strong>99.8%</strong><span>Inventory Acc.</span></div>
+          <div class="dj-kpi"><strong>1,248</strong><span>Active Orders</span></div>
+          <div class="dj-kpi"><strong>3,892</strong><span>Certificates</span></div>
         </div>
-        <div class="dj-dash-chart-area">
-          <p class="dj-chart-lbl">Revenue Analytics — Weekly</p>
-          <div class="dj-bars-row">
-            <div class="dj-bar" style="height:42%"><span>M</span></div>
-            <div class="dj-bar" style="height:65%"><span>T</span></div>
-            <div class="dj-bar" style="height:50%"><span>W</span></div>
-            <div class="dj-bar" style="height:82%"><span>T</span></div>
-            <div class="dj-bar" style="height:70%"><span>F</span></div>
-            <div class="dj-bar dj-bar--hi" style="height:96%"><span>S</span></div>
-            <div class="dj-bar" style="height:58%"><span>S</span></div>
+
+        <div class="dj-chart-box">
+          <p class="dj-chart-title">Revenue Analytics — Weekly</p>
+          <div class="dj-chart-bars">
+            <div class="dj-cbar" style="height:42%"><span>M</span></div>
+            <div class="dj-cbar" style="height:65%"><span>T</span></div>
+            <div class="dj-cbar" style="height:50%"><span>W</span></div>
+            <div class="dj-cbar" style="height:82%"><span>T</span></div>
+            <div class="dj-cbar" style="height:70%"><span>F</span></div>
+            <div class="dj-cbar dj-cbar--hi" style="height:96%"><span>S</span></div>
+            <div class="dj-cbar" style="height:58%"><span>S</span></div>
           </div>
         </div>
-        <div class="dj-flow-pills">
-          <span>Inventory</span>
-          <span>Manufacturing</span>
-          <span>POS</span>
-          <span>Diamonds</span>
+
+        <div class="dj-pill-row">
+          <span>📦 Inventory</span>
+          <span>⚙️ Manufacturing</span>
+          <span>🏪 POS</span>
+          <span>💎 Diamonds</span>
         </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       TRUSTED BY
+  ═══════════════════════════════════════ -->
+  <div class="dj-trust-bar">
+    <div class="container">
+      <p class="dj-trust-label">Trusted by Jewelry Manufacturers, Retailers &amp; Diamond Traders</p>
+      <div class="dj-trust-logos">
+        <span>Surat Diamond Exchange</span>
+        <span>Jaipur Gems House</span>
+        <span>Mumbai Gold Traders</span>
+        <span>Delhi Jewels Co.</span>
+        <span>Chennai Diamonds</span>
+        <span>Kolkata Goldsmiths</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       CHALLENGES
+  ═══════════════════════════════════════ -->
+  <section class="dj-section dj-section--soft">
+    <div class="container">
+      <div class="dj-section-head">
+        <p class="dj-eyebrow">Industry Challenges</p>
+        <h2 class="dj-section-title">Problems Costing Your Business Time &amp; Money Every Day</h2>
+        <p class="dj-section-desc">The jewelry industry operates with extreme complexity. Manual processes and disconnected systems create costly inefficiencies that are hard to fix without the right platform.</p>
+      </div>
+      <div class="dj-grid-4">
+
+        <div class="dj-ch-card">
+          <div class="dj-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3 class="dj-card-title">Manual Inventory</h3>
+          <p class="dj-card-desc">Tracking thousands of SKUs manually leads to errors, stock mismatches, and lost revenue every day.</p>
+        </div>
+
+        <div class="dj-ch-card">
+          <div class="dj-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3 class="dj-card-title">Billing Errors</h3>
+          <p class="dj-card-desc">Manual GST calculations and billing cause compliance issues, customer disputes, and costly corrections.</p>
+        </div>
+
+        <div class="dj-ch-card">
+          <div class="dj-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M5.34 17.66l-1.41 1.41M22 12h-2M4 12H2m17.07 7.07l-1.41-1.41M5.34 6.34L3.93 4.93M12 22v-2M12 4V2"/></svg>
+          </div>
+          <h3 class="dj-card-title">Manufacturing Delays</h3>
+          <p class="dj-card-desc">Lack of production tracking creates job work delays and missed delivery commitments to customers.</p>
+        </div>
+
+        <div class="dj-ch-card">
+          <div class="dj-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h3 class="dj-card-title">Stock Mismatch</h3>
+          <p class="dj-card-desc">Disconnected systems mean physical stock never matches system records, hurting business decisions.</p>
+        </div>
+
+        <div class="dj-ch-card">
+          <div class="dj-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="dj-card-title">Customer Follow-ups</h3>
+          <p class="dj-card-desc">Sales teams miss follow-ups leading to lost orders and poor customer relationship management.</p>
+        </div>
+
+        <div class="dj-ch-card">
+          <div class="dj-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          </div>
+          <h3 class="dj-card-title">Multi-Branch Management</h3>
+          <p class="dj-card-desc">Managing multiple showrooms without a unified system is chaotic and impossible to scale.</p>
+        </div>
+
+        <div class="dj-ch-card">
+          <div class="dj-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/></svg>
+          </div>
+          <h3 class="dj-card-title">Certificate Tracking</h3>
+          <p class="dj-card-desc">Diamond certificates get lost or misplaced without a linked digital system for each stone.</p>
+        </div>
+
+        <div class="dj-ch-card">
+          <div class="dj-icon-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3 class="dj-card-title">Inaccurate Reporting</h3>
+          <p class="dj-card-desc">Decisions based on incomplete or outdated reports directly damage profitability and growth.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- TRUSTED BY -->
-  <section class="dj-trusted">
+  <!-- ═══════════════════════════════════════
+       WHY CHOOSE
+  ═══════════════════════════════════════ -->
+  <section class="dj-section">
     <div class="container">
-      <p class="dj-trusted-label">Trusted by Jewelry Manufacturers, Retailers & Diamond Traders</p>
-      <div class="dj-trusted-row">
-        {["Surat Diamond Exchange", "Jaipur Gems House", "Mumbai Gold Traders", "Delhi Jewels Co.", "Chennai Diamonds", "Kolkata Goldsmiths"].map(name => (
-          <div class="dj-trust-chip">{name}</div>
-        ))}
+      <div class="dj-section-head">
+        <p class="dj-eyebrow">Why Choose Our Solution</p>
+        <h2 class="dj-section-title">Everything Your Jewelry Business Needs in One Platform</h2>
+        <p class="dj-section-desc">Purpose-built for the jewelry industry with features no generic ERP can offer. Integrated, intelligent, and designed around how jewelry businesses actually work.</p>
+      </div>
+      <div class="dj-grid-5">
+
+        <div class="dj-feat-card">
+          <div class="dj-icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
+          <h3 class="dj-card-title">Cloud ERP</h3>
+          <p class="dj-card-desc">Access your entire jewelry business from any device, anywhere, with enterprise-grade uptime.</p>
+        </div>
+
+        <div class="dj-feat-card">
+          <div class="dj-icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+          <h3 class="dj-card-title">Real-Time Inventory</h3>
+          <p class="dj-card-desc">Instant stock updates across all branches with zero manual intervention and live visibility.</p>
+        </div>
+
+        <div class="dj-feat-card">
+          <div class="dj-icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5v14M7 5v14M11 5v14M15 5v14M19 5v14M21 9h-3M21 15h-3M3 9H1M3 15H1"/></svg></div>
+          <h3 class="dj-card-title">Barcode &amp; RFID</h3>
+          <p class="dj-card-desc">Lightning-fast item scanning for billing, stock audits, and inventory transfers across branches.</p>
+        </div>
+
+        <div class="dj-feat-card">
+          <div class="dj-icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <h3 class="dj-card-title">AI Analytics</h3>
+          <p class="dj-card-desc">Predictive insights on sales trends, low-stock alerts, and profit opportunities powered by data.</p>
+        </div>
+
+        <div class="dj-feat-card">
+          <div class="dj-icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3 class="dj-card-title">Secure Backup</h3>
+          <p class="dj-card-desc">Military-grade encryption with automated daily backups and full disaster recovery protection.</p>
+        </div>
+
+        <div class="dj-feat-card">
+          <div class="dj-icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+          <h3 class="dj-card-title">Mobile Access</h3>
+          <p class="dj-card-desc">Full platform access on iOS and Android for managers and field staff, anytime anywhere.</p>
+        </div>
+
+        <div class="dj-feat-card">
+          <div class="dj-icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <h3 class="dj-card-title">Multi-Branch</h3>
+          <p class="dj-card-desc">Centralized control of unlimited showrooms, warehouses, and retail outlets from one system.</p>
+        </div>
+
+        <div class="dj-feat-card">
+          <div class="dj-icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <h3 class="dj-card-title">Role-Based Access</h3>
+          <p class="dj-card-desc">Granular permissions ensure staff only see and modify what they are authorized to access.</p>
+        </div>
+
+        <div class="dj-feat-card">
+          <div class="dj-icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+          <h3 class="dj-card-title">GST Ready</h3>
+          <p class="dj-card-desc">Automated GST invoice generation, HSN codes, and return filing reports built directly in.</p>
+        </div>
+
+        <div class="dj-feat-card">
+          <div class="dj-icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0b55d9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <h3 class="dj-card-title">Fast Performance</h3>
+          <p class="dj-card-desc">Sub-second response times even at peak load with 20,000+ daily transactions processed.</p>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- CHALLENGES -->
-  <section class="section soft-section">
+  <!-- ═══════════════════════════════════════
+       MODULES
+  ═══════════════════════════════════════ -->
+  <section class="dj-section dj-section--dark" id="modules">
     <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Industry Challenges</p>
-        <h2>Problems Costing Your Business Time & Money Every Day</h2>
-        <p>The jewelry industry operates with extreme complexity. Manual processes and disconnected systems create costly inefficiencies that are hard to fix without the right platform.</p>
-      </div>
-      <div class="dj-challenge-grid">
-        {challenges.map(c => (
-          <article class="dj-challenge-card">
-            <div class="dj-challenge-icon-box" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-              </svg>
-            </div>
-            <h3>{c.title}</h3>
-            <p>{c.desc}</p>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY CHOOSE -->
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Why Choose Our Solution</p>
-        <h2>Everything Your Jewelry Business Needs in One Platform</h2>
-        <p>Purpose-built for the jewelry industry with features no generic ERP can offer. Integrated, intelligent, and designed around how jewelry businesses actually work.</p>
-      </div>
-      <div class="dj-features-grid">
-        {features.map(f => (
-          <article class="dj-feature-card">
-            <div class="dj-feat-icon" aria-hidden="true" set:html={f.svg} />
-            <h3>{f.title}</h3>
-            <p>{f.desc}</p>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- MODULES -->
-  <section class="section soft-section" id="modules">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Complete Modules</p>
-        <h2>A Complete Jewelry Business Software Suite</h2>
-        <p>Every module your business needs, designed to work together seamlessly from inventory to accounting.</p>
+      <div class="dj-section-head">
+        <p class="dj-eyebrow dj-eyebrow--light">Complete Modules</p>
+        <h2 class="dj-section-title dj-section-title--light">A Complete Jewelry Business Software Suite</h2>
+        <p class="dj-section-desc dj-section-desc--light">Every module your business needs, designed to work together seamlessly from inventory to accounting.</p>
       </div>
       <div class="dj-modules-grid">
-        {modules.map(mod => (
-          <div class="dj-module-card">
-            <div class="dj-module-head">
-              <div class="dj-mod-icon" aria-hidden="true" set:html={mod.svg} />
-              <h3>{mod.title}</h3>
-            </div>
-            <ul class="dj-mod-list">
-              {mod.items.map(item => (
-                <li>
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                  {item}
-                </li>
-              ))}
-            </ul>
+
+        <div class="dj-mod-card">
+          <div class="dj-mod-head">
+            <div class="dj-mod-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+            <h3 class="dj-mod-title">Inventory Management</h3>
           </div>
-        ))}
-      </div>
-    </div>
-  </section>
+          <ul class="dj-mod-items">
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Gold Inventory</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Diamond Inventory</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Gemstone Inventory</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Lot Tracking</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Barcode Support</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>RFID Integration</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Stock Transfer</li>
+          </ul>
+        </div>
 
-  <!-- INDUSTRIES -->
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Industries We Serve</p>
-        <h2>Built for Every Segment of the Jewelry & Diamond Trade</h2>
-        <p>Whether you are a manufacturer, retailer, trader, or export house, the platform adapts to your exact workflow and business model.</p>
-      </div>
-      <div class="dj-industry-grid">
-        {industries.map(ind => (
-          <article class="dj-industry-card">
-            <div class="dj-ind-icon" aria-hidden="true" set:html={ind.svg} />
-            <h3>{ind.title}</h3>
-            <p>{ind.desc}</p>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- BENEFITS -->
-  <section class="section soft-section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Business Benefits</p>
-        <h2>Real Results for Jewelry Businesses Like Yours</h2>
-        <p>Clients see measurable improvements within weeks of going live. Here are the most common outcomes reported across the network.</p>
-      </div>
-      <div class="dj-benefits-grid">
-        {benefits.map(b => (
-          <article class="dj-benefit-card">
-            <div class="dj-benefit-icon" aria-hidden="true" set:html={b.svg} />
-            <div class="dj-benefit-stat">{b.stat}</div>
-            <h3>{b.label}</h3>
-            <p>{b.desc}</p>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- WORKFLOW -->
-  <section class="section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Business Workflow</p>
-        <h2>Your Entire Business Process, Automated End-to-End</h2>
-        <p>From purchasing raw materials to generating financial reports, every step is connected and tracked in real time on one platform.</p>
-      </div>
-      <div class="dj-workflow-grid">
-        {workflow.map((w, i) => (
-          <div class="dj-wf-item">
-            <div class="dj-wf-num">{w.step}</div>
-            <div class="dj-wf-icon" aria-hidden="true" set:html={w.svg} />
-            <strong>{w.label}</strong>
-            <span>{w.desc}</span>
-            {i < workflow.length - 1 && <div class="dj-wf-arrow" aria-hidden="true"></div>}
+        <div class="dj-mod-card">
+          <div class="dj-mod-head">
+            <div class="dj-mod-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93l-1.41 1.41M5.34 17.66l-1.41 1.41M22 12h-2M4 12H2m17.07 7.07l-1.41-1.41M5.34 6.34L3.93 4.93M12 22v-2M12 4V2"/></svg></div>
+            <h3 class="dj-mod-title">Manufacturing</h3>
           </div>
-        ))}
-      </div>
-    </div>
-  </section>
+          <ul class="dj-mod-items">
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Production Planning</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Job Work Management</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Casting &amp; Polishing</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Stone Setting</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Quality Check</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Cost Tracking</li>
+          </ul>
+        </div>
 
-  <!-- STATISTICS -->
-  <section class="section dj-stats-section">
-    <div class="container">
-      <div class="section-heading dj-stats-head">
-        <p class="eyebrow dj-eyebrow-light">Our Impact</p>
-        <h2 class="dj-h2-light">Numbers That Speak for Themselves</h2>
-        <p class="dj-p-light">Measurable outcomes across 500+ jewelry businesses worldwide.</p>
-      </div>
-      <div class="dj-stats-grid">
-        {stats.map(s => (
-          <div class="dj-stat-card">
-            <div class="dj-stat-icon" aria-hidden="true" set:html={s.svg} />
-            <div class="dj-stat-value">{s.value}</div>
-            <div class="dj-stat-lbl">{s.label}</div>
+        <div class="dj-mod-card">
+          <div class="dj-mod-head">
+            <div class="dj-mod-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+            <h3 class="dj-mod-title">Retail POS</h3>
           </div>
-        ))}
-      </div>
-    </div>
-  </section>
+          <ul class="dj-mod-items">
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Fast Billing</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>GST Invoice</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Returns &amp; Exchange</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Offers &amp; Discounts</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Receipt Printing</li>
+          </ul>
+        </div>
 
-  <!-- INTEGRATIONS -->
-  <section class="section soft-section">
-    <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Integrations</p>
-        <h2>Connects with the Tools Your Business Already Uses</h2>
-        <p>Plug-and-play integrations with industry-leading platforms for accounting, communication, payments, certifications, and more.</p>
-      </div>
-      <div class="dj-integrations-grid">
-        {integrations.map(intg => (
-          <div class="dj-intg-card">
-            <div class="dj-intg-icon" aria-hidden="true" set:html={intg.svg} />
-            <span>{intg.name}</span>
+        <div class="dj-mod-card">
+          <div class="dj-mod-head">
+            <div class="dj-mod-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></div>
+            <h3 class="dj-mod-title">Wholesale</h3>
           </div>
-        ))}
+          <ul class="dj-mod-items">
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Quotations</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Bulk Orders</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Customer Pricing</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Export Orders</li>
+          </ul>
+        </div>
+
+        <div class="dj-mod-card">
+          <div class="dj-mod-head">
+            <div class="dj-mod-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3 class="dj-mod-title">CRM</h3>
+          </div>
+          <ul class="dj-mod-items">
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Customer Database</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Follow-ups</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Loyalty Program</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>WhatsApp Integration</li>
+          </ul>
+        </div>
+
+        <div class="dj-mod-card">
+          <div class="dj-mod-head">
+            <div class="dj-mod-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3 class="dj-mod-title">Accounting</h3>
+          </div>
+          <ul class="dj-mod-items">
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Ledger</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Balance Sheet</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Profit &amp; Loss</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>GST Reports</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Tax Reports</li>
+          </ul>
+        </div>
+
+        <div class="dj-mod-card">
+          <div class="dj-mod-head">
+            <div class="dj-mod-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/></svg></div>
+            <h3 class="dj-mod-title">Diamond Management</h3>
+          </div>
+          <ul class="dj-mod-items">
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>GIA Certificates</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>IGI Certificates</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>HRD Certificates</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Rapaport Pricing</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Stone Details</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Parcel Management</li>
+          </ul>
+        </div>
+
+        <div class="dj-mod-card">
+          <div class="dj-mod-head">
+            <div class="dj-mod-ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+            <h3 class="dj-mod-title">Reports &amp; Analytics</h3>
+          </div>
+          <ul class="dj-mod-items">
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Sales Analytics</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Profit Reports</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Inventory Reports</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Manufacturing Reports</li>
+            <li><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Customer Reports</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="section">
+  <!-- ═══════════════════════════════════════
+       STATS
+  ═══════════════════════════════════════ -->
+  <section class="dj-section dj-section--blue">
     <div class="container">
-      <div class="section-heading">
-        <p class="eyebrow">Testimonials</p>
-        <h2>What Jewelry Business Owners Say</h2>
-        <p>Real success stories from jewelry manufacturers, retailers, and diamond traders across India.</p>
+      <div class="dj-section-head">
+        <p class="dj-eyebrow dj-eyebrow--light">Our Impact</p>
+        <h2 class="dj-section-title dj-section-title--light">Numbers That Speak for Themselves</h2>
+        <p class="dj-section-desc dj-section-desc--light">Measurable outcomes across 500+ jewelry businesses worldwide.</p>
+      </div>
+      <div class="dj-stats-row">
+
+        <div class="dj-stat">
+          <div class="dj-stat-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+          <div class="dj-stat-val">500+</div>
+          <div class="dj-stat-lbl">Businesses Served</div>
+        </div>
+
+        <div class="dj-stat">
+          <div class="dj-stat-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div class="dj-stat-val">20K+</div>
+          <div class="dj-stat-lbl">Daily Transactions</div>
+        </div>
+
+        <div class="dj-stat">
+          <div class="dj-stat-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <div class="dj-stat-val">99.9%</div>
+          <div class="dj-stat-lbl">Accuracy Rate</div>
+        </div>
+
+        <div class="dj-stat">
+          <div class="dj-stat-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="dj-stat-val">24/7</div>
+          <div class="dj-stat-lbl">Expert Support</div>
+        </div>
+
+        <div class="dj-stat">
+          <div class="dj-stat-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div class="dj-stat-val">15+</div>
+          <div class="dj-stat-lbl">Years Experience</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════════════════ -->
+  <section class="dj-section dj-section--soft">
+    <div class="container">
+      <div class="dj-section-head">
+        <p class="dj-eyebrow">Testimonials</p>
+        <h2 class="dj-section-title">What Jewelry Business Owners Say</h2>
+        <p class="dj-section-desc">Real success stories from jewelry manufacturers, retailers, and diamond traders across India.</p>
       </div>
       <div class="dj-testi-grid">
-        {testimonials.map(t => (
-          <div class="dj-testi-card">
-            <div class="dj-testi-stars" aria-label="5 stars">★★★★★</div>
-            <blockquote>"{t.text}"</blockquote>
-            <div class="dj-testi-author">
-              <div class="dj-testi-avatar">{t.initials}</div>
-              <div class="dj-testi-meta">
-                <strong>{t.name}</strong>
-                <span>{t.role}, {t.company}</span>
-              </div>
+
+        <div class="dj-testi-card">
+          <div class="dj-testi-stars">★★★★★</div>
+          <p class="dj-testi-body">"Before Hegrix, our inventory was a nightmare. We had 50,000+ diamonds and no real-time visibility. Now every stone is tracked from rough purchase to GIA-certified sale. Billing errors dropped to near zero."</p>
+          <div class="dj-testi-author">
+            <div class="dj-testi-av">RM</div>
+            <div>
+              <strong>Rajesh Mehta</strong>
+              <span>Managing Director, Mehta Diamond House, Surat</span>
             </div>
           </div>
-        ))}
+        </div>
+
+        <div class="dj-testi-card">
+          <div class="dj-testi-stars">★★★★★</div>
+          <p class="dj-testi-body">"The WhatsApp integration changed everything for our CRM. We send custom jewelry designs, quotes, and GST invoices directly to customers. Our conversion rate improved by 35% in just 3 months."</p>
+          <div class="dj-testi-author">
+            <div class="dj-testi-av">PJ</div>
+            <div>
+              <strong>Priya Jain</strong>
+              <span>Operations Manager, Jain Jewellers, Mumbai</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dj-testi-card">
+          <div class="dj-testi-stars">★★★★★</div>
+          <p class="dj-testi-body">"We have 8 branches and used to spend 3 days on month-end reconciliation. Now it takes 2 hours and the data is 99.8% accurate. The multi-branch dashboard is simply outstanding."</p>
+          <div class="dj-testi-author">
+            <div class="dj-testi-av">AS</div>
+            <div>
+              <strong>Arun Shah</strong>
+              <span>CEO, Shah Gold Chains, Ahmedabad</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="section soft-section">
-    <div class="container narrow">
-      <div class="section-heading">
-        <p class="eyebrow">FAQ</p>
-        <h2>Frequently Asked Questions</h2>
-        <p>Everything you need to know before getting started with Hegrix Jewelry Software.</p>
+  <!-- ═══════════════════════════════════════
+       FAQ
+  ═══════════════════════════════════════ -->
+  <section class="dj-section">
+    <div class="container">
+      <div class="dj-section-head" style="max-width: 700px; margin-left: auto; margin-right: auto; margin-bottom: 48px;">
+        <p class="dj-eyebrow">FAQ</p>
+        <h2 class="dj-section-title">Frequently Asked Questions</h2>
+        <p class="dj-section-desc">Everything you need to know before getting started with Hegrix Jewelry Software.</p>
       </div>
-      <div class="faq-list">
+      <div class="dj-faq-wrap">
         {djFaq.map(f => (
-          <details class="dj-faq-item">
-            <summary>{f.title}</summary>
-            <p>{f.text}</p>
+          <details class="dj-faq">
+            <summary class="dj-faq-q">{f.title}</summary>
+            <p class="dj-faq-a">{f.text}</p>
           </details>
         ))}
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
-  <section class="section final-cta">
-    <div class="container split-cta">
-      <div>
-        <p class="eyebrow">Get Started</p>
-        <h2>Ready to Modernize Your Jewelry Business?</h2>
-        <p>Join 500+ jewelry businesses already running smarter operations with Hegrix. Book a personalized demo and see the platform in action.</p>
-      </div>
-      <div class="dj-cta-btns">
-        <a class="button button-light" href="/contact-us/">Schedule Demo</a>
-        <a class="button button-light dj-btn-ghost-light" href="/contact-us/">Talk to an Expert</a>
+  <!-- ═══════════════════════════════════════
+       FINAL CTA
+  ═══════════════════════════════════════ -->
+  <section class="dj-section dj-section--dark2">
+    <div class="container">
+      <div class="dj-cta-box">
+        <p class="dj-eyebrow dj-eyebrow--light">Get Started</p>
+        <h2 class="dj-section-title dj-section-title--light">Ready to Modernize Your Jewelry Business?</h2>
+        <p class="dj-section-desc dj-section-desc--light" style="max-width: 560px; margin: 0 auto 36px;">Join 500+ jewelry businesses already running smarter operations with Hegrix. Book a personalized demo and see the platform in action.</p>
+        <div class="dj-cta-btns">
+          <a href="/contact-us/" class="dj-btn-white">Schedule Demo</a>
+          <a href="/contact-us/" class="dj-btn-outline-white">Talk to an Expert</a>
+        </div>
+        <p class="dj-cta-note">No credit card required · Free onboarding · 24/7 support</p>
       </div>
     </div>
   </section>
 
+</div>
 </Layout>
 
 <style>
-  /* ---- SECTION HEADING ---- */
-  .section-heading {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 52px;
-  }
-  .section-heading h2 { margin-bottom: 14px; }
-  .section-heading p { color: var(--muted); font-size: 1.05rem; }
+/* ============================================
+   PAGE WRAPPER
+============================================ */
+.dj-page {
+  font-family: var(--font-sans, Inter, sans-serif);
+}
 
-  /* ---- HERO ---- */
-  .dj-hero {
-    background: linear-gradient(135deg, var(--blue-950) 0%, var(--blue-900) 60%, var(--blue-700) 100%);
-    padding: 100px 0 80px;
-    overflow: hidden;
-  }
+/* ============================================
+   EYEBROW
+============================================ */
+.dj-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--blue-700);
+  background: var(--blue-100);
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 14px;
+}
+.dj-eyebrow--light {
+  color: #93c5fd;
+  background: rgba(147,197,253,0.15);
+}
 
-  .dj-hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    align-items: center;
-  }
+/* ============================================
+   SECTION
+============================================ */
+.dj-section {
+  padding: 92px 0;
+}
+.dj-section--soft {
+  background: var(--soft, #f7fbff);
+}
+.dj-section--dark {
+  background: linear-gradient(135deg, #071a3d 0%, #09265c 60%, #0b55d9 100%);
+}
+.dj-section--dark2 {
+  background: linear-gradient(135deg, #071a3d 0%, #09265c 100%);
+}
+.dj-section--blue {
+  background: linear-gradient(135deg, #071a3d 0%, #09265c 50%, #0b55d9 100%);
+}
 
-  .dj-hero-left .eyebrow { color: var(--cyan); }
-  .dj-hero-left h1 { color: #fff; font-size: clamp(2rem, 4vw, 3rem); }
-  .dj-hero-left .lead { color: rgba(255,255,255,0.72); }
-  .dj-hero-copy {
-    color: rgba(255,255,255,0.55);
-    font-size: 0.92rem;
-    margin-top: 16px;
-    line-height: 1.65;
-  }
+.dj-section-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 56px;
+}
+.dj-section-title {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: #071a3d;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 14px;
+}
+.dj-section-title--light { color: #fff !important; }
+.dj-section-desc {
+  font-size: 1rem;
+  color: #5b6b82;
+  line-height: 1.7;
+}
+.dj-section-desc--light { color: rgba(255,255,255,0.6) !important; }
 
-  /* Dashboard visual card */
-  .dj-hero-visual {
-    background: rgba(255,255,255,0.06);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255,255,255,0.14);
-    border-radius: var(--radius);
-    padding: 22px;
-    box-shadow: 0 32px 80px rgba(0,0,0,0.35);
-  }
+/* ============================================
+   ICON BOX (used in feature/challenge cards)
+============================================ */
+.dj-icon-box {
+  width: 40px;
+  height: 40px;
+  background: #eaf3ff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+}
 
-  .dj-dash-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-    font-weight: 600;
-    color: rgba(255,255,255,0.7);
-    margin-bottom: 18px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-  .dj-dash-top span {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
+/* ============================================
+   HERO SECTION
+============================================ */
+.dj-hero-section {
+  background: linear-gradient(135deg, #071a3d 0%, #09265c 55%, #0b55d9 100%);
+  padding: 96px 0 80px;
+  overflow: hidden;
+}
 
-  .dj-live {
-    background: rgba(11,191,138,0.15);
-    color: var(--success);
-    padding: 3px 10px;
-    border-radius: 100px;
-    font-size: 10px;
-    font-weight: 700;
-    border: 1px solid rgba(11,191,138,0.3);
-    animation: blink 2s ease-in-out infinite;
-  }
-  @keyframes blink { 0%,100%{opacity:1}50%{opacity:.55} }
+.dj-hero-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
 
-  .dj-dash-kpis {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 18px;
-  }
+.dj-hero-h1 {
+  font-size: clamp(1.85rem, 3.5vw, 2.8rem) !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  line-height: 1.15 !important;
+  letter-spacing: -0.02em !important;
+  max-width: 100% !important;
+  margin-bottom: 20px;
+}
+.dj-accent {
+  color: #1fb6ff;
+}
 
-  .dj-kpi {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.09);
-    border-radius: var(--radius-sm);
-    padding: 12px;
-  }
-  .dj-kpi strong {
-    display: block;
-    font-size: 17px;
-    font-weight: 800;
-    color: var(--cyan);
-    line-height: 1.2;
-  }
-  .dj-kpi span { font-size: 10px; color: rgba(255,255,255,0.45); font-weight: 500; }
+.dj-hero-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.68);
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
 
-  .dj-dash-chart-area {
-    background: rgba(255,255,255,0.04);
-    border-radius: var(--radius-sm);
-    padding: 14px;
-    margin-bottom: 14px;
-  }
-  .dj-chart-lbl { font-size: 10px; color: rgba(255,255,255,0.4); font-weight: 600; margin-bottom: 12px; }
+.dj-hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.dj-hero-chips span {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 5px 13px;
+  border-radius: 100px;
+}
 
-  .dj-bars-row {
-    display: flex;
-    align-items: flex-end;
-    gap: 6px;
-    height: 64px;
-  }
-  .dj-bar {
-    flex: 1;
-    background: rgba(11,85,217,0.4);
-    border-radius: 4px 4px 0 0;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    transition: background 0.2s;
-  }
-  .dj-bar--hi { background: var(--blue-700); }
-  .dj-bar span {
-    position: absolute;
-    bottom: -16px;
-    font-size: 8px;
-    color: rgba(255,255,255,0.35);
-    font-weight: 600;
-  }
+.dj-hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
 
-  .dj-flow-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 8px;
-  }
-  .dj-flow-pills span {
-    background: rgba(11,85,217,0.25);
-    border: 1px solid rgba(11,85,217,0.4);
-    color: var(--cyan);
-    font-size: 10px;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 100px;
-  }
+.dj-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: #fff;
+  color: #0b55d9;
+  font-weight: 800;
+  font-size: 14px;
+  text-decoration: none;
+  transition: transform 0.18s, box-shadow 0.18s;
+  box-shadow: 0 4px 20px rgba(255,255,255,0.2);
+}
+.dj-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255,255,255,0.3);
+}
+.dj-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  transition: background 0.18s, border-color 0.18s;
+}
+.dj-btn-ghost:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.5);
+}
+.dj-hero-proof {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+}
+.dj-hero-proof strong { color: rgba(255,255,255,0.85); }
 
-  /* ---- TRUSTED ---- */
-  .dj-trusted {
-    padding: 36px 0;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-    background: var(--soft);
-  }
-  .dj-trusted-label {
-    text-align: center;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--muted);
-    margin-bottom: 20px;
-  }
-  .dj-trusted-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-  .dj-trust-chip {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-sm);
-    padding: 9px 18px;
-    font-size: 12.5px;
-    font-weight: 600;
-    color: var(--muted);
-    box-shadow: 0 1px 4px rgba(8,38,92,0.05);
-    transition: 0.2s;
-  }
-  .dj-trust-chip:hover {
-    border-color: var(--blue-700);
-    color: var(--blue-700);
-  }
+/* Dashboard card */
+.dj-hero-card {
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+}
+.dj-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 16px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.dj-card-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.dj-live-dot {
+  font-size: 10px;
+  font-weight: 700;
+  color: #0bbf8a;
+  background: rgba(11,191,138,0.12);
+  border: 1px solid rgba(11,191,138,0.3);
+  padding: 2px 8px;
+  border-radius: 100px;
+  animation: djblink 2s ease-in-out infinite;
+}
+@keyframes djblink { 0%,100%{opacity:1}50%{opacity:.5} }
 
-  /* ---- CHALLENGE CARDS ---- */
-  .dj-challenge-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 18px;
-  }
-  .dj-challenge-card {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 26px 22px;
-    box-shadow: 0 2px 8px rgba(8,38,92,0.05);
-    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-  }
-  .dj-challenge-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
-    border-color: var(--blue-100);
-  }
-  .dj-challenge-icon-box {
-    width: 38px;
-    height: 38px;
-    background: var(--blue-100);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--blue-700);
-    margin-bottom: 14px;
-  }
-  .dj-challenge-card h3 {
-    font-size: 14.5px;
-    font-weight: 700;
-    color: var(--blue-950);
-    margin-bottom: 8px;
-  }
-  .dj-challenge-card p { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
+.dj-kpi-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.dj-kpi {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 11px;
+}
+.dj-kpi strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 800;
+  color: #1fb6ff;
+  line-height: 1.2;
+}
+.dj-kpi span {
+  display: block;
+  font-size: 10px;
+  color: rgba(255,255,255,0.4);
+  font-weight: 500;
+  margin-top: 2px;
+}
 
-  /* ---- FEATURE CARDS ---- */
-  .dj-features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 18px;
-  }
-  .dj-feature-card {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 26px 22px;
-    box-shadow: 0 2px 8px rgba(8,38,92,0.05);
-    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-    position: relative;
-    overflow: hidden;
-  }
-  .dj-feature-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--blue-700), var(--cyan));
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.25s ease;
-  }
-  .dj-feature-card:hover::before { transform: scaleX(1); }
-  .dj-feature-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
-    border-color: var(--blue-100);
-  }
-  .dj-feat-icon {
-    width: 42px;
-    height: 42px;
-    background: var(--blue-100);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--blue-700);
-    margin-bottom: 14px;
-  }
-  .dj-feat-icon svg { flex-shrink: 0; }
-  .dj-feature-card h3 { font-size: 14px; font-weight: 700; color: var(--blue-950); margin-bottom: 8px; }
-  .dj-feature-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.dj-chart-box {
+  background: rgba(255,255,255,0.04);
+  border-radius: 10px;
+  padding: 13px;
+  margin-bottom: 14px;
+}
+.dj-chart-title {
+  font-size: 10px;
+  color: rgba(255,255,255,0.38);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.dj-chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  height: 60px;
+}
+.dj-cbar {
+  flex: 1;
+  background: rgba(11,85,217,0.4);
+  border-radius: 3px 3px 0 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.dj-cbar--hi { background: #0b55d9; }
+.dj-cbar span {
+  position: absolute;
+  bottom: -15px;
+  font-size: 8px;
+  color: rgba(255,255,255,0.3);
+  font-weight: 600;
+}
 
-  /* ---- MODULES ---- */
-  .dj-modules-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 18px;
-  }
-  .dj-module-card {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(8,38,92,0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .dj-module-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
-  }
-  .dj-module-head {
-    padding: 18px 20px 14px;
-    border-bottom: 1px solid var(--line);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: var(--soft);
-  }
-  .dj-mod-icon {
-    width: 36px;
-    height: 36px;
-    background: var(--blue-100);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--blue-700);
-    flex-shrink: 0;
-  }
-  .dj-module-head h3 { font-size: 14.5px; font-weight: 700; color: var(--blue-950); }
-  .dj-mod-list {
-    list-style: none;
-    padding: 14px 20px 18px;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-  }
-  .dj-mod-list li {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: var(--muted);
-    font-weight: 500;
-  }
-  .dj-mod-list svg { color: var(--blue-700); flex-shrink: 0; }
+.dj-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+.dj-pill-row span {
+  background: rgba(11,85,217,0.2);
+  border: 1px solid rgba(11,85,217,0.35);
+  color: #93c5fd;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 100px;
+}
 
-  /* ---- INDUSTRIES ---- */
-  .dj-industry-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-  }
-  .dj-industry-card {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 26px 20px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(8,38,92,0.05);
-    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-  }
-  .dj-industry-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
-    border-color: var(--blue-100);
-  }
-  .dj-ind-icon {
-    width: 52px;
-    height: 52px;
-    background: var(--blue-100);
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--blue-700);
-    margin: 0 auto 14px;
-  }
-  .dj-industry-card h3 { font-size: 14.5px; font-weight: 700; color: var(--blue-950); margin-bottom: 8px; }
-  .dj-industry-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+/* ============================================
+   TRUSTED BAR
+============================================ */
+.dj-trust-bar {
+  padding: 34px 0;
+  background: var(--soft, #f7fbff);
+  border-top: 1px solid #dce8f7;
+  border-bottom: 1px solid #dce8f7;
+}
+.dj-trust-label {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #5b6b82;
+  margin-bottom: 18px;
+}
+.dj-trust-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.dj-trust-logos span {
+  background: #fff;
+  border: 1px solid #dce8f7;
+  border-radius: 8px;
+  padding: 9px 18px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #5b6b82;
+  box-shadow: 0 1px 4px rgba(8,38,92,0.05);
+}
 
-  /* ---- BENEFITS ---- */
-  .dj-benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 18px;
-  }
-  .dj-benefit-card {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 28px 20px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(8,38,92,0.05);
-    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-  }
-  .dj-benefit-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
-    border-color: var(--blue-100);
-  }
-  .dj-benefit-icon {
-    width: 48px;
-    height: 48px;
-    background: var(--blue-100);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--blue-700);
-    margin: 0 auto 12px;
-  }
-  .dj-benefit-stat {
-    font-size: 2rem;
-    font-weight: 900;
-    color: var(--blue-700);
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-  .dj-benefit-card h3 { font-size: 13.5px; font-weight: 700; color: var(--blue-950); margin-bottom: 8px; }
-  .dj-benefit-card p { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+/* ============================================
+   CARDS (shared card layout)
+============================================ */
+.dj-ch-card,
+.dj-feat-card {
+  background: #fff;
+  border: 1px solid #dce8f7;
+  border-radius: 18px;
+  padding: 24px 20px;
+  box-shadow: 0 2px 8px rgba(8,38,92,0.05);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.dj-ch-card:hover,
+.dj-feat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(8,38,92,0.1);
+  border-color: #eaf3ff;
+}
+.dj-feat-card {
+  position: relative;
+  overflow: hidden;
+}
+.dj-feat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #0b55d9, #1fb6ff);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.dj-feat-card:hover::before { transform: scaleX(1); }
 
-  /* ---- WORKFLOW ---- */
-  .dj-workflow-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-  }
-  .dj-wf-item {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 22px 18px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 2px 8px rgba(8,38,92,0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .dj-wf-item:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
-  }
-  .dj-wf-num {
-    font-size: 10px;
-    font-weight: 800;
-    color: var(--blue-700);
-    background: var(--blue-100);
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 12px;
-    letter-spacing: 0.02em;
-  }
-  .dj-wf-icon {
-    width: 44px;
-    height: 44px;
-    background: var(--blue-100);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--blue-700);
-    margin: 0 auto 12px;
-  }
-  .dj-wf-item strong {
-    display: block;
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--blue-950);
-    margin-bottom: 6px;
-  }
-  .dj-wf-item span { font-size: 12px; color: var(--muted); line-height: 1.5; display: block; }
+.dj-card-title {
+  font-size: 14.5px !important;
+  font-weight: 700 !important;
+  color: #071a3d !important;
+  line-height: 1.3 !important;
+  margin-bottom: 8px !important;
+}
+.dj-card-desc {
+  font-size: 13px;
+  color: #5b6b82;
+  line-height: 1.65;
+}
 
-  /* Arrow between workflow items */
-  .dj-wf-arrow {
-    display: none;
-  }
+/* ============================================
+   GRIDS
+============================================ */
+.dj-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+.dj-grid-5 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+}
 
-  /* ---- STATS ---- */
-  .dj-stats-section {
-    background: linear-gradient(135deg, var(--blue-950) 0%, var(--blue-900) 60%, var(--blue-700) 100%);
-  }
-  .dj-stats-head { margin-bottom: 52px; }
-  .dj-eyebrow-light { color: var(--cyan) !important; }
-  .dj-h2-light { color: #fff !important; }
-  .dj-p-light { color: rgba(255,255,255,0.6) !important; }
+/* ============================================
+   MODULES
+============================================ */
+.dj-modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 18px;
+}
+.dj-mod-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.dj-mod-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,0.25);
+}
+.dj-mod-head {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 16px 18px 14px;
+  background: rgba(255,255,255,0.04);
+  border-bottom: 1px solid rgba(255,255,255,0.09);
+}
+.dj-mod-ico {
+  width: 34px;
+  height: 34px;
+  background: rgba(11,85,217,0.35);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #93c5fd;
+  flex-shrink: 0;
+}
+.dj-mod-title {
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  line-height: 1.3 !important;
+}
+.dj-mod-items {
+  list-style: none;
+  padding: 14px 18px 18px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dj-mod-items li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.65);
+  font-weight: 500;
+}
+.dj-mod-items svg { color: #60a5fa; flex-shrink: 0; }
 
-  .dj-stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 20px;
-  }
-  .dj-stat-card {
-    text-align: center;
-    padding: 28px 16px;
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: var(--radius);
-    backdrop-filter: blur(8px);
-    transition: transform 0.2s, border-color 0.2s;
-  }
-  .dj-stat-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(255,255,255,0.25);
-  }
-  .dj-stat-icon {
-    width: 52px;
-    height: 52px;
-    background: rgba(11,85,217,0.3);
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--cyan);
-    margin: 0 auto 14px;
-  }
-  .dj-stat-value {
-    font-size: 2rem;
-    font-weight: 900;
-    color: #fff;
-    line-height: 1;
-    margin-bottom: 8px;
-  }
-  .dj-stat-lbl { font-size: 13px; color: rgba(255,255,255,0.55); font-weight: 500; }
+/* ============================================
+   STATS
+============================================ */
+.dj-stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+  gap: 20px;
+}
+.dj-stat {
+  text-align: center;
+  padding: 28px 16px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 16px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.dj-stat:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,0.26);
+}
+.dj-stat-ico {
+  width: 50px;
+  height: 50px;
+  background: rgba(11,85,217,0.3);
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #60a5fa;
+  margin: 0 auto 13px;
+}
+.dj-stat-val {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 7px;
+}
+.dj-stat-lbl {
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.5);
+  font-weight: 500;
+}
 
-  /* ---- INTEGRATIONS ---- */
-  .dj-integrations-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 14px;
-  }
-  .dj-intg-card {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-sm);
-    padding: 20px 14px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(8,38,92,0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-  }
-  .dj-intg-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
-    border-color: var(--blue-100);
-  }
-  .dj-intg-icon {
-    width: 44px;
-    height: 44px;
-    background: var(--blue-100);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--blue-700);
-  }
-  .dj-intg-card span { font-size: 12px; font-weight: 700; color: var(--blue-950); }
+/* ============================================
+   TESTIMONIALS
+============================================ */
+.dj-testi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 22px;
+}
+.dj-testi-card {
+  background: #fff;
+  border: 1px solid #dce8f7;
+  border-radius: 18px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 8px rgba(8,38,92,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.dj-testi-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(8,38,92,0.1);
+}
+.dj-testi-stars {
+  color: #F59E0B;
+  font-size: 15px;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+.dj-testi-body {
+  font-size: 13.5px;
+  color: #5b6b82;
+  line-height: 1.75;
+  margin-bottom: 22px;
+  font-style: normal;
+}
+.dj-testi-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.dj-testi-av {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #0b55d9, #1fb6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+  color: #fff;
+  flex-shrink: 0;
+}
+.dj-testi-author strong {
+  display: block;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #071a3d;
+}
+.dj-testi-author span {
+  display: block;
+  font-size: 12px;
+  color: #5b6b82;
+  margin-top: 2px;
+}
 
-  /* ---- TESTIMONIALS ---- */
-  .dj-testi-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 22px;
-  }
-  .dj-testi-card {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    padding: 30px 26px;
-    box-shadow: 0 2px 8px rgba(8,38,92,0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
-    position: relative;
-  }
-  .dj-testi-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow);
-  }
-  .dj-testi-stars {
-    color: #F59E0B;
-    font-size: 15px;
-    letter-spacing: 2px;
-    margin-bottom: 14px;
-  }
-  .dj-testi-card blockquote {
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.75;
-    margin: 0 0 22px;
-    font-style: normal;
-  }
-  .dj-testi-author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .dj-testi-avatar {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--blue-700), var(--cyan));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 800;
-    font-size: 13px;
-    color: #fff;
-    flex-shrink: 0;
-  }
-  .dj-testi-meta strong { display: block; font-size: 13.5px; font-weight: 700; color: var(--blue-950); }
-  .dj-testi-meta span { font-size: 12px; color: var(--muted); }
+/* ============================================
+   FAQ
+============================================ */
+.dj-faq-wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dj-faq {
+  background: #fff;
+  border: 1px solid #dce8f7;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.dj-faq[open] { border-color: #0b55d9; }
+.dj-faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 20px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #071a3d;
+  cursor: pointer;
+  list-style: none;
+  gap: 14px;
+  user-select: none;
+}
+.dj-faq-q::-webkit-details-marker { display: none; }
+.dj-faq-q::after {
+  content: '+';
+  width: 24px;
+  height: 24px;
+  background: #eaf3ff;
+  color: #0b55d9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  line-height: 1;
+  text-align: center;
+}
+.dj-faq[open] .dj-faq-q::after { transform: rotate(45deg); }
+.dj-faq-a {
+  padding: 14px 20px 18px;
+  font-size: 13.5px;
+  color: #5b6b82;
+  line-height: 1.7;
+  border-top: 1px solid #dce8f7;
+}
 
-  /* ---- FAQ ---- */
-  .faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .dj-faq-item {
-    background: var(--paper);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    transition: border-color 0.2s;
-  }
-  .dj-faq-item[open] { border-color: var(--blue-700); }
-  .dj-faq-item summary {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 17px 20px;
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--blue-950);
-    cursor: pointer;
-    list-style: none;
-    user-select: none;
-  }
-  .dj-faq-item summary::-webkit-details-marker { display: none; }
-  .dj-faq-item summary::after {
-    content: '+';
-    width: 24px;
-    height: 24px;
-    background: var(--blue-100);
-    color: var(--blue-700);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    font-weight: 700;
-    flex-shrink: 0;
-    transition: transform 0.2s;
-  }
-  .dj-faq-item[open] summary::after { transform: rotate(45deg); }
-  .dj-faq-item p {
-    padding: 0 20px 18px;
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.7;
-    border-top: 1px solid var(--line);
-    padding-top: 14px;
-  }
+/* ============================================
+   FINAL CTA
+============================================ */
+.dj-cta-box {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+.dj-btn-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: #fff;
+  color: #0b55d9;
+  font-weight: 800;
+  font-size: 15px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(255,255,255,0.2);
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+.dj-btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255,255,255,0.3);
+}
+.dj-btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 28px;
+  border-radius: 999px;
+  background: transparent;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  transition: background 0.18s, border-color 0.18s;
+}
+.dj-btn-outline-white:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.6);
+}
+.dj-cta-btns {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.dj-cta-note {
+  font-size: 13px;
+  color: rgba(255,255,255,0.38);
+}
 
-  /* ---- FINAL CTA ---- */
-  .final-cta {
-    background: linear-gradient(135deg, var(--blue-950), var(--blue-900));
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 860px) {
+  .dj-hero-wrap {
+    grid-template-columns: 1fr;
+    gap: 36px;
   }
-  .split-cta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 48px;
-    flex-wrap: wrap;
-  }
-  .split-cta > div { flex: 1; min-width: 280px; }
-  .split-cta .eyebrow { color: var(--cyan); }
-  .split-cta h2 { color: #fff; margin-bottom: 14px; }
-  .split-cta p { color: rgba(255,255,255,0.65); }
-  .dj-cta-btns {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    flex-shrink: 0;
-  }
-  .dj-btn-ghost-light {
-    background: transparent !important;
-    border-color: rgba(255,255,255,0.4) !important;
-    color: #fff !important;
-    box-shadow: none !important;
-  }
-  .dj-btn-ghost-light:hover {
-    background: rgba(255,255,255,0.1) !important;
-  }
-
-  /* ---- RESPONSIVE ---- */
-  @media (max-width: 900px) {
-    .dj-hero-grid {
-      grid-template-columns: 1fr;
-      gap: 40px;
-    }
-    .dj-hero-visual { order: -1; }
-    .dj-workflow-grid { grid-template-columns: repeat(2, 1fr); }
-    .split-cta { flex-direction: column; }
-  }
-
-  @media (max-width: 600px) {
-    .dj-hero { padding: 72px 0 56px; }
-    .dj-workflow-grid { grid-template-columns: 1fr 1fr; }
-    .dj-modules-grid,
-    .dj-challenge-grid { grid-template-columns: 1fr; }
-    .dj-stats-grid { grid-template-columns: repeat(2, 1fr); }
-  }
+  .dj-hero-card { order: -1; }
+}
+@media (max-width: 600px) {
+  .dj-hero-section { padding: 72px 0 56px; }
+  .dj-hero-h1 { font-size: 1.75rem !important; }
+  .dj-section { padding: 64px 0; }
+  .dj-grid-4,
+  .dj-grid-5,
+  .dj-modules-grid { grid-template-columns: 1fr; }
+  .dj-stats-row { grid-template-columns: repeat(2, 1fr); }
+  .dj-hero-actions { flex-direction: column; }
+  .dj-btn-primary, .dj-btn-ghost { width: 100%; }
+}
 </style>
