@@ -1,0 +1,2942 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export const prerender = true;
+
+const odooFaqList = [
+  {
+    question: "What is Odoo development and why does my business need custom development?",
+    answer: "Odoo development involves customizing, extending, and building tailor-made ERP modules on the open-source Odoo framework to match your unique business workflows, automate manual tasks, integrate third-party applications, and optimize operational efficiency."
+  },
+  {
+    question: "Why choose custom Odoo development over off-the-shelf ERP software?",
+    answer: "Off-the-shelf ERPs force businesses to adapt to rigid structures. Custom Odoo development adapts the software to your exact business processes, eliminating unnecessary licensing fees, providing complete data control, and allowing unlimited scalability as your company grows."
+  },
+  {
+    question: "How long does a typical Odoo development and implementation project take?",
+    answer: "Standard Odoo module development or customization takes 2 to 4 weeks. Enterprise full-suite ERP implementations with custom integrations and historical data migration typically average 6 to 12 weeks depending on scope complexity."
+  },
+  {
+    question: "Do you provide technical support and maintenance after deployment?",
+    answer: "Yes. Hegrix Technologies provides continuous 24/7 post-deployment support, server monitoring, bug fixing, performance optimization, security updates, and SLA-backed maintenance packages."
+  },
+  {
+    question: "Can Hegrix integrate Odoo with our existing third-party software and APIs?",
+    answer: "Absoluty. We build secure RESTful API integrations connecting Odoo with e-commerce platforms (Shopify, WooCommerce, Magento), payment gateways (Stripe, Razorpay, PayPal), CRM systems (Salesforce, HubSpot), logistics APIs, and legacy accounting software (Tally, QuickBooks)."
+  },
+  {
+    question: "Which versions of Odoo do you support for development and customization?",
+    answer: "We support all Odoo Enterprise and Community editions from Odoo v12 up to the latest Odoo v17 and v18. Our team develops using modern Python, XML, PostgreSQL, and OWL (Odoo Web Library) standards."
+  },
+  {
+    question: "Can you migrate our legacy ERP data or upgrade older Odoo versions?",
+    answer: "Yes. We handle seamless end-to-end data migration from legacy systems (SAP, Tally, QuickBooks, Excel) to Odoo, as well as database upgrades from older Odoo versions (e.g. Odoo 14/15) to Odoo 17/18 with zero data loss."
+  },
+  {
+    question: "What industries benefit most from Hegrix custom Odoo development?",
+    answer: "Custom Odoo ERP delivers massive value across Manufacturing, Retail & E-commerce, Healthcare, Construction, Real Estate, Logistics & Supply Chain, Hospitality, Education, Jewelry, and Distribution companies."
+  },
+  {
+    question: "Are your Odoo developers certified and experienced?",
+    answer: "Yes. Hegrix Technologies employs certified Odoo developers and senior Python/PostgreSQL engineers with deep domain expertise across 50+ successful enterprise implementations."
+  },
+  {
+    question: "How do you ensure data security and role-based access in Odoo?",
+    answer: "We implement strict security policies, ISO 27001 standards, end-to-end data encryption (AES-256), SSL certificates, automated cloud backups, and granular role-based user access controls down to specific field levels."
+  }
+];
+
+const odooSchemaData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Hegrix Custom Odoo Development Services",
+    operatingSystem: "Cloud, Web, Linux, Windows, macOS, iOS, Android",
+    applicationCategory: "BusinessApplication",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock"
+    },
+    description: "Enterprise Odoo ERP development, module customization, API integration, data migration, and technical support by Hegrix Technologies."
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Odoo Development Services",
+    provider: {
+      "@type": "Organization",
+      name: "Hegrix Technologies",
+      url: "https://hegrix.com"
+    },
+    areaServed: "Global",
+    serviceType: "Odoo ERP Development, Custom Module Development, Odoo Integration & Migration, Odoo Support",
+    description: "Build scalable, secure, and fully customized Odoo ERP solutions that streamline workflows, automate operations, and accelerate business growth.",
+    url: "https://hegrix.com/services/odoo-development/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: odooFaqList.map(item => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      }
+    }))
+  }
+];
+---
+
+<Layout
+  title="Odoo Development Services | Custom Odoo ERP Solutions | Hegrix"
+  description="Transform your enterprise operations with custom Odoo development services by Hegrix Technologies. Custom Odoo modules, ERP integration, migration, & support."
+  keywords="Odoo Development Services, Custom Odoo Development, Odoo ERP Development, Odoo Module Development, Odoo Customization, Odoo API Integration, Odoo Migration, Odoo Support & Maintenance, Hire Odoo Developers, Odoo ERP Solutions"
+  path="/services/odoo-development/"
+  schema={odooSchemaData}
+>
+
+<div class="od-page">
+
+  <!-- ═══════════════════════════════════════
+       1. HERO SECTION
+  ═══════════════════════════════════════ -->
+  <section class="od-hero">
+    <div class="od-hero-bg-glow1" aria-hidden="true"></div>
+    <div class="od-hero-bg-glow2" aria-hidden="true"></div>
+
+    <div class="container od-hero-grid">
+      <!-- Left Hero Content -->
+      <div class="od-hero-text">
+        <div class="od-badge">
+          <span class="od-badge-dot"></span>
+          <span>Enterprise Odoo ERP Development &amp; Digital Transformation</span>
+        </div>
+
+        <h1 class="od-hero-title">
+          Custom Odoo Development Services for <span class="od-gradient-text">Smarter Business Operations</span>
+        </h1>
+
+        <p class="od-hero-lead">
+          Build scalable, secure, and fully customized Odoo ERP solutions that streamline workflows, automate operations, and accelerate business growth with Hegrix Technologies.
+        </p>
+
+        <div class="od-hero-actions">
+          <button class="od-btn od-btn-primary js-open-od-modal">
+            <span>Get Free Consultation</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <button class="od-btn od-btn-ghost js-open-od-modal">
+            <span>Request a Demo</span>
+          </button>
+        </div>
+
+        <div class="od-hero-trust">
+          <div class="od-trust-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <strong>4.98 / 5</strong>
+          </div>
+          <div class="od-trust-sep">•</div>
+          <div>Certified Odoo Developers &amp; ERP Architects</div>
+        </div>
+      </div>
+
+      <!-- Right Hero Dashboard Visual Showcase -->
+      <div class="od-hero-visual">
+        <div class="od-dash-window">
+          <!-- Window Header -->
+          <div class="od-dash-header">
+            <div class="od-dash-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="od-dash-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              Hegrix Odoo Enterprise Operating System v17/v18
+            </div>
+            <div class="od-dash-badge">● LIVE ERP CORE</div>
+          </div>
+
+          <!-- Dashboard Image Showcase -->
+          <div class="od-dash-img-wrapper">
+            <img src="/images/odoo-erp-dashboard.png" alt="Hegrix Technologies Custom Odoo ERP Development Dashboard" class="od-dash-img" loading="eager" />
+          </div>
+        </div>
+
+        <!-- 5 Animated Floating Glass UI Cards -->
+        <!-- Card 1: Odoo ERP Core -->
+        <div class="od-float-card card-core">
+          <div class="od-float-icon bg-purple">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div>
+            <div class="od-float-title">Odoo ERP Core</div>
+            <div class="od-float-value">v17 / v18 Enterprise</div>
+            <div class="od-float-sub text-green">100% Customized Modules</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Automated Workflows -->
+        <div class="od-float-card card-automation">
+          <div class="od-float-icon bg-blue">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div>
+            <div class="od-float-title">Automated Workflows</div>
+            <div class="od-float-value">100+ Processes Sync</div>
+            <div class="od-float-sub">Zero Manual Repetition</div>
+          </div>
+        </div>
+
+        <!-- Card 3: Inventory & MRP -->
+        <div class="od-float-card card-inventory">
+          <div class="od-float-icon bg-emerald">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <div>
+            <div class="od-float-title">Inventory &amp; MRP</div>
+            <div class="od-float-value">Real-time Stock Control</div>
+            <div class="od-float-sub text-green">Barcode &amp; Multi-Warehouse</div>
+          </div>
+        </div>
+
+        <!-- Card 4: Sales & CRM -->
+        <div class="od-float-card card-crm">
+          <div class="od-float-icon bg-amber">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div>
+            <div class="od-float-title">Sales &amp; CRM</div>
+            <div class="od-float-value">+42% Conversion Rate</div>
+            <div class="od-float-sub text-green">Multi-Channel Ingestion</div>
+          </div>
+        </div>
+
+        <!-- Card 5: System Performance -->
+        <div class="od-float-card card-performance">
+          <div class="od-float-icon bg-cyan">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="od-float-title">System Performance</div>
+            <div class="od-float-value">99.9% Uptime SLA</div>
+            <div class="od-float-sub">Optimized PostgreSQL DB</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       2. COMPANY TRUST SECTION (STATS & LOGOS)
+  ═══════════════════════════════════════ -->
+  <section class="od-section od-section-soft">
+    <div class="container">
+      <div class="od-stats-grid">
+        <div class="od-stat-box">
+          <div class="od-stat-num">50+</div>
+          <div class="od-stat-label">Projects Delivered</div>
+        </div>
+        <div class="od-stat-box">
+          <div class="od-stat-num">100+</div>
+          <div class="od-stat-label">Processes Automated</div>
+        </div>
+        <div class="od-stat-box">
+          <div class="od-stat-num">15+</div>
+          <div class="od-stat-label">Experienced Odoo Developers</div>
+        </div>
+        <div class="od-stat-box">
+          <div class="od-stat-num">2x</div>
+          <div class="od-stat-label">Fast Deployment Speed</div>
+        </div>
+        <div class="od-stat-box">
+          <div class="od-stat-num">24/7</div>
+          <div class="od-stat-label">Dedicated Technical Support</div>
+        </div>
+        <div class="od-stat-box">
+          <div class="od-stat-num">99.4%</div>
+          <div class="od-stat-label">High Client Satisfaction</div>
+        </div>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="od-trust-bar">
+        <div class="od-tb-title">Trusted by Growth-Focused Enterprises Worldwide</div>
+        <div class="od-tb-logos">
+          <div class="od-tb-badge">🏭 Manufacturing ERP</div>
+          <div class="od-tb-badge">🛒 Retail &amp; E-commerce</div>
+          <div class="od-tb-badge">🏥 Healthcare Systems</div>
+          <div class="od-tb-badge">🏢 Real Estate &amp; Construction</div>
+          <div class="od-tb-badge">🚚 Logistics &amp; Supply Chain</div>
+          <div class="od-tb-badge">🏨 Hospitality &amp; Services</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       3. WHAT IS ODOO DEVELOPMENT?
+  ═══════════════════════════════════════ -->
+  <section class="od-section od-section-white">
+    <div class="container">
+      <div class="od-grid-2 gap-60 items-center">
+        <!-- Left Content -->
+        <div class="od-content-side">
+          <div class="od-eyebrow">Definition &amp; Core Value</div>
+          <h2 class="od-section-title">What is Custom Odoo Development?</h2>
+          <p class="od-section-desc">
+            Odoo is an all-in-one open-source enterprise resource planning (ERP) platform. <strong>Custom Odoo Development</strong> by Hegrix Technologies transforms raw Odoo software into a tailored operational engine engineered around your exact business workflows.
+          </p>
+          <p class="od-body-text">
+            Rather than altering your business to fit rigid software constraints, our certified Odoo developers create bespoke modules, customize core workflows, integrate third-party APIs, and optimize database performance—delivering a unified platform connecting CRM, Sales, Inventory, Accounting, Manufacturing, and HR.
+          </p>
+
+          <div class="od-key-pills">
+            <span>✓ Bespoke Python &amp; OWL Module Creation</span>
+            <span>✓ Seamless REST API Integrations</span>
+            <span>✓ Multi-Company &amp; Multi-Currency Setup</span>
+            <span>✓ Database Performance Tuning</span>
+          </div>
+        </div>
+
+        <!-- Right Architecture Visual -->
+        <div class="od-visual-box">
+          <div class="od-ecosystem-card">
+            <div class="od-eco-header">
+              <h3>Hegrix Odoo Development Stack</h3>
+              <p>Tailored Modular Architecture</p>
+            </div>
+
+            <div class="od-eco-node main-node">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+              <span>Custom Odoo Core Engine</span>
+            </div>
+
+            <div class="od-eco-grid">
+              <div class="od-eco-item">
+                <div class="od-eco-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </div>
+                <div><strong>Custom Modules</strong><br/><small>Python &amp; XML</small></div>
+              </div>
+              <div class="od-eco-item">
+                <div class="od-eco-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg>
+                </div>
+                <div><strong>API Connector</strong><br/><small>RESTful JSON APIs</small></div>
+              </div>
+              <div class="od-eco-item">
+                <div class="od-eco-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                </div>
+                <div><strong>Data Migration</strong><br/><small>Legacy Sync</small></div>
+              </div>
+              <div class="od-eco-item">
+                <div class="od-eco-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                </div>
+                <div><strong>Smart Dashboards</strong><br/><small>OWL UI Framework</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       4. WHY BUSINESSES NEED ODOO DEVELOPMENT
+  ═══════════════════════════════════════ -->
+  <section class="od-section od-section-soft">
+    <div class="container">
+      <div class="od-section-head center">
+        <div class="od-eyebrow">Strategic Value</div>
+        <h2 class="od-section-title">Why Growing Enterprises Choose Custom Odoo Development</h2>
+        <p class="od-section-desc">Generic ERPs create operational friction. Custom Odoo development aligns software with your strategic advantage.</p>
+      </div>
+
+      <div class="od-grid-4">
+        <!-- 1 -->
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Workflow Automation</h3>
+          <p>Automate repetitive manual entries between sales, inventory, and accounting to cut administrative overhead.</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Custom Business Processes</h3>
+          <p>Build custom approval hierarchies, pricing formulas, and unique industry logic tailored specifically to your company.</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h3>Improved Productivity</h3>
+          <p>Empower employees with clean interfaces, single-click actions, and automated notification dispatches.</p>
+        </div>
+
+        <!-- 4 -->
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
+          <h3>Centralized Data</h3>
+          <p>Eliminate isolated software silos with a single unified PostgreSQL database for all departmental operations.</p>
+        </div>
+
+        <!-- 5 -->
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3>Real-Time Reporting</h3>
+          <p>Gain executive visibility into real-time profit margins, cash flow, stock turnover, and project performance.</p>
+        </div>
+
+        <!-- 6 -->
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3>Scalability</h3>
+          <p>Modular architecture designed to easily scale from 10 users to 10,000+ users without performance bottlenecks.</p>
+        </div>
+
+        <!-- 7 -->
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Lower Operational Costs</h3>
+          <p>Avoid expensive per-user proprietary licensing fees with open-source Odoo cost efficiency.</p>
+        </div>
+
+        <!-- 8 -->
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3>Better Decision-Making</h3>
+          <p>Data-driven predictive insights and AI business intelligence for smarter inventory replenishment and pricing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       5. OUR ODOO DEVELOPMENT SERVICES
+  ═══════════════════════════════════════ -->
+  <section class="od-section od-section-white">
+    <div class="container">
+      <div class="od-section-head center">
+        <div class="od-eyebrow">Capabilities Suite</div>
+        <h2 class="od-section-title">Our End-to-End Odoo Development Services</h2>
+        <p class="od-section-desc">Full lifecycle Odoo engineering services from custom module creation to migration and SLA maintenance.</p>
+      </div>
+
+      <div class="od-grid-2 gap-30">
+        <!-- Service 1 -->
+        <div class="od-sol-card">
+          <div class="od-sol-top">
+            <div class="od-sol-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div>
+              <h3>Custom Odoo Module Development</h3>
+              <p class="od-sol-tag">Python &amp; XML Custom Modules</p>
+            </div>
+          </div>
+          <p class="od-sol-desc">
+            Build custom Odoo modules from scratch tailored to your unique operational logic, data structures, and industry workflows.
+          </p>
+          <button class="od-btn-link js-open-od-modal">Learn More ➔</button>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="od-sol-card">
+          <div class="od-sol-top">
+            <div class="od-sol-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <div>
+              <h3>Odoo ERP Customization</h3>
+              <p class="od-sol-tag">Core Module Enhancements</p>
+            </div>
+          </div>
+          <p class="od-sol-desc">
+            Modify existing Odoo apps (CRM, Sales, MRP, Accounting) with custom fields, views, approval flows, and automated triggers.
+          </p>
+          <button class="od-btn-link js-open-od-modal">Learn More ➔</button>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="od-sol-card">
+          <div class="od-sol-top">
+            <div class="od-sol-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg>
+            </div>
+            <div>
+              <h3>Odoo API Integration</h3>
+              <p class="od-sol-tag">Third-Party &amp; E-commerce Sync</p>
+            </div>
+          </div>
+          <p class="od-sol-desc">
+            Seamlessly connect Odoo with Shopify, WooCommerce, payment gateways, shipping APIs, CRM tools, and legacy software via REST APIs.
+          </p>
+          <button class="od-btn-link js-open-od-modal">Learn More ➔</button>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="od-sol-card">
+          <div class="od-sol-top">
+            <div class="od-sol-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            </div>
+            <div>
+              <h3>Odoo Migration &amp; Upgrade</h3>
+              <p class="od-sol-tag">Version &amp; Legacy Data Migration</p>
+            </div>
+          </div>
+          <p class="od-sol-desc">
+            Migrate from legacy ERPs to Odoo or upgrade older Odoo versions to the latest Odoo 17/18 with 100% data integrity and zero downtime.
+          </p>
+          <button class="od-btn-link js-open-od-modal">Learn More ➔</button>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="od-sol-card">
+          <div class="od-sol-top">
+            <div class="od-sol-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div>
+              <h3>Odoo Performance Optimization</h3>
+              <p class="od-sol-tag">PostgreSQL &amp; Server Speed</p>
+            </div>
+          </div>
+          <p class="od-sol-desc">
+            Optimize slow Odoo instances through database indexing, Python code refactoring, caching, and server load-balancing configuration.
+          </p>
+          <button class="od-btn-link js-open-od-modal">Learn More ➔</button>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="od-sol-card">
+          <div class="od-sol-top">
+            <div class="od-sol-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div>
+              <h3>Odoo Bug Fixing &amp; Code Repair</h3>
+              <p class="od-sol-tag">Technical Troubleshooting</p>
+            </div>
+          </div>
+          <p class="od-sol-desc">
+            Debug broken third-party modules, resolve database conflicts, repair crash logs, and clean up unoptimized legacy codebases.
+          </p>
+          <button class="od-btn-link js-open-od-modal">Learn More ➔</button>
+        </div>
+
+        <!-- Service 7 -->
+        <div class="od-sol-card">
+          <div class="od-sol-top">
+            <div class="od-sol-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+            </div>
+            <div>
+              <h3>SLA Support &amp; Maintenance</h3>
+              <p class="od-sol-tag">24/7 Managed ERP Support</p>
+            </div>
+          </div>
+          <p class="od-sol-desc">
+            Dedicated 24/7 SLA technical support, server backups, security patch updates, and continuous optimization packages.
+          </p>
+          <button class="od-btn-link js-open-od-modal">Learn More ➔</button>
+        </div>
+
+        <!-- Service 8 -->
+        <div class="od-sol-card">
+          <div class="od-sol-top">
+            <div class="od-sol-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <div>
+              <h3>Workflow &amp; Process Automation</h3>
+              <p class="od-sol-tag">Automated ERP Logic</p>
+            </div>
+          </div>
+          <p class="od-sol-desc">
+            Automate inter-departmental approvals, automated email triggers, inventory reorder dispatches, and financial invoices.
+          </p>
+          <button class="od-btn-link js-open-od-modal">Learn More ➔</button>
+        </div>
+
+        <!-- Service 9 -->
+        <div class="od-sol-card">
+          <div class="od-sol-top">
+            <div class="od-sol-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <div>
+              <h3>Custom Reports &amp; Dashboards</h3>
+              <p class="od-sol-tag">OWL &amp; QWeb Reporting</p>
+            </div>
+          </div>
+          <p class="od-sol-desc">
+            Design executive BI dashboards and custom PDF QWeb reports for invoices, delivery orders, P&amp;L balance sheets, and KPIs.
+          </p>
+          <button class="od-btn-link js-open-od-modal">Learn More ➔</button>
+        </div>
+
+        <!-- Service 10 -->
+        <div class="od-sol-card">
+          <div class="od-sol-top">
+            <div class="od-sol-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+            </div>
+            <div>
+              <h3>Multi-Company &amp; Multi-Currency</h3>
+              <p class="od-sol-tag">Global Enterprise Architecture</p>
+            </div>
+          </div>
+          <p class="od-sol-desc">
+            Configure complex multi-company environments, inter-company transactions, multi-currency accounting, and multi-tax compliance.
+          </p>
+          <button class="od-btn-link js-open-od-modal">Learn More ➔</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       6. INDUSTRIES WE SERVE
+  ═══════════════════════════════════════ -->
+  <section class="od-section od-section-soft">
+    <div class="container">
+      <div class="od-section-head center">
+        <div class="od-eyebrow">Domain Expertise</div>
+        <h2 class="od-section-title">Industries Empowered by Hegrix Custom Odoo ERP</h2>
+        <p class="od-section-desc">Deep domain experience customizing Odoo across diverse high-growth industry sectors.</p>
+      </div>
+
+      <div class="od-grid-4">
+        <!-- 1. Manufacturing -->
+        <div class="od-sector-card">
+          <div class="od-sc-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/></svg>
+          </div>
+          <h3>Manufacturing</h3>
+          <p>Bill of Materials (BOM), work center routing, MRP planning, and quality control checkpoints.</p>
+        </div>
+
+        <!-- 2. Retail -->
+        <div class="od-sector-card">
+          <div class="od-sc-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          </div>
+          <h3>Retail &amp; POS</h3>
+          <p>Multi-store POS synchronization, inventory replenishment, barcode scanning, and loyalty plans.</p>
+        </div>
+
+        <!-- 3. Healthcare -->
+        <div class="od-sector-card">
+          <div class="od-sc-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 6v12M6 12h12"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+          </div>
+          <h3>Healthcare</h3>
+          <p>Medical inventory tracking, patient appointment management, billing, and equipment logs.</p>
+        </div>
+
+        <!-- 4. Education -->
+        <div class="od-sector-card">
+          <div class="od-sc-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h3>Education</h3>
+          <p>Student admissions workflows, tuition fee invoicing, course scheduling, and staff payroll.</p>
+        </div>
+
+        <!-- 5. Construction -->
+        <div class="od-sector-card">
+          <div class="od-sc-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Construction</h3>
+          <p>Site material procurement, sub-contractor billing, project milestone tracking, and budget variance.</p>
+        </div>
+
+        <!-- 6. Real Estate -->
+        <div class="od-sector-card">
+          <div class="od-sc-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18"/><path d="M19 21v-4a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v4"/><path d="M5 11l7-7 7 7"/></svg>
+          </div>
+          <h3>Real Estate</h3>
+          <p>Property unit inventory, buyer lead CRM, lease contract management, and installment billing.</p>
+        </div>
+
+        <!-- 7. Logistics -->
+        <div class="od-sector-card">
+          <div class="od-sc-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h3>Logistics &amp; Fleet</h3>
+          <p>Fleet maintenance, driver dispatches, multi-warehouse stock transfers, and 3PL tracking.</p>
+        </div>
+
+        <!-- 8. Hospitality -->
+        <div class="od-sector-card">
+          <div class="od-sc-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+          </div>
+          <h3>Hospitality</h3>
+          <p>Guest reservation engine, room inventory, restaurant POS billing, and housekeeping task apps.</p>
+        </div>
+
+        <!-- 9. Jewelry -->
+        <div class="od-sector-card">
+          <div class="od-sc-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg>
+          </div>
+          <h3>Jewelry &amp; Gems</h3>
+          <p>Tagging SKU inventory, gold/diamond weight tracking, certification linking, and retail POS.</p>
+        </div>
+
+        <!-- 10. Automotive -->
+        <div class="od-sector-card">
+          <div class="od-sc-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.5 2.8C1.4 11.2 1 11.8 1 12.5V16c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+          </div>
+          <h3>Automotive</h3>
+          <p>Spare parts inventory, job card workshop management, warranty tracking, and dealer CRM.</p>
+        </div>
+
+        <!-- 11. Food & Beverage -->
+        <div class="od-sector-card">
+          <div class="od-sc-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Food &amp; Beverage</h3>
+          <p>Batch expiration tracking, recipe costing, compliance traceability, and distributor billing.</p>
+        </div>
+
+        <!-- 12. Distribution -->
+        <div class="od-sector-card">
+          <div class="od-sc-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3>Wholesale &amp; Distribution</h3>
+          <p>High-volume sales orders, credit limit controls, automated purchase orders, and logistics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       7. WHY CHOOSE HEGRIX TECHNOLOGIES
+  ═══════════════════════════════════════ -->
+  <section class="od-section od-section-white">
+    <div class="container">
+      <div class="od-section-head center">
+        <div class="od-eyebrow">The Hegrix Advantage</div>
+        <h2 class="od-section-title">Why Industry Leaders Partner with Hegrix Technologies</h2>
+        <p class="od-section-desc">Proven technical excellence building high-concurrency custom Odoo ERP platforms.</p>
+      </div>
+
+      <div class="od-grid-2 gap-30">
+        <div class="od-why-card">
+          <div class="od-why-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <div>
+            <h3>Certified Odoo Developers</h3>
+            <p>Senior Python and Odoo architects experienced in customizing complex enterprise workflows.</p>
+          </div>
+        </div>
+
+        <div class="od-why-card">
+          <div class="od-why-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+          </div>
+          <div>
+            <h3>Agile Development Process</h3>
+            <p>Iterative sprint releases with continuous client review, ensuring speed to market and adaptability.</p>
+          </div>
+        </div>
+
+        <div class="od-why-card">
+          <div class="od-why-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div>
+            <h3>Transparent Communication</h3>
+            <p>Direct access to lead developers, weekly milestone demos, and real-time project board tracking.</p>
+          </div>
+        </div>
+
+        <div class="od-why-card">
+          <div class="od-why-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h3>Secure Coding Practices</h3>
+            <p>ISO 27001 compliant code reviews, database encryption, role security rules, and vulnerability patches.</p>
+          </div>
+        </div>
+
+        <div class="od-why-card">
+          <div class="od-why-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div>
+            <h3>Scalable Architecture</h3>
+            <p>Microservices containerization with Docker and Nginx load-balancing built for massive growth.</p>
+          </div>
+        </div>
+
+        <div class="od-why-card">
+          <div class="od-why-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div>
+            <h3>Affordable &amp; Predictable Pricing</h3>
+            <p>Transparent development pricing models without hidden fees or surprise licensing surcharges.</p>
+          </div>
+        </div>
+
+        <div class="od-why-card">
+          <div class="od-why-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <h3>On-Time Delivery Commitments</h3>
+            <p>Rigorous project management protocols ensuring milestones are met on budget and on schedule.</p>
+          </div>
+        </div>
+
+        <div class="od-why-card">
+          <div class="od-why-svg-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+          </div>
+          <div>
+            <h3>Long-Term Technical Support</h3>
+            <p>24/7 SLA maintenance options, server performance tuning, and continuous Odoo feature updates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       8. DEVELOPMENT PROCESS (9-STEP TIMELINE)
+  ═══════════════════════════════════════ -->
+  <section class="od-section od-section-soft">
+    <div class="container">
+      <div class="od-section-head center">
+        <div class="od-eyebrow">Engineering Methodology</div>
+        <h2 class="od-section-title">Our Proven 9-Step Development Process</h2>
+        <p class="od-section-desc">Structured methodology ensuring high quality code, clean data migration, and seamless adoption.</p>
+      </div>
+
+      <div class="od-timeline">
+        <!-- 1 -->
+        <div class="od-tl-item">
+          <div class="od-tl-marker">1</div>
+          <div class="od-tl-content">
+            <h4>1. Requirement Analysis</h4>
+            <p>Auditing current operational bottlenecks, legacy data formats, and detailed custom module needs.</p>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="od-tl-item">
+          <div class="od-tl-marker">2</div>
+          <div class="od-tl-content">
+            <h4>2. Business Consultation</h4>
+            <p>Collaborative discovery workshops with your team to define ERP scope, timelines, and budget metrics.</p>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="od-tl-item">
+          <div class="od-tl-marker">3</div>
+          <div class="od-tl-content">
+            <h4>3. Solution Planning</h4>
+            <p>Architecting Odoo module dependencies, database schemas, API mapping, and security rules.</p>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="od-tl-item">
+          <div class="od-tl-marker">4</div>
+          <div class="od-tl-content">
+            <h4>4. UI/UX Design</h4>
+            <p>Designing modern user views, dashboard wireframes, and custom OWL component layouts.</p>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div class="od-tl-item">
+          <div class="od-tl-marker">5</div>
+          <div class="od-tl-content">
+            <h4>5. Custom Development</h4>
+            <p>Engineering custom Odoo Python modules, XML views, PostgreSQL queries, and automated logic.</p>
+          </div>
+        </div>
+        <!-- 6 -->
+        <div class="od-tl-item">
+          <div class="od-tl-marker">6</div>
+          <div class="od-tl-content">
+            <h4>6. Testing &amp; QA</h4>
+            <p>Rigorous unit testing, security vulnerability scans, database stress testing, and User Acceptance Testing (UAT).</p>
+          </div>
+        </div>
+        <!-- 7 -->
+        <div class="od-tl-item">
+          <div class="od-tl-marker">7</div>
+          <div class="od-tl-content">
+            <h4>7. Deployment</h4>
+            <p>Seamless cloud server deployment, SSL configuration, data migration cutover, and production go-live.</p>
+          </div>
+        </div>
+        <!-- 8 -->
+        <div class="od-tl-item">
+          <div class="od-tl-marker">8</div>
+          <div class="od-tl-content">
+            <h4>8. User Training</h4>
+            <p>Comprehensive role-based staff training, video tutorials, and operational user documentation.</p>
+          </div>
+        </div>
+        <!-- 9 -->
+        <div class="od-tl-item">
+          <div class="od-tl-marker">9</div>
+          <div class="od-tl-content">
+            <h4>9. Ongoing Support</h4>
+            <p>24/7 SLA maintenance, server monitoring, security updates, and continuous ERP feature additions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       9. TECHNOLOGIES WE USE
+  ═══════════════════════════════════════ -->
+  <section class="od-section od-section-white">
+    <div class="container">
+      <div class="od-section-head center">
+        <div class="od-eyebrow">Technology Stack</div>
+        <h2 class="od-section-title">Modern Technologies Powering Our Odoo Solutions</h2>
+        <p class="od-section-desc">We leverage enterprise-grade open source tools and modern web frameworks.</p>
+      </div>
+
+      <div class="od-tech-grid">
+        <div class="od-tech-badge">
+          <span class="od-tb-dot"></span>
+          <strong>Odoo (v14 - v18)</strong>
+        </div>
+        <div class="od-tech-badge">
+          <span class="od-tb-dot"></span>
+          <strong>Python 3.11+</strong>
+        </div>
+        <div class="od-tech-badge">
+          <span class="od-tb-dot"></span>
+          <strong>PostgreSQL</strong>
+        </div>
+        <div class="od-tech-badge">
+          <span class="od-tb-dot"></span>
+          <strong>JavaScript (ES6+)</strong>
+        </div>
+        <div class="od-tech-badge">
+          <span class="od-tb-dot"></span>
+          <strong>XML &amp; QWeb</strong>
+        </div>
+        <div class="od-tech-badge">
+          <span class="od-tb-dot"></span>
+          <strong>OWL Framework</strong>
+        </div>
+        <div class="od-tech-badge">
+          <span class="od-tb-dot"></span>
+          <strong>Docker &amp; Containers</strong>
+        </div>
+        <div class="od-tech-badge">
+          <span class="od-tb-dot"></span>
+          <strong>Git &amp; GitHub</strong>
+        </div>
+        <div class="od-tech-badge">
+          <span class="od-tb-dot"></span>
+          <strong>Linux (Ubuntu Server)</strong>
+        </div>
+        <div class="od-tech-badge">
+          <span class="od-tb-dot"></span>
+          <strong>REST APIs &amp; JSON-RPC</strong>
+        </div>
+        <div class="od-tech-badge">
+          <span class="od-tb-dot"></span>
+          <strong>Nginx Reverse Proxy</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       10. FEATURES OF OUR SOLUTIONS
+  ═══════════════════════════════════════ -->
+  <section class="od-section od-section-soft">
+    <div class="container">
+      <div class="od-section-head center">
+        <div class="od-eyebrow">Built-In Excellence</div>
+        <h2 class="od-section-title">Core Features Built Into Every Hegrix Odoo Solution</h2>
+        <p class="od-section-desc">Enterprise standards embedded natively into all custom Odoo ERP builds.</p>
+      </div>
+
+      <div class="od-grid-4">
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h4>Responsive UI</h4>
+          <p>Optimized interfaces designed for desktop, tablet, and smartphone web browsers.</p>
+        </div>
+
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h4>Secure Architecture</h4>
+          <p>End-to-end AES-256 encryption, SSL protocols, and ISO 27001 compliance standards.</p>
+        </div>
+
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h4>Role-Based Access</h4>
+          <p>Granular user permission rules for employees, managers, accountants, and admins.</p>
+        </div>
+
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h4>Multi-Language</h4>
+          <p>Supports 50+ global languages natively with automatic user interface translation.</p>
+        </div>
+
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/></svg>
+          </div>
+          <h4>Multi-Company</h4>
+          <p>Manage multiple business entities, branches, and inter-company ledgers in one Odoo instance.</p>
+        </div>
+
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+          </div>
+          <h4>Cloud Ready</h4>
+          <p>Deploy on AWS, Azure, Google Cloud, Odoo.sh, or high-performance dedicated Linux servers.</p>
+        </div>
+
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h4>Workflow Automation</h4>
+          <p>Automate stock reordering, invoice dispatches, purchase approvals, and email alerts.</p>
+        </div>
+
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h4>Smart Dashboards</h4>
+          <p>Custom executive KPI dashboards built using Odoo OWL framework for real-time insights.</p>
+        </div>
+
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/></svg>
+          </div>
+          <h4>Mobile Friendly</h4>
+          <p>Full mobile functionality for field workers, sales agents, and warehouse barcode scanners.</p>
+        </div>
+
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg>
+          </div>
+          <h4>API Integration</h4>
+          <p>RESTful JSON-RPC APIs to connect e-commerce, payment gateways, and custom applications.</p>
+        </div>
+
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h4>Advanced Reporting</h4>
+          <p>Bespoke QWeb PDF financial reports, sales summaries, and inventory valuation sheets.</p>
+        </div>
+
+        <div class="od-feat-card">
+          <div class="od-feat-svg">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          </div>
+          <h4>Real-Time Notifications</h4>
+          <p>Instant browser, email, and SMS push alerts for critical approval requests and updates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       11. BUSINESS BENEFITS
+  ═══════════════════════════════════════ -->
+  <section class="od-section od-section-white">
+    <div class="container">
+      <div class="od-section-head center">
+        <div class="od-eyebrow">Impact &amp; ROI</div>
+        <h2 class="od-section-title">Measurable Business Benefits</h2>
+        <p class="od-section-desc">How Hegrix custom Odoo ERP solutions accelerate performance and profitability.</p>
+      </div>
+
+      <div class="od-grid-3">
+        <div class="od-ben-card">
+          <div class="od-ben-num">01</div>
+          <h3>Increased Productivity</h3>
+          <p>Boost staff output by up to 45% by automating repetitive data entry and manual approval routing.</p>
+        </div>
+
+        <div class="od-ben-card">
+          <div class="od-ben-num">02</div>
+          <h3>Faster Operations</h3>
+          <p>Accelerate order-to-cash processing times from days to minutes with synchronized Odoo workflows.</p>
+        </div>
+
+        <div class="od-ben-card">
+          <div class="od-ben-num">03</div>
+          <h3>Lower Operating Costs</h3>
+          <p>Reduce IT licensing and administrative overhead by replacing fragmented software subscriptions.</p>
+        </div>
+
+        <div class="od-ben-card">
+          <div class="od-ben-num">04</div>
+          <h3>Better Customer Experience</h3>
+          <p>Deliver faster response times, precise order tracking, and seamless customer service interactions.</p>
+        </div>
+
+        <div class="od-ben-card">
+          <div class="od-ben-num">05</div>
+          <h3>Improved Collaboration</h3>
+          <p>Connect sales, inventory, manufacturing, and finance teams through a single shared data stream.</p>
+        </div>
+
+        <div class="od-ben-card">
+          <div class="od-ben-num">06</div>
+          <h3>Centralized Business Data</h3>
+          <p>Eliminate data discrepancies with a single source of truth across all global enterprise branches.</p>
+        </div>
+
+        <div class="od-ben-card">
+          <div class="od-ben-num">07</div>
+          <h3>Accelerated Growth</h3>
+          <p>Scale business operations seamlessly into new international markets and product lines.</p>
+        </div>
+
+        <div class="od-ben-card">
+          <div class="od-ben-num">08</div>
+          <h3>Higher ROI</h3>
+          <p>Achieve full ERP investment payback within 6 to 12 months of custom Odoo deployment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       12. ODOO MODULES WE DEVELOP (19 MODULES)
+  ═══════════════════════════════════════ -->
+  <section class="od-section od-section-soft">
+    <div class="container">
+      <div class="od-section-head center">
+        <div class="od-eyebrow">Module Library</div>
+        <h2 class="od-section-title">19 Odoo Modules We Customize &amp; Develop</h2>
+        <p class="od-section-desc">Tailored module development across every operational domain in Odoo Enterprise &amp; Community.</p>
+      </div>
+
+      <div class="od-grid-4">
+        <!-- 1 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <h4>Odoo CRM</h4>
+          <p>Lead pipeline tracking, automated scoring, and email marketing sync.</p>
+        </div>
+        <!-- 2 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+          </div>
+          <h4>Odoo Sales</h4>
+          <p>Quotations, digital e-signatures, sales orders, and price list rules.</p>
+        </div>
+        <!-- 3 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          </div>
+          <h4>Odoo Purchase</h4>
+          <p>Purchase Requisitions (RFQ), vendor management, and automated reordering.</p>
+        </div>
+        <!-- 4 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h4>Odoo Inventory</h4>
+          <p>Double-entry stock rules, multi-warehouse routing, and barcode scanning.</p>
+        </div>
+        <!-- 5 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h4>Odoo Accounting</h4>
+          <p>General ledger, bank reconciliation, automated tax filing, and P&amp;L reports.</p>
+        </div>
+        <!-- 6 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/></svg>
+          </div>
+          <h4>Odoo Manufacturing (MRP)</h4>
+          <p>BOM management, work centers, capacity planning, and shop floor control.</p>
+        </div>
+        <!-- 7 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h4>Odoo HR &amp; Employees</h4>
+          <p>Employee directory, time-off requests, recruitment, and performance reviews.</p>
+        </div>
+        <!-- 8 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <h4>Odoo Payroll</h4>
+          <p>Automated salary rules, tax deductions, payslip generation, and bank sync.</p>
+        </div>
+        <!-- 9 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+          </div>
+          <h4>Odoo POS (Point of Sale)</h4>
+          <p>Offline touch POS interface, receipt printers, and multi-store inventory sync.</p>
+        </div>
+        <!-- 10 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h4>Odoo Project</h4>
+          <p>Gantt charts, Kanban task boards, timesheet tracking, and project profitability.</p>
+        </div>
+        <!-- 11 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg>
+          </div>
+          <h4>Odoo Helpdesk</h4>
+          <p>Customer support ticketing, SLA automation, and knowledge base portal.</p>
+        </div>
+        <!-- 12 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h4>Odoo Website Builder</h4>
+          <p>Drag-and-drop web builder, customer portals, and SEO snippet management.</p>
+        </div>
+        <!-- 13 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          </div>
+          <h4>Odoo eCommerce</h4>
+          <p>Online store, payment gateways, live inventory sync, and order dispatches.</p>
+        </div>
+        <!-- 14 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h4>Odoo Rental</h4>
+          <p>Equipment and product rental bookings, deposit holds, and return tracking.</p>
+        </div>
+        <!-- 15 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+          </div>
+          <h4>Odoo Subscription</h4>
+          <p>Automated recurring billing, SaaS subscriptions, and churn analytics.</p>
+        </div>
+        <!-- 16 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h4>Odoo Marketing Automation</h4>
+          <p>Automated email campaign triggers, lead nurtures, and visitor tracking.</p>
+        </div>
+        <!-- 17 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h4>Odoo Documents</h4>
+          <p>OCR document processing, automated invoice tagging, and digital filing.</p>
+        </div>
+        <!-- 18 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h4>Odoo Quality Control</h4>
+          <p>Quality inspection points, Pass/Fail testing rules, and defect alerts.</p>
+        </div>
+        <!-- 19 -->
+        <div class="od-mod-card">
+          <div class="od-mod-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h4>Odoo Maintenance</h4>
+          <p>Preventive equipment maintenance schedules, repair requests, and downtime logs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       13. SUCCESS STORIES / CASE STUDIES
+  ═══════════════════════════════════════ -->
+  <section class="od-section od-section-white">
+    <div class="container">
+      <div class="od-section-head center">
+        <div class="od-eyebrow">Proven Results</div>
+        <h2 class="od-section-title">Odoo Implementation Case Studies</h2>
+        <p class="od-section-desc">Discover how Hegrix Technologies transforms operations for global enterprises.</p>
+      </div>
+
+      <div class="od-grid-3">
+        <!-- Case Study 1 -->
+        <div class="od-cs-card">
+          <div class="od-cs-tag">Manufacturing &amp; Supply Chain</div>
+          <h3>Global Heavy Equipment Manufacturer</h3>
+          <div class="od-cs-body">
+            <p><strong>Challenge:</strong> Disconnected legacy software creating stockouts and 3-week production delays.</p>
+            <p><strong>Solution:</strong> Custom Odoo 17 MRP, multi-warehouse inventory, barcode scanning, and purchase automation.</p>
+          </div>
+          <div class="od-cs-metrics">
+            <div><strong>48%</strong><span>Faster Production Cycles</span></div>
+            <div><strong>$1.2M</strong><span>Annual Cost Savings</span></div>
+          </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="od-cs-card">
+          <div class="od-cs-tag">Retail &amp; E-commerce</div>
+          <h3>Multi-Chain Apparel Retailer</h3>
+          <p><strong>Challenge:</strong> Manual inventory mismatches across 25 physical stores and Shopify e-commerce.</p>
+          <p><strong>Solution:</strong> Custom Odoo POS &amp; Shopify REST API integration with real-time stock sync.</p>
+          <div class="od-cs-metrics">
+            <div><strong>100%</strong><span>Real-Time Inventory Sync</span></div>
+            <div><strong>+35%</strong><span>Online Revenue Growth</span></div>
+          </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="od-cs-card">
+          <div class="od-cs-tag">Real Estate &amp; Construction</div>
+          <h3>Enterprise Property Developer</h3>
+          <p><strong>Challenge:</strong> Slow buyer payment milestone tracking and uncoordinated site procurement.</p>
+          <p><strong>Solution:</strong> Bespoke Odoo Real Estate CRM, contractor ERP, and buyer payment portal.</p>
+          <div class="od-cs-metrics">
+            <div><strong>60%</strong><span>Faster Invoicing Cycles</span></div>
+            <div><strong>99.2%</strong><span>On-Time Milestone Payments</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       14. TESTIMONIALS
+  ═══════════════════════════════════════ -->
+  <section class="od-section od-section-soft">
+    <div class="container">
+      <div class="od-section-head center">
+        <div class="od-eyebrow">Client Feedback</div>
+        <h2 class="od-section-title">Trusted by Business Leaders Worldwide</h2>
+        <p class="od-section-desc">What executives say about partnering with Hegrix Technologies for Odoo Development.</p>
+      </div>
+
+      <div class="od-grid-3">
+        <div class="od-testi-card">
+          <div class="od-testi-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="od-testi-quote">
+            "Hegrix Technologies delivered our custom Odoo 17 MRP system seamlessly. The custom BOM modules and barcode scanning eliminated our inventory errors within weeks."
+          </p>
+          <div class="od-testi-author">
+            <div class="od-author-avatar">JW</div>
+            <div>
+              <strong>Jonathan Wright</strong><br/>
+              <small>VP of Supply Chain, Apex Industrial Group</small>
+            </div>
+          </div>
+          <div class="od-testi-outcome">
+            <span>Result: <strong>48% Faster Production Cycles</strong></span>
+          </div>
+        </div>
+
+        <div class="od-testi-card">
+          <div class="od-testi-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="od-testi-quote">
+            "The Odoo API integration with our Shopify store by Hegrix Technologies is rock solid. Stock sync happens in real time and our order processing is 3x faster."
+          </p>
+          <div class="od-testi-author">
+            <div class="od-author-avatar">CL</div>
+            <div>
+              <strong>Claire Laurent</strong><br/>
+              <small>Chief Operating Officer, Luxe Fashion Brands</small>
+            </div>
+          </div>
+          <div class="od-testi-outcome">
+            <span>Result: <strong>3x Order Processing Speed</strong></span>
+          </div>
+        </div>
+
+        <div class="od-testi-card">
+          <div class="od-testi-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="od-testi-quote">
+            "Hegrix's Odoo developers migrated our multi-company general ledger from legacy SAP with zero downtime. Outstanding technical expertise and transparent communication throughout."
+          </p>
+          <div class="od-testi-author">
+            <div class="od-author-avatar">RD</div>
+            <div>
+              <strong>Rohan Deshmukh</strong><br/>
+              <small>Group CTO, Nova Global Enterprise</small>
+            </div>
+          </div>
+          <div class="od-testi-outcome">
+            <span>Result: <strong>Zero Downtime Migration</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       15. FAQ ACCORDION SECTION
+  ═══════════════════════════════════════ -->
+  <section class="od-section od-section-white">
+    <div class="container narrow">
+      <div class="od-section-head center">
+        <div class="od-eyebrow">Frequently Asked Questions</div>
+        <h2 class="od-section-title">Everything You Need to Know About Odoo Development</h2>
+        <p class="od-section-desc">Got questions about custom Odoo modules, migration, or technical support? We've got answers.</p>
+      </div>
+
+      <div class="od-faq-accordion">
+        {odooFaqList.map((faq, index) => (
+          <details class="od-faq-item" open={index === 0}>
+            <summary class="od-faq-question">
+              <span>{faq.question}</span>
+              <span class="od-faq-icon">+</span>
+            </summary>
+            <div class="od-faq-answer">
+              <p>{faq.answer}</p>
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       16. FINAL CTA & CONSULTATION MODAL
+  ═══════════════════════════════════════ -->
+  <section class="od-section od-cta-section">
+    <div class="container">
+      <div class="od-cta-box">
+        <div class="od-eyebrow od-eyebrow-light">Get Started Today</div>
+        <h2 class="od-cta-title">Ready to Transform Your Business with Odoo?</h2>
+        <p class="od-cta-desc">
+          Partner with Hegrix Technologies to build a secure, scalable, and customized Odoo ERP solution that drives efficiency and business growth.
+        </p>
+
+        <div class="od-cta-actions">
+          <button class="od-btn od-btn-light js-open-od-modal">
+            <span>Book Free Consultation</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <a href="/contact-us/" class="od-btn od-btn-outline-light">
+            <span>Talk to an Odoo Expert</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       INTERACTIVE DEMO MODAL DIALOG
+  ═══════════════════════════════════════ -->
+  <div class="od-modal-backdrop" id="odDemoModal" aria-hidden="true">
+    <div class="od-modal-dialog" role="dialog" aria-labelledby="odModalTitle">
+      <button class="od-modal-close" id="odModalCloseBtn" aria-label="Close Modal">&times;</button>
+      
+      <div class="od-modal-header">
+        <div class="od-badge-small">Enterprise Odoo Consultation</div>
+        <h3 id="odModalTitle">Schedule a Demo with Hegrix Technologies</h3>
+        <p>Discover how custom Odoo ERP development can automate your operations and scale profits.</p>
+      </div>
+
+      <form id="odModalForm" class="od-modal-form">
+        <div class="od-form-group">
+          <label for="odName">Full Name *</label>
+          <input type="text" id="odName" name="name" required placeholder="e.g. Jonathan Wright" />
+        </div>
+
+        <div class="od-form-group">
+          <label for="odEmail">Work Email *</label>
+          <input type="email" id="odEmail" name="email" required placeholder="jonathan@enterprise.com" />
+        </div>
+
+        <div class="od-form-row">
+          <div class="od-form-group">
+            <label for="odPhone">Phone Number *</label>
+            <input type="tel" id="odPhone" name="phone" required placeholder="+1 (555) 000-0000" />
+          </div>
+
+          <div class="od-form-group">
+            <label for="odService">Odoo Service Needed *</label>
+            <select id="odService" name="service" required>
+              <option value="">Select Service...</option>
+              <option value="Custom Module Development">Custom Odoo Module Development</option>
+              <option value="Odoo ERP Customization">Odoo ERP Customization</option>
+              <option value="Odoo API Integration">Odoo API Integration</option>
+              <option value="Odoo Migration / Upgrade">Odoo Migration / Upgrade</option>
+              <option value="Performance Optimization">Performance Optimization</option>
+              <option value="SLA Support & Maintenance">SLA Support &amp; Maintenance</option>
+              <option value="Hire Dedicated Odoo Developers">Hire Dedicated Odoo Developers</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="od-form-group">
+          <label for="odMsg">Project Requirements / Current Odoo Setup</label>
+          <textarea id="odMsg" name="message" rows="3" placeholder="Tell us about your business processes or Odoo version..."></textarea>
+        </div>
+
+        <button type="submit" class="od-btn od-btn-primary od-btn-full" id="odSubmitBtn">
+          <span>Submit Request &amp; Book Consultation</span>
+        </button>
+
+        <p class="od-form-privacy">🔒 Your information is confidential. We respect your privacy.</p>
+      </form>
+
+      <div id="odSuccessMsg" class="od-modal-success" style="display: none;">
+        <div class="od-success-icon">✓</div>
+        <h4>Consultation Request Received!</h4>
+        <p>Thank you. A Senior Odoo ERP Specialist from Hegrix Technologies will reach out within 2 business hours to schedule your technical consultation.</p>
+        <button class="od-btn od-btn-ghost" id="odCloseSuccessBtn">Close Window</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</Layout>
+
+<!-- ═══════════════════════════════════════
+     STYLES (Scoped CSS for .od- namespace)
+═══════════════════════════════════════ -->
+<style>
+  /* Base Page Scope */
+  .od-page {
+    font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+    color: var(--ink, #0f172a);
+    background: #ffffff;
+    overflow-x: hidden;
+  }
+
+  /* Utility & Text styles */
+  .od-gradient-text {
+    background: linear-gradient(135deg, #1fb6ff 0%, #a855f7 50%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .od-eyebrow {
+    color: var(--blue-700, #0b55d9);
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+  }
+
+  .od-eyebrow-light {
+    color: #91b2ff;
+  }
+
+  .od-section-title {
+    font-size: clamp(2rem, 3.8vw, 2.9rem);
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .od-section-desc {
+    font-size: 1.12rem;
+    color: var(--muted, #5b6b82);
+    max-width: 720px;
+    line-height: 1.6;
+  }
+
+  .od-section-head.center {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .od-section-head.center .od-section-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .od-body-text {
+    font-size: 1.02rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  .od-key-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .od-key-pills span {
+    background: var(--blue-050, #f5f9ff);
+    border: 1px solid var(--blue-100, #eaf3ff);
+    color: var(--blue-700, #0b55d9);
+    font-size: 0.85rem;
+    font-weight: 750;
+    padding: 6px 14px;
+    border-radius: 999px;
+  }
+
+  /* Layout grids */
+  .od-section {
+    padding: 96px 0;
+    position: relative;
+  }
+  .od-section-white {
+    background: #ffffff;
+  }
+  .od-section-soft {
+    background: var(--soft, #f7fbff);
+    border-top: 1px solid var(--line, #dce8f7);
+    border-bottom: 1px solid var(--line, #dce8f7);
+  }
+
+  .od-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .od-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .od-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  .gap-30 { gap: 30px; }
+  .gap-60 { gap: 60px; }
+  .items-center { align-items: center; }
+
+  /* Buttons */
+  .od-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 28px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid transparent;
+    text-decoration: none;
+  }
+
+  .od-btn-primary {
+    background: linear-gradient(135deg, var(--blue-700, #0b55d9), var(--blue-600, #1265f3));
+    color: #ffffff;
+    box-shadow: 0 14px 32px rgba(11, 85, 217, 0.28);
+  }
+  .od-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(11, 85, 217, 0.38);
+    background: linear-gradient(135deg, var(--blue-600, #1265f3), #1e75ff);
+  }
+
+  .od-btn-ghost {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--blue-950, #071a3d);
+    border-color: var(--line, #dce8f7);
+  }
+  .od-btn-ghost:hover {
+    background: #ffffff;
+    border-color: var(--blue-700, #0b55d9);
+    color: var(--blue-700, #0b55d9);
+    transform: translateY(-2px);
+  }
+
+  .od-btn-light {
+    background: #ffffff;
+    color: var(--blue-700, #0b55d9);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+  }
+  .od-btn-light:hover {
+    background: #f5f9ff;
+    transform: translateY(-3px);
+  }
+
+  .od-btn-outline-light {
+    background: transparent;
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+  .od-btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+  }
+
+  .od-btn-link {
+    background: none;
+    border: none;
+    color: var(--blue-700, #0b55d9);
+    font-weight: 800;
+    font-size: 0.95rem;
+    padding: 0;
+    cursor: pointer;
+    margin-top: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: gap 0.2s ease;
+  }
+  .od-btn-link:hover {
+    gap: 10px;
+    color: var(--blue-600, #1265f3);
+  }
+
+  /* ----------------------------------------------------
+     1. HERO SECTION STYLES
+  ---------------------------------------------------- */
+  .od-hero {
+    position: relative;
+    padding: 120px 0 110px;
+    background:
+      radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.18), transparent 45%),
+      linear-gradient(180deg, #071a3d 0%, #09265c 100%);
+    color: #ffffff;
+    overflow: hidden;
+  }
+
+  .od-hero-bg-glow1 {
+    position: absolute;
+    top: -15vw;
+    right: -10vw;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.35) 0%, rgba(7, 26, 61, 0) 70%);
+    pointer-events: none;
+  }
+  .od-hero-bg-glow2 {
+    position: absolute;
+    bottom: -20vw;
+    left: -10vw;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(31, 182, 255, 0.25) 0%, rgba(7, 26, 61, 0) 70%);
+    pointer-events: none;
+  }
+
+  .od-hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 48px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .od-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    font-size: 0.88rem;
+    font-weight: 750;
+    color: #d8b4fe;
+    margin-bottom: 24px;
+  }
+  .od-badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #a855f7;
+    box-shadow: 0 0 10px #a855f7;
+    animation: odPulse 2s infinite;
+  }
+
+  @keyframes odPulse {
+    0% { transform: scale(0.95); opacity: 0.8; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.8; }
+  }
+
+  .od-hero-title {
+    font-size: clamp(2.5rem, 5.2vw, 4.2rem);
+    font-weight: 900;
+    line-height: 1.12;
+    color: #ffffff;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+  }
+
+  .od-hero-lead {
+    font-size: clamp(1.08rem, 2vw, 1.25rem);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 36px;
+    max-width: 620px;
+  }
+
+  .od-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .od-hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  .od-trust-stars {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  /* Hero Dashboard Window & Showcase Image */
+  .od-hero-visual {
+    position: relative;
+    min-height: 480px;
+  }
+
+  .od-dash-window {
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(20px);
+  }
+
+  .od-dash-header {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .od-dash-dots {
+    display: flex;
+    gap: 6px;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .dot-red { background: #ff5f56; }
+  .dot-yellow { background: #ffbd2e; }
+  .dot-green { background: #27c93f; }
+
+  .od-dash-title {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .od-dash-badge {
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #27c93f;
+    background: rgba(39, 201, 63, 0.15);
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+
+  .od-dash-img-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+  .od-dash-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0 0 20px 20px;
+    object-fit: cover;
+    aspect-ratio: 16 / 10;
+  }
+
+  /* Animated Floating Glass Cards */
+  .od-float-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(220, 232, 247, 0.9);
+    border-radius: 16px;
+    padding: 12px 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 10;
+    color: var(--blue-950, #071a3d);
+    animation: odFloatAnim 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes odFloatAnim {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-10px); }
+  }
+
+  .card-core {
+    top: -20px;
+    left: -30px;
+  }
+  .card-automation {
+    top: 60px;
+    right: -25px;
+    animation-delay: 0.8s;
+  }
+  .card-inventory {
+    bottom: 40px;
+    left: -40px;
+    animation-delay: 1.5s;
+  }
+  .card-crm {
+    bottom: -20px;
+    right: 20px;
+    animation-delay: 2.2s;
+  }
+  .card-performance {
+    top: 220px;
+    right: -35px;
+    animation-delay: 1.1s;
+  }
+
+  .od-float-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    flex-shrink: 0;
+  }
+  .bg-blue { background: linear-gradient(135deg, #0b55d9, #1265f3); }
+  .bg-purple { background: linear-gradient(135deg, #7c3aed, #a855f7); }
+  .bg-emerald { background: linear-gradient(135deg, #059669, #10b981); }
+  .bg-amber { background: linear-gradient(135deg, #d97706, #f59e0b); }
+  .bg-cyan { background: linear-gradient(135deg, #0891b2, #06b6d4); }
+
+  .od-float-title {
+    font-size: 0.72rem;
+    color: var(--muted, #5b6b82);
+    font-weight: 750;
+    text-transform: uppercase;
+  }
+  .od-float-value {
+    font-size: 0.98rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+  }
+  .od-float-sub {
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+  .text-green { color: #0bbf8a; }
+
+  /* ----------------------------------------------------
+     2. COMPANY TRUST SECTION
+  ---------------------------------------------------- */
+  .od-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .od-stat-box {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    padding: 20px 14px;
+    border-radius: 16px;
+  }
+  .od-stat-num {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 900;
+    color: var(--blue-700, #0b55d9);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .od-stat-label {
+    font-size: 0.8rem;
+    font-weight: 750;
+    color: var(--muted, #5b6b82);
+  }
+
+  .od-trust-bar {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 18px;
+    padding: 24px;
+    text-align: center;
+  }
+  .od-tb-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--muted, #5b6b82);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+  }
+  .od-tb-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .od-tb-badge {
+    background: var(--soft, #f7fbff);
+    border: 1px solid var(--line, #dce8f7);
+    color: var(--blue-950, #071a3d);
+    font-size: 0.88rem;
+    font-weight: 750;
+    padding: 8px 18px;
+    border-radius: 999px;
+  }
+
+  /* ----------------------------------------------------
+     3. WHAT IS ODOO DEVELOPMENT?
+  ---------------------------------------------------- */
+  .od-visual-box {
+    position: relative;
+  }
+  .od-ecosystem-card {
+    background: linear-gradient(145deg, #071a3d, #09265c);
+    border-radius: 24px;
+    padding: 36px;
+    color: #ffffff;
+    box-shadow: 0 24px 60px rgba(8, 38, 92, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .od-eco-header {
+    margin-bottom: 28px;
+  }
+  .od-eco-header h3 {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 850;
+  }
+  .od-eco-header p {
+    color: #1fb6ff;
+    font-size: 0.9rem;
+  }
+
+  .od-eco-node.main-node {
+    background: linear-gradient(135deg, #0b55d9, #1265f3);
+    padding: 16px 24px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-weight: 850;
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    box-shadow: 0 10px 30px rgba(11, 85, 217, 0.4);
+  }
+
+  .od-eco-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .od-eco-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    padding: 14px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .od-eco-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(31, 182, 255, 0.15);
+    color: #1fb6ff;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+  .od-eco-item strong {
+    font-size: 0.88rem;
+    color: #ffffff;
+    display: block;
+  }
+  .od-eco-item small {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.74rem;
+  }
+
+  /* ----------------------------------------------------
+     4. WHY BUSINESSES NEED ODOO DEVELOPMENT
+  ---------------------------------------------------- */
+  .od-feat-card {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    padding: 24px;
+    border-radius: 18px;
+    transition: all 0.2s ease;
+  }
+  .od-feat-card:hover {
+    border-color: var(--blue-700, #0b55d9);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(8, 38, 92, 0.08);
+  }
+  .od-feat-svg {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: var(--blue-100, #eaf3ff);
+    color: var(--blue-700, #0b55d9);
+    display: grid;
+    place-items: center;
+    margin-bottom: 14px;
+  }
+  .od-feat-card h3,
+  .od-feat-card h4 {
+    font-size: 1.1rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 8px;
+  }
+  .od-feat-card p {
+    font-size: 0.9rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.5;
+  }
+
+  /* ----------------------------------------------------
+     5. OUR ODOO DEVELOPMENT SERVICES
+  ---------------------------------------------------- */
+  .od-sol-card {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 20px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s ease;
+  }
+  .od-sol-card:hover {
+    border-color: var(--blue-700, #0b55d9);
+    box-shadow: 0 20px 48px rgba(8, 38, 92, 0.1);
+    transform: translateY(-4px);
+  }
+  .od-sol-top {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 16px;
+  }
+  .od-sol-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: var(--blue-100, #eaf3ff);
+    color: var(--blue-700, #0b55d9);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+  .od-sol-top h3 {
+    font-size: 1.28rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+  }
+  .od-sol-tag {
+    font-size: 0.8rem;
+    font-weight: 750;
+    color: var(--blue-700, #0b55d9);
+  }
+  .od-sol-desc {
+    font-size: 0.95rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.6;
+  }
+
+  /* ----------------------------------------------------
+     6. INDUSTRIES WE SERVE
+  ---------------------------------------------------- */
+  .od-sector-card {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 18px;
+    padding: 24px;
+    transition: all 0.22s ease;
+  }
+  .od-sector-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--blue-700, #0b55d9);
+    box-shadow: 0 16px 36px rgba(8, 38, 92, 0.09);
+  }
+  .od-sc-svg-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: var(--blue-100, #eaf3ff);
+    color: var(--blue-700, #0b55d9);
+    display: grid;
+    place-items: center;
+    margin-bottom: 14px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .od-sector-card:hover .od-sc-svg-icon {
+    background: var(--blue-700, #0b55d9);
+    color: #ffffff;
+  }
+  .od-sector-card h3 {
+    font-size: 1.1rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 8px;
+  }
+  .od-sector-card p {
+    font-size: 0.88rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.48;
+  }
+
+  /* ----------------------------------------------------
+     7. WHY CHOOSE US
+  ---------------------------------------------------- */
+  .od-why-card {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 18px;
+    padding: 26px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: all 0.2s ease;
+  }
+  .od-why-card:hover {
+    border-color: var(--blue-700, #0b55d9);
+    box-shadow: 0 16px 36px rgba(8, 38, 92, 0.08);
+    transform: translateY(-3px);
+  }
+  .od-why-svg-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: var(--blue-100, #eaf3ff);
+    color: var(--blue-700, #0b55d9);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+  .od-why-card h3 {
+    font-size: 1.1rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 6px;
+  }
+  .od-why-card p {
+    font-size: 0.88rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.5;
+  }
+
+  /* ----------------------------------------------------
+     8. DEVELOPMENT TIMELINE
+  ---------------------------------------------------- */
+  .od-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .od-tl-item {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    padding: 22px;
+    border-radius: 18px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .od-tl-marker {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--blue-700, #0b55d9), var(--cyan, #1fb6ff));
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 1.1rem;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+  .od-tl-content h4 {
+    font-size: 1.05rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 6px;
+  }
+  .od-tl-content p {
+    font-size: 0.88rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.48;
+  }
+
+  /* ----------------------------------------------------
+     9. TECHNOLOGIES WE USE
+  ---------------------------------------------------- */
+  .od-tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+  .od-tech-badge {
+    background: var(--soft, #f7fbff);
+    border: 1px solid var(--line, #dce8f7);
+    padding: 12px 24px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--blue-950, #071a3d);
+    transition: all 0.2s ease;
+  }
+  .od-tech-badge:hover {
+    background: #ffffff;
+    border-color: var(--blue-700, #0b55d9);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(8, 38, 92, 0.08);
+  }
+  .od-tb-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--blue-700, #0b55d9);
+  }
+
+  /* ----------------------------------------------------
+     11. BUSINESS BENEFITS
+  ---------------------------------------------------- */
+  .od-ben-card {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 18px;
+    padding: 28px;
+    position: relative;
+    transition: all 0.22s ease;
+  }
+  .od-ben-card:hover {
+    border-color: var(--blue-700, #0b55d9);
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(8, 38, 92, 0.09);
+  }
+  .od-ben-num {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--blue-100, #eaf3ff);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .od-ben-card h3 {
+    font-size: 1.15rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 8px;
+  }
+  .od-ben-card p {
+    font-size: 0.9rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.5;
+  }
+
+  /* ----------------------------------------------------
+     12. ODOO MODULES WE DEVELOP
+  ---------------------------------------------------- */
+  .od-mod-card {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 16px;
+    padding: 20px;
+    transition: all 0.2s ease;
+  }
+  .od-mod-card:hover {
+    border-color: var(--blue-700, #0b55d9);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(8, 38, 92, 0.08);
+  }
+  .od-mod-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--blue-100, #eaf3ff);
+    color: var(--blue-700, #0b55d9);
+    display: grid;
+    place-items: center;
+    margin-bottom: 12px;
+  }
+  .od-mod-card h4 {
+    font-size: 1.05rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 6px;
+  }
+  .od-mod-card p {
+    font-size: 0.85rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.45;
+  }
+
+  /* ----------------------------------------------------
+     13. SUCCESS STORIES / CASE STUDIES
+  ---------------------------------------------------- */
+  .od-cs-card {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 20px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .od-cs-tag {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--blue-700, #0b55d9);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+  .od-cs-card h3 {
+    font-size: 1.3rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 16px;
+  }
+  .od-cs-body p {
+    font-size: 0.92rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.55;
+    margin-bottom: 10px;
+  }
+  .od-cs-metrics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line, #dce8f7);
+  }
+  .od-cs-metrics strong {
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: var(--blue-700, #0b55d9);
+    display: block;
+  }
+  .od-cs-metrics span {
+    font-size: 0.78rem;
+    color: var(--muted, #5b6b82);
+    font-weight: 700;
+  }
+
+  /* ----------------------------------------------------
+     14. TESTIMONIALS
+  ---------------------------------------------------- */
+  .od-testi-card {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 20px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .od-testi-stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 14px;
+  }
+  .od-testi-quote {
+    font-size: 0.98rem;
+    color: var(--ink, #0f172a);
+    line-height: 1.65;
+    font-style: italic;
+    margin-bottom: 24px;
+  }
+  .od-testi-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .od-author-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue-700, #0b55d9), var(--cyan, #1fb6ff));
+    color: #ffffff;
+    font-weight: 850;
+    display: grid;
+    place-items: center;
+    font-size: 0.95rem;
+  }
+  .od-testi-author strong {
+    color: var(--blue-950, #071a3d);
+    font-size: 0.98rem;
+  }
+  .od-testi-author small {
+    color: var(--muted, #5b6b82);
+    font-size: 0.82rem;
+  }
+  .od-testi-outcome {
+    background: var(--blue-050, #f5f9ff);
+    border: 1px solid var(--blue-100, #eaf3ff);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.84rem;
+    color: var(--blue-700, #0b55d9);
+  }
+
+  /* ----------------------------------------------------
+     15. FAQ ACCORDION
+  ---------------------------------------------------- */
+  .od-faq-accordion {
+    display: grid;
+    gap: 14px;
+  }
+  .od-faq-item {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+  }
+  .od-faq-item[open] {
+    border-color: var(--blue-700, #0b55d9);
+    box-shadow: 0 10px 30px rgba(8, 38, 92, 0.06);
+  }
+  .od-faq-question {
+    padding: 20px 24px;
+    font-size: 1.08rem;
+    font-weight: 800;
+    color: var(--blue-950, #071a3d);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  .od-faq-question::-webkit-details-marker { display: none; }
+  .od-faq-icon {
+    font-size: 1.4rem;
+    color: var(--blue-700, #0b55d9);
+    font-weight: 400;
+    transition: transform 0.2s ease;
+  }
+  .od-faq-item[open] .od-faq-icon {
+    transform: rotate(45deg);
+  }
+  .od-faq-answer {
+    padding: 0 24px 20px 24px;
+    font-size: 0.98rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.65;
+  }
+
+  /* ----------------------------------------------------
+     16. FINAL CTA & MODAL
+  ---------------------------------------------------- */
+  .od-cta-section {
+    background: linear-gradient(135deg, var(--blue-950, #071a3d), var(--blue-900, #09265c));
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+  }
+  .od-cta-box {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .od-cta-title {
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.15;
+  }
+  .od-cta-desc {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  .od-cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  /* Modal Backdrop & Dialog */
+  .od-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(7, 26, 61, 0.75);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+  }
+  .od-modal-backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .od-modal-dialog {
+    background: #ffffff;
+    border-radius: 24px;
+    max-width: 560px;
+    width: 100%;
+    padding: 36px;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+    transform: translateY(20px);
+    transition: transform 0.25s ease;
+  }
+  .od-modal-backdrop.is-open .od-modal-dialog {
+    transform: translateY(0);
+  }
+
+  .od-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--soft, #f7fbff);
+    border: 1px solid var(--line, #dce8f7);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    color: var(--muted, #5b6b82);
+  }
+  .od-modal-close:hover {
+    color: var(--blue-950, #071a3d);
+    background: var(--line, #dce8f7);
+  }
+
+  .od-modal-header {
+    margin-bottom: 24px;
+  }
+  .od-badge-small {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--blue-700, #0b55d9);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+  .od-modal-header h3 {
+    font-size: 1.5rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 6px;
+  }
+  .od-modal-header p {
+    font-size: 0.92rem;
+    color: var(--muted, #5b6b82);
+  }
+
+  .od-modal-form {
+    display: grid;
+    gap: 16px;
+  }
+  .od-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .od-form-group label {
+    font-size: 0.85rem;
+    font-weight: 750;
+    color: var(--blue-950, #071a3d);
+  }
+  .od-form-group input,
+  .od-form-group select,
+  .od-form-group textarea {
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--line, #dce8f7);
+    font-size: 0.95rem;
+    background: var(--soft, #f7fbff);
+    color: var(--ink, #0f172a);
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  .od-form-group input:focus,
+  .od-form-group select:focus,
+  .od-form-group textarea:focus {
+    border-color: var(--blue-700, #0b55d9);
+    background: #ffffff;
+  }
+
+  .od-form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .od-btn-full {
+    width: 100%;
+    margin-top: 8px;
+  }
+  .od-form-privacy {
+    font-size: 0.78rem;
+    color: var(--muted, #5b6b82);
+    text-align: center;
+  }
+
+  .od-modal-success {
+    text-align: center;
+    padding: 20px 0;
+  }
+  .od-success-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #d1fae5;
+    color: #059669;
+    font-size: 2rem;
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 16px;
+  }
+  .od-modal-success h4 {
+    font-size: 1.4rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 10px;
+  }
+  .od-modal-success p {
+    font-size: 0.95rem;
+    color: var(--muted, #5b6b82);
+    margin-bottom: 24px;
+    line-height: 1.55;
+  }
+
+  /* ----------------------------------------------------
+     RESPONSIVE MEDIA QUERIES
+  ---------------------------------------------------- */
+  @media (max-width: 1024px) {
+    .od-hero-grid {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+    .od-hero-visual {
+      min-height: auto;
+    }
+    .od-stats-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .od-grid-4 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .od-timeline {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .od-grid-2,
+    .od-grid-3,
+    .od-grid-4,
+    .od-timeline {
+      grid-template-columns: 1fr;
+    }
+    .od-stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .od-float-card {
+      position: static;
+      margin-top: 10px;
+      animation: none;
+    }
+    .od-hero-visual {
+      display: flex;
+      flex-direction: column;
+    }
+    .od-form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .od-stats-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<!-- ═══════════════════════════════════════
+     CLIENT-SIDE INTERACTIVE SCRIPT
+═══════════════════════════════════════ -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modalBackdrop = document.getElementById('odDemoModal');
+    const closeBtn = document.getElementById('odModalCloseBtn');
+    const openBtns = document.querySelectorAll('.js-open-od-modal');
+    const modalForm = document.getElementById('odModalForm') as HTMLFormElement | null;
+    const successMsg = document.getElementById('odSuccessMsg');
+    const closeSuccessBtn = document.getElementById('odCloseSuccessBtn');
+
+    // Open Modal
+    openBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (modalBackdrop) {
+          modalBackdrop.classList.add('is-open');
+          modalBackdrop.setAttribute('aria-hidden', 'false');
+        }
+      });
+    });
+
+    // Close Modal Function
+    const closeModal = () => {
+      if (modalBackdrop) {
+        modalBackdrop.classList.remove('is-open');
+        modalBackdrop.setAttribute('aria-hidden', 'true');
+      }
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (closeSuccessBtn) closeSuccessBtn.addEventListener('click', closeModal);
+
+    // Close on backdrop click
+    if (modalBackdrop) {
+      modalBackdrop.addEventListener('click', (e) => {
+        if (e.target === modalBackdrop) closeModal();
+      });
+    }
+
+    // Handle Form Submit
+    if (modalForm) {
+      modalForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const submitBtn = document.getElementById('odSubmitBtn');
+        if (submitBtn) {
+          submitBtn.innerHTML = '<span>Processing...</span>';
+          (submitBtn as HTMLButtonElement).disabled = true;
+        }
+
+        setTimeout(() => {
+          if (modalForm) modalForm.style.display = 'none';
+          if (successMsg) successMsg.style.display = 'block';
+        }, 800);
+      });
+    }
+  });
+</script>
+
