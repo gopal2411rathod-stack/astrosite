@@ -1,0 +1,2284 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export const prerender = true;
+
+const hireFaqList = [
+  {
+    question: "How quickly can a dedicated Odoo developer start on my project?",
+    answer: "Our onboarding is fast. Once we understand your technical requirements, we present pre-vetted Odoo developer profiles within 24 hours. You can interview candidates and have your dedicated developer start work within 48 hours."
+  },
+  {
+    question: "Can I interview and evaluate the Odoo developers before hiring?",
+    answer: "Yes, absolutely. We encourage client interviews. You can conduct technical interviews, review past Odoo module portfolios, test coding skills, and evaluate communication before finalizing your developer."
+  },
+  {
+    question: "Will the hired Odoo developer work in my local time zone?",
+    answer: "Yes. Our developers offer flexible shift overlaps tailored to your time zone (US EST/PST, UK GMT, Europe CET, Australia AEST, or Asia). We ensure at least 4 to 8 hours of daily real-time work overlap."
+  },
+  {
+    question: "Can your developers work on an existing, half-built, or legacy Odoo project?",
+    answer: "Yes. Our senior Odoo engineers routinely audit, refactor, debug, and optimize pre-existing Odoo databases and custom modules, inheriting legacy codebases with zero operational disruption."
+  },
+  {
+    question: "Can I scale my developer team up or down based on project demands?",
+    answer: "Yes. Hegrix Technologies provides total scaling flexibility. You can add developers during major release sprints or downscale team size when transitioning into SLA maintenance mode."
+  },
+  {
+    question: "Do you sign Non-Disclosure Agreements (NDAs) to protect our code and IP?",
+    answer: "Yes. We sign strict enterprise NDAs and Intellectual Property (IP) assignment contracts before project kickoff. You retain 100% ownership of all custom Python source code, database scripts, and assets."
+  },
+  {
+    question: "Which versions of Odoo do your developers support?",
+    answer: "Our team supports all Odoo Enterprise and Community versions from Odoo v12 up to the latest Odoo v17 and v18, including modern OWL (Odoo Web Library) frontend and Python/PostgreSQL backends."
+  },
+  {
+    question: "Do you provide post-launch support and technical maintenance?",
+    answer: "Yes. We provide continuous 24/7 post-deployment SLA support, server monitoring, database backups, security patches, bug fixes, and feature enhancements to ensure uninterrupted ERP uptime."
+  }
+];
+
+const hireSchemaData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Hire Dedicated Odoo Developers | Hegrix Technologies",
+    provider: {
+      "@type": "Organization",
+      name: "Hegrix Technologies",
+      url: "https://hegrix.com"
+    },
+    areaServed: "Global",
+    serviceType: "Hire Odoo Developers, Dedicated Odoo ERP Engineers, Odoo Customization & Integration Services",
+    description: "Hire certified, dedicated Odoo developers from Hegrix Technologies. Custom Odoo module development, ERP integration, version migration, and 24/7 SLA maintenance.",
+    url: "https://hegrix.com/services/hire-odoo-developer/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: hireFaqList.map(item => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      }
+    }))
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://hegrix.com/"
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Services",
+        item: "https://hegrix.com/services/"
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Hire Odoo Developer",
+        item: "https://hegrix.com/services/hire-odoo-developer/"
+      }
+    ]
+  }
+];
+---
+
+<Layout
+  title="Hire Odoo Developers | Dedicated Odoo ERP Experts | Hegrix"
+  description="Hire certified dedicated Odoo developers from Hegrix Technologies. Expert Python, OWL & PostgreSQL developers for custom Odoo modules, ERP integration, migration & maintenance."
+  keywords="Hire Odoo Developers, Dedicated Odoo Developers, Remote Odoo Developers, Odoo ERP Developers, Odoo Development Team, Hire Odoo Experts, Odoo Module Developers, Odoo Technical Consultants, Offshore Odoo Developers, Hire Python Odoo Engineer"
+  path="/services/hire-odoo-developer/"
+  schema={hireSchemaData}
+>
+
+<div class="hd-page">
+
+  <!-- ═══════════════════════════════════════
+       1. HERO SECTION
+  ═══════════════════════════════════════ -->
+  <section class="hd-hero">
+    <div class="hd-hero-glow1" aria-hidden="true"></div>
+    <div class="hd-hero-glow2" aria-hidden="true"></div>
+
+    <div class="container hd-hero-grid">
+      <!-- Left Hero Content -->
+      <div class="hd-hero-text">
+        <div class="hd-badge">
+          <span class="hd-badge-dot"></span>
+          <span>Top 1% Certified Dedicated Odoo Developers</span>
+        </div>
+
+        <h1 class="hd-hero-title">
+          Hire Expert Odoo Developers Who <span class="hd-gradient-text">Understand Your Business</span>
+        </h1>
+
+        <p class="hd-hero-lead">
+          Whether you need one developer or a dedicated team, our experienced Odoo professionals help you build, customize, integrate, and optimize ERP solutions that support long-term business growth.
+        </p>
+
+        <div class="hd-hero-actions">
+          <button class="hd-btn hd-btn-primary js-open-hire-modal">
+            <span>Hire an Odoo Developer</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <button class="hd-btn hd-btn-ghost js-open-hire-modal">
+            <span>Schedule a Discovery Call</span>
+          </button>
+        </div>
+
+        <div class="hd-hero-trust">
+          <div class="hd-stars">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#ffc107" stroke="#ffc107"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <strong>4.98 / 5 Rating</strong>
+          </div>
+          <span class="hd-trust-sep">•</span>
+          <span>48-Hour Developer Risk-Free Onboarding</span>
+        </div>
+      </div>
+
+      <!-- Right Visual Feature Engine Showcase -->
+      <div class="hd-hero-visual">
+        <div class="hd-window">
+          <div class="hd-window-bar">
+            <div class="hd-dots">
+              <span class="dot dot-r"></span>
+              <span class="dot dot-y"></span>
+              <span class="dot dot-g"></span>
+            </div>
+            <div class="hd-window-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Hegrix Dedicated Developer Workspace — Python 3.12 / Odoo v18 OWL
+            </div>
+            <div class="hd-live-status">● ACTIVE DEV SQUAD</div>
+          </div>
+
+          <div class="hd-code-snippet">
+            <pre><code><span class="c-purple">from</span> odoo <span class="c-purple">import</span> models, fields, api
+
+<span class="c-blue">class</span> <span class="c-gold">HegrixCustomERP</span>(models.Model):
+    _name = <span class="c-green">'hegrix.enterprise.engine'</span>
+    _description = <span class="c-green">'High Concurrency ERP Automation'</span>
+
+    client_id = fields.Many2one(<span class="c-green">'res.partner'</span>, string=<span class="c-green">'Enterprise Client'</span>)
+    workflow_status = fields.Selection([
+        (<span class="c-green">'audit'</span>, <span class="c-green">'Requirements Audited'</span>),
+        (<span class="c-green">'dev'</span>, <span class="c-green">'Dedicated Sprint Active'</span>),
+        (<span class="c-green">'live'</span>, <span class="c-green">'Deployed with SLA'</span>)
+    ], default=<span class="c-green">'dev'</span>)
+
+    <span class="c-blue">@api.depends</span>(<span class="c-green">'client_id'</span>)
+    <span class="c-blue">def</span> <span class="c-gold">_optimize_performance</span>(self):
+        <span class="c-purple">for</span> record <span class="c-purple">in</span> self:
+            record.status = <span class="c-green">"PostgreSQL 16 Indexed &amp; OWL Rendered"</span></code></pre>
+          </div>
+        </div>
+
+        <!-- 4 Floating Glass Metric Cards -->
+        <div class="hd-float card-devs">
+          <div class="hd-icon bg-purple">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <div class="hd-float-label">Senior Team</div>
+            <div class="hd-float-val">15+ Certified Devs</div>
+            <div class="hd-float-sub text-green">100% Dedicated to You</div>
+          </div>
+        </div>
+
+        <div class="hd-float card-speed">
+          <div class="hd-icon bg-blue">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div>
+            <div class="hd-float-label">Onboarding</div>
+            <div class="hd-float-val">Kickoff in 48 Hours</div>
+            <div class="hd-float-sub">Zero Onboarding Delay</div>
+          </div>
+        </div>
+
+        <div class="hd-float card-quality">
+          <div class="hd-icon bg-emerald">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div>
+            <div class="hd-float-label">Code Standards</div>
+            <div class="hd-float-val">100% IP Code Transfer</div>
+            <div class="hd-float-sub text-green">PEP-8 &amp; Odoo Guidelines</div>
+          </div>
+        </div>
+
+        <div class="hd-float card-uptime">
+          <div class="hd-icon bg-amber">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div class="hd-float-label">SLA Protection</div>
+            <div class="hd-float-val">99.4% Client Retention</div>
+            <div class="hd-float-sub">&lt; 15 min Emergency SLA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       2. SUCCESS METRICS & STATS BAR
+  ═══════════════════════════════════════ -->
+  <section class="hd-section hd-section-soft">
+    <div class="container">
+      <div class="hd-stats-grid">
+        <div class="hd-stat-card">
+          <div class="hd-stat-num">50+</div>
+          <div class="hd-stat-label">ERP Projects Delivered</div>
+        </div>
+        <div class="hd-stat-card">
+          <div class="hd-stat-num">100+</div>
+          <div class="hd-stat-label">Custom Modules Developed</div>
+        </div>
+        <div class="hd-stat-card">
+          <div class="hd-stat-num">99.4%</div>
+          <div class="hd-stat-label">Client Retention Rate</div>
+        </div>
+        <div class="hd-stat-card">
+          <div class="hd-stat-num">15+</div>
+          <div class="hd-stat-label">Senior Certified Developers</div>
+        </div>
+        <div class="hd-stat-card">
+          <div class="hd-stat-num">25+</div>
+          <div class="hd-stat-label">Countries Served Globally</div>
+        </div>
+        <div class="hd-stat-card">
+          <div class="hd-stat-num">&lt; 15m</div>
+          <div class="hd-stat-label">Average SLA Response Time</div>
+        </div>
+      </div>
+
+      <!-- Trust Badges Bar -->
+      <div class="hd-trust-bar">
+        <div class="hd-tb-title">Guaranteed Technical &amp; Operational Standards</div>
+        <div class="hd-tb-badges">
+          <div class="hd-tb-item">🔒 ISO 27001 Security Standard</div>
+          <div class="hd-tb-item">⚡ Odoo 12 to v18 Ready</div>
+          <div class="hd-tb-item">💼 100% IP Source Code Rights</div>
+          <div class="hd-tb-item">🤝 Strict NDA Protection</div>
+          <div class="hd-tb-item">🕒 Time Zone Flexible Shifts</div>
+          <div class="hd-tb-item">💎 Transparent Billing</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       3. WHY HIRE FROM HEGRIX TECHNOLOGIES
+  ═══════════════════════════════════════ -->
+  <section class="hd-section hd-section-white">
+    <div class="container">
+      <div class="hd-section-head center">
+        <div class="hd-eyebrow">Strategic Advantage</div>
+        <h2 class="hd-section-title">Why Businesses Hire Odoo Developers from Hegrix</h2>
+        <p class="hd-section-desc">We go beyond simple task execution. Our engineers bring deep architectural domain experience to deliver measurable business performance.</p>
+      </div>
+
+      <div class="hd-grid-4">
+        <div class="hd-why-card">
+          <div class="hd-why-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Multi-Version Odoo Mastery</h3>
+          <p>Proficient across Odoo v12 through v18 Community and Enterprise editions with modern Python and OWL expertise.</p>
+        </div>
+
+        <div class="hd-why-card">
+          <div class="hd-why-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3>Business-First Approach</h3>
+          <p>We analyze your business workflows first, designing ERP logic that increases profit margins and reduces operational overhead.</p>
+        </div>
+
+        <div class="hd-why-card">
+          <div class="hd-why-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3>Clean, Maintainable Code</h3>
+          <p>Following PEP-8 and strict Odoo architectural guidelines ensuring your custom code remains upgrade-safe for future versions.</p>
+        </div>
+
+        <div class="hd-why-card">
+          <div class="hd-why-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3>Rapid 48-Hour Onboarding</h3>
+          <p>Skip months of tedious recruitment. Review vetted developer profiles and kick off development within 48 business hours.</p>
+        </div>
+
+        <div class="hd-why-card">
+          <div class="hd-why-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Flexible Engagement Models</h3>
+          <p>Scale effortlessly between hourly tasks, part-time assistance, dedicated developers, or a full turnkey engineering squad.</p>
+        </div>
+
+        <div class="hd-why-card">
+          <div class="hd-why-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Transparent Daily Sync</h3>
+          <p>Direct communication via Slack, Teams, Jira, and GitHub with daily standups, time-tracking logs, and code commits.</p>
+        </div>
+
+        <div class="hd-why-card">
+          <div class="hd-why-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>ISO 27001 Code Security</h3>
+          <p>Strict security protocols, database encryption, role-based access rules, and non-disclosure legal contracts (NDAs).</p>
+        </div>
+
+        <div class="hd-why-card">
+          <div class="hd-why-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <h3>Long-Term Partnership</h3>
+          <p>We provide long-term continuity, retaining core developer knowledge on your account for ongoing ERP updates and scaling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       4. WHAT CAN OUR DEVELOPERS DO? (CAPABILITIES)
+  ═══════════════════════════════════════ -->
+  <section class="hd-section hd-section-soft">
+    <div class="container">
+      <div class="hd-section-head center">
+        <div class="hd-eyebrow">Outcome-Driven Capabilities</div>
+        <h2 class="hd-section-title">What Can Our Dedicated Odoo Developers Build?</h2>
+        <p class="hd-section-desc">From bespoke Python module development to REST API connectors and high-availability database optimization.</p>
+      </div>
+
+      <div class="hd-grid-3">
+        <!-- 1 -->
+        <div class="hd-cap-card">
+          <div class="hd-cap-top">
+            <div class="hd-cap-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h3>Build Custom Odoo Modules</h3>
+          </div>
+          <p>Engineer custom Python and XML modules tailored around unique manufacturing, inventory, sales, or financial approval logic.</p>
+          <div class="hd-cap-outcome">🎯 <strong>Business Outcome:</strong> Eliminates manual steps and automates proprietary workflows.</div>
+        </div>
+
+        <!-- 2 -->
+        <div class="hd-cap-card">
+          <div class="hd-cap-top">
+            <div class="hd-cap-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Customize Existing Applications</h3>
+          </div>
+          <p>Extend standard Odoo apps (CRM, Sales, MRP, Accounting, HR) with custom views, fields, dynamic filters, and permission rules.</p>
+          <div class="hd-cap-outcome">🎯 <strong>Business Outcome:</strong> Adapts Odoo to match your exact team preferences.</div>
+        </div>
+
+        <!-- 3 -->
+        <div class="hd-cap-card">
+          <div class="hd-cap-top">
+            <div class="hd-cap-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h3>Develop Advanced Workflows</h3>
+          </div>
+          <p>Configure automated multi-tier approval hierarchies, automated reorder triggers, automated email notifications, and task status dispatches.</p>
+          <div class="hd-cap-outcome">🎯 <strong>Business Outcome:</strong> Accelerates process speed and cuts administrative delay.</div>
+        </div>
+
+        <!-- 4 -->
+        <div class="hd-cap-card">
+          <div class="hd-cap-top">
+            <div class="hd-cap-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3>OWL Dashboards &amp; QWeb Reports</h3>
+          </div>
+          <p>Design modern interactive executive BI dashboards using OWL and pixel-perfect QWeb PDF invoices, purchase orders, and financial statements.</p>
+          <div class="hd-cap-outcome">🎯 <strong>Business Outcome:</strong> Real-time operational visibility and professional customer documents.</div>
+        </div>
+
+        <!-- 5 -->
+        <div class="hd-cap-card">
+          <div class="hd-cap-top">
+            <div class="hd-cap-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            </div>
+            <h3>Payment Gateway Integration</h3>
+          </div>
+          <p>Seamlessly integrate local and international payment gateways (Stripe, Razorpay, PayPal, Authorize.Net, Square) into Odoo eCommerce and Invoicing.</p>
+          <div class="hd-cap-outcome">🎯 <strong>Business Outcome:</strong> Instant payment processing and automated ledger reconciliation.</div>
+        </div>
+
+        <!-- 6 -->
+        <div class="hd-cap-card">
+          <div class="hd-cap-top">
+            <div class="hd-cap-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg>
+            </div>
+            <h3>Connect Third-Party APIs</h3>
+          </div>
+          <p>Build secure RESTful and JSON-RPC API connectors to sync Odoo with Shopify, WooCommerce, Salesforce, HubSpot, FedEx, DHL, and Tally.</p>
+          <div class="hd-cap-outcome">🎯 <strong>Business Outcome:</strong> Single source of truth across all external software tools.</div>
+        </div>
+
+        <!-- 7 -->
+        <div class="hd-cap-card">
+          <div class="hd-cap-top">
+            <div class="hd-cap-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            </div>
+            <h3>Migrate Between Odoo Versions</h3>
+          </div>
+          <p>Upgrade older Odoo databases (v13/14/15/16) to Odoo 17/18 with full custom code refactoring, staging trial runs, and zero data loss.</p>
+          <div class="hd-cap-outcome">🎯 <strong>Business Outcome:</strong> Unlock latest Odoo features without risking system downtime.</div>
+        </div>
+
+        <!-- 8 -->
+        <div class="hd-cap-card">
+          <div class="hd-cap-top">
+            <div class="hd-cap-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>Optimize ERP Performance</h3>
+          </div>
+          <p>Audit slow Odoo instances, optimize PostgreSQL query indexes, implement Redis caching, and configure Gunicorn multi-worker servers.</p>
+          <div class="hd-cap-outcome">🎯 <strong>Business Outcome:</strong> Sub-second page loads even during peak transaction spikes.</div>
+        </div>
+
+        <!-- 9 -->
+        <div class="hd-cap-card">
+          <div class="hd-cap-top">
+            <div class="hd-cap-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3>Automate Repetitive Processes</h3>
+          </div>
+          <p>Develop automated background CRON jobs for nightly inventory syncs, automated supplier purchase orders, and PDF invoice dispatch.</p>
+          <div class="hd-cap-outcome">🎯 <strong>Business Outcome:</strong> Saves 40+ staff hours every week in manual operations.</div>
+        </div>
+
+        <!-- 10 -->
+        <div class="hd-cap-card">
+          <div class="hd-cap-top">
+            <div class="hd-cap-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3>Resolve Technical Issues &amp; Bugs</h3>
+          </div>
+          <p>Debug broken third-party App Store modules, repair database tracebacks, fix XML view inheritance conflicts, and patch security flaws.</p>
+          <div class="hd-cap-outcome">🎯 <strong>Business Outcome:</strong> Restores system stability and eliminates crashing errors.</div>
+        </div>
+
+        <!-- 11 -->
+        <div class="hd-cap-card">
+          <div class="hd-cap-top">
+            <div class="hd-cap-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Maintain &amp; Upgrade ERP Systems</h3>
+          </div>
+          <p>Continuous 24/7 technical support, automated cloud backups, security patch deployments, user permission reviews, and hypercare support.</p>
+          <div class="hd-cap-outcome">🎯 <strong>Business Outcome:</strong> Peace of mind with guaranteed 99.9% uptime SLAs.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       5. DEVELOPER PROFILES & EXPERTISE LEVELS
+  ═══════════════════════════════════════ -->
+  <section class="hd-section hd-section-white">
+    <div class="container">
+      <div class="hd-section-head center">
+        <div class="hd-eyebrow">Expertise Tiers</div>
+        <h2 class="hd-section-title">Select the Right Odoo Developer Profile for Your Project</h2>
+        <p class="hd-section-desc">Hire based on exact experience levels, technical skillsets, and complexity requirements.</p>
+      </div>
+
+      <div class="hd-grid-3">
+        <!-- Junior -->
+        <div class="hd-prof-card">
+          <div class="hd-prof-badge">Junior Level</div>
+          <h3>Junior Odoo Developer</h3>
+          <div class="hd-prof-exp">1 - 3 Years Experience</div>
+          <p class="hd-prof-desc">Suitable for small module customizations, basic form view tweaks, QWeb report modifications, and bug fixes.</p>
+          
+          <div class="hd-prof-section">
+            <strong>Core Expertise:</strong>
+            <ul>
+              <li>✓ Python 3 &amp; Basic XML Views</li>
+              <li>✓ Standard Odoo Module Customization</li>
+              <li>✓ QWeb PDF Report Formatting</li>
+              <li>✓ Bug Fixing &amp; Data Entry Scripts</li>
+            </ul>
+          </div>
+
+          <div class="hd-prof-ideal">
+            <strong>Ideal For:</strong> Simple module enhancements &amp; maintenance support.
+          </div>
+
+          <button class="hd-btn hd-btn-primary hd-btn-full js-open-hire-modal" data-level="Junior Odoo Developer">
+            Hire Junior Developer
+          </button>
+        </div>
+
+        <!-- Mid-Level -->
+        <div class="hd-prof-card featured">
+          <div class="hd-prof-badge featured">Most Popular</div>
+          <h3>Mid-Level Odoo Developer</h3>
+          <div class="hd-prof-exp">3 - 5 Years Experience</div>
+          <p class="hd-prof-desc">Ideal for third-party API integrations, workflow automation, custom app development, and version migrations.</p>
+          
+          <div class="hd-prof-section">
+            <strong>Core Expertise:</strong>
+            <ul>
+              <li>✓ Advanced Python &amp; PostgreSQL Queries</li>
+              <li>✓ OWL Frontend Framework &amp; Widgets</li>
+              <li>✓ RESTful &amp; JSON-RPC API Integrations</li>
+              <li>✓ Custom Module Architecture from Scratch</li>
+            </ul>
+          </div>
+
+          <div class="hd-prof-ideal">
+            <strong>Ideal For:</strong> Full custom apps, e-commerce &amp; API connectors.
+          </div>
+
+          <button class="hd-btn hd-btn-primary hd-btn-full js-open-hire-modal" data-level="Mid-Level Odoo Developer">
+            Hire Mid-Level Developer
+          </button>
+        </div>
+
+        <!-- Senior -->
+        <div class="hd-prof-card">
+          <div class="hd-prof-badge">Enterprise Tier</div>
+          <h3>Senior Odoo Developer / Architect</h3>
+          <div class="hd-prof-exp">6+ Years Experience</div>
+          <p class="hd-prof-desc">Perfect for enterprise ERP implementations, multi-company setups, high-concurrency database tuning, and strategic advisory.</p>
+          
+          <div class="hd-prof-section">
+            <strong>Core Expertise:</strong>
+            <ul>
+              <li>✓ Enterprise ERP Architecture Planning</li>
+              <li>✓ Multi-Company &amp; Multi-Currency Systems</li>
+              <li>✓ High-Concurrency PostgreSQL Indexing</li>
+              <li>✓ Complex Data Migration &amp; Upgrade Runs</li>
+            </ul>
+          </div>
+
+          <div class="hd-prof-ideal">
+            <strong>Ideal For:</strong> Large-scale enterprise ERP rollouts &amp; auditing.
+          </div>
+
+          <button class="hd-btn hd-btn-primary hd-btn-full js-open-hire-modal" data-level="Senior Odoo Developer">
+            Hire Senior Developer
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       6. FLEXIBLE HIRING MODELS
+  ═══════════════════════════════════════ -->
+  <section class="hd-section hd-section-soft">
+    <div class="container">
+      <div class="hd-section-head center">
+        <div class="hd-eyebrow">Tailored Engagement</div>
+        <h2 class="hd-section-title">Flexible Engagement &amp; Hiring Models</h2>
+        <p class="hd-section-desc">Choose a hiring structure that fits your project budget, timeline, and resource flexibility.</p>
+      </div>
+
+      <div class="hd-grid-4">
+        <!-- Model 1 -->
+        <div class="hd-model-card">
+          <div class="hd-model-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Hourly Hiring</h3>
+          <p class="hd-model-tag">Ad-Hoc &amp; Small Tasks</p>
+          <p class="hd-model-desc">Pay only for the exact hours worked. Best for quick bug fixes, minor module adjustments, or periodic consultations.</p>
+          <ul class="hd-model-list">
+            <li>✓ Pay-as-you-go billing</li>
+            <li>✓ Detailed time tracking logs</li>
+            <li>✓ No long-term lock-in</li>
+            <li>✓ Instant resource access</li>
+          </ul>
+          <button class="hd-btn hd-btn-ghost hd-btn-full js-open-hire-modal" data-model="Hourly Hiring">Choose Hourly</button>
+        </div>
+
+        <!-- Model 2 -->
+        <div class="hd-model-card">
+          <div class="hd-model-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h3>Part-Time Dedicated</h3>
+          <p class="hd-model-tag">20 Hours / Week</p>
+          <p class="hd-model-desc">A dedicated developer working 4 hours daily to continuously maintain, enhance, and optimize your Odoo system.</p>
+          <ul class="hd-model-list">
+            <li>✓ 80 hours monthly capacity</li>
+            <li>✓ Fixed predictable billing</li>
+            <li>✓ Direct Slack/Teams channel</li>
+            <li>✓ Daily progress updates</li>
+          </ul>
+          <button class="hd-btn hd-btn-ghost hd-btn-full js-open-hire-modal" data-model="Part-Time Dedicated">Choose Part-Time</button>
+        </div>
+
+        <!-- Model 3 -->
+        <div class="hd-model-card highlight">
+          <div class="hd-model-icon highlight">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3>Full-Time Dedicated</h3>
+          <p class="hd-model-tag text-purple">40 Hours / Week</p>
+          <p class="hd-model-desc">A 100% committed Odoo developer functioning as an integrated member of your internal engineering team.</p>
+          <ul class="hd-model-list">
+            <li>✓ 160 hours monthly focus</li>
+            <li>✓ Total project alignment</li>
+            <li>✓ Time zone overlap shift</li>
+            <li>✓ Maximum speed to market</li>
+          </ul>
+          <button class="hd-btn hd-btn-primary hd-btn-full js-open-hire-modal" data-model="Full-Time Dedicated">Choose Full-Time</button>
+        </div>
+
+        <!-- Model 4 -->
+        <div class="hd-model-card">
+          <div class="hd-model-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Dedicated Team Squad</h3>
+          <p class="hd-model-tag">Custom Team Size</p>
+          <p class="hd-model-desc">A complete turn-key team comprising Lead Architect, Python Developers, OWL Frontend Devs, QA Engineers, and PM.</p>
+          <ul class="hd-model-list">
+            <li>✓ Turn-key ERP engineering squad</li>
+            <li>✓ Managed Scrum/Agile sprints</li>
+            <li>✓ Complete QA &amp; DevOps setup</li>
+            <li>✓ Hypercare SLA protection</li>
+          </ul>
+          <button class="hd-btn hd-btn-ghost hd-btn-full js-open-hire-modal" data-model="Dedicated Team Squad">Choose Team Squad</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       7. OUR 8-STEP HIRING JOURNEY
+  ═══════════════════════════════════════ -->
+  <section class="hd-section hd-section-white">
+    <div class="container">
+      <div class="hd-section-head center">
+        <div class="hd-eyebrow">Streamlined Onboarding</div>
+        <h2 class="hd-section-title">Our Simple 8-Step Developer Hiring Journey</h2>
+        <p class="hd-section-desc">Designed for maximum speed, transparency, and seamless integration with your existing workflows.</p>
+      </div>
+
+      <div class="hd-journey-grid">
+        <!-- Step 1 -->
+        <div class="hd-j-step">
+          <div class="hd-j-num">01</div>
+          <h3>Share Requirements</h3>
+          <p>Tell us about your project scope, Odoo version, required tech stack, and ideal timeline.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="hd-j-step">
+          <div class="hd-j-num">02</div>
+          <h3>Technical Consultation</h3>
+          <p>Our solutions architect evaluates requirements and maps out the optimal developer skill profile.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="hd-j-step">
+          <div class="hd-j-num">03</div>
+          <h3>Developer Shortlisting</h3>
+          <p>We present pre-vetted Odoo candidate profiles with verified portfolios within 24 hours.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="hd-j-step">
+          <div class="hd-j-num">04</div>
+          <h3>Interview &amp; Selection</h3>
+          <p>Conduct technical coding interviews and select the exact developers you want on your team.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="hd-j-step">
+          <div class="hd-j-num">05</div>
+          <h3>Project Kickoff</h3>
+          <p>Sign NDAs, set up Slack/Jira credentials, align sprint goals, and start development within 48 hours.</p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="hd-j-step">
+          <div class="hd-j-num">06</div>
+          <h3>Daily Collaboration</h3>
+          <p>Direct communication via video calls, daily standups, GitHub commits, and transparent time logs.</p>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="hd-j-step">
+          <div class="hd-j-num">07</div>
+          <h3>Continuous Delivery</h3>
+          <p>Iterative 2-week agile sprint releases with thorough unit testing, UAT, and staging deployments.</p>
+        </div>
+
+        <!-- Step 8 -->
+        <div class="hd-j-step">
+          <div class="hd-j-num">08</div>
+          <h3>Long-Term Support</h3>
+          <p>Ongoing post-launch SLA technical maintenance, version upgrades, and team scaling when required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       8. TECHNICAL EXPERTISE STACK
+  ═══════════════════════════════════════ -->
+  <section class="hd-section hd-section-soft">
+    <div class="container">
+      <div class="hd-section-head center">
+        <div class="hd-eyebrow">Technology Stack</div>
+        <h2 class="hd-section-title">Technical Expertise Brought by Our Developers</h2>
+        <p class="hd-section-desc">Mastery across Python, PostgreSQL, modern OWL frontend, and Cloud DevOps infrastructure.</p>
+      </div>
+
+      <div class="hd-tech-categories">
+        <!-- Backend -->
+        <div class="hd-tech-box">
+          <div class="hd-tb-header">
+            <span class="hd-tb-tag bg-purple">Backend Stack</span>
+            <h3>Python &amp; Database Engineering</h3>
+          </div>
+          <div class="hd-tech-pills">
+            <span class="hd-pill">🐍 Python 3.10 / 3.12</span>
+            <span class="hd-pill">🐘 PostgreSQL 15 / 16</span>
+            <span class="hd-pill">⚡ Odoo ORM Engine</span>
+            <span class="hd-pill">⚙️ XML &amp; QWeb Engine</span>
+            <span class="hd-pill">🔌 REST &amp; JSON-RPC APIs</span>
+            <span class="hd-pill">🛡️ OAuth2 &amp; JWT Security</span>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="hd-tech-box">
+          <div class="hd-tb-header">
+            <span class="hd-tb-tag bg-blue">Frontend UI/UX</span>
+            <h3>OWL &amp; Modern Web Tech</h3>
+          </div>
+          <div class="hd-tech-pills">
+            <span class="hd-pill">🦉 OWL (Odoo Web Library)</span>
+            <span class="hd-pill">🌐 JavaScript (ES6+)</span>
+            <span class="hd-pill">🎨 QWeb HTML Templating</span>
+            <span class="hd-pill">💅 Modern CSS3 &amp; SCSS</span>
+            <span class="hd-pill">📱 Responsive POS UI</span>
+            <span class="hd-pill">📊 Chart.js BI Visuals</span>
+          </div>
+        </div>
+
+        <!-- DevOps & Cloud -->
+        <div class="hd-tech-box">
+          <div class="hd-tb-header">
+            <span class="hd-tb-tag bg-emerald">DevOps &amp; Cloud</span>
+            <h3>Infrastructure &amp; Deployment</h3>
+          </div>
+          <div class="hd-tech-pills">
+            <span class="hd-pill">🐳 Docker &amp; Docker Compose</span>
+            <span class="hd-pill">🦊 Git &amp; GitLab CI/CD</span>
+            <span class="hd-pill">🐧 Linux (Ubuntu / Debian)</span>
+            <span class="hd-pill">🌐 Nginx Reverse Proxy</span>
+            <span class="hd-pill">⚡ Redis Cache &amp; Gunicorn</span>
+            <span class="hd-pill">☁️ AWS &amp; DigitalOcean</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       9. DEDICATED VS FREELANCERS COMPARISON
+  ═══════════════════════════════════════ -->
+  <section class="hd-section hd-section-white">
+    <div class="container">
+      <div class="hd-section-head center">
+        <div class="hd-eyebrow">Strategic Choice</div>
+        <h2 class="hd-section-title">Why Businesses Prefer Dedicated Developers over Freelancers</h2>
+        <p class="hd-section-desc">Compare the reliable enterprise performance of Hegrix dedicated developers against unverified freelancers.</p>
+      </div>
+
+      <div class="hd-comp-wrapper">
+        <div class="hd-comp-grid">
+          <div class="hd-comp-header">Key Feature</div>
+          <div class="hd-comp-header highlight">Hegrix Dedicated Developers</div>
+          <div class="hd-comp-header muted">Freelancers / Generic Agencies</div>
+
+          <div class="hd-comp-row">
+            <div>Development Speed</div>
+            <div class="text-green">✓ Fast iterative 2-week agile sprints</div>
+            <div class="text-gray">✗ Unpredictable delays &amp; ghosting risk</div>
+          </div>
+
+          <div class="hd-comp-row">
+            <div>Code Quality &amp; Architecture</div>
+            <div class="text-green">✓ Upgrade-safe PEP-8 &amp; Odoo standards</div>
+            <div class="text-gray">✗ Hardcoded patches breaking on upgrades</div>
+          </div>
+
+          <div class="hd-comp-row">
+            <div>Communication</div>
+            <div class="text-green">✓ Direct daily Slack/Teams sync in your time zone</div>
+            <div class="text-gray">✗ Slow response times &amp; language barriers</div>
+          </div>
+
+          <div class="hd-comp-row">
+            <div>Source Code &amp; IP Rights</div>
+            <div class="text-green">✓ 100% full IP code ownership assigned to you</div>
+            <div class="text-gray">✗ Risk of IP disputes or code withholding</div>
+          </div>
+
+          <div class="hd-comp-row">
+            <div>Team Scaling</div>
+            <div class="text-green">✓ Add or scale down developers within 48h</div>
+            <div class="text-gray">✗ Hard to scale up when workload spikes</div>
+          </div>
+
+          <div class="hd-comp-row">
+            <div>Security &amp; NDA</div>
+            <div class="text-green">✓ ISO 27001 security &amp; enforceable legal NDAs</div>
+            <div class="text-gray">✗ Weak security without legal protections</div>
+          </div>
+
+          <div class="hd-comp-row">
+            <div>Ongoing SLA Support</div>
+            <div class="text-green">✓ 24/7 SLA maintenance &amp; emergency monitoring</div>
+            <div class="text-gray">✗ No guaranteed support after handoff</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       10. INDUSTRIES OUR DEVELOPERS SUPPORT
+  ═══════════════════════════════════════ -->
+  <section class="hd-section hd-section-soft">
+    <div class="container">
+      <div class="hd-section-head center">
+        <div class="hd-eyebrow">Industry Expertise</div>
+        <h2 class="hd-section-title">Industries Supported by Hegrix Odoo Developers</h2>
+        <p class="hd-section-desc">Deep domain experience customizing Odoo ERP across diverse global sectors.</p>
+      </div>
+
+      <div class="hd-grid-4">
+        <!-- 1 -->
+        <div class="hd-ind-card">
+          <div class="hd-ind-icon">🏭</div>
+          <h3>Manufacturing &amp; MRP</h3>
+          <p>Bill of Materials (BOM), work center routing, MRP planning, and quality control.</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="hd-ind-card">
+          <div class="hd-ind-icon">🛒</div>
+          <h3>Retail &amp; eCommerce</h3>
+          <p>Multi-store POS synchronization, barcode scanning, loyalty programs, and inventory.</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="hd-ind-card">
+          <div class="hd-ind-icon">🏥</div>
+          <h3>Healthcare &amp; Medical</h3>
+          <p>Medical inventory tracking, patient billing, appointment logs, and compliance.</p>
+        </div>
+
+        <!-- 4 -->
+        <div class="hd-ind-card">
+          <div class="hd-ind-icon">🎓</div>
+          <h3>Education &amp; Campus</h3>
+          <p>Student admissions, tuition invoicing, course scheduling, and staff payroll.</p>
+        </div>
+
+        <!-- 5 -->
+        <div class="hd-ind-card">
+          <div class="hd-ind-icon">🚚</div>
+          <h3>Logistics &amp; Fleet</h3>
+          <p>Fleet maintenance, driver dispatches, multi-warehouse stock transfers, and 3PL.</p>
+        </div>
+
+        <!-- 6 -->
+        <div class="hd-ind-card">
+          <div class="hd-ind-icon">🏗️</div>
+          <h3>Construction &amp; Civil</h3>
+          <p>Site material procurement, sub-contractor billing, milestone budgets, and POs.</p>
+        </div>
+
+        <!-- 7 -->
+        <div class="hd-ind-card">
+          <div class="hd-ind-icon">🏢</div>
+          <h3>Real Estate &amp; Housing</h3>
+          <p>Unit inventory management, buyer CRM, lease contracts, and payment schedules.</p>
+        </div>
+
+        <!-- 8 -->
+        <div class="hd-ind-card">
+          <div class="hd-ind-icon">🏨</div>
+          <h3>Hospitality &amp; Booking</h3>
+          <p>Reservation engine, room inventory, restaurant POS billing, and housekeeping.</p>
+        </div>
+
+        <!-- 9 -->
+        <div class="hd-ind-card">
+          <div class="hd-ind-icon">💎</div>
+          <h3>Jewelry &amp; Gems</h3>
+          <p>Gold and diamond weight tracking, certificate linking, SKU tagging, and retail POS.</p>
+        </div>
+
+        <!-- 10 -->
+        <div class="hd-ind-card">
+          <div class="hd-ind-icon">📦</div>
+          <h3>Wholesale &amp; Distribution</h3>
+          <p>High-volume order processing, credit limit checks, automated POs, and logistics.</p>
+        </div>
+
+        <!-- 11 -->
+        <div class="hd-ind-card">
+          <div class="hd-ind-icon">🚗</div>
+          <h3>Automotive &amp; Spares</h3>
+          <p>Spare parts inventory, workshop job cards, vehicle warranty logs, and dealer CRM.</p>
+        </div>
+
+        <!-- 12 -->
+        <div class="hd-ind-card">
+          <div class="hd-ind-icon">💼</div>
+          <h3>Professional Services</h3>
+          <p>Project milestone billing, timesheet management, resource planning, and expense reporting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       11. FREQUENTLY ASKED QUESTIONS
+  ═══════════════════════════════════════ -->
+  <section class="hd-section hd-section-white">
+    <div class="container">
+      <div class="hd-section-head center">
+        <div class="hd-eyebrow">Clear Answers</div>
+        <h2 class="hd-section-title">Frequently Asked Questions</h2>
+        <p class="hd-section-desc">Practical answers about hiring, interviewing, and collaborating with dedicated Odoo developers.</p>
+      </div>
+
+      <div class="hd-faq-accordion">
+        {hireFaqList.map((faq) => (
+          <details class="hd-faq-item">
+            <summary class="hd-faq-q">
+              <span>{faq.question}</span>
+              <span class="hd-faq-icon">+</span>
+            </summary>
+            <div class="hd-faq-a">{faq.answer}</div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       12. FINAL CALL TO ACTION
+  ═══════════════════════════════════════ -->
+  <section class="hd-section hd-cta-section">
+    <div class="container">
+      <div class="hd-cta-box">
+        <div class="hd-eyebrow hd-eyebrow-light">Build Your ERP Advantage</div>
+        <h2 class="hd-cta-title">Build Your ERP Team with Trusted Odoo Experts</h2>
+        <p class="hd-cta-desc">
+          Hire skilled Odoo developers from Hegrix Technologies to accelerate implementation, customize workflows, integrate business systems, and deliver reliable ERP solutions that grow with your business.
+        </p>
+
+        <div class="hd-cta-actions">
+          <button class="hd-btn hd-btn-light js-open-hire-modal">
+            <span>Hire Now</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+          <button class="hd-btn hd-btn-outline-light js-open-hire-modal">
+            <span>Talk to an Expert</span>
+          </button>
+        </div>
+
+        <div class="hd-cta-trust-bar">
+          <span>🔒 100% Risk-Free 48h Trial</span>
+          <span>•</span>
+          <span>🤝 Strict Legal NDA</span>
+          <span>•</span>
+          <span>⚡ ISO 27001 Certified Code</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       13. INTERACTIVE DEVELOPER HIRING MODAL DIALOG
+  ═══════════════════════════════════════ -->
+  <div class="hd-modal-backdrop" id="hdHireModal" aria-hidden="true">
+    <div class="hd-modal-dialog" role="dialog" aria-labelledby="hdModalTitle">
+      <button class="hd-modal-close" id="hdModalCloseBtn" aria-label="Close Modal">&times;</button>
+      
+      <div class="hd-modal-header">
+        <div class="hd-badge-small">Dedicated Odoo Staffing</div>
+        <h3 id="hdModalTitle">Hire Dedicated Odoo Developers</h3>
+        <p>Fill out the form below. Our technical architect will contact you within 2 business hours with candidate profiles.</p>
+      </div>
+
+      <form id="hdModalForm" class="hd-modal-form">
+        <div class="hd-form-group">
+          <label for="hdName">Full Name *</label>
+          <input type="text" id="hdName" name="name" required placeholder="e.g. Michael Vance" />
+        </div>
+
+        <div class="hd-form-group">
+          <label for="hdEmail">Work Email *</label>
+          <input type="email" id="hdEmail" name="email" required placeholder="michael@enterprise.com" />
+        </div>
+
+        <div class="hd-form-row">
+          <div class="hd-form-group">
+            <label for="hdPhone">Phone Number *</label>
+            <input type="tel" id="hdPhone" name="phone" required placeholder="+1 (555) 000-0000" />
+          </div>
+
+          <div class="hd-form-group">
+            <label for="hdLevel">Developer Level / Hiring Model *</label>
+            <select id="hdLevel" name="hiringModel" required>
+              <option value="">Select Level...</option>
+              <option value="Junior Odoo Developer">Junior Odoo Developer (1-3 yrs)</option>
+              <option value="Mid-Level Odoo Developer">Mid-Level Odoo Developer (3-5 yrs)</option>
+              <option value="Senior Odoo Developer">Senior Odoo Developer (6+ yrs)</option>
+              <option value="Hourly Hiring">Hourly Hiring Model</option>
+              <option value="Part-Time Dedicated">Part-Time Dedicated (20h/wk)</option>
+              <option value="Full-Time Dedicated">Full-Time Dedicated (40h/wk)</option>
+              <option value="Dedicated Team Squad">Dedicated Engineering Team Squad</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="hd-form-group">
+          <label for="hdMsg">Project Requirements / Odoo Version &amp; Scope</label>
+          <textarea id="hdMsg" name="message" rows="3" placeholder="Describe your Odoo modules, custom workflows, or team timeline..."></textarea>
+        </div>
+
+        <button type="submit" class="hd-btn hd-btn-primary hd-btn-full" id="hdSubmitBtn">
+          <span>Submit Request &amp; Get Candidate Profiles</span>
+        </button>
+
+        <p class="hd-form-privacy">🔒 Your data is 100% confidential. Strict NDA protection guaranteed.</p>
+      </form>
+
+      <div id="hdSuccessMsg" class="hd-modal-success" style="display: none;">
+        <div class="hd-success-icon">✓</div>
+        <h4>Developer Hiring Request Received!</h4>
+        <p>Thank you. A Senior Odoo Technical Architect from Hegrix Technologies will contact you within 2 business hours with candidate profiles and a custom proposal.</p>
+        <button class="hd-btn hd-btn-ghost" id="hdCloseSuccessBtn">Close Window</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</Layout>
+
+<!-- ═══════════════════════════════════════
+     STYLES (Scoped CSS for .hd- namespace)
+═══════════════════════════════════════ -->
+<style>
+  .hd-page {
+    font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+    color: var(--ink, #0f172a);
+    background: #ffffff;
+    overflow-x: hidden;
+  }
+
+  .hd-gradient-text {
+    background: linear-gradient(135deg, #1fb6ff 0%, #a855f7 50%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hd-eyebrow {
+    color: var(--blue-700, #0b55d9);
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+  }
+
+  .hd-eyebrow-light { color: #91b2ff; }
+
+  .hd-section-title {
+    font-size: clamp(2rem, 3.8vw, 2.9rem);
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .hd-section-desc {
+    font-size: 1.12rem;
+    color: var(--muted, #5b6b82);
+    max-width: 720px;
+    line-height: 1.6;
+  }
+
+  .hd-section-head.center {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+  .hd-section-head.center .hd-section-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hd-section {
+    padding: 96px 0;
+    position: relative;
+  }
+  .hd-section-white { background: #ffffff; }
+  .hd-section-soft {
+    background: var(--soft, #f7fbff);
+    border-top: 1px solid var(--line, #dce8f7);
+    border-bottom: 1px solid var(--line, #dce8f7);
+  }
+
+  /* Layout Grids */
+  .hd-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .hd-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+
+  /* Buttons */
+  .hd-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 28px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid transparent;
+    text-decoration: none;
+  }
+
+  .hd-btn-primary {
+    background: linear-gradient(135deg, var(--blue-700, #0b55d9), var(--blue-600, #1265f3));
+    color: #ffffff;
+    box-shadow: 0 14px 32px rgba(11, 85, 217, 0.28);
+  }
+  .hd-btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 40px rgba(11, 85, 217, 0.38);
+    background: linear-gradient(135deg, var(--blue-600, #1265f3), #1e75ff);
+  }
+
+  .hd-btn-ghost {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--blue-950, #071a3d);
+    border-color: var(--line, #dce8f7);
+  }
+  .hd-btn-ghost:hover {
+    background: #ffffff;
+    border-color: var(--blue-700, #0b55d9);
+    color: var(--blue-700, #0b55d9);
+    transform: translateY(-2px);
+  }
+
+  .hd-btn-light {
+    background: #ffffff;
+    color: var(--blue-700, #0b55d9);
+    box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+  }
+  .hd-btn-light:hover {
+    background: #f5f9ff;
+    transform: translateY(-3px);
+  }
+
+  .hd-btn-outline-light {
+    background: transparent;
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+  .hd-btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+  }
+
+  .hd-btn-full { width: 100%; margin-top: 12px; }
+
+  /* ----------------------------------------------------
+     1. HERO SECTION
+  ---------------------------------------------------- */
+  .hd-hero {
+    position: relative;
+    padding: 120px 0 110px;
+    background:
+      radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.18), transparent 45%),
+      linear-gradient(180deg, #071a3d 0%, #09265c 100%);
+    color: #ffffff;
+    overflow: hidden;
+  }
+
+  .hd-hero-glow1 {
+    position: absolute;
+    top: -15vw;
+    right: -10vw;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.35) 0%, rgba(7, 26, 61, 0) 70%);
+    pointer-events: none;
+  }
+  .hd-hero-glow2 {
+    position: absolute;
+    bottom: -20vw;
+    left: -10vw;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(31, 182, 255, 0.25) 0%, rgba(7, 26, 61, 0) 70%);
+    pointer-events: none;
+  }
+
+  .hd-hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 48px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hd-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    font-size: 0.88rem;
+    font-weight: 750;
+    color: #d8b4fe;
+    margin-bottom: 24px;
+  }
+  .hd-badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #a855f7;
+    box-shadow: 0 0 10px #a855f7;
+    animation: hdPulse 2s infinite;
+  }
+
+  @keyframes hdPulse {
+    0% { transform: scale(0.95); opacity: 0.8; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.8; }
+  }
+
+  .hd-hero-title {
+    font-size: clamp(2.5rem, 5.2vw, 4.2rem);
+    font-weight: 900;
+    line-height: 1.12;
+    color: #ffffff;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+  }
+
+  .hd-hero-lead {
+    font-size: clamp(1.08rem, 2vw, 1.25rem);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 36px;
+    max-width: 620px;
+  }
+
+  .hd-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .hd-hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .hd-stars {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+
+  /* Hero Visual Showcase Window */
+  .hd-hero-visual {
+    position: relative;
+    min-height: 480px;
+  }
+
+  .hd-window {
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(20px);
+  }
+
+  .hd-window-bar {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .hd-dots { display: flex; gap: 6px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .dot-r { background: #ff5f56; }
+  .dot-y { background: #ffbd2e; }
+  .dot-g { background: #27c93f; }
+
+  .hd-window-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .hd-live-status {
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #27c93f;
+    background: rgba(39, 201, 63, 0.15);
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+
+  .hd-code-snippet {
+    padding: 24px;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #e2e8f0;
+    overflow-x: auto;
+  }
+  .c-purple { color: #c084fc; }
+  .c-blue { color: #60a5fa; }
+  .c-gold { color: #facc15; }
+  .c-green { color: #4ade80; }
+
+  /* Floating Glass Cards */
+  .hd-float {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(220, 232, 247, 0.9);
+    border-radius: 16px;
+    padding: 12px 18px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    z-index: 10;
+    color: var(--blue-950, #071a3d);
+    animation: hdFloatAnim 4s ease-in-out infinite alternate;
+  }
+
+  @keyframes hdFloatAnim {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-10px); }
+  }
+
+  .card-devs { top: -20px; left: -30px; }
+  .card-speed { top: 60px; right: -25px; animation-delay: 0.8s; }
+  .card-quality { bottom: 40px; left: -40px; animation-delay: 1.5s; }
+  .card-uptime { bottom: -20px; right: 20px; animation-delay: 2.2s; }
+
+  .hd-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    flex-shrink: 0;
+  }
+  .bg-blue { background: linear-gradient(135deg, #0b55d9, #1265f3); }
+  .bg-purple { background: linear-gradient(135deg, #7c3aed, #a855f7); }
+  .bg-emerald { background: linear-gradient(135deg, #059669, #10b981); }
+  .bg-amber { background: linear-gradient(135deg, #d97706, #f59e0b); }
+
+  .hd-float-label {
+    font-size: 0.7rem;
+    color: var(--muted, #5b6b82);
+    font-weight: 750;
+    text-transform: uppercase;
+  }
+  .hd-float-val {
+    font-size: 0.95rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+  }
+  .hd-float-sub { font-size: 0.7rem; font-weight: 700; }
+  .text-green { color: #0bbf8a; }
+
+  /* ----------------------------------------------------
+     2. STATS & TRUST BAR
+  ---------------------------------------------------- */
+  .hd-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .hd-stat-card {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    padding: 20px 14px;
+    border-radius: 16px;
+  }
+  .hd-stat-num {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    font-weight: 900;
+    color: var(--blue-700, #0b55d9);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .hd-stat-label {
+    font-size: 0.8rem;
+    font-weight: 750;
+    color: var(--muted, #5b6b82);
+  }
+
+  .hd-trust-bar {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 18px;
+    padding: 24px;
+    text-align: center;
+  }
+  .hd-tb-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--muted, #5b6b82);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+  }
+  .hd-tb-badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .hd-tb-item {
+    background: var(--soft, #f7fbff);
+    border: 1px solid var(--line, #dce8f7);
+    color: var(--blue-950, #071a3d);
+    font-size: 0.88rem;
+    font-weight: 750;
+    padding: 8px 18px;
+    border-radius: 999px;
+  }
+
+  /* ----------------------------------------------------
+     3. WHY HIRE FROM HEGRIX
+  ---------------------------------------------------- */
+  .hd-why-card {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    padding: 24px;
+    border-radius: 18px;
+    transition: all 0.2s ease;
+  }
+  .hd-why-card:hover {
+    border-color: var(--blue-700, #0b55d9);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(8, 38, 92, 0.08);
+  }
+  .hd-why-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: var(--blue-100, #eaf3ff);
+    color: var(--blue-700, #0b55d9);
+    display: grid;
+    place-items: center;
+    margin-bottom: 14px;
+  }
+  .hd-why-card h3 {
+    font-size: 1.1rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 8px;
+  }
+  .hd-why-card p {
+    font-size: 0.88rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.5;
+  }
+
+  /* ----------------------------------------------------
+     4. WHAT CAN OUR DEVELOPERS DO?
+  ---------------------------------------------------- */
+  .hd-cap-card {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 18px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+  }
+  .hd-cap-card:hover {
+    border-color: var(--blue-700, #0b55d9);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(8, 38, 92, 0.08);
+  }
+  .hd-cap-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+  .hd-cap-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: var(--blue-100, #eaf3ff);
+    color: var(--blue-700, #0b55d9);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+  .hd-cap-top h3 {
+    font-size: 1.15rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+  }
+  .hd-cap-card p {
+    font-size: 0.9rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+  .hd-cap-outcome {
+    background: var(--blue-050, #f5f9ff);
+    border: 1px solid var(--blue-100, #eaf3ff);
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 0.82rem;
+    color: var(--blue-950, #071a3d);
+  }
+
+  /* ----------------------------------------------------
+     5. DEVELOPER PROFILES & LEVELS
+  ---------------------------------------------------- */
+  .hd-prof-card {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 22px;
+    padding: 32px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.22s ease;
+  }
+  .hd-prof-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 48px rgba(8, 38, 92, 0.1);
+  }
+  .hd-prof-card.featured {
+    border-color: var(--blue-700, #0b55d9);
+    box-shadow: 0 16px 40px rgba(11, 85, 217, 0.15);
+  }
+  .hd-prof-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    background: var(--soft, #f7fbff);
+    color: var(--muted, #5b6b82);
+    border: 1px solid var(--line, #dce8f7);
+    margin-bottom: 12px;
+    align-self: flex-start;
+  }
+  .hd-prof-badge.featured {
+    background: var(--blue-700, #0b55d9);
+    color: #ffffff;
+    border-color: var(--blue-700, #0b55d9);
+  }
+  .hd-prof-card h3 {
+    font-size: 1.4rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 4px;
+  }
+  .hd-prof-exp {
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: var(--blue-700, #0b55d9);
+    margin-bottom: 12px;
+  }
+  .hd-prof-desc {
+    font-size: 0.9rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .hd-prof-section {
+    margin-bottom: 20px;
+  }
+  .hd-prof-section strong {
+    font-size: 0.85rem;
+    color: var(--blue-950, #071a3d);
+    display: block;
+    margin-bottom: 8px;
+  }
+  .hd-prof-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 6px;
+  }
+  .hd-prof-section li {
+    font-size: 0.85rem;
+    color: var(--muted, #5b6b82);
+  }
+  .hd-prof-ideal {
+    background: var(--soft, #f7fbff);
+    border: 1px solid var(--line, #dce8f7);
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 0.82rem;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 16px;
+  }
+
+  /* ----------------------------------------------------
+     6. FLEXIBLE HIRING MODELS
+  ---------------------------------------------------- */
+  .hd-model-card {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 20px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.2s ease;
+  }
+  .hd-model-card:hover {
+    border-color: var(--blue-700, #0b55d9);
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(8, 38, 92, 0.09);
+  }
+  .hd-model-card.highlight {
+    border-color: #a855f7;
+    box-shadow: 0 16px 40px rgba(168, 85, 247, 0.15);
+  }
+  .hd-model-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: var(--blue-100, #eaf3ff);
+    color: var(--blue-700, #0b55d9);
+    display: grid;
+    place-items: center;
+    margin-bottom: 14px;
+  }
+  .hd-model-icon.highlight {
+    background: #f3e8ff;
+    color: #a855f7;
+  }
+  .hd-model-card h3 {
+    font-size: 1.25rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 2px;
+  }
+  .hd-model-tag {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--blue-700, #0b55d9);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+  }
+  .text-purple { color: #a855f7; }
+  .hd-model-desc {
+    font-size: 0.88rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  .hd-model-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+    display: grid;
+    gap: 8px;
+    font-size: 0.84rem;
+    color: var(--blue-950, #071a3d);
+    font-weight: 700;
+  }
+
+  /* ----------------------------------------------------
+     7. HIRING JOURNEY TIMELINE
+  ---------------------------------------------------- */
+  .hd-journey-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .hd-j-step {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 18px;
+    padding: 24px;
+    position: relative;
+  }
+  .hd-j-num {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--blue-100, #eaf3ff);
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .hd-j-step h3 {
+    font-size: 1.08rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 6px;
+  }
+  .hd-j-step p {
+    font-size: 0.85rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.45;
+  }
+
+  /* ----------------------------------------------------
+     8. TECHNICAL EXPERTISE STACK
+  ---------------------------------------------------- */
+  .hd-tech-categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .hd-tech-box {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 20px;
+    padding: 32px;
+  }
+  .hd-tb-header { margin-bottom: 20px; }
+  .hd-tb-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .hd-tb-header h3 {
+    font-size: 1.2rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+  }
+  .hd-tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .hd-pill {
+    background: var(--soft, #f7fbff);
+    border: 1px solid var(--line, #dce8f7);
+    color: var(--blue-950, #071a3d);
+    font-size: 0.84rem;
+    font-weight: 750;
+    padding: 8px 14px;
+    border-radius: 12px;
+  }
+
+  /* ----------------------------------------------------
+     9. COMPARISON TABLE
+  ---------------------------------------------------- */
+  .hd-comp-wrapper {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 22px;
+    padding: 32px;
+    box-shadow: 0 16px 40px rgba(8, 38, 92, 0.05);
+  }
+  .hd-comp-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 16px;
+    align-items: center;
+  }
+  .hd-comp-header {
+    font-weight: 850;
+    font-size: 1rem;
+    color: var(--blue-950, #071a3d);
+    padding: 12px 16px;
+    border-bottom: 2px solid var(--line, #dce8f7);
+  }
+  .hd-comp-header.highlight {
+    background: var(--blue-050, #f5f9ff);
+    color: var(--blue-700, #0b55d9);
+    border-radius: 12px 12px 0 0;
+  }
+  .hd-comp-header.muted { color: var(--muted, #5b6b82); }
+
+  .hd-comp-row {
+    display: contents;
+  }
+  .hd-comp-row > div {
+    padding: 16px;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--line, #dce8f7);
+  }
+  .hd-comp-row > div:first-child {
+    font-weight: 800;
+    color: var(--blue-950, #071a3d);
+  }
+  .text-gray { color: #94a3b8; }
+
+  /* ----------------------------------------------------
+     10. INDUSTRIES CARDS
+  ---------------------------------------------------- */
+  .hd-ind-card {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 16px;
+    padding: 20px;
+    transition: all 0.2s ease;
+  }
+  .hd-ind-card:hover {
+    border-color: var(--blue-700, #0b55d9);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(8, 38, 92, 0.08);
+  }
+  .hd-ind-icon { font-size: 1.8rem; margin-bottom: 10px; }
+  .hd-ind-card h3 {
+    font-size: 1.05rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 6px;
+  }
+  .hd-ind-card p {
+    font-size: 0.84rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.45;
+  }
+
+  /* ----------------------------------------------------
+     11. FAQ ACCORDION
+  ---------------------------------------------------- */
+  .hd-faq-accordion {
+    display: grid;
+    gap: 14px;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .hd-faq-item {
+    background: #ffffff;
+    border: 1px solid var(--line, #dce8f7);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+  }
+  .hd-faq-item[open] {
+    border-color: var(--blue-700, #0b55d9);
+    box-shadow: 0 10px 30px rgba(8, 38, 92, 0.06);
+  }
+  .hd-faq-q {
+    padding: 20px 24px;
+    font-size: 1.08rem;
+    font-weight: 800;
+    color: var(--blue-950, #071a3d);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  .hd-faq-q::-webkit-details-marker { display: none; }
+  .hd-faq-icon {
+    font-size: 1.4rem;
+    color: var(--blue-700, #0b55d9);
+    transition: transform 0.2s ease;
+  }
+  .hd-faq-item[open] .hd-faq-icon { transform: rotate(45deg); }
+  .hd-faq-a {
+    padding: 0 24px 20px 24px;
+    font-size: 0.98rem;
+    color: var(--muted, #5b6b82);
+    line-height: 1.65;
+  }
+
+  /* ----------------------------------------------------
+     12. FINAL CTA & MODAL
+  ---------------------------------------------------- */
+  .hd-cta-section {
+    background: linear-gradient(135deg, var(--blue-950, #071a3d), var(--blue-900, #09265c));
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 0;
+  }
+  .hd-cta-box { max-width: 820px; margin: 0 auto; }
+  .hd-cta-title {
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.15;
+  }
+  .hd-cta-desc {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 40px;
+    line-height: 1.6;
+  }
+  .hd-cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  .hd-cta-trust-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.88rem;
+    color: rgba(255, 255, 255, 0.75);
+    flex-wrap: wrap;
+  }
+
+  /* Modal Backdrop & Dialog */
+  .hd-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(7, 26, 61, 0.78);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+  }
+  .hd-modal-backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .hd-modal-dialog {
+    background: #ffffff;
+    border-radius: 24px;
+    max-width: 560px;
+    width: 100%;
+    padding: 36px;
+    position: relative;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+    transform: translateY(20px);
+    transition: transform 0.25s ease;
+  }
+  .hd-modal-backdrop.is-open .hd-modal-dialog { transform: translateY(0); }
+
+  .hd-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--soft, #f7fbff);
+    border: 1px solid var(--line, #dce8f7);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    color: var(--muted, #5b6b82);
+  }
+  .hd-modal-close:hover {
+    color: var(--blue-950, #071a3d);
+    background: var(--line, #dce8f7);
+  }
+
+  .hd-modal-header { margin-bottom: 24px; }
+  .hd-badge-small {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--blue-700, #0b55d9);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+  }
+  .hd-modal-header h3 {
+    font-size: 1.5rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 6px;
+  }
+  .hd-modal-header p {
+    font-size: 0.92rem;
+    color: var(--muted, #5b6b82);
+  }
+
+  .hd-modal-form { display: grid; gap: 16px; }
+  .hd-form-group { display: flex; flex-direction: column; gap: 6px; }
+  .hd-form-group label {
+    font-size: 0.85rem;
+    font-weight: 750;
+    color: var(--blue-950, #071a3d);
+  }
+  .hd-form-group input,
+  .hd-form-group select,
+  .hd-form-group textarea {
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--line, #dce8f7);
+    font-size: 0.95rem;
+    background: var(--soft, #f7fbff);
+    color: var(--ink, #0f172a);
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  .hd-form-group input:focus,
+  .hd-form-group select:focus,
+  .hd-form-group textarea:focus {
+    border-color: var(--blue-700, #0b55d9);
+    background: #ffffff;
+  }
+
+  .hd-form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .hd-form-privacy {
+    font-size: 0.78rem;
+    color: var(--muted, #5b6b82);
+    text-align: center;
+  }
+
+  .hd-modal-success { text-align: center; padding: 20px 0; }
+  .hd-success-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #d1fae5;
+    color: #059669;
+    font-size: 2rem;
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 16px;
+  }
+  .hd-modal-success h4 {
+    font-size: 1.4rem;
+    font-weight: 850;
+    color: var(--blue-950, #071a3d);
+    margin-bottom: 10px;
+  }
+  .hd-modal-success p {
+    font-size: 0.95rem;
+    color: var(--muted, #5b6b82);
+    margin-bottom: 24px;
+    line-height: 1.55;
+  }
+
+  /* Responsive Queries */
+  @media (max-width: 1024px) {
+    .hd-hero-grid { grid-template-columns: 1fr; gap: 50px; }
+    .hd-stats-grid { grid-template-columns: repeat(3, 1fr); }
+    .hd-grid-3, .hd-grid-4, .hd-journey-grid, .hd-tech-categories { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .hd-grid-3, .hd-grid-4, .hd-journey-grid, .hd-tech-categories { grid-template-columns: 1fr; }
+    .hd-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .hd-comp-grid { grid-template-columns: 1fr; }
+    .hd-form-row { grid-template-columns: 1fr; }
+    .hd-float { position: static; margin-top: 10px; animation: none; }
+    .hd-hero-visual { display: flex; flex-direction: column; }
+  }
+
+  @media (max-width: 480px) {
+    .hd-stats-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<!-- ═══════════════════════════════════════
+     CLIENT-SIDE INTERACTIVE SCRIPT
+═══════════════════════════════════════ -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const modalBackdrop = document.getElementById('hdHireModal');
+    const closeBtn = document.getElementById('hdModalCloseBtn');
+    const openBtns = document.querySelectorAll('.js-open-hire-modal');
+    const modalForm = document.getElementById('hdModalForm') as HTMLFormElement | null;
+    const levelSelect = document.getElementById('hdLevel') as HTMLSelectElement | null;
+    const successMsg = document.getElementById('hdSuccessMsg');
+    const closeSuccessBtn = document.getElementById('hdCloseSuccessBtn');
+
+    // Open Modal
+    openBtns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // Check if button passes level or model data
+        const presetLevel = btn.getAttribute('data-level');
+        const presetModel = btn.getAttribute('data-model');
+        if (levelSelect && (presetLevel || presetModel)) {
+          const targetValue = presetLevel || presetModel || '';
+          for (let i = 0; i < levelSelect.options.length; i++) {
+            if (levelSelect.options[i].value === targetValue) {
+              levelSelect.selectedIndex = i;
+              break;
+            }
+          }
+        }
+
+        if (modalBackdrop) {
+          modalBackdrop.classList.add('is-open');
+          modalBackdrop.setAttribute('aria-hidden', 'false');
+        }
+      });
+    });
+
+    // Close Modal Function
+    const closeModal = () => {
+      if (modalBackdrop) {
+        modalBackdrop.classList.remove('is-open');
+        modalBackdrop.setAttribute('aria-hidden', 'true');
+      }
+    };
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (closeSuccessBtn) closeSuccessBtn.addEventListener('click', closeModal);
+
+    // Close on backdrop click
+    if (modalBackdrop) {
+      modalBackdrop.addEventListener('click', (e) => {
+        if (e.target === modalBackdrop) closeModal();
+      });
+    }
+
+    // Handle Form Submit to /api/leads
+    if (modalForm) {
+      modalForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const submitBtn = document.getElementById('hdSubmitBtn');
+        const originalText = submitBtn ? submitBtn.innerHTML : '<span>Submit Request &amp; Get Candidate Profiles</span>';
+
+        if (submitBtn) {
+          submitBtn.innerHTML = '<span>Processing...</span>';
+          (submitBtn as HTMLButtonElement).disabled = true;
+        }
+
+        const formData = new FormData(modalForm);
+        const name = String(formData.get('name') || '').trim();
+        const email = String(formData.get('email') || '').trim();
+        const phone = String(formData.get('phone') || '').trim();
+        const model = String(formData.get('hiringModel') || '').trim();
+        const userMsg = String(formData.get('message') || '').trim();
+
+        const messageCombined = model
+          ? `[Hiring Level/Model: ${model}] ${userMsg}`.trim()
+          : userMsg;
+
+        const payload = {
+          fullName: name,
+          email: email,
+          mobileNumber: phone,
+          message: messageCombined,
+          sourcePage: 'Hire Odoo Developers Page (/services/hire-odoo-developer/)',
+        };
+
+        try {
+          const response = await fetch('/api/leads', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+          });
+
+          const result = await response.json();
+
+          if (!response.ok) {
+            throw new Error(result.message || 'Submission failed. Please check your inputs.');
+          }
+
+          modalForm.reset();
+          modalForm.style.display = 'none';
+          if (successMsg) successMsg.style.display = 'block';
+        } catch (error) {
+          alert(error instanceof Error ? error.message : 'Something went wrong. Please try again.');
+        } finally {
+          if (submitBtn) {
+            submitBtn.innerHTML = originalText;
+            (submitBtn as HTMLButtonElement).disabled = false;
+          }
+        }
+      });
+    }
+  });
+</script>
