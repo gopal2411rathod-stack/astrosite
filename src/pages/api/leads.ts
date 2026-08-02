@@ -99,6 +99,17 @@ const readSupabaseConfig = () => {
 
 const storeLead = async (lead: Lead) => {
   const { url, key } = readSupabaseConfig();
+  const basePayload = {
+    id: lead.id,
+    full_name: lead.fullName,
+    company_name: lead.companyName,
+    email: lead.email,
+    mobile_number: lead.mobileNumber,
+    country: lead.country,
+    submitted_at: lead.submittedAt,
+  };
+
+  // Try inserting with source_page column first
   const response = await fetch(`${url}/rest/v1/leads`, {
     method: "POST",
     headers: {
@@ -108,20 +119,38 @@ const storeLead = async (lead: Lead) => {
       Prefer: "return=minimal",
     },
     body: JSON.stringify({
-      id: lead.id,
-      full_name: lead.fullName,
-      company_name: lead.companyName,
-      email: lead.email,
-      mobile_number: lead.mobileNumber,
-      country: lead.country,
+      ...basePayload,
       message: lead.message,
       source_page: lead.sourcePage,
-      submitted_at: lead.submittedAt,
     }),
   });
 
   if (!response.ok) {
     const details = await response.text();
+
+    // Fallback: If Supabase schema does not have 'source_page' column (PGRST204), retry without source_page key
+    if (details.includes("PGRST204") || details.includes("source_page")) {
+      const fallbackResponse = await fetch(`${url}/rest/v1/leads`, {
+        method: "POST",
+        headers: {
+          apikey: key,
+          Authorization: `Bearer ${key}`,
+          "Content-Type": "application/json",
+          Prefer: "return=minimal",
+        },
+        body: JSON.stringify({
+          ...basePayload,
+          message: `[Source Page: ${lead.sourcePage}]\n${lead.message}`.trim(),
+        }),
+      });
+
+      if (!fallbackResponse.ok) {
+        const fallbackDetails = await fallbackResponse.text();
+        throw new Error(`Supabase insert failed: ${fallbackDetails || fallbackResponse.statusText}`);
+      }
+      return;
+    }
+
     throw new Error(`Supabase insert failed: ${details || response.statusText}`);
   }
 };
