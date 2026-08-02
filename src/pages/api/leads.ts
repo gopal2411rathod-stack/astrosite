@@ -7,12 +7,18 @@ const successMessage = "Thank you! Your request has been submitted successfully.
 
 type LeadPayload = {
   fullName?: unknown;
+  name?: unknown;
   companyName?: unknown;
+  company?: unknown;
   email?: unknown;
   countryCode?: unknown;
   mobileNumber?: unknown;
+  phone?: unknown;
   country?: unknown;
   message?: unknown;
+  sourcePage?: unknown;
+  pageSource?: unknown;
+  source?: unknown;
 };
 
 type Lead = {
@@ -23,6 +29,7 @@ type Lead = {
   mobileNumber: string;
   country: string;
   message: string;
+  sourcePage: string;
   submittedAt: string;
 };
 
@@ -38,27 +45,27 @@ const jsonResponse = (body: Record<string, unknown>, status = 200) =>
     },
   });
 
-const validateLead = (payload: LeadPayload) => {
+const validateLead = (payload: LeadPayload, refererHeader = "") => {
   const countryCode = textValue(payload.countryCode);
-  const localMobile = textValue(payload.mobileNumber).replace(/\s+/g, " ");
+  const rawMobile = textValue(payload.mobileNumber || payload.phone).replace(/\s+/g, " ");
+  const mobileNumber = countryCode ? `${countryCode} ${rawMobile}`.trim() : rawMobile;
+
   const lead = {
     id: randomUUID(),
-    fullName: textValue(payload.fullName),
-    companyName: textValue(payload.companyName),
+    fullName: textValue(payload.fullName || payload.name),
+    companyName: textValue(payload.companyName || payload.company || "N/A"),
     email: textValue(payload.email).toLowerCase(),
-    mobileNumber: `${countryCode} ${localMobile}`.trim(),
-    country: textValue(payload.country),
+    mobileNumber,
+    country: textValue(payload.country || "N/A"),
     message: textValue(payload.message),
+    sourcePage: textValue(payload.sourcePage || payload.pageSource || payload.source || refererHeader || "Direct / Unknown"),
     submittedAt: new Date().toISOString(),
   } satisfies Lead;
 
   const missing = [
     ["Full Name", lead.fullName],
-    ["Company Name", lead.companyName],
     ["Email Address", lead.email],
-    ["Mobile Number", localMobile],
-    ["Country", lead.country],
-    ["Description/Message", lead.message],
+    ["Mobile Number", rawMobile],
   ].filter(([, value]) => !value);
 
   if (missing.length > 0) {
@@ -108,6 +115,7 @@ const storeLead = async (lead: Lead) => {
       mobile_number: lead.mobileNumber,
       country: lead.country,
       message: lead.message,
+      source_page: lead.sourcePage,
       submitted_at: lead.submittedAt,
     }),
   });
@@ -127,7 +135,8 @@ export const POST: APIRoute = async ({ request }) => {
     return jsonResponse({ message: "Invalid form submission." }, 400);
   }
 
-  const validation = validateLead(payload);
+  const referer = request.headers.get("referer") || "";
+  const validation = validateLead(payload, referer);
   if ("error" in validation) {
     return jsonResponse({ message: validation.error }, 400);
   }

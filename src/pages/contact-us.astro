@@ -220,7 +220,10 @@ import Layout from "../layouts/Layout.astro";
 
     const submitButton = leadForm.querySelector("button[type='submit']");
     const formData = new FormData(leadForm);
-    const payload = Object.fromEntries(formData.entries());
+    const payload = {
+      ...Object.fromEntries(formData.entries()),
+      sourcePage: "Contact Us Page (/contact-us/)",
+    };
 
     if (statusMessage) {
       statusMessage.textContent = "";

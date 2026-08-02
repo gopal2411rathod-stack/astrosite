@@ -2923,18 +2923,61 @@ const odooSchemaData = [
 
     // Handle Form Submit
     if (modalForm) {
-      modalForm.addEventListener('submit', (e) => {
+      modalForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const submitBtn = document.getElementById('odSubmitBtn');
+        const originalBtnText = submitBtn ? submitBtn.innerHTML : '<span>Submit Request &amp; Book Consultation</span>';
+
         if (submitBtn) {
           submitBtn.innerHTML = '<span>Processing...</span>';
           (submitBtn as HTMLButtonElement).disabled = true;
         }
 
-        setTimeout(() => {
-          if (modalForm) modalForm.style.display = 'none';
+        const formData = new FormData(modalForm);
+        const name = String(formData.get('name') || '').trim();
+        const email = String(formData.get('email') || '').trim();
+        const phone = String(formData.get('phone') || '').trim();
+        const service = String(formData.get('service') || '').trim();
+        const userMsg = String(formData.get('message') || '').trim();
+
+        const messageCombined = service
+          ? `[Service Requested: ${service}] ${userMsg}`.trim()
+          : userMsg;
+
+        const payload = {
+          fullName: name,
+          email: email,
+          mobileNumber: phone,
+          message: messageCombined,
+          sourcePage: 'Odoo Development Service Page (/services/odoo-development/)',
+        };
+
+        try {
+          const response = await fetch('/api/leads', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+          });
+
+          const result = await response.json();
+
+          if (!response.ok) {
+            throw new Error(result.message || 'Submission failed. Please check your inputs.');
+          }
+
+          modalForm.reset();
+          modalForm.style.display = 'none';
           if (successMsg) successMsg.style.display = 'block';
-        }, 800);
+        } catch (error) {
+          alert(error instanceof Error ? error.message : 'Something went wrong. Please try again.');
+        } finally {
+          if (submitBtn) {
+            submitBtn.innerHTML = originalBtnText;
+            (submitBtn as HTMLButtonElement).disabled = false;
+          }
+        }
       });
     }
   });
