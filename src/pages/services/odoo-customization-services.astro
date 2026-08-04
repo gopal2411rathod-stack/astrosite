@@ -1,0 +1,727 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export const prerender = true;
+
+const faqList = [
+  { question: "What is Odoo customization?", answer: "Odoo customization refers to tailoring the standard Odoo ERP system to match your unique business workflows, processes, and requirements. This includes adding custom fields, creating new modules, modifying existing modules, building automated workflows, custom reports, and integrating with third-party systems while maintaining upgrade compatibility." },
+  { question: "Can existing Odoo modules be customized?", answer: "Yes, absolutely. We can customize any standard Odoo module including CRM, Sales, Purchase, Inventory, Manufacturing, Accounting, HR, Payroll, POS, Website, eCommerce, Project, and Helpdesk. Our approach uses inheritance-based customization to ensure changes remain clean and upgrade-safe." },
+  { question: "Is Odoo customization upgrade-safe?", answer: "Yes. We follow Odoo official best practices for customization using module inheritance, custom models, and XML overrides which ensures your customizations are modular, maintainable, and can be smoothly migrated when upgrading to newer Odoo versions." },
+  { question: "How long does Odoo customization take?", answer: "The timeline depends on the scope and complexity. Simple customizations such as custom fields and basic workflows may take 1 to 2 weeks. Complex custom modules or multi-system integrations can take 4 to 12 weeks. We provide a detailed project timeline after the requirement analysis phase." },
+  { question: "Can you integrate third-party software with Odoo?", answer: "Yes. We specialize in Odoo integrations with popular platforms including Shopify, WooCommerce, Salesforce, HubSpot, Stripe, PayPal, DHL, FedEx, QuickBooks, Tally, Xero, and Amazon through REST APIs, webhooks, and custom connectors." },
+  { question: "Do you support both Community and Enterprise editions?", answer: "Yes. Our team has deep expertise in both Odoo Community and Odoo Enterprise editions from Odoo v12 through the latest v17 and v18. We can advise on which edition best fits your business needs and budget." },
+  { question: "What industries do you specialize in?", answer: "We have delivered Odoo customizations across manufacturing, retail, wholesale, healthcare, education, logistics, construction, real estate, hospitality, automotive, finance, and agriculture industries. Each industry has unique requirements that our domain-expert team understands deeply." },
+  { question: "Do you provide post-launch support?", answer: "Yes. We offer comprehensive post-launch support including bug fixes, performance monitoring, feature enhancements, user training, Odoo version upgrades, and 24/7 emergency technical assistance. Our SLA-based support plans ensure your ERP runs smoothly at all times." }
+];
+
+const schemaData = [
+  { "@context": "https://schema.org", "@type": "Service", name: "Odoo Customization Services | Hegrix Technologies", provider: { "@type": "Organization", name: "Hegrix Technologies", url: "https://hegrix.com" }, areaServed: "Global", serviceType: "Odoo ERP Customization, Custom Odoo Module Development, Odoo Workflow Automation, Odoo Integration Services", description: "Expert Odoo customization services by Hegrix Technologies.", url: "https://hegrix.com/services/odoo-customization-services/" },
+  { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqList.map(item => ({ "@type": "Question", name: item.question, acceptedAnswer: { "@type": "Answer", text: item.answer } })) },
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://hegrix.com/" }, { "@type": "ListItem", position: 2, name: "Services", item: "https://hegrix.com/services/" }, { "@type": "ListItem", position: 3, name: "Odoo Customization Services", item: "https://hegrix.com/services/odoo-customization-services/" } ] }
+];
+---
+
+<Layout
+  title="Odoo Customization Services | Custom Odoo ERP Development | Hegrix"
+  description="Expert Odoo customization services by Hegrix Technologies. Custom modules, workflow automation, dashboard development, API integrations and more. Get a free consultation today."
+  keywords="Odoo Customization Services, Odoo ERP Customization, Odoo Module Customization, Custom Odoo Development, Odoo Workflow Automation, Odoo Dashboard Development, Odoo Integration Services, Odoo Business Automation"
+  path="/services/odoo-customization-services/"
+  schema={schemaData}
+>
+
+<div class="ocs-root">
+<button class="ocs-back-top" id="ocsBackTop" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+
+<section class="ocs-hero" id="ocs-hero">
+  <div class="ocs-hero-bg" aria-hidden="true"><div class="ocs-orb ocs-orb-1"></div><div class="ocs-orb ocs-orb-2"></div><div class="ocs-hero-grid"></div></div>
+  <div class="ocs-container ocs-hero-inner">
+    <div class="ocs-hero-content ocs-fade-up">
+      <div class="ocs-badge"><span class="ocs-badge-dot"></span><span>Certified Odoo Customization Experts</span></div>
+      <h1 class="ocs-hero-title">Odoo Customization Services<span class="ocs-gradient-text">Tailored to Your Business</span></h1>
+      <p class="ocs-hero-desc">Transform your standard Odoo ERP into a precision-engineered business engine. We build custom modules, automate workflows, design intelligent dashboards, and integrate your entire technology ecosystem so your ERP works exactly the way your business does.</p>
+      <div class="ocs-hero-ctas">
+        <button class="ocs-btn ocs-btn-primary js-open-ocs-modal" id="heroCtaPrimary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Get Free Consultation</button>
+        <button class="ocs-btn ocs-btn-outline js-open-ocs-modal" id="heroCtaSecondary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Request Custom Quote</button>
+      </div>
+      <div class="ocs-hero-trust"><span class="ocs-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4.9/5 Rating</span><span class="ocs-sep">&#183;</span><span>250+ Projects</span><span class="ocs-sep">&#183;</span><span>100+ Happy Clients</span></div>
+    </div>
+    <div class="ocs-hero-visual ocs-fade-up-delay">
+      <div class="ocs-dashboard-card">
+        <div class="ocs-dash-header"><div class="ocs-dash-dots"><span></span><span></span><span></span></div><span class="ocs-dash-title">Odoo Custom Dashboard</span><div class="ocs-dash-live"><span class="ocs-live-dot"></span>Live</div></div>
+        <div class="ocs-dash-kpi-row">
+          <div class="ocs-kpi-card ocs-kpi-blue"><div class="ocs-kpi-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><div class="ocs-kpi-val">+38%</div><div class="ocs-kpi-lbl">Efficiency</div></div></div>
+          <div class="ocs-kpi-card ocs-kpi-green"><div class="ocs-kpi-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg></div><div><div class="ocs-kpi-val">$1.2M</div><div class="ocs-kpi-lbl">Revenue</div></div></div>
+          <div class="ocs-kpi-card ocs-kpi-purple"><div class="ocs-kpi-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="ocs-kpi-val">-60%</div><div class="ocs-kpi-lbl">Manual Work</div></div></div>
+        </div>
+        <div class="ocs-workflow-row">
+          <div class="ocs-flow-step ocs-flow-active"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/></svg>Order</div>
+          <span class="ocs-flow-arrow">&#8594;</span>
+          <div class="ocs-flow-step"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/></svg>Inventory</div>
+          <span class="ocs-flow-arrow">&#8594;</span>
+          <div class="ocs-flow-step"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>Invoice</div>
+          <span class="ocs-flow-arrow">&#8594;</span>
+          <div class="ocs-flow-step ocs-flow-done"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Delivered</div>
+        </div>
+        <div class="ocs-module-pills">
+          <span class="ocs-mpill ocs-mpill-active">CRM</span><span class="ocs-mpill">Sales</span><span class="ocs-mpill ocs-mpill-active">Inventory</span><span class="ocs-mpill">Accounting</span><span class="ocs-mpill">HR</span><span class="ocs-mpill ocs-mpill-active">Manufacturing</span>
+        </div>
+      </div>
+      <div class="ocs-float-badge ocs-float-1"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1265f3" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Upgrade-Safe Code</div>
+      <div class="ocs-float-badge ocs-float-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0bbf8a" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Free 14-Day Trial</div>
+      <div class="ocs-float-badge ocs-float-3"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>4.9&#9733; Rated</div>
+    </div>
+  </div>
+</section>
+
+<section class="ocs-trust-bar">
+  <div class="ocs-container">
+    <p class="ocs-trust-label">Trusted by businesses across 25+ countries</p>
+    <div class="ocs-logo-wrapper"><div class="ocs-logo-track"><div class="ocs-logo-item">TechCorp</div><div class="ocs-logo-item">RetailPro</div><div class="ocs-logo-item">ManufactureX</div><div class="ocs-logo-item">GlobalLogix</div><div class="ocs-logo-item">HealthPlus</div><div class="ocs-logo-item">BuildMaster</div><div class="ocs-logo-item">EduSuite</div><div class="ocs-logo-item">AgriTech</div><div class="ocs-logo-item">FinEdge</div><div class="ocs-logo-item">AutoDrive</div><div class="ocs-logo-item">TechCorp</div><div class="ocs-logo-item">RetailPro</div><div class="ocs-logo-item">ManufactureX</div><div class="ocs-logo-item">GlobalLogix</div><div class="ocs-logo-item">HealthPlus</div><div class="ocs-logo-item">BuildMaster</div><div class="ocs-logo-item">EduSuite</div><div class="ocs-logo-item">AgriTech</div><div class="ocs-logo-item">FinEdge</div><div class="ocs-logo-item">AutoDrive</div></div></div>
+    <div class="ocs-stats-row">
+      <div class="ocs-stat-item"><span class="ocs-stat-num ocs-counter" data-target="250">0</span><span class="ocs-stat-suf">+</span><span class="ocs-stat-lbl">Projects Delivered</span></div>
+      <div class="ocs-stat-div"></div>
+      <div class="ocs-stat-item"><span class="ocs-stat-num ocs-counter" data-target="100">0</span><span class="ocs-stat-suf">+</span><span class="ocs-stat-lbl">Happy Clients</span></div>
+      <div class="ocs-stat-div"></div>
+      <div class="ocs-stat-item"><span class="ocs-stat-num ocs-counter" data-target="15">0</span><span class="ocs-stat-suf">+</span><span class="ocs-stat-lbl">Industries Served</span></div>
+      <div class="ocs-stat-div"></div>
+      <div class="ocs-stat-item"><span class="ocs-stat-num ocs-counter" data-target="8">0</span><span class="ocs-stat-suf">+</span><span class="ocs-stat-lbl">Years Experience</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="ocs-section" id="ocs-challenges">
+  <div class="ocs-container">
+    <div class="ocs-section-header ocs-reveal"><div class="ocs-slabel">The Problem</div><h2>Is Your ERP Holding Back Your Business?</h2><p>Generic ERP systems force your teams to adapt to the software. Here are the pain points we solve every day.</p></div>
+    <div class="ocs-challenges-grid">
+      <div class="ocs-challenge-card ocs-reveal"><div class="ocs-cicon ocs-ci-red"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg></div><h3>Generic ERP Does Not Fit Your Workflow</h3><p>Standard modules force workarounds that slow teams down and create data inconsistencies across departments.</p></div>
+      <div class="ocs-challenge-card ocs-reveal"><div class="ocs-cicon ocs-ci-orange"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h3>Too Many Manual Repetitive Tasks</h3><p>Hours wasted on data entry and copy-paste between systems that automation can eliminate entirely.</p></div>
+      <div class="ocs-challenge-card ocs-reveal"><div class="ocs-cicon ocs-ci-purple"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><h3>Limited and Inflexible Reporting</h3><p>Default Odoo reports lack the depth and custom metrics your management team needs for strategic decisions.</p></div>
+      <div class="ocs-challenge-card ocs-reveal"><div class="ocs-cicon ocs-ci-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><h3>Complex Approval Process Bottlenecks</h3><p>Purchase orders and expense approvals bottleneck without automated routing to the right approvers.</p></div>
+      <div class="ocs-challenge-card ocs-reveal"><div class="ocs-cicon ocs-ci-teal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div><h3>Missing Critical Integrations</h3><p>Disconnected apps create data silos. Your ecommerce, payments, logistics, and accounting do not talk to each other.</p></div>
+      <div class="ocs-challenge-card ocs-reveal"><div class="ocs-cicon ocs-ci-rose"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><h3>Scalability Bottlenecks</h3><p>As your business grows, your ERP struggles. Performance lags and inflexible architectures block expansion.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ocs-section ocs-why-bg" id="ocs-why">
+  <div class="ocs-container">
+    <div class="ocs-section-header ocs-reveal"><div class="ocs-slabel">The Solution</div><h2>Why Odoo Customization Transforms Businesses</h2><p>Purpose-built Odoo customization aligns your ERP precisely with your workflows, teams, and growth ambitions.</p></div>
+    <div class="ocs-benefits-grid">
+      <div class="ocs-benefit-card ocs-reveal"><div class="ocs-bicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div><h3>Personalized Workflows</h3><p>Processes built around how your teams actually work, not around generic ERP logic.</p></div>
+      <div class="ocs-benefit-card ocs-reveal"><div class="ocs-bicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>Increased Productivity</h3><p>Automate repetitive tasks and eliminate manual work, freeing your team for high-value activities.</p></div>
+      <div class="ocs-benefit-card ocs-reveal"><div class="ocs-bicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h3>Better User Experience</h3><p>Clean, intuitive interfaces designed for your users reduce training time and adoption resistance.</p></div>
+      <div class="ocs-benefit-card ocs-reveal"><div class="ocs-bicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div><h3>Smart Automation</h3><p>Rules-based engines trigger automatic actions, emails, approvals, and data sync without human intervention.</p></div>
+      <div class="ocs-benefit-card ocs-reveal"><div class="ocs-bicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Built to Scale</h3><p>Architecture designed to grow with your business. Add users, companies, and modules without rebuilding.</p></div>
+      <div class="ocs-benefit-card ocs-reveal"><div class="ocs-bicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div><h3>Improved Decision Making</h3><p>Custom dashboards and real-time KPI reports give executives the exact data they need, when they need it.</p></div>
+      <div class="ocs-benefit-card ocs-reveal"><div class="ocs-bicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><h3>Industry-Specific Features</h3><p>Domain-specific modules built for your industry unique compliance and operational needs.</p></div>
+      <div class="ocs-benefit-card ocs-reveal"><div class="ocs-bicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Reduced Operational Costs</h3><p>Eliminate software subscriptions, reduce headcount on manual tasks, and lower error-correction overhead.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ocs-section" id="ocs-services">
+  <div class="ocs-container">
+    <div class="ocs-section-header ocs-reveal"><div class="ocs-slabel">Our Services</div><h2>Our Odoo Customization Services</h2><p>A complete spectrum of Odoo customization capabilities, from field-level tweaks to full custom module development and enterprise integrations.</p></div>
+    <div class="ocs-services-grid">
+      <div class="ocs-svc-card ocs-reveal"><div class="ocs-svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2z"/><path d="M7 7h.01"/></svg></div><h3>Module Customization</h3><p>Modify existing Odoo modules to add fields, change behavior, extend views, and adapt logic to your unique requirements.</p></div>
+      <div class="ocs-svc-card ocs-reveal"><div class="ocs-svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>Custom Module Development</h3><p>Build brand-new Odoo modules from scratch for business processes that standard Odoo does not cover out-of-the-box.</p></div>
+      <div class="ocs-svc-card ocs-reveal"><div class="ocs-svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div><h3>Workflow Automation</h3><p>Automate multi-step business processes including approvals, notifications, data sync, and scheduled actions.</p></div>
+      <div class="ocs-svc-card ocs-reveal"><div class="ocs-svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><h3>Dashboard Customization</h3><p>Design custom KPI dashboards, pivot views, and real-time analytics tailored to executive and operational users.</p></div>
+      <div class="ocs-svc-card ocs-reveal"><div class="ocs-svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div><h3>Report Customization</h3><p>Build pixel-perfect PDF reports, Excel exports, and custom analysis reports with advanced filters and groupings.</p></div>
+      <div class="ocs-svc-card ocs-reveal"><div class="ocs-svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3>UI/UX Customization</h3><p>Redesign Odoo interfaces, simplify complex forms, create user-friendly navigation and branded themes.</p></div>
+      <div class="ocs-svc-card ocs-reveal"><div class="ocs-svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div><h3>API Integration</h3><p>Connect Odoo to any external system via REST APIs, webhooks, and real-time data sync for a unified ecosystem.</p></div>
+      <div class="ocs-svc-card ocs-reveal"><div class="ocs-svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><h3>Third-Party Integration</h3><p>Seamlessly connect Odoo with Shopify, WooCommerce, Salesforce, HubSpot, Stripe, QuickBooks, and 50+ platforms.</p></div>
+      <div class="ocs-svc-card ocs-reveal"><div class="ocs-svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Security and Access Control</h3><p>Implement role-based access, record rules, group-level visibility, and field-level security across all Odoo modules.</p></div>
+      <div class="ocs-svc-card ocs-reveal"><div class="ocs-svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Performance Optimization</h3><p>Database query optimization, caching strategies, and architecture improvements for faster Odoo instances.</p></div>
+      <div class="ocs-svc-card ocs-reveal"><div class="ocs-svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div><h3>Multi-Company Configuration</h3><p>Configure complex multi-branch, multi-currency, multi-company Odoo setups with consolidated reporting.</p></div>
+      <div class="ocs-svc-card ocs-reveal"><div class="ocs-svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><h3>Custom Business Logic</h3><p>Implement complex, domain-specific business rules, validations, computed fields, and constraint enforcement in Python.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ocs-section ocs-soft-bg" id="ocs-modules">
+  <div class="ocs-container">
+    <div class="ocs-section-header ocs-reveal"><div class="ocs-slabel">Module Expertise</div><h2>Odoo Modules We Customize</h2><p>Expert-level customization across every core Odoo module, built to fit your operations precisely.</p></div>
+    <div class="ocs-modules-grid">
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><span>CRM</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div><span>Sales</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg></div><span>Purchase</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><span>Inventory</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><span>Manufacturing</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><span>Accounting</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><span>HR</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div><span>Payroll</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><span>POS</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><span>Website</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg></div><span>eCommerce</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><span>Project</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><span>Helpdesk</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-3"/></svg></div><span>Rental</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/></svg></div><span>Subscription</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span>Marketing</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><span>Maintenance</span></div>
+      <div class="ocs-mod-card ocs-reveal"><div class="ocs-mod-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div><span>Quality</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="ocs-section" id="ocs-industries">
+  <div class="ocs-container">
+    <div class="ocs-section-header ocs-reveal"><div class="ocs-slabel">Industries</div><h2>Industries We Serve</h2><p>Deep domain expertise across 15+ verticals. We understand your industry unique challenges and compliance needs.</p></div>
+    <div class="ocs-ind-grid">
+      <div class="ocs-ind-card ocs-reveal"><div class="ocs-ind-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div><h3>Manufacturing</h3><p>MRP, BOM, Work Centers, Quality Control</p></div>
+      <div class="ocs-ind-card ocs-reveal"><div class="ocs-ind-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Retail</h3><p>POS, Loyalty Programs, Multi-Store</p></div>
+      <div class="ocs-ind-card ocs-reveal"><div class="ocs-ind-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><h3>Wholesale</h3><p>Bulk Orders, Price Lists, B2B Portals</p></div>
+      <div class="ocs-ind-card ocs-reveal"><div class="ocs-ind-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Healthcare</h3><p>Patient Records, Billing, Appointments</p></div>
+      <div class="ocs-ind-card ocs-reveal"><div class="ocs-ind-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><h3>Education</h3><p>Fee Management, LMS, Student Portals</p></div>
+      <div class="ocs-ind-card ocs-reveal"><div class="ocs-ind-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-3"/></svg></div><h3>Logistics</h3><p>Fleet, Delivery Routes, Freight Management</p></div>
+      <div class="ocs-ind-card ocs-reveal"><div class="ocs-ind-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg></div><h3>Construction</h3><p>Project Costing, Subcontractors, BOQ</p></div>
+      <div class="ocs-ind-card ocs-reveal"><div class="ocs-ind-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Real Estate</h3><p>Property Management, Contracts, CRM</p></div>
+      <div class="ocs-ind-card ocs-reveal"><div class="ocs-ind-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div><h3>Hospitality</h3><p>Reservations, Restaurant POS, Housekeeping</p></div>
+      <div class="ocs-ind-card ocs-reveal"><div class="ocs-ind-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h3>Automotive</h3><p>Vehicle Sales, Workshop, Parts Inventory</p></div>
+      <div class="ocs-ind-card ocs-reveal"><div class="ocs-ind-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Finance</h3><p>NBFC, Lending, Multi-Currency Accounting</p></div>
+      <div class="ocs-ind-card ocs-reveal"><div class="ocs-ind-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><h3>Agriculture</h3><p>Farm Management, Harvest Tracking, Supply Chain</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ocs-section ocs-soft-bg" id="ocs-process">
+  <div class="ocs-container">
+    <div class="ocs-section-header ocs-reveal"><div class="ocs-slabel">Our Process</div><h2>Our Odoo Customization Process</h2><p>A structured, transparent 9-step methodology that ensures your customization is delivered on time, on budget, and aligned with your goals.</p></div>
+    <div class="ocs-process-grid">
+      <div class="ocs-proc-step ocs-reveal"><div class="ocs-proc-num">01</div><div class="ocs-proc-body"><h3>Requirement Analysis</h3><p>In-depth discovery sessions to document your business goals, workflows, pain points, and technical constraints.</p></div></div>
+      <div class="ocs-proc-step ocs-reveal"><div class="ocs-proc-num">02</div><div class="ocs-proc-body"><h3>Business Process Mapping</h3><p>Visual mapping of your existing and desired processes to identify automation and customization opportunities.</p></div></div>
+      <div class="ocs-proc-step ocs-reveal"><div class="ocs-proc-num">03</div><div class="ocs-proc-body"><h3>Solution Architecture</h3><p>Technical design of the customization architecture including module structure, data models, API endpoints, and integration patterns.</p></div></div>
+      <div class="ocs-proc-step ocs-reveal"><div class="ocs-proc-num">04</div><div class="ocs-proc-body"><h3>UI/UX Planning</h3><p>Wireframes, form layouts, dashboard designs, and user journey flows reviewed and approved before development starts.</p></div></div>
+      <div class="ocs-proc-step ocs-reveal"><div class="ocs-proc-num">05</div><div class="ocs-proc-body"><h3>Development</h3><p>Agile sprint-based development with Python, OWL, PostgreSQL. Clean PEP-8 code, version-controlled in Git, fully documented.</p></div></div>
+      <div class="ocs-proc-step ocs-reveal"><div class="ocs-proc-num">06</div><div class="ocs-proc-body"><h3>Testing and QA</h3><p>Comprehensive unit testing, integration testing, UAT, and performance benchmarking before any production deployment.</p></div></div>
+      <div class="ocs-proc-step ocs-reveal"><div class="ocs-proc-num">07</div><div class="ocs-proc-body"><h3>Deployment</h3><p>Zero-downtime deployment to production with full rollback capability, database migration scripts, and environment validation.</p></div></div>
+      <div class="ocs-proc-step ocs-reveal"><div class="ocs-proc-num">08</div><div class="ocs-proc-body"><h3>User Training</h3><p>Role-specific training sessions, video walkthroughs, user manuals, and dedicated Q&amp;A sessions for all teams.</p></div></div>
+      <div class="ocs-proc-step ocs-reveal"><div class="ocs-proc-num">09</div><div class="ocs-proc-body"><h3>Ongoing Support</h3><p>SLA-based post-launch support with bug fixes, performance monitoring, feature enhancements, and 24/7 emergency response.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="ocs-metrics-section" id="ocs-metrics">
+  <div class="ocs-container">
+    <div class="ocs-metrics-grid">
+      <div class="ocs-metric-item ocs-reveal"><div class="ocs-mnum"><span class="ocs-counter" data-target="250">0</span><span>+</span></div><div class="ocs-mlbl">Projects Delivered</div></div>
+      <div class="ocs-metric-item ocs-reveal"><div class="ocs-mnum"><span class="ocs-counter" data-target="100">0</span><span>+</span></div><div class="ocs-mlbl">Happy Clients</div></div>
+      <div class="ocs-metric-item ocs-reveal"><div class="ocs-mnum"><span class="ocs-counter" data-target="15">0</span><span>+</span></div><div class="ocs-mlbl">Industries Served</div></div>
+      <div class="ocs-metric-item ocs-reveal"><div class="ocs-mnum"><span class="ocs-counter" data-target="8">0</span><span>+</span></div><div class="ocs-mlbl">Years Experience</div></div>
+      <div class="ocs-metric-item ocs-reveal"><div class="ocs-mnum"><span class="ocs-counter" data-target="98">0</span><span>%</span></div><div class="ocs-mlbl">Client Satisfaction</div></div>
+      <div class="ocs-metric-item ocs-reveal"><div class="ocs-mnum">24/7</div><div class="ocs-mlbl">Expert Support</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="ocs-section" id="ocs-why-us">
+  <div class="ocs-container">
+    <div class="ocs-section-header ocs-reveal"><div class="ocs-slabel">Why Hegrix</div><h2>Why Choose Hegrix for Odoo Customization?</h2><p>We are more than a development agency. We are long-term ERP partners committed to your business success.</p></div>
+    <div class="ocs-why-grid">
+      <div class="ocs-why-card ocs-reveal"><div class="ocs-wicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div><h3>Certified Odoo Experts</h3><p>Official Odoo certifications and 8+ years of hands-on ERP customization experience.</p></div>
+      <div class="ocs-why-card ocs-reveal"><div class="ocs-wicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg></div><h3>Agile Development</h3><p>Sprint-based delivery with weekly demos and feedback loops. You stay in control throughout the project.</p></div>
+      <div class="ocs-why-card ocs-reveal"><div class="ocs-wicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Transparent Pricing</h3><p>Fixed-price or T&amp;M contracts with no hidden costs. Detailed SOW and milestone billing for full financial clarity.</p></div>
+      <div class="ocs-why-card ocs-reveal"><div class="ocs-wicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Scalable Architecture</h3><p>Every module is designed with scalability in mind, ready to grow from 10 to 10,000 users without rearchitecting.</p></div>
+      <div class="ocs-why-card ocs-reveal"><div class="ocs-wicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Secure Development</h3><p>OWASP-compliant code, NDA-protected workflows, and full IP transfer to your ownership.</p></div>
+      <div class="ocs-why-card ocs-reveal"><div class="ocs-wicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Dedicated Project Manager</h3><p>A single point of contact managing your project timeline, team coordination, and stakeholder communication.</p></div>
+      <div class="ocs-why-card ocs-reveal"><div class="ocs-wicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><h3>Long-term Support</h3><p>SLA-based ongoing support, version upgrades, and continuous enhancement services after delivery.</p></div>
+      <div class="ocs-why-card ocs-reveal"><div class="ocs-wicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2z"/></svg></div><h3>Upgrade-Safe Code</h3><p>Inheritance-based module architecture ensures your customizations survive Odoo version upgrades cleanly.</p></div>
+      <div class="ocs-why-card ocs-reveal"><div class="ocs-wicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><h3>Quick Delivery</h3><p>Proven delivery playbooks and experienced teams. Most customizations delivered in 2 to 6 weeks.</p></div>
+      <div class="ocs-why-card ocs-reveal"><div class="ocs-wicon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><h3>24/7 Technical Assistance</h3><p>Round-the-clock emergency support with guaranteed SLA response times for critical production issues.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ocs-section" id="ocs-cases">
+  <div class="ocs-container">
+    <div class="ocs-section-header ocs-reveal"><div class="ocs-slabel">Case Studies</div><h2>Real Customizations. Real Results.</h2><p>See how Hegrix Odoo customization has transformed businesses across industries.</p></div>
+    <div class="ocs-cases-grid">
+      <div class="ocs-case-card ocs-reveal">
+        <div class="ocs-case-header"><div class="ocs-case-tag">Manufacturing</div><div class="ocs-case-roi">3.8x ROI</div></div>
+        <h3>Custom MRP Automation for Mid-Size Manufacturer</h3>
+        <div class="ocs-case-sec"><strong>Challenge</strong><p>A 250-employee manufacturing company managing production planning through Excel, resulting in stockouts, missed deadlines, and costly raw material wastage.</p></div>
+        <div class="ocs-case-sec"><strong>Our Solution</strong><p>Custom MRP module with auto-replenishment triggers, real-time work center dashboards, quality checkpoints, and automated supplier PO generation linked to sales forecasts.</p></div>
+        <div class="ocs-case-tech"><span>Python 3.12</span><span>Odoo MRP</span><span>PostgreSQL</span><span>REST API</span></div>
+        <div class="ocs-case-results">
+          <div class="ocs-case-res"><span class="ocs-rnum">40%</span><span>Waste Reduction</span></div>
+          <div class="ocs-case-res"><span class="ocs-rnum">28%</span><span>On-Time Delivery</span></div>
+          <div class="ocs-case-res"><span class="ocs-rnum"></span><span>Annual Savings</span></div>
+        </div>
+      </div>
+      <div class="ocs-case-card ocs-reveal">
+        <div class="ocs-case-header"><div class="ocs-case-tag">Retail</div><div class="ocs-case-roi">4.2x ROI</div></div>
+        <h3>Unified Omnichannel Retail Platform for Fashion Brand</h3>
+        <div class="ocs-case-sec"><strong>Challenge</strong><p>A fashion retailer with 12 stores and an online shop managing inventory manually across locations, leading to overselling, stock imbalances, and delayed financial closing.</p></div>
+        <div class="ocs-case-sec"><strong>Our Solution</strong><p>Custom POS integration with Odoo eCommerce, real-time multi-location inventory sync, loyalty program module, automated reorder rules, and a live sales performance dashboard.</p></div>
+        <div class="ocs-case-tech"><span>Odoo POS</span><span>eCommerce</span><span>OWL</span><span>Shopify API</span></div>
+        <div class="ocs-case-results">
+          <div class="ocs-case-res"><span class="ocs-rnum">99.2%</span><span>Inventory Accuracy</span></div>
+          <div class="ocs-case-res"><span class="ocs-rnum">52%</span><span>Faster Month-End</span></div>
+          <div class="ocs-case-res"><span class="ocs-rnum"></span><span>Revenue Recovered</span></div>
+        </div>
+      </div>
+      <div class="ocs-case-card ocs-reveal">
+        <div class="ocs-case-header"><div class="ocs-case-tag">Logistics</div><div class="ocs-case-roi">2.9x ROI</div></div>
+        <h3>Fleet and Freight Management for 3PL Provider</h3>
+        <div class="ocs-case-sec"><strong>Challenge</strong><p>A 3PL company managing 80+ vehicles and 500+ daily deliveries with no real-time visibility into driver status, fuel consumption, or SLA compliance.</p></div>
+        <div class="ocs-case-sec"><strong>Our Solution</strong><p>Custom fleet module with GPS tracking, automated maintenance alerts, driver performance scoring, customer delivery tracking portal, and automated invoicing per delivery route.</p></div>
+        <div class="ocs-case-tech"><span>Odoo Fleet</span><span>GPS API</span><span>Python</span><span>Customer Portal</span></div>
+        <div class="ocs-case-results">
+          <div class="ocs-case-res"><span class="ocs-rnum">35%</span><span>Fuel Cost Reduction</span></div>
+          <div class="ocs-case-res"><span class="ocs-rnum">98.4%</span><span>SLA Compliance</span></div>
+          <div class="ocs-case-res"><span class="ocs-rnum"></span><span>Annual Savings</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ocs-section ocs-soft-bg" id="ocs-testimonials">
+  <div class="ocs-container">
+    <div class="ocs-section-header ocs-reveal"><div class="ocs-slabel">Client Testimonials</div><h2>What Our Clients Say</h2><p>Hear directly from businesses that have transformed their operations with Hegrix Odoo customization services.</p></div>
+    <div class="ocs-testi-slider" id="ocsTestiSlider">
+      <div class="ocs-testi-track" id="ocsTestiTrack">
+        <div class="ocs-tcard"><div class="ocs-tstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Hegrix completely transformed our manufacturing operations. Their custom Odoo MRP module eliminated our stockout problems overnight. The team's technical depth and business understanding is exceptional."</blockquote><div class="ocs-tauthor"><div class="ocs-tavatar" style="background:linear-gradient(135deg,#1265f3,#1fb6ff)">RK</div><div><strong>Rajesh Kumar</strong><span>Operations Director, MetalWorks Industries</span></div></div></div>
+        <div class="ocs-tcard"><div class="ocs-tstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"The Shopify-Odoo integration Hegrix built saved 40+ hours of manual work every week. Our inventory is now perfectly synced across all 12 stores and online. Their support team is incredibly responsive."</blockquote><div class="ocs-tauthor"><div class="ocs-tavatar" style="background:linear-gradient(135deg,#7c3aed,#db2777)">SA</div><div><strong>Sophia Ahmed</strong><span>CEO, FashionForward Retail Group</span></div></div></div>
+        <div class="ocs-tcard"><div class="ocs-tstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"We tried two other Odoo vendors before Hegrix. Nobody else understood our complex multi-company, multi-currency setup. Hegrix built exactly what we needed in 6 weeks, on budget, with clean code."</blockquote><div class="ocs-tauthor"><div class="ocs-tavatar" style="background:linear-gradient(135deg,#0bbf8a,#1fb6ff)">MP</div><div><strong>Marcus Petrov</strong><span>CTO, GlobalTrade Finance Ltd.</span></div></div></div>
+        <div class="ocs-tcard"><div class="ocs-tstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"Our fleet management was a nightmare before Hegrix. Now we have live GPS tracking, automated maintenance alerts, and customer delivery portals, all inside Odoo. Fuel costs dropped 35% in the first quarter."</blockquote><div class="ocs-tauthor"><div class="ocs-tavatar" style="background:linear-gradient(135deg,#f59e0b,#ef4444)">DL</div><div><strong>David Lopes</strong><span>Managing Director, SwiftLogix 3PL</span></div></div></div>
+        <div class="ocs-tcard"><div class="ocs-tstars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote>"The custom approval workflow Hegrix built cut our purchase approval cycle from 5 days to 4 hours. The dashboards give our CFO instant visibility into every cost center. Best technology investment in 5 years."</blockquote><div class="ocs-tauthor"><div class="ocs-tavatar" style="background:linear-gradient(135deg,#1265f3,#7c3aed)">AT</div><div><strong>Amira Tahir</strong><span>Finance Director, BuildPro Construction</span></div></div></div>
+      </div>
+      <div class="ocs-testi-ctrl">
+        <button class="ocs-tbttn" id="ocsTestiPrev" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+        <div class="ocs-tdots" id="ocsTestiDots"><span class="ocs-tdot ocs-tdot-active"></span><span class="ocs-tdot"></span><span class="ocs-tdot"></span><span class="ocs-tdot"></span><span class="ocs-tdot"></span></div>
+        <button class="ocs-tbttn" id="ocsTestiNext" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ocs-section" id="ocs-faq">
+  <div class="ocs-container">
+    <div class="ocs-section-header ocs-reveal"><div class="ocs-slabel">FAQs</div><h2>Frequently Asked Questions</h2><p>Everything you need to know about our Odoo customization services before you start.</p></div>
+    <div class="ocs-faq-list" id="ocsFaqList">
+      {faqList.map((item, idx) => (
+        <div class="ocs-faq-item ocs-reveal" id={`ocsFaq${idx}`}>
+          <button class="ocs-faq-q" aria-expanded="false" aria-controls={`ocsFaqA${idx}`}>
+            <span>{item.question}</span>
+            <svg class="ocs-faq-chev" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="ocs-faq-a" id={`ocsFaqA${idx}`} aria-hidden="true"><p>{item.answer}</p></div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section class="ocs-cta-section" id="ocs-cta">
+  <div class="ocs-cta-bg" aria-hidden="true"><div class="ocs-cta-orb ocs-cta-o1"></div><div class="ocs-cta-orb ocs-cta-o2"></div></div>
+  <div class="ocs-container ocs-cta-inner">
+    <div class="ocs-cta-badge ocs-reveal"><span class="ocs-badge-dot"></span><span>Free Consultation Available</span></div>
+    <h2 class="ocs-cta-title ocs-reveal">Ready to Build an Odoo ERP That Works Your Way?</h2>
+    <p class="ocs-cta-desc ocs-reveal">Schedule a free 45-minute consultation with our senior Odoo architect. We will review your current setup, identify customization opportunities, and outline a clear roadmap with no commitment required.</p>
+    <div class="ocs-cta-btns ocs-reveal">
+      <button class="ocs-btn ocs-btn-white js-open-ocs-modal" id="finalCtaPrimary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Talk to an Odoo Expert</button>
+      <button class="ocs-btn ocs-btn-ghost js-open-ocs-modal" id="finalCtaSecondary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Request a Free Quote</button>
+    </div>
+    <div class="ocs-cta-trust ocs-reveal"><span>&#10003; No credit card required</span><span>&#10003; Response within 4 hours</span><span>&#10003; NDA signed before discussions</span></div>
+  </div>
+</section>
+
+</div>
+
+<div class="ocs-modal-overlay" id="ocsModal" role="dialog" aria-modal="true" aria-labelledby="ocsModalTitle" hidden>
+  <div class="ocs-modal">
+    <button class="ocs-modal-close" id="ocsModalClose" aria-label="Close modal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="ocs-modal-header">
+      <div class="ocs-modal-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2H2v10l9.29 9.29c.94.94 2.48.94 3.42 0l6.58-6.58c.94-.94.94-2.48 0-3.42L12 2z"/><path d="M7 7h.01"/></svg></div>
+      <div><h2 id="ocsModalTitle">Get a Free Odoo Customization Quote</h2><p>Tell us about your project. We will respond within 4 business hours.</p></div>
+    </div>
+    <form class="ocs-modal-form" id="ocsModalForm" novalidate>
+      <div class="ocs-form-row">
+        <div class="ocs-form-group"><label for="ocsName">Full Name *</label><input type="text" id="ocsName" name="name" placeholder="John Smith" required autocomplete="name" /></div>
+        <div class="ocs-form-group"><label for="ocsEmail">Work Email *</label><input type="email" id="ocsEmail" name="email" placeholder="john@company.com" required autocomplete="email" /></div>
+      </div>
+      <div class="ocs-form-row">
+        <div class="ocs-form-group"><label for="ocsPhone">Phone Number</label><input type="tel" id="ocsPhone" name="phone" placeholder="+1 (555) 000-0000" autocomplete="tel" /></div>
+        <div class="ocs-form-group"><label for="ocsCompany">Company Name</label><input type="text" id="ocsCompany" name="company" placeholder="Your Company" autocomplete="organization" /></div>
+      </div>
+      <div class="ocs-form-group">
+        <label for="ocsService">Customization Needed</label>
+        <select id="ocsService" name="service">
+          <option value="">Select a service type</option>
+          <option>Module Customization</option>
+          <option>Custom Module Development</option>
+          <option>Workflow Automation</option>
+          <option>Dashboard and Reports</option>
+          <option>API / Third-Party Integration</option>
+          <option>UI/UX Customization</option>
+          <option>Performance Optimization</option>
+          <option>Full ERP Customization Project</option>
+        </select>
+      </div>
+      <div class="ocs-form-group"><label for="ocsMessage">Describe Your Requirements</label><textarea id="ocsMessage" name="message" rows="3" placeholder="Briefly describe what you need customized in Odoo..."></textarea></div>
+      <div class="ocs-form-status" id="ocsFormStatus"></div>
+      <button type="submit" class="ocs-btn ocs-btn-primary ocs-btn-full" id="ocsSubmitBtn"><span id="ocsSubmitLabel">Send My Enquiry</span><svg id="ocsSubmitArrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      <p class="ocs-form-legal">By submitting, you agree to our <a href="/privacy-policy/">Privacy Policy</a>. We never share your data.</p>
+    </form>
+  </div>
+</div>
+
+<style>
+.ocs-root{--op:#1265f3;--opd:#0b4fd4;--oc:#1fb6ff;--oi:#071a3d;--om:#5b6b82;--ol:#dce8f7;--os:#0bbf8a;--opp:#fff;--osf:#f5f9ff;--osb:#eaf3ff;--or:18px;--osh:0 8px 32px rgba(18,101,243,.10);--oshl:0 24px 60px rgba(7,26,61,.12);font-family:Inter,ui-sans-serif,system-ui,sans-serif;color:var(--oi);background:var(--opp);overflow-x:hidden}
+.ocs-container{max-width:1180px;margin:0 auto;padding:0 24px}
+.ocs-section{padding:100px 0}
+.ocs-soft-bg{background:#f5f9ff}
+.ocs-why-bg{background:linear-gradient(180deg,#f5f9ff 0%,#fff 100%)}
+.ocs-section-header{text-align:center;max-width:720px;margin:0 auto 60px}
+.ocs-slabel{display:inline-block;background:var(--osb);color:var(--op);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:100px;border:1px solid rgba(18,101,243,.18);margin-bottom:18px}
+.ocs-section-header h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;color:var(--oi);line-height:1.15;margin-bottom:18px}
+.ocs-section-header p{font-size:1.05rem;color:var(--om);line-height:1.7}
+.ocs-fade-up{animation:ocsFU .9s cubic-bezier(.23,1,.32,1) both}
+.ocs-fade-up-delay{animation:ocsFU .9s cubic-bezier(.23,1,.32,1) .2s both}
+@keyframes ocsFU{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:translateY(0)}}
+.ocs-reveal{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.ocs-reveal.ocs-visible{opacity:1;transform:translateY(0)}
+.ocs-back-top{position:fixed;bottom:32px;right:32px;z-index:999;width:46px;height:46px;background:var(--op);color:#fff;border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 24px rgba(18,101,243,.35);opacity:0;visibility:hidden;transform:translateY(12px);transition:all .3s}
+.ocs-back-top.ocs-show{opacity:1;visibility:visible;transform:translateY(0)}
+.ocs-back-top:hover{background:var(--opd);transform:translateY(-2px)}
+.ocs-btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:12px;font-size:.97rem;font-weight:600;border:none;cursor:pointer;transition:all .22s ease;text-decoration:none;white-space:nowrap}
+.ocs-btn-primary{background:var(--op);color:#fff;box-shadow:0 4px 18px rgba(18,101,243,.32)}
+.ocs-btn-primary:hover{background:var(--opd);transform:translateY(-2px);box-shadow:0 8px 28px rgba(18,101,243,.38)}
+.ocs-btn-outline{background:transparent;color:var(--op);border:1.5px solid var(--op)}
+.ocs-btn-outline:hover{background:var(--osb);transform:translateY(-2px)}
+.ocs-btn-white{background:#fff;color:var(--op);box-shadow:0 4px 18px rgba(0,0,0,.12)}
+.ocs-btn-white:hover{background:var(--osb);transform:translateY(-2px)}
+.ocs-btn-ghost{background:rgba(255,255,255,.12);color:#fff;border:1.5px solid rgba(255,255,255,.35);backdrop-filter:blur(8px)}
+.ocs-btn-ghost:hover{background:rgba(255,255,255,.2);transform:translateY(-2px)}
+.ocs-btn-full{width:100%;justify-content:center}
+.ocs-hero{position:relative;padding:130px 0 100px;overflow:hidden;background:linear-gradient(170deg,#f5f9ff 0%,#eaf3ff 50%,#fff 100%)}
+.ocs-hero-bg{position:absolute;inset:0;pointer-events:none}
+.ocs-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.5}
+.ocs-orb-1{width:560px;height:560px;background:radial-gradient(circle,rgba(18,101,243,.18) 0%,transparent 70%);top:-180px;right:-120px}
+.ocs-orb-2{width:380px;height:380px;background:radial-gradient(circle,rgba(31,182,255,.15) 0%,transparent 70%);bottom:-60px;left:-80px}
+.ocs-hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(18,101,243,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(18,101,243,.04) 1px,transparent 1px);background-size:40px 40px}
+.ocs-hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
+.ocs-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(18,101,243,.07);border:1px solid rgba(18,101,243,.2);color:var(--op);font-size:.82rem;font-weight:600;padding:7px 16px;border-radius:100px;margin-bottom:24px}
+.ocs-badge-dot{width:8px;height:8px;background:var(--op);border-radius:50%;animation:ocsPulse 2s infinite}
+@keyframes ocsPulse{0%,100%{box-shadow:0 0 0 0 rgba(18,101,243,.4)}50%{box-shadow:0 0 0 6px rgba(18,101,243,0)}}
+.ocs-hero-title{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:900;color:var(--oi);line-height:1.08;margin-bottom:24px;display:block}
+.ocs-gradient-text{display:block;background:linear-gradient(135deg,var(--op) 0%,var(--oc) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ocs-hero-desc{font-size:1.08rem;color:var(--om);line-height:1.75;margin-bottom:36px;max-width:520px}
+.ocs-hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:32px}
+.ocs-hero-trust{display:flex;align-items:center;gap:12px;font-size:.88rem;color:var(--om);flex-wrap:wrap}
+.ocs-stars{color:#f59e0b;font-size:.95rem}
+.ocs-sep{color:var(--ol);font-weight:700}
+.ocs-hero-visual{position:relative}
+.ocs-dashboard-card{background:#fff;border-radius:20px;padding:24px;box-shadow:0 20px 60px rgba(7,26,61,.12),0 0 0 1px rgba(18,101,243,.08)}
+.ocs-dash-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+.ocs-dash-dots{display:flex;gap:6px}
+.ocs-dash-dots span{width:10px;height:10px;border-radius:50%}
+.ocs-dash-dots span:nth-child(1){background:#ef4444}
+.ocs-dash-dots span:nth-child(2){background:#f59e0b}
+.ocs-dash-dots span:nth-child(3){background:#0bbf8a}
+.ocs-dash-title{font-size:.82rem;font-weight:600;color:var(--om)}
+.ocs-dash-live{display:flex;align-items:center;gap:5px;font-size:.75rem;font-weight:700;color:var(--os)}
+.ocs-live-dot{width:7px;height:7px;background:var(--os);border-radius:50%;animation:ocsBlink 1.5s infinite}
+@keyframes ocsBlink{0%,100%{opacity:1}50%{opacity:.3}}
+.ocs-dash-kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.ocs-kpi-card{border-radius:12px;padding:12px;display:flex;align-items:center;gap:10px}
+.ocs-kpi-blue{background:rgba(18,101,243,.07)}
+.ocs-kpi-green{background:rgba(11,191,138,.08)}
+.ocs-kpi-purple{background:rgba(124,58,237,.07)}
+.ocs-kpi-icon{width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:rgba(255,255,255,.8);flex-shrink:0}
+.ocs-kpi-blue .ocs-kpi-icon{color:var(--op)}
+.ocs-kpi-green .ocs-kpi-icon{color:var(--os)}
+.ocs-kpi-purple .ocs-kpi-icon{color:#7c3aed}
+.ocs-kpi-val{font-size:1rem;font-weight:800;color:var(--oi);line-height:1}
+.ocs-kpi-lbl{font-size:.7rem;color:var(--om);margin-top:2px}
+.ocs-workflow-row{display:flex;align-items:center;gap:8px;background:var(--osf);border-radius:12px;padding:12px 14px;margin-bottom:14px;flex-wrap:wrap}
+.ocs-flow-step{display:flex;align-items:center;gap:5px;font-size:.78rem;font-weight:600;padding:5px 10px;border-radius:8px;background:#fff;color:var(--om);border:1px solid var(--ol);white-space:nowrap}
+.ocs-flow-active{background:rgba(18,101,243,.08);color:var(--op);border-color:rgba(18,101,243,.2)}
+.ocs-flow-done{background:rgba(11,191,138,.08);color:var(--os);border-color:rgba(11,191,138,.2)}
+.ocs-flow-arrow{color:var(--ol);font-size:.9rem}
+.ocs-module-pills{display:flex;flex-wrap:wrap;gap:7px}
+.ocs-mpill{font-size:.74rem;font-weight:600;padding:4px 12px;border-radius:100px;background:var(--osf);color:var(--om);border:1px solid var(--ol);cursor:pointer;transition:all .2s}
+.ocs-mpill-active{background:rgba(18,101,243,.08);color:var(--op);border-color:rgba(18,101,243,.22)}
+.ocs-float-badge{position:absolute;background:#fff;border:1px solid var(--ol);border-radius:100px;padding:8px 14px;font-size:.78rem;font-weight:600;color:var(--oi);display:flex;align-items:center;gap:7px;box-shadow:var(--osh);white-space:nowrap;animation:ocsFloat 5s ease-in-out infinite}
+.ocs-float-1{top:-20px;right:-20px;animation-delay:0s}
+.ocs-float-2{bottom:20px;left:-28px;animation-delay:1.5s}
+.ocs-float-3{bottom:80px;right:-32px;animation-delay:3s}
+@keyframes ocsFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.ocs-trust-bar{background:var(--osf);border-top:1px solid var(--ol);border-bottom:1px solid var(--ol);padding:48px 0}
+.ocs-trust-label{text-align:center;font-size:.85rem;font-weight:600;color:var(--om);text-transform:uppercase;letter-spacing:.06em;margin-bottom:28px}
+.ocs-logo-wrapper{overflow:hidden;margin-bottom:48px;mask-image:linear-gradient(90deg,transparent 0%,black 15%,black 85%,transparent 100%)}
+.ocs-logo-track{display:flex;gap:48px;animation:ocsLS 28s linear infinite;width:max-content}
+@keyframes ocsLS{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ocs-logo-item{font-size:1rem;font-weight:700;color:var(--om);opacity:.6;white-space:nowrap;background:#fff;padding:10px 24px;border-radius:10px;border:1px solid var(--ol);letter-spacing:.02em;flex-shrink:0}
+.ocs-stats-row{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+.ocs-stat-item{display:flex;align-items:center;gap:4px;flex-direction:column}
+.ocs-stat-num{font-size:2.2rem;font-weight:900;color:var(--op);line-height:1}
+.ocs-stat-suf{font-size:1.4rem;font-weight:900;color:var(--op)}
+.ocs-stat-lbl{font-size:.82rem;font-weight:600;color:var(--om)}
+.ocs-stat-div{width:1px;height:48px;background:var(--ol)}
+.ocs-challenges-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ocs-challenge-card{background:#fff;border:1px solid var(--ol);border-radius:var(--or);padding:32px 28px;transition:all .25s;position:relative;overflow:hidden}
+.ocs-challenge-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:3px 3px 0 0;transition:opacity .25s;opacity:0}
+.ocs-challenge-card:hover{box-shadow:var(--oshl);transform:translateY(-4px);border-color:transparent}
+.ocs-challenge-card:hover::before{opacity:1}
+.ocs-challenge-card:nth-child(1)::before{background:#ef4444}
+.ocs-challenge-card:nth-child(2)::before{background:#f59e0b}
+.ocs-challenge-card:nth-child(3)::before{background:#7c3aed}
+.ocs-challenge-card:nth-child(4)::before{background:var(--op)}
+.ocs-challenge-card:nth-child(5)::before{background:var(--oc)}
+.ocs-challenge-card:nth-child(6)::before{background:#db2777}
+.ocs-cicon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.ocs-ci-red{background:rgba(239,68,68,.1);color:#ef4444}
+.ocs-ci-orange{background:rgba(245,158,11,.1);color:#f59e0b}
+.ocs-ci-purple{background:rgba(124,58,237,.1);color:#7c3aed}
+.ocs-ci-blue{background:rgba(18,101,243,.1);color:var(--op)}
+.ocs-ci-teal{background:rgba(11,191,138,.1);color:var(--os)}
+.ocs-ci-rose{background:rgba(219,39,119,.1);color:#db2777}
+.ocs-challenge-card h3{font-size:1.02rem;font-weight:700;color:var(--oi);margin-bottom:10px;line-height:1.3}
+.ocs-challenge-card p{font-size:.9rem;color:var(--om);line-height:1.65}
+.ocs-benefits-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ocs-benefit-card{background:#fff;border:1px solid var(--ol);border-radius:var(--or);padding:28px 22px;transition:all .25s}
+.ocs-benefit-card:hover{border-color:var(--op);box-shadow:0 8px 32px rgba(18,101,243,.12);transform:translateY(-4px)}
+.ocs-bicon{width:44px;height:44px;background:linear-gradient(135deg,rgba(18,101,243,.1) 0%,rgba(31,182,255,.1) 100%);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--op)}
+.ocs-benefit-card h3{font-size:.95rem;font-weight:700;color:var(--oi);margin-bottom:8px;line-height:1.3}
+.ocs-benefit-card p{font-size:.87rem;color:var(--om);line-height:1.6}
+.ocs-services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.ocs-svc-card{background:#fff;border:1px solid var(--ol);border-radius:var(--or);padding:28px 22px;cursor:pointer;transition:all .25s}
+.ocs-svc-card:hover{box-shadow:var(--oshl);transform:translateY(-6px);border-color:rgba(18,101,243,.25)}
+.ocs-svc-icon{width:50px;height:50px;background:linear-gradient(135deg,var(--osb) 0%,rgba(31,182,255,.12) 100%);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--op);transition:all .25s}
+.ocs-svc-card:hover .ocs-svc-icon{background:var(--op);color:#fff}
+.ocs-svc-card h3{font-size:.97rem;font-weight:700;color:var(--oi);margin-bottom:10px;line-height:1.3}
+.ocs-svc-card p{font-size:.86rem;color:var(--om);line-height:1.6}
+.ocs-modules-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.ocs-mod-card{background:#fff;border:1px solid var(--ol);border-radius:14px;padding:20px 12px;display:flex;flex-direction:column;align-items:center;gap:10px;cursor:pointer;transition:all .22s;text-align:center}
+.ocs-mod-card:hover{border-color:var(--op);background:var(--osb);transform:translateY(-4px);box-shadow:0 8px 24px rgba(18,101,243,.12)}
+.ocs-mod-icon{width:40px;height:40px;background:var(--osb);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--op);transition:all .22s}
+.ocs-mod-card:hover .ocs-mod-icon{background:var(--op);color:#fff}
+.ocs-mod-card span{font-size:.82rem;font-weight:600;color:var(--oi)}
+.ocs-ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ocs-ind-card{background:#fff;border:1px solid var(--ol);border-radius:var(--or);padding:28px 22px;transition:all .25s;cursor:pointer}
+.ocs-ind-card:hover{border-color:var(--op);transform:translateY(-4px);box-shadow:0 12px 36px rgba(18,101,243,.12)}
+.ocs-ind-icon{width:52px;height:52px;background:var(--osb);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--op);margin-bottom:16px;transition:all .25s}
+.ocs-ind-card:hover .ocs-ind-icon{background:var(--op);color:#fff}
+.ocs-ind-card h3{font-size:1rem;font-weight:700;color:var(--oi);margin-bottom:6px}
+.ocs-ind-card p{font-size:.84rem;color:var(--om);line-height:1.5}
+.ocs-process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ocs-proc-step{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--ol);border-radius:var(--or);padding:26px 22px;transition:all .25s}
+.ocs-proc-step:hover{border-color:var(--op);box-shadow:0 10px 32px rgba(18,101,243,.1);transform:translateY(-3px)}
+.ocs-proc-num{font-size:1.5rem;font-weight:900;background:linear-gradient(135deg,var(--op) 0%,var(--oc) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;flex-shrink:0;line-height:1;margin-top:2px;min-width:36px}
+.ocs-proc-body h3{font-size:.97rem;font-weight:700;color:var(--oi);margin-bottom:8px;line-height:1.3}
+.ocs-proc-body p{font-size:.86rem;color:var(--om);line-height:1.6}
+.ocs-metrics-section{background:linear-gradient(135deg,var(--oi) 0%,#0d2654 100%);padding:80px 0}
+.ocs-metrics-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:24px}
+.ocs-metric-item{text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px}
+.ocs-mnum{font-size:2.6rem;font-weight:900;color:#fff;line-height:1;display:flex;align-items:baseline;gap:2px}
+.ocs-mnum span:first-child,.ocs-mnum span:last-child{background:linear-gradient(135deg,var(--oc),#fff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ocs-mlbl{font-size:.84rem;font-weight:600;color:rgba(255,255,255,.6)}
+.ocs-why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.ocs-why-card{background:#fff;border:1px solid var(--ol);border-radius:var(--or);padding:24px 18px;text-align:center;transition:all .25s}
+.ocs-why-card:hover{border-color:var(--op);box-shadow:0 10px 32px rgba(18,101,243,.1);transform:translateY(-4px)}
+.ocs-wicon{width:50px;height:50px;background:linear-gradient(135deg,var(--osb),rgba(31,182,255,.12));border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--op);margin:0 auto 14px;transition:all .25s}
+.ocs-why-card:hover .ocs-wicon{background:var(--op);color:#fff}
+.ocs-why-card h3{font-size:.9rem;font-weight:700;color:var(--oi);margin-bottom:8px;line-height:1.3}
+.ocs-why-card p{font-size:.82rem;color:var(--om);line-height:1.55}
+.ocs-cases-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.ocs-case-card{background:#fff;border:1px solid var(--ol);border-radius:20px;padding:32px 28px;transition:all .25s;display:flex;flex-direction:column;gap:16px}
+.ocs-case-card:hover{box-shadow:var(--oshl);transform:translateY(-6px);border-color:transparent}
+.ocs-case-header{display:flex;align-items:center;justify-content:space-between}
+.ocs-case-tag{font-size:.78rem;font-weight:700;background:var(--osb);color:var(--op);padding:5px 12px;border-radius:100px;border:1px solid rgba(18,101,243,.18)}
+.ocs-case-roi{font-size:1rem;font-weight:900;color:var(--os)}
+.ocs-case-card h3{font-size:1.05rem;font-weight:800;color:var(--oi);line-height:1.3}
+.ocs-case-sec strong{display:block;font-size:.78rem;font-weight:700;color:var(--op);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.ocs-case-sec p{font-size:.87rem;color:var(--om);line-height:1.6}
+.ocs-case-tech{display:flex;flex-wrap:wrap;gap:7px}
+.ocs-case-tech span{font-size:.74rem;font-weight:600;padding:3px 11px;border-radius:100px;background:var(--osf);color:var(--om);border:1px solid var(--ol)}
+.ocs-case-results{display:flex;gap:12px;flex-wrap:wrap;padding-top:16px;border-top:1px solid var(--ol)}
+.ocs-case-res{display:flex;flex-direction:column;gap:2px;flex:1;min-width:80px}
+.ocs-rnum{font-size:1.15rem;font-weight:900;color:var(--oi)}
+.ocs-case-res span:last-child{font-size:.73rem;color:var(--om);line-height:1.3}
+.ocs-testi-slider{position:relative;overflow:hidden}
+.ocs-testi-track{display:flex;transition:transform .5s cubic-bezier(.23,1,.32,1)}
+.ocs-tcard{min-width:100%;background:#fff;border:1px solid var(--ol);border-radius:24px;padding:44px 48px;box-shadow:var(--osh);display:flex;flex-direction:column;gap:20px}
+.ocs-tstars{color:#f59e0b;font-size:1.1rem;letter-spacing:2px}
+.ocs-tcard blockquote{font-size:1.08rem;color:var(--oi);line-height:1.75;font-style:italic;border-left:3px solid var(--op);padding-left:20px}
+.ocs-tauthor{display:flex;align-items:center;gap:16px}
+.ocs-tavatar{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;font-weight:800;color:#fff;flex-shrink:0}
+.ocs-tauthor strong{display:block;font-size:.97rem;font-weight:700;color:var(--oi)}
+.ocs-tauthor span{font-size:.84rem;color:var(--om)}
+.ocs-testi-ctrl{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:28px}
+.ocs-tbttn{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--ol);background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--om);transition:all .2s}
+.ocs-tbttn:hover{border-color:var(--op);color:var(--op);background:var(--osb)}
+.ocs-tdots{display:flex;gap:8px;align-items:center}
+.ocs-tdot{width:8px;height:8px;border-radius:50%;background:var(--ol);cursor:pointer;transition:all .2s}
+.ocs-tdot-active{width:24px;border-radius:100px;background:var(--op)}
+.ocs-faq-list{max-width:800px;margin:0 auto;display:flex;flex-direction:column;gap:12px}
+.ocs-faq-item{background:#fff;border:1px solid var(--ol);border-radius:14px;overflow:hidden;transition:box-shadow .2s}
+.ocs-faq-item:hover{box-shadow:0 4px 16px rgba(18,101,243,.08)}
+.ocs-faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;background:transparent;border:none;cursor:pointer;font-size:.97rem;font-weight:600;color:var(--oi);text-align:left;transition:all .2s}
+.ocs-faq-q:hover,.ocs-faq-q[aria-expanded="true"]{color:var(--op)}
+.ocs-faq-chev{flex-shrink:0;color:var(--om);transition:transform .3s ease}
+.ocs-faq-q[aria-expanded="true"] .ocs-faq-chev{transform:rotate(180deg);color:var(--op)}
+.ocs-faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .3s ease;padding:0 24px}
+.ocs-faq-a.ocs-faq-open{max-height:300px;padding:0 24px 20px}
+.ocs-faq-a p{font-size:.93rem;color:var(--om);line-height:1.72}
+.ocs-cta-section{background:linear-gradient(135deg,var(--oi) 0%,#0b3077 100%);padding:100px 0;text-align:center;position:relative;overflow:hidden}
+.ocs-cta-bg{position:absolute;inset:0;pointer-events:none}
+.ocs-cta-orb{position:absolute;border-radius:50%;filter:blur(80px)}
+.ocs-cta-o1{width:500px;height:500px;background:rgba(18,101,243,.25);top:-200px;right:-100px}
+.ocs-cta-o2{width:400px;height:400px;background:rgba(31,182,255,.15);bottom:-150px;left:-80px}
+.ocs-cta-inner{position:relative;z-index:1}
+.ocs-cta-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;font-size:.82rem;font-weight:600;padding:7px 16px;border-radius:100px;margin-bottom:24px}
+.ocs-cta-badge .ocs-badge-dot{background:#fff}
+.ocs-cta-title{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;color:#fff;line-height:1.15;max-width:760px;margin:0 auto 20px}
+.ocs-cta-desc{font-size:1.05rem;color:rgba(255,255,255,.72);line-height:1.7;max-width:600px;margin:0 auto 40px}
+.ocs-cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.ocs-cta-trust{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;font-size:.84rem;color:rgba(255,255,255,.55);font-weight:500}
+.ocs-modal-overlay{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(7,26,61,.5);backdrop-filter:blur(8px);animation:ocsOI .25s ease both}
+.ocs-modal-overlay[hidden]{display:none}
+@keyframes ocsOI{from{opacity:0}to{opacity:1}}
+.ocs-modal{background:#fff;border-radius:24px;padding:40px;width:100%;max-width:620px;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 40px 100px rgba(7,26,61,.25);animation:ocsMI .35s cubic-bezier(.23,1,.32,1) both}
+@keyframes ocsMI{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+.ocs-modal-close{position:absolute;top:18px;right:18px;width:36px;height:36px;border-radius:50%;border:1px solid var(--ol);background:var(--osf);display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--om);transition:all .2s}
+.ocs-modal-close:hover{background:#fee2e2;color:#ef4444;border-color:#fca5a5}
+.ocs-modal-header{display:flex;gap:16px;align-items:flex-start;margin-bottom:28px;padding-right:24px}
+.ocs-modal-icon{width:52px;height:52px;background:var(--osb);border-radius:14px;display:flex;align-items:center;justify-content:center;color:var(--op);flex-shrink:0}
+.ocs-modal-header h2{font-size:1.25rem;font-weight:800;color:var(--oi);margin-bottom:5px;line-height:1.25}
+.ocs-modal-header p{font-size:.88rem;color:var(--om)}
+.ocs-modal-form{display:flex;flex-direction:column;gap:16px}
+.ocs-form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ocs-form-group{display:flex;flex-direction:column;gap:6px}
+.ocs-form-group label{font-size:.84rem;font-weight:600;color:var(--oi)}
+.ocs-form-group input,.ocs-form-group select,.ocs-form-group textarea{padding:11px 14px;border:1.5px solid var(--ol);border-radius:10px;font-size:.93rem;color:var(--oi);background:var(--osf);outline:none;transition:border-color .2s,box-shadow .2s}
+.ocs-form-group input:focus,.ocs-form-group select:focus,.ocs-form-group textarea:focus{border-color:var(--op);background:#fff;box-shadow:0 0 0 3px rgba(18,101,243,.1)}
+.ocs-form-group textarea{resize:vertical}
+.ocs-form-status{font-size:.9rem;font-weight:600;padding:10px 14px;border-radius:8px;display:none}
+.ocs-form-status.ocs-success{background:rgba(11,191,138,.1);color:var(--os);border:1px solid rgba(11,191,138,.25);display:block}
+.ocs-form-status.ocs-error{background:rgba(239,68,68,.08);color:#dc2626;border:1px solid rgba(239,68,68,.2);display:block}
+.ocs-form-legal{font-size:.78rem;color:var(--om);text-align:center;margin-top:4px}
+.ocs-form-legal a{color:var(--op);text-decoration:underline}
+@media(max-width:900px){.ocs-section{padding:72px 0}.ocs-hero-inner,.ocs-ind-grid,.ocs-benefits-grid,.ocs-services-grid,.ocs-cases-grid,.ocs-challenges-grid{grid-template-columns:repeat(2,1fr)}.ocs-hero-inner{grid-template-columns:1fr}.ocs-float-badge{display:none}.ocs-modules-grid{grid-template-columns:repeat(3,1fr)}.ocs-process-grid{grid-template-columns:repeat(2,1fr)}.ocs-why-grid{grid-template-columns:repeat(2,1fr)}.ocs-metrics-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.ocs-container{padding:0 16px}.ocs-section{padding:56px 0}.ocs-hero{padding:100px 0 72px}.ocs-hero-ctas{flex-direction:column}.ocs-hero-trust{flex-direction:column;align-items:flex-start;gap:8px}.ocs-stats-row{gap:24px;flex-direction:column}.ocs-stat-div{display:none}.ocs-benefits-grid,.ocs-services-grid,.ocs-ind-grid,.ocs-cases-grid,.ocs-challenges-grid,.ocs-process-grid,.ocs-why-grid{grid-template-columns:1fr}.ocs-modules-grid{grid-template-columns:repeat(2,1fr)}.ocs-dash-kpi-row{grid-template-columns:1fr}.ocs-tcard{padding:28px 20px}.ocs-tcard blockquote{font-size:.95rem}.ocs-modal{padding:24px}.ocs-form-row{grid-template-columns:1fr}.ocs-metrics-grid{grid-template-columns:repeat(2,1fr)}.ocs-cta-title{font-size:1.7rem}.ocs-cta-btns{flex-direction:column;align-items:center}.ocs-workflow-row{display:none}}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const revealEls = document.querySelectorAll('.ocs-reveal');
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        const all = Array.from(revealEls);
+        const idx = all.indexOf(e.target as HTMLElement);
+        const delay = (idx % 4) * 80;
+        setTimeout(() => (e.target as HTMLElement).classList.add('ocs-visible'), delay);
+        revealObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => revealObs.observe(el));
+
+  const counters = document.querySelectorAll('.ocs-counter');
+  const counterObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const el = e.target as HTMLElement;
+        const target = parseInt(el.dataset.target || '0', 10);
+        const start = performance.now();
+        const tick = (now: number) => {
+          const p = Math.min((now - start) / 1800, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.floor(ease * target).toString();
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+        counterObs.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(c => counterObs.observe(c));
+
+  const backTop = document.getElementById('ocsBackTop');
+  window.addEventListener('scroll', () => { backTop?.classList.toggle('ocs-show', window.scrollY > 400); }, { passive: true });
+  backTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  const modal = document.getElementById('ocsModal');
+  const modalClose = document.getElementById('ocsModalClose');
+  const openModal = () => { modal?.removeAttribute('hidden'); document.body.style.overflow = 'hidden'; };
+  const closeModal = () => { modal?.setAttribute('hidden', ''); document.body.style.overflow = ''; };
+  document.querySelectorAll('.js-open-ocs-modal').forEach(btn => btn.addEventListener('click', openModal));
+  modalClose?.addEventListener('click', closeModal);
+  modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
+
+  const form = document.getElementById('ocsModalForm') as HTMLFormElement | null;
+  const formStatus = document.getElementById('ocsFormStatus');
+  const submitBtn = document.getElementById('ocsSubmitBtn');
+  const submitLabel = document.getElementById('ocsSubmitLabel');
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!submitBtn || !submitLabel || !formStatus) return;
+    submitLabel.textContent = 'Sending...';
+    submitBtn.setAttribute('disabled', 'true');
+    formStatus.className = 'ocs-form-status';
+    const data = new FormData(form);
+    const payload = {
+      name: data.get('name')?.toString() || '',
+      email: data.get('email')?.toString() || '',
+      phone: data.get('phone')?.toString() || '',
+      companyName: data.get('company')?.toString() || 'N/A',
+      message: 'Service: ' + (data.get('service') || 'N/A') + ' | ' + (data.get('message') || ''),
+      sourcePage: 'Odoo Customization Services Page (/services/odoo-customization-services/)'
+    };
+    try {
+      const res = await fetch('/api/leads', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+      if (res.ok) {
+        formStatus.textContent = 'Your enquiry has been sent! We will be in touch within 4 hours.';
+        formStatus.className = 'ocs-form-status ocs-success';
+        form.reset();
+        setTimeout(closeModal, 3000);
+      } else { throw new Error(); }
+    } catch {
+      formStatus.textContent = 'Something went wrong. Please try again or email us directly.';
+      formStatus.className = 'ocs-form-status ocs-error';
+    } finally {
+      submitLabel.textContent = 'Send My Enquiry';
+      submitBtn.removeAttribute('disabled');
+    }
+  });
+
+  const track = document.getElementById('ocsTestiTrack');
+  const tdots = document.querySelectorAll('.ocs-tdot');
+  const prevBtn = document.getElementById('ocsTestiPrev');
+  const nextBtn = document.getElementById('ocsTestiNext');
+  let cur = 0;
+  const tot = document.querySelectorAll('.ocs-tcard').length;
+  const goTo = (idx: number) => {
+    cur = (idx + tot) % tot;
+    if (track) (track as HTMLElement).style.transform = 'translateX(-' + (cur * 100) + '%)';
+    tdots.forEach((d, i) => d.classList.toggle('ocs-tdot-active', i === cur));
+  };
+  prevBtn?.addEventListener('click', () => goTo(cur - 1));
+  nextBtn?.addEventListener('click', () => goTo(cur + 1));
+  tdots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+  let ap = setInterval(() => goTo(cur + 1), 5500);
+  document.getElementById('ocsTestiSlider')?.addEventListener('mouseenter', () => clearInterval(ap));
+  document.getElementById('ocsTestiSlider')?.addEventListener('mouseleave', () => { ap = setInterval(() => goTo(cur + 1), 5500); });
+
+  document.querySelectorAll('.ocs-faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      document.querySelectorAll('.ocs-faq-q').forEach(b => b.setAttribute('aria-expanded', 'false'));
+      document.querySelectorAll('.ocs-faq-a').forEach(a => { a.classList.remove('ocs-faq-open'); a.setAttribute('aria-hidden', 'true'); });
+      if (!isOpen) {
+        btn.setAttribute('aria-expanded', 'true');
+        const answerId = btn.getAttribute('aria-controls');
+        const answer = answerId ? document.getElementById(answerId) : null;
+        if (answer) { answer.classList.add('ocs-faq-open'); answer.setAttribute('aria-hidden', 'false'); }
+      }
+    });
+  });
+});
+</script>
+
+</Layout>
