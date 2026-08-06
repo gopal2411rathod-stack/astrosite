@@ -2,85 +2,77 @@
 import Layout from "../layouts/Layout.astro";
 
 const stats = [
-  { number: "500+", label: "Projects Delivered" },
-  { number: "200+", label: "Happy Clients" },
-  { number: "15+", label: "Countries Served" },
-  { number: "98%", label: "Client Satisfaction" },
-  { number: "10+", label: "Years Experience" },
+  { number: "500+", label: "Projects Delivered", icon: "🚀" },
+  { number: "200+", label: "Happy Clients", icon: "🤝" },
+  { number: "15+", label: "Countries Served", icon: "🌍" },
+  { number: "98%", label: "Client Satisfaction", icon: "⭐" },
+  { number: "10+", label: "Years Experience", icon: "🏆" },
 ];
 
 const services = [
   {
     title: "Odoo ERP",
-    desc: "End-to-end Odoo implementation, custom Python module development, and workflow automation.",
+    desc: "End-to-end Odoo implementation, custom Python module development, and workflow automation for enterprise operations.",
     iconType: "odoo",
     link: "/services/odoo-implementation-services/",
+    tag: "Most Popular",
+    color: "#7c3aed",
   },
   {
-    title: "ERP Consulting",
-    desc: "Strategic process auditing, roadmap architecture, and expert ERP rollout advisory.",
-    iconType: "consulting",
-    link: "/services/odoo-consulting-services/",
+    title: "AI & Automation",
+    desc: "Machine learning, predictive analytics, intelligent chatbots, and workflow automation to eliminate manual processes.",
+    iconType: "ai",
+    link: "/services/ai-automation/",
+    tag: "Trending",
+    color: "#0891b2",
   },
   {
     title: "Custom Software",
-    desc: "Tailored web, desktop, and enterprise software built for unique operational workflows.",
+    desc: "Tailored web, desktop, and enterprise software built for unique operational workflows and business logic.",
     iconType: "software",
     link: "/services/custom-software-development/",
+    tag: "",
+    color: "#0b55d9",
+  },
+  {
+    title: "ERP Consulting",
+    desc: "Strategic process auditing, roadmap architecture, and expert ERP rollout advisory from certified architects.",
+    iconType: "consulting",
+    link: "/services/odoo-consulting-services/",
+    tag: "",
+    color: "#059669",
+  },
+  {
+    title: "Cloud & DevOps",
+    desc: "Cloud migration, server infrastructure, Kubernetes, and 24/7 DevOps management on AWS, Azure & GCP.",
+    iconType: "cloud",
+    link: "/services/cloud-devops/",
+    tag: "",
+    color: "#d97706",
   },
   {
     title: "Web Development",
-    desc: "High-converting, SEO-optimized web applications and portal platforms using modern frameworks.",
+    desc: "High-converting, SEO-optimized web applications and portal platforms using modern React and Next.js frameworks.",
     iconType: "web",
     link: "/services/custom-website-development/",
+    tag: "",
+    color: "#be185d",
   },
   {
     title: "Mobile Apps",
-    desc: "Native and cross-platform iOS & Android mobile applications for field & consumer teams.",
+    desc: "Native and cross-platform iOS & Android mobile applications for field operations and consumer-facing teams.",
     iconType: "mobile",
     link: "/services/odoo-mobile-app-development/",
-  },
-  {
-    title: "Cloud Solutions",
-    desc: "Cloud migration, server infrastructure, Kubernetes, and 24/7 DevOps management.",
-    iconType: "cloud",
-    link: "/services/cloud-devops/",
-  },
-  {
-    title: "AI Automation",
-    desc: "Machine learning, predictive analytics, intelligent chatbots, and workflow automation.",
-    iconType: "ai",
-    link: "/services/ai-automation/",
+    tag: "",
+    color: "#7c3aed",
   },
   {
     title: "Business Intelligence",
-    desc: "Real-time executive dashboards, data warehousing, and custom reporting pipelines.",
+    desc: "Real-time executive dashboards, data warehousing, and custom reporting pipelines for data-driven decisions.",
     iconType: "bi",
     link: "/services/analytics/",
-  },
-  {
-    title: "Marketplace Development",
-    desc: "Multi-vendor e-commerce marketplaces with seller portals and automated commission engines.",
-    iconType: "marketplace",
-    link: "/services/marketplace-development/",
-  },
-  {
-    title: "E-commerce Solutions",
-    desc: "Scalable B2B & B2C e-commerce stores with omnichannel inventory synchronization.",
-    iconType: "ecommerce",
-    link: "/services/ecommerce-development/",
-  },
-  {
-    title: "Dedicated Developers",
-    desc: "Augment your engineering team with certified Odoo, Python, React, and Cloud developers.",
-    iconType: "developers",
-    link: "/services/hire-odoo-developer/",
-  },
-  {
-    title: "Support & Maintenance",
-    desc: "Dedicated SLA support, server health monitoring, security updates, and hypercare.",
-    iconType: "support",
-    link: "/services/odoo-support-maintenance-services/",
+    tag: "",
+    color: "#0b55d9",
   },
 ];
 
@@ -89,69 +81,139 @@ const whyUs = [
     title: "Certified Experts",
     desc: "Certified Odoo architects, senior Python engineers, and cloud specialists with decade-plus experience.",
     iconType: "experts",
+    metric: "50+",
+    metricLabel: "Certified Developers",
   },
   {
     title: "Business-Focused Solutions",
-    desc: "Technology engineered around real operational outcomes, revenue growth, and staff efficiency.",
+    desc: "Technology engineered around real operational outcomes, revenue growth, and staff efficiency gains.",
     iconType: "solutions",
+    metric: "98%",
+    metricLabel: "Client Satisfaction",
   },
   {
     title: "Agile Development",
     desc: "Rapid 2-week sprint iterations with continuous deployment, testing, and feedback loops.",
     iconType: "agile",
+    metric: "2wk",
+    metricLabel: "Sprint Cycles",
   },
   {
     title: "Transparent Communication",
-    desc: "Real-time project tracking, dedicated account managers, and clear documentation.",
+    desc: "Real-time project tracking, dedicated account managers, and clear documentation throughout.",
     iconType: "comm",
+    metric: "24/7",
+    metricLabel: "Project Visibility",
   },
   {
     title: "Scalable Architecture",
     desc: "Modular software design built to expand seamlessly across new entities, regions, and users.",
     iconType: "architecture",
+    metric: "∞",
+    metricLabel: "Scalable Design",
   },
   {
     title: "Long-Term Partnership",
     desc: "Ongoing optimization, feature upgrades, and strategic advisory long after go-live.",
     iconType: "partnership",
-  },
-  {
-    title: "24/7 Support",
-    desc: "Continuous system health monitoring, SLA guarantees, and rapid incident resolution.",
-    iconType: "support",
+    metric: "10+",
+    metricLabel: "Years Experience",
   },
 ];
 
 const industries = [
-  { name: "Manufacturing", desc: "Discrete & process MRP, BOM, work center tracking, and quality control.", iconType: "manufacturing" },
-  { name: "Retail", desc: "Omnichannel POS, barcode scanning, multi-warehouse stock, and loyalty rewards.", iconType: "retail" },
-  { name: "Healthcare", desc: "Patient portals, medical inventory, asset tracking, and compliant billing.", iconType: "healthcare" },
-  { name: "Construction", desc: "Project cost control, subcontractor invoicing, equipment tracking, and bidding.", iconType: "construction" },
-  { name: "Education", desc: "Student portals, course enrollment, automated tuition billing, and attendance.", iconType: "education" },
-  { name: "Finance", desc: "Double-entry accounting, automated reconciliation, tax compliance, and analytics.", iconType: "finance" },
-  { name: "Logistics", desc: "Fleet management, route optimization, shipping carrier APIs, and WMS.", iconType: "logistics" },
-  { name: "Real Estate", desc: "Property listings, lease management, tenant portals, and maintenance tracking.", iconType: "realestate" },
-  { name: "Hospitality", desc: "Reservation engines, table POS, kitchen displays, and vendor procurement.", iconType: "hospitality" },
-  { name: "Wholesale", desc: "B2B buyer portals, volume pricing matrices, multi-currency invoicing, and drop shipping.", iconType: "wholesale" },
+  { name: "Manufacturing", desc: "Discrete & process MRP, BOM, work center tracking, and quality control.", iconType: "manufacturing", link: "/industries/manufacturing-erp-software-solutions/" },
+  { name: "Retail", desc: "Omnichannel POS, barcode scanning, multi-warehouse stock, and loyalty rewards.", iconType: "retail", link: "/industries/" },
+  { name: "Healthcare", desc: "Patient portals, medical inventory, asset tracking, and compliant billing.", iconType: "healthcare", link: "/industries/" },
+  { name: "Construction", desc: "Project cost control, subcontractor invoicing, equipment tracking, and bidding.", iconType: "construction", link: "/industries/" },
+  { name: "Education", desc: "Student portals, course enrollment, automated tuition billing, and attendance.", iconType: "education", link: "/industries/" },
+  { name: "Finance", desc: "Double-entry accounting, automated reconciliation, tax compliance, and analytics.", iconType: "finance", link: "/industries/" },
+  { name: "Logistics", desc: "Fleet management, route optimization, shipping carrier APIs, and WMS.", iconType: "logistics", link: "/industries/" },
+  { name: "Real Estate", desc: "Property listings, lease management, tenant portals, and maintenance tracking.", iconType: "realestate", link: "/industries/real-estate-erp-software-solutions/" },
+  { name: "Hospitality", desc: "Reservation engines, table POS, kitchen displays, and vendor procurement.", iconType: "hospitality", link: "/industries/travel-hospitality/" },
+  { name: "Wholesale", desc: "B2B buyer portals, volume pricing matrices, multi-currency invoicing, and drop shipping.", iconType: "wholesale", link: "/industries/" },
 ];
 
 const techWall = [
-  { category: "ERP", items: ["Odoo", "SAP", "Microsoft Dynamics"] },
-  { category: "Frontend", items: ["React", "Next.js", "Vue", "Angular"] },
-  { category: "Backend", items: ["Python", "Node.js", "Laravel", "PHP"] },
-  { category: "Mobile", items: ["Flutter", "React Native", "iOS", "Android"] },
-  { category: "Cloud", items: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"] },
-  { category: "Databases", items: ["PostgreSQL", "MySQL", "MongoDB", "Redis"] },
+  { category: "ERP", items: ["Odoo", "SAP", "MS Dynamics"], color: "#7c3aed" },
+  { category: "Frontend", items: ["React", "Next.js", "Vue", "Angular"], color: "#0891b2" },
+  { category: "Backend", items: ["Python", "Node.js", "Laravel"], color: "#059669" },
+  { category: "Mobile", items: ["Flutter", "React Native", "iOS", "Android"], color: "#d97706" },
+  { category: "Cloud", items: ["AWS", "Azure", "GCP", "Docker", "K8s"], color: "#0b55d9" },
+  { category: "Databases", items: ["PostgreSQL", "MongoDB", "Redis"], color: "#be185d" },
 ];
 
 const processSteps = [
-  { step: "01", title: "Discover", desc: "Deep-dive operational audit, workflow mapping, and goals alignment." },
-  { step: "02", title: "Plan", desc: "Technical architecture design, module selection, and project roadmap." },
-  { step: "03", title: "Design", desc: "User-centric UI/UX mockups, data flow diagrams, and prototype approval." },
-  { step: "04", title: "Develop", desc: "Phased agile development, custom module coding, and API integrations." },
-  { step: "05", title: "Test", desc: "Rigorous UAT, performance stress testing, security audit, and data validation." },
-  { step: "06", title: "Deploy", desc: "Controlled production rollout with automated database migration and zero downtime." },
-  { step: "07", title: "Support", desc: "Hypercare launch assistance, user training, and 24/7 SLA maintenance." },
+  { step: "01", title: "Discover", desc: "Deep-dive operational audit, workflow mapping, and goals alignment.", icon: "🔍" },
+  { step: "02", title: "Plan", desc: "Technical architecture design, module selection, and project roadmap.", icon: "📋" },
+  { step: "03", title: "Design", desc: "User-centric UI/UX mockups, data flow diagrams, and prototype approval.", icon: "🎨" },
+  { step: "04", title: "Develop", desc: "Phased agile development, custom module coding, and API integrations.", icon: "⚙️" },
+  { step: "05", title: "Test", desc: "Rigorous UAT, performance stress testing, security audit, and data validation.", icon: "✅" },
+  { step: "06", title: "Deploy", desc: "Controlled production rollout with automated migration and zero downtime.", icon: "🚀" },
+  { step: "07", title: "Support", desc: "Hypercare launch assistance, user training, and 24/7 SLA maintenance.", icon: "🛡️" },
+];
+
+const caseStudies = [
+  {
+    tag: "Manufacturing & ERP",
+    tagColor: "#7c3aed",
+    client: "Global Manufacturing Enterprise",
+    challenge: "40% inventory discrepancies across 5 factories due to legacy spreadsheets.",
+    solution: "End-to-end Odoo MRP, Inventory, and Accounting setup with barcode automation.",
+    result: "99.4% stock accuracy, +35% production efficiency, and $1.2M annual savings.",
+    bigStat: "+35%",
+    statLabel: "Production Efficiency",
+    statColor: "#059669",
+  },
+  {
+    tag: "Omnichannel Retail",
+    tagColor: "#0891b2",
+    client: "Zenith Global Retail Chain",
+    challenge: "Disconnected stock between 25 physical retail outlets and online e-commerce storefront.",
+    solution: "Unified Odoo POS, E-Commerce, and CRM hosted on high-availability cloud infrastructure.",
+    result: "Real-time stock sync, 4.8x faster checkout speed, and zero stockouts.",
+    bigStat: "4.8x",
+    statLabel: "Faster Checkout",
+    statColor: "#0891b2",
+  },
+  {
+    tag: "Logistics & AI",
+    tagColor: "#d97706",
+    client: "Nexora Logistics Corporation",
+    challenge: "Manual billing process taking 5 business days per monthly invoicing cycle.",
+    solution: "Automated Odoo Invoicing, AI Document Processing, and Customer Portal.",
+    result: "Monthly billing reduced from 5 days to 2 hours with 99.99% cloud uptime.",
+    bigStat: "90%",
+    statLabel: "Faster Billing",
+    statColor: "#d97706",
+  },
+];
+
+const testimonials = [
+  {
+    quote: "Hegrix brought structure to our enterprise software roadmap and helped us launch a clean customer portal experience in record time. The team exceeded every expectation.",
+    author: "David Miller",
+    role: "CTO",
+    company: "Apex Manufacturing",
+    initials: "DM",
+    avatarColor: "#7c3aed",
+  },
+  {
+    quote: "Their team translated a highly complex retail workflow into software our store staff actually loved to use. Zero downtime during launch. Exceptional execution.",
+    author: "Sarah Jenkins",
+    role: "VP of Operations",
+    company: "Zenith Retail",
+    initials: "SJ",
+    avatarColor: "#0891b2",
+  },
+  {
+    quote: "The Odoo ERP and AI automation Hegrix built eliminated hundreds of hours of manual finance work every month. Best technical team we've ever worked with.",
+    author: "Marcus Vance",
+    role: "Managing Director",
+    company: "Nexora Logistics",
+    initials: "MV",
+    avatarColor: "#059669",
+  },
 ];
 ---
 
@@ -161,67 +223,158 @@ const processSteps = [
   keywords="Hegrix, digital transformation company, Odoo ERP implementation, custom software development, AI automation, cloud services"
   path="/"
 >
-  <div class="home-wrapper">
-    {/* SECTION 1 – Hero Section */}
-    <section class="home-hero-section">
-      <div class="home-hero-glow glow-1" aria-hidden="true"></div>
-      <div class="home-hero-glow glow-2" aria-hidden="true"></div>
-      <div class="home-hero-dots" aria-hidden="true"></div>
+  <div class="hp-root">
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 1 — HERO
+    ═══════════════════════════════════════════════ -->
+    <section class="hp-hero" aria-label="Hero">
+      <!-- Background layers -->
+      <div class="hp-hero__mesh" aria-hidden="true"></div>
+      <div class="hp-hero__orb hp-hero__orb--1" aria-hidden="true"></div>
+      <div class="hp-hero__orb hp-hero__orb--2" aria-hidden="true"></div>
+      <div class="hp-hero__orb hp-hero__orb--3" aria-hidden="true"></div>
+      <div class="hp-hero__grid-lines" aria-hidden="true"></div>
 
       <div class="container">
-        <div class="home-hero-grid">
-          <div class="home-hero-content">
-            <div class="hero-pill">
-              <span class="pill-star">✨</span>
+        <div class="hp-hero__inner">
+          <!-- Left: Content -->
+          <div class="hp-hero__content">
+            <div class="hp-hero__badge">
+              <span class="hp-hero__badge-dot"></span>
               <span>Enterprise Digital Transformation</span>
             </div>
-            <h1 class="home-hero-title">
-              Empowering Businesses Through <span class="hero-gradient-text">Intelligent Digital Solutions</span>
+
+            <h1 class="hp-hero__h1">
+              Empowering Businesses Through
+              <span class="hp-hero__gradient-text">Intelligent Digital Solutions</span>
             </h1>
-            <p class="home-hero-desc">
-              From Odoo ERP implementation to AI-powered automation and custom software development, we help businesses streamline operations, improve productivity, and accelerate growth with scalable technology solutions.
+
+            <p class="hp-hero__subtext">
+              From Odoo ERP implementation to AI-powered automation and custom software development — we help businesses streamline operations, improve productivity, and accelerate growth with scalable technology.
             </p>
-            <div class="home-hero-btns">
-              <a href="/contact-us/" class="home-btn-primary">Start Your Project &rarr;</a>
-              <a href="/contact-us/" class="home-btn-secondary">Book Free Consultation</a>
+
+            <div class="hp-hero__actions">
+              <a href="/contact-us/" class="hp-btn hp-btn--primary" id="hero-cta-primary">
+                <span>Start Your Project</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="/contact-us/" class="hp-btn hp-btn--ghost" id="hero-cta-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 12.43a19.79 19.79 0 01-3.07-8.67A2 2 0 011.9 1.77h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                <span>Book Free Consultation</span>
+              </a>
             </div>
-            <div class="home-hero-tags">
-              <span>✔ Odoo ERP</span>
-              <span>✔ AI & Automation</span>
-              <span>✔ Custom Software</span>
-              <span>✔ Cloud Infrastructure</span>
+
+            <div class="hp-hero__trust">
+              <div class="hp-hero__trust-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#0bbf8a" stroke="none"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>500+ Projects Delivered</span>
+              </div>
+              <div class="hp-hero__trust-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#0bbf8a" stroke="none"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>98% Client Satisfaction</span>
+              </div>
+              <div class="hp-hero__trust-item">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#0bbf8a" stroke="none"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>15+ Countries Served</span>
+              </div>
             </div>
           </div>
 
-          {/* 3D Dashboard Mockup Visual */}
-          <div class="home-hero-visual">
-            <div class="floating-badge badge-crm">📊 CRM</div>
-            <div class="floating-badge badge-sales">💼 Sales</div>
-            <div class="floating-badge badge-inventory">📦 Inventory</div>
-            <div class="floating-badge badge-accounting">💳 Accounting</div>
-            <div class="floating-badge badge-mfg">🏭 Manufacturing</div>
-            <div class="floating-badge badge-analytics">📈 Analytics</div>
-            <div class="floating-badge badge-cloud">☁️ Cloud</div>
-            <div class="floating-badge badge-ai">🤖 AI</div>
-            <div class="floating-badge badge-auto">⚡ Automation</div>
+          <!-- Right: Dashboard Visual -->
+          <div class="hp-hero__visual" aria-hidden="true">
+            <!-- Floating badges -->
+            <div class="hp-float-badge hp-float-badge--crm">
+              <span class="hp-float-badge__icon">📊</span><span>CRM</span>
+            </div>
+            <div class="hp-float-badge hp-float-badge--sales">
+              <span class="hp-float-badge__icon">💼</span><span>Sales</span>
+            </div>
+            <div class="hp-float-badge hp-float-badge--inventory">
+              <span class="hp-float-badge__icon">📦</span><span>Inventory</span>
+            </div>
+            <div class="hp-float-badge hp-float-badge--ai">
+              <span class="hp-float-badge__icon">🤖</span><span>AI Engine</span>
+            </div>
+            <div class="hp-float-badge hp-float-badge--cloud">
+              <span class="hp-float-badge__icon">☁️</span><span>Cloud</span>
+            </div>
+            <div class="hp-float-badge hp-float-badge--auto">
+              <span class="hp-float-badge__icon">⚡</span><span>Automation</span>
+            </div>
 
-            <div class="home-3d-card">
-              <div class="card-glass-header">
-                <div class="header-dots"><span></span><span></span><span></span></div>
-                <span class="header-label">Hegrix Enterprise Operating System v4.0</span>
-              </div>
-              <div class="card-glass-body">
-                <div class="mock-kpi-row">
-                  <div class="mock-kpi"><span>Operations Efficiency</span><strong>+94.8%</strong></div>
-                  <div class="mock-kpi"><span>Active Users</span><strong>12,450</strong></div>
-                  <div class="mock-kpi"><span>AI Automation</span><strong>Active</strong></div>
+            <!-- Main dashboard card -->
+            <div class="hp-dash-card">
+              <div class="hp-dash-card__header">
+                <div class="hp-dash-card__dots">
+                  <span class="dot dot--red"></span>
+                  <span class="dot dot--yellow"></span>
+                  <span class="dot dot--green"></span>
                 </div>
-                <div class="mock-graph-box">
-                  <div class="graph-title">Real-Time Enterprise Intelligence</div>
-                  <svg viewBox="0 0 320 80" class="hero-graph-svg">
-                    <path d="M0,60 Q40,20 80,45 T160,15 T240,30 T320,5 L320,80 L0,80 Z" fill="rgba(11, 85, 217, 0.15)"/>
-                    <path d="M0,60 Q40,20 80,45 T160,15 T240,30 T320,5" stroke="#0B55D9" stroke-width="3" fill="none"/>
+                <span class="hp-dash-card__title">Hegrix Enterprise OS · v4.0</span>
+                <div class="hp-dash-card__live">
+                  <span class="live-dot"></span>
+                  <span>Live</span>
+                </div>
+              </div>
+
+              <div class="hp-dash-card__body">
+                <!-- KPI Row -->
+                <div class="hp-kpi-row">
+                  <div class="hp-kpi">
+                    <span class="hp-kpi__label">Ops Efficiency</span>
+                    <strong class="hp-kpi__value">+94.8%</strong>
+                    <span class="hp-kpi__change hp-kpi__change--up">↑ 12.3%</span>
+                  </div>
+                  <div class="hp-kpi">
+                    <span class="hp-kpi__label">Active Users</span>
+                    <strong class="hp-kpi__value">12,450</strong>
+                    <span class="hp-kpi__change hp-kpi__change--up">↑ 5.2%</span>
+                  </div>
+                  <div class="hp-kpi">
+                    <span class="hp-kpi__label">AI Automation</span>
+                    <strong class="hp-kpi__value">Active</strong>
+                    <span class="hp-kpi__badge">24/7</span>
+                  </div>
+                </div>
+
+                <!-- Chart -->
+                <div class="hp-chart-box">
+                  <div class="hp-chart-box__header">
+                    <span class="hp-chart-box__title">Real-Time Enterprise Intelligence</span>
+                    <span class="hp-chart-box__sub">Last 30 days</span>
+                  </div>
+                  <svg viewBox="0 0 340 90" class="hp-chart-svg" preserveAspectRatio="none">
+                    <defs>
+                      <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="rgba(11,85,217,0.25)"/>
+                        <stop offset="100%" stop-color="rgba(11,85,217,0)"/>
+                      </linearGradient>
+                    </defs>
+                    <path d="M0,65 C30,55 55,20 85,38 S135,10 170,18 S220,35 250,25 S305,8 340,3 L340,90 L0,90 Z" fill="url(#chartGrad)"/>
+                    <path d="M0,65 C30,55 55,20 85,38 S135,10 170,18 S220,35 250,25 S305,8 340,3" stroke="#0b55d9" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                    <!-- Data points -->
+                    <circle cx="85" cy="38" r="4" fill="#0b55d9"/>
+                    <circle cx="170" cy="18" r="4" fill="#0b55d9"/>
+                    <circle cx="250" cy="25" r="4" fill="#0b55d9"/>
+                    <circle cx="340" cy="3" r="4" fill="#1fb6ff"/>
                   </svg>
+                </div>
+
+                <!-- Bottom modules -->
+                <div class="hp-dash-modules">
+                  <div class="hp-dash-module hp-dash-module--green">
+                    <span>Revenue</span>
+                    <strong>$2.4M</strong>
+                  </div>
+                  <div class="hp-dash-module hp-dash-module--blue">
+                    <span>Inventory</span>
+                    <strong>99.4%</strong>
+                  </div>
+                  <div class="hp-dash-module hp-dash-module--purple">
+                    <span>NPS Score</span>
+                    <strong>92</strong>
+                  </div>
                 </div>
               </div>
             </div>
@@ -230,114 +383,164 @@ const processSteps = [
       </div>
     </section>
 
-    {/* SECTION 2 – Trusted Worldwide & Stats */}
-    <section class="home-stats-section">
+    <!-- ═══════════════════════════════════════════════
+         SECTION 2 — STATS & SOCIAL PROOF
+    ═══════════════════════════════════════════════ -->
+    <section class="hp-stats" aria-label="Company statistics">
       <div class="container">
-        <div class="home-stats-card">
+        <div class="hp-stats__card">
           {stats.map((stat, idx) => (
             <>
-              <div class="home-stat-item">
-                <div class="stat-big-num">{stat.number}</div>
-                <div class="stat-small-label">{stat.label}</div>
+              <div class="hp-stat">
+                <div class="hp-stat__icon">{stat.icon}</div>
+                <div class="hp-stat__num">{stat.number}</div>
+                <div class="hp-stat__label">{stat.label}</div>
               </div>
-              {idx < stats.length - 1 && <div class="stat-vert-line"></div>}
+              {idx < stats.length - 1 && <div class="hp-stat__divider" aria-hidden="true"></div>}
             </>
           ))}
         </div>
 
-        <div class="home-logos-bar">
-          <p class="logos-title">Trusted by Ambitious Enterprises & Global Brands</p>
-          <div class="logos-row">
-            <span>ACME Enterprise</span>
-            <span>GlobalTech</span>
-            <span>Zenith Industries</span>
-            <span>Nexora Global</span>
-            <span>Vertex Solutions</span>
-            <span>BrightWay Logistics</span>
+        <div class="hp-logos">
+          <p class="hp-logos__label">Trusted by Ambitious Enterprises Worldwide</p>
+          <div class="hp-logos__track" aria-label="Client logos">
+            <div class="hp-logos__inner">
+              {["ACME Enterprise", "GlobalTech", "Zenith Industries", "Nexora Global", "Vertex Solutions", "BrightWay Logistics", "PrimeTech Corp", "Alpine Systems", "ACME Enterprise", "GlobalTech", "Zenith Industries", "Nexora Global", "Vertex Solutions", "BrightWay Logistics"].map((name) => (
+                <span class="hp-logo-pill">{name}</span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    {/* SECTION 3 – Our Services */}
-    <section class="home-section">
+    <!-- ═══════════════════════════════════════════════
+         SECTION 3 — SERVICES
+    ═══════════════════════════════════════════════ -->
+    <section class="hp-section" aria-labelledby="services-heading">
       <div class="container">
-        <div class="home-section-header">
-          <p class="home-eyebrow">Services</p>
-          <h2 class="home-title">Enterprise Digital Services</h2>
-          <p class="home-desc">Complete end-to-end technology capabilities designed to transform your operations and drive growth.</p>
+        <div class="hp-section__header">
+          <p class="hp-eyebrow">What We Do</p>
+          <h2 id="services-heading" class="hp-section__title">Enterprise Digital Services</h2>
+          <p class="hp-section__desc">Complete end-to-end technology capabilities designed to transform your operations and drive measurable growth.</p>
         </div>
-        <div class="home-services-grid">
-          {services.map((s) => (
-            <a href={s.link} class="home-service-card">
-              <div class="service-icon-box">
-                {s.iconType === "odoo" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>}
-                {s.iconType === "consulting" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>}
-                {s.iconType === "software" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>}
-                {s.iconType === "web" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>}
-                {s.iconType === "mobile" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>}
-                {s.iconType === "cloud" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>}
-                {s.iconType === "ai" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>}
-                {s.iconType === "bi" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>}
-                {s.iconType === "marketplace" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>}
-                {s.iconType === "ecommerce" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>}
-                {s.iconType === "developers" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>}
-                {s.iconType === "support" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>}
+
+        <div class="hp-services-grid">
+          {services.map((s, idx) => (
+            <a href={s.link} class={`hp-service-card ${idx === 0 ? 'hp-service-card--featured' : ''}`} style={`--card-accent: ${s.color}`} id={`service-${s.iconType}`}>
+              <div class="hp-service-card__top">
+                <div class="hp-service-card__icon-box" style={`background: ${s.color}18; color: ${s.color}`}>
+                  {s.iconType === "odoo" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>}
+                  {s.iconType === "consulting" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>}
+                  {s.iconType === "software" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>}
+                  {s.iconType === "web" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>}
+                  {s.iconType === "mobile" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>}
+                  {s.iconType === "cloud" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>}
+                  {s.iconType === "ai" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>}
+                  {s.iconType === "bi" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>}
+                </div>
+                {s.tag && <span class="hp-service-card__tag" style={`background: ${s.color}18; color: ${s.color}`}>{s.tag}</span>}
               </div>
-              <h3>{s.title}</h3>
-              <p>{s.desc}</p>
-              <span class="service-learn-more">Learn More &rarr;</span>
+              <h3 class="hp-service-card__title">{s.title}</h3>
+              <p class="hp-service-card__desc">{s.desc}</p>
+              <span class="hp-service-card__cta">
+                <span>Learn More</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+              <div class="hp-service-card__border" aria-hidden="true"></div>
             </a>
           ))}
         </div>
+
+        <div class="hp-section__footer">
+          <a href="/services/" class="hp-btn hp-btn--outline" id="view-all-services">
+            <span>Explore All Services</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
       </div>
     </section>
 
-    {/* SECTION 4 – Why Choose Us */}
-    <section class="home-section home-alt-section">
+    <!-- ═══════════════════════════════════════════════
+         SECTION 4 — WHY CHOOSE US
+    ═══════════════════════════════════════════════ -->
+    <section class="hp-section hp-section--alt" aria-labelledby="why-heading">
       <div class="container">
-        <div class="home-section-header">
-          <p class="home-eyebrow">Why Choose Us</p>
-          <h2 class="home-title">Why Global Enterprises Partner With Hegrix</h2>
-          <p class="home-desc">We combine deep domain expertise, senior engineering talent, and business-first strategy.</p>
-        </div>
+        <div class="hp-why">
+          <!-- Left: Text block -->
+          <div class="hp-why__left">
+            <p class="hp-eyebrow">Why Choose Us</p>
+            <h2 id="why-heading" class="hp-section__title hp-section__title--left">Why Global Enterprises Partner With Hegrix</h2>
+            <p class="hp-section__desc hp-section__desc--left">We combine deep domain expertise, senior engineering talent, and a business-first strategy to deliver outcomes that matter.</p>
 
-        <div class="why-us-staggered">
-          {whyUs.map((w, idx) => (
-            <div class={`why-row ${idx % 2 === 1 ? 'reverse' : ''}`}>
-              <div class="why-visual">
-                <div class="why-icon-badge">
-                  {w.iconType === "experts" && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>}
-                  {w.iconType === "solutions" && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>}
-                  {w.iconType === "agile" && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>}
-                  {w.iconType === "comm" && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>}
-                  {w.iconType === "architecture" && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>}
-                  {w.iconType === "partnership" && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>}
-                  {w.iconType === "support" && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>}
-                </div>
+            <div class="hp-why__checks">
+              <div class="hp-why__check">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0bbf8a" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>Certified Odoo Gold Partner</span>
               </div>
-              <div class="why-content">
-                <h3>{w.title}</h3>
-                <p>{w.desc}</p>
+              <div class="hp-why__check">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0bbf8a" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>Dedicated Account Manager</span>
+              </div>
+              <div class="hp-why__check">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0bbf8a" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>SLA-backed support & maintenance</span>
+              </div>
+              <div class="hp-why__check">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0bbf8a" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>Fixed-price & time & material engagements</span>
+              </div>
+              <div class="hp-why__check">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0bbf8a" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>No vendor lock-in, full code ownership</span>
               </div>
             </div>
-          ))}
+
+            <a href="/about-us/" class="hp-btn hp-btn--primary hp-why__cta" id="why-us-cta">
+              <span>Meet the Team</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Right: Feature cards -->
+          <div class="hp-why__right">
+            {whyUs.map((w) => (
+              <div class="hp-why-card">
+                <div class="hp-why-card__metric">{w.metric}</div>
+                <div class="hp-why-card__metric-label">{w.metricLabel}</div>
+                <div class="hp-why-card__divider"></div>
+                <div class="hp-why-card__icon">
+                  {w.iconType === "experts" && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>}
+                  {w.iconType === "solutions" && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>}
+                  {w.iconType === "agile" && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>}
+                  {w.iconType === "comm" && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>}
+                  {w.iconType === "architecture" && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect></svg>}
+                  {w.iconType === "partnership" && <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>}
+                </div>
+                <h3 class="hp-why-card__title">{w.title}</h3>
+                <p class="hp-why-card__desc">{w.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
 
-    {/* SECTION 5 – Industries */}
-    <section class="home-section">
+    <!-- ═══════════════════════════════════════════════
+         SECTION 5 — INDUSTRIES
+    ═══════════════════════════════════════════════ -->
+    <section class="hp-section" aria-labelledby="industries-heading">
       <div class="container">
-        <div class="home-section-header">
-          <p class="home-eyebrow">Industries</p>
-          <h2 class="home-title">Tailored Digital Solutions for Every Sector</h2>
-          <p class="home-desc">Deep industry expertise to solve specific compliance, operational, and reporting challenges.</p>
+        <div class="hp-section__header">
+          <p class="hp-eyebrow">Industries We Serve</p>
+          <h2 id="industries-heading" class="hp-section__title">Tailored Solutions for Every Sector</h2>
+          <p class="hp-section__desc">Deep industry expertise to solve specific compliance, operational, and reporting challenges across verticals.</p>
         </div>
-        <div class="home-industries-grid">
+
+        <div class="hp-ind-grid">
           {industries.map((ind) => (
-            <a href="/industries/" class="home-ind-card">
-              <div class="ind-icon">
+            <a href={ind.link} class="hp-ind-card" id={`ind-${ind.iconType}`}>
+              <div class="hp-ind-card__icon">
                 {ind.iconType === "manufacturing" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 20h20M5 20V8l5 3V8l5 3V4h5v16H5z"></path></svg>}
                 {ind.iconType === "retail" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>}
                 {ind.iconType === "healthcare" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>}
@@ -346,32 +549,43 @@ const processSteps = [
                 {ind.iconType === "finance" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>}
                 {ind.iconType === "logistics" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>}
                 {ind.iconType === "realestate" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>}
-                {ind.iconType === "hospitality" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 2h-3a5 5 0 0 0-5 5v14h8V7a5 5 0 0 0-5-5z"></path><path d="M6 18h2v3H6z"></path></svg>}
+                {ind.iconType === "hospitality" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 17h18M12 3v4M5.5 6.5L8 9M18.5 6.5L16 9M3 17a9 9 0 0 1 18 0"></path></svg>}
                 {ind.iconType === "wholesale" && <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline></svg>}
               </div>
-              <h3>{ind.name}</h3>
-              <p>{ind.desc}</p>
+              <div class="hp-ind-card__content">
+                <h3 class="hp-ind-card__title">{ind.name}</h3>
+                <p class="hp-ind-card__desc">{ind.desc}</p>
+              </div>
+              <span class="hp-ind-card__arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
             </a>
           ))}
         </div>
       </div>
     </section>
 
-    {/* SECTION 6 – Technology Expertise Wall */}
-    <section class="home-section home-alt-section">
+    <!-- ═══════════════════════════════════════════════
+         SECTION 6 — TECH STACK
+    ═══════════════════════════════════════════════ -->
+    <section class="hp-tech" aria-labelledby="tech-heading">
       <div class="container">
-        <div class="home-section-header">
-          <p class="home-eyebrow">Technology Stack</p>
-          <h2 class="home-title">Enterprise Technology Stack</h2>
-          <p class="home-desc">Modern, robust platforms chosen for speed, security, scalability, and maintainability.</p>
+        <div class="hp-section__header">
+          <p class="hp-eyebrow hp-eyebrow--light">Technology Stack</p>
+          <h2 id="tech-heading" class="hp-section__title hp-section__title--light">Enterprise-Grade Technology</h2>
+          <p class="hp-section__desc hp-section__desc--light">Modern, robust platforms chosen for speed, security, scalability, and long-term maintainability.</p>
         </div>
-        <div class="tech-wall-grid">
+
+        <div class="hp-tech-grid">
           {techWall.map((t) => (
-            <div class="tech-cat-card">
-              <h3>{t.category}</h3>
-              <div class="tech-pills">
+            <div class="hp-tech-card" style={`--tech-color: ${t.color}`}>
+              <div class="hp-tech-card__header">
+                <div class="hp-tech-card__dot" style={`background: ${t.color}`}></div>
+                <h3 class="hp-tech-card__cat">{t.category}</h3>
+              </div>
+              <div class="hp-tech-card__pills">
                 {t.items.map((item) => (
-                  <span class="tech-pill">{item}</span>
+                  <span class="hp-tech-pill">{item}</span>
                 ))}
               </div>
             </div>
@@ -380,173 +594,220 @@ const processSteps = [
       </div>
     </section>
 
-    {/* SECTION 7 – Featured Success Stories */}
-    <section class="home-section">
+    <!-- ═══════════════════════════════════════════════
+         SECTION 7 — CASE STUDIES
+    ═══════════════════════════════════════════════ -->
+    <section class="hp-section" aria-labelledby="cases-heading">
       <div class="container">
-        <div class="home-section-header">
-          <p class="home-eyebrow">Success Stories</p>
-          <h2 class="home-title">Featured Business Transformations</h2>
-          <p class="home-desc">Explore how growth-focused companies unlocked new efficiency with Hegrix digital solutions.</p>
+        <div class="hp-section__header">
+          <p class="hp-eyebrow">Success Stories</p>
+          <h2 id="cases-heading" class="hp-section__title">Featured Business Transformations</h2>
+          <p class="hp-section__desc">Explore how growth-focused companies unlocked new efficiency with Hegrix digital solutions.</p>
         </div>
-        <div class="home-cases-grid">
-          <div class="home-case-card">
-            <span class="case-tag">Manufacturing & ERP</span>
-            <h3>Global Manufacturing Enterprise</h3>
-            <div class="case-split-details">
-              <div><strong>Challenge:</strong> 40% inventory discrepancies across 5 factories due to legacy spreadsheets.</div>
-              <div><strong>Solution:</strong> End-to-end Odoo MRP, Inventory, and Accounting setup with barcode automation.</div>
-              <div><strong>Result:</strong> 99.4% stock accuracy, +35% production efficiency, and $1.2M annual savings.</div>
-            </div>
-            <div class="case-stat-box">
-              <span class="big-stat">+35%</span>
-              <span class="lbl-stat">Production Efficiency</span>
-            </div>
-          </div>
 
-          <div class="home-case-card">
-            <span class="case-tag">Omnichannel Retail</span>
-            <h3>Zenith Global Retail Chain</h3>
-            <div class="case-split-details">
-              <div><strong>Challenge:</strong> Disconnected stock between 25 physical retail outlets and online e-commerce storefront.</div>
-              <div><strong>Solution:</strong> Unified Odoo POS, E-Commerce, and CRM setup hosted on cloud infrastructure.</div>
-              <div><strong>Result:</strong> Instant real-time stock sync, 4.8x faster checkout speed, and zero stockouts.</div>
-            </div>
-            <div class="case-stat-box">
-              <span class="big-stat">4.8x</span>
-              <span class="lbl-stat">Faster Checkout Speed</span>
-            </div>
-          </div>
-
-          <div class="home-case-card">
-            <span class="case-tag">Logistics & AI</span>
-            <h3>Nexora Logistics Corporation</h3>
-            <div class="case-split-details">
-              <div><strong>Challenge:</strong> Manual billing process taking 5 business days per monthly invoicing cycle.</div>
-              <div><strong>Solution:</strong> Automated Odoo Invoicing, AI Document Processing, and Customer Portal.</div>
-              <div><strong>Result:</strong> Monthly billing reduced from 5 days to 2 hours with 99.99% cloud uptime.</div>
-            </div>
-            <div class="case-stat-box">
-              <span class="big-stat">90%</span>
-              <span class="lbl-stat">Faster Monthly Billing</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* SECTION 8 – Client Testimonials */}
-    <section class="home-section home-alt-section">
-      <div class="container">
-        <div class="home-section-header">
-          <p class="home-eyebrow">Testimonials</p>
-          <h2 class="home-title">What Enterprise Leaders Say</h2>
-          <p class="home-desc">Real feedback from executive partners who accelerated their business with Hegrix.</p>
-        </div>
-        <div class="home-testi-grid">
-          <div class="home-testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-body">"Hegrix brought structure to our enterprise software roadmap and helped us launch a clean customer portal experience in record time."</p>
-            <div class="testi-author">
-              <div class="author-avatar">DM</div>
-              <div><strong>David Miller</strong><span>CTO, Apex Manufacturing</span></div>
-            </div>
-          </div>
-
-          <div class="home-testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-body">"Their team translated a highly complex retail workflow into software our store staff actually loved to use. Zero downtime during launch."</p>
-            <div class="testi-author">
-              <div class="author-avatar">SJ</div>
-              <div><strong>Sarah Jenkins</strong><span>VP of Operations, Zenith Retail</span></div>
-            </div>
-          </div>
-
-          <div class="home-testi-card">
-            <div class="testi-stars">★★★★★</div>
-            <p class="testi-body">"The Odoo ERP and AI automation Hegrix built eliminated hundreds of hours of manual finance work every month. Exceptional technical team."</p>
-            <div class="testi-author">
-              <div class="author-avatar">MV</div>
-              <div><strong>Marcus Vance</strong><span>Managing Director, Nexora Logistics</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    {/* SECTION 9 – Our Process */}
-    <section class="home-section">
-      <div class="container">
-        <div class="home-section-header">
-          <p class="home-eyebrow">Delivery Process</p>
-          <h2 class="home-title">Our Proven 7-Step Delivery Methodology</h2>
-          <p class="home-desc">A disciplined, transparent process from initial discovery to deployment and continuous growth.</p>
-        </div>
-        <div class="home-process-grid">
-          {processSteps.map((p) => (
-            <div class="process-card">
-              <div class="process-num">{p.step}</div>
-              <h3>{p.title}</h3>
-              <p>{p.desc}</p>
+        <div class="hp-cases-grid">
+          {caseStudies.map((c) => (
+            <div class="hp-case-card">
+              <div class="hp-case-card__tag" style={`background: ${c.tagColor}15; color: ${c.tagColor}; border-color: ${c.tagColor}30`}>
+                {c.tag}
+              </div>
+              <div class="hp-case-card__stat-row">
+                <div class="hp-case-card__big-stat" style={`color: ${c.statColor}`}>{c.bigStat}</div>
+                <div class="hp-case-card__stat-label">{c.statLabel}</div>
+              </div>
+              <h3 class="hp-case-card__client">{c.client}</h3>
+              <div class="hp-case-card__details">
+                <div class="hp-case-card__detail">
+                  <strong>Challenge</strong>
+                  <p>{c.challenge}</p>
+                </div>
+                <div class="hp-case-card__detail">
+                  <strong>Solution</strong>
+                  <p>{c.solution}</p>
+                </div>
+                <div class="hp-case-card__detail hp-case-card__detail--result">
+                  <strong>Result</strong>
+                  <p>{c.result}</p>
+                </div>
+              </div>
+              <div class="hp-case-card__accent" style={`background: ${c.tagColor}`} aria-hidden="true"></div>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    {/* SECTION 10 – Latest Insights */}
-    <section class="home-section home-alt-section">
+    <!-- ═══════════════════════════════════════════════
+         SECTION 8 — TESTIMONIALS
+    ═══════════════════════════════════════════════ -->
+    <section class="hp-section hp-section--alt" aria-labelledby="testi-heading">
       <div class="container">
-        <div class="home-section-header">
-          <p class="home-eyebrow">Latest Insights</p>
-          <h2 class="home-title">Digital Transformation Guides</h2>
-          <p class="home-desc">Articles, whitepapers, and guides on Odoo ERP, AI automation, and cloud architecture.</p>
+        <div class="hp-section__header">
+          <p class="hp-eyebrow">Client Testimonials</p>
+          <h2 id="testi-heading" class="hp-section__title">What Enterprise Leaders Say</h2>
+          <p class="hp-section__desc">Real feedback from executive partners who accelerated their business with Hegrix.</p>
         </div>
-        <div class="home-blog-grid">
-          <article class="home-blog-card">
-            <div class="blog-img-box b1"></div>
-            <div class="blog-content">
-              <span class="blog-tag">B2B Commerce</span>
-              <h3>How to Plan a Scalable B2B Commerce Platform</h3>
-              <p>Key architectural steps to connect self-service ordering portals with back-office ERP systems.</p>
-              <a href="/blog/" class="blog-link">Read Guide &rarr;</a>
-            </div>
-          </article>
 
-          <article class="home-blog-card">
-            <div class="blog-img-box b2"></div>
-            <div class="blog-content">
-              <span class="blog-tag">ERP Strategy</span>
-              <h3>ERP Integration Mistakes That Slow Growing Teams</h3>
-              <p>How to avoid common data synchronization traps when implementing enterprise ERP systems.</p>
-              <a href="/blog/" class="blog-link">Read Guide &rarr;</a>
+        <div class="hp-testi-grid">
+          {testimonials.map((t) => (
+            <div class="hp-testi-card">
+              <div class="hp-testi-card__quote-mark">"</div>
+              <div class="hp-testi-card__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              <p class="hp-testi-card__body">{t.quote}</p>
+              <div class="hp-testi-card__author">
+                <div class="hp-testi-card__avatar" style={`background: linear-gradient(135deg, ${t.avatarColor}, ${t.avatarColor}99)`}>
+                  {t.initials}
+                </div>
+                <div class="hp-testi-card__info">
+                  <strong class="hp-testi-card__name">{t.author}</strong>
+                  <span class="hp-testi-card__role">{t.role}, <span class="hp-testi-card__company">{t.company}</span></span>
+                </div>
+              </div>
             </div>
-          </article>
-
-          <article class="home-blog-card">
-            <div class="blog-img-box b3"></div>
-            <div class="blog-content">
-              <span class="blog-tag">AI & Automation</span>
-              <h3>Where AI Automation Creates the Fastest Business Value</h3>
-              <p>Practical enterprise use cases for document processing, intelligent routing, and predictive analytics.</p>
-              <a href="/blog/" class="blog-link">Read Guide &rarr;</a>
-            </div>
-          </article>
+          ))}
         </div>
       </div>
     </section>
 
-    {/* SECTION 11 – Final CTA */}
-    <section class="home-section home-final-cta">
+    <!-- ═══════════════════════════════════════════════
+         SECTION 9 — PROCESS TIMELINE
+    ═══════════════════════════════════════════════ -->
+    <section class="hp-section" aria-labelledby="process-heading">
       <div class="container">
-        <div class="home-cta-card">
-          <h2>Let's Build Your Next Digital Success Story</h2>
-          <p>Partner with our experts to transform your business using modern ERP, AI, cloud, and custom software solutions.</p>
-          <div class="home-cta-btns">
-            <a href="/contact-us/" class="home-btn-primary btn-white">Schedule Consultation &rarr;</a>
-            <a href="/contact-us/" class="home-btn-secondary btn-outline">Contact Our Team</a>
+        <div class="hp-section__header">
+          <p class="hp-eyebrow">Delivery Process</p>
+          <h2 id="process-heading" class="hp-section__title">Our Proven 7-Step Methodology</h2>
+          <p class="hp-section__desc">A disciplined, transparent process from initial discovery through deployment and continuous growth support.</p>
+        </div>
+
+        <div class="hp-process">
+          <div class="hp-process__line" aria-hidden="true"></div>
+          {processSteps.map((p) => (
+            <div class="hp-process-step">
+              <div class="hp-process-step__circle">
+                <span class="hp-process-step__icon">{p.icon}</span>
+              </div>
+              <div class="hp-process-step__card">
+                <div class="hp-process-step__num">{p.step}</div>
+                <h3 class="hp-process-step__title">{p.title}</h3>
+                <p class="hp-process-step__desc">{p.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 10 — BLOG / INSIGHTS
+    ═══════════════════════════════════════════════ -->
+    <section class="hp-section hp-section--alt" aria-labelledby="blog-heading">
+      <div class="container">
+        <div class="hp-section__header">
+          <p class="hp-eyebrow">Latest Insights</p>
+          <h2 id="blog-heading" class="hp-section__title">Digital Transformation Guides</h2>
+          <p class="hp-section__desc">Articles, whitepapers, and guides on Odoo ERP, AI automation, and cloud architecture.</p>
+        </div>
+
+        <div class="hp-blog-grid">
+          <article class="hp-blog-card">
+            <div class="hp-blog-card__thumb hp-blog-card__thumb--1">
+              <span class="hp-blog-card__tag">B2B Commerce</span>
+              <span class="hp-blog-card__read">5 min read</span>
+            </div>
+            <div class="hp-blog-card__body">
+              <h3 class="hp-blog-card__title">How to Plan a Scalable B2B Commerce Platform</h3>
+              <p class="hp-blog-card__excerpt">Key architectural steps to connect self-service ordering portals with back-office ERP systems at scale.</p>
+              <a href="/blog/" class="hp-blog-card__link" id="blog-b2b-link">
+                <span>Read Guide</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="hp-blog-card">
+            <div class="hp-blog-card__thumb hp-blog-card__thumb--2">
+              <span class="hp-blog-card__tag">ERP Strategy</span>
+              <span class="hp-blog-card__read">7 min read</span>
+            </div>
+            <div class="hp-blog-card__body">
+              <h3 class="hp-blog-card__title">ERP Integration Mistakes That Slow Growing Teams</h3>
+              <p class="hp-blog-card__excerpt">How to avoid common data synchronization traps when implementing enterprise ERP systems across departments.</p>
+              <a href="/blog/" class="hp-blog-card__link" id="blog-erp-link">
+                <span>Read Guide</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="hp-blog-card">
+            <div class="hp-blog-card__thumb hp-blog-card__thumb--3">
+              <span class="hp-blog-card__tag">AI & Automation</span>
+              <span class="hp-blog-card__read">6 min read</span>
+            </div>
+            <div class="hp-blog-card__body">
+              <h3 class="hp-blog-card__title">Where AI Automation Creates the Fastest Business Value</h3>
+              <p class="hp-blog-card__excerpt">Practical enterprise use cases for document processing, intelligent routing, and predictive analytics pipelines.</p>
+              <a href="/blog/" class="hp-blog-card__link" id="blog-ai-link">
+                <span>Read Guide</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="hp-section__footer">
+          <a href="/blog/" class="hp-btn hp-btn--outline" id="view-all-blogs">
+            <span>View All Articles</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+         SECTION 11 — FINAL CTA BANNER
+    ═══════════════════════════════════════════════ -->
+    <section class="hp-cta-banner" aria-labelledby="cta-heading">
+      <div class="hp-cta-banner__mesh" aria-hidden="true"></div>
+      <div class="hp-cta-banner__orb hp-cta-banner__orb--1" aria-hidden="true"></div>
+      <div class="hp-cta-banner__orb hp-cta-banner__orb--2" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hp-cta-banner__inner">
+          <p class="hp-eyebrow hp-eyebrow--light hp-eyebrow--center">Start Today</p>
+          <h2 id="cta-heading" class="hp-cta-banner__heading">
+            Let's Build Your Next<br>
+            <span class="hp-cta-banner__gradient-text">Digital Success Story</span>
+          </h2>
+          <p class="hp-cta-banner__sub">Partner with our experts to transform your business using modern ERP, AI, cloud, and custom software solutions — tailored for your exact needs.</p>
+
+          <div class="hp-cta-banner__actions">
+            <a href="/contact-us/" class="hp-btn hp-btn--white" id="cta-banner-primary">
+              <span>Schedule Free Consultation</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="/contact-us/" class="hp-btn hp-btn--white-ghost" id="cta-banner-secondary">
+              <span>Contact Our Team</span>
+            </a>
+          </div>
+
+          <div class="hp-cta-banner__trust">
+            <div class="hp-cta-banner__trust-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span>No lock-in contracts</span>
+            </div>
+            <div class="hp-cta-banner__trust-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span>Free initial consultation</span>
+            </div>
+            <div class="hp-cta-banner__trust-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span>Response within 48 hours</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
   </div>
 </Layout>

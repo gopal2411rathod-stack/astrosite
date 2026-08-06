@@ -8,10 +8,18 @@ export interface BlogPost {
   author: string;
   keywords: string;
   heroLabel: string;
+  stats?: { value: string; label: string }[];
+  toc?: { anchor: string; label: string }[];
   sections: {
+    id?: string;
     heading: string;
+    icon?: string;
     paragraphs: string[];
     points?: string[];
+    callout?: {
+      type: "tip" | "warning" | "important" | "cta";
+      text: string;
+    };
   }[];
 }
 
@@ -51,34 +59,165 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "erp-integration-mistakes-growing-teams",
     title: "ERP Integration Mistakes That Slow Growing Teams",
-    excerpt: "Avoid common data ownership, workflow and adoption problems that make ERP integrations harder than they need to be.",
-    category: "ERP",
+    excerpt: "Most ERP integration failures aren't caused by bad code — they're caused by unclear ownership, poor process design, and skipped fundamentals. Here's what to avoid and how to get it right.",
+    category: "ERP Strategy",
     date: "2026-07-08",
-    readTime: "5 min read",
+    readTime: "7 min read",
     author: "Hegrix Engineering Team",
-    keywords: "ERP integration mistakes, ERP implementation, business system integration",
+    keywords: "ERP integration mistakes, ERP implementation, business system integration, Odoo ERP, ERP data synchronization, ERP rollout strategy",
     heroLabel: "ERP",
+    stats: [
+      { value: "70%", label: "of ERP projects exceed budget due to integration issues" },
+      { value: "3x", label: "longer deployment when data ownership is unclear upfront" },
+      { value: "60%", label: "of teams report adoption failure within 6 months of go-live" },
+    ],
+    toc: [
+      { anchor: "s1", label: "Why ERP integrations fail" },
+      { anchor: "s2", label: "Mistake #1: No data ownership map" },
+      { anchor: "s3", label: "Mistake #2: Syncing everything" },
+      { anchor: "s4", label: "Mistake #3: Ignoring exception handling" },
+      { anchor: "s5", label: "Mistake #4: Skipping permissions & approvals" },
+      { anchor: "s6", label: "Mistake #5: Reports as an afterthought" },
+      { anchor: "s7", label: "Mistake #6: No adoption plan" },
+      { anchor: "s8", label: "Building integrations that last" },
+    ],
     sections: [
       {
-        heading: "Disconnected data creates hidden cost",
+        id: "s1",
+        heading: "Why ERP integrations fail — and it's rarely the code",
+        icon: "⚠️",
         paragraphs: [
-          "ERP integration should create one reliable operating view. When teams connect systems without defining data ownership, duplicate records and reporting conflicts appear quickly.",
-          "The safest approach is to decide which system owns customers, products, inventory, orders, invoices and payments before integration work begins.",
+          "Growing teams often treat ERP integration as a purely technical challenge. Connect the systems, map the fields, run the sync — done. But the most expensive integration failures almost always stem from business process decisions that were never properly made, not from flawed engineering.",
+          "When an ERP rollout stalls or creates new operational headaches, the root cause is usually one of a handful of predictable patterns: unclear data ownership, over-engineered sync scopes, absent exception handling, skipped permission design, or a team that was never truly onboarded.",
+          "This guide walks through the six most common ERP integration mistakes — and the practical steps to avoid each one before you write a single line of integration code.",
         ],
       },
       {
-        heading: "Common mistakes to avoid",
-        paragraphs: ["Most ERP integration issues come from unclear process design rather than code alone."],
-        points: ["Syncing too much data instead of the right data", "Ignoring exception handling and failed sync recovery", "Skipping user permissions and approval workflows", "Treating reports as an afterthought", "Launching without training and adoption support"],
+        id: "s2",
+        heading: "Mistake #1: No data ownership map",
+        icon: "🗺️",
+        paragraphs: [
+          "Before any integration work begins, every entity in your business — customers, products, pricing, inventory, orders, invoices, payments — needs a clearly designated master record source. Which system owns that data? Which systems read it? Which systems write back?",
+          "Without this map, you will end up with duplicate records, conflicting stock counts, mismatched customer details, and reporting that nobody trusts. Two systems with slightly different versions of the truth create more confusion than having no integration at all.",
+        ],
+        callout: {
+          type: "tip",
+          text: "Create a one-page data ownership matrix before integration design begins. List every major entity across the top, and every system in your stack down the side. Mark each cell as Master, Read, or Write. Share it with all stakeholders and freeze it before development starts.",
+        },
+        points: [
+          "Assign a single master source per entity (e.g. Odoo owns inventory, CRM owns contacts)",
+          "Document which downstream systems consume each master record",
+          "Define who is responsible for data quality in each system",
+          "Establish conflict resolution rules for edge cases where two systems diverge",
+        ],
       },
       {
-        heading: "Integration should support decisions",
+        id: "s3",
+        heading: "Mistake #2: Syncing too much data instead of the right data",
+        icon: "🔄",
         paragraphs: [
-          "A useful ERP integration helps leaders see what is happening across sales, inventory, finance and operations. Dashboards, alerts and clean audit trails turn connected systems into better decisions.",
+          "A common instinct is to sync everything between systems so that each one always has a complete view. In practice, this dramatically increases integration surface area, sync frequency, storage costs, and — most importantly — the chance of something going wrong.",
+          "Not every field needs to move between systems. An e-commerce platform doesn't need every internal ERP accounting attribute on its product records. A logistics system doesn't need the full customer marketing profile. Syncing unnecessary data creates noise, increases processing load, and makes it much harder to trace where a specific error originated.",
         ],
+        callout: {
+          type: "warning",
+          text: "Over-syncing is one of the most common reasons integration performance degrades over time. Start with the minimum viable data set that supports each workflow, then expand deliberately based on operational need.",
+        },
+        points: [
+          "Define the minimum data set each integration endpoint actually needs",
+          "Sync on business events (order placed, stock updated) rather than time-based polling where possible",
+          "Use read APIs instead of full record sync for reference data that rarely changes",
+          "Audit sync logs quarterly and remove unused field mappings",
+        ],
+      },
+      {
+        id: "s4",
+        heading: "Mistake #3: Ignoring exception handling and failed sync recovery",
+        icon: "🔥",
+        paragraphs: [
+          "Every integration will fail at some point. A network timeout, a malformed payload, a database constraint violation, a third-party API rate limit — these are not edge cases, they are scheduled events. The question is not whether your integration will encounter errors, but what happens when it does.",
+          "Teams that skip exception handling design typically discover the problem at the worst possible moment: a busy Friday afternoon when inventory counts are wrong, invoices are stuck, and the on-call developer has to manually reconstruct what failed and in what order.",
+        ],
+        callout: {
+          type: "important",
+          text: "Every integration pipeline needs four things: structured error logging with context, automated retry logic with backoff, a dead-letter queue for unrecoverable failures, and an operations alert that fires before the business notices the problem.",
+        },
+        points: [
+          "Log every sync event with entity ID, timestamp, payload, and failure reason",
+          "Implement exponential backoff retry with configurable retry limits",
+          "Build a dead-letter queue to capture and surface unrecoverable failures",
+          "Set up automated alerts for sync failure rates above a defined threshold",
+          "Create a runbook for the three most likely failure scenarios before go-live",
+        ],
+      },
+      {
+        id: "s5",
+        heading: "Mistake #4: Skipping user permissions and approval workflows",
+        icon: "🔐",
+        paragraphs: [
+          "ERP integrations often expose capabilities that business users didn't have before. A connected system might allow a warehouse staff member to effectively update pricing by changing a stock adjustment. A portal integration might let customers see data that should be segmented by account.",
+          "Permissions and approval workflows need to be designed as part of the integration architecture — not bolted on after a security review flags an issue. This applies to both the technical layer (API key scopes, role-based access) and the business layer (who can approve what, what triggers a manual review).",
+        ],
+        points: [
+          "Map all data-mutating integration endpoints to specific user roles",
+          "Define approval thresholds: which operations auto-process vs. require human sign-off",
+          "Implement field-level visibility rules in connected systems, not just record-level access",
+          "Document the permission model and review it with each department head before launch",
+          "Include permission testing in your UAT test plan",
+        ],
+      },
+      {
+        id: "s6",
+        heading: "Mistake #5: Treating reports as an afterthought",
+        icon: "📊",
+        paragraphs: [
+          "The business case for an ERP integration is almost always grounded in better visibility: one view of inventory, consolidated revenue reporting, a single customer record across sales and support. Yet reporting is frequently the last thing designed and the first thing cut when timelines slip.",
+          "This creates a painful irony: the integration is live, the data is flowing — but leadership still can't get the cross-system view they needed. The result is either expensive custom reporting work after launch, or teams reverting to spreadsheets to fill the gap.",
+        ],
+        callout: {
+          type: "tip",
+          text: "Define your top-10 operational reports in the discovery phase, before integration design begins. Use them to validate data model decisions, field mappings, and sync frequency requirements. Reports are requirements, not nice-to-haves.",
+        },
+        points: [
+          "List the top 10 operational reports stakeholders need across all connected systems",
+          "Verify each report's required data fields exist and flow correctly in the integration design",
+          "Build at least three dashboard views in the integration planning phase, not post-launch",
+          "Design audit trail fields (created_by, modified_at, source_system) from day one",
+        ],
+      },
+      {
+        id: "s7",
+        heading: "Mistake #6: Launching without a training and adoption plan",
+        icon: "🧑‍💻",
+        paragraphs: [
+          "Research consistently shows that the majority of ERP project failures are people failures, not technology failures. A well-designed, cleanly integrated system can still fail to deliver value if the teams who need to use it don't understand how it changes their day-to-day workflow, what they're responsible for maintaining, and who to contact when something looks wrong.",
+          "Training is not a one-day event. It is a structured programme that begins during UAT, includes role-specific workflow guides, provides a safe environment for staff to practice, and continues with refresher sessions and a clearly visible support channel for the first 90 days post-launch.",
+        ],
+        points: [
+          "Create role-based training guides for every user group before go-live",
+          "Run parallel operation periods where old and new systems run simultaneously",
+          "Identify department champions who can answer peer questions after launch",
+          "Build a shared FAQ document updated during the first 30 days based on real queries",
+          "Schedule a 30-day and 90-day post-launch review with department heads",
+        ],
+      },
+      {
+        id: "s8",
+        heading: "Building ERP integrations that actually support growth",
+        icon: "🚀",
+        paragraphs: [
+          "A well-executed ERP integration should be invisible to the business — data flows reliably, reports are accurate, and staff can work in the systems they know without manually reconciling records between platforms. Getting there requires the same level of planning discipline as any major software project.",
+          "Start with a clear data ownership map. Sync only what each system operationally needs. Design exception handling as a first-class requirement. Encode permissions and approvals before launch. Build your reporting view alongside your data model. And invest in adoption — because even a perfectly integrated system creates no value if the teams it was built for don't trust it or use it.",
+          "The good news: teams that get these fundamentals right consistently report faster go-lives, lower post-launch support costs, and significantly higher staff adoption rates. The investment in proper design at the start pays back many times over.",
+        ],
+        callout: {
+          type: "cta",
+          text: "Hegrix has helped 200+ businesses plan and build ERP integrations that work reliably at scale. If you're starting an ERP project or dealing with an existing integration that's causing operational pain, we'd be glad to help you audit the design and identify a clear path forward.",
+        },
       },
     ],
   },
+
   {
     slug: "where-ai-automation-creates-business-value",
     title: "Where AI Automation Creates Business Value",
