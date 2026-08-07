@@ -2,38 +2,43 @@
 import Layout from "../layouts/Layout.astro";
 
 const stats = [
-  { number: "500+", label: "Projects Delivered" },
-  { number: "200+", label: "Global Enterprise Clients" },
-  { number: "98%", label: "Client SLA Retention" },
-  { number: "15+", label: "Countries Served" },
-  { number: "10+", label: "Years Engineering Experience" },
+  { number: "500+", label: "Projects Delivered", icon: "🚀" },
+  { number: "200+", label: "Global Enterprise Clients", icon: "🤝" },
+  { number: "98%", label: "Client SLA Retention", icon: "⭐" },
+  { number: "15+", label: "Countries Served", icon: "🌍" },
+  { number: "10+", label: "Years Engineering Experience", icon: "🏆" },
 ];
 
 const timeline = [
   {
     year: "2014",
     title: "Company Founded",
-    desc: "Established with a mission to build clean, high-performance web applications and custom software.",
+    desc: "Established with a mission to build clean, high-performance web applications and custom software for scaling enterprises.",
+    color: "#7c3aed",
   },
   {
     year: "2017",
     title: "ERP & Odoo Expansion",
-    desc: "Expanded team with certified Python and Odoo architects, launching full enterprise system capabilities.",
+    desc: "Expanded team with certified Python and Odoo architects, launching full enterprise system capabilities across industries.",
+    color: "#0b55d9",
   },
   {
     year: "2020",
     title: "Cloud & DevOps Division",
-    desc: "Introduced enterprise cloud infrastructure, continuous deployment pipelines, and 24/7 SLA monitoring.",
+    desc: "Introduced enterprise cloud infrastructure, continuous deployment pipelines, and 24/7 SLA monitoring on AWS & Azure.",
+    color: "#0891b2",
   },
   {
     year: "2023",
     title: "AI Automation & Integration",
     desc: "Integrated AI workflows, predictive analytics, document automation, and multi-vendor commerce engines.",
+    color: "#059669",
   },
   {
     year: "2026",
     title: "Global Enterprise Leader",
-    desc: "500+ successful deployments across North America, Europe, Middle East, and APAC.",
+    desc: "500+ successful deployments across North America, Europe, Middle East, and APAC — trusted by 200+ clients worldwide.",
+    color: "#d97706",
   },
 ];
 
@@ -42,31 +47,37 @@ const values = [
     iconType: "transparency",
     title: "Radical Transparency",
     desc: "Clear roadmaps, open communication, and real-time sprint tracking with no hidden technical debt.",
+    color: "#7c3aed",
   },
   {
     iconType: "craftsmanship",
     title: "Senior Engineering Craftsmanship",
     desc: "Built by experienced architects using clean architecture, rigorous testing, and resilient security standards.",
+    color: "#0b55d9",
   },
   {
     iconType: "outcome",
     title: "Business Outcome Driven",
     desc: "Every feature, API, and database model is engineered around measurable revenue growth and operational efficiency.",
+    color: "#0891b2",
   },
   {
     iconType: "security",
     title: "Enterprise Reliability & Security",
     desc: "ISO-aligned processes, strict data governance, automated backups, and 99.9% uptime guarantees.",
+    color: "#059669",
   },
   {
     iconType: "ai",
     title: "Continuous AI Innovation",
     desc: "Leveraging cutting-edge machine learning and process automation to give clients a decisive market edge.",
+    color: "#d97706",
   },
   {
     iconType: "partnership",
     title: "Long-Term Strategic Partnership",
     desc: "We stay aligned with your growth through ongoing system optimization, hypercare support, and scaling advisory.",
+    color: "#be185d",
   },
 ];
 
@@ -75,29 +86,37 @@ const team = [
     initials: "AM",
     name: "Alex Morgan",
     role: "Founder & CEO",
-    bio: "12+ years leading enterprise digital transformations and software product strategy.",
+    bio: "12+ years leading enterprise digital transformations and software product strategy across global markets.",
     linkedin: "https://www.linkedin.com/company/hegrix",
+    color: "#7c3aed",
+    expertise: ["Product Strategy", "Digital Transformation", "Enterprise Architecture"],
   },
   {
     initials: "SC",
     name: "Sophia Chen",
     role: "VP of Engineering & ERP",
-    bio: "Certified Odoo architect and Python specialist with 10+ years scaling enterprise backbones.",
+    bio: "Certified Odoo architect and Python specialist with 10+ years scaling enterprise backbones for Fortune-500 clients.",
     linkedin: "https://www.linkedin.com/company/hegrix",
+    color: "#0b55d9",
+    expertise: ["Odoo ERP", "Python", "Enterprise Systems"],
   },
   {
     initials: "MV",
     name: "Marcus Vance",
     role: "Chief Cloud & AI Officer",
-    bio: "AWS & Kubernetes certified cloud lead specializing in high-throughput microservices and AI automation.",
+    bio: "AWS & Kubernetes certified cloud lead specializing in high-throughput microservices and AI automation pipelines.",
     linkedin: "https://www.linkedin.com/company/hegrix",
+    color: "#0891b2",
+    expertise: ["AWS", "Kubernetes", "AI/ML Pipelines"],
   },
   {
     initials: "ER",
     name: "Elena Rostova",
     role: "Head of Product & UX",
-    bio: "Design leader obsessed with creating frictionless workflows for complex business management software.",
+    bio: "Design leader obsessed with creating frictionless workflows for complex enterprise software management systems.",
     linkedin: "https://www.linkedin.com/company/hegrix",
+    color: "#059669",
+    expertise: ["UX Research", "Product Design", "Workflow Engineering"],
   },
 ];
 
@@ -106,53 +125,66 @@ const culturePillars = [
     iconType: "growth",
     title: "Continuous Growth",
     desc: "We invest heavily in ongoing certifications, R&D in AI technologies, and technical mastery.",
+    color: "#7c3aed",
   },
   {
     iconType: "global",
     title: "Global Collaboration",
     desc: "Remote-first mindset with engineering hubs operating across multiple time zones for seamless delivery.",
+    color: "#0b55d9",
   },
   {
     iconType: "autonomy",
     title: "Engineering Autonomy",
     desc: "Empowered teams encouraged to explore modern frameworks, optimize algorithms, and solve hard problems.",
+    color: "#0891b2",
   },
   {
     iconType: "pacing",
     title: "Sustainable Pacing",
     desc: "We prioritize deep focus work, clear sprint boundaries, and long-term team well-being over burn-out.",
+    color: "#059669",
   },
 ];
 
 const techWall = [
-  { category: "ERP Systems", items: ["Odoo Certified", "SAP Integration", "Microsoft Dynamics"] },
-  { category: "Frontend Stack", items: ["React", "Next.js", "Astro", "Vue.js", "TypeScript"] },
-  { category: "Backend Engineering", items: ["Python", "Node.js", "FastAPI", "Django", "PostgreSQL"] },
-  { category: "Cloud & DevOps", items: ["AWS", "Azure", "Docker", "Kubernetes", "CI/CD Pipelines"] },
-  { category: "AI & Automation", items: ["LLM Workflows", "Predictive Analytics", "Document OCR", "Python ML"] },
+  { category: "ERP Systems", items: ["Odoo Certified", "SAP Integration", "Microsoft Dynamics"], icon: "⚙️", color: "#7c3aed" },
+  { category: "Frontend Stack", items: ["React", "Next.js", "Astro", "Vue.js", "TypeScript"], icon: "🎨", color: "#0b55d9" },
+  { category: "Backend Engineering", items: ["Python", "Node.js", "FastAPI", "Django", "PostgreSQL"], icon: "🔧", color: "#0891b2" },
+  { category: "Cloud & DevOps", items: ["AWS", "Azure", "Docker", "Kubernetes", "CI/CD Pipelines"], icon: "☁️", color: "#059669" },
+  { category: "AI & Automation", items: ["LLM Workflows", "Predictive Analytics", "Document OCR", "Python ML"], icon: "🤖", color: "#d97706" },
 ];
 
 const testimonials = [
   {
-    stars: "★★★★★",
+    stars: 5,
     body: "Hegrix transformed our fragmented supply chain and manual accounting into a single unified Odoo ERP platform. Their technical depth and business clarity were second to none.",
     author: "David Miller",
-    position: "CTO, Apex Industrial Solutions",
+    position: "CTO",
+    company: "Apex Industrial Solutions",
     avatar: "DM",
+    color: "#7c3aed",
+    result: "40% efficiency boost",
   },
   {
-    stars: "★★★★★",
+    stars: 5,
     body: "Partnering with Hegrix allowed us to launch our multi-vendor marketplace 3 months ahead of schedule. Their senior engineers felt like a natural extension of our leadership team.",
     author: "Sarah Jenkins",
-    position: "VP of Digital, Zenith Commerce",
+    position: "VP of Digital",
+    company: "Zenith Commerce",
     avatar: "SJ",
+    color: "#0b55d9",
+    result: "3 months early delivery",
   },
   {
-    stars: "★★★★★",
+    stars: 5,
     body: "From custom cloud microservices to AI invoice processing, Hegrix has delivered exceptional reliability. Our operational overhead dropped by 35% in year one.",
     author: "Robert Taylor",
-    position: "Head of IT, Nexora Logistics Global",
+    position: "Head of IT",
+    company: "Nexora Logistics Global",
     avatar: "RT",
+    color: "#059669",
+    result: "35% cost reduction",
   },
 ];
 
@@ -179,6 +211,15 @@ const faqs = [
   },
 ];
 
+const trustBadges = [
+  { label: "ISO-Aligned Processes", icon: "🛡️" },
+  { label: "Certified Odoo Partner", icon: "✅" },
+  { label: "AWS Certified Engineers", icon: "☁️" },
+  { label: "24/7 SLA Support", icon: "⏰" },
+  { label: "100% IP Ownership", icon: "🔐" },
+  { label: "NDA Protected", icon: "📋" },
+];
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -200,81 +241,92 @@ const faqSchema = {
   path="/about-us/"
   schema={faqSchema}
 >
-  <div class="about-wrapper">
-    {/* SECTION 1 – Hero Section */}
-    <section class="home-hero-section">
-      <div class="home-hero-glow glow-1"></div>
-      <div class="home-hero-glow glow-2"></div>
-      <div class="home-hero-dots"></div>
+  <div class="au-root">
+
+    <!-- HERO -->
+    <section class="au-hero" aria-label="About Hegrix Hero">
+      <div class="au-hero__mesh" aria-hidden="true"></div>
+      <div class="au-hero__orb au-hero__orb--1" aria-hidden="true"></div>
+      <div class="au-hero__orb au-hero__orb--2" aria-hidden="true"></div>
+      <div class="au-hero__orb au-hero__orb--3" aria-hidden="true"></div>
 
       <div class="container">
-        <div class="home-hero-grid">
-          <div>
-            <div class="hero-pill">
-              <span class="hero-pill-dot"></span>
-              <span>Who We Are & What Drives Us</span>
+        <div class="au-hero__inner">
+          <div class="au-hero__content">
+            <div class="au-hero__badge">
+              <span class="au-hero__badge-pulse"></span>
+              <span>Who We Are &amp; What Drives Us</span>
             </div>
 
-            <h1 class="home-hero-title">
-              We Build <span class="hero-gradient-text">Dependable Digital Systems</span> for Scaling Enterprise Leaders.
+            <h1 class="au-hero__h1">
+              We Build
+              <span class="au-gradient-text">Dependable Digital Systems</span>
+              for Scaling Enterprise Leaders.
             </h1>
 
-            <p class="home-hero-desc">
+            <p class="au-hero__desc">
               Hegrix combines strategic product design, senior ERP engineering, cloud infrastructure, and AI automation to transform operational bottlenecks into sustainable growth engines.
             </p>
 
-            <div class="home-hero-btns">
-              <a href="/contact-us/" class="home-btn-primary">
-                Schedule Consultation &rarr;
+            <div class="au-hero__actions">
+              <a href="/contact-us/" class="au-btn au-btn--primary" id="hero-cta-primary">
+                <span>Schedule Consultation</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </a>
-              <a href="#team" class="home-btn-secondary">
-                Meet Leadership Team
+              <a href="#team" class="au-btn au-btn--ghost" id="hero-cta-team">
+                <span>Meet Leadership Team</span>
               </a>
             </div>
 
-            <div class="home-hero-tags">
-              <span>✓ Certified Engineers</span>
-              <span>✓ Product-Minded Delivery</span>
-              <span>✓ 24/7 SLA Support</span>
+            <div class="au-hero__trust-row">
+              <div class="au-hero__trust-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0bbf8a" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>Certified Engineers</span>
+              </div>
+              <div class="au-hero__trust-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0bbf8a" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>Product-Minded Delivery</span>
+              </div>
+              <div class="au-hero__trust-item">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0bbf8a" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                <span>24/7 SLA Support</span>
+              </div>
             </div>
           </div>
 
-          <div class="home-hero-visual">
-            <div class="visual-card-main">
-              <div class="card-header">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="card-title">Hegrix Operational Framework</span>
+          <div class="au-hero__visual">
+            <div class="au-hero__card">
+              <div class="au-card-header">
+                <span class="au-dot au-dot--red"></span>
+                <span class="au-dot au-dot--yellow"></span>
+                <span class="au-dot au-dot--green"></span>
+                <span class="au-card-title">Hegrix Operational Framework</span>
               </div>
-              <div class="card-body">
-                <div class="code-line"><span class="k">const</span> enterprise = <span class="k">new</span> HegrixPartner();</div>
-                <div class="code-line"><span class="f">await</span> enterprise.auditSystemWorkflows();</div>
-                <div class="code-line"><span class="f">await</span> enterprise.deployCustomPlatform(&#123;</div>
-                <div class="code-line tab"><span class="p">erp:</span> <span class="s">"Odoo Certified Enterprise"</span>,</div>
-                <div class="code-line tab"><span class="p">cloud:</span> <span class="s">"AWS Kubernetes Cluster"</span>,</div>
-                <div class="code-line tab"><span class="p">ai:</span> <span class="s">"Automated Document Pipelines"</span>,</div>
-                <div class="code-line"><span class="f">&#125;);</span></div>
-                <div class="code-line status-line">
-                  <span class="status-dot"></span> <span class="s">System Status: Optimal Performance (99.99%)</span>
+              <div class="au-card-body">
+                <div class="au-code-line"><span class="au-k">const</span> enterprise = <span class="au-k">new</span> HegrixPartner();</div>
+                <div class="au-code-line"><span class="au-f">await</span> enterprise.auditSystemWorkflows();</div>
+                <div class="au-code-line"><span class="au-f">await</span> enterprise.deployCustomPlatform(&#123;</div>
+                <div class="au-code-line au-tab"><span class="au-p">erp:</span> <span class="au-s">"Odoo Certified Enterprise"</span>,</div>
+                <div class="au-code-line au-tab"><span class="au-p">cloud:</span> <span class="au-s">"AWS Kubernetes Cluster"</span>,</div>
+                <div class="au-code-line au-tab"><span class="au-p">ai:</span> <span class="au-s">"Automated Document Pipelines"</span>,</div>
+                <div class="au-code-line"><span class="au-f">&#125;);</span></div>
+                <div class="au-status-line">
+                  <span class="au-status-dot"></span>
+                  <span class="au-s">System Status: Optimal Performance (99.99%)</span>
                 </div>
               </div>
             </div>
 
-            <div class="floating-badge badge-top-right">
-              <span class="badge-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B55D9" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-              </span>
+            <div class="au-float-badge au-float-badge--tr">
+              <span class="au-float-icon">⚡</span>
               <div>
                 <strong>10+ Years</strong>
                 <span>Engineering Craft</span>
               </div>
             </div>
 
-            <div class="floating-badge badge-bottom-left">
-              <span class="badge-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1FB6FF" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-              </span>
+            <div class="au-float-badge au-float-badge--bl">
+              <span class="au-float-icon">⭐</span>
               <div>
                 <strong>98% Retention</strong>
                 <span>SLA Partner Satisfaction</span>
@@ -285,93 +337,141 @@ const faqSchema = {
       </div>
     </section>
 
-    {/* SECTION 2 – Impact Metrics Counter Bar */}
-    <section class="about-stats-bar">
+    <!-- TRUST BADGES STRIP -->
+    <section class="au-trust-strip" aria-label="Trust badges">
       <div class="container">
-        <div class="about-stats-grid">
-          {stats.map((s) => (
-            <div class="about-stat-item">
-              <div class="about-stat-number">{s.number}</div>
-              <div class="about-stat-label">{s.label}</div>
+        <p class="au-trust-strip__label">Why Enterprise Leaders Choose Hegrix</p>
+        <div class="au-trust-strip__badges">
+          {trustBadges.map((b) => (
+            <div class="au-trust-badge">
+              <span class="au-trust-badge__icon">{b.icon}</span>
+              <span>{b.label}</span>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    {/* SECTION 3 – Mission & Vision */}
-    <section class="home-section">
+    <!-- IMPACT METRICS -->
+    <section class="au-section au-section--alt" aria-labelledby="stats-heading">
       <div class="container">
-        <div class="home-section-header">
-          <p class="home-eyebrow">Strategic Purpose</p>
-          <h2 class="home-title">Engineered to Support Your Growth at Every Stage</h2>
-          <p class="home-desc">Our foundation rests on clarity, senior execution, and delivering software that impacts your bottom line.</p>
+        <div class="au-section__header">
+          <p class="au-eyebrow">Proven Track Record</p>
+          <h2 id="stats-heading" class="au-section__title">Numbers That Define Our Excellence</h2>
+          <p class="au-section__desc">A decade of enterprise deliveries measured in outcomes, not just deliverables.</p>
         </div>
 
-        <div class="mission-vision-grid">
-          <div class="mission-card">
-            <div class="svg-icon-box lg">
+        <div class="au-stats-grid">
+          {stats.map((s) => (
+            <div class="au-stat-card">
+              <div class="au-stat-card__icon">{s.icon}</div>
+              <div class="au-stat-card__number">{s.number}</div>
+              <div class="au-stat-card__label">{s.label}</div>
+              <div class="au-stat-card__bar"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION & VISION -->
+    <section class="au-section" aria-labelledby="purpose-heading">
+      <div class="container">
+        <div class="au-section__header">
+          <p class="au-eyebrow">Strategic Purpose</p>
+          <h2 id="purpose-heading" class="au-section__title">Engineered to Support Your Growth at Every Stage</h2>
+          <p class="au-section__desc">Our foundation rests on clarity, senior execution, and delivering software that impacts your bottom line.</p>
+        </div>
+
+        <div class="au-mv-grid">
+          <div class="au-mv-card au-mv-card--mission">
+            <div class="au-mv-card__glow"></div>
+            <div class="au-mv-card__icon-box">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M8 12h8"></path></svg>
             </div>
             <h3>Our Mission</h3>
             <p>To eliminate operational complexity for expanding businesses by engineering reliable, scalable, and intuitive software platforms.</p>
-            <ul class="mv-list">
-              <li>Turn manual, fragmented processes into unified automated workflows</li>
-              <li>Ensure zero data loss and seamless legacy migrations</li>
-              <li>Deliver clean code that is easy to extend and maintain</li>
+            <ul class="au-mv-list">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0bbf8a" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Turn manual, fragmented processes into unified automated workflows
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0bbf8a" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Ensure zero data loss and seamless legacy migrations
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0bbf8a" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Deliver clean code that is easy to extend and maintain
+              </li>
             </ul>
           </div>
 
-          <div class="vision-card">
-            <div class="svg-icon-box lg cyan-box">
+          <div class="au-mv-card au-mv-card--vision">
+            <div class="au-mv-card__glow"></div>
+            <div class="au-mv-card__icon-box au-mv-card__icon-box--cyan">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-3.05 11a22.35 22.35 0 0 1-3.95 2z"></path></svg>
             </div>
             <h3>Our Vision</h3>
-            <p>To set the global benchmark for enterprise software development—where technical mastery meets true business alignment.</p>
-            <ul class="mv-list">
-              <li>Pioneer practical enterprise AI and workflow automation</li>
-              <li>Maintain an unyielding standard for performance, speed, and security</li>
-              <li>Build long-term technology partnerships grounded in trust</li>
+            <p>To set the global benchmark for enterprise software development where technical mastery meets true business alignment.</p>
+            <ul class="au-mv-list">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1fb6ff" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Pioneer practical enterprise AI and workflow automation
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1fb6ff" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Maintain an unyielding standard for performance, speed, and security
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1fb6ff" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                Build long-term technology partnerships grounded in trust
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    {/* SECTION 4 – Growth Timeline */}
-    <section class="home-section home-alt-section">
+    <!-- GROWTH TIMELINE (dark) -->
+    <section class="au-section au-section--dark" aria-labelledby="journey-heading">
       <div class="container">
-        <div class="home-section-header">
-          <p class="home-eyebrow">Our Journey</p>
-          <h2 class="home-title">A Decade of Continuous Innovation</h2>
-          <p class="home-desc">From our humble beginnings to a trusted global digital transformation partner.</p>
+        <div class="au-section__header">
+          <p class="au-eyebrow au-eyebrow--light">Our Journey</p>
+          <h2 id="journey-heading" class="au-section__title au-section__title--light">A Decade of Continuous Innovation</h2>
+          <p class="au-section__desc au-section__desc--light">From humble beginnings to a trusted global digital transformation partner.</p>
         </div>
 
-        <div class="about-timeline-grid">
-          {timeline.map((t) => (
-            <div class="about-timeline-card">
-              <span class="timeline-year-badge">{t.year}</span>
-              <h3>{t.title}</h3>
-              <p>{t.desc}</p>
+        <div class="au-timeline">
+          <div class="au-timeline__line" aria-hidden="true"></div>
+          {timeline.map((t, i) => (
+            <div class={`au-timeline-item ${i % 2 === 0 ? 'au-timeline-item--left' : 'au-timeline-item--right'}`}>
+              <div class="au-timeline-item__dot" style={`background: ${t.color}; box-shadow: 0 0 0 6px ${t.color}30`}></div>
+              <div class="au-timeline-item__card">
+                <span class="au-timeline-item__year" style={`color: ${t.color}`}>{t.year}</span>
+                <h3>{t.title}</h3>
+                <p>{t.desc}</p>
+                <div class="au-timeline-item__accent" style={`background: ${t.color}`}></div>
+              </div>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    {/* SECTION 5 – Core Values */}
-    <section class="home-section">
+    <!-- CORE VALUES -->
+    <section class="au-section" aria-labelledby="values-heading">
       <div class="container">
-        <div class="home-section-header">
-          <p class="home-eyebrow">Guiding Principles</p>
-          <h2 class="home-title">The Values Behind Every Line of Code</h2>
-          <p class="home-desc">We operate by standards that guarantee accountability, code quality, and predictable outcomes.</p>
+        <div class="au-section__header">
+          <p class="au-eyebrow">Guiding Principles</p>
+          <h2 id="values-heading" class="au-section__title">The Values Behind Every Line of Code</h2>
+          <p class="au-section__desc">We operate by standards that guarantee accountability, code quality, and predictable outcomes.</p>
         </div>
 
-        <div class="about-values-grid">
+        <div class="au-values-grid">
           {values.map((v) => (
-            <div class="about-value-card">
-              <div class="svg-icon-box">
+            <div class="au-value-card" style={`--card-color: ${v.color}`}>
+              <div class="au-value-card__icon-box" style={`background: ${v.color}15; color: ${v.color}`}>
                 {v.iconType === "transparency" && (
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                 )}
@@ -393,28 +493,33 @@ const faqSchema = {
               </div>
               <h3>{v.title}</h3>
               <p>{v.desc}</p>
+              <div class="au-value-card__border" style={`background: linear-gradient(90deg, ${v.color}, transparent)`}></div>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    {/* SECTION 6 – Tech Stack & Certified Expertise */}
-    <section class="home-section home-alt-section">
+    <!-- TECH STACK -->
+    <section class="au-section au-section--alt" aria-labelledby="tech-heading">
       <div class="container">
-        <div class="home-section-header">
-          <p class="home-eyebrow">Technical Mastery</p>
-          <h2 class="home-title">Modern Technologies We Command</h2>
-          <p class="home-desc">We combine industry-standard enterprise frameworks with modern cloud infrastructure.</p>
+        <div class="au-section__header">
+          <p class="au-eyebrow">Technical Mastery</p>
+          <h2 id="tech-heading" class="au-section__title">Modern Technologies We Command</h2>
+          <p class="au-section__desc">We combine industry-standard enterprise frameworks with modern cloud infrastructure.</p>
         </div>
 
-        <div class="tech-wall-grid">
+        <div class="au-tech-grid">
           {techWall.map((t) => (
-            <div class="tech-category-card">
-              <h3>{t.category}</h3>
-              <div class="tech-tags">
+            <div class="au-tech-card" style={`--tech-color: ${t.color}`}>
+              <div class="au-tech-card__header">
+                <span class="au-tech-card__emoji">{t.icon}</span>
+                <h3 class="au-tech-card__title">{t.category}</h3>
+                <div class="au-tech-card__dot" style={`background: ${t.color}`}></div>
+              </div>
+              <div class="au-tech-card__pills">
                 {t.items.map((item) => (
-                  <span class="tech-tag">{item}</span>
+                  <span class="au-tech-pill" style={`border-color: ${t.color}50; color: ${t.color}`}>{item}</span>
                 ))}
               </div>
             </div>
@@ -423,23 +528,30 @@ const faqSchema = {
       </div>
     </section>
 
-    {/* SECTION 7 – Leadership & Team */}
-    <section class="home-section" id="team">
+    <!-- LEADERSHIP TEAM -->
+    <section class="au-section" id="team" aria-labelledby="team-heading">
       <div class="container">
-        <div class="home-section-header">
-          <p class="home-eyebrow">Leadership</p>
-          <h2 class="home-title">Meet the Minds Shaping Hegrix</h2>
-          <p class="home-desc">Experienced architects, design directors, and engineers committed to your success.</p>
+        <div class="au-section__header">
+          <p class="au-eyebrow">Leadership</p>
+          <h2 id="team-heading" class="au-section__title">Meet the Minds Shaping Hegrix</h2>
+          <p class="au-section__desc">Experienced architects, design directors, and engineers committed to your success.</p>
         </div>
 
-        <div class="about-team-grid">
+        <div class="au-team-grid">
           {team.map((m) => (
-            <div class="about-team-card">
-              <div class="team-avatar-box">{m.initials}</div>
-              <h3 class="team-name">{m.name}</h3>
-              <span class="team-role-tag">{m.role}</span>
-              <p class="team-bio">{m.bio}</p>
-              <a href={m.linkedin} target="_blank" rel="noopener noreferrer" class="team-social-link">
+            <div class="au-team-card" style={`--member-color: ${m.color}`}>
+              <div class="au-team-card__glow" style={`background: radial-gradient(circle at 50% 0, ${m.color}20, transparent 70%)`}></div>
+              <div class="au-team-avatar" style={`background: linear-gradient(135deg, ${m.color}, ${m.color}99)`}>{m.initials}</div>
+              <h3 class="au-team-name">{m.name}</h3>
+              <span class="au-team-role" style={`background: ${m.color}15; color: ${m.color}`}>{m.role}</span>
+              <p class="au-team-bio">{m.bio}</p>
+              <div class="au-team-expertise">
+                {m.expertise.map((e) => (
+                  <span class="au-team-expertise-tag">{e}</span>
+                ))}
+              </div>
+              <a href={m.linkedin} target="_blank" rel="noopener noreferrer" class="au-team-linkedin" id={`linkedin-${m.initials.toLowerCase()}`}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                 LinkedIn Profile &rarr;
               </a>
             </div>
@@ -448,103 +560,632 @@ const faqSchema = {
       </div>
     </section>
 
-    {/* SECTION 8 – Culture & Careers */}
-    <section class="home-section home-alt-section">
+    <!-- CULTURE & CAREERS -->
+    <section class="au-section au-section--alt" aria-labelledby="culture-heading">
       <div class="container">
-        <div class="home-section-header">
-          <p class="home-eyebrow">Life at Hegrix</p>
-          <h2 class="home-title">Built for Senior Engineering Excellence</h2>
-          <p class="home-desc">We foster a culture of deep work, technical autonomy, and continuous learning.</p>
-        </div>
+        <div class="au-culture-layout">
+          <div class="au-culture-left">
+            <p class="au-eyebrow">Life at Hegrix</p>
+            <h2 id="culture-heading" class="au-section__title au-section__title--left">Built for Senior Engineering Excellence</h2>
+            <p class="au-section__desc au-section__desc--left">We foster a culture of deep work, technical autonomy, and continuous learning where your best work is expected and celebrated.</p>
+            <a href="/careers/" class="au-btn au-btn--primary" id="careers-cta" style="margin-top: 28px;">
+              <span>Explore Career Opportunities</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
 
-        <div class="about-culture-grid">
-          {culturePillars.map((c) => (
-            <div class="about-culture-card">
-              <div class="svg-icon-box">
-                {c.iconType === "growth" && (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-                )}
-                {c.iconType === "global" && (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                )}
-                {c.iconType === "autonomy" && (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
-                )}
-                {c.iconType === "pacing" && (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                )}
-              </div>
-              <h3>{c.title}</h3>
-              <p>{c.desc}</p>
-            </div>
-          ))}
-        </div>
-
-        <div style="text-align: center; margin-top: 40px;">
-          <a href="/careers/" class="home-btn-secondary">Explore Career Opportunities &rarr;</a>
-        </div>
-      </div>
-    </section>
-
-    {/* SECTION 9 – Client Testimonials */}
-    <section class="home-section">
-      <div class="container">
-        <div class="home-section-header">
-          <p class="home-eyebrow">Client Feedback</p>
-          <h2 class="home-title">Trusted by Tech & Business Executives</h2>
-          <p class="home-desc">Here is what executive partners say about building digital platforms with Hegrix.</p>
-        </div>
-
-        <div class="home-testi-grid">
-          {testimonials.map((t) => (
-            <div class="home-testi-card">
-              <div class="testi-stars">{t.stars}</div>
-              <p class="testi-body">"{t.body}"</p>
-              <div class="testi-author">
-                <div class="author-avatar">{t.avatar}</div>
-                <div>
-                  <strong>{t.author}</strong>
-                  <span>{t.position}</span>
+          <div class="au-culture-right">
+            {culturePillars.map((c) => (
+              <div class="au-culture-card" style={`--pillar-color: ${c.color}`}>
+                <div class="au-culture-card__icon" style={`background: ${c.color}15; color: ${c.color}`}>
+                  {c.iconType === "growth" && (
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                  )}
+                  {c.iconType === "global" && (
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                  )}
+                  {c.iconType === "autonomy" && (
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
+                  )}
+                  {c.iconType === "pacing" && (
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  )}
+                </div>
+                <div class="au-culture-card__content">
+                  <h3>{c.title}</h3>
+                  <p>{c.desc}</p>
                 </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT TESTIMONIALS -->
+    <section class="au-section" aria-labelledby="testi-heading">
+      <div class="container">
+        <div class="au-section__header">
+          <p class="au-eyebrow">Client Feedback</p>
+          <h2 id="testi-heading" class="au-section__title">Trusted by Tech &amp; Business Executives</h2>
+          <p class="au-section__desc">Real feedback from executive partners who accelerated their business with Hegrix.</p>
+        </div>
+
+        <div class="au-testi-grid">
+          {testimonials.map((t) => (
+            <div class="au-testi-card" style={`--testi-color: ${t.color}`}>
+              <div class="au-testi-card__result-badge" style={`background: ${t.color}15; color: ${t.color}; border-color: ${t.color}40`}>
+                📈 {t.result}
+              </div>
+              <div class="au-testi-card__quote-mark">"</div>
+              <div class="au-testi-card__stars" aria-label="5 stars">{"★".repeat(t.stars)}</div>
+              <p class="au-testi-card__body">{t.body}</p>
+              <div class="au-testi-card__author">
+                <div class="au-testi-avatar" style={`background: linear-gradient(135deg, ${t.color}, ${t.color}99)`}>{t.avatar}</div>
+                <div>
+                  <strong class="au-testi-name">{t.author}</strong>
+                  <span class="au-testi-role">{t.position}, <em>{t.company}</em></span>
+                </div>
+              </div>
+              <div class="au-testi-card__border" style={`background: linear-gradient(90deg, ${t.color}, transparent)`}></div>
             </div>
           ))}
         </div>
       </div>
     </section>
 
-    {/* SECTION 10 – FAQ */}
-    <section class="home-section home-alt-section">
+    <!-- FAQ -->
+    <section class="au-section au-section--alt" aria-labelledby="faq-heading">
       <div class="container">
-        <div class="home-section-header">
-          <p class="home-eyebrow">FAQ</p>
-          <h2 class="home-title">Frequently Asked Questions</h2>
-          <p class="home-desc">Clear answers about how we collaborate, contract, and deliver digital systems.</p>
+        <div class="au-section__header">
+          <p class="au-eyebrow">FAQ</p>
+          <h2 id="faq-heading" class="au-section__title">Frequently Asked Questions</h2>
+          <p class="au-section__desc">Clear answers about how we collaborate, contract, and deliver enterprise digital systems.</p>
         </div>
 
-        <div class="about-faq-grid">
-          {faqs.map((item) => (
-            <details class="about-faq-item">
-              <summary>{item.q}</summary>
-              <p>{item.a}</p>
+        <div class="au-faq-grid">
+          {faqs.map((item, i) => (
+            <details class="au-faq-item" id={`faq-${i + 1}`}>
+              <summary class="au-faq-summary">
+                <span>{item.q}</span>
+                <span class="au-faq-chevron" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+                </span>
+              </summary>
+              <div class="au-faq-body">{item.a}</div>
             </details>
           ))}
         </div>
       </div>
     </section>
 
-    {/* SECTION 11 – Final CTA */}
-    <section class="home-section home-final-cta">
+    <!-- FINAL CTA BANNER -->
+    <section class="au-cta-banner" aria-labelledby="cta-heading">
+      <div class="au-cta-banner__mesh" aria-hidden="true"></div>
+      <div class="au-cta-banner__orb au-cta-banner__orb--1" aria-hidden="true"></div>
+      <div class="au-cta-banner__orb au-cta-banner__orb--2" aria-hidden="true"></div>
       <div class="container">
-        <div class="home-cta-card">
-          <h2>Ready to Build Your Enterprise Platform with Hegrix?</h2>
-          <p>Share your vision and business goals with our strategic engineering team. We will outline the optimal roadmap and timeline.</p>
-          <div class="home-cta-btns">
-            <a href="/contact-us/" class="home-btn-primary btn-white">Schedule Strategic Audit &rarr;</a>
-            <a href="/services/" class="home-btn-secondary btn-outline">Explore Our Services</a>
+        <div class="au-cta-banner__inner">
+          <p class="au-eyebrow au-eyebrow--light au-eyebrow--center">Start Your Journey</p>
+          <h2 id="cta-heading" class="au-cta-banner__heading">
+            Ready to Build Your<br>
+            <span class="au-cta-banner__gradient">Enterprise Platform with Hegrix?</span>
+          </h2>
+          <p class="au-cta-banner__sub">Share your vision and business goals with our strategic engineering team. We will outline the optimal roadmap and timeline — no commitment required.</p>
+
+          <div class="au-cta-banner__actions">
+            <a href="/contact-us/" class="au-btn au-btn--white" id="cta-primary">
+              <span>Schedule Strategic Audit</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="/services/" class="au-btn au-btn--white-ghost" id="cta-secondary">
+              <span>Explore Our Services</span>
+            </a>
+          </div>
+
+          <div class="au-cta-banner__trust">
+            <div class="au-cta-trust-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span>No lock-in contracts</span>
+            </div>
+            <div class="au-cta-trust-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span>Free initial consultation</span>
+            </div>
+            <div class="au-cta-trust-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span>Response within 24 hours</span>
+            </div>
+            <div class="au-cta-trust-item">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              <span>100% IP ownership</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
   </div>
 </Layout>
+
+<style>
+/* ROOT */
+.au-root {
+  --au-blue: #0b55d9;
+  --au-blue-dark: #071a3d;
+  --au-cyan: #1fb6ff;
+  --au-ink: #0f172a;
+  --au-muted: #5b6b82;
+  --au-line: #dce8f7;
+  --au-soft: #f7fbff;
+  --au-success: #0bbf8a;
+  --au-r: 18px;
+  --au-r-sm: 12px;
+}
+
+/* UTILITY */
+.au-gradient-text {
+  background: linear-gradient(135deg, #0b55d9 0%, #1fb6ff 50%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.au-eyebrow {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #0b55d9;
+  background: linear-gradient(135deg, #eaf3ff, #dce8f7);
+  border: 1px solid #c7deff;
+  border-radius: 999px;
+  padding: 6px 16px;
+  margin-bottom: 16px;
+}
+.au-eyebrow--light {
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.9);
+  border-color: rgba(255,255,255,0.2);
+}
+.au-eyebrow--center { display: block; width: fit-content; margin: 0 auto 16px; }
+
+.au-section__header { text-align: center; max-width: 680px; margin: 0 auto 64px; }
+.au-section__title {
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: #071a3d;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+.au-section__title--light { color: #fff; }
+.au-section__title--left { text-align: left; }
+.au-section__desc { font-size: 1.05rem; color: #5b6b82; line-height: 1.65; margin: 0; }
+.au-section__desc--light { color: rgba(255,255,255,0.75); }
+.au-section__desc--left { text-align: left; }
+
+.au-section { padding: 100px 0; }
+.au-section--alt {
+  background: linear-gradient(180deg, #f7fbff 0%, #eaf3ff 100%);
+  padding: 100px 0;
+}
+.au-section--dark {
+  background: linear-gradient(135deg, #071a3d 0%, #09265c 60%, #071a3d 100%);
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+.au-section--dark::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(11,85,217,0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* BUTTONS */
+.au-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 14px 26px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.22s ease;
+  white-space: nowrap;
+}
+.au-btn--primary {
+  background: linear-gradient(135deg, #0b55d9, #1265f3);
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(11, 85, 217, 0.35);
+}
+.au-btn--primary:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(11, 85, 217, 0.45); }
+.au-btn--ghost {
+  background: rgba(11, 85, 217, 0.06);
+  color: #0b55d9;
+  border: 1.5px solid rgba(11, 85, 217, 0.2);
+}
+.au-btn--ghost:hover { background: rgba(11, 85, 217, 0.1); border-color: rgba(11, 85, 217, 0.4); transform: translateY(-2px); }
+.au-btn--white { background: #fff; color: #0b55d9; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+.au-btn--white:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.2); }
+.au-btn--white-ghost {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(10px);
+}
+.au-btn--white-ghost:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.5); transform: translateY(-2px); }
+
+/* HERO */
+.au-hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #071a3d 0%, #0b2665 50%, #071a3d 100%);
+  overflow: hidden;
+  padding: 120px 0 80px;
+}
+.au-hero__mesh {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(11,85,217,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(11,85,217,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+.au-hero__orb {
+  position: absolute; border-radius: 50%;
+  pointer-events: none; filter: blur(80px);
+}
+.au-hero__orb--1 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(11,85,217,0.35) 0%, transparent 70%); top: -200px; left: -150px; }
+.au-hero__orb--2 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(31,182,255,0.2) 0%, transparent 70%); bottom: -150px; right: 5%; }
+.au-hero__orb--3 { width: 350px; height: 350px; background: radial-gradient(circle, rgba(124,58,237,0.25) 0%, transparent 70%); top: 30%; right: 20%; }
+
+.au-hero__inner {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center;
+}
+.au-hero__badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px; padding: 8px 18px;
+  font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px); margin-bottom: 28px;
+}
+.au-hero__badge-pulse {
+  width: 8px; height: 8px; background: #0bbf8a; border-radius: 50%;
+  animation: pulse-ring 2s infinite;
+}
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 0 rgba(11,191,138,0.6); }
+  70% { box-shadow: 0 0 0 10px rgba(11,191,138,0); }
+  100% { box-shadow: 0 0 0 0 rgba(11,191,138,0); }
+}
+.au-hero__h1 {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem); font-weight: 900; color: #fff;
+  line-height: 1.08; letter-spacing: -0.025em; margin-bottom: 24px;
+}
+.au-hero__desc { font-size: 1.1rem; color: rgba(255,255,255,0.7); line-height: 1.7; margin-bottom: 36px; max-width: 520px; }
+.au-hero__actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 32px; }
+.au-hero__trust-row { display: flex; gap: 20px; flex-wrap: wrap; }
+.au-hero__trust-item { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; color: rgba(255,255,255,0.7); font-weight: 500; }
+
+/* HERO VISUAL */
+.au-hero__visual { position: relative; }
+.au-hero__card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px; overflow: hidden; backdrop-filter: blur(20px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.3);
+}
+.au-card-header {
+  display: flex; align-items: center; gap: 8px;
+  padding: 14px 18px; background: rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.au-dot { width: 12px; height: 12px; border-radius: 50%; }
+.au-dot--red { background: #ff5f57; }
+.au-dot--yellow { background: #ffbd2e; }
+.au-dot--green { background: #28c840; }
+.au-card-title { font-size: 0.78rem; color: rgba(255,255,255,0.5); margin-left: 8px; font-family: monospace; }
+.au-card-body { padding: 24px 20px; font-family: monospace; font-size: 0.82rem; line-height: 1.8; }
+.au-code-line { color: rgba(255,255,255,0.75); }
+.au-code-line.au-tab { padding-left: 20px; }
+.au-k { color: #c792ea; }
+.au-f { color: #82aaff; }
+.au-p { color: #f07178; }
+.au-s { color: #c3e88d; }
+.au-status-line { display: flex; align-items: center; gap: 8px; margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.08); }
+.au-status-dot {
+  width: 8px; height: 8px; background: #0bbf8a; border-radius: 50%;
+  box-shadow: 0 0 8px #0bbf8a; animation: blink 2s ease-in-out infinite;
+}
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+.au-float-badge {
+  position: absolute; display: flex; align-items: center; gap: 10px;
+  background: rgba(255,255,255,0.97); border-radius: 14px; padding: 12px 16px;
+  box-shadow: 0 20px 48px rgba(8,38,92,0.2); backdrop-filter: blur(20px);
+  animation: float 4s ease-in-out infinite;
+}
+.au-float-badge--tr { top: -20px; right: -20px; animation-delay: 0s; }
+.au-float-badge--bl { bottom: -20px; left: -20px; animation-delay: 2s; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.au-float-icon { font-size: 1.4rem; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #eaf3ff, #c7deff); border-radius: 10px; }
+.au-float-badge strong { display: block; font-size: 0.9rem; color: #071a3d; font-weight: 700; }
+.au-float-badge span { font-size: 0.73rem; color: #5b6b82; }
+
+/* TRUST STRIP */
+.au-trust-strip { background: #071a3d; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 28px 0; }
+.au-trust-strip__label { text-align: center; font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+.au-trust-strip__badges { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+.au-trust-badge {
+  display: flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 999px; padding: 8px 18px;
+  font-size: 0.82rem; color: rgba(255,255,255,0.8); font-weight: 500;
+  transition: all 0.2s;
+}
+.au-trust-badge:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); }
+.au-trust-badge__icon { font-size: 1rem; }
+
+/* STATS */
+.au-stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; }
+.au-stat-card {
+  background: #fff; border-radius: var(--au-r); padding: 32px 20px;
+  text-align: center; border: 1px solid rgba(11,85,217,0.1);
+  box-shadow: 0 8px 32px rgba(8,38,92,0.08);
+  transition: all 0.3s ease; position: relative; overflow: hidden;
+}
+.au-stat-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #0b55d9, #1fb6ff);
+  transform: scaleX(0); transition: transform 0.3s ease; transform-origin: left;
+}
+.au-stat-card:hover::before { transform: scaleX(1); }
+.au-stat-card:hover { transform: translateY(-6px); box-shadow: 0 20px 48px rgba(8,38,92,0.15); }
+.au-stat-card__icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+.au-stat-card__number {
+  font-size: 2.6rem; font-weight: 900;
+  background: linear-gradient(135deg, #0b55d9, #1fb6ff);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  line-height: 1; margin-bottom: 8px;
+}
+.au-stat-card__label { font-size: 0.8rem; font-weight: 600; color: #5b6b82; text-transform: uppercase; letter-spacing: 0.06em; }
+.au-stat-card__bar { height: 2px; background: linear-gradient(90deg, #0b55d9, #1fb6ff); border-radius: 2px; margin-top: 16px; opacity: 0.25; }
+
+/* MISSION & VISION */
+.au-mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.au-mv-card {
+  position: relative; background: #fff; border-radius: var(--au-r);
+  padding: 48px 40px; border: 1px solid rgba(11,85,217,0.1);
+  box-shadow: 0 8px 40px rgba(8,38,92,0.09); overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.au-mv-card:hover { transform: translateY(-4px); box-shadow: 0 32px 72px rgba(8,38,92,0.16); }
+.au-mv-card__glow {
+  position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
+  width: 400px; height: 200px; border-radius: 50%; pointer-events: none;
+}
+.au-mv-card--mission .au-mv-card__glow { background: radial-gradient(ellipse, rgba(11,85,217,0.08) 0%, transparent 70%); }
+.au-mv-card--vision .au-mv-card__glow { background: radial-gradient(ellipse, rgba(31,182,255,0.08) 0%, transparent 70%); }
+.au-mv-card__icon-box {
+  width: 60px; height: 60px; border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #eaf3ff, #c7deff); color: #0b55d9; margin-bottom: 24px;
+}
+.au-mv-card__icon-box--cyan { background: linear-gradient(135deg, #e0f8ff, #b8eeff); color: #0891b2; }
+.au-mv-card h3 { font-size: 1.5rem; font-weight: 800; color: #071a3d; margin-bottom: 14px; }
+.au-mv-card p { color: #5b6b82; line-height: 1.7; margin-bottom: 24px; font-size: 1rem; }
+.au-mv-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.au-mv-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: #3a4a5e; line-height: 1.5; }
+.au-mv-list svg { flex-shrink: 0; margin-top: 2px; }
+
+/* TIMELINE */
+.au-timeline { position: relative; max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; gap: 40px; }
+.au-timeline__line {
+  position: absolute; left: 50%; transform: translateX(-50%); top: 0; bottom: 0;
+  width: 2px; background: linear-gradient(180deg, #1fb6ff, #0b55d9, #7c3aed); opacity: 0.25;
+}
+.au-timeline-item { position: relative; display: flex; align-items: flex-start; gap: 32px; }
+.au-timeline-item--left { flex-direction: row; }
+.au-timeline-item--right { flex-direction: row-reverse; }
+.au-timeline-item__dot {
+  position: absolute; left: 50%; transform: translateX(-50%);
+  width: 18px; height: 18px; border-radius: 50%; z-index: 2; flex-shrink: 0;
+}
+.au-timeline-item__card {
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--au-r); padding: 28px 32px;
+  width: calc(50% - 40px); backdrop-filter: blur(10px);
+  transition: transform 0.3s ease; position: relative; overflow: hidden;
+}
+.au-timeline-item--left .au-timeline-item__card { margin-right: auto; }
+.au-timeline-item--right .au-timeline-item__card { margin-left: auto; }
+.au-timeline-item__card:hover { transform: translateY(-4px); }
+.au-timeline-item__year { font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; display: block; }
+.au-timeline-item__card h3 { color: #fff; font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
+.au-timeline-item__card p { color: rgba(255,255,255,0.65); font-size: 0.9rem; line-height: 1.6; }
+.au-timeline-item__accent { position: absolute; bottom: 0; left: 0; height: 3px; width: 100%; opacity: 0.5; }
+
+/* VALUES */
+.au-values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.au-value-card {
+  position: relative; background: #fff; border-radius: var(--au-r);
+  padding: 36px 28px; border: 1px solid rgba(11,85,217,0.08);
+  box-shadow: 0 4px 24px rgba(8,38,92,0.07);
+  transition: all 0.3s ease; overflow: hidden;
+}
+.au-value-card:hover { transform: translateY(-6px); box-shadow: 0 24px 56px rgba(8,38,92,0.14); }
+.au-value-card__icon-box {
+  width: 52px; height: 52px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px; transition: transform 0.3s ease;
+}
+.au-value-card:hover .au-value-card__icon-box { transform: scale(1.1); }
+.au-value-card h3 { font-size: 1.05rem; font-weight: 700; color: #071a3d; margin-bottom: 10px; }
+.au-value-card p { font-size: 0.9rem; color: #5b6b82; line-height: 1.65; margin: 0; }
+.au-value-card__border {
+  position: absolute; bottom: 0; left: 0; height: 3px; width: 60px;
+  border-radius: 0 3px 0 0; opacity: 0; transition: all 0.3s ease;
+}
+.au-value-card:hover .au-value-card__border { opacity: 1; width: 100%; }
+
+/* TECH GRID */
+.au-tech-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.au-tech-card {
+  background: #fff; border-radius: var(--au-r); padding: 32px 28px;
+  border: 1px solid rgba(11,85,217,0.08); box-shadow: 0 4px 24px rgba(8,38,92,0.06);
+  transition: all 0.3s ease; position: relative; overflow: hidden;
+}
+.au-tech-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: var(--tech-color); opacity: 0; transition: opacity 0.3s;
+}
+.au-tech-card:hover::before { opacity: 1; }
+.au-tech-card:hover { transform: translateY(-4px); box-shadow: 0 20px 48px rgba(8,38,92,0.12); }
+.au-tech-card__header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.au-tech-card__emoji { font-size: 1.4rem; }
+.au-tech-card__title { font-size: 1rem; font-weight: 700; color: #071a3d; flex: 1; }
+.au-tech-card__dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.au-tech-card__pills { display: flex; flex-wrap: wrap; gap: 8px; }
+.au-tech-pill {
+  font-size: 0.78rem; font-weight: 600; padding: 4px 12px;
+  border-radius: 999px; border: 1.5px solid; background: transparent; transition: all 0.2s;
+}
+
+/* TEAM */
+.au-team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.au-team-card {
+  position: relative; background: #fff; border-radius: var(--au-r);
+  padding: 36px 24px; text-align: center;
+  border: 1px solid rgba(11,85,217,0.08); box-shadow: 0 4px 24px rgba(8,38,92,0.06);
+  transition: all 0.3s ease; overflow: hidden;
+}
+.au-team-card:hover { transform: translateY(-8px); box-shadow: 0 32px 64px rgba(8,38,92,0.14); border-color: var(--member-color); }
+.au-team-card__glow { position: absolute; top: 0; left: 0; right: 0; height: 120px; pointer-events: none; }
+.au-team-avatar {
+  width: 72px; height: 72px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; font-weight: 800; color: #fff;
+  margin: 0 auto 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  position: relative; z-index: 1;
+}
+.au-team-name { font-size: 1.05rem; font-weight: 700; color: #071a3d; margin-bottom: 8px; }
+.au-team-role { display: inline-block; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 999px; margin-bottom: 14px; }
+.au-team-bio { font-size: 0.85rem; color: #5b6b82; line-height: 1.6; margin-bottom: 16px; }
+.au-team-expertise { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-bottom: 18px; }
+.au-team-expertise-tag { font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: #f7fbff; color: #3a4a5e; border: 1px solid #dce8f7; }
+.au-team-linkedin { display: inline-flex; align-items: center; gap: 6px; font-size: 0.8rem; font-weight: 600; color: #0b55d9; text-decoration: none; transition: gap 0.2s; }
+.au-team-linkedin:hover { gap: 10px; }
+
+/* CULTURE */
+.au-culture-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.au-culture-right { display: flex; flex-direction: column; gap: 16px; }
+.au-culture-card {
+  display: flex; align-items: flex-start; gap: 18px;
+  background: #fff; border-radius: var(--au-r-sm); padding: 24px;
+  border: 1px solid rgba(11,85,217,0.08); box-shadow: 0 4px 16px rgba(8,38,92,0.06);
+  transition: all 0.3s ease;
+}
+.au-culture-card:hover { transform: translateX(6px); box-shadow: 0 8px 32px rgba(8,38,92,0.1); border-left: 3px solid var(--pillar-color); }
+.au-culture-card__icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.au-culture-card__content h3 { font-size: 1rem; font-weight: 700; color: #071a3d; margin-bottom: 6px; }
+.au-culture-card__content p { font-size: 0.87rem; color: #5b6b82; line-height: 1.6; margin: 0; }
+
+/* TESTIMONIALS */
+.au-testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.au-testi-card {
+  position: relative; background: #fff; border-radius: var(--au-r);
+  padding: 36px 28px; border: 1px solid rgba(11,85,217,0.08);
+  box-shadow: 0 8px 32px rgba(8,38,92,0.08);
+  transition: all 0.3s ease; overflow: hidden;
+}
+.au-testi-card:hover { transform: translateY(-6px); box-shadow: 0 24px 56px rgba(8,38,92,0.14); }
+.au-testi-card__result-badge { display: inline-block; font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 999px; border: 1px solid; margin-bottom: 16px; }
+.au-testi-card__quote-mark { font-size: 5rem; line-height: 0.6; color: var(--testi-color); opacity: 0.1; font-family: Georgia, serif; margin-bottom: 12px; }
+.au-testi-card__stars { color: #f59e0b; font-size: 1rem; letter-spacing: 2px; margin-bottom: 14px; }
+.au-testi-card__body { font-size: 0.93rem; color: #3a4a5e; line-height: 1.7; margin-bottom: 24px; font-style: italic; }
+.au-testi-card__author { display: flex; align-items: center; gap: 14px; }
+.au-testi-avatar { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 800; color: #fff; flex-shrink: 0; }
+.au-testi-name { display: block; font-size: 0.9rem; font-weight: 700; color: #071a3d; margin-bottom: 2px; }
+.au-testi-role { font-size: 0.78rem; color: #5b6b82; }
+.au-testi-role em { font-style: normal; color: var(--testi-color); font-weight: 600; }
+.au-testi-card__border { position: absolute; bottom: 0; left: 0; height: 3px; width: 100%; opacity: 0.5; }
+
+/* FAQ */
+.au-faq-grid { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.au-faq-item {
+  background: #fff; border-radius: var(--au-r-sm);
+  border: 1px solid rgba(11,85,217,0.1); box-shadow: 0 2px 12px rgba(8,38,92,0.05);
+  overflow: hidden; transition: box-shadow 0.2s;
+}
+.au-faq-item[open] { box-shadow: 0 8px 32px rgba(8,38,92,0.1); border-color: rgba(11,85,217,0.25); }
+.au-faq-summary {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 22px 28px; cursor: pointer;
+  font-size: 0.97rem; font-weight: 600; color: #071a3d;
+  list-style: none; transition: background 0.2s; gap: 16px;
+}
+.au-faq-summary::-webkit-details-marker { display: none; }
+.au-faq-summary::marker { display: none; }
+.au-faq-summary:hover { background: #f7fbff; }
+.au-faq-item[open] .au-faq-summary { color: #0b55d9; background: #f0f6ff; }
+.au-faq-chevron { color: #5b6b82; flex-shrink: 0; transition: transform 0.3s ease; }
+.au-faq-item[open] .au-faq-chevron { transform: rotate(180deg); color: #0b55d9; }
+.au-faq-body { padding: 0 28px 24px; font-size: 0.92rem; color: #5b6b82; line-height: 1.7; }
+
+/* CTA BANNER */
+.au-cta-banner {
+  position: relative; background: linear-gradient(135deg, #071a3d 0%, #0b2665 50%, #071a3d 100%);
+  padding: 100px 0; overflow: hidden;
+}
+.au-cta-banner__mesh {
+  position: absolute; inset: 0;
+  background-image: linear-gradient(rgba(11,85,217,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(11,85,217,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.au-cta-banner__orb { position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none; }
+.au-cta-banner__orb--1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(11,85,217,0.4) 0%, transparent 70%); top: -150px; left: -100px; }
+.au-cta-banner__orb--2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(124,58,237,0.3) 0%, transparent 70%); bottom: -100px; right: -50px; }
+.au-cta-banner__inner { position: relative; z-index: 2; text-align: center; max-width: 720px; margin: 0 auto; }
+.au-cta-banner__heading { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: #fff; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 20px; }
+.au-cta-banner__gradient { background: linear-gradient(135deg, #1fb6ff, #7c3aed); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.au-cta-banner__sub { font-size: 1.05rem; color: rgba(255,255,255,0.7); line-height: 1.65; margin-bottom: 44px; }
+.au-cta-banner__actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
+.au-cta-banner__trust { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; }
+.au-cta-trust-item { display: flex; align-items: center; gap: 6px; font-size: 0.82rem; color: rgba(255,255,255,0.6); font-weight: 500; }
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .au-stats-grid { grid-template-columns: repeat(3, 1fr); }
+  .au-team-grid { grid-template-columns: repeat(2, 1fr); }
+  .au-tech-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 900px) {
+  .au-hero__inner { grid-template-columns: 1fr; gap: 48px; }
+  .au-hero { min-height: auto; padding: 100px 0 60px; }
+  .au-hero__visual { display: none; }
+  .au-mv-grid { grid-template-columns: 1fr; }
+  .au-values-grid { grid-template-columns: repeat(2, 1fr); }
+  .au-culture-layout { grid-template-columns: 1fr; gap: 40px; }
+  .au-testi-grid { grid-template-columns: 1fr; }
+  .au-timeline__line { display: none; }
+  .au-timeline-item, .au-timeline-item--right { flex-direction: column; }
+  .au-timeline-item__card { width: 100%; }
+  .au-timeline-item__dot { position: static; transform: none; }
+}
+@media (max-width: 640px) {
+  .au-section, .au-section--alt, .au-section--dark { padding: 64px 0; }
+  .au-stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .au-values-grid { grid-template-columns: 1fr; }
+  .au-tech-grid { grid-template-columns: 1fr; }
+  .au-team-grid { grid-template-columns: 1fr; }
+  .au-hero__actions { flex-direction: column; }
+  .au-cta-banner__actions { flex-direction: column; align-items: center; }
+}
+</style>
