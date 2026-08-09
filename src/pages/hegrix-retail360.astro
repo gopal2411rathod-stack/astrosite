@@ -56,134 +56,596 @@ const retail360Schema = [
     })),
   },
 ];
+interface Props {
+  path?: string;
+}
+
+const { path = Astro.url.pathname } = Astro.props;
 ---
 
 <Layout
   title="Hegrix Retail360 | Retail ERP Software Powered by Odoo"
   description="Hegrix Retail360 is an all-in-one retail management software powered by Odoo ERP. POS, inventory management, multi-store stock, eCommerce, CRM, and real-time analytics."
   keywords="Retail ERP Software, Odoo Retail ERP, Retail Management Software, POS Management System, Inventory Management Software, Multi Store ERP, Retail Business Automation, Retail ERP Solution, Retail Inventory Management, Odoo POS, Omnichannel Retail ERP, Retail CRM"
-  path="/hegrix-retail360/"
+  path={path}
   schema={retail360Schema}
 >
   <div class="odoo-landing-wrapper">
     {/* SECTION 1 — HERO */}
-    <section class="odoo-hero-section">
-      <div class="odoo-bg-glow odoo-bg-glow--top-left" aria-hidden="true"></div>
-      <div class="odoo-bg-glow odoo-bg-glow--top-right" aria-hidden="true"></div>
-      <div class="odoo-bg-dots" aria-hidden="true"></div>
+    {/* SECTION 1 — HERO REDESIGN */}
+    <section class="r360-hero-redesign">
+      <div class="r360-hero-glow r360-hero-glow--1" aria-hidden="true"></div>
+      <div class="r360-hero-glow r360-hero-glow--2" aria-hidden="true"></div>
+      <div class="r360-hero-grid-pattern" aria-hidden="true"></div>
 
-      <div class="container odoo-hero-container">
-        <div class="odoo-hero-grid">
-          <div class="odoo-hero-content">
-            <div class="odoo-pill-badge">
-              <span class="odoo-badge-star">🛍️</span>
-              <span>Retail ERP Solution Powered by Odoo</span>
+      <div class="container r360-hero-container">
+        <div class="r360-hero-grid">
+          {/* Left Messaging */}
+          <div class="r360-hero-content">
+            <div class="r360-badge">
+              <span class="r360-badge-pulse"></span>
+              <span class="r360-badge-icon">🛍️</span>
+              <span>All-in-One Retail ERP Platform Powered by Odoo</span>
             </div>
 
-            <h1 class="odoo-hero-heading">
+            <h1 class="r360-hero-title">
               Hegrix Retail360<br />
-              <span class="odoo-gradient-text">Transform Your Retail Business with Intelligent ERP Solutions.</span>
+              <span class="r360-gradient">Transform Retail Operations with Intelligent ERP.</span>
             </h1>
 
-            <p class="odoo-hero-subheading">
-              Hegrix Retail360 is a complete retail management solution powered by Odoo ERP. From inventory and POS to eCommerce, accounting, CRM, and analytics, manage every aspect of your retail business from one intelligent platform.
+            <p class="r360-hero-subtitle">
+              Manage inventory, point of sale (POS), e-commerce, CRM, accounting, and multi-store analytics from one unified, cloud-native Odoo platform.
             </p>
 
-            <div class="odoo-feature-badges" aria-label="Key highlights">
-              <div class="odoo-feature-tag">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>250+ Retail Projects</span>
+            <div class="r360-tags">
+              <div class="r360-tag">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>250+ Retail Stores</span>
               </div>
-              <div class="odoo-feature-tag">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>99% Client Satisfaction</span>
+              <div class="r360-tag">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Online & Offline POS</span>
               </div>
-              <div class="odoo-feature-tag">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div class="r360-tag">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Multi-Warehouse WMS</span>
+              </div>
+              <div class="r360-tag">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 <span>24/7 SLA Support</span>
               </div>
-              <div class="odoo-feature-tag">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Certified Odoo Experts</span>
-              </div>
             </div>
 
-            <div class="odoo-hero-cta-group">
-              <a href="#demo-form" class="odoo-btn-primary">
-                <span>Book Free Demo</span>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <div class="r360-cta-row">
+              <a href="#demo-form" class="r360-btn-primary">
+                <span>Book Free Retail Demo</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </a>
-              <a href="/contact-us/" class="odoo-btn-secondary">
-                <span>Talk to Retail Expert</span>
+              <a href="/contact-us/" class="r360-btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>Talk to Retail Specialist</span>
               </a>
             </div>
 
-            <div class="odoo-social-proof">
-              <div class="odoo-stars">
-                <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <div class="r360-social-proof">
+              <div class="r360-stars">
+                <svg width="16" height="16" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg width="16" height="16" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
               </div>
-              <div class="odoo-rating-meta">
+              <div class="r360-proof-text">
                 <strong>4.9/5 Rating</strong>
-                <span class="odoo-dot-sep">•</span>
-                <span>250+ Retail Stores</span>
+                <span>• 250+ Retail Deployments • 99.8% Accuracy</span>
               </div>
             </div>
           </div>
 
-          {/* Right Side 3D Dashboard Visual */}
-          <div class="odoo-hero-visual-wrap">
-            <div class="macbook-mockup">
-              <div class="macbook-screen-bezel">
-                <div class="macbook-camera"></div>
-                <div class="macbook-display">
-                  <div class="odoo-app-window">
-                    <header class="odoo-app-header">
-                      <span class="odoo-app-title">Hegrix Retail360 Operations Center</span>
-                    </header>
-                    <div class="odoo-app-body" style="padding: 16px;">
-                      <div class="odoo-kpi-grid">
-                        <div class="odoo-kpi-card">
-                          <span>Inventory Accuracy</span>
-                          <strong style="color: #22C55E;">99.8%</strong>
-                        </div>
-                        <div class="odoo-kpi-card">
-                          <span>POS Speed</span>
-                          <strong style="color: #0B55D9;">2x Faster</strong>
-                        </div>
-                      </div>
+          {/* Right Visual Console */}
+          <div class="r360-hero-visual">
+            <div class="r360-console">
+              <div class="r360-console-bar">
+                <div class="r360-console-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <div class="r360-console-title">Hegrix Retail360 Operations Hub</div>
+                <div class="r360-console-status">
+                  <span class="status-pulse"></span>
+                  <span>Odoo v18 Enterprise</span>
+                </div>
+              </div>
+
+              <div class="r360-console-body">
+                <div class="r360-metrics-grid">
+                  <div class="r360-metric-card">
+                    <div class="metric-head">
+                      <span>Inventory Accuracy</span>
+                      <span class="metric-badge green">99.8%</span>
+                    </div>
+                    <div class="metric-val">99.8%</div>
+                    <div class="metric-bar"><div class="metric-fill green" style="width: 99%;"></div></div>
+                  </div>
+
+                  <div class="r360-metric-card">
+                    <div class="metric-head">
+                      <span>POS Speed</span>
+                      <span class="metric-badge blue">2x Faster</span>
+                    </div>
+                    <div class="metric-val">1.2s</div>
+                    <div class="metric-bar"><div class="metric-fill blue" style="width: 88%;"></div></div>
+                  </div>
+
+                  <div class="r360-metric-card">
+                    <div class="metric-head">
+                      <span>Multi-Store Sync</span>
+                      <span class="metric-badge purple">Live</span>
+                    </div>
+                    <div class="metric-val">100%</div>
+                    <div class="metric-bar"><div class="metric-fill purple" style="width: 95%;"></div></div>
+                  </div>
+
+                  <div class="r360-metric-card">
+                    <div class="metric-head">
+                      <span>Margin Growth</span>
+                      <span class="metric-badge emerald">+32%</span>
+                    </div>
+                    <div class="metric-val">+32%</div>
+                    <div class="metric-bar"><div class="metric-fill emerald" style="width: 76%;"></div></div>
+                  </div>
+                </div>
+
+                <div class="r360-console-roadmap">
+                  <div class="roadmap-title">Omnichannel Retail Operations Stream</div>
+                  <div class="roadmap-steps">
+                    <div class="step-item active">
+                      <span class="step-num">01</span>
+                      <span class="step-text">POS Sale</span>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div class="step-item active">
+                      <span class="step-num">02</span>
+                      <span class="step-text">Stock Sync</span>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div class="step-item active">
+                      <span class="step-num">03</span>
+                      <span class="step-text">CRM Points</span>
+                    </div>
+                    <div class="step-arrow">→</div>
+                    <div class="step-item">
+                      <span class="step-num">04</span>
+                      <span class="step-text">Ledger</span>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Floating Module Tags */}
-            <div class="odoo-glass-card" style="top: 0px; left: -15px;">
-              <div class="glass-icon">📦</div><span>Inventory</span>
+            {/* Floating Glass Badges */}
+            <div class="r360-float-badge float-1">
+              <span class="badge-icon">📦</span>
+              <span>Inventory</span>
             </div>
-            <div class="odoo-glass-card" style="top: 70px; right: -15px;">
-              <div class="glass-icon">💳</div><span>POS Terminal</span>
+            <div class="r360-float-badge float-2">
+              <span class="badge-icon">💳</span>
+              <span>POS Terminal</span>
             </div>
-            <div class="odoo-glass-card" style="top: 160px; left: -25px;">
-              <div class="glass-icon">📈</div><span>Sales Analytics</span>
+            <div class="r360-float-badge float-3">
+              <span class="badge-icon">📈</span>
+              <span>Sales Analytics</span>
             </div>
-            <div class="odoo-glass-card" style="top: 250px; right: -20px;">
-              <div class="glass-icon">👥</div><span>Retail CRM</span>
+            <div class="r360-float-badge float-4">
+              <span class="badge-icon">👥</span>
+              <span>Retail CRM</span>
             </div>
-            <div class="odoo-glass-card" style="top: 340px; left: -10px;">
-              <div class="glass-icon">💰</div><span>Accounting</span>
+            <div class="r360-float-badge float-5">
+              <span class="badge-icon">💰</span>
+              <span>Accounting</span>
             </div>
-            <div class="odoo-glass-card" style="top: 400px; right: -5px;">
-              <div class="glass-icon">🏬</div><span>Warehouse WMS</span>
+            <div class="r360-float-badge float-6">
+              <span class="badge-icon">🏬</span>
+              <span>Warehouse WMS</span>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <style>
+      .r360-hero-redesign {
+        position: relative;
+        background: linear-gradient(135deg, #070E20 0%, #0B1736 50%, #111C44 100%);
+        color: #FFFFFF;
+        padding: 80px 0 100px;
+        overflow: hidden;
+        isolation: isolate;
+      }
+      .r360-hero-glow {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(100px);
+        pointer-events: none;
+        z-index: 0;
+      }
+      .r360-hero-glow--1 {
+        width: 500px;
+        height: 500px;
+        background: rgba(37, 99, 235, 0.28);
+        top: -150px;
+        left: -100px;
+      }
+      .r360-hero-glow--2 {
+        width: 600px;
+        height: 600px;
+        background: rgba(135, 90, 123, 0.25);
+        bottom: -200px;
+        right: -100px;
+      }
+      .r360-hero-grid-pattern {
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+        background-size: 32px 32px;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0.6;
+      }
+      .r360-hero-container {
+        position: relative;
+        z-index: 2;
+      }
+      .r360-hero-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 48px;
+        align-items: center;
+      }
+      @media (max-width: 1024px) {
+        .r360-hero-grid {
+          grid-template-columns: 1fr;
+          gap: 56px;
+        }
+      }
+
+      .r360-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 16px;
+        background: rgba(255, 255, 255, 0.07);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border-radius: 30px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #E2E8F0;
+        margin-bottom: 24px;
+      }
+      .r360-badge-pulse {
+        width: 8px;
+        height: 8px;
+        background: #10B981;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #10B981;
+        animation: r360Pulse 2s infinite;
+      }
+      @keyframes r360Pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.4); opacity: 0.5; }
+      }
+
+      .r360-hero-title {
+        font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+        font-weight: 800;
+        line-height: 1.12;
+        letter-spacing: -0.02em;
+        color: #FFFFFF;
+        margin-bottom: 20px;
+      }
+      .r360-gradient {
+        background: linear-gradient(135deg, #60A5FA 0%, #C084FC 50%, #34D399 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .r360-hero-subtitle {
+        font-size: 1.125rem;
+        line-height: 1.65;
+        color: #94A3B8;
+        max-width: 600px;
+        margin-bottom: 28px;
+      }
+
+      .r360-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 36px;
+      }
+      .r360-tag {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 14px;
+        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #CBD5E1;
+      }
+
+      .r360-cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 36px;
+      }
+      .r360-btn-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 16px 32px;
+        background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+        color: #FFFFFF;
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 12px;
+        text-decoration: none;
+        box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
+        transition: all 0.25s ease;
+      }
+      .r360-btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 40px rgba(37, 99, 235, 0.5);
+        color: #FFFFFF;
+      }
+      .r360-btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 16px 28px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        color: #FFFFFF;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: all 0.25s ease;
+      }
+      .r360-btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.12);
+        border-color: rgba(255, 255, 255, 0.3);
+        color: #FFFFFF;
+        transform: translateY(-2px);
+      }
+
+      .r360-social-proof {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .r360-stars {
+        display: flex;
+        gap: 3px;
+      }
+      .r360-proof-text {
+        font-size: 0.875rem;
+        color: #94A3B8;
+      }
+      .r360-proof-text strong {
+        color: #FFFFFF;
+      }
+
+      /* Right Visual Console */
+      .r360-hero-visual {
+        position: relative;
+      }
+      .r360-console {
+        background: rgba(15, 23, 42, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(37, 99, 235, 0.2);
+        overflow: hidden;
+      }
+      .r360-console-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 20px;
+        background: rgba(2, 6, 23, 0.6);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .r360-console-dots {
+        display: flex;
+        gap: 6px;
+      }
+      .r360-console-dots span {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+      .r360-console-dots span:nth-child(1) { background: #EF4444; }
+      .r360-console-dots span:nth-child(2) { background: #F59E0B; }
+      .r360-console-dots span:nth-child(3) { background: #10B981; }
+      
+      .r360-console-title {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #94A3B8;
+      }
+      .r360-console-status {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.75rem;
+        color: #34D399;
+        font-weight: 500;
+      }
+      .status-pulse {
+        width: 6px;
+        height: 6px;
+        background: #34D399;
+        border-radius: 50%;
+        box-shadow: 0 0 8px #34D399;
+      }
+
+      .r360-console-body {
+        padding: 24px;
+      }
+
+      .r360-metrics-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        margin-bottom: 24px;
+      }
+      .r360-metric-card {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 14px 16px;
+      }
+      .metric-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.75rem;
+        color: #94A3B8;
+        margin-bottom: 6px;
+      }
+      .metric-badge {
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+      .metric-badge.green { background: rgba(16, 185, 129, 0.2); color: #34D399; }
+      .metric-badge.blue { background: rgba(59, 130, 246, 0.2); color: #60A5FA; }
+      .metric-badge.purple { background: rgba(168, 85, 247, 0.2); color: #C084FC; }
+      .metric-badge.emerald { background: rgba(52, 211, 153, 0.2); color: #34D399; }
+
+      .metric-val {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: #FFFFFF;
+        margin-bottom: 8px;
+      }
+      .metric-bar {
+        height: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 2px;
+        overflow: hidden;
+      }
+      .metric-fill {
+        height: 100%;
+        border-radius: 2px;
+      }
+      .metric-fill.green { background: #10B981; }
+      .metric-fill.blue { background: #3B82F6; }
+      .metric-fill.purple { background: #A855F7; }
+      .metric-fill.emerald { background: #34D399; }
+
+      .r360-console-roadmap {
+        background: rgba(2, 6, 23, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 16px;
+      }
+      .roadmap-title {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #CBD5E1;
+        margin-bottom: 12px;
+      }
+      .roadmap-steps {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4px;
+      }
+      .step-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        flex: 1;
+        text-align: center;
+      }
+      .step-num {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        color: #94A3B8;
+        font-size: 0.7rem;
+        font-weight: 700;
+        display: grid;
+        place-items: center;
+      }
+      .step-item.active .step-num {
+        background: linear-gradient(135deg, #2563EB, #875A7B);
+        color: #FFFFFF;
+        box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);
+      }
+      .step-text {
+        font-size: 0.68rem;
+        color: #64748B;
+        font-weight: 500;
+      }
+      .step-item.active .step-text {
+        color: #E2E8F0;
+      }
+      .step-arrow {
+        color: #475569;
+        font-size: 0.75rem;
+      }
+
+      /* Floating Badges */
+      .r360-float-badge {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 9px 14px;
+        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        border-radius: 14px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #FFFFFF;
+        white-space: nowrap;
+        z-index: 3;
+        animation: r360Float 6s ease-in-out infinite;
+      }
+      .badge-icon { font-size: 1rem; }
+
+      .float-1 { top: -15px; left: -20px; animation-delay: 0s; }
+      .float-2 { top: 60px; right: -25px; animation-delay: 1.2s; }
+      .float-3 { top: 155px; left: -30px; animation-delay: 2.4s; }
+      .float-4 { top: 250px; right: -20px; animation-delay: 3.6s; }
+      .float-5 { bottom: 65px; left: -20px; animation-delay: 4.8s; }
+      .float-6 { bottom: -15px; right: -15px; animation-delay: 6s; }
+
+      @keyframes r360Float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+
+      @media (max-width: 640px) {
+        .r360-float-badge { display: none; }
+        .r360-metrics-grid { grid-template-columns: 1fr; }
+        .r360-hero-redesign { padding: 50px 0 70px; }
+      }
+    </style>
 
     {/* SECTION 2 — WHY RETAIL360 */}
     <section class="odoo-section">
@@ -728,42 +1190,5 @@ const retail360Schema = [
       </div>
     </section>
 
-    {/* SECTION 15 — RELATED INDUSTRY SOLUTIONS */}
-    <section class="odoo-section home-alt-section">
-      <div class="container">
-        <div class="odoo-section-header">
-          <p class="odoo-section-eyebrow">Industry Ecosystem</p>
-          <h2 class="odoo-section-title">Explore Related 360 Industry Solutions</h2>
-          <p class="odoo-section-desc">Industry-specific Odoo ERP platforms built by Hegrix engineers.</p>
-        </div>
-
-        <div class="odoo-related-grid">
-          <a href="/solutions/inventory-pos-system/" class="rel-card">
-            <div><h3>Hegrix Manufacturing360</h3><p>MRP, BOM tracking, shop floor execution, and quality control.</p></div>
-            <span class="rel-arrow">&rarr;</span>
-          </a>
-          <a href="/solutions/customer-portal/" class="rel-card">
-            <div><h3>Hegrix Healthcare360</h3><p>Patient portals, medical stock control, asset tracking, and compliant billing.</p></div>
-            <span class="rel-arrow">&rarr;</span>
-          </a>
-          <a href="/solutions/erp-integration/" class="rel-card">
-            <div><h3>Hegrix Logistics360</h3><p>WMS, route optimization, fleet tracking, and carrier API integration.</p></div>
-            <span class="rel-arrow">&rarr;</span>
-          </a>
-          <a href="/solutions/b2b-commerce-platform/" class="rel-card">
-            <div><h3>Hegrix Wholesale360</h3><p>B2B buyer pricing tiers, matrix quoting, volume discounts, and credit limits.</p></div>
-            <span class="rel-arrow">&rarr;</span>
-          </a>
-          <a href="/solutions/multi-vendor-marketplace/" class="rel-card">
-            <div><h3>Hegrix Hospitality360</h3><p>Reservation engines, table POS, kitchen displays, and procurement.</p></div>
-            <span class="rel-arrow">&rarr;</span>
-          </a>
-          <a href="/solutions/ai-business-automation/" class="rel-card">
-            <div><h3>Hegrix Education360</h3><p>Student portals, course enrollment, automated tuition billing, and attendance.</p></div>
-            <span class="rel-arrow">&rarr;</span>
-          </a>
-        </div>
-      </div>
-    </section>
   </div>
 </Layout>

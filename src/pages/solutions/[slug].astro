@@ -5,10 +5,19 @@ import { solutionPages } from "../../data/catalog";
 export const prerender = true;
 
 export function getStaticPaths() {
-  return solutionPages.map((page) => ({
-    params: { slug: page.slug },
-    props: { page },
-  }));
+  const staticSolutionSlugs = new Set([
+    "ai-business-automation",
+    "inventory-pos-system",
+    "hegrix-retail360",
+    "real-estate-software-solutions",
+  ]);
+
+  return solutionPages
+    .filter((page) => !staticSolutionSlugs.has(page.slug))
+    .map((page) => ({
+      params: { slug: page.slug },
+      props: { page },
+    }));
 }
 
 const { page } = Astro.props;

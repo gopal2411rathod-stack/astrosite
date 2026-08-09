@@ -64,13 +64,18 @@ const schemaData = [
     })),
   },
 ];
+interface Props {
+  path?: string;
+}
+
+const { path = Astro.url.pathname } = Astro.props;
 ---
 
 <Layout
   title="Real Estate Software Solutions | Enterprise ERP & CRM for Developers & Builders"
   description="Transform your real estate business with our intelligent B2B SaaS platform. Manage properties, leads, sales CRM, rentals, construction projects, and financial reports."
   keywords="Real Estate Software Solutions, Real Estate ERP, Real Estate CRM, Property Management Software, Real Estate Builder Software, Tenant Management System, Real Estate Sales Pipeline"
-  path="/real-estate-software-solutions/"
+  path={path}
   schema={schemaData}
 >
   <div class="re-wrapper">

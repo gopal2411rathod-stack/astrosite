@@ -1,0 +1,2920 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export const prerender = true;
+
+const faqList = [
+  {
+    question: "What is custom software development?",
+    answer: "Custom software development is designing, building, deploying, and maintaining software tailored specifically to meet your organization's unique processes, workflows, and goals—unlike off-the-shelf software designed for generic mass-market use."
+  },
+  {
+    question: "How much does custom software development cost?",
+    answer: "Costs depend on project scope, architectural complexity, and technical depth. A focused MVP or web app ranges from $15k to $45k, while complex enterprise platforms range from $50k to $150k+. Hegrix provides transparent, fixed proposals or squad pricing."
+  },
+  {
+    question: "How long does custom software development take?",
+    answer: "Targeted workflow apps take 6 to 10 weeks, while comprehensive enterprise platforms take 3 to 6 months. Hegrix uses agile 2-week release cycles so you see working builds from month one."
+  },
+  {
+    question: "Why choose custom software instead of SaaS?",
+    answer: "Custom software provides 100% IP ownership, total operational control, zero recurring per-user SaaS fees, flawless API integration, and unconstrained scalability tailored to your precise business needs."
+  },
+  {
+    question: "Can Hegrix integrate custom software with existing systems?",
+    answer: "Yes. We build custom API connectors for ERPs (Odoo, SAP, NetSuite), CRMs (Salesforce, HubSpot), legacy databases, payment gateways, and third-party SaaS tools without operational disruption."
+  },
+  {
+    question: "Can you modernize legacy software?",
+    answer: "Yes. We refactor monolithic codebases into cloud-native microservices, migrate legacy databases, rewrite outdated frontends, and implement modern security standards while preserving business data."
+  },
+  {
+    question: "Can you add AI to existing software?",
+    answer: "Yes. Hegrix embeds AI capabilities like natural language search, automated document processing, predictive analytics, and intelligent routing bots directly into existing web applications via APIs."
+  },
+  {
+    question: "Do you provide software maintenance and support?",
+    answer: "Yes. We offer 24/7 post-deployment SLA support, infrastructure monitoring, security updates, database tuning, and feature upgrades to ensure continuous uptime and performance."
+  }
+];
+
+const schemaData = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Custom Software Development Services | Hegrix",
+    provider: {
+      "@type": "Organization",
+      name: "Hegrix",
+      url: "https://hegrix.com"
+    },
+    areaServed: "Global",
+    serviceType: "Custom Software Development, Enterprise Software Engineering, SaaS Product Development, Legacy Modernization",
+    description: "Build scalable, secure, and intelligent custom software tailored to your workflows, customers, and business goals with Hegrix.",
+    url: "https://hegrix.com/services/custom-software-development/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqList.map(item => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer
+      }
+    }))
+  }
+];
+---
+
+<Layout
+  title="Custom Software Development Services | Hegrix"
+  description="Build scalable, secure, and intelligent custom software tailored to your workflows, customers, and long-term goals. Enterprise engineering partner."
+  keywords="custom software development, custom software development services, custom software development company, enterprise software development, custom application development, software development services, business software development, AI software development"
+  path="/services/custom-software-development/"
+  schema={schemaData}
+>
+  <div class="csd-wrapper">
+    <!-- ═══════════════════════════════════════
+         1. HERO SECTION (POLISHED & HIGH-IMPACT)
+    ═══════════════════════════════════════ -->
+    <section class="csd-hero">
+      <div class="csd-hero-ambient" aria-hidden="true"></div>
+      <div class="container csd-hero-grid">
+        <div class="csd-hero-content">
+          <div class="csd-badge">
+            <span class="csd-badge-dot"></span>
+            <span>ENTERPRISE CUSTOM SOFTWARE ENGINEERING</span>
+          </div>
+
+          <h1 class="csd-hero-h1">
+            Custom Software Development <br />
+            <span class="csd-gradient-text">Built Around Your Business</span>
+          </h1>
+
+          <p class="csd-hero-lead">
+            Build scalable, secure, and intelligent software tailored to your workflows, customers, and long-term business goals.
+          </p>
+
+          <div class="csd-hero-ctas">
+            <button class="csd-btn csd-btn-primary js-open-lead-modal">
+              <span>Talk to a Software Expert</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <a href="#services-list" class="csd-btn csd-btn-secondary">
+              <span>Explore Our Services</span>
+            </a>
+          </div>
+
+          <div class="csd-hero-trust-bar">
+            <div class="csd-trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Experienced development team</span>
+            </div>
+            <div class="csd-trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Scalable solutions</span>
+            </div>
+            <div class="csd-trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Secure architecture</span>
+            </div>
+            <div class="csd-trust-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>End-to-end development</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom Software Architecture Visual Console -->
+        <div class="csd-hero-visual-card">
+          <div class="csd-console-window">
+            <div class="csd-console-bar">
+              <div class="csd-dots">
+                <span class="dot dot-r"></span>
+                <span class="dot dot-y"></span>
+                <span class="dot dot-g"></span>
+              </div>
+              <div class="csd-console-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                <span>Hegrix System Console v4.8</span>
+              </div>
+              <div class="csd-console-status">
+                <span class="status-indicator"></span>
+                <span>ONLINE</span>
+              </div>
+            </div>
+
+            <div class="csd-console-body">
+              <div class="csd-metrics-row">
+                <div class="csd-metric-box">
+                  <span class="metric-lbl">Microservices</span>
+                  <span class="metric-val">12 Active</span>
+                  <div class="metric-bar"><div class="metric-fill" style="width: 100%;"></div></div>
+                </div>
+                <div class="csd-metric-box">
+                  <span class="metric-lbl">API Throughput</span>
+                  <span class="metric-val">4.2k req/s</span>
+                  <div class="metric-bar"><div class="metric-fill" style="width: 88%;"></div></div>
+                </div>
+                <div class="csd-metric-box">
+                  <span class="metric-lbl">Cloud Latency</span>
+                  <span class="metric-val">18 ms avg</span>
+                  <div class="metric-bar"><div class="metric-fill" style="width: 95%;"></div></div>
+                </div>
+                <div class="csd-metric-box">
+                  <span class="metric-lbl">Security Standard</span>
+                  <span class="metric-val">SOC2 / HIPAA</span>
+                  <div class="metric-bar"><div class="metric-fill green" style="width: 100%;"></div></div>
+                </div>
+              </div>
+
+              <!-- Interactive Architecture Diagram -->
+              <div class="csd-architecture-flow">
+                <div class="arch-node">
+                  <div class="node-svg-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                  </div>
+                  <div class="node-info">
+                    <strong>Custom Frontend</strong>
+                    <small>React / Next.js / Mobile</small>
+                  </div>
+                </div>
+
+                <div class="arch-connector">
+                  <span class="flow-line"></span>
+                  <span class="flow-badge">gRPC / REST</span>
+                </div>
+
+                <div class="arch-node">
+                  <div class="node-svg-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  </div>
+                  <div class="node-info">
+                    <strong>Hegrix Core Engine</strong>
+                    <small>Microservices & Logic</small>
+                  </div>
+                </div>
+
+                <div class="arch-connector">
+                  <span class="flow-line"></span>
+                  <span class="flow-badge">Encrypted</span>
+                </div>
+
+                <div class="arch-node">
+                  <div class="node-svg-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  </div>
+                  <div class="node-info">
+                    <strong>Cloud & AI Cluster</strong>
+                    <small>PostgreSQL / AI Pipelines</small>
+                  </div>
+                </div>
+              </div>
+
+              <div class="csd-console-code">
+                <div class="code-line"><span class="c-purple">import</span> &#123; <span class="c-blue">HegrixEngine</span> &#125; <span class="c-purple">from</span> <span class="c-green">'@hegrix/core'</span>;</div>
+                <div class="code-line"><span class="c-purple">const</span> <span class="c-yellow">app</span> = <span class="c-purple">new</span> <span class="c-blue">HegrixEngine</span>(&#123;</div>
+                <div class="code-line indent">architecture: <span class="c-green">'CloudNativeMicroservices'</span>,</div>
+                <div class="code-line indent">security: [<span class="c-green">'AES-256'</span>, <span class="c-green">'ZeroTrust'</span>, <span class="c-green">'SOC2'</span>],</div>
+                <div class="code-line indent">scalability: <span class="c-green">'AutoScalingKubernetes'</span></div>
+                <div class="code-line">&#125;);</div>
+              </div>
+            </div>
+
+            <div class="csd-console-foot">
+              <span>⚡ 100% Custom Workflow Integration</span>
+              <span>🔒 100% Source Code & IP Ownership</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         2. SECTION 2 — TRUST / SOCIAL PROOF
+    ═══════════════════════════════════════ -->
+    <section class="csd-trust-section">
+      <div class="container">
+        <div class="csd-stats-grid">
+          <div class="csd-stat-card">
+            <span class="stat-num">150+</span>
+            <span class="stat-label">Projects Delivered</span>
+            <span class="stat-sub">Enterprise web, cloud & mobile</span>
+          </div>
+          <div class="csd-stat-card">
+            <span class="stat-num">10+ Yrs</span>
+            <span class="stat-label">Engineering Experience</span>
+            <span class="stat-sub">Senior full-stack architects</span>
+          </div>
+          <div class="csd-stat-card">
+            <span class="stat-num">12+</span>
+            <span class="stat-label">Industries Served</span>
+            <span class="stat-sub">FinTech, Healthcare & Logistics</span>
+          </div>
+          <div class="csd-stat-card">
+            <span class="stat-num">99.9%</span>
+            <span class="stat-label">Production SLA Uptime</span>
+            <span class="stat-sub">High-availability cloud nodes</span>
+          </div>
+          <div class="csd-stat-card">
+            <span class="stat-num">25+</span>
+            <span class="stat-label">Tech Stacks</span>
+            <span class="stat-sub">Frontend, backend, AI & DevOps</span>
+          </div>
+        </div>
+
+        <div class="csd-logo-strip-title">TRUSTED ENGINEERING PARTNER FOR FORWARD-THINKING ENTERPRISES</div>
+        <div class="csd-logo-pills">
+          <div class="csd-logo-pill">Retail & E-commerce</div>
+          <div class="csd-logo-pill">FinTech & Banking</div>
+          <div class="csd-logo-pill">Healthcare & MedTech</div>
+          <div class="csd-logo-pill">Supply Chain & Logistics</div>
+          <div class="csd-logo-pill">SaaS & B2B Tech</div>
+          <div class="csd-logo-pill">Manufacturing & ERP</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         3. SECTION 3 — WHAT IS CUSTOM SOFTWARE DEVELOPMENT?
+    ═══════════════════════════════════════ -->
+    <section class="csd-section csd-what-is">
+      <div class="container">
+        <div class="csd-section-head text-center">
+          <span class="csd-eyebrow">Strategic Advantage</span>
+          <h2 class="csd-h2">What is Custom Software Development?</h2>
+          <p class="csd-lead">
+            Off-the-shelf software forces your business to adapt its operating model to rigid third-party constraints. <strong>Custom software development</strong> engineers digital platforms tailored specifically around your unique business workflows, data models, and competitive edge.
+          </p>
+        </div>
+
+        <div class="csd-benefits-grid">
+          <!-- Benefit 1 -->
+          <div class="csd-benefit-card">
+            <div class="b-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            </div>
+            <h3>Built Around Specific Workflows</h3>
+            <p>Designed to fit your exact operational logic, eliminating manual workarounds and forced SaaS compromises.</p>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="csd-benefit-card">
+            <div class="b-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+            </div>
+            <h3>Greater Flexibility</h3>
+            <p>Modify, scale, and add features whenever your market evolves without waiting for vendor roadmaps.</p>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="csd-benefit-card">
+            <div class="b-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </div>
+            <h3>Better System Integrations</h3>
+            <p>Connect seamlessly with your existing ERPs, CRMs, legacy databases, and third-party APIs with custom connectors.</p>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="csd-benefit-card">
+            <div class="b-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <h3>Unconstrained Scalability</h3>
+            <p>Architected for high user concurrency, heavy data pipelines, and multi-region deployment as you grow.</p>
+          </div>
+
+          <!-- Benefit 5 -->
+          <div class="csd-benefit-card">
+            <div class="b-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </div>
+            <h3>Improved Automation</h3>
+            <p>Automate repetitive administrative tasks, complex reporting, document parsing, and operational routing.</p>
+          </div>
+
+          <!-- Benefit 6 -->
+          <div class="csd-benefit-card">
+            <div class="b-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Enterprise Security</h3>
+            <p>Enforce strict role-based access control (RBAC), end-to-end encryption, SOC2, and HIPAA compliance standards.</p>
+          </div>
+
+          <!-- Benefit 7 -->
+          <div class="csd-benefit-card">
+            <div class="b-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Better User Experience</h3>
+            <p>Provide sleek, intuitive UX/UI for internal employees and external customers, driving higher adoption.</p>
+          </div>
+
+          <!-- Benefit 8 -->
+          <div class="csd-benefit-card">
+            <div class="b-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3>100% Long-Term Ownership</h3>
+            <p>You own 100% of the IP and source code. Zero recurring per-user SaaS license fees holding back margins.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         4. SECTION 4 — CUSTOM SOFTWARE DEVELOPMENT SERVICES
+    ═══════════════════════════════════════ -->
+    <section id="services-list" class="csd-section csd-services-section soft-section">
+      <div class="container">
+        <div class="csd-section-head text-center">
+          <span class="csd-eyebrow">End-to-End Capabilities</span>
+          <h2 class="csd-h2">Custom Software Development Services</h2>
+          <p class="csd-lead">
+            Hegrix designs, architects, builds, and maintains custom software solutions that drive measurable business performance.
+          </p>
+        </div>
+
+        <div class="csd-services-grid">
+          <!-- Card 1 -->
+          <div class="csd-service-card">
+            <div class="s-card-top">
+              <div class="s-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <span class="s-card-tag">Web Platforms</span>
+            </div>
+            <h3>Custom Web Applications</h3>
+            <p>High-performance, responsive web applications engineered with modern frontend frameworks, cloud microservices, and secure backends.</p>
+            <ul class="s-bullet-list">
+              <li>SPA & PWA architecture</li>
+              <li>Real-time data synchronization</li>
+              <li>Intuitive dashboard design</li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="csd-service-card">
+            <div class="s-card-top">
+              <div class="s-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><line x1="9" y1="6" x2="9.01" y2="6"/><line x1="15" y1="6" x2="15.01" y2="6"/><line x1="9" y1="10" x2="9.01" y2="10"/><line x1="15" y1="10" x2="15.01" y2="10"/><line x1="9" y1="14" x2="9.01" y2="14"/><line x1="15" y1="14" x2="15.01" y2="14"/></svg>
+              </div>
+              <span class="s-card-tag">Enterprise Tech</span>
+            </div>
+            <h3>Enterprise Software Development</h3>
+            <p>Robust, mission-critical software systems designed to streamline multi-department operations, compliance, and large data workflows.</p>
+            <ul class="s-bullet-list">
+              <li>Role-based access control (RBAC)</li>
+              <li>High-concurrency database engine</li>
+              <li>Enterprise security & auditing</li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="csd-service-card">
+            <div class="s-card-top">
+              <div class="s-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+              </div>
+              <span class="s-card-tag">SaaS Growth</span>
+            </div>
+            <h3>SaaS Product Development</h3>
+            <p>Turn your product vision into a scalable, multi-tenant SaaS platform complete with subscription management and tenant isolation.</p>
+            <ul class="s-bullet-list">
+              <li>Multi-tenant architecture</li>
+              <li>Stripe / Billing integrations</li>
+              <li>Self-service customer onboarding</li>
+            </ul>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="csd-service-card">
+            <div class="s-card-top">
+              <div class="s-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              </div>
+              <span class="s-card-tag">Cross-Platform</span>
+            </div>
+            <h3>Mobile Application Development</h3>
+            <p>Native iOS, Android, and cross-platform mobile apps for field staff, customer portals, on-the-go management, and IoT device control.</p>
+            <ul class="s-bullet-list">
+              <li>React Native & Flutter builds</li>
+              <li>Offline data sync & push alerts</li>
+              <li>Biometric & secure authentication</li>
+            </ul>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="csd-service-card">
+            <div class="s-card-top">
+              <div class="s-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <span class="s-card-tag">Efficiency</span>
+            </div>
+            <h3>Business Automation Software</h3>
+            <p>Custom software designed to eliminate manual data entry, automate repetitive approvals, route documents, and optimize velocity.</p>
+            <ul class="s-bullet-list">
+              <li>Automated approval workflows</li>
+              <li>Document processing & parsing</li>
+              <li>Operational bottleneck reduction</li>
+            </ul>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="csd-service-card">
+            <div class="s-card-top">
+              <div class="s-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <span class="s-card-tag">Integrations</span>
+            </div>
+            <h3>API & System Integration</h3>
+            <p>Bridge fragmented business applications. We build secure REST, GraphQL, and gRPC APIs to connect ERPs, CRMs, and databases.</p>
+            <ul class="s-bullet-list">
+              <li>Bi-directional data sync</li>
+              <li>Legacy to cloud API wrappers</li>
+              <li>Webhooks & event streaming</li>
+            </ul>
+          </div>
+
+          <!-- Card 7 -->
+          <div class="csd-service-card">
+            <div class="s-card-top">
+              <div class="s-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </div>
+              <span class="s-card-tag">Intelligence</span>
+            </div>
+            <h3>AI-Powered Software Development</h3>
+            <p>Embed artificial intelligence, LLM knowledge retrieval, natural language processing, and predictive machine learning models into software.</p>
+            <ul class="s-bullet-list">
+              <li>Custom AI agent workflows</li>
+              <li>Predictive data analytics</li>
+              <li>Automated NLP search engines</li>
+            </ul>
+          </div>
+
+          <!-- Card 8 -->
+          <div class="csd-service-card">
+            <div class="s-card-top">
+              <div class="s-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+              </div>
+              <span class="s-card-tag">Modernization</span>
+            </div>
+            <h3>Legacy Software Modernization</h3>
+            <p>Transform aging, rigid monolithic systems into cloud-native microservices with upgraded UX, security, and zero data loss.</p>
+            <ul class="s-bullet-list">
+              <li>Monolith to microservices refactoring</li>
+              <li>UI/UX frontend overhaul</li>
+              <li>Database migration & normalization</li>
+            </ul>
+          </div>
+
+          <!-- Card 9 -->
+          <div class="csd-service-card">
+            <div class="s-card-top">
+              <div class="s-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+              </div>
+              <span class="s-card-tag">Cloud Native</span>
+            </div>
+            <h3>Cloud Application Development</h3>
+            <p>Cloud-first architecture engineered on AWS, Azure, or GCP for elastic scaling, serverless deployment, and continuous uptime.</p>
+            <ul class="s-bullet-list">
+              <li>Serverless & containerized builds</li>
+              <li>Docker & Kubernetes management</li>
+              <li>Automated CI/CD deployment pipelines</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         5. SECTION 5 — SOFTWARE WE BUILD
+    ═══════════════════════════════════════ -->
+    <section class="csd-section csd-software-types">
+      <div class="container">
+        <div class="csd-section-head text-center">
+          <span class="csd-eyebrow">Solutions Portfolio</span>
+          <h2 class="csd-h2">Types of Custom Software We Build</h2>
+          <p class="csd-lead">
+            From operational backbones to customer-facing SaaS platforms, Hegrix builds tailored software designed for specific business models.
+          </p>
+        </div>
+
+        <div class="csd-types-matrix">
+          <div class="type-box">
+            <div class="t-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h4>Enterprise Platforms</h4>
+            <p>Comprehensive operational platforms connecting core business units, inventory, sales, and executive reporting.</p>
+          </div>
+
+          <div class="type-box">
+            <div class="t-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h4>Customer Portals</h4>
+            <p>Secure self-service client portals for account management, invoicing, order tracking, and support ticketing.</p>
+          </div>
+
+          <div class="type-box">
+            <div class="t-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            </div>
+            <h4>Internal Applications</h4>
+            <p>Custom tools designed for internal team efficiency, field worker management, and specialized operational workflows.</p>
+          </div>
+
+          <div class="type-box">
+            <div class="t-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            </div>
+            <h4>SaaS Platforms</h4>
+            <p>Multi-tenant web products built for monetization with subscription tiers, user roles, and scalable infrastructure.</p>
+          </div>
+
+          <div class="type-box">
+            <div class="t-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h4>CRM & ERP Solutions</h4>
+            <p>Tailored customer management and resource planning systems built from scratch or customized on open enterprise engines.</p>
+          </div>
+
+          <div class="type-box">
+            <div class="t-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <h4>Workflow Automation</h4>
+            <p>Automation hubs that connect disparate tools, eliminate manual data entry, and streamline cross-team handoffs.</p>
+          </div>
+
+          <div class="type-box">
+            <div class="t-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <h4>E-commerce Systems</h4>
+            <p>Custom storefronts, B2B wholesale portals, custom cart logic, and high-concurrency commerce backends.</p>
+          </div>
+
+          <div class="type-box">
+            <div class="t-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>
+            </div>
+            <h4>AI-Powered Apps</h4>
+            <p>Intelligent software featuring automated document extraction, predictive modeling, and conversational AI assistants.</p>
+          </div>
+
+          <div class="type-box">
+            <div class="t-icon-svg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+            </div>
+            <h4>Data & Analytics Hubs</h4>
+            <p>Real-time analytics dashboards, business intelligence platforms, and data warehousing visualization tools.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         6. SECTION 6 — OUR DEVELOPMENT PROCESS
+    ═══════════════════════════════════════ -->
+    <section class="csd-section csd-process-section soft-section">
+      <div class="container">
+        <div class="csd-section-head text-center">
+          <span class="csd-eyebrow">Proven Methodology</span>
+          <h2 class="csd-h2">From Idea to Scalable Software</h2>
+          <p class="csd-lead">
+            Our structured 7-step engineering process ensures transparent communication, risk mitigation, fast releases, and enterprise quality at every stage.
+          </p>
+        </div>
+
+        <div class="csd-process-interactive" id="processInteractive">
+          <!-- Step Nav Pills -->
+          <div class="csd-process-nav">
+            <button class="csd-p-tab active" data-step="1">
+              <span class="p-num">01</span>
+              <span class="p-title">Discover</span>
+            </button>
+            <button class="csd-p-tab" data-step="2">
+              <span class="p-num">02</span>
+              <span class="p-title">Plan</span>
+            </button>
+            <button class="csd-p-tab" data-step="3">
+              <span class="p-num">03</span>
+              <span class="p-title">Design</span>
+            </button>
+            <button class="csd-p-tab" data-step="4">
+              <span class="p-num">04</span>
+              <span class="p-title">Develop</span>
+            </button>
+            <button class="csd-p-tab" data-step="5">
+              <span class="p-num">05</span>
+              <span class="p-title">Test</span>
+            </button>
+            <button class="csd-p-tab" data-step="6">
+              <span class="p-num">06</span>
+              <span class="p-title">Launch</span>
+            </button>
+            <button class="csd-p-tab" data-step="7">
+              <span class="p-num">07</span>
+              <span class="p-title">Scale</span>
+            </button>
+          </div>
+
+          <!-- Step Display Cards -->
+          <div class="csd-process-content-wrapper">
+            <!-- Step 1 -->
+            <div class="csd-p-panel active" id="p-panel-1">
+              <div class="p-panel-left">
+                <span class="p-step-badge">Phase 01 — Discovery Sprint</span>
+                <h3>Understand the Business Problem, Users & Goals</h3>
+                <p>We perform in-depth stakeholder interviews, map operational workflows, identify technical bottlenecks, and define precise project goals and success metrics before writing code.</p>
+                <div class="p-outputs">
+                  <strong>Key Deliverables:</strong>
+                  <span>Requirements Specifications</span>
+                  <span>User Persona Mapping</span>
+                  <span>Feature Prioritization Matrix</span>
+                </div>
+              </div>
+              <div class="p-panel-right">
+                <div class="p-stat-box">
+                  <span class="p-highlight">100% Scope Clarity</span>
+                  <span>Eliminates ambiguity before technical kickoff</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="csd-p-panel" id="p-panel-2">
+              <div class="p-panel-left">
+                <span class="p-step-badge">Phase 02 — Product Strategy & Architecture</span>
+                <h3>Define Strategy, Architecture & Technology Roadmap</h3>
+                <p>Our solutions architects design system architecture, database schemas, API contracts, security compliance protocols, and sprint milestones tailored to your goals.</p>
+                <div class="p-outputs">
+                  <strong>Key Deliverables:</strong>
+                  <span>System Architecture Diagram</span>
+                  <span>Tech Stack Selection</span>
+                  <span>Milestone Roadmap & Sprints</span>
+                </div>
+              </div>
+              <div class="p-panel-right">
+                <div class="p-stat-box">
+                  <span class="p-highlight">Cloud-Native</span>
+                  <span>Future-proof database & microservices layout</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="csd-p-panel" id="p-panel-3">
+              <div class="p-panel-left">
+                <span class="p-step-badge">Phase 03 — UI/UX Experience Design</span>
+                <h3>Create Intuitive UX/UI & Validate Product Experience</h3>
+                <p>We build interactive wireframes and modern high-fidelity UI prototypes. We test user flows to ensure intuitive navigation and seamless employee or customer adoption.</p>
+                <div class="p-outputs">
+                  <strong>Key Deliverables:</strong>
+                  <span>Figma Interactive Prototypes</span>
+                  <span>UI Component Design System</span>
+                  <span>User Journey Validation</span>
+                </div>
+              </div>
+              <div class="p-panel-right">
+                <div class="p-stat-box">
+                  <span class="p-highlight">Clickable Prototype</span>
+                  <span>Experience your exact app before development</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="csd-p-panel" id="p-panel-4">
+              <div class="p-panel-left">
+                <span class="p-step-badge">Phase 04 — Agile Development Sprints</span>
+                <h3>Build Secure, Scalable & Maintainable Software</h3>
+                <p>Using 2-week agile sprints, our senior engineers write clean, tested frontend and backend code with continuous integration and automated deployments (CI/CD).</p>
+                <div class="p-outputs">
+                  <strong>Key Deliverables:</strong>
+                  <span>Bi-Weekly Working Demos</span>
+                  <span>Clean API Specifications</span>
+                  <span>100% IP Code Ownership</span>
+                </div>
+              </div>
+              <div class="p-panel-right">
+                <div class="p-stat-box">
+                  <span class="p-highlight">2-Week Sprints</span>
+                  <span>Continuous visibility into progress and code</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="csd-p-panel" id="p-panel-5">
+              <div class="p-panel-left">
+                <span class="p-step-badge">Phase 05 — Quality Assurance & Testing</span>
+                <h3>Functional, Performance, Security & Usability Testing</h3>
+                <p>Dedicated QA engineers perform rigorous functional testing, stress testing for high traffic load, vulnerability scanning, and cross-browser/device validation.</p>
+                <div class="p-outputs">
+                  <strong>Key Deliverables:</strong>
+                  <span>Security Audit & Vulnerability Pass</span>
+                  <span>Load & Concurrency Benchmarks</span>
+                  <span>User Acceptance Testing (UAT)</span>
+                </div>
+              </div>
+              <div class="p-panel-right">
+                <div class="p-stat-box">
+                  <span class="p-highlight">Zero Critical Defects</span>
+                  <span>Guaranteed stability prior to deployment</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="csd-p-panel" id="p-panel-6">
+              <div class="p-panel-left">
+                <span class="p-step-badge">Phase 06 — Production Launch</span>
+                <h3>Deploy the Solution & Monitor Live Performance</h3>
+                <p>We execute zero-downtime production deployment, configure live cloud server monitoring, migrate production data, and ensure smooth post-launch operations.</p>
+                <div class="p-outputs">
+                  <strong>Key Deliverables:</strong>
+                  <span>Zero-Downtime Deployment</span>
+                  <span>Data Migration Validation</span>
+                  <span>Production Telemetry Setup</span>
+                </div>
+              </div>
+              <div class="p-panel-right">
+                <div class="p-stat-box">
+                  <span class="p-highlight">Seamless Launch</span>
+                  <span>Complete operational readiness and team handoff</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 7 -->
+            <div class="csd-p-panel" id="p-panel-7">
+              <div class="p-panel-left">
+                <span class="p-step-badge">Phase 07 — Continuous Scale & Support</span>
+                <h3>Provide Optimization, Maintenance & Ongoing Upgrades</h3>
+                <p>Post-launch, Hegrix offers ongoing 24/7 SLA maintenance, server optimization, third-party integration upgrades, and new feature enhancement iterations.</p>
+                <div class="p-outputs">
+                  <strong>Key Deliverables:</strong>
+                  <span>24/7 SLA Maintenance</span>
+                  <span>Database Tuning & Backups</span>
+                  <span>Feature Iteration Sprints</span>
+                </div>
+              </div>
+              <div class="p-panel-right">
+                <div class="p-stat-box">
+                  <span class="p-highlight">Long-Term Partner</span>
+                  <span>Software that grows continuously with your business</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         7. SECTION 7 — TECHNOLOGY STACK
+    ═══════════════════════════════════════ -->
+    <section class="csd-section csd-tech-stack">
+      <div class="container">
+        <div class="csd-section-head text-center">
+          <span class="csd-eyebrow">Enterprise Stack</span>
+          <h2 class="csd-h2">Technology That Powers Scalable Software</h2>
+          <p class="csd-lead">
+            We use modern, battle-tested programming languages, frameworks, cloud infrastructures, and databases to build high-performance software.
+          </p>
+        </div>
+
+        <div class="csd-tech-categories">
+          <!-- Frontend -->
+          <div class="csd-tech-cat">
+            <div class="cat-header">
+              <div class="cat-svg-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3>Frontend</h3>
+            </div>
+            <div class="cat-tags">
+              <span>React</span>
+              <span>Next.js</span>
+              <span>Vue.js</span>
+              <span>TypeScript</span>
+              <span>Tailwind CSS</span>
+              <span>Astro</span>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="csd-tech-cat">
+            <div class="cat-header">
+              <div class="cat-svg-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+              </div>
+              <h3>Backend</h3>
+            </div>
+            <div class="cat-tags">
+              <span>Node.js</span>
+              <span>Python (FastAPI)</span>
+              <span>Go (Golang)</span>
+              <span>Java</span>
+              <span>Laravel</span>
+              <span>GraphQL / REST</span>
+            </div>
+          </div>
+
+          <!-- Mobile -->
+          <div class="csd-tech-cat">
+            <div class="cat-header">
+              <div class="cat-svg-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              </div>
+              <h3>Mobile</h3>
+            </div>
+            <div class="cat-tags">
+              <span>React Native</span>
+              <span>Flutter</span>
+              <span>Swift (iOS)</span>
+              <span>Kotlin (Android)</span>
+              <span>PWA</span>
+            </div>
+          </div>
+
+          <!-- Cloud & Infrastructure -->
+          <div class="csd-tech-cat">
+            <div class="cat-header">
+              <div class="cat-svg-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+              </div>
+              <h3>Cloud</h3>
+            </div>
+            <div class="cat-tags">
+              <span>AWS</span>
+              <span>Google Cloud (GCP)</span>
+              <span>Microsoft Azure</span>
+              <span>Vercel / Cloudflare</span>
+              <span>Serverless</span>
+            </div>
+          </div>
+
+          <!-- Databases -->
+          <div class="csd-tech-cat">
+            <div class="cat-header">
+              <div class="cat-svg-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+              </div>
+              <h3>Databases</h3>
+            </div>
+            <div class="cat-tags">
+              <span>PostgreSQL</span>
+              <span>MongoDB</span>
+              <span>Redis</span>
+              <span>MySQL</span>
+              <span>Elasticsearch</span>
+              <span>Pinecone</span>
+            </div>
+          </div>
+
+          <!-- AI & ML -->
+          <div class="csd-tech-cat">
+            <div class="cat-header">
+              <div class="cat-svg-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+              </div>
+              <h3>AI & Machine Learning</h3>
+            </div>
+            <div class="cat-tags">
+              <span>OpenAI API</span>
+              <span>PyTorch</span>
+              <span>TensorFlow</span>
+              <span>LangChain</span>
+              <span>Custom RAG</span>
+            </div>
+          </div>
+
+          <!-- DevOps -->
+          <div class="csd-tech-cat">
+            <div class="cat-header">
+              <div class="cat-svg-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+              </div>
+              <h3>DevOps & Security</h3>
+            </div>
+            <div class="cat-tags">
+              <span>Docker</span>
+              <span>Kubernetes</span>
+              <span>GitHub Actions</span>
+              <span>Terraform</span>
+              <span>Datadog</span>
+            </div>
+          </div>
+
+          <!-- Integrations -->
+          <div class="csd-tech-cat">
+            <div class="cat-header">
+              <div class="cat-svg-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+              </div>
+              <h3>Integrations</h3>
+            </div>
+            <div class="cat-tags">
+              <span>Stripe / PayPal</span>
+              <span>Odoo / SAP</span>
+              <span>Salesforce</span>
+              <span>Twilio / SendGrid</span>
+              <span>Webhooks</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         8. SECTION 8 — INDUSTRIES
+    ═══════════════════════════════════════ -->
+    <section class="csd-section csd-industries soft-section">
+      <div class="container">
+        <div class="csd-section-head text-center">
+          <span class="csd-eyebrow">Domain Expertise</span>
+          <h2 class="csd-h2">Custom Software Across Industries</h2>
+          <p class="csd-lead">
+            We understand industry-specific regulatory constraints, data standards, and operational models.
+          </p>
+        </div>
+
+        <div class="csd-ind-grid">
+          <div class="ind-card">
+            <div class="ind-svg-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </div>
+            <h3>Retail</h3>
+            <p>Omnichannel POS, multi-location inventory sync, customer loyalty platforms, and unified commerce engines.</p>
+          </div>
+
+          <div class="ind-card">
+            <div class="ind-svg-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+            </div>
+            <h3>Manufacturing</h3>
+            <p>Custom MES (Manufacturing Execution Systems), production scheduling, IoT telemetry, and quality control software.</p>
+          </div>
+
+          <div class="ind-card">
+            <div class="ind-svg-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3>Healthcare</h3>
+            <p>HIPAA-compliant patient portals, EHR/EMR integrations, Telehealth platforms, and automated medical billing.</p>
+          </div>
+
+          <div class="ind-card">
+            <div class="ind-svg-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3>Logistics</h3>
+            <p>Warehouse management systems (WMS), fleet tracking portals, route optimization tools, and automated dispatching.</p>
+          </div>
+
+          <div class="ind-card">
+            <div class="ind-svg-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <h3>E-commerce</h3>
+            <p>High-volume custom storefronts, subscription engines, marketplace vendor portals, and automated fulfillment.</p>
+          </div>
+
+          <div class="ind-card">
+            <div class="ind-svg-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+            </div>
+            <h3>Finance</h3>
+            <p>FinTech portals, loan underwriting workflows, automated fraud detection pipelines, and PCI-DSS checkout engines.</p>
+          </div>
+
+          <div class="ind-card">
+            <div class="ind-svg-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <h3>Professional Services</h3>
+            <p>Custom CRM systems, project portals, document signing workflows, and automated client billing dashboards.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         9. SECTION 9 — WHY HEGRIX
+    ═══════════════════════════════════════ -->
+    <section class="csd-section csd-why-hegrix">
+      <div class="container">
+        <div class="csd-section-head text-center">
+          <span class="csd-eyebrow">The Hegrix Advantage</span>
+          <h2 class="csd-h2">Why Businesses Choose Hegrix</h2>
+          <p class="csd-lead">
+            We combine strategic business consulting with high-caliber software engineering to deliver real bottom-line ROI.
+          </p>
+        </div>
+
+        <div class="csd-why-grid">
+          <div class="why-card">
+            <div class="w-svg-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <h3>Business-First Approach</h3>
+            <p>We analyze revenue metrics and operating costs first, ensuring technical architecture directly serves commercial goals.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="w-svg-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+            </div>
+            <h3>Custom Architecture</h3>
+            <p>No cookie-cutter templates. We architect clean, modular codebases that handle high traffic volume and complex enterprise data.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="w-svg-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Security-Focused Development</h3>
+            <p>Enterprise-grade security embedded into every layer—from role-based permissions to end-to-end data encryption.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="w-svg-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Experienced Engineering Squads</h3>
+            <p>Direct access to senior software architects, full-stack developers, and QA engineers with years of enterprise delivery experience.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="w-svg-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3>Transparent Communication</h3>
+            <p>Regular sprint demos, dedicated Slack/Teams communication channels, and clear milestone progress tracking.</p>
+          </div>
+
+          <div class="why-card">
+            <div class="w-svg-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>End-to-End Delivery</h3>
+            <p>From initial discovery and UI/UX design to cloud deployment, data migration, user training, and continuous support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         10. SECTION 10 — CASE STUDIES
+    ═══════════════════════════════════════ -->
+    <section class="csd-section csd-case-studies soft-section">
+      <div class="container">
+        <div class="csd-section-head text-center">
+          <span class="csd-eyebrow">Real Impact</span>
+          <h2 class="csd-h2">Featured Case Studies</h2>
+          <p class="csd-lead">
+            See how Hegrix builds custom software solutions that solve complex operational problems and drive enterprise expansion.
+          </p>
+        </div>
+
+        <div class="csd-case-grid">
+          <!-- Case 1 -->
+          <div class="csd-case-card">
+            <div class="case-badge">Logistics & Supply Chain</div>
+            <h3>Global Logistics Workflow & Fleet Automation Engine</h3>
+
+            <div class="case-block">
+              <strong>Challenge:</strong>
+              <p>Legacy manual dispatching created delivery delays, invoice errors, and high overhead across 15 distribution centers.</p>
+            </div>
+
+            <div class="case-block">
+              <strong>Solution:</strong>
+              <p>Hegrix engineered a custom cloud logistics platform featuring automated route dispatching, driver tracking, and ERP integration.</p>
+            </div>
+
+            <div class="case-tech">
+              <span>Node.js</span>
+              <span>React</span>
+              <span>PostgreSQL</span>
+              <span>AWS</span>
+            </div>
+
+            <div class="case-impact">
+              <div class="impact-item">
+                <span class="imp-val">74%</span>
+                <span class="imp-lbl">Reduction in Dispatch Hours</span>
+              </div>
+              <div class="impact-item">
+                <span class="imp-val">99.8%</span>
+                <span class="imp-lbl">On-Time Delivery Rate</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 2 -->
+          <div class="csd-case-card">
+            <div class="case-badge">FinTech & Banking</div>
+            <h3>B2B Commercial Loan Processing & Risk Portal</h3>
+
+            <div class="case-block">
+              <strong>Challenge:</strong>
+              <p>Loan underwriting was constrained by fragmented third-party SaaS tools, slow document parsing, and manual credit evaluation.</p>
+            </div>
+
+            <div class="case-block">
+              <strong>Solution:</strong>
+              <p>Built a custom financial portal with automated document parsing, credit scoring pipelines, and bank core API connectors.</p>
+            </div>
+
+            <div class="case-tech">
+              <span>Python (FastAPI)</span>
+              <span>Next.js</span>
+              <span>AI Extraction</span>
+              <span>Docker</span>
+            </div>
+
+            <div class="case-impact">
+              <div class="impact-item">
+                <span class="imp-val">5x</span>
+                <span class="imp-lbl">Faster Underwriting Speed</span>
+              </div>
+              <div class="impact-item">
+                <span class="imp-val">100%</span>
+                <span class="imp-lbl">Compliance Audit Approval</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 3 -->
+          <div class="csd-case-card">
+            <div class="case-badge">Healthcare & MedTech</div>
+            <h3>HIPAA-Compliant Patient Portal & Telehealth Platform</h3>
+
+            <div class="case-block">
+              <strong>Challenge:</strong>
+              <p>A growing healthcare network needed a unified custom platform to manage appointments, encrypted video calls, and EHR records.</p>
+            </div>
+
+            <div class="case-block">
+              <strong>Solution:</strong>
+              <p>Hegrix developed a custom WebRTC video consultation app connected directly to their EHR engine with role-based staff access.</p>
+            </div>
+
+            <div class="case-tech">
+              <span>React Native</span>
+              <span>WebRTC</span>
+              <span>PostgreSQL</span>
+              <span>HIPAA Cloud</span>
+            </div>
+
+            <div class="case-impact">
+              <div class="impact-item">
+                <span class="imp-val">40k+</span>
+                <span class="imp-lbl">Active Monthly Patients</span>
+              </div>
+              <div class="impact-item">
+                <span class="imp-val">99.9%</span>
+                <span class="imp-lbl">Telehealth Uptime SLA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         11. SECTION 11 — CUSTOM VS OFF-THE-SHELF SOFTWARE
+    ═══════════════════════════════════════ -->
+    <section class="csd-section csd-comparison">
+      <div class="container">
+        <div class="csd-section-head text-center">
+          <span class="csd-eyebrow">Strategic Decision</span>
+          <h2 class="csd-h2">Custom Software vs. Off-the-Shelf Software</h2>
+          <p class="csd-lead">
+            Understand how custom software engineering compares to commercial off-the-shelf products across critical business dimensions.
+          </p>
+        </div>
+
+        <div class="csd-table-wrapper">
+          <table class="csd-comp-table">
+            <thead>
+              <tr>
+                <th>Evaluation Factor</th>
+                <th class="col-custom">Custom Software (Hegrix)</th>
+                <th class="col-ots">Off-the-Shelf Software</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Flexibility & Fit</strong></td>
+                <td class="col-custom">✓ Built 100% around your exact business workflows</td>
+                <td class="col-ots">✕ Generic features requiring manual workarounds</td>
+              </tr>
+              <tr>
+                <td><strong>IP & Code Ownership</strong></td>
+                <td class="col-custom">✓ You own 100% of IP, source code, and data assets</td>
+                <td class="col-ots">✕ Vendor owns software; you rent access on monthly licenses</td>
+              </tr>
+              <tr>
+                <td><strong>Long-Term Cost Structure</strong></td>
+                <td class="col-custom">✓ Fixed initial build; zero per-user recurring license fees</td>
+                <td class="col-ots">✕ Ever-increasing per-seat SaaS costs as team scales</td>
+              </tr>
+              <tr>
+                <td><strong>System Integrations</strong></td>
+                <td class="col-custom">✓ Unlimited API connectors to any existing system or database</td>
+                <td class="col-ots">✕ Limited to pre-built third-party plugin stores</td>
+              </tr>
+              <tr>
+                <td><strong>Competitive Advantage</strong></td>
+                <td class="col-custom">✓ Proprietary software feature set your competitors cannot copy</td>
+                <td class="col-ots">✕ Using the exact same tools and workflows as competitors</td>
+              </tr>
+              <tr>
+                <td><strong>Scalability & Performance</strong></td>
+                <td class="col-custom">✓ Architected specifically for your traffic and data growth</td>
+                <td class="col-ots">✕ Bound by multi-tenant server shared resource throttling</td>
+              </tr>
+              <tr>
+                <td><strong>Security & Compliance</strong></td>
+                <td class="col-custom">✓ Custom security protocols, private cloud DB, SOC2/HIPAA ready</td>
+                <td class="col-ots">✕ Shared cloud security model with generic permissions</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         12. SECTION 12 — FAQ (COMPACT 2-COLUMN DESIGN)
+    ═══════════════════════════════════════ -->
+    <section class="csd-faq-section-compact soft-section">
+      <div class="container">
+        <div class="csd-faq-head-compact text-center">
+          <span class="csd-eyebrow">Clear Answers</span>
+          <h2 class="csd-h2">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="csd-faq-grid-2col" id="faqAccordion">
+          {faqList.map((item, idx) => (
+            <details class="csd-faq-card-compact" open={idx === 0}>
+              <summary class="csd-faq-sum">
+                <span>{item.question}</span>
+                <span class="faq-icon-toggle">+</span>
+              </summary>
+              <div class="csd-faq-body">
+                <p>{item.answer}</p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         13. SECTION 13 — FINAL CTA
+    ═══════════════════════════════════════ -->
+    <section class="csd-final-cta">
+      <div class="csd-cta-glow" aria-hidden="true"></div>
+      <div class="container text-center csd-cta-inner">
+        <span class="csd-cta-kicker">Let's Build Something Great Together</span>
+        <h2 class="csd-cta-h2">Have a Software Idea? Let's Build It.</h2>
+        <p class="csd-cta-desc">
+          Tell us what you're trying to solve, and our team can help turn your business requirements into a secure, scalable software solution.
+        </p>
+
+        <div class="csd-cta-actions">
+          <button class="csd-btn csd-btn-primary csd-btn-lg js-open-lead-modal">
+            <span>Talk to a Software Expert</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </button>
+          <button class="csd-btn csd-btn-light csd-btn-lg js-open-lead-modal">
+            <span>Start Your Project</span>
+          </button>
+        </div>
+
+        <div class="csd-cta-reassurance">
+          <span>⚡ Fast proposal turnaround</span>
+          <span>•</span>
+          <span>🔒 Strict NDA protection</span>
+          <span>•</span>
+          <span>👥 Senior engineering team</span>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       INTERACTIVE LEAD POPUP MODAL
+  ═══════════════════════════════════════ -->
+  <div class="csd-modal-backdrop js-lead-modal" aria-hidden="true">
+    <div class="csd-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="csdModalTitle">
+      <button class="csd-modal-close js-close-lead-modal" aria-label="Close modal">&times;</button>
+      
+      <div class="csd-modal-header">
+        <span class="csd-modal-pill">SOFTWARE CONSULTATION</span>
+        <h3 id="csdModalTitle">Talk to a Software Expert</h3>
+        <p>Fill out the form below, and a senior Hegrix software architect will review your project requirements and connect with you within 24 hours.</p>
+      </div>
+
+      <form id="csdLeadForm" class="csd-modal-form">
+        <div class="csd-form-row">
+          <div class="csd-form-group">
+            <label for="leadFullName">Full Name *</label>
+            <input type="text" id="leadFullName" required placeholder="e.g. Sarah Jenkins" />
+          </div>
+          <div class="csd-form-group">
+            <label for="leadEmail">Work Email *</label>
+            <input type="email" id="leadEmail" required placeholder="name@company.com" />
+          </div>
+        </div>
+
+        <div class="csd-form-row">
+          <div class="csd-form-group">
+            <label for="leadPhone">Phone Number</label>
+            <input type="tel" id="leadPhone" placeholder="+1 (555) 000-0000" />
+          </div>
+          <div class="csd-form-group">
+            <label for="leadBudget">Project Budget Range</label>
+            <select id="leadBudget">
+              <option value="15k-30k">$15,000 – $30,000</option>
+              <option value="30k-60k" selected>$30,000 – $60,000</option>
+              <option value="60k-120k">$60,000 – $120,000</option>
+              <option value="120k+">$120,000+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="csd-form-group">
+          <label for="leadMessage">Project Overview / Business Goals *</label>
+          <textarea id="leadMessage" rows="3" required placeholder="Tell us about the software you want to build or the business problem you're trying to solve..."></textarea>
+        </div>
+
+        <button type="submit" class="csd-btn csd-btn-primary csd-btn-block">
+          <span>Submit Project Inquiry</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+        </button>
+      </form>
+
+      <div id="csdLeadSuccess" class="csd-modal-success" style="display: none;">
+        <div class="success-icon">✓</div>
+        <h4>Project Inquiry Received!</h4>
+        <p>Thank you! A Hegrix senior software architect will review your project requirements and contact you within 24 hours.</p>
+        <button class="csd-btn csd-btn-secondary js-close-lead-modal" style="color: #071a3d; border-color: #dce8f7;">Close</button>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<!-- INTERACTIVE SCRIPTS -->
+<script>
+  // Process Step Switcher
+  const processContainer = document.getElementById('processInteractive');
+  if (processContainer) {
+    const tabs = processContainer.querySelectorAll('.csd-p-tab');
+    const panels = processContainer.querySelectorAll('.csd-p-panel');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const stepNum = tab.getAttribute('data-step');
+        
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+
+        tab.classList.add('active');
+        const targetPanel = document.getElementById(`p-panel-${stepNum}`);
+        if (targetPanel) {
+          targetPanel.classList.add('active');
+        }
+      });
+    });
+  }
+
+  // Lead Modal Popup Handlers
+  const modalBackdrop = document.querySelector('.js-lead-modal');
+  const openLeadBtns = document.querySelectorAll('.js-open-lead-modal');
+  const closeLeadBtns = document.querySelectorAll('.js-close-lead-modal');
+  const leadForm = document.getElementById('csdLeadForm');
+  const leadSuccess = document.getElementById('csdLeadSuccess');
+
+  openLeadBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (modalBackdrop) {
+        modalBackdrop.classList.add('is-open');
+        modalBackdrop.setAttribute('aria-hidden', 'false');
+      }
+    });
+  });
+
+  closeLeadBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (modalBackdrop) {
+        modalBackdrop.classList.remove('is-open');
+        modalBackdrop.setAttribute('aria-hidden', 'true');
+      }
+    });
+  });
+
+  if (modalBackdrop) {
+    modalBackdrop.addEventListener('click', (e) => {
+      if (e.target === modalBackdrop) {
+        modalBackdrop.classList.remove('is-open');
+        modalBackdrop.setAttribute('aria-hidden', 'true');
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalBackdrop && modalBackdrop.classList.contains('is-open')) {
+      modalBackdrop.classList.remove('is-open');
+      modalBackdrop.setAttribute('aria-hidden', 'true');
+    }
+  });
+
+  if (leadForm) {
+    leadForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      leadForm.style.display = 'none';
+      if (leadSuccess) {
+        leadSuccess.style.display = 'block';
+      }
+    });
+  }
+</script>
+
+<!-- CUSTOM STYLES FOR PAGE -->
+<style>
+  :root {
+    --csd-blue-dark: #061a52;
+    --csd-blue-primary: #0b55d9;
+    --csd-blue-accent: #2563eb;
+    --csd-cyan: #1fb6ff;
+    --csd-bg-soft: #f8fbff;
+    --csd-card-border: #dce8f7;
+    --csd-text-main: #0f172a;
+    --csd-text-muted: #475569;
+  }
+
+  .csd-wrapper {
+    font-family: var(--font-sans);
+    color: var(--csd-text-main);
+    background: #ffffff;
+    overflow-x: hidden;
+  }
+
+  /* BUTTONS */
+  .csd-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 52px;
+    padding: 0 28px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 1rem;
+    transition: all 0.22s ease;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+  }
+
+  .csd-btn-primary {
+    background: #2563eb;
+    color: #ffffff;
+    border: 1px solid #2563eb;
+    box-shadow: 0 14px 34px rgba(37, 99, 235, 0.32);
+  }
+
+  .csd-btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 18px 40px rgba(37, 99, 235, 0.42);
+    color: #ffffff;
+  }
+
+  .csd-btn-secondary {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    backdrop-filter: blur(10px);
+  }
+
+  .csd-btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.22);
+    transform: translateY(-2px);
+    color: #ffffff;
+  }
+
+  .csd-btn-light {
+    background: #ffffff;
+    color: #0b55d9;
+    border: 1px solid #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .csd-btn-light:hover {
+    background: #f1f5f9;
+    transform: translateY(-2px);
+    color: #0b55d9;
+  }
+
+  .csd-btn-lg {
+    min-height: 58px;
+    padding: 0 34px;
+    font-size: 1.08rem;
+  }
+
+  .csd-btn-block {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* HEADINGS & TYPOGRAPHY */
+  .csd-section {
+    padding: 90px 0;
+  }
+
+  .csd-section-head {
+    max-width: 820px;
+    margin: 0 auto 50px;
+  }
+
+  .csd-eyebrow {
+    display: inline-block;
+    color: #2563eb;
+    font-weight: 850;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+  }
+
+  .csd-h2 {
+    font-size: clamp(2.1rem, 4vw, 3.1rem);
+    color: #071a3d;
+    font-weight: 900;
+    line-height: 1.15;
+  }
+
+  .csd-lead {
+    font-size: clamp(1.08rem, 1.8vw, 1.22rem);
+    color: #475569;
+    margin-top: 18px;
+    line-height: 1.6;
+  }
+
+  .csd-gradient-text {
+    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #93c5fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* 1. HERO SECTION (POLISHED) */
+  .csd-hero {
+    position: relative;
+    padding: 100px 0 84px;
+    background: radial-gradient(circle at 80% 20%, rgba(37, 99, 235, 0.25), transparent 50%),
+                linear-gradient(180deg, #05133b 0%, #071a3d 100%);
+    color: #ffffff;
+    overflow: hidden;
+  }
+
+  .csd-hero-ambient {
+    position: absolute;
+    top: -20%;
+    right: -10%;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, rgba(31, 182, 255, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .csd-hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .csd-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.2);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    color: #93c5fd;
+    font-size: 0.8rem;
+    font-weight: 850;
+    letter-spacing: 0.06em;
+    margin-bottom: 24px;
+  }
+
+  .csd-badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #38bdf8;
+    box-shadow: 0 0 10px #38bdf8;
+  }
+
+  .csd-hero-h1 {
+    font-size: clamp(2.5rem, 4.6vw, 4rem);
+    color: #ffffff;
+    font-weight: 900;
+    line-height: 1.1;
+  }
+
+  .csd-hero-lead {
+    font-size: clamp(1.08rem, 1.8vw, 1.25rem);
+    color: rgba(255, 255, 255, 0.88);
+    margin-top: 22px;
+    line-height: 1.6;
+    max-width: 600px;
+  }
+
+  .csd-hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 36px;
+  }
+
+  .csd-hero-trust-bar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 20px;
+    margin-top: 40px;
+    padding-top: 26px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .csd-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.9rem;
+    font-weight: 750;
+  }
+
+  /* Console Window Visual */
+  .csd-hero-visual-card {
+    position: relative;
+  }
+
+  .csd-console-window {
+    background: #081736;
+    border: 1px solid rgba(96, 165, 250, 0.28);
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+  }
+
+  .csd-console-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    background: #040e26;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .csd-dots {
+    display: flex;
+    gap: 6px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  .dot-r { background: #ef4444; }
+  .dot-y { background: #f59e0b; }
+  .dot-g { background: #10b981; }
+
+  .csd-console-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #94a3b8;
+    font-size: 0.76rem;
+    font-weight: 700;
+  }
+
+  .csd-console-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #34d399;
+  }
+
+  .status-indicator {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #34d399;
+    box-shadow: 0 0 8px #34d399;
+  }
+
+  .csd-console-body {
+    padding: 20px;
+  }
+
+  .csd-metrics-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .csd-metric-box {
+    background: rgba(15, 30, 60, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 10px 12px;
+  }
+
+  .metric-lbl {
+    display: block;
+    font-size: 0.7rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .metric-val {
+    display: block;
+    font-size: 0.94rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin: 4px 0;
+  }
+
+  .metric-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    overflow: hidden;
+  }
+
+  .metric-fill {
+    height: 100%;
+    background: #3b82f6;
+  }
+
+  .metric-fill.green {
+    background: #10b981;
+  }
+
+  .csd-architecture-flow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+    background: rgba(4, 14, 38, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 12px;
+    margin-bottom: 16px;
+  }
+
+  .arch-node {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(30, 58, 110, 0.5);
+    border: 1px solid rgba(96, 165, 250, 0.25);
+    border-radius: 10px;
+    padding: 8px;
+  }
+
+  .node-svg-icon {
+    display: grid;
+    place-items: center;
+  }
+
+  .node-info strong {
+    display: block;
+    font-size: 0.74rem;
+    color: #ffffff;
+  }
+
+  .node-info small {
+    display: block;
+    font-size: 0.66rem;
+    color: #94a3b8;
+  }
+
+  .arch-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .flow-line {
+    width: 16px;
+    height: 2px;
+    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  }
+
+  .flow-badge {
+    font-size: 0.6rem;
+    color: #60a5fa;
+    font-weight: 800;
+  }
+
+  .csd-console-code {
+    background: #020817;
+    border-radius: 10px;
+    padding: 12px;
+    font-family: monospace;
+    font-size: 0.76rem;
+    line-height: 1.55;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .c-purple { color: #c084fc; }
+  .c-blue { color: #60a5fa; }
+  .c-green { color: #4ade80; }
+  .c-yellow { color: #fde047; }
+  .indent { padding-left: 16px; }
+
+  .csd-console-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background: #040e26;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 0.72rem;
+    color: #94a3b8;
+    font-weight: 750;
+  }
+
+  /* 2. TRUST / STATS SECTION */
+  .csd-trust-section {
+    padding: 40px 0;
+    background: #071a3d;
+    border-bottom: 1px solid rgba(220, 232, 247, 0.15);
+    color: #ffffff;
+  }
+
+  .csd-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    text-align: center;
+  }
+
+  .csd-stat-card {
+    padding: 16px 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+  }
+
+  .stat-num {
+    display: block;
+    font-size: clamp(1.7rem, 2.8vw, 2.3rem);
+    font-weight: 900;
+    color: #60a5fa;
+    line-height: 1.1;
+  }
+
+  .stat-label {
+    display: block;
+    font-size: 0.86rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-top: 4px;
+  }
+
+  .stat-sub {
+    display: block;
+    font-size: 0.72rem;
+    color: #94a3b8;
+    margin-top: 2px;
+  }
+
+  .csd-logo-strip-title {
+    text-align: center;
+    font-size: 0.74rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    color: #94a3b8;
+    margin: 32px 0 14px;
+  }
+
+  .csd-logo-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .csd-logo-pill {
+    padding: 6px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 0.82rem;
+    font-weight: 750;
+    color: #e2e8f0;
+  }
+
+  /* 3. WHAT IS CUSTOM SOFTWARE (SVG ICONS) */
+  .csd-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+  }
+
+  .csd-benefit-card {
+    background: #ffffff;
+    border: 1px solid var(--csd-card-border);
+    border-radius: 16px;
+    padding: 26px 22px;
+    box-shadow: 0 8px 24px rgba(8, 38, 92, 0.04);
+    transition: all 0.22s ease;
+  }
+
+  .csd-benefit-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(8, 38, 92, 0.08);
+    border-color: #2563eb;
+  }
+
+  .b-icon-box {
+    display: inline-grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #eff6ff;
+    color: #2563eb;
+    margin-bottom: 16px;
+  }
+
+  .csd-benefit-card h3 {
+    font-size: 1.08rem;
+    color: #071a3d;
+    font-weight: 850;
+    margin-bottom: 8px;
+  }
+
+  .csd-benefit-card p {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.5;
+  }
+
+  /* 4. SERVICES GRID (SVG ICONS) */
+  .csd-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+  }
+
+  .csd-service-card {
+    background: #ffffff;
+    border: 1px solid var(--csd-card-border);
+    border-radius: 18px;
+    padding: 30px 26px;
+    box-shadow: 0 10px 30px rgba(8, 38, 92, 0.05);
+    transition: all 0.22s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .csd-service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 44px rgba(8, 38, 92, 0.09);
+    border-color: #2563eb;
+  }
+
+  .s-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .s-icon-box {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    background: #eff6ff;
+    color: #2563eb;
+  }
+
+  .s-card-tag {
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 0.74rem;
+    font-weight: 800;
+  }
+
+  .csd-service-card h3 {
+    font-size: 1.2rem;
+    color: #071a3d;
+    font-weight: 850;
+    margin-bottom: 10px;
+  }
+
+  .csd-service-card p {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.55;
+    margin-bottom: 18px;
+    flex: 1;
+  }
+
+  .s-bullet-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 14px;
+  }
+
+  .s-bullet-list li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 0.84rem;
+    color: #334155;
+    font-weight: 750;
+    margin-bottom: 6px;
+  }
+
+  .s-bullet-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+    font-weight: 900;
+  }
+
+  /* 5. TYPES MATRIX (SVG ICONS) */
+  .csd-types-matrix {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .type-box {
+    background: #ffffff;
+    border: 1px solid var(--csd-card-border);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.2s ease;
+  }
+
+  .type-box:hover {
+    border-color: #2563eb;
+    box-shadow: 0 14px 32px rgba(8, 38, 92, 0.07);
+  }
+
+  .t-icon-svg {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #eff6ff;
+    color: #2563eb;
+    margin-bottom: 12px;
+  }
+
+  .type-box h4 {
+    font-size: 1.08rem;
+    color: #071a3d;
+    font-weight: 850;
+    margin-bottom: 6px;
+  }
+
+  .type-box p {
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.5;
+  }
+
+  /* 6. PROCESS INTERACTIVE */
+  .csd-process-nav {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    margin-bottom: 28px;
+    border-bottom: 2px solid #e2e8f0;
+  }
+
+  .csd-p-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border: 0;
+    background: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: #64748b;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .csd-p-tab:hover {
+    color: #2563eb;
+    background: #eff6ff;
+  }
+
+  .csd-p-tab.active {
+    color: #ffffff;
+    background: #2563eb;
+    box-shadow: 0 6px 18px rgba(37, 99, 235, 0.25);
+  }
+
+  .p-num {
+    font-size: 0.78rem;
+    opacity: 0.8;
+  }
+
+  .csd-process-content-wrapper {
+    position: relative;
+  }
+
+  .csd-p-panel {
+    display: none;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 32px;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid var(--csd-card-border);
+    border-radius: 20px;
+    padding: 36px;
+    box-shadow: 0 14px 36px rgba(8, 38, 92, 0.05);
+  }
+
+  .csd-p-panel.active {
+    display: grid;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .p-step-badge {
+    display: inline-block;
+    color: #2563eb;
+    font-size: 0.8rem;
+    font-weight: 850;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+
+  .p-panel-left h3 {
+    font-size: 1.5rem;
+    color: #071a3d;
+    font-weight: 900;
+    margin-bottom: 12px;
+  }
+
+  .p-panel-left p {
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.58;
+    margin-bottom: 22px;
+  }
+
+  .p-outputs strong {
+    display: block;
+    font-size: 0.84rem;
+    color: #071a3d;
+    margin-bottom: 8px;
+  }
+
+  .p-outputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .p-outputs span {
+    padding: 5px 12px;
+    border-radius: 8px;
+    background: #f1f5f9;
+    font-size: 0.82rem;
+    font-weight: 750;
+    color: #334155;
+  }
+
+  .p-stat-box {
+    background: #071a3d;
+    border-radius: 18px;
+    padding: 32px 24px;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 16px 36px rgba(7, 26, 61, 0.18);
+  }
+
+  .p-highlight {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #60a5fa;
+    margin-bottom: 6px;
+  }
+
+  /* 7. TECH STACK (SVG ICONS) */
+  .csd-tech-categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .csd-tech-cat {
+    background: #ffffff;
+    border: 1px solid var(--csd-card-border);
+    border-radius: 16px;
+    padding: 22px;
+  }
+
+  .cat-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .cat-svg-icon {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #eff6ff;
+  }
+
+  .cat-header h3 {
+    font-size: 1.05rem;
+    color: #071a3d;
+    font-weight: 850;
+  }
+
+  .cat-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .cat-tags span {
+    padding: 5px 10px;
+    border-radius: 6px;
+    background: #f8fbff;
+    border: 1px solid #dce8f7;
+    font-size: 0.8rem;
+    font-weight: 750;
+    color: #334155;
+  }
+
+  /* 8. INDUSTRIES (SVG ICONS) */
+  .csd-ind-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .ind-card {
+    background: #ffffff;
+    border: 1px solid var(--csd-card-border);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(8, 38, 92, 0.04);
+  }
+
+  .ind-svg-icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #eff6ff;
+    color: #2563eb;
+    margin-bottom: 14px;
+  }
+
+  .ind-card h3 {
+    font-size: 1.15rem;
+    color: #071a3d;
+    font-weight: 850;
+    margin-bottom: 8px;
+  }
+
+  .ind-card p {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.5;
+  }
+
+  /* 9. WHY HEGRIX (SVG ICONS) */
+  .csd-why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .why-card {
+    background: #ffffff;
+    border: 1px solid var(--csd-card-border);
+    border-radius: 18px;
+    padding: 26px;
+    box-shadow: 0 10px 28px rgba(8, 38, 92, 0.04);
+  }
+
+  .w-svg-icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: #eff6ff;
+    color: #2563eb;
+    margin-bottom: 14px;
+  }
+
+  .why-card h3 {
+    font-size: 1.15rem;
+    color: #071a3d;
+    font-weight: 850;
+    margin-bottom: 8px;
+  }
+
+  .why-card p {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.52;
+  }
+
+  /* 10. CASE STUDIES */
+  .csd-case-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .csd-case-card {
+    background: #ffffff;
+    border: 1px solid var(--csd-card-border);
+    border-radius: 20px;
+    padding: 28px 24px;
+    box-shadow: 0 12px 32px rgba(8, 38, 92, 0.05);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .case-badge {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 0.74rem;
+    font-weight: 850;
+    margin-bottom: 14px;
+  }
+
+  .csd-case-card h3 {
+    font-size: 1.18rem;
+    color: #071a3d;
+    font-weight: 900;
+    margin-bottom: 14px;
+    line-height: 1.3;
+  }
+
+  .case-block {
+    margin-bottom: 12px;
+  }
+
+  .case-block strong {
+    display: block;
+    font-size: 0.8rem;
+    color: #071a3d;
+    margin-bottom: 2px;
+  }
+
+  .case-block p {
+    font-size: 0.86rem;
+    color: #475569;
+    line-height: 1.45;
+  }
+
+  .case-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 14px 0 16px;
+  }
+
+  .case-tech span {
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: #f1f5f9;
+    font-size: 0.74rem;
+    font-weight: 750;
+    color: #475569;
+  }
+
+  .case-impact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding-top: 14px;
+    border-top: 1px solid #f1f5f9;
+    margin-top: auto;
+  }
+
+  .imp-val {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #2563eb;
+  }
+
+  .imp-lbl {
+    display: block;
+    font-size: 0.7rem;
+    color: #64748b;
+    font-weight: 700;
+  }
+
+  /* 11. COMPARISON TABLE */
+  .csd-table-wrapper {
+    overflow-x: auto;
+    border-radius: 18px;
+    border: 1px solid var(--csd-card-border);
+    box-shadow: 0 12px 32px rgba(8, 38, 92, 0.04);
+  }
+
+  .csd-comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    text-align: left;
+  }
+
+  .csd-comp-table th,
+  .csd-comp-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 0.9rem;
+  }
+
+  .csd-comp-table th {
+    background: #071a3d;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 850;
+  }
+
+  .csd-comp-table th.col-custom {
+    background: #0b55d9;
+  }
+
+  .csd-comp-table td.col-custom {
+    background: #f0f7ff;
+    font-weight: 750;
+    color: #071a3d;
+  }
+
+  .csd-comp-table td.col-ots {
+    color: #64748b;
+  }
+
+  /* 12. FAQ COMPACT 2-COLUMN SECTION */
+  .csd-faq-section-compact {
+    padding: 60px 0;
+  }
+
+  .csd-faq-head-compact {
+    max-width: 600px;
+    margin: 0 auto 36px;
+  }
+
+  .csd-faq-grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .csd-faq-card-compact {
+    background: #ffffff;
+    border: 1px solid var(--csd-card-border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    align-self: start;
+  }
+
+  .csd-faq-card-compact[open] {
+    border-color: #2563eb;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.08);
+  }
+
+  .csd-faq-sum {
+    padding: 16px 20px;
+    font-size: 0.96rem;
+    font-weight: 850;
+    color: #071a3d;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    list-style: none;
+  }
+
+  .csd-faq-sum::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-icon-toggle {
+    font-size: 1.2rem;
+    color: #2563eb;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .csd-faq-card-compact[open] .faq-icon-toggle::after {
+    content: "";
+  }
+
+  .csd-faq-body {
+    padding: 0 20px 16px;
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.55;
+  }
+
+  /* 13. FINAL CTA */
+  .csd-final-cta {
+    position: relative;
+    padding: 90px 0;
+    background: linear-gradient(180deg, #05133b 0%, #071a3d 100%);
+    color: #ffffff;
+    overflow: hidden;
+  }
+
+  .csd-cta-glow {
+    position: absolute;
+    bottom: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 650px;
+    height: 320px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.3) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .csd-cta-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .csd-cta-kicker {
+    display: inline-block;
+    color: #93c5fd;
+    font-weight: 850;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 12px;
+  }
+
+  .csd-cta-h2 {
+    font-size: clamp(2.3rem, 4.2vw, 3.4rem);
+    color: #ffffff;
+    font-weight: 900;
+    line-height: 1.12;
+  }
+
+  .csd-cta-desc {
+    font-size: clamp(1.08rem, 1.8vw, 1.2rem);
+    color: rgba(255, 255, 255, 0.88);
+    margin-top: 18px;
+    line-height: 1.55;
+  }
+
+  .csd-cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 36px;
+  }
+
+  .csd-cta-reassurance {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 32px;
+    font-size: 0.84rem;
+    color: rgba(255, 255, 255, 0.72);
+    font-weight: 750;
+  }
+
+  /* LEAD MODAL POPUP STYLES */
+  .csd-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(7, 26, 61, 0.75);
+    backdrop-filter: blur(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.24s ease;
+  }
+
+  .csd-modal-backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .csd-modal-dialog {
+    position: relative;
+    width: min(100%, 580px);
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 36px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+    transform: translateY(20px) scale(0.96);
+    transition: all 0.24s ease;
+  }
+
+  .csd-modal-backdrop.is-open .csd-modal-dialog {
+    transform: translateY(0) scale(1);
+  }
+
+  .csd-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 34px;
+    height: 34px;
+    border: 1px solid #e2e8f0;
+    border-radius: 50%;
+    background: #f8fbff;
+    color: #475569;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    line-height: 1;
+    transition: all 0.18s ease;
+  }
+
+  .csd-modal-close:hover {
+    background: #eff6ff;
+    color: #2563eb;
+    border-color: #2563eb;
+  }
+
+  .csd-modal-header {
+    margin-bottom: 24px;
+  }
+
+  .csd-modal-pill {
+    display: inline-block;
+    color: #2563eb;
+    font-size: 0.75rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+  }
+
+  .csd-modal-header h3 {
+    font-size: 1.6rem;
+    color: #071a3d;
+    font-weight: 900;
+    margin-bottom: 6px;
+  }
+
+  .csd-modal-header p {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.5;
+  }
+
+  .csd-modal-form {
+    display: grid;
+    gap: 16px;
+  }
+
+  .csd-form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .csd-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .csd-form-group label {
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: #071a3d;
+  }
+
+  .csd-form-group input,
+  .csd-form-group select,
+  .csd-form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    font-size: 0.9rem;
+    color: #0f172a;
+    background: #f8fbff;
+    transition: all 0.18s ease;
+  }
+
+  .csd-form-group input:focus,
+  .csd-form-group select:focus,
+  .csd-form-group textarea:focus {
+    outline: 0;
+    border-color: #2563eb;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  }
+
+  .csd-modal-success {
+    text-align: center;
+    padding: 30px 10px 10px;
+  }
+
+  .success-icon {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #10b981;
+    color: #ffffff;
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin: 0 auto 16px;
+  }
+
+  .csd-modal-success h4 {
+    font-size: 1.4rem;
+    color: #071a3d;
+    font-weight: 900;
+    margin-bottom: 8px;
+  }
+
+  .csd-modal-success p {
+    font-size: 0.94rem;
+    color: #475569;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 1024px) {
+    .csd-hero-grid {
+      grid-template-columns: 1fr;
+    }
+    .csd-stats-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .csd-benefits-grid,
+    .csd-tech-categories {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .csd-services-grid,
+    .csd-types-matrix,
+    .csd-ind-grid,
+    .csd-why-grid,
+    .csd-case-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .csd-p-panel {
+      grid-template-columns: 1fr;
+    }
+    .csd-faq-grid-2col {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .csd-stats-grid,
+    .csd-benefits-grid,
+    .csd-services-grid,
+    .csd-types-matrix,
+    .csd-tech-categories,
+    .csd-ind-grid,
+    .csd-why-grid,
+    .csd-case-grid {
+      grid-template-columns: 1fr;
+    }
+    .csd-hero-trust-bar {
+      grid-template-columns: 1fr;
+    }
+    .csd-metrics-row {
+      grid-template-columns: 1fr;
+    }
+    .csd-architecture-flow {
+      flex-direction: column;
+    }
+    .flow-line {
+      width: 2px;
+      height: 14px;
+    }
+    .csd-p-panel {
+      padding: 24px;
+    }
+    .csd-form-row {
+      grid-template-columns: 1fr;
+    }
+    .csd-modal-dialog {
+      padding: 24px 20px;
+    }
+  }
+</style>

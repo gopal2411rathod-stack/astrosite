@@ -8,10 +8,18 @@ import { industryDetailPages } from "../../data/industryDetails";
 export const prerender = true;
 
 export function getStaticPaths() {
-  return industryPages.map((page) => ({
-    params: { slug: page.slug },
-    props: { page },
-  }));
+  const staticIndustrySlugs = new Set([
+    "diamond-jewelry",
+    "real-estate",
+    "travel-hospitality",
+  ]);
+
+  return industryPages
+    .filter((page) => !staticIndustrySlugs.has(page.slug))
+    .map((page) => ({
+      params: { slug: page.slug },
+      props: { page },
+    }));
 }
 
 const { page } = Astro.props;
