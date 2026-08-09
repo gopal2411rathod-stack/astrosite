@@ -1816,129 +1816,573 @@ const schema = [
   >
     <div class="odoo-landing-wrapper">
       {/* SECTION 1 — HERO */}
-      <section class="odoo-hero-section">
-        <div class="odoo-bg-glow odoo-bg-glow--top-left" aria-hidden="true"></div>
-        <div class="odoo-bg-glow odoo-bg-glow--top-right" aria-hidden="true"></div>
-        <div class="odoo-bg-dots" aria-hidden="true"></div>
+      {/* SECTION 1 — HERO REDESIGN */}
+      <section class="odoo-consulting-hero-redesign">
+        <div class="odoo-consulting-bg-glow odoo-consulting-bg-glow--1" aria-hidden="true"></div>
+        <div class="odoo-consulting-bg-glow odoo-consulting-bg-glow--2" aria-hidden="true"></div>
+        <div class="odoo-consulting-grid-pattern" aria-hidden="true"></div>
 
-        <div class="container odoo-hero-container">
-          <div class="odoo-hero-grid">
-            <div class="odoo-hero-content">
-              <div class="odoo-pill-badge">
-                <span class="odoo-badge-star">⭐</span>
-                <span>Trusted Odoo Consulting Experts</span>
+        <div class="container odoo-consulting-hero-container">
+          <div class="odoo-consulting-hero-grid">
+            {/* Left Content */}
+            <div class="odoo-consulting-hero-content">
+              <div class="odoo-consulting-badge">
+                <span class="odoo-badge-pulse"></span>
+                <span class="odoo-badge-icon">✨</span>
+                <span>Certified Odoo ERP Consulting Specialists</span>
               </div>
 
-              <h1 class="odoo-hero-heading">
-                Transform Your Business with<br />
-                <span class="odoo-gradient-text">Expert Odoo Consulting Services.</span>
+              <h1 class="odoo-consulting-hero-title">
+                Transform Operations with <br />
+                <span class="odoo-consulting-gradient">Expert Odoo Consulting</span>
               </h1>
 
-              <p class="odoo-hero-subheading">
-                Our experienced Odoo consultants help businesses analyze processes, design ERP strategies, optimize workflows, and implement scalable Odoo solutions that drive efficiency, productivity, and long-term growth.
+              <p class="odoo-consulting-hero-subtitle">
+                Align your business processes with world-class Odoo ERP strategy, custom module planning, workflow optimization, and expert implementation advisory.
               </p>
 
-              <div class="odoo-feature-badges" aria-label="Key highlights">
-                <div class="odoo-feature-tag">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div class="odoo-consulting-tags">
+                <div class="odoo-consulting-tag">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
                   <span>Certified Odoo Consultants</span>
                 </div>
-                <div class="odoo-feature-tag">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>200+ Successful ERP Projects</span>
+                <div class="odoo-consulting-tag">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>200+ ERP Implementations</span>
                 </div>
-                <div class="odoo-feature-tag">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>Business Process Experts</span>
+                <div class="odoo-consulting-tag">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>Business Process Audit</span>
                 </div>
-                <div class="odoo-feature-tag">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#22C55E" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  <span>End-to-End Odoo Consulting</span>
+                <div class="odoo-consulting-tag">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  <span>End-to-End Advisory</span>
                 </div>
               </div>
 
-              <div class="odoo-hero-cta-group">
-                <a href="#consulting-form" class="odoo-btn-primary">
-                  <span>Book Free Consultation</span>
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <div class="odoo-consulting-cta-row">
+                <a href="#consulting-form" class="odoo-consulting-btn-primary">
+                  <span>Book Free ERP Assessment</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
-                <a href="#consulting-form" class="odoo-btn-secondary">
-                  <span>Talk to an Odoo Expert</span>
+                <a href="#consulting-form" class="odoo-consulting-btn-secondary">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  <span>Talk to an Odoo Advisor</span>
                 </a>
               </div>
 
-              <div class="odoo-social-proof">
-                <div class="odoo-stars">
-                  <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                  <svg width="18" height="18" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              <div class="odoo-consulting-social-proof">
+                <div class="odoo-consulting-stars">
+                  <svg width="16" height="16" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="16" height="16" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="16" height="16" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="16" height="16" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  <svg width="16" height="16" fill="#F59E0B" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
                 </div>
-                <div class="odoo-rating-meta">
+                <div class="odoo-consulting-proof-text">
                   <strong>4.9/5 Rating</strong>
-                  <span class="odoo-dot-sep">•</span>
-                  <span>200+ Projects</span>
+                  <span>• 200+ Enterprise Deployments • 98% Success</span>
                 </div>
               </div>
             </div>
 
-            {/* Right Side Illustration */}
-            <div class="odoo-hero-visual-wrap">
-              <div class="macbook-mockup">
-                <div class="macbook-screen-bezel">
-                  <div class="macbook-camera"></div>
-                  <div class="macbook-display">
-                    <div class="odoo-app-window">
-                      <header class="odoo-app-header">
-                        <span class="odoo-app-title">Odoo ERP Strategy Dashboard</span>
-                      </header>
-                      <div class="odoo-app-body" style="padding: 16px;">
-                        <div class="odoo-kpi-grid">
-                          <div class="odoo-kpi-card">
-                            <span>Process Efficiency</span>
-                            <strong style="color: #22C55E;">+42%</strong>
-                          </div>
-                          <div class="odoo-kpi-card">
-                            <span>Cost Overhead</span>
-                            <strong style="color: #0B55D9;">-35%</strong>
-                          </div>
-                        </div>
+            {/* Right Visual Console */}
+            <div class="odoo-consulting-visual">
+              <div class="odoo-consulting-console">
+                <div class="odoo-console-bar">
+                  <div class="odoo-console-dots">
+                    <span></span><span></span><span></span>
+                  </div>
+                  <div class="odoo-console-title">Odoo ERP Consulting & Architecture Dashboard</div>
+                  <div class="odoo-console-status">
+                    <span class="status-pulse"></span>
+                    <span>Odoo v18 Enterprise</span>
+                  </div>
+                </div>
+
+                <div class="odoo-console-body">
+                  <div class="odoo-metrics-grid">
+                    <div class="odoo-metric-card">
+                      <div class="metric-head">
+                        <span>Workflow Speed</span>
+                        <span class="metric-badge green">+64%</span>
+                      </div>
+                      <div class="metric-val">64%</div>
+                      <div class="metric-bar"><div class="metric-fill green" style="width: 82%;"></div></div>
+                    </div>
+
+                    <div class="odoo-metric-card">
+                      <div class="metric-head">
+                        <span>Operating Costs</span>
+                        <span class="metric-badge blue">-38%</span>
+                      </div>
+                      <div class="metric-val">-38%</div>
+                      <div class="metric-bar"><div class="metric-fill blue" style="width: 68%;"></div></div>
+                    </div>
+
+                    <div class="odoo-metric-card">
+                      <div class="metric-head">
+                        <span>System Efficiency</span>
+                        <span class="metric-badge purple">99.4%</span>
+                      </div>
+                      <div class="metric-val">99.4%</div>
+                      <div class="metric-bar"><div class="metric-fill purple" style="width: 95%;"></div></div>
+                    </div>
+
+                    <div class="odoo-metric-card">
+                      <div class="metric-head">
+                        <span>ERP ROI</span>
+                        <span class="metric-badge emerald">3.5x</span>
+                      </div>
+                      <div class="metric-val">3.5x</div>
+                      <div class="metric-bar"><div class="metric-fill emerald" style="width: 88%;"></div></div>
+                    </div>
+                  </div>
+
+                  {/* Architecture Roadmap Box */}
+                  <div class="odoo-console-roadmap">
+                    <div class="roadmap-title">Strategic ERP Transformation Roadmap</div>
+                    <div class="roadmap-steps">
+                      <div class="step-item active">
+                        <span class="step-num">01</span>
+                        <span class="step-text">Gap Analysis</span>
+                      </div>
+                      <div class="step-arrow">→</div>
+                      <div class="step-item active">
+                        <span class="step-num">02</span>
+                        <span class="step-text">ERP Strategy</span>
+                      </div>
+                      <div class="step-arrow">→</div>
+                      <div class="step-item active">
+                        <span class="step-num">03</span>
+                        <span class="step-text">Customization</span>
+                      </div>
+                      <div class="step-arrow">→</div>
+                      <div class="step-item">
+                        <span class="step-num">04</span>
+                        <span class="step-text">Go-Live</span>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Floating Cards */}
-              <div class="odoo-glass-card" style="top: 10px; left: -10px;">
-                <div class="glass-icon glass-icon--crm">📊</div>
-                <span>Business Analysis</span>
+              {/* Floating Pill Badges */}
+              <div class="odoo-float-badge float-1">
+                <span class="badge-icon">📊</span>
+                <span>Process & Gap Analysis</span>
               </div>
-              <div class="odoo-glass-card" style="top: 80px; right: -15px;">
-                <div class="glass-icon glass-icon--sales">🗺️</div>
-                <span>ERP Strategy</span>
+              <div class="odoo-float-badge float-2">
+                <span class="badge-icon">🗺️</span>
+                <span>ERP Architecture Blueprint</span>
               </div>
-              <div class="odoo-glass-card" style="top: 180px; left: -20px;">
-                <div class="glass-icon glass-icon--inventory">⚡</div>
+              <div class="odoo-float-badge float-3">
+                <span class="badge-icon">⚙️</span>
                 <span>Workflow Optimization</span>
               </div>
-              <div class="odoo-glass-card" style="top: 270px; right: -10px;">
-                <div class="glass-icon glass-icon--accounting">🚀</div>
+              <div class="odoo-float-badge float-4">
+                <span class="badge-icon">🚀</span>
                 <span>Digital Transformation</span>
-              </div>
-              <div class="odoo-glass-card" style="top: 360px; left: 0px;">
-                <div class="glass-icon glass-icon--mfg">🤖</div>
-                <span>Process Automation</span>
-              </div>
-              <div class="odoo-glass-card" style="top: 420px; right: 10px;">
-                <div class="glass-icon glass-icon--analytics">📈</div>
-                <span>Performance Insights</span>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <style>
+        .odoo-consulting-hero-redesign {
+          position: relative;
+          background: linear-gradient(135deg, #070E20 0%, #0B1736 50%, #111C44 100%);
+          color: #FFFFFF;
+          padding: 80px 0 100px;
+          overflow: hidden;
+          isolation: isolate;
+        }
+        .odoo-consulting-bg-glow {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(100px);
+          pointer-events: none;
+          z-index: 0;
+        }
+        .odoo-consulting-bg-glow--1 {
+          width: 500px;
+          height: 500px;
+          background: rgba(135, 90, 123, 0.28);
+          top: -150px;
+          left: -100px;
+        }
+        .odoo-consulting-bg-glow--2 {
+          width: 600px;
+          height: 600px;
+          background: rgba(37, 99, 235, 0.22);
+          bottom: -200px;
+          right: -100px;
+        }
+        .odoo-consulting-grid-pattern {
+          position: absolute;
+          inset: 0;
+          background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+          background-size: 32px 32px;
+          pointer-events: none;
+          z-index: 0;
+          opacity: 0.6;
+        }
+        .odoo-consulting-hero-container {
+          position: relative;
+          z-index: 2;
+        }
+        .odoo-consulting-hero-grid {
+          display: grid;
+          grid-template-columns: 1.15fr 0.85fr;
+          gap: 48px;
+          align-items: center;
+        }
+        @media (max-width: 1024px) {
+          .odoo-consulting-hero-grid {
+            grid-template-columns: 1fr;
+            gap: 56px;
+          }
+        }
+
+        .odoo-consulting-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 6px 16px;
+          background: rgba(255, 255, 255, 0.07);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          backdrop-filter: blur(10px);
+          border-radius: 30px;
+          font-size: 0.85rem;
+          font-weight: 600;
+          color: #E2E8F0;
+          margin-bottom: 24px;
+        }
+        .odoo-badge-pulse {
+          width: 8px;
+          height: 8px;
+          background: #10B981;
+          border-radius: 50%;
+          box-shadow: 0 0 10px #10B981;
+          animation: odooPulse 2s infinite;
+        }
+        @keyframes odooPulse {
+          0%, 100% { transform: scale(1); opacity: 1; }
+          50% { transform: scale(1.4); opacity: 0.5; }
+        }
+
+        .odoo-consulting-hero-title {
+          font-size: clamp(2.4rem, 4.2vw, 3.6rem);
+          font-weight: 800;
+          line-height: 1.12;
+          letter-spacing: -0.02em;
+          color: #FFFFFF;
+          margin-bottom: 20px;
+        }
+        .odoo-consulting-gradient {
+          background: linear-gradient(135deg, #C084FC 0%, #60A5FA 50%, #34D399 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .odoo-consulting-hero-subtitle {
+          font-size: 1.125rem;
+          line-height: 1.65;
+          color: #94A3B8;
+          max-width: 600px;
+          margin-bottom: 28px;
+        }
+
+        .odoo-consulting-tags {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+          margin-bottom: 36px;
+        }
+        .odoo-consulting-tag {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 7px 14px;
+          background: rgba(15, 23, 42, 0.6);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 8px;
+          font-size: 0.875rem;
+          font-weight: 500;
+          color: #CBD5E1;
+        }
+
+        .odoo-consulting-cta-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 16px;
+          margin-bottom: 36px;
+        }
+        .odoo-consulting-btn-primary {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 16px 32px;
+          background: linear-gradient(135deg, #875A7B 0%, #2563EB 100%);
+          color: #FFFFFF;
+          font-size: 1rem;
+          font-weight: 700;
+          border-radius: 12px;
+          text-decoration: none;
+          box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
+          transition: all 0.25s ease;
+        }
+        .odoo-consulting-btn-primary:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 14px 40px rgba(37, 99, 235, 0.5);
+          color: #FFFFFF;
+        }
+        .odoo-consulting-btn-secondary {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 16px 28px;
+          background: rgba(255, 255, 255, 0.06);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          backdrop-filter: blur(10px);
+          color: #FFFFFF;
+          font-size: 1rem;
+          font-weight: 600;
+          border-radius: 12px;
+          text-decoration: none;
+          transition: all 0.25s ease;
+        }
+        .odoo-consulting-btn-secondary:hover {
+          background: rgba(255, 255, 255, 0.12);
+          border-color: rgba(255, 255, 255, 0.3);
+          color: #FFFFFF;
+          transform: translateY(-2px);
+        }
+
+        .odoo-consulting-social-proof {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          padding-top: 20px;
+          border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .odoo-consulting-stars {
+          display: flex;
+          gap: 3px;
+        }
+        .odoo-consulting-proof-text {
+          font-size: 0.875rem;
+          color: #94A3B8;
+        }
+        .odoo-consulting-proof-text strong {
+          color: #FFFFFF;
+        }
+
+        /* Right Visual */
+        .odoo-consulting-visual {
+          position: relative;
+        }
+        .odoo-consulting-console {
+          background: rgba(15, 23, 42, 0.85);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          backdrop-filter: blur(20px);
+          border-radius: 20px;
+          box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(135, 90, 123, 0.2);
+          overflow: hidden;
+        }
+        .odoo-console-bar {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 14px 20px;
+          background: rgba(2, 6, 23, 0.6);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .odoo-console-dots {
+          display: flex;
+          gap: 6px;
+        }
+        .odoo-console-dots span {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+        }
+        .odoo-console-dots span:nth-child(1) { background: #EF4444; }
+        .odoo-console-dots span:nth-child(2) { background: #F59E0B; }
+        .odoo-console-dots span:nth-child(3) { background: #10B981; }
+        
+        .odoo-console-title {
+          font-size: 0.8rem;
+          font-weight: 600;
+          color: #94A3B8;
+        }
+        .odoo-console-status {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 0.75rem;
+          color: #34D399;
+          font-weight: 500;
+        }
+        .status-pulse {
+          width: 6px;
+          height: 6px;
+          background: #34D399;
+          border-radius: 50%;
+          box-shadow: 0 0 8px #34D399;
+        }
+
+        .odoo-console-body {
+          padding: 24px;
+        }
+
+        .odoo-metrics-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+          margin-bottom: 24px;
+        }
+        .odoo-metric-card {
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 12px;
+          padding: 14px 16px;
+        }
+        .metric-head {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 0.75rem;
+          color: #94A3B8;
+          margin-bottom: 6px;
+        }
+        .metric-badge {
+          font-size: 0.7rem;
+          font-weight: 700;
+          padding: 2px 6px;
+          border-radius: 4px;
+        }
+        .metric-badge.green { background: rgba(16, 185, 129, 0.2); color: #34D399; }
+        .metric-badge.blue { background: rgba(59, 130, 246, 0.2); color: #60A5FA; }
+        .metric-badge.purple { background: rgba(168, 85, 247, 0.2); color: #C084FC; }
+        .metric-badge.emerald { background: rgba(52, 211, 153, 0.2); color: #34D399; }
+
+        .metric-val {
+          font-size: 1.4rem;
+          font-weight: 800;
+          color: #FFFFFF;
+          margin-bottom: 8px;
+        }
+        .metric-bar {
+          height: 4px;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 2px;
+          overflow: hidden;
+        }
+        .metric-fill {
+          height: 100%;
+          border-radius: 2px;
+        }
+        .metric-fill.green { background: #10B981; }
+        .metric-fill.blue { background: #3B82F6; }
+        .metric-fill.purple { background: #A855F7; }
+        .metric-fill.emerald { background: #34D399; }
+
+        .odoo-console-roadmap {
+          background: rgba(2, 6, 23, 0.5);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          border-radius: 12px;
+          padding: 16px;
+        }
+        .roadmap-title {
+          font-size: 0.8rem;
+          font-weight: 600;
+          color: #CBD5E1;
+          margin-bottom: 12px;
+        }
+        .roadmap-steps {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 4px;
+        }
+        .step-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 4px;
+          flex: 1;
+          text-align: center;
+        }
+        .step-num {
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.1);
+          color: #94A3B8;
+          font-size: 0.7rem;
+          font-weight: 700;
+          display: grid;
+          place-items: center;
+        }
+        .step-item.active .step-num {
+          background: linear-gradient(135deg, #875A7B, #2563EB);
+          color: #FFFFFF;
+          box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);
+        }
+        .step-text {
+          font-size: 0.68rem;
+          color: #64748B;
+          font-weight: 500;
+        }
+        .step-item.active .step-text {
+          color: #E2E8F0;
+        }
+        .step-arrow {
+          color: #475569;
+          font-size: 0.75rem;
+        }
+
+        /* Floating Badges */
+        .odoo-float-badge {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 10px 16px;
+          background: rgba(15, 23, 42, 0.9);
+          border: 1px solid rgba(255, 255, 255, 0.15);
+          backdrop-filter: blur(12px);
+          border-radius: 14px;
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+          font-size: 0.825rem;
+          font-weight: 600;
+          color: #FFFFFF;
+          white-space: nowrap;
+          z-index: 3;
+          animation: odooFloat 6s ease-in-out infinite;
+        }
+        .badge-icon {
+          font-size: 1.1rem;
+        }
+
+        .float-1 { top: -15px; left: -20px; animation-delay: 0s; }
+        .float-2 { top: 75px; right: -25px; animation-delay: 1.5s; }
+        .float-3 { bottom: 85px; left: -25px; animation-delay: 3s; }
+        .float-4 { bottom: -15px; right: -15px; animation-delay: 4.5s; }
+
+        @keyframes odooFloat {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-8px); }
+        }
+
+        @media (max-width: 640px) {
+          .odoo-float-badge { display: none; }
+          .odoo-metrics-grid { grid-template-columns: 1fr; }
+          .odoo-consulting-hero-redesign { padding: 50px 0 70px; }
+        }
+      </style>
 
       {/* SECTION 2 — TRUSTED BY BUSINESSES */}
       <section class="odoo-section home-alt-section">

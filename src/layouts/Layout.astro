@@ -39,28 +39,49 @@ const organizationSchema = {
   },
 };
 
+// Derive parent breadcrumb for section sub-pages (/solutions/*, /services/*, /industries/*)
+const pathSegments = path.replace(/^\/|\/$/g, "").split("/").filter(Boolean);
+const sectionLabels: Record<string, string> = {
+  solutions: "Solutions",
+  services: "Services",
+  industries: "Industries",
+  blog: "Blog",
+};
+
+const breadcrumbItems: { "@type": string; position: number; name: string; item: string }[] = [
+  { "@type": "ListItem", position: 1, name: "Home", item: siteUrl },
+];
+
+if (path !== "/") {
+  if (pathSegments.length >= 2 && sectionLabels[pathSegments[0]]) {
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      position: 2,
+      name: sectionLabels[pathSegments[0]],
+      item: new URL(`/${pathSegments[0]}/`, siteUrl).toString(),
+    });
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      position: 3,
+      name: title.split("|")[0].replace("—", "").trim() || "Page",
+      item: canonical,
+    });
+  } else {
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      position: 2,
+      name: title.split("|")[0].replace("Hegrix", "").replace("—", "").trim() || "Page",
+      item: canonical,
+    });
+  }
+}
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: siteUrl,
-    },
-    ...(path === "/"
-      ? []
-      : [
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: title.split("|")[0].replace("Hegrix", "").trim() || "Page",
-            item: canonical,
-          },
-        ]),
-  ],
+  itemListElement: breadcrumbItems,
 };
+
 
 const schemas = [organizationSchema, breadcrumbSchema, ...(Array.isArray(schema) ? schema : schema ? [schema] : [])];
 ---

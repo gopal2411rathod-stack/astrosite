@@ -353,8 +353,10 @@ export const solutionPages = [
   {
     slug: "ai-business-automation",
     title: "AI Business Automation",
-    description: "Reduce repetitive work with intelligent assistants, OCR, routing and knowledge retrieval.",
-    keyword: "AI business automation",
+    description:
+      "Eliminate repetitive work with AI-powered document processing, OCR, intelligent approval routing, knowledge assistants and workflow automation — custom-built by Hegrix and integrated with your ERP, CRM and operations stack.",
+    keyword:
+      "AI business automation, intelligent process automation, document automation AI, OCR automation, AI workflow software",
   },
   {
     slug: "hegrix-retail360",
