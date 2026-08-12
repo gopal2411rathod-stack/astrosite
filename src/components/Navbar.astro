@@ -219,116 +219,43 @@ const megaSolutionCategories = [
   },
 ];
 
-const megaIndustryCategories = [
+const industryMegaGroups = [
   {
-    label: "Commerce & Retail",
-    title: "Commerce & Retail Industries",
-    groups: [
-      {
-        heading: "Customer Commerce",
-        services: ["Retail", "Real Estate", "Diamond & Jewelry", "Travel & Hospitality"],
-      },
-      {
-        heading: "Digital Platforms",
-        services: ["eCommerce Platforms", "Booking Portals", "Customer Loyalty Systems"],
-      },
-      {
-        heading: "Related Solutions",
-        services: ["B2B Commerce Platform", "Customer Portal", "Inventory & POS System"],
-      },
+    heading: "Commerce & Retail",
+    items: [
+      { title: "Retail", desc: "POS, inventory, loyalty & ecommerce", href: "/industries/retail/" },
+      { title: "Real Estate", desc: "Property portals, CRM & lead tools", href: "/industries/real-estate/" },
+      { title: "Diamond & Jewelry", desc: "Certification, inventory & luxury retail", href: "/industries/diamond-jewelry/" },
+      { title: "Travel & Hospitality", desc: "Booking portals, guest apps & PMS", href: "/industries/travel-hospitality/" },
     ],
   },
   {
-    label: "Automobile",
-    title: "Automobile & Manufacturing",
-    groups: [
-      {
-        heading: "Industrial Operations",
-        services: ["Automobile", "Automotive", "Manufacturing", "Logistics"],
-      },
-      {
-        heading: "Core Workflows",
-        services: ["Production Planning", "Inventory Management", "Supplier Portals"],
-      },
-      {
-        heading: "Related Solutions",
-        services: ["ERP Integration", "AI Business Automation", "Inventory & POS System"],
-      },
+    heading: "Automobile & Operations",
+    items: [
+      { title: "Automobile", desc: "Dealer portals, service booking & CRM", href: "/industries/automobile/" },
+      { title: "Automotive", desc: "ERP for manufacturing & spare parts", href: "/industries/automotive/" },
+      { title: "Manufacturing", desc: "BOM, MRP, shop floor & quality control", href: "/industries/manufacturing/" },
+      { title: "Logistics", desc: "Route tracking, fleet & partner portals", href: "/industries/logistics/" },
     ],
   },
   {
-    label: "Media",
-    title: "Media & Entertainment",
-    groups: [
-      {
-        heading: "Creative Industries",
-        services: ["Media & Entertainment", "Advertising"],
-      },
-      {
-        heading: "Growth Platforms",
-        services: ["Campaign Management", "Content Portals", "Audience Dashboards"],
-      },
-      {
-        heading: "Related Solutions",
-        services: ["Customer Portal", "AI Business Automation", "B2B Commerce Platform"],
-      },
+    heading: "Healthcare & Services",
+    items: [
+      { title: "Healthcare", desc: "Secure portals, EHR & clinical workflows", href: "/industries/healthcare/" },
+      { title: "Finance", desc: "Client portals, approval workflows & fintech", href: "/industries/finance/" },
+      { title: "Education", desc: "LMS portals, admissions & student ERP", href: "/industries/education/" },
     ],
   },
   {
-    label: "Healthcare",
-    title: "Healthcare & Wellness",
-    groups: [
-      {
-        heading: "Healthcare Systems",
-        services: ["Healthcare", "Patient Portals", "Appointment Management"],
-      },
-      {
-        heading: "Operations",
-        services: ["Document Workflows", "Clinic Dashboards", "Reporting Systems"],
-      },
-      {
-        heading: "Related Solutions",
-        services: ["Customer Portal", "AI Business Automation", "ERP Integration"],
-      },
-    ],
-  },
-  {
-    label: "Finance",
-    title: "Finance & Professional Services",
-    groups: [
-      {
-        heading: "Finance Platforms",
-        services: ["Finance Software Solutions", "Approval Workflows", "Client Portals"],
-      },
-      {
-        heading: "Automation",
-        services: ["Invoice Automation", "Reporting Dashboards", "Document Processing"],
-      },
-      {
-        heading: "Related Solutions",
-        services: ["AI Business Automation", "ERP Integration", "Customer Portal"],
-      },
-    ],
-  },
-  {
-    label: "Education",
-    title: "Education & Learning",
-    groups: [
-      {
-        heading: "Education Platforms",
-        services: ["Education Software Solutions", "Learning Portals", "Admissions Workflows"],
-      },
-      {
-        heading: "Institution Tools",
-        services: ["Student Dashboards", "Course Management", "Communication Portals"],
-      },
-      {
-        heading: "Related Solutions",
-        services: ["Customer Portal", "AI Business Automation", "Cloud & DevOps"],
-      },
+    heading: "Media & Creative",
+    items: [
+      { title: "Media & Entertainment", desc: "Streaming platforms, CMS & booking", href: "/industries/media-entertainment/" },
+      { title: "Advertising", desc: "Campaign tools, client portals & analytics", href: "/industries/advertising/" },
     ],
   },
 ];
+
+
 
 const serviceHref = (service: string) => {
   const match = servicePages.find((page) => page.title.toLowerCase() === service.toLowerCase());
@@ -491,54 +418,37 @@ const industryHref = (service: string) => {
       <div class="nav-group service-mega-group">
         <a href="/industries/" aria-haspopup="true" aria-expanded="false">Industries</a>
         <div class="enterprise-mega industry-mega" aria-label="Industries mega menu">
-          <div class="enterprise-mega__sidebar" role="tablist" aria-label="Industry categories">
-            {megaIndustryCategories.map((category, index) => (
-              <button
-                type="button"
-                class:list={["enterprise-mega__category", index === 0 && "is-active"]}
-                data-mega-category={String(index)}
-                role="tab"
-                aria-selected={index === 0 ? "true" : "false"}
-                aria-controls={`mega-industry-panel-${index}`}
-              >
-                {category.label}
-              </button>
-            ))}
-          </div>
-
-          <div class="enterprise-mega__content">
-            {megaIndustryCategories.map((category, index) => (
-              <div
-                class:list={["enterprise-mega__panel", index === 0 && "is-active"]}
-                id={`mega-industry-panel-${index}`}
-                data-mega-panel={String(index)}
-                role="tabpanel"
-                aria-hidden={index === 0 ? "false" : "true"}
-              >
-                <h2>{category.title}</h2>
-                <div class="enterprise-mega__divider"></div>
-                <div class="enterprise-mega__grid">
-                  {category.groups.map((group) => (
-                    <section class="enterprise-mega__section">
-                      <h3>{group.heading}</h3>
-                      <div class="enterprise-mega__links">
-                        {group.services.map((service) => (
-                          <a href={industryHref(service)}>
-                            <span>{service}</span>
-                            <span aria-hidden="true">-&gt;</span>
-                          </a>
-                        ))}
-                      </div>
-                    </section>
-                  ))}
-                </div>
+          <div class="industry-mega__container">
+            <div class="industry-mega__topbar">
+              <div class="industry-mega__intro">
+                <span class="industry-mega__badge">Industry Solutions</span>
+                <h2>Industry-Specific Software Solutions</h2>
+                <p>Tailored enterprise software, Odoo ERP, and AI platforms for 13 core industries.</p>
               </div>
-            ))}
+              <a href="/industries/" class="industry-mega__all-btn">
+                <span>View All 13 Industries</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
 
-            <form class="enterprise-mega__search" action="/contact-us/" method="get" role="search">
-              <input type="search" name="industry" placeholder="Search industries..." aria-label="Search industries" />
-              <button type="submit" aria-label="Search industries">Go</button>
-            </form>
+            <div class="industry-mega__grid">
+              {industryMegaGroups.map((group) => (
+                <div class="industry-mega__col">
+                  <h3 class="industry-mega__col-title">{group.heading}</h3>
+                  <div class="industry-mega__col-links">
+                    {group.items.map((item) => (
+                      <a href={item.href} class="industry-mega__item">
+                        <div class="industry-mega__item-content">
+                          <span class="industry-mega__item-title">{item.title}</span>
+                          <span class="industry-mega__item-desc">{item.desc}</span>
+                        </div>
+                        <span class="industry-mega__item-arrow" aria-hidden="true">&rarr;</span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -599,19 +509,17 @@ const industryHref = (service: string) => {
     <details class="mobile-service-accordion">
       <summary>Industries</summary>
       <div class="mobile-service-list">
-        {megaIndustryCategories.map((category) => (
-          <details>
-            <summary>{category.label}</summary>
+        {industryMegaGroups.map((group) => (
+          <details open>
+            <summary>{group.heading}</summary>
             <div>
-              {category.groups.map((group) => (
-                <section>
-                  <h3>{group.heading}</h3>
-                  {group.services.map((service) => <a href={industryHref(service)}>{service}</a>)}
-                </section>
-              ))}
+              <section>
+                {group.items.map((item) => <a href={item.href}>{item.title}</a>)}
+              </section>
             </div>
           </details>
         ))}
+        <a href="/industries/" class="mobile-all-industries-link">View All 13 Industries &rarr;</a>
       </div>
     </details>
     <a href="/portfolio/">Portfolio</a>
