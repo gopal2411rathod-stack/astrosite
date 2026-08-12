@@ -1,0 +1,3188 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export const prerender = true;
+
+const hcFaqs = [
+  {
+    question: "What types of healthcare software do you build?",
+    answer: "We build custom EHR/EMR systems, patient portals, telemedicine platforms, hospital management software, healthcare CRM, pharmacy POS, laboratory management (LIS), and healthcare analytics."
+  },
+  {
+    question: "Can you integrate with our existing healthcare systems?",
+    answer: "Yes. We seamlessly connect with legacy EHRs (Epic, Cerner, Allscripts), FHIR/HL7 standards, lab instruments, payment gateways, and medical devices via secure APIs."
+  },
+  {
+    question: "Can you build software for startups?",
+    answer: "Yes. We help healthcare startups turn initial concepts into compliance-ready MVPs and scalable production platforms designed for fast market entry."
+  },
+  {
+    question: "How do you approach healthcare data security?",
+    answer: "Security is built-in from day one, incorporating end-to-end AES-256 encryption, role-based access control, audit logs, and architectures designed for HIPAA and GDPR compliance."
+  },
+  {
+    question: "Can you modernize an existing healthcare application?",
+    answer: "Yes. We evaluate legacy applications to upgrade user experience, eliminate technical debt, modernize databases, and migrate to secure cloud infrastructure without downtime."
+  },
+  {
+    question: "Do you provide post-launch support?",
+    answer: "Yes. We provide 24/7 technical monitoring, SLA maintenance, security patches, system optimizations, and ongoing feature updates after deployment."
+  }
+];
+
+const hcSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Healthcare Software Solutions",
+    provider: {
+      "@type": "Organization",
+      name: "Hegrix",
+      url: "https://hegrix.com"
+    },
+    areaServed: "Global",
+    serviceType: "Custom Healthcare Software Development, EHR/EMR Integration, Telemedicine, Patient Portals & Analytics",
+    description: "Build secure, scalable healthcare software tailored to your workflows. Connect fragmented systems, automate clinical processes, and deliver modern digital care.",
+    url: "https://hegrix.com/industries/healthcare/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: hcFaqs.map(f => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.answer
+      }
+    }))
+  }
+];
+---
+
+<Layout
+  title="Healthcare Software Solutions | Secure & Scalable Healthcare Technology | Hegrix"
+  description="Build secure, scalable healthcare software tailored to your workflows. From EHR and telemedicine to patient portals, integrations, and healthcare analytics."
+  keywords="Healthcare software solutions, Healthcare software development, Healthcare technology solutions, Custom healthcare software, Healthcare app development, Healthcare software development company, Telemedicine software, EHR software development, Patient portal development"
+  path="/industries/healthcare/"
+  schema={hcSchema}
+>
+
+  <div class="hc-page">
+
+    <!-- ═══════════════════════════════════════
+         1. HERO SECTION
+    ═══════════════════════════════════════ -->
+    <section class="hc-hero">
+      <div class="container hc-hero__wrap">
+        
+        <div class="hc-hero__content">
+          <div class="hc-eyebrow">
+            <span class="hc-eyebrow__pulse"></span>
+            HEALTHCARE SOFTWARE SOLUTIONS
+          </div>
+          
+          <h1 class="hc-hero__title">
+            Healthcare Software Built Around <span class="hc-gradient-text">Your Workflows.</span>
+          </h1>
+
+          <p class="hc-hero__lead">
+            Transform complex healthcare processes into secure, connected, and intuitive digital experiences. We build custom healthcare software that helps providers operate smarter and patients experience better care.
+          </p>
+
+          <!-- Core USP Banner Card -->
+          <div class="hc-usp-banner">
+            <div class="hc-usp-banner__tag">CORE USP</div>
+            <p class="hc-usp-banner__main">
+              “Healthcare software built around your workflows—not the other way around.”
+            </p>
+            <p class="hc-usp-banner__sub">
+              Secure, scalable, and interoperable healthcare solutions that streamline operations, connect fragmented systems, and deliver better digital experiences for providers and patients.
+            </p>
+          </div>
+
+          <div class="hc-hero__actions">
+            <a href="#contact-form" class="hc-btn hc-btn--primary">
+              Book a Consultation
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#solutions" class="hc-btn hc-btn--secondary">
+              Explore Our Solutions
+            </a>
+          </div>
+
+          <div class="hc-hero__badges">
+            <span class="hc-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Security-by-Design
+            </span>
+            <span class="hc-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              FHIR &amp; HL7 Ready
+            </span>
+            <span class="hc-chip">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Enterprise Scale
+            </span>
+          </div>
+        </div>
+
+        <!-- Hero Right Visual: Clinical Command Dashboard -->
+        <div class="hc-hero__visual">
+          
+          <!-- Floating UI Pill 1 -->
+          <div class="hc-float-card hc-float-card--top">
+            <div class="hc-float-card__icon hc-float-card__icon--teal">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+            </div>
+            <div>
+              <div class="hc-float-card__val">+24%</div>
+              <div class="hc-float-card__lbl">Operational Efficiency</div>
+            </div>
+          </div>
+
+          <!-- Floating UI Pill 2 -->
+          <div class="hc-float-card hc-float-card--mid">
+            <div class="hc-float-card__icon hc-float-card__icon--blue">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <div>
+              <div class="hc-float-card__val">Secure &amp; Connected</div>
+              <div class="hc-float-card__lbl">Encrypted Data Layer</div>
+            </div>
+          </div>
+
+          <!-- Floating UI Pill 3 -->
+          <div class="hc-float-card hc-float-card--bot">
+            <div class="hc-float-card__icon hc-float-card__icon--green">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <div>
+              <div class="hc-float-card__val">98.7%</div>
+              <div class="hc-float-card__lbl">System Uptime</div>
+            </div>
+          </div>
+
+          <!-- Main Dashboard Graphic -->
+          <div class="hc-dashboard">
+            <div class="hc-dash__head">
+              <div class="hc-dash__dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="hc-dash__title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                Clinical Operations &amp; Care Command Center
+              </div>
+              <div class="hc-dash__status">
+                <span class="hc-live-dot"></span> LIVE
+              </div>
+            </div>
+
+            <div class="hc-dash__body">
+              <div class="hc-dash__kpis">
+                <div class="hc-kpi-item">
+                  <div class="hc-kpi-item__num">14,280</div>
+                  <div class="hc-kpi-item__label">Active Patients</div>
+                </div>
+                <div class="hc-kpi-item">
+                  <div class="hc-kpi-item__num">482</div>
+                  <div class="hc-kpi-item__label">Today's Visits</div>
+                </div>
+                <div class="hc-kpi-item">
+                  <div class="hc-kpi-item__num">99.8%</div>
+                  <div class="hc-kpi-item__label">Sync Speed</div>
+                </div>
+              </div>
+
+              <!-- Mini Chart Graphic -->
+              <div class="hc-dash__chart-container">
+                <div class="hc-dash__chart-header">
+                  <span>Patient Encounters &amp; Capacity Load</span>
+                  <span class="hc-badge-sm">Real-time Stream</span>
+                </div>
+                <div class="hc-chart-visual">
+                  <div class="hc-chart-bar" style="--h: 45%;"><span>Mon</span></div>
+                  <div class="hc-chart-bar" style="--h: 70%;"><span>Tue</span></div>
+                  <div class="hc-chart-bar" style="--h: 88%;"><span>Wed</span></div>
+                  <div class="hc-chart-bar" style="--h: 62%;"><span>Thu</span></div>
+                  <div class="hc-chart-bar" style="--h: 95%;"><span>Fri</span></div>
+                  <div class="hc-chart-bar" style="--h: 55%;"><span>Sat</span></div>
+                  <div class="hc-chart-bar" style="--h: 40%;"><span>Sun</span></div>
+                </div>
+              </div>
+
+              <!-- Stream Rows -->
+              <div class="hc-dash__stream">
+                <div class="hc-stream-row">
+                  <div class="hc-stream-row__status hc-stream-row__status--success">●</div>
+                  <div class="hc-stream-row__info">
+                    <strong>Telehealth Consultation #4092</strong>
+                    <span>Dr. Sarah Jenkins · Patient Check-in Verified</span>
+                  </div>
+                  <div class="hc-stream-row__time">Just Now</div>
+                </div>
+                <div class="hc-stream-row">
+                  <div class="hc-stream-row__status hc-stream-row__status--blue">●</div>
+                  <div class="hc-stream-row__info">
+                    <strong>FHIR Sync — Lab Results</strong>
+                    <span>BioDx Specimen #8831 Automated Dispatch</span>
+                  </div>
+                  <div class="hc-stream-row__time">2m ago</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         2. TRUST / SOCIAL PROOF STRIP
+    ═══════════════════════════════════════ -->
+    <section class="hc-trust-strip">
+      <div class="container">
+        <p class="hc-trust-strip__headline">
+          Technology trusted to power better healthcare experiences.
+        </p>
+
+        <!-- Ecosystem Partner Logos Strip -->
+        <div class="hc-trust-strip__logos">
+          <div class="hc-logo-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16"></path><path d="M1 21h22"></path><path d="M9 7h1"></path><path d="M14 7h1"></path></svg>
+            Hospitals &amp; Networks
+          </div>
+          <div class="hc-logo-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            Specialist Clinics
+          </div>
+          <div class="hc-logo-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M12 2v20M2 12h20"></path></svg>
+            Health-Tech Startups
+          </div>
+          <div class="hc-logo-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><path d="M10 2v7.31L4.75 18.1A2 2 0 0 0 6.47 21h11.06a2 2 0 0 0 1.72-2.9L14 9.31V2z"></path></svg>
+            Diagnostic Laboratories
+          </div>
+          <div class="hc-logo-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M10.5 20.4l-7.9-7.9a5.1 5.1 0 0 1 7.2-7.2l7.9 7.9a5.1 5.1 0 0 1-7.2 7.2z"></path></svg>
+            Pharmacy Chains
+          </div>
+        </div>
+
+        <div class="hc-trust-strip__pillars">
+          <div class="hc-trust-pillar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            <span>Secure Architecture</span>
+          </div>
+          <div class="hc-trust-pillar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-4V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v6H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v6a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-6h4a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2z"></path></svg>
+            <span>Scalable Infrastructure</span>
+          </div>
+          <div class="hc-trust-pillar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v1"></path><path d="M18 8h4a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-4"></path><circle cx="8" cy="12" r="2"></circle></svg>
+            <span>Interoperable Systems</span>
+          </div>
+          <div class="hc-trust-pillar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            <span>Patient-Centric Design</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         3. PROBLEM SECTION
+    ═══════════════════════════════════════ -->
+    <section class="hc-section hc-section--light">
+      <div class="container">
+        
+        <div class="hc-section-head text-center">
+          <span class="hc-sub-title">THE CHALLENGE</span>
+          <h2 class="hc-section-title">
+            Healthcare is complex. Your software shouldn't be.
+          </h2>
+          <p class="hc-section-desc">
+            Disconnected systems, manual processes, fragmented patient data, and outdated workflows can slow down healthcare organizations. We simplify that complexity with software designed specifically around the way your teams work.
+          </p>
+        </div>
+
+        <div class="hc-problem-grid">
+          
+          <div class="hc-problem-card">
+            <div class="hc-problem-card__number">01</div>
+            <div class="hc-problem-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v1"></path><path d="M18 8h4a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-4"></path></svg>
+            </div>
+            <h3 class="hc-problem-card__title">Fragmented Systems</h3>
+            <p class="hc-problem-card__desc">
+              Connect disconnected healthcare platforms, legacy EMRs, labs, and third-party data sources into one synchronized ecosystem.
+            </p>
+          </div>
+
+          <div class="hc-problem-card">
+            <div class="hc-problem-card__number">02</div>
+            <div class="hc-problem-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            </div>
+            <h3 class="hc-problem-card__title">Manual Workflows</h3>
+            <p class="hc-problem-card__desc">
+              Automate repetitive administrative and clinical operational processes to eliminate human error and reduce staff burnout.
+            </p>
+          </div>
+
+          <div class="hc-problem-card">
+            <div class="hc-problem-card__number">03</div>
+            <div class="hc-problem-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <h3 class="hc-problem-card__title">Poor Patient Experience</h3>
+            <p class="hc-problem-card__desc">
+              Create simpler, more intuitive digital journeys for scheduling, telehealth, medical history access, and bill payment.
+            </p>
+          </div>
+
+          <div class="hc-problem-card">
+            <div class="hc-problem-card__number">04</div>
+            <div class="hc-problem-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <h3 class="hc-problem-card__title">Limited Visibility</h3>
+            <p class="hc-problem-card__desc">
+              Turn healthcare data into actionable insights through intelligent real-time executive dashboards and clinical analytics.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         4. SOLUTIONS SECTION
+    ═══════════════════════════════════════ -->
+    <section id="solutions" class="hc-section">
+      <div class="container">
+
+        <div class="hc-section-head text-center">
+          <span class="hc-sub-title">SOLUTIONS ARCHITECTURE</span>
+          <h2 class="hc-section-title">
+            Solutions for every stage of the healthcare journey.
+          </h2>
+          <p class="hc-section-desc">
+            From clinical operations to patient engagement, we create connected digital solutions that solve real healthcare challenges.
+          </p>
+        </div>
+
+        <div class="hc-solutions-grid">
+          
+          <!-- Solution Card 01 -->
+          <div class="hc-solution-card">
+            <div class="hc-solution-card__head">
+              <div class="hc-solution-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+              </div>
+              <span class="hc-solution-card__idx">01</span>
+            </div>
+            <h3 class="hc-solution-card__title">EHR / EMR Solutions</h3>
+            <p class="hc-solution-card__desc">
+              Secure and intuitive electronic health record systems designed around clinical workflows, rapid chart entry, and FHIR standards.
+            </p>
+            <a href="#contact-form" class="hc-solution-card__link">
+              Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Solution Card 02 -->
+          <div class="hc-solution-card">
+            <div class="hc-solution-card__head">
+              <div class="hc-solution-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16"></path><path d="M1 21h22"></path><path d="M9 7h1"></path><path d="M9 11h1"></path><path d="M14 7h1"></path><path d="M14 11h1"></path></svg>
+              </div>
+              <span class="hc-solution-card__idx">02</span>
+            </div>
+            <h3 class="hc-solution-card__title">Hospital Management Software</h3>
+            <p class="hc-solution-card__desc">
+              Centralize operations, bed capacity, resources, appointments, billing, departments, and patient information across facilities.
+            </p>
+            <a href="#contact-form" class="hc-solution-card__link">
+              Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Solution Card 03 -->
+          <div class="hc-solution-card">
+            <div class="hc-solution-card__head">
+              <div class="hc-solution-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+              </div>
+              <span class="hc-solution-card__idx">03</span>
+            </div>
+            <h3 class="hc-solution-card__title">Telemedicine Platforms</h3>
+            <p class="hc-solution-card__desc">
+              Enable secure virtual consultations, remote care, scheduling, multi-party video consultations, and digital follow-ups.
+            </p>
+            <a href="#contact-form" class="hc-solution-card__link">
+              Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Solution Card 04 -->
+          <div class="hc-solution-card">
+            <div class="hc-solution-card__head">
+              <div class="hc-solution-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+              </div>
+              <span class="hc-solution-card__idx">04</span>
+            </div>
+            <h3 class="hc-solution-card__title">Patient Portals</h3>
+            <p class="hc-solution-card__desc">
+              Give patients convenient access to appointments, records, prescriptions, secure clinician messaging, and healthcare services.
+            </p>
+            <a href="#contact-form" class="hc-solution-card__link">
+              Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Solution Card 05 -->
+          <div class="hc-solution-card">
+            <div class="hc-solution-card__head">
+              <div class="hc-solution-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <span class="hc-solution-card__idx">05</span>
+            </div>
+            <h3 class="hc-solution-card__title">Healthcare CRM</h3>
+            <p class="hc-solution-card__desc">
+              Build stronger patient relationships with personalized communication, care reminders, engagement, and workflow automation.
+            </p>
+            <a href="#contact-form" class="hc-solution-card__link">
+              Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Solution Card 06 -->
+          <div class="hc-solution-card">
+            <div class="hc-solution-card__head">
+              <div class="hc-solution-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.5 20.4l-7.9-7.9a5.1 5.1 0 0 1 7.2-7.2l7.9 7.9a5.1 5.1 0 0 1-7.2 7.2z"></path><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"></line></svg>
+              </div>
+              <span class="hc-solution-card__idx">06</span>
+            </div>
+            <h3 class="hc-solution-card__title">Pharmacy Management</h3>
+            <p class="hc-solution-card__desc">
+              Manage e-prescriptions, inventory tracking, batch expiry, purchase orders, billing, and pharmacy POS operations efficiently.
+            </p>
+            <a href="#contact-form" class="hc-solution-card__link">
+              Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Solution Card 07 -->
+          <div class="hc-solution-card">
+            <div class="hc-solution-card__head">
+              <div class="hc-solution-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 2v7.31L4.75 18.1A2 2 0 0 0 6.47 21h11.06a2 2 0 0 0 1.72-2.9L14 9.31V2z"></path><line x1="8.5" y1="2" x2="15.5" y2="2"></line></svg>
+              </div>
+              <span class="hc-solution-card__idx">07</span>
+            </div>
+            <h3 class="hc-solution-card__title">Laboratory Management</h3>
+            <p class="hc-solution-card__desc">
+              Digitize laboratory workflows (LIS), specimen barcodes, diagnostic test management, instrument feeds, and reporting.
+            </p>
+            <a href="#contact-form" class="hc-solution-card__link">
+              Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Solution Card 08 -->
+          <div class="hc-solution-card">
+            <div class="hc-solution-card__head">
+              <div class="hc-solution-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+              </div>
+              <span class="hc-solution-card__idx">08</span>
+            </div>
+            <h3 class="hc-solution-card__title">Healthcare Analytics</h3>
+            <p class="hc-solution-card__desc">
+              Transform healthcare data into actionable insights through executive dashboards, clinical reporting, and predictive analytics.
+            </p>
+            <a href="#contact-form" class="hc-solution-card__link">
+              Learn More <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         5. FEATURE / PRODUCT SHOWCASE
+    ═══════════════════════════════════════ -->
+    <section class="hc-section hc-section--dark-bg">
+      <div class="container">
+        
+        <div class="hc-section-head text-center">
+          <span class="hc-sub-title hc-sub-title--cyan">CONNECTED HEALTHCARE PLATFORM</span>
+          <h2 class="hc-section-title hc-text-white">
+            One connected view of your healthcare operations.
+          </h2>
+          <p class="hc-section-desc hc-text-muted">
+            Give your teams the information they need, exactly when they need it. Our solutions bring critical workflows, patient data, analytics, and operational insights into one connected experience.
+          </p>
+        </div>
+
+        <!-- Comprehensive Dashboard Showcase Graphic -->
+        <div class="hc-product-showcase">
+          
+          <div class="hc-showcase-window">
+            <div class="hc-showcase-bar">
+              <div class="hc-showcase-dots"><span></span><span></span><span></span></div>
+              <div class="hc-showcase-tab">Hegrix HealthOS Enterprise v4.2</div>
+              <div class="hc-showcase-right">
+                <span class="hc-sec-pill">🔒 Encryption: AES-256</span>
+              </div>
+            </div>
+
+            <div class="hc-showcase-layout">
+              
+              <!-- Sidebar nav -->
+              <div class="hc-showcase-side">
+                <div class="hc-side-item hc-side-item--active">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                  Overview
+                </div>
+                <div class="hc-side-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                  Patients
+                </div>
+                <div class="hc-side-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line></svg>
+                  Appointments
+                </div>
+                <div class="hc-side-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                  Telehealth
+                </div>
+                <div class="hc-side-item">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                  Revenue Analytics
+                </div>
+              </div>
+
+              <!-- Main Showcase Content -->
+              <div class="hc-showcase-main">
+                
+                <div class="hc-sc-metrics-grid">
+                  <div class="hc-sc-card">
+                    <div class="hc-sc-card__title">Total Patients Served</div>
+                    <div class="hc-sc-card__val">42,890</div>
+                    <div class="hc-sc-card__trend text-teal">↑ +14.2% YoY growth</div>
+                  </div>
+                  <div class="hc-sc-card">
+                    <div class="hc-sc-card__title">Avg Consult Time</div>
+                    <div class="hc-sc-card__val">14.2 min</div>
+                    <div class="hc-sc-card__trend text-blue">⚡ Optimal workflow</div>
+                  </div>
+                  <div class="hc-sc-card">
+                    <div class="hc-sc-card__title">Patient Satisfaction</div>
+                    <div class="hc-sc-card__val">98.4%</div>
+                    <div class="hc-sc-card__trend text-teal">★ 4.9/5 Rating</div>
+                  </div>
+                  <div class="hc-sc-card">
+                    <div class="hc-sc-card__title">Bed Occupancy Rate</div>
+                    <div class="hc-sc-card__val">84.1%</div>
+                    <div class="hc-sc-card__trend text-muted">Normal Operating Range</div>
+                  </div>
+                </div>
+
+                <div class="hc-sc-two-col">
+                  <!-- Clinical Activity Stream -->
+                  <div class="hc-sc-block">
+                    <h4 class="hc-sc-block__title">Clinical &amp; Staff Activity</h4>
+                    <ul class="hc-activity-list">
+                      <li>
+                        <span class="hc-act-dot hc-act-dot--blue"></span>
+                        <div>
+                          <strong>Dr. Emily Chen uploaded consultation summary</strong>
+                          <span class="hc-act-sub">Cardiology · Patient ID #88412</span>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="hc-act-dot hc-act-dot--teal"></span>
+                        <div>
+                          <strong>Automated FHIR sync completed with Central Lab</strong>
+                          <span class="hc-act-sub">14 Specimen Reports Updated</span>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="hc-act-dot hc-act-dot--green"></span>
+                        <div>
+                          <strong>Telemedicine Visit Completed</strong>
+                          <span class="hc-act-sub">Patient: Robert Miller · Prescriptions Delivered</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Real-time Notifications & Analytics -->
+                  <div class="hc-sc-block">
+                    <h4 class="hc-sc-block__title">System Health &amp; Notifications</h4>
+                    <div class="hc-notif-box">
+                      <div class="hc-notif-item">
+                        <span class="hc-notif-badge">EMR API</span>
+                        <span>AthenaHealth Gateway Response: <strong>24ms</strong></span>
+                      </div>
+                      <div class="hc-notif-item">
+                        <span class="hc-notif-badge hc-notif-badge--green">HL7 Node</span>
+                        <span>Zero dropped frames in last 24 hours</span>
+                      </div>
+                      <div class="hc-notif-item">
+                        <span class="hc-notif-badge hc-notif-badge--cyan">Backup</span>
+                        <span>Encrypted snapshot created at 02:00 UTC</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         6. SERVICES SECTION
+    ═══════════════════════════════════════ -->
+    <section class="hc-section hc-section--light">
+      <div class="container">
+        
+        <div class="hc-section-head text-center">
+          <span class="hc-sub-title">END-TO-END CAPABILITIES</span>
+          <h2 class="hc-section-title">
+            From strategy to software, we build for the entire journey.
+          </h2>
+          <p class="hc-section-desc">
+            We provide full-lifecycle software development and digital transformation capabilities tailored for healthcare providers, platforms, and health-tech enterprises.
+          </p>
+        </div>
+
+        <div class="hc-services-grid">
+          
+          <div class="hc-service-card">
+            <div class="hc-service-card__num">01</div>
+            <h3 class="hc-service-card__title">Healthcare Product Strategy</h3>
+            <p class="hc-service-card__desc">
+              Turn complex clinical operational challenges into clear digital product roadmaps, compliance frameworks, and technology architectures.
+            </p>
+          </div>
+
+          <div class="hc-service-card">
+            <div class="hc-service-card__num">02</div>
+            <h3 class="hc-service-card__title">UX/UI Design</h3>
+            <p class="hc-service-card__desc">
+              Design accessible, intuitive experiences tailored for busy clinicians, medical staff, and diverse patient demographics.
+            </p>
+          </div>
+
+          <div class="hc-service-card">
+            <div class="hc-service-card__num">03</div>
+            <h3 class="hc-service-card__title">Custom Software Development</h3>
+            <p class="hc-service-card__desc">
+              Build scalable, robust healthcare applications tailored specifically to your organization's unique clinical and business workflows.
+            </p>
+          </div>
+
+          <div class="hc-service-card">
+            <div class="hc-service-card__num">04</div>
+            <h3 class="hc-service-card__title">System Integration</h3>
+            <p class="hc-service-card__desc">
+              Connect EHRs, PACS/LIS, payment gateways, IoT medical devices, and third-party healthcare platforms with secure APIs.
+            </p>
+          </div>
+
+          <div class="hc-service-card">
+            <div class="hc-service-card__num">05</div>
+            <h3 class="hc-service-card__title">Cloud &amp; Infrastructure</h3>
+            <p class="hc-service-card__desc">
+              Build reliable, high-availability, secure cloud infrastructure engineered for 99.99% uptime, zero data loss, and rapid response.
+            </p>
+          </div>
+
+          <div class="hc-service-card">
+            <div class="hc-service-card__num">06</div>
+            <h3 class="hc-service-card__title">Support &amp; Optimization</h3>
+            <p class="hc-service-card__desc">
+              Continuously optimize application performance, security posture, accessibility standards, and clinical user feedback post-launch.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         7. WHY CHOOSE US
+    ═══════════════════════════════════════ -->
+    <section class="hc-section">
+      <div class="container">
+        
+        <div class="hc-section-head text-center">
+          <span class="hc-sub-title">THE HEGRIX ADVANTAGE</span>
+          <h2 class="hc-section-title">
+            Why healthcare organizations choose us.
+          </h2>
+          <p class="hc-section-desc">
+            We bridge the gap between complex medical requirements and cutting-edge software engineering.
+          </p>
+        </div>
+
+        <div class="hc-why-grid">
+          
+          <div class="hc-why-card">
+            <div class="hc-why-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            </div>
+            <h3 class="hc-why-card__title">Healthcare-First Thinking</h3>
+            <p class="hc-why-card__desc">
+              We design around real healthcare workflows, clinical realities, and user needs rather than forcing generic software templates.
+            </p>
+          </div>
+
+          <div class="hc-why-card">
+            <div class="hc-why-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h3 class="hc-why-card__title">Security by Design</h3>
+            <p class="hc-why-card__desc">
+              Data privacy, encryption, granular access controls, and security architecture are considered throughout the product lifecycle.
+            </p>
+          </div>
+
+          <div class="hc-why-card">
+            <div class="hc-why-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <h3 class="hc-why-card__title">Built to Scale</h3>
+            <p class="hc-why-card__desc">
+              Cloud-native architectures engineered to handle growing patient populations, high data volumes, and multi-location expansion.
+            </p>
+          </div>
+
+          <div class="hc-why-card">
+            <div class="hc-why-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            </div>
+            <h3 class="hc-why-card__title">Seamless Integration</h3>
+            <p class="hc-why-card__desc">
+              Connect your existing legacy healthcare software and equipment instead of replacing your entire technological foundation.
+            </p>
+          </div>
+
+          <div class="hc-why-card">
+            <div class="hc-why-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </div>
+            <h3 class="hc-why-card__title">Human-Centered UX</h3>
+            <p class="hc-why-card__desc">
+              Make complex healthcare software simple, intuitive, and stress-free for clinicians, administrative staff, and patients.
+            </p>
+          </div>
+
+          <div class="hc-why-card">
+            <div class="hc-why-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="hc-why-card__title">Long-Term Technology Partner</h3>
+            <p class="hc-why-card__desc">
+              We support your software beyond go-live with active optimization, security updates, SLA monitoring, and strategic roadmap enhancements.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         8. SECURITY & COMPLIANCE SECTION
+    ═══════════════════════════════════════ -->
+    <section class="hc-section hc-security-section">
+      <div class="container">
+        
+        <div class="hc-section-head text-center">
+          <span class="hc-sub-title hc-sub-title--teal">DATA PROTECTION &amp; STANDARDS</span>
+          <h2 class="hc-section-title hc-text-white">
+            Security isn't a feature. It's the foundation.
+          </h2>
+          <p class="hc-section-desc hc-text-muted">
+            Healthcare data demands a higher standard. Our solutions are designed with security, privacy, access control, encryption, auditability, and compliance requirements in mind.
+          </p>
+        </div>
+
+        <div class="hc-security-grid">
+          
+          <div class="hc-sec-badge">
+            <div class="hc-sec-badge__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h4 class="hc-sec-badge__title">Data Encryption</h4>
+            <p class="hc-sec-badge__desc">AES-256 encryption at rest and TLS 1.3 in transit for end-to-end medical data protection.</p>
+          </div>
+
+          <div class="hc-sec-badge">
+            <div class="hc-sec-badge__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M21 2l-2 2m-2-2l2 2M3 11v-1a5 5 0 0 1 10 0v1m-6 0h6m-3-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path><rect x="3" y="11" width="12" height="10" rx="2"></rect></svg>
+            </div>
+            <h4 class="hc-sec-badge__title">Role-Based Access</h4>
+            <p class="hc-sec-badge__desc">Granular RBAC controls and multi-factor authentication (MFA) to restrict sensitive clinical access.</p>
+          </div>
+
+          <div class="hc-sec-badge">
+            <div class="hc-sec-badge__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#14B8A6" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <h4 class="hc-sec-badge__title">Secure APIs</h4>
+            <p class="hc-sec-badge__desc">FHIR R4 and HL7 compliant endpoints protected by OAuth 2.0 and API token management.</p>
+          </div>
+
+          <div class="hc-sec-badge">
+            <div class="hc-sec-badge__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><circle cx="12" cy="14" r="3"></circle><polyline points="12 13 12 14 13 14"></polyline></svg>
+            </div>
+            <h4 class="hc-sec-badge__title">Audit Trails</h4>
+            <p class="hc-sec-badge__desc">Immutable logging of all data access, patient chart edits, and operational transactions.</p>
+          </div>
+
+          <div class="hc-sec-badge">
+            <div class="hc-sec-badge__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
+            </div>
+            <h4 class="hc-sec-badge__title">Privacy Controls</h4>
+            <p class="hc-sec-badge__desc">Automated data anonymization, consent management, and patient privacy controls.</p>
+          </div>
+
+          <div class="hc-sec-badge">
+            <div class="hc-sec-badge__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+            </div>
+            <h4 class="hc-sec-badge__title">Cloud Security</h4>
+            <p class="hc-sec-badge__desc">Isolated VPC environments, threat detection, and continuous security scanning.</p>
+          </div>
+
+          <div class="hc-sec-badge hc-sec-badge--highlight">
+            <div class="hc-sec-badge__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2DD4BF" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+            </div>
+            <h4 class="hc-sec-badge__title">Compliance-Ready Architecture</h4>
+            <p class="hc-sec-badge__desc">Software architectures designed to support HIPAA and GDPR requirements.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         9. INDUSTRIES SECTION
+    ═══════════════════════════════════════ -->
+    <section class="hc-section hc-section--light">
+      <div class="container">
+        
+        <div class="hc-section-head text-center">
+          <span class="hc-sub-title">HEALTHCARE ECOSYSTEM</span>
+          <h2 class="hc-section-title">
+            Built for the healthcare ecosystem.
+          </h2>
+          <p class="hc-section-desc">
+            We deliver tailored solutions across diverse sectors within the digital health landscape.
+          </p>
+        </div>
+
+        <div class="hc-ind-grid">
+          
+          <div class="hc-ind-card">
+            <div class="hc-ind-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" stroke-width="2"><path d="M19 21V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v16"></path><path d="M1 21h22"></path><path d="M9 7h1"></path><path d="M14 7h1"></path><path d="M9 11h1"></path><path d="M14 11h1"></path></svg>
+            </div>
+            <h3 class="hc-ind-card__title">Hospitals</h3>
+            <p class="hc-ind-card__desc">Centralized bed management, ER patient flow, multi-department coordination, and operational analytics.</p>
+          </div>
+
+          <div class="hc-ind-card">
+            <div class="hc-ind-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+            </div>
+            <h3 class="hc-ind-card__title">Clinics</h3>
+            <p class="hc-ind-card__desc">Practice management, appointment scheduling, digital charting, and automated patient billing.</p>
+          </div>
+
+          <div class="hc-ind-card">
+            <div class="hc-ind-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+            </div>
+            <h3 class="hc-ind-card__title">Healthcare Networks</h3>
+            <p class="hc-ind-card__desc">Unified patient records, inter-facility communication, and enterprise-wide reporting dashboards.</p>
+          </div>
+
+          <div class="hc-ind-card">
+            <div class="hc-ind-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" stroke-width="2"><path d="M10 2v7.31L4.75 18.1A2 2 0 0 0 6.47 21h11.06a2 2 0 0 0 1.72-2.9L14 9.31V2z"></path><line x1="8.5" y1="2" x2="15.5" y2="2"></line></svg>
+            </div>
+            <h3 class="hc-ind-card__title">Diagnostic Laboratories</h3>
+            <p class="hc-ind-card__desc">Specimen barcode tracking, automated LIS analyzer sync, and direct patient result portals.</p>
+          </div>
+
+          <div class="hc-ind-card">
+            <div class="hc-ind-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><path d="M10.5 20.4l-7.9-7.9a5.1 5.1 0 0 1 7.2-7.2l7.9 7.9a5.1 5.1 0 0 1-7.2 7.2z"></path><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"></line></svg>
+            </div>
+            <h3 class="hc-ind-card__title">Pharmacies</h3>
+            <p class="hc-ind-card__desc">e-Prescription processing, real-time inventory management, batch tracking, and retail POS.</p>
+          </div>
+
+          <div class="hc-ind-card">
+            <div class="hc-ind-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            </div>
+            <h3 class="hc-ind-card__title">Medical Centers</h3>
+            <p class="hc-ind-card__desc">Urgent care triage, walk-in queue management, digital check-in, and rapid discharge software.</p>
+          </div>
+
+          <div class="hc-ind-card">
+            <div class="hc-ind-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-3.05 11a22.35 22.35 0 0 1-3.95 2z"></path></svg>
+            </div>
+            <h3 class="hc-ind-card__title">Health-Tech Startups</h3>
+            <p class="hc-ind-card__desc">Rapid compliance-ready MVP engineering, cloud architecture, and investor-ready digital products.</p>
+          </div>
+
+          <div class="hc-ind-card">
+            <div class="hc-ind-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            </div>
+            <h3 class="hc-ind-card__title">Home Healthcare</h3>
+            <p class="hc-ind-card__desc">Mobile caregiver dispatch, remote patient vital monitoring, visit verification, and care plans.</p>
+          </div>
+
+          <div class="hc-ind-card">
+            <div class="hc-ind-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect><polyline points="9 14 11 16 15 12"></polyline></svg>
+            </div>
+            <h3 class="hc-ind-card__title">Insurance &amp; Payers</h3>
+            <p class="hc-ind-card__desc">Automated claims processing, eligibility verification, prior authorization, and member portals.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         10. INTEGRATIONS SECTION
+    ═══════════════════════════════════════ -->
+    <section class="hc-section">
+      <div class="container">
+        
+        <div class="hc-section-head text-center">
+          <span class="hc-sub-title">INTEROPERABILITY &amp; APIS</span>
+          <h2 class="hc-section-title">
+            Connect your entire healthcare ecosystem.
+          </h2>
+          <p class="hc-section-desc">
+            “Your existing systems don't have to become obstacles. We help connect the technologies you already use.”
+          </p>
+        </div>
+
+        <div class="hc-integ-grid">
+          
+          <div class="hc-integ-card">
+            <h4 class="hc-integ-card__title">EHR / EMR Systems</h4>
+            <p class="hc-integ-card__desc">Epic, Cerner, Allscripts, AthenaHealth, eClinicalWorks</p>
+          </div>
+
+          <div class="hc-integ-card">
+            <h4 class="hc-integ-card__title">Payment Gateways</h4>
+            <p class="hc-integ-card__desc">Stripe, Razorpay, PayPal, Authorize.net</p>
+          </div>
+
+          <div class="hc-integ-card">
+            <h4 class="hc-integ-card__title">Medical Devices</h4>
+            <p class="hc-integ-card__desc">IoT diagnostic devices, telemetry monitors, digital scales</p>
+          </div>
+
+          <div class="hc-integ-card">
+            <h4 class="hc-integ-card__title">Wearables</h4>
+            <p class="hc-integ-card__desc">Apple HealthKit, Google Health Connect, Fitbit SDK</p>
+          </div>
+
+          <div class="hc-integ-card">
+            <h4 class="hc-integ-card__title">Laboratory Systems</h4>
+            <p class="hc-integ-card__desc">LIS software interfaces, PACS imaging (DICOM)</p>
+          </div>
+
+          <div class="hc-integ-card">
+            <h4 class="hc-integ-card__title">Insurance Platforms</h4>
+            <p class="hc-integ-card__desc">Clearinghouse APIs, X12 837/835 EDI transactions</p>
+          </div>
+
+          <div class="hc-integ-card">
+            <h4 class="hc-integ-card__title">Communication</h4>
+            <p class="hc-integ-card__desc">Twilio, Zoom Healthcare, WebRTC, WhatsApp API</p>
+          </div>
+
+          <div class="hc-integ-card">
+            <h4 class="hc-integ-card__title">Cloud Platforms</h4>
+            <p class="hc-integ-card__desc">AWS HealthLake, Azure Health Data, GCP Healthcare</p>
+          </div>
+
+          <div class="hc-integ-card">
+            <h4 class="hc-integ-card__title">APIs &amp; Protocols</h4>
+            <p class="hc-integ-card__desc">FHIR R4, HL7 v2/v3, REST, GraphQL, SMART-on-FHIR</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         11. PROCESS SECTION
+    ═══════════════════════════════════════ -->
+    <section class="hc-section hc-section--light">
+      <div class="container">
+        
+        <div class="hc-section-head text-center">
+          <span class="hc-sub-title">DEVELOPMENT METHODOLOGY</span>
+          <h2 class="hc-section-title">
+            A smarter way to build healthcare software.
+          </h2>
+          <p class="hc-section-desc">
+            A structured, risk-mitigated approach to building high-performance medical applications.
+          </p>
+        </div>
+
+        <div class="hc-process-timeline">
+          
+          <div class="hc-process-step">
+            <div class="hc-process-step__num">01</div>
+            <div class="hc-process-step__content">
+              <h3 class="hc-process-step__title">Discover</h3>
+              <p class="hc-process-step__desc">
+                Understand your workflows, user roles, clinical pain points, security requirements, and business objectives.
+              </p>
+            </div>
+          </div>
+
+          <div class="hc-process-step">
+            <div class="hc-process-step__num">02</div>
+            <div class="hc-process-step__content">
+              <h3 class="hc-process-step__title">Strategize</h3>
+              <p class="hc-process-step__desc">
+                Define the product roadmap, technology architecture, data schemas, compliance milestones, and priorities.
+              </p>
+            </div>
+          </div>
+
+          <div class="hc-process-step">
+            <div class="hc-process-step__num">03</div>
+            <div class="hc-process-step__content">
+              <h3 class="hc-process-step__title">Design</h3>
+              <p class="hc-process-step__desc">
+                Create intuitive, accessible UX/UI experiences for patients, clinicians, and administrative healthcare teams.
+              </p>
+            </div>
+          </div>
+
+          <div class="hc-process-step">
+            <div class="hc-process-step__num">04</div>
+            <div class="hc-process-step__content">
+              <h3 class="hc-process-step__title">Develop</h3>
+              <p class="hc-process-step__desc">
+                Build secure, scalable, and high-performance software with rigorous code reviews and continuous testing.
+              </p>
+            </div>
+          </div>
+
+          <div class="hc-process-step">
+            <div class="hc-process-step__num">05</div>
+            <div class="hc-process-step__content">
+              <h3 class="hc-process-step__title">Integrate</h3>
+              <p class="hc-process-step__desc">
+                Connect your custom solution with your existing EHRs, APIs, laboratory devices, and healthcare ecosystem.
+              </p>
+            </div>
+          </div>
+
+          <div class="hc-process-step">
+            <div class="hc-process-step__num">06</div>
+            <div class="hc-process-step__content">
+              <h3 class="hc-process-step__title">Optimize</h3>
+              <p class="hc-process-step__desc">
+                Continuously monitor and improve performance, usability, security updates, and clinical business outcomes.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         12. METRICS SECTION
+    ═══════════════════════════════════════ -->
+    <section class="hc-section hc-metrics-section">
+      <div class="container">
+        
+        <div class="hc-metrics-grid">
+          
+          <div class="hc-metric-card">
+            <div class="hc-metric-card__val">10+ Years</div>
+            <div class="hc-metric-card__lbl">Healthcare Technology Experience</div>
+          </div>
+
+          <div class="hc-metric-card">
+            <div class="hc-metric-card__val">50+</div>
+            <div class="hc-metric-card__lbl">Digital Healthcare Projects</div>
+          </div>
+
+          <div class="hc-metric-card">
+            <div class="hc-metric-card__val">99.9%</div>
+            <div class="hc-metric-card__lbl">Platform Reliability</div>
+          </div>
+
+          <div class="hc-metric-card">
+            <div class="hc-metric-card__val">24/7</div>
+            <div class="hc-metric-card__lbl">Technology Support</div>
+          </div>
+
+        </div>
+
+        <p class="hc-metrics-note">
+          * Replace these figures with verified company metrics before publishing.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         13. CASE STUDY SECTION
+    ═══════════════════════════════════════ -->
+    <section class="hc-section">
+      <div class="container">
+        
+        <div class="hc-section-head text-center">
+          <span class="hc-sub-title">PROVEN RESULTS</span>
+          <h2 class="hc-section-title">
+            Real solutions. Meaningful outcomes.
+          </h2>
+          <p class="hc-section-desc">
+            Explore how we help healthcare organizations transform operations and patient care.
+          </p>
+        </div>
+
+        <div class="hc-case-grid">
+          
+          <!-- Case 01 -->
+          <div class="hc-case-card">
+            <div class="hc-case-card__tag">HOSPITAL MANAGEMENT</div>
+            <h3 class="hc-case-card__title">Case Study 01: Modernizing Hospital Operations</h3>
+            <div class="hc-case-card__body">
+              <div class="hc-case-item">
+                <strong>Challenge:</strong> Disconnected legacy tools caused admission bottlenecks and patient record delays.
+              </div>
+              <div class="hc-case-item">
+                <strong>Solution:</strong> Built a unified bed-management &amp; digital intake portal connected with legacy EHR.
+              </div>
+              <div class="hc-case-item hc-case-item--result">
+                <strong>Result:</strong> 35% faster patient admissions and 40% reduction in administrative overhead.
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 02 -->
+          <div class="hc-case-card">
+            <div class="hc-case-card__tag">TELEHEALTH</div>
+            <h3 class="hc-case-card__title">Case Study 02: Building a Connected Telemedicine Experience</h3>
+            <div class="hc-case-card__body">
+              <div class="hc-case-item">
+                <strong>Challenge:</strong> High patient drop-off and friction during virtual consult booking and follow-up.
+              </div>
+              <div class="hc-case-item">
+                <strong>Solution:</strong> Created a secure WebRTC telehealth platform with automated e-prescriptions.
+              </div>
+              <div class="hc-case-item hc-case-item--result">
+                <strong>Result:</strong> 2.5x increase in virtual consult volume and 96% patient satisfaction rating.
+              </div>
+            </div>
+          </div>
+
+          <!-- Case 03 -->
+          <div class="hc-case-card">
+            <div class="hc-case-card__tag">PATIENT ENGAGEMENT</div>
+            <h3 class="hc-case-card__title">Case Study 03: Transforming Patient Engagement</h3>
+            <div class="hc-case-card__body">
+              <div class="hc-case-item">
+                <strong>Challenge:</strong> High missed appointment rates (22%) and manual phone follow-up burdens.
+              </div>
+              <div class="hc-case-item">
+                <strong>Solution:</strong> Deployed a self-service patient portal with automated SMS/Email reminders.
+              </div>
+              <div class="hc-case-item hc-case-item--result">
+                <strong>Result:</strong> 52% reduction in missed appointments and 68% patient portal adoption in 90 days.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hc-case-footer">
+          <p class="hc-case-note">* Sample case studies (replace with verified client metrics).</p>
+          <a href="/case-studies/" class="hc-link-btn">View All Case Studies →</a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         14. TESTIMONIAL SECTION
+    ═══════════════════════════════════════ -->
+    <section class="hc-section hc-section--light">
+      <div class="container">
+        
+        <div class="hc-section-head text-center">
+          <span class="hc-sub-title">CLIENT REVIEWS</span>
+          <h2 class="hc-section-title">
+            What our clients say
+          </h2>
+          <p class="hc-section-desc">
+            Trusted by healthcare leaders, CMOs, and digital transformation directors.
+          </p>
+        </div>
+
+        <div class="hc-testimonial-grid">
+          
+          <div class="hc-testimonial-card">
+            <div class="hc-testimonial-card__stars">★★★★★</div>
+            <blockquote class="hc-testimonial-card__quote">
+              “Hegrix understood our complex clinical workflow from day one. They delivered a custom portal that reduced our staff's administrative workload while making virtual care effortless for our patients.”
+            </blockquote>
+            <div class="hc-testimonial-card__author">
+              <strong>Dr. Marcus Vance</strong>
+              <span>Chief Medical Officer · Apex Regional Health</span>
+            </div>
+          </div>
+
+          <div class="hc-testimonial-card">
+            <div class="hc-testimonial-card__stars">★★★★★</div>
+            <blockquote class="hc-testimonial-card__quote">
+              “Integrating our legacy EHR with modern mobile portals seemed impossible until we engaged Hegrix. Their deep expertise in FHIR standards saved us months of development time.”
+            </blockquote>
+            <div class="hc-testimonial-card__author">
+              <strong>Elena Rostova</strong>
+              <span>VP of Digital Transformation · CareTech Health Systems</span>
+            </div>
+          </div>
+
+          <div class="hc-testimonial-card">
+            <div class="hc-testimonial-card__stars">★★★★★</div>
+            <blockquote class="hc-testimonial-card__quote">
+              “Security and reliability were our non-negotiables. Hegrix built an enterprise-grade laboratory workflow platform that easily scales across our 12 diagnostic centers.”
+            </blockquote>
+            <div class="hc-testimonial-card__author">
+              <strong>Rajesh Patel</strong>
+              <span>Director of IT &amp; Infrastructure · BioDx Laboratories</span>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="hc-test-note text-center">
+          * Representative client feedback structure (replace with verified client testimonials).
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         15. FAQ SECTION (Concise & Short)
+    ═══════════════════════════════════════ -->
+    <section class="hc-section">
+      <div class="container">
+        
+        <div class="hc-section-head text-center">
+          <span class="hc-sub-title">COMMON QUESTIONS</span>
+          <h2 class="hc-section-title">
+            Frequently asked questions
+          </h2>
+          <p class="hc-section-desc">
+            Quick answers regarding our healthcare software development services.
+          </p>
+        </div>
+
+        <div class="hc-faq-list">
+          {hcFaqs.map((faq, index) => (
+            <details class="hc-faq-item" open={index === 0}>
+              <summary class="hc-faq-question">
+                <span>{faq.question}</span>
+                <svg class="hc-faq-chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+              </summary>
+              <div class="hc-faq-answer">
+                <p>{faq.answer}</p>
+              </div>
+            </details>
+          ))}
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         16. FINAL CTA & LEAD GENERATION FORM (Supabase Connected)
+    ═══════════════════════════════════════ -->
+    <section id="contact-form" class="hc-section hc-final-cta-section">
+      <div class="container">
+        
+        <div class="hc-cta-box">
+          
+          <div class="hc-cta-box__left">
+            <span class="hc-sub-title hc-sub-title--teal">GET STARTED TODAY</span>
+            <h2 class="hc-cta-title">
+              Ready to build better healthcare technology?
+            </h2>
+            <p class="hc-cta-desc">
+              Let's turn your healthcare challenges into secure, scalable digital solutions. Talk directly with our healthcare software architects.
+            </p>
+            <div class="hc-cta-benefits">
+              <div>✓ Direct access to senior healthcare software architects</div>
+              <div>✓ Complete confidentiality &amp; NDA protection</div>
+              <div>✓ Tailored technical roadmap &amp; estimation</div>
+            </div>
+          </div>
+
+          <div class="hc-cta-box__right">
+            <form class="hc-lead-form" id="healthcare-lead-form">
+              <h3 class="hc-form-title">Let's discuss your healthcare technology needs.</h3>
+              
+              <div class="hc-form-status" id="form-status-msg" hidden></div>
+
+              <div class="hc-form-grid">
+                <div class="hc-form-group">
+                  <label for="hc-name">Full Name *</label>
+                  <input type="text" id="hc-name" name="name" placeholder="Dr. Jane Doe" required />
+                </div>
+
+                <div class="hc-form-group">
+                  <label for="hc-email">Work Email *</label>
+                  <input type="email" id="hc-email" name="email" placeholder="jane@hospital.com" required />
+                </div>
+
+                <div class="hc-form-group">
+                  <label for="hc-company">Company / Organization *</label>
+                  <input type="text" id="hc-company" name="company" placeholder="Health System Name" required />
+                </div>
+
+                <div class="hc-form-group">
+                  <label for="hc-phone">Phone Number *</label>
+                  <input type="tel" id="hc-phone" name="phone" placeholder="+1 (555) 000-0000" required />
+                </div>
+
+                <div class="hc-form-group hc-form-group--full">
+                  <label for="hc-looking">What are you looking to build?</label>
+                  <select id="hc-looking" name="solution">
+                    <option value="EHR/EMR Solution">EHR / EMR Solution</option>
+                    <option value="Hospital Management">Hospital Management Software</option>
+                    <option value="Telemedicine Platform">Telemedicine Platform</option>
+                    <option value="Patient Portal">Patient Portal</option>
+                    <option value="Healthcare CRM">Healthcare CRM</option>
+                    <option value="Pharmacy Software">Pharmacy Software</option>
+                    <option value="Laboratory System">Laboratory Management (LIS)</option>
+                    <option value="Healthcare Analytics">Healthcare Analytics &amp; AI</option>
+                    <option value="System Integration">Legacy Integration / FHIR APIs</option>
+                    <option value="Other Custom Software">Other Custom Software</option>
+                  </select>
+                </div>
+
+                <div class="hc-form-group hc-form-group--full">
+                  <label for="hc-message">Message / Requirements</label>
+                  <textarea id="hc-message" name="message" rows="3" placeholder="Tell us about your project, current workflows, and timelines..."></textarea>
+                </div>
+              </div>
+
+              <button type="submit" class="hc-btn hc-btn--primary hc-btn--full" id="hc-submit-btn">
+                <span class="hc-btn-text">Start the Conversation</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Success Confirmation Modal -->
+    <div class="hc-success-modal" id="hc-success-modal" hidden>
+      <div class="hc-success-modal__backdrop" id="hc-modal-backdrop"></div>
+      <div class="hc-success-modal__content">
+        <button class="hc-success-modal__close" id="hc-modal-close" type="button" aria-label="Close modal">&times;</button>
+        <div class="hc-success-modal__icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0D9488" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h3 class="hc-success-modal__title">Request Received!</h3>
+        <p class="hc-success-modal__desc">
+          Thank you for reaching out. Your details have been submitted securely. Our healthcare technology solutions team will get in touch with you shortly.
+        </p>
+        <button class="hc-btn hc-btn--primary" id="hc-modal-ok">Got it</button>
+      </div>
+    </div>
+
+  </div>
+
+</Layout>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("healthcare-lead-form") as HTMLFormElement | null;
+    const submitBtn = document.getElementById("hc-submit-btn") as HTMLButtonElement | null;
+    const statusMsg = document.getElementById("form-status-msg");
+    const modal = document.getElementById("hc-success-modal");
+    const modalClose = document.getElementById("hc-modal-close");
+    const modalOk = document.getElementById("hc-modal-ok");
+    const modalBackdrop = document.getElementById("hc-modal-backdrop");
+
+    const closeModal = () => {
+      modal?.setAttribute("hidden", "");
+    };
+
+    modalClose?.addEventListener("click", closeModal);
+    modalOk?.addEventListener("click", closeModal);
+    modalBackdrop?.addEventListener("click", closeModal);
+
+    form?.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!form || !submitBtn) return;
+
+      const btnText = submitBtn.querySelector(".hc-btn-text");
+      const originalText = btnText ? btnText.textContent : "Start the Conversation";
+
+      if (btnText) btnText.textContent = "Submitting...";
+      submitBtn.disabled = true;
+
+      if (statusMsg) {
+        statusMsg.hidden = true;
+        statusMsg.textContent = "";
+        statusMsg.className = "hc-form-status";
+      }
+
+      const formData = new FormData(form);
+      const name = formData.get("name")?.toString() || "";
+      const email = formData.get("email")?.toString() || "";
+      const company = formData.get("company")?.toString() || "";
+      const phone = formData.get("phone")?.toString() || "";
+      const solution = formData.get("solution")?.toString() || "";
+      const messageDetails = formData.get("message")?.toString() || "";
+
+      const payload = {
+        name,
+        email,
+        company,
+        phone,
+        message: `[Solution Need: ${solution}]\n${messageDetails}`.trim(),
+        sourcePage: "Healthcare Software Solutions (/industries/healthcare/)",
+      };
+
+      try {
+        const res = await fetch("/api/leads", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+
+        const data = await res.json();
+        if (!res.ok) {
+          throw new Error(data.message || "Failed to submit form. Please check details.");
+        }
+
+        form.reset();
+        modal?.removeAttribute("hidden");
+      } catch (err) {
+        if (statusMsg) {
+          statusMsg.textContent = err instanceof Error ? err.message : "An error occurred. Please try again.";
+          statusMsg.className = "hc-form-status hc-form-status--error";
+          statusMsg.hidden = false;
+        }
+      } finally {
+        if (btnText) btnText.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  });
+</script>
+
+<style>
+  /* ═══════════════════════════════════════════════════════════════
+     HEALTHCARE SOFTWARE SOLUTIONS — SCOPED STYLES
+  ═══════════════════════════════════════════════════════════════ */
+
+  .hc-page {
+    font-family: var(--font-sans, 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif);
+    color: #0F172A;
+    background-color: #FFFFFF;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* Core Layout Utilities */
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .text-center { text-align: center; }
+  .text-teal { color: #0D9488 !important; }
+  .text-blue { color: #2563EB !important; }
+  .hc-text-white { color: #FFFFFF !important; }
+  .hc-text-muted { color: #94A3B8 !important; }
+
+  /* Subtitles & Headings */
+  .hc-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: rgba(37, 99, 235, 0.08);
+    color: #1E40AF;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    border-radius: 9999px;
+    border: 1px solid rgba(37, 99, 235, 0.18);
+    margin-bottom: 1.25rem;
+  }
+
+  .hc-eyebrow__pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #0D9488;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.7);
+    animation: hc-pulse 2s infinite;
+  }
+
+  @keyframes hc-pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(13, 148, 136, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(13, 148, 136, 0); }
+  }
+
+  .hc-sub-title {
+    display: inline-block;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #2563EB;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .hc-sub-title--teal { color: #14B8A6; }
+
+  .hc-section-head {
+    max-width: 780px;
+    margin: 0 auto 3.5rem auto;
+  }
+
+  .hc-section-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #0F172A;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 768px) {
+    .hc-section-title { font-size: 2.75rem; }
+  }
+
+  .hc-section-desc {
+    font-size: 1.125rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+
+  .hc-gradient-text {
+    background: linear-gradient(135deg, #1E40AF 0%, #0D9488 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Buttons */
+  .hc-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .hc-btn--primary {
+    background: linear-gradient(135deg, #1E40AF 0%, #2563EB 100%);
+    color: #FFFFFF;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+    border: none;
+  }
+  .hc-btn--primary:hover {
+    background: linear-gradient(135deg, #1E3E62 0%, #1E40AF 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+    color: #FFFFFF;
+  }
+
+  .hc-btn--secondary {
+    background: #FFFFFF;
+    color: #0F172A;
+    border: 1px solid #CBD5E1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  .hc-btn--secondary:hover {
+    background: #F8FAFC;
+    border-color: #94A3B8;
+    transform: translateY(-2px);
+    color: #0F172A;
+  }
+
+  .hc-btn--full { width: 100%; }
+
+  /* Sections Padding */
+  .hc-section {
+    padding: 5rem 0;
+  }
+  .hc-section--light {
+    background-color: #F8FAFC;
+    border-top: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  .hc-section--dark-bg {
+    background: linear-gradient(180deg, #0B192C 0%, #0F172A 100%);
+    color: #FFFFFF;
+  }
+
+  /* ═══════════════════════════════════════
+     1. HERO SECTION STYLES
+  ═══════════════════════════════════════ */
+  .hc-hero {
+    padding: 4rem 0 5rem 0;
+    background: radial-gradient(circle at 80% 20%, rgba(13, 148, 136, 0.08) 0%, rgba(37, 99, 235, 0.05) 50%, rgba(255,255,255,0) 100%);
+  }
+
+  .hc-hero__wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .hc-hero__wrap {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+  }
+
+  .hc-hero__title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.18;
+    letter-spacing: -0.03em;
+    color: #0F172A;
+    margin-bottom: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .hc-hero__title { font-size: 3.25rem; }
+  }
+
+  .hc-hero__lead {
+    font-size: 1.15rem;
+    color: #334155;
+    margin-bottom: 1.75rem;
+    line-height: 1.6;
+  }
+
+  /* USP Banner */
+  .hc-usp-banner {
+    position: relative;
+    background: linear-gradient(135deg, rgba(239, 246, 255, 0.9) 0%, rgba(240, 253, 250, 0.9) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px -4px rgba(37, 99, 235, 0.08);
+  }
+  .hc-usp-banner__tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: #0D9488;
+    background: #E0F2FE;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+  .hc-usp-banner__main {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0B192C;
+    margin-bottom: 0.4rem;
+  }
+  .hc-usp-banner__sub {
+    font-size: 0.875rem;
+    color: #475569;
+    margin: 0;
+  }
+
+  .hc-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hc-hero__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .hc-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #334155;
+    background: #F1F5F9;
+    padding: 0.35rem 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #E2E8F0;
+  }
+
+  /* Hero Right Dashboard Graphic */
+  .hc-hero__visual {
+    position: relative;
+    padding: 1rem;
+  }
+
+  /* Floating UI Cards */
+  .hc-float-card {
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    padding: 0.65rem 1rem;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.12);
+    animation: hc-float 4s ease-in-out infinite alternate;
+  }
+  .hc-float-card--top {
+    top: -15px;
+    right: 10px;
+  }
+  .hc-float-card--mid {
+    bottom: 40px;
+    left: -20px;
+    animation-delay: 1.5s;
+  }
+  .hc-float-card--bot {
+    bottom: -15px;
+    right: 20px;
+    animation-delay: 2.5s;
+  }
+
+  @keyframes hc-float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-8px); }
+  }
+
+  .hc-float-card__icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hc-float-card__icon--teal { background: #E0F2FE; color: #0D9488; }
+  .hc-float-card__icon--blue { background: #EFF6FF; color: #2563EB; }
+  .hc-float-card__icon--green { background: #DCFCE7; color: #16A34A; }
+
+  .hc-float-card__val {
+    font-size: 0.9375rem;
+    font-weight: 800;
+    color: #0F172A;
+  }
+  .hc-float-card__lbl {
+    font-size: 0.75rem;
+    color: #64748B;
+  }
+
+  /* Main Dashboard Window */
+  .hc-dashboard {
+    background: #0F172A;
+    border-radius: 20px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.4);
+    overflow: hidden;
+  }
+  .hc-dash__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.875rem 1.25rem;
+    background: #0B192C;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .hc-dash__dots {
+    display: flex;
+    gap: 6px;
+  }
+  .hc-dash__dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #334155;
+  }
+  .hc-dash__dots span:nth-child(1) { background: #EF4444; }
+  .hc-dash__dots span:nth-child(2) { background: #F59E0B; }
+  .hc-dash__dots span:nth-child(3) { background: #10B981; }
+
+  .hc-dash__title {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78125rem;
+    font-weight: 600;
+    color: #94A3B8;
+  }
+  .hc-dash__status {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #10B981;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .hc-live-dot {
+    width: 6px;
+    height: 6px;
+    background: #10B981;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .hc-dash__body {
+    padding: 1.25rem;
+  }
+
+  .hc-dash__kpis {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+  .hc-kpi-item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.75rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .hc-kpi-item__num {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #38BDF8;
+  }
+  .hc-kpi-item__label {
+    font-size: 0.7rem;
+    color: #94A3B8;
+  }
+
+  .hc-dash__chart-container {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  .hc-dash__chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+    color: #CBD5E1;
+    margin-bottom: 0.75rem;
+  }
+  .hc-badge-sm {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.5rem;
+    background: rgba(13, 148, 136, 0.2);
+    color: #2DD4BF;
+    border-radius: 4px;
+  }
+
+  .hc-chart-visual {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 75px;
+    gap: 8px;
+    padding-top: 10px;
+  }
+  .hc-chart-bar {
+    flex: 1;
+    height: var(--h);
+    background: linear-gradient(180deg, #38BDF8 0%, #1E40AF 100%);
+    border-radius: 4px 4px 0 0;
+    position: relative;
+    transition: height 0.5s ease;
+  }
+  .hc-chart-bar span {
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.65rem;
+    color: #64748B;
+  }
+
+  .hc-dash__stream {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+  }
+  .hc-stream-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+  }
+  .hc-stream-row__status--success { color: #10B981; }
+  .hc-stream-row__status--blue { color: #38BDF8; }
+  .hc-stream-row__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .hc-stream-row__info strong { color: #E2E8F0; font-weight: 600; }
+  .hc-stream-row__info span { color: #94A3B8; font-size: 0.7rem; }
+  .hc-stream-row__time { color: #64748B; font-size: 0.65rem; }
+
+
+  /* ═══════════════════════════════════════
+     2. TRUST / SOCIAL PROOF STRIP
+  ═══════════════════════════════════════ */
+  .hc-trust-strip {
+    padding: 2.5rem 0;
+    background: #F1F5F9;
+    border-top: 1px solid #E2E8F0;
+    border-bottom: 1px solid #E2E8F0;
+  }
+  .hc-trust-strip__headline {
+    text-align: center;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: #475569;
+    letter-spacing: 0.03em;
+    margin-bottom: 1.5rem;
+  }
+  .hc-trust-strip__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .hc-logo-badge {
+    background: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hc-trust-strip__pillars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  @media (min-width: 768px) {
+    .hc-trust-strip__pillars {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .hc-trust-pillar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #FFFFFF;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #0F172A;
+  }
+  .hc-trust-pillar svg { color: #0D9488; }
+
+
+  /* ═══════════════════════════════════════
+     3. PROBLEM SECTION
+  ═══════════════════════════════════════ */
+  .hc-problem-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 640px) {
+    .hc-problem-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .hc-problem-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .hc-problem-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  .hc-problem-card:hover {
+    transform: translateY(-5px);
+    border-color: #3B82F6;
+    box-shadow: 0 12px 30px -5px rgba(37, 99, 235, 0.12);
+  }
+
+  .hc-problem-card__number {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #CBD5E1;
+  }
+
+  .hc-problem-card__icon {
+    width: 52px;
+    height: 52px;
+    background: #EFF6FF;
+    color: #2563EB;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .hc-problem-card__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 0.75rem;
+  }
+
+  .hc-problem-card__desc {
+    font-size: 0.9375rem;
+    color: #475569;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+
+  /* ═══════════════════════════════════════
+     4. SOLUTIONS SECTION
+  ═══════════════════════════════════════ */
+  .hc-solutions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 640px) {
+    .hc-solutions-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .hc-solutions-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .hc-solution-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 1.75rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+  }
+  .hc-solution-card:hover {
+    border-color: #0D9488;
+    box-shadow: 0 15px 35px -5px rgba(13, 148, 136, 0.12);
+    transform: translateY(-4px);
+  }
+
+  .hc-solution-card__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+  .hc-solution-card__icon {
+    width: 44px;
+    height: 44px;
+    background: #CCFBF1;
+    color: #0D9488;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hc-solution-card__idx {
+    font-size: 0.8125rem;
+    font-weight: 800;
+    color: #94A3B8;
+  }
+
+  .hc-solution-card__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 0.6rem;
+  }
+
+  .hc-solution-card__desc {
+    font-size: 0.875rem;
+    color: #475569;
+    margin-bottom: 1.25rem;
+    flex: 1;
+    line-height: 1.6;
+  }
+
+  .hc-solution-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #1E40AF;
+    text-decoration: none;
+    transition: gap 0.2s ease;
+  }
+  .hc-solution-card__link:hover {
+    gap: 0.6rem;
+    color: #0D9488;
+  }
+
+
+  /* ═══════════════════════════════════════
+     5. FEATURE / PRODUCT SHOWCASE
+  ═══════════════════════════════════════ */
+  .hc-product-showcase {
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+
+  .hc-showcase-window {
+    background: #0B192C;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.6);
+  }
+
+  .hc-showcase-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.875rem 1.25rem;
+    background: #070F1B;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .hc-showcase-dots {
+    display: flex;
+    gap: 6px;
+  }
+  .hc-showcase-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #334155;
+  }
+  .hc-showcase-tab {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #94A3B8;
+  }
+  .hc-sec-pill {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+    background: rgba(16, 185, 129, 0.15);
+    color: #34D399;
+    border-radius: 9999px;
+  }
+
+  .hc-showcase-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 768px) {
+    .hc-showcase-layout {
+      grid-template-columns: 200px 1fr;
+    }
+  }
+
+  .hc-showcase-side {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.25rem 0.75rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    flex-direction: flex-row;
+    overflow-x: auto;
+    gap: 0.35rem;
+  }
+  @media (min-width: 768px) {
+    .hc-showcase-side {
+      flex-direction: column;
+    }
+  }
+
+  .hc-side-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.8125rem;
+    color: #94A3B8;
+    border-radius: 8px;
+    white-space: nowrap;
+  }
+  .hc-side-item--active {
+    background: rgba(56, 189, 248, 0.15);
+    color: #38BDF8;
+    font-weight: 700;
+  }
+
+  .hc-showcase-main {
+    padding: 1.5rem;
+  }
+
+  .hc-sc-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.875rem;
+    margin-bottom: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .hc-sc-metrics-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .hc-sc-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 0.875rem;
+  }
+  .hc-sc-card__title {
+    font-size: 0.75rem;
+    color: #94A3B8;
+    margin-bottom: 0.25rem;
+  }
+  .hc-sc-card__val {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #FFFFFF;
+  }
+  .hc-sc-card__trend {
+    font-size: 0.6875rem;
+    margin-top: 0.2rem;
+  }
+
+  .hc-sc-two-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  @media (min-width: 768px) {
+    .hc-sc-two-col { grid-template-columns: 1.1fr 0.9fr; }
+  }
+
+  .hc-sc-block {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  .hc-sc-block__title {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #E2E8F0;
+    margin-bottom: 0.875rem;
+  }
+
+  .hc-activity-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .hc-activity-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.78125rem;
+  }
+  .hc-act-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-top: 4px;
+    flex-shrink: 0;
+  }
+  .hc-act-dot--blue { background: #38BDF8; }
+  .hc-act-dot--teal { background: #2DD4BF; }
+  .hc-act-dot--green { background: #34D399; }
+
+  .hc-activity-list strong { color: #F1F5F9; display: block; }
+  .hc-act-sub { color: #94A3B8; font-size: 0.7rem; }
+
+  .hc-notif-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .hc-notif-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.75rem;
+    color: #CBD5E1;
+    background: rgba(255,255,255,0.03);
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+  }
+  .hc-notif-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    background: rgba(56, 189, 248, 0.2);
+    color: #38BDF8;
+    padding: 0.15rem 0.45rem;
+    border-radius: 4px;
+  }
+  .hc-notif-badge--green { background: rgba(52, 211, 153, 0.2); color: #34D399; }
+  .hc-notif-badge--cyan { background: rgba(45, 212, 191, 0.2); color: #2DD4BF; }
+
+
+  /* ═══════════════════════════════════════
+     6. SERVICES SECTION
+  ═══════════════════════════════════════ */
+  .hc-services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 640px) {
+    .hc-services-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .hc-services-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .hc-service-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  .hc-service-card:hover {
+    border-color: #2563EB;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px -5px rgba(37, 99, 235, 0.1);
+  }
+
+  .hc-service-card__num {
+    font-size: 0.8125rem;
+    font-weight: 800;
+    color: #2563EB;
+    background: #EFF6FF;
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    margin-bottom: 1.25rem;
+  }
+
+  .hc-service-card__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 0.65rem;
+  }
+
+  .hc-service-card__desc {
+    font-size: 0.9375rem;
+    color: #475569;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+
+  /* ═══════════════════════════════════════
+     7. WHY CHOOSE US
+  ═══════════════════════════════════════ */
+  .hc-why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 640px) {
+    .hc-why-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .hc-why-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .hc-why-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 1.875rem;
+    transition: all 0.3s ease;
+  }
+  .hc-why-card:hover {
+    border-color: #0D9488;
+    box-shadow: 0 12px 30px -5px rgba(13, 148, 136, 0.12);
+    transform: translateY(-3px);
+  }
+
+  .hc-why-card__icon {
+    width: 48px;
+    height: 48px;
+    background: #CCFBF1;
+    color: #0D9488;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .hc-why-card__title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 0.5rem;
+  }
+
+  .hc-why-card__desc {
+    font-size: 0.9375rem;
+    color: #475569;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+
+  /* ═══════════════════════════════════════
+     8. SECURITY & COMPLIANCE SECTION
+  ═══════════════════════════════════════ */
+  .hc-security-section {
+    background: linear-gradient(135deg, #0B192C 0%, #0F172A 100%);
+    color: #FFFFFF;
+    border-top: 1px solid rgba(56, 189, 248, 0.2);
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+  }
+
+  .hc-security-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .hc-security-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .hc-security-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .hc-sec-badge {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  .hc-sec-badge:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: #38BDF8;
+    transform: translateY(-3px);
+  }
+  .hc-sec-badge--highlight {
+    grid-column: span 1;
+    background: linear-gradient(135deg, rgba(13, 148, 136, 0.2) 0%, rgba(37, 99, 235, 0.2) 100%);
+    border-color: rgba(45, 212, 191, 0.4);
+  }
+  @media (min-width: 1024px) {
+    .hc-sec-badge--highlight { grid-column: span 2; }
+  }
+
+  .hc-sec-badge__icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .hc-sec-badge__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 0.4rem;
+  }
+
+  .hc-sec-badge__desc {
+    font-size: 0.875rem;
+    color: #94A3B8;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+
+  /* ═══════════════════════════════════════
+     9. INDUSTRIES SECTION
+  ═══════════════════════════════════════ */
+  .hc-ind-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .hc-ind-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .hc-ind-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .hc-ind-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  .hc-ind-card:hover {
+    border-color: #2563EB;
+    box-shadow: 0 8px 25px -4px rgba(37, 99, 235, 0.1);
+    transform: translateY(-3px);
+  }
+
+  .hc-ind-card__icon {
+    width: 48px;
+    height: 48px;
+    background: #EFF6FF;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  .hc-ind-card__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 0.4rem;
+  }
+
+  .hc-ind-card__desc {
+    font-size: 0.875rem;
+    color: #475569;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+
+  /* ═══════════════════════════════════════
+     10. INTEGRATIONS SECTION
+  ═══════════════════════════════════════ */
+  .hc-integ-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .hc-integ-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .hc-integ-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .hc-integ-card {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    transition: all 0.25s ease;
+  }
+  .hc-integ-card:hover {
+    background: #FFFFFF;
+    border-color: #0D9488;
+    box-shadow: 0 6px 20px -3px rgba(13, 148, 136, 0.1);
+  }
+
+  .hc-integ-card__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 0.35rem;
+  }
+
+  .hc-integ-card__desc {
+    font-size: 0.85rem;
+    color: #64748B;
+    margin: 0;
+  }
+
+
+  /* ═══════════════════════════════════════
+     11. PROCESS SECTION
+  ═══════════════════════════════════════ */
+  .hc-process-timeline {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 640px) {
+    .hc-process-timeline { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .hc-process-timeline { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .hc-process-step {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 1.75rem;
+    display: flex;
+    gap: 1rem;
+    transition: all 0.3s ease;
+  }
+  .hc-process-step:hover {
+    border-color: #2563EB;
+    box-shadow: 0 10px 25px -4px rgba(37, 99, 235, 0.1);
+    transform: translateY(-3px);
+  }
+
+  .hc-process-step__num {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #2563EB;
+    background: #EFF6FF;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .hc-process-step__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 0.4rem;
+  }
+
+  .hc-process-step__desc {
+    font-size: 0.875rem;
+    color: #475569;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+
+  /* ═══════════════════════════════════════
+     12. METRICS SECTION
+  ═══════════════════════════════════════ */
+  .hc-metrics-section {
+    background: linear-gradient(135deg, #1E40AF 0%, #0F172A 100%);
+    color: #FFFFFF;
+    padding: 4rem 0;
+  }
+
+  .hc-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    text-align: center;
+  }
+  @media (min-width: 768px) {
+    .hc-metrics-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .hc-metric-card {
+    padding: 1.5rem;
+  }
+
+  .hc-metric-card__val {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: #38BDF8;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+
+  .hc-metric-card__lbl {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #E2E8F0;
+  }
+
+  .hc-metrics-note {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #94A3B8;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    font-style: italic;
+  }
+
+
+  /* ═══════════════════════════════════════
+     13. CASE STUDY SECTION
+  ═══════════════════════════════════════ */
+  .hc-case-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .hc-case-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .hc-case-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+  }
+  .hc-case-card:hover {
+    border-color: #0D9488;
+    box-shadow: 0 12px 30px -5px rgba(13, 148, 136, 0.12);
+    transform: translateY(-4px);
+  }
+
+  .hc-case-card__tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    color: #0D9488;
+    background: #CCFBF1;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    align-self: flex-start;
+    margin-bottom: 0.875rem;
+  }
+
+  .hc-case-card__title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 1rem;
+    line-height: 1.35;
+  }
+
+  .hc-case-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    color: #475569;
+  }
+
+  .hc-case-item--result {
+    background: #EFF6FF;
+    border-left: 3px solid #2563EB;
+    padding: 0.6rem 0.75rem;
+    border-radius: 0 8px 8px 0;
+    color: #1E40AF;
+  }
+
+  .hc-case-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+  }
+  .hc-case-note {
+    font-size: 0.75rem;
+    color: #94A3B8;
+    margin: 0;
+    font-style: italic;
+  }
+  .hc-link-btn {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: #2563EB;
+    text-decoration: none;
+  }
+  .hc-link-btn:hover { text-decoration: underline; }
+
+
+  /* ═══════════════════════════════════════
+     14. TESTIMONIAL SECTION
+  ═══════════════════════════════════════ */
+  .hc-testimonial-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    .hc-testimonial-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  .hc-testimonial-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .hc-testimonial-card__stars {
+    color: #F59E0B;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+  .hc-testimonial-card__quote {
+    font-size: 0.9375rem;
+    color: #334155;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0 0 1.25rem 0;
+    flex: 1;
+  }
+  .hc-testimonial-card__author strong {
+    display: block;
+    font-size: 0.9375rem;
+    color: #0F172A;
+  }
+  .hc-testimonial-card__author span {
+    font-size: 0.78125rem;
+    color: #64748B;
+  }
+
+  .hc-test-note {
+    font-size: 0.75rem;
+    color: #94A3B8;
+    margin-top: 1.5rem;
+    font-style: italic;
+  }
+
+
+  /* ═══════════════════════════════════════
+     15. FAQ SECTION
+  ═══════════════════════════════════════ */
+  .hc-faq-list {
+    max-width: 820px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hc-faq-item {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+  }
+  .hc-faq-item[open] {
+    border-color: #2563EB;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.06);
+  }
+
+  .hc-faq-question {
+    padding: 1.25rem 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0F172A;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  .hc-faq-question::-webkit-details-marker { display: none; }
+
+  .hc-faq-chevron {
+    color: #2563EB;
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+  }
+  .hc-faq-item[open] .hc-faq-chevron {
+    transform: rotate(180deg);
+  }
+
+  .hc-faq-answer {
+    padding: 0 1.5rem 1.25rem 1.5rem;
+    font-size: 0.9375rem;
+    color: #475569;
+    line-height: 1.6;
+  }
+  .hc-faq-answer p { margin: 0; }
+
+
+  /* ═══════════════════════════════════════
+     16. FINAL CTA & LEAD FORM
+  ═══════════════════════════════════════ */
+  .hc-final-cta-section {
+    background: linear-gradient(135deg, #0B192C 0%, #0F172A 100%);
+    padding: 5rem 0;
+  }
+
+  .hc-cta-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+  @media (min-width: 1024px) {
+    .hc-cta-box {
+      grid-template-columns: 1fr 1fr;
+      padding: 3.5rem;
+    }
+  }
+
+  .hc-cta-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hc-cta-desc {
+    font-size: 1.1rem;
+    color: #CBD5E1;
+    margin-bottom: 1.75rem;
+    line-height: 1.6;
+  }
+
+  .hc-cta-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.9375rem;
+    color: #38BDF8;
+    font-weight: 600;
+  }
+
+  /* Form */
+  .hc-lead-form {
+    background: #FFFFFF;
+    border-radius: 18px;
+    padding: 2rem;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3);
+  }
+
+  .hc-form-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0F172A;
+    margin-bottom: 1.25rem;
+  }
+
+  .hc-form-status {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  .hc-form-status--error {
+    background: #FEE2E2;
+    color: #991B1B;
+    border: 1px solid #FCA5A5;
+  }
+
+  .hc-form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .hc-form-grid { grid-template-columns: repeat(2, 1fr); }
+    .hc-form-group--full { grid-column: span 2; }
+  }
+
+  .hc-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+  .hc-form-group label {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #334155;
+  }
+  .hc-form-group input,
+  .hc-form-group select,
+  .hc-form-group textarea {
+    width: 100%;
+    padding: 0.75rem 0.875rem;
+    font-size: 0.875rem;
+    font-family: inherit;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    background: #F8FAFC;
+    color: #0F172A;
+    transition: all 0.2s ease;
+  }
+  .hc-form-group input:focus,
+  .hc-form-group select:focus,
+  .hc-form-group textarea:focus {
+    outline: none;
+    border-color: #2563EB;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  }
+
+  /* Success Modal */
+  .hc-success-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  .hc-success-modal[hidden] {
+    display: none;
+  }
+  .hc-success-modal__backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(4px);
+  }
+  .hc-success-modal__content {
+    position: relative;
+    z-index: 2;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    max-width: 460px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+  }
+  .hc-success-modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #64748B;
+    cursor: pointer;
+  }
+  .hc-success-modal__icon {
+    width: 64px;
+    height: 64px;
+    background: #CCFBF1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem auto;
+  }
+  .hc-success-modal__title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0F172A;
+    margin-bottom: 0.75rem;
+  }
+  .hc-success-modal__desc {
+    font-size: 0.9375rem;
+    color: #475569;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+</style>

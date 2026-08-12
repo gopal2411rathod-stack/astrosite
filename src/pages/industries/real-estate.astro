@@ -1494,14 +1494,14 @@ const reSchemaData = [
   </section>
 
   <!-- ═══════════════════════════════════════
-       12. FAQ ACCORDION SECTION
+       12. FAQ ACCORDION SECTION (Compact & Sleek)
   ═══════════════════════════════════════ -->
-  <section class="re-section re-section-soft">
+  <section class="re-section re-section-soft re-section-faq">
     <div class="container narrow">
-      <div class="re-section-head center">
+      <div class="re-section-head center re-section-head-sm">
         <div class="re-eyebrow">Frequently Asked Questions</div>
-        <h2 class="re-section-title">Everything You Need to Know</h2>
-        <p class="re-section-desc">Got questions about deployment, custom features, or integrations? We've got answers.</p>
+        <h2 class="re-section-title re-section-title-sm">Everything You Need to Know</h2>
+        <p class="re-section-desc re-section-desc-sm">Quick answers to common questions about deployment, features, and integrations.</p>
       </div>
 
       <div class="re-faq-accordion">
@@ -1509,7 +1509,7 @@ const reSchemaData = [
           <details class="re-faq-item" open={index === 0}>
             <summary class="re-faq-question">
               <span>{faq.question}</span>
-              <span class="re-faq-icon">+</span>
+              <svg class="re-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
             </summary>
             <div class="re-faq-answer">
               <p>{faq.answer}</p>
@@ -1595,8 +1595,10 @@ const reSchemaData = [
           <textarea id="reMsg" name="message" rows="3" placeholder="Tell us about your properties or CRM goals..."></textarea>
         </div>
 
+        <div class="re-form-status" id="reFormStatus" hidden></div>
+
         <button type="submit" class="re-btn re-btn-primary re-btn-full" id="reSubmitBtn">
-          <span>Submit Request &amp; Book Demo</span>
+          <span id="reSubmitText">Submit Request &amp; Book Demo</span>
         </button>
 
         <p class="re-form-privacy">🔒 Your information is confidential. We respect your privacy.</p>
@@ -1620,7 +1622,7 @@ const reSchemaData = [
 <style>
   /* Base Page Scope */
   .re-page {
-    font-family: var(--font-sans, 'Inter', system-ui, -apple-system, sans-serif);
+    font-family: var(--font-sans, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif);
     color: var(--ink, #0f172a);
     background: #ffffff;
     overflow-x: hidden;
@@ -1628,7 +1630,7 @@ const reSchemaData = [
 
   /* Utility & Text styles */
   .re-gradient-text {
-    background: linear-gradient(135deg, #1fb6ff 0%, #38ef7d 50%, #6a11cb 100%);
+    background: linear-gradient(135deg, #0b55d9 0%, #1265f3 50%, #1fb6ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -2025,7 +2027,7 @@ const reSchemaData = [
   }
   .bg-blue { background: linear-gradient(135deg, #0b55d9, #1265f3); }
   .bg-purple { background: linear-gradient(135deg, #7c3aed, #a855f7); }
-  .bg-emerald { background: linear-gradient(135deg, #059669, #10b981); }
+  .bg-emerald { background: linear-gradient(135deg, #0284c7, #06b6d4); }
   .bg-amber { background: linear-gradient(135deg, #d97706, #f59e0b); }
   .bg-cyan { background: linear-gradient(135deg, #0891b2, #06b6d4); }
   .bg-indigo { background: linear-gradient(135deg, #4f46e5, #6366f1); }
@@ -2578,111 +2580,130 @@ const reSchemaData = [
   }
 
   /* ----------------------------------------------------
-     12. FAQ ACCORDION
+     12. FAQ ACCORDION (Compact & Sleek)
   ---------------------------------------------------- */
+  .re-section-faq {
+    padding: 56px 0;
+  }
+  .re-section-head-sm {
+    margin-bottom: 32px !important;
+  }
+  .re-section-title-sm {
+    font-size: 1.75rem !important;
+    margin-bottom: 8px !important;
+  }
+  .re-section-desc-sm {
+    font-size: 0.95rem !important;
+  }
   .re-faq-accordion {
-    display: grid;
-    gap: 14px;
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
   .re-faq-item {
     background: #ffffff;
     border: 1px solid var(--line, #dce8f7);
-    border-radius: 16px;
+    border-radius: 8px;
     overflow: hidden;
-    transition: border-color 0.2s ease;
+    transition: all 0.2s ease;
   }
   .re-faq-item[open] {
     border-color: var(--blue-700, #0b55d9);
-    box-shadow: 0 10px 30px rgba(8, 38, 92, 0.06);
+    box-shadow: 0 4px 14px rgba(11, 85, 217, 0.08);
   }
   .re-faq-question {
-    padding: 20px 24px;
-    font-size: 1.08rem;
-    font-weight: 800;
+    padding: 12px 18px;
+    font-size: 0.9rem;
+    font-weight: 750;
     color: var(--blue-950, #071a3d);
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
+    user-select: none;
   }
   .re-faq-question::-webkit-details-marker { display: none; }
-  .re-faq-icon {
-    font-size: 1.4rem;
+  .re-faq-chevron {
     color: var(--blue-700, #0b55d9);
-    font-weight: 400;
     transition: transform 0.2s ease;
+    flex-shrink: 0;
   }
-  .re-faq-item[open] .re-faq-icon {
-    transform: rotate(45deg);
+  .re-faq-item[open] .re-faq-chevron {
+    transform: rotate(180deg);
   }
   .re-faq-answer {
-    padding: 0 24px 20px 24px;
-    font-size: 0.98rem;
+    padding: 0 18px 14px 18px;
+    font-size: 0.85rem;
     color: var(--muted, #5b6b82);
-    line-height: 1.65;
+    line-height: 1.5;
   }
+  .re-faq-answer p { margin: 0; }
 
   /* ----------------------------------------------------
      13. FINAL CTA & MODAL
   ---------------------------------------------------- */
   .re-cta-section {
-    background: linear-gradient(135deg, var(--blue-950, #071a3d), var(--blue-900, #09265c));
-    color: #ffffff;
-    text-align: center;
-    padding: 100px 0;
+    background: var(--blue-950, #071a3d);
+    padding: 80px 0;
   }
   .re-cta-box {
-    max-width: 820px;
+    text-align: center;
+    max-width: 760px;
     margin: 0 auto;
   }
   .re-cta-title {
-    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
-    font-weight: 900;
+    font-size: clamp(2rem, 3.8vw, 2.8rem);
+    font-weight: 850;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     line-height: 1.15;
   }
   .re-cta-desc {
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.88);
-    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: #91b2ff;
+    margin-bottom: 36px;
     line-height: 1.6;
   }
   .re-cta-actions {
     display: flex;
+    gap: 16px;
     justify-content: center;
-    gap: 18px;
     flex-wrap: wrap;
   }
 
-  /* Modal Backdrop & Dialog */
+  /* Modal Styles */
   .re-modal-backdrop {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     background: rgba(7, 26, 61, 0.75);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(4px);
     z-index: 9999;
     display: grid;
     place-items: center;
     padding: 20px;
     opacity: 0;
-    visibility: hidden;
-    transition: all 0.25s ease;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
   }
   .re-modal-backdrop.is-open {
     opacity: 1;
-    visibility: visible;
+    pointer-events: auto;
   }
 
   .re-modal-dialog {
     background: #ffffff;
     border-radius: 24px;
-    max-width: 560px;
+    max-width: 540px;
     width: 100%;
     padding: 36px;
     position: relative;
-    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow);
     transform: translateY(20px);
     transition: transform 0.25s ease;
   }
@@ -2880,14 +2901,17 @@ const reSchemaData = [
 <!-- ═══════════════════════════════════════
      CLIENT-SIDE INTERACTIVE SCRIPT
 ═══════════════════════════════════════ -->
-<script>
+<script is:inline>
   document.addEventListener('DOMContentLoaded', () => {
     const modalBackdrop = document.getElementById('reDemoModal');
     const closeBtn = document.getElementById('reModalCloseBtn');
     const openBtns = document.querySelectorAll('.js-open-re-modal');
-    const modalForm = document.getElementById('reModalForm') as HTMLFormElement | null;
+    const modalForm = document.getElementById('reModalForm');
     const successMsg = document.getElementById('reSuccessMsg');
     const closeSuccessBtn = document.getElementById('reCloseSuccessBtn');
+    const statusBox = document.getElementById('reFormStatus');
+    const submitBtn = document.getElementById('reSubmitBtn');
+    const submitText = document.getElementById('reSubmitText');
 
     // Open Modal
     openBtns.forEach((btn) => {
@@ -2918,20 +2942,62 @@ const reSchemaData = [
       });
     }
 
-    // Handle Form Submit
+    // Handle Form Submit to Supabase /api/leads
     if (modalForm) {
-      modalForm.addEventListener('submit', (e) => {
+      modalForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const submitBtn = document.getElementById('reSubmitBtn');
-        if (submitBtn) {
-          submitBtn.innerHTML = '<span>Processing...</span>';
-          (submitBtn as HTMLButtonElement).disabled = true;
+
+        if (statusBox) {
+          statusBox.hidden = true;
+          statusBox.textContent = '';
+          statusBox.className = 're-form-status';
         }
 
-        setTimeout(() => {
+        if (submitBtn) submitBtn.disabled = true;
+        if (submitText) submitText.textContent = 'Submitting Request...';
+
+        const formData = new FormData(modalForm);
+        const name = formData.get('name') || '';
+        const email = formData.get('email') || '';
+        const phone = formData.get('phone') || '';
+        const sector = formData.get('sector') || '';
+        const message = formData.get('message') || '';
+
+        const payload = {
+          fullName: name,
+          email: email,
+          companyName: name + ' Realty',
+          mobileNumber: phone || 'N/A',
+          message: `[Real Estate Sector: ${sector}]\n${message}`.trim(),
+          sourcePage: "Real Estate Software Solutions (/industries/real-estate/)"
+        };
+
+        try {
+          const response = await fetch('/api/leads', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+
+          const result = await response.json();
+
+          if (!response.ok) {
+            throw new Error(result.message || 'Error submitting request. Please try again.');
+          }
+
+          modalForm.reset();
           if (modalForm) modalForm.style.display = 'none';
           if (successMsg) successMsg.style.display = 'block';
-        }, 800);
+        } catch (err) {
+          if (statusBox) {
+            statusBox.hidden = false;
+            statusBox.className = 're-form-status re-form-status-error';
+            statusBox.textContent = err.message || 'Connection error. Please try again.';
+          }
+        } finally {
+          if (submitBtn) submitBtn.disabled = false;
+          if (submitText) submitText.textContent = 'Submit Request & Book Demo';
+        }
       });
     }
   });

@@ -1,0 +1,3571 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export const prerender = true;
+
+const finFaqs = [
+  {
+    question: "What types of finance software do you build?",
+    answer: "We build custom financial platforms including accounting systems, payment solutions, billing platforms, expense management systems, financial dashboards, automation tools, and integrated finance applications."
+  },
+  {
+    question: "Can you integrate with our existing financial systems?",
+    answer: "Yes. We can design integrations around accounting platforms, ERP systems, payment providers, banking APIs, CRM systems, and other third-party technologies."
+  },
+  {
+    question: "Can you build software for FinTech startups?",
+    answer: "Yes. We can support the journey from product strategy and MVP development to scalable production platforms."
+  },
+  {
+    question: "Can you modernize legacy financial software?",
+    answer: "Yes. We can gradually modernize legacy systems, improve user experiences, introduce APIs, migrate infrastructure, and integrate modern technologies."
+  },
+  {
+    question: "How do you approach financial data security?",
+    answer: "Security is considered throughout architecture, infrastructure, development, authentication, authorization, data protection, integrations, monitoring, and testing."
+  },
+  {
+    question: "Do you provide ongoing support?",
+    answer: "Yes. Offer ongoing maintenance, monitoring, security updates, optimization, and feature development."
+  }
+];
+
+const finSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Finance Software Solutions",
+    provider: {
+      "@type": "Organization",
+      name: "Hegrix",
+      url: "https://hegrix.com"
+    },
+    areaServed: "Global",
+    serviceType: "Custom Finance Software Development, Financial Technology Modernization, Payment Systems, Financial Analytics & Automation",
+    description: "Build secure, scalable finance software tailored to your workflows. Modernize accounting, payments, billing, financial analytics, automation, and system integrations.",
+    url: "https://hegrix.com/industries/finance/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: finFaqs.map(f => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.answer
+      }
+    }))
+  }
+];
+---
+
+<Layout
+  title="Finance Software Solutions | Secure & Scalable Financial Technology | Hegrix"
+  description="Build secure, scalable finance software tailored to your workflows. Modernize accounting, payments, billing, financial analytics, automation, and system integrations."
+  keywords="Finance software solutions, Financial software development, Finance software development company, FinTech software development, Custom finance software, Financial technology solutions, Financial software solutions, Finance automation software, Payment software development, Financial analytics software"
+  path="/industries/finance/"
+  schema={finSchema}
+>
+
+  <div class="fin-page">
+
+    <!-- ═══════════════════════════════════════
+         1. HERO SECTION
+    ═══════════════════════════════════════ -->
+    <section class="fin-hero">
+      <div class="container fin-hero__wrap">
+        
+        <div class="fin-hero__content">
+          <div class="fin-eyebrow">
+            <span class="fin-eyebrow__pulse"></span>
+            FINANCE SOFTWARE SOLUTIONS
+          </div>
+          
+          <h1 class="fin-hero__title">
+            Turn Financial Complexity Into <span class="fin-gradient-text">Business Clarity.</span>
+          </h1>
+
+          <p class="fin-hero__lead">
+            Build smarter financial operations with secure, scalable software that automates workflows, connects systems, and transforms financial data into actionable insights.
+          </p>
+
+          <div class="fin-hero__actions">
+            <a href="#contact" class="fin-btn fin-btn--primary fin-btn--lg">
+              <span>Talk to a Finance Expert</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#solutions" class="fin-btn fin-btn--secondary fin-btn--lg">
+              <span>Explore Solutions →</span>
+            </a>
+          </div>
+
+          <!-- Trust Pillars below CTA -->
+          <div class="fin-hero__pillars">
+            <div class="fin-hero-pillar">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Secure Architecture</span>
+            </div>
+            <div class="fin-hero-pillar">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              <span>Scalable Infrastructure</span>
+            </div>
+            <div class="fin-hero-pillar">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+              <span>Real-Time Insights</span>
+            </div>
+          </div>
+
+          <!-- Core USP Banner Card -->
+          <div class="fin-usp-banner">
+            <div class="fin-usp-banner__header">
+              <span class="fin-usp-banner__tag">CORE USP</span>
+              <span class="fin-usp-banner__line"></span>
+            </div>
+            <p class="fin-usp-banner__main">
+              “Finance software built around the way your business works.”
+            </p>
+            <p class="fin-usp-banner__sub">
+              Secure, scalable, and intelligent financial technology that connects your systems, automates complex workflows, and turns financial data into better decisions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Side: Financial Analytics Dashboard UI Mockup -->
+        <div class="fin-hero__visual">
+          <div class="fin-hero-dashboard">
+            <div class="fin-hero-dashboard__header">
+              <div class="fin-hero-dashboard__title-wrap">
+                <span class="fin-hero-dashboard__status-dot"></span>
+                <span class="fin-hero-dashboard__title">Enterprise Financial Engine v4.2</span>
+              </div>
+              <span class="fin-demo-badge">Sample Demo Data</span>
+            </div>
+
+            <!-- Dashboard Key Metrics Grid -->
+            <div class="fin-dash-grid">
+              <div class="fin-dash-metric">
+                <span class="fin-dash-metric__label">Total Revenue</span>
+                <div class="fin-dash-metric__val-wrap">
+                  <span class="fin-dash-metric__val">$2.84M</span>
+                  <span class="fin-dash-metric__badge fin-dash-metric__badge--up">+18.6%</span>
+                </div>
+              </div>
+
+              <div class="fin-dash-metric">
+                <span class="fin-dash-metric__label">Cash Flow</span>
+                <div class="fin-dash-metric__val-wrap">
+                  <span class="fin-dash-metric__val">$642K</span>
+                  <span class="fin-dash-metric__badge fin-dash-metric__badge--up">+12.4%</span>
+                </div>
+              </div>
+
+              <div class="fin-dash-metric">
+                <span class="fin-dash-metric__label">Collection Rate</span>
+                <div class="fin-dash-metric__val-wrap">
+                  <span class="fin-dash-metric__val">94.8%</span>
+                  <span class="fin-dash-metric__badge fin-dash-metric__badge--up">+3.2%</span>
+                </div>
+              </div>
+
+              <div class="fin-dash-metric">
+                <span class="fin-dash-metric__label">Profit Margin</span>
+                <div class="fin-dash-metric__val-wrap">
+                  <span class="fin-dash-metric__val">39.4%</span>
+                  <span class="fin-dash-metric__badge fin-dash-metric__badge--neutral">Optimal</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Financial Performance Chart Visual -->
+            <div class="fin-chart-box">
+              <div class="fin-chart-box__header">
+                <span class="fin-chart-box__title">Revenue & Expense Trend (30 Days)</span>
+                <div class="fin-chart-box__legend">
+                  <span class="legend-item legend-item--rev">Revenue</span>
+                  <span class="legend-item legend-item--exp">Expenses</span>
+                </div>
+              </div>
+
+              <div class="fin-chart-graphic">
+                <svg viewBox="0 0 500 150" class="fin-chart-svg" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="revGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.3"/>
+                      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0"/>
+                    </linearGradient>
+                    <linearGradient id="expGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.2"/>
+                      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  
+                  <!-- Grid Lines -->
+                  <line x1="0" y1="30" x2="500" y2="30" stroke="#334155" stroke-dasharray="4 4" stroke-opacity="0.3"/>
+                  <line x1="0" y1="75" x2="500" y2="75" stroke="#334155" stroke-dasharray="4 4" stroke-opacity="0.3"/>
+                  <line x1="0" y1="120" x2="500" y2="120" stroke="#334155" stroke-dasharray="4 4" stroke-opacity="0.3"/>
+
+                  <!-- Revenue Curve & Area -->
+                  <path d="M0,110 Q75,70 150,85 T300,45 T450,25 L500,20 L500,150 L0,150 Z" fill="url(#revGrad)"/>
+                  <path d="M0,110 Q75,70 150,85 T300,45 T450,25 L500,20" fill="none" stroke="#06B6D4" stroke-width="3"/>
+
+                  <!-- Expense Curve & Area -->
+                  <path d="M0,130 Q75,110 150,115 T300,90 T450,70 L500,65 L500,150 L0,150 Z" fill="url(#expGrad)"/>
+                  <path d="M0,130 Q75,110 150,115 T300,90 T450,70 L500,65" fill="none" stroke="#3B82F6" stroke-width="2.5" stroke-dasharray="6 2"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Recent Stream Activity -->
+            <div class="fin-stream">
+              <div class="fin-stream__item">
+                <span class="fin-stream__dot fin-stream__dot--cyan"></span>
+                <span class="fin-stream__text">Accounts Receivable Auto-Reconciled</span>
+                <span class="fin-stream__val">+$18,400</span>
+              </div>
+              <div class="fin-stream__item">
+                <span class="fin-stream__dot fin-stream__dot--blue"></span>
+                <span class="fin-stream__text">SEPA Batch Settlement Complete</span>
+                <span class="fin-stream__val">2,410 Txns</span>
+              </div>
+            </div>
+
+            <!-- Floating UI Cards overlayed -->
+            <div class="fin-float-card fin-float-card--1">
+              <div class="fin-float-card__icon fin-float-card__icon--blue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div>
+                <span class="fin-float-card__title">Invoice Paid</span>
+                <span class="fin-float-card__sub">+$24,500</span>
+              </div>
+            </div>
+
+            <div class="fin-float-card fin-float-card--2">
+              <div class="fin-float-card__icon fin-float-card__icon--teal">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <div>
+                <span class="fin-float-card__title">Payment Processed</span>
+                <span class="fin-float-card__sub">Status: Successful</span>
+              </div>
+            </div>
+
+            <div class="fin-float-card fin-float-card--3">
+              <div class="fin-float-card__icon fin-float-card__icon--blue">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div>
+                <span class="fin-float-card__title">Risk Alert</span>
+                <span class="fin-float-card__sub">Score: Low (0.02%)</span>
+              </div>
+            </div>
+
+            <div class="fin-float-card fin-float-card--4">
+              <div class="fin-float-card__icon fin-float-card__icon--cyan">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <span class="fin-float-card__title">Automation Rate</span>
+                <span class="fin-float-card__sub">87% Workflows Active</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         2. TRUST STRIP SECTION
+    ═══════════════════════════════════════ -->
+    <section class="fin-trust-strip" id="trust">
+      <div class="container">
+        <h2 class="fin-trust-strip__title">Technology designed for modern financial operations.</h2>
+        
+        <div class="fin-trust-grid">
+          <div class="fin-trust-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Secure by Design</span>
+          </div>
+          <div class="fin-trust-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span>API-First Architecture</span>
+          </div>
+          <div class="fin-trust-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            <span>Scalable Infrastructure</span>
+          </div>
+          <div class="fin-trust-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            <span>Real-Time Data</span>
+          </div>
+          <div class="fin-trust-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <span>Automated Workflows</span>
+          </div>
+          <div class="fin-trust-card">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span>Enterprise Integration</span>
+          </div>
+        </div>
+
+        <div class="fin-logos">
+          <span class="fin-logos__label">Trusted by financial teams & tech innovators worldwide</span>
+          <div class="fin-logos__row">
+            <div class="fin-logo-item">FINTECH CORP</div>
+            <div class="fin-logo-item">NEXUS CAPITAL</div>
+            <div class="fin-logo-item">APEX BANKING</div>
+            <div class="fin-logo-item">GLOBAL FINANCE</div>
+            <div class="fin-logo-item">VERTEX PAYMENTS</div>
+            <div class="fin-logo-item">CRESTWOOD TECH</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         3. PROBLEM SECTION
+    ═══════════════════════════════════════ -->
+    <section class="fin-section fin-section--light" id="problems">
+      <div class="container">
+        <div class="fin-section-header fin-section-header--center">
+          <div class="fin-badge">THE CHALLENGE</div>
+          <h2 class="fin-section-title">
+            Financial operations shouldn't be held together by spreadsheets and disconnected systems.
+          </h2>
+          <p class="fin-section-subtitle">
+            Legacy systems, manual processes, fragmented data, and limited visibility can slow financial teams down. We replace complexity with connected, intelligent software designed around your workflows.
+          </p>
+        </div>
+
+        <div class="fin-problem-grid">
+          <!-- Card 1 -->
+          <div class="fin-problem-card">
+            <div class="fin-problem-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <h3 class="fin-problem-card__title">Fragmented Financial Systems</h3>
+            <p class="fin-problem-card__desc">
+              Connect accounting, payments, banking, ERP, CRM, and operational platforms into a single unified ecosystem.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="fin-problem-card">
+            <div class="fin-problem-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="fin-problem-card__title">Manual Processes</h3>
+            <p class="fin-problem-card__desc">
+              Automate repetitive financial tasks, approvals, reconciliation, reporting, and complex multi-step workflows.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="fin-problem-card">
+            <div class="fin-problem-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="fin-problem-card__title">Limited Visibility</h3>
+            <p class="fin-problem-card__desc">
+              Bring critical financial data into centralized real-time dashboards and executive reporting frameworks.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="fin-problem-card">
+            <div class="fin-problem-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <h3 class="fin-problem-card__title">Operational Risk</h3>
+            <p class="fin-problem-card__desc">
+              Reduce costly human errors, enforce strict access controls, and create audit-ready financial processes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         4. SOLUTIONS SECTION
+    ═══════════════════════════════════════ -->
+    <section class="fin-section" id="solutions">
+      <div class="container">
+        <div class="fin-section-header fin-section-header--center">
+          <div class="fin-badge">SOLUTIONS LIFECYCLE</div>
+          <h2 class="fin-section-title">
+            Software solutions for the entire financial lifecycle.
+          </h2>
+          <p class="fin-section-subtitle">
+            From accounting and payments to financial analytics and automation, we build connected solutions that simplify complex financial operations.
+          </p>
+        </div>
+
+        <div class="fin-solutions-grid">
+          <!-- Solution 01 -->
+          <div class="fin-solution-card">
+            <div class="fin-solution-card__top">
+              <span class="fin-solution-card__num">01</span>
+              <div class="fin-solution-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </div>
+            </div>
+            <h3 class="fin-solution-card__title">Financial Management Software</h3>
+            <p class="fin-solution-card__desc">
+              Centralize financial operations, reporting, budgeting, forecasting, and business performance across entities.
+            </p>
+            <a href="#contact" class="fin-solution-card__link">
+              Explore Solution <span>→</span>
+            </a>
+          </div>
+
+          <!-- Solution 02 -->
+          <div class="fin-solution-card">
+            <div class="fin-solution-card__top">
+              <span class="fin-solution-card__num">02</span>
+              <div class="fin-solution-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h4M6 12h8M6 16h6"/></svg>
+              </div>
+            </div>
+            <h3 class="fin-solution-card__title">Accounting Software</h3>
+            <p class="fin-solution-card__desc">
+              Modernize accounting workflows including invoicing, expenses, bank reconciliation, reporting, and ledger records.
+            </p>
+            <a href="#contact" class="fin-solution-card__link">
+              Explore Solution <span>→</span>
+            </a>
+          </div>
+
+          <!-- Solution 03 -->
+          <div class="fin-solution-card">
+            <div class="fin-solution-card__top">
+              <span class="fin-solution-card__num">03</span>
+              <div class="fin-solution-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              </div>
+            </div>
+            <h3 class="fin-solution-card__title">Payment Solutions</h3>
+            <p class="fin-solution-card__desc">
+              Build secure payment workflows, transaction processing gateways, multi-currency routing, and settlement tracking.
+            </p>
+            <a href="#contact" class="fin-solution-card__link">
+              Explore Solution <span>→</span>
+            </a>
+          </div>
+
+          <!-- Solution 04 -->
+          <div class="fin-solution-card">
+            <div class="fin-solution-card__top">
+              <span class="fin-solution-card__num">04</span>
+              <div class="fin-solution-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+            </div>
+            <h3 class="fin-solution-card__title">Billing & Invoicing</h3>
+            <p class="fin-solution-card__desc">
+              Automate recurring subscription billing, invoice generation, payment collection, reminders, and dunning management.
+            </p>
+            <a href="#contact" class="fin-solution-card__link">
+              Explore Solution <span>→</span>
+            </a>
+          </div>
+
+          <!-- Solution 05 -->
+          <div class="fin-solution-card">
+            <div class="fin-solution-card__top">
+              <span class="fin-solution-card__num">05</span>
+              <div class="fin-solution-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+              </div>
+            </div>
+            <h3 class="fin-solution-card__title">Financial Analytics</h3>
+            <p class="fin-solution-card__desc">
+              Turn raw financial data into actionable insights with custom executive dashboards, trends, and predictive models.
+            </p>
+            <a href="#contact" class="fin-solution-card__link">
+              Explore Solution <span>→</span>
+            </a>
+          </div>
+
+          <!-- Solution 06 -->
+          <div class="fin-solution-card">
+            <div class="fin-solution-card__top">
+              <span class="fin-solution-card__num">06</span>
+              <div class="fin-solution-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+            </div>
+            <h3 class="fin-solution-card__title">Expense Management</h3>
+            <p class="fin-solution-card__desc">
+              Digitize expense submission, mobile receipt scanning, policy controls, multi-level approval, and reimbursement.
+            </p>
+            <a href="#contact" class="fin-solution-card__link">
+              Explore Solution <span>→</span>
+            </a>
+          </div>
+
+          <!-- Solution 07 -->
+          <div class="fin-solution-card">
+            <div class="fin-solution-card__top">
+              <span class="fin-solution-card__num">07</span>
+              <div class="fin-solution-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+              </div>
+            </div>
+            <h3 class="fin-solution-card__title">Finance Automation</h3>
+            <p class="fin-solution-card__desc">
+              Automate repetitive financial operations, ledger posting, approval workflows, and data syncing to eliminate manual effort.
+            </p>
+            <a href="#contact" class="fin-solution-card__link">
+              Explore Solution <span>→</span>
+            </a>
+          </div>
+
+          <!-- Solution 08 -->
+          <div class="fin-solution-card">
+            <div class="fin-solution-card__top">
+              <span class="fin-solution-card__num">08</span>
+              <div class="fin-solution-card__icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+            </div>
+            <h3 class="fin-solution-card__title">Risk & Compliance Technology</h3>
+            <p class="fin-solution-card__desc">
+              Build systems supporting real-time activity monitoring, comprehensive audit logs, granular permissions, and compliance governance.
+            </p>
+            <a href="#contact" class="fin-solution-card__link">
+              Explore Solution <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         5. FINANCIAL DASHBOARD SHOWCASE
+    ═══════════════════════════════════════ -->
+    <section class="fin-section fin-section--dark" id="showcase">
+      <div class="container">
+        <div class="fin-section-header fin-section-header--center text-white">
+          <div class="fin-badge fin-badge--cyan">ENTERPRISE VISIBILITY</div>
+          <h2 class="fin-section-title text-white">
+            One connected view of your financial performance.
+          </h2>
+          <p class="fin-section-subtitle text-slate-300">
+            Give finance teams the visibility they need to understand performance, identify opportunities, manage risk, and make faster decisions.
+          </p>
+        </div>
+
+        <!-- Interactive Showcase Console -->
+        <div class="fin-showcase-console">
+          
+          <!-- Filter Controls -->
+          <div class="fin-showcase-console__top">
+            <div class="fin-console-tabs" id="finDashboardTabs">
+              <button class="fin-tab-btn active" data-period="today">Today</button>
+              <button class="fin-tab-btn" data-period="7days">7 Days</button>
+              <button class="fin-tab-btn" data-period="30days">30 Days</button>
+              <button class="fin-tab-btn" data-period="quarter">Quarter</button>
+              <button class="fin-tab-btn" data-period="year">Year</button>
+            </div>
+            <div class="fin-console-badge">
+              <span class="fin-live-pulse"></span>
+              Real-Time Feed • <span class="fin-demo-tag">Sample Data</span>
+            </div>
+          </div>
+
+          <!-- KPI Cards Bar -->
+          <div class="fin-console-kpis">
+            <div class="fin-kpi-card">
+              <span class="fin-kpi-card__label">Revenue</span>
+              <span class="fin-kpi-card__val" id="kpiRevenue">$2.84M</span>
+              <span class="fin-kpi-card__change fin-kpi-card__change--up">↑ 18.6% vs prev period</span>
+            </div>
+            <div class="fin-kpi-card">
+              <span class="fin-kpi-card__label">Expenses</span>
+              <span class="fin-kpi-card__val" id="kpiExpenses">$1.72M</span>
+              <span class="fin-kpi-card__change fin-kpi-card__change--down">↓ 4.2% optimized</span>
+            </div>
+            <div class="fin-kpi-card">
+              <span class="fin-kpi-card__label">Net Profit</span>
+              <span class="fin-kpi-card__val" id="kpiProfit">$684K</span>
+              <span class="fin-kpi-card__change fin-kpi-card__change--up">↑ 24.1% margin expansion</span>
+            </div>
+            <div class="fin-kpi-card">
+              <span class="fin-kpi-card__label">Cash Position</span>
+              <span class="fin-kpi-card__val" id="kpiCash">$1.24M</span>
+              <span class="fin-kpi-card__change fin-kpi-card__change--neutral">Liquidity Ratio: 2.8x</span>
+            </div>
+          </div>
+
+          <!-- Dual Section: Main Visual Chart & Breakdown -->
+          <div class="fin-console-body">
+            <!-- Left Chart -->
+            <div class="fin-console-chart">
+              <div class="fin-chart-head">
+                <span class="fin-chart-head__title">Revenue vs Expenses Comparison</span>
+                <span class="fin-chart-head__tag">Automated Sync Active</span>
+              </div>
+              <div class="fin-bars-visual">
+                <div class="fin-bar-group">
+                  <div class="fin-bar-col">
+                    <div class="fin-bar fin-bar--rev" style="height: 85%;"></div>
+                    <div class="fin-bar fin-bar--exp" style="height: 55%;"></div>
+                  </div>
+                  <span class="fin-bar-label">Q1</span>
+                </div>
+                <div class="fin-bar-group">
+                  <div class="fin-bar-col">
+                    <div class="fin-bar fin-bar--rev" style="height: 92%;"></div>
+                    <div class="fin-bar fin-bar--exp" style="height: 60%;"></div>
+                  </div>
+                  <span class="fin-bar-label">Q2</span>
+                </div>
+                <div class="fin-bar-group">
+                  <div class="fin-bar-col">
+                    <div class="fin-bar fin-bar--rev" style="height: 78%;"></div>
+                    <div class="fin-bar fin-bar--exp" style="height: 50%;"></div>
+                  </div>
+                  <span class="fin-bar-label">Q3</span>
+                </div>
+                <div class="fin-bar-group">
+                  <div class="fin-bar-col">
+                    <div class="fin-bar fin-bar--rev" style="height: 98%;"></div>
+                    <div class="fin-bar fin-bar--exp" style="height: 62%;"></div>
+                  </div>
+                  <span class="fin-bar-label">Q4</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Expense Breakdown -->
+            <div class="fin-console-side">
+              <span class="fin-side-title">Expense Distribution</span>
+              
+              <div class="fin-progress-item">
+                <div class="fin-progress-item__info">
+                  <span>Operations & Infrastructure</span>
+                  <span>42%</span>
+                </div>
+                <div class="fin-progress-bar"><div class="fin-progress-fill" style="width: 42%; background: #3B82F6;"></div></div>
+              </div>
+
+              <div class="fin-progress-item">
+                <div class="fin-progress-item__info">
+                  <span>Engineering & Product</span>
+                  <span>28%</span>
+                </div>
+                <div class="fin-progress-bar"><div class="fin-progress-fill" style="width: 28%; background: #06B6D4;"></div></div>
+              </div>
+
+              <div class="fin-progress-item">
+                <div class="fin-progress-item__info">
+                  <span>Sales & Growth</span>
+                  <span>18%</span>
+                </div>
+                <div class="fin-progress-bar"><div class="fin-progress-fill" style="width: 18%; background: #3B82F6;"></div></div>
+              </div>
+
+              <div class="fin-progress-item">
+                <div class="fin-progress-item__info">
+                  <span>Governance & Compliance</span>
+                  <span>12%</span>
+                </div>
+                <div class="fin-progress-bar"><div class="fin-progress-fill" style="width: 12%; background: #6366F1;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transaction Table -->
+          <div class="fin-console-table-wrap">
+            <span class="fin-table-title">Recent Transactions & Invoices (Sample Feed)</span>
+            <table class="fin-console-table">
+              <thead>
+                <tr>
+                  <th>Transaction ID</th>
+                  <th>Entity / Counterparty</th>
+                  <th>Type</th>
+                  <th>Amount</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>TXN-90214</td>
+                  <td>Global Logistics Enterprise</td>
+                  <td>Invoice Payment</td>
+                  <td class="font-bold text-cyan-400">+$142,500.00</td>
+                  <td><span class="fin-status-pill fin-status-pill--success">Cleared</span></td>
+                </tr>
+                <tr>
+                  <td>TXN-90215</td>
+                  <td>Apex Cloud Infrastructure</td>
+                  <td>Vendor Expense</td>
+                  <td class="text-slate-300">-$12,450.00</td>
+                  <td><span class="fin-status-pill fin-status-pill--success">Cleared</span></td>
+                </tr>
+                <tr>
+                  <td>TXN-90216</td>
+                  <td>Crestwood Merchant Services</td>
+                  <td>ACH Settlement</td>
+                  <td class="font-bold text-cyan-400">+$68,900.00</td>
+                  <td><span class="fin-status-pill fin-status-pill--pending">Processing</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         6. SERVICES SECTION
+    ═══════════════════════════════════════ -->
+    <section class="fin-section fin-section--light" id="services">
+      <div class="container">
+        <div class="fin-section-header fin-section-header--center">
+          <div class="fin-badge">END-TO-END CAPABILITIES</div>
+          <h2 class="fin-section-title">
+            From financial strategy to production software.
+          </h2>
+          <p class="fin-section-subtitle">
+            We partner with finance leaders, FinTech founders, and enterprise IT teams across every phase of software development.
+          </p>
+        </div>
+
+        <div class="fin-services-grid">
+          <!-- Service 1 -->
+          <div class="fin-service-card">
+            <div class="fin-service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3 class="fin-service-card__title">Financial Product Strategy</h3>
+            <p class="fin-service-card__desc">
+              Transform financial business requirements into a clear, compliant technology roadmap and architecture blueprint.
+            </p>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="fin-service-card">
+            <div class="fin-service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+            </div>
+            <h3 class="fin-service-card__title">UX/UI Design</h3>
+            <p class="fin-service-card__desc">
+              Design intuitive, high-density financial interfaces for finance teams, customers, administrators, and executives.
+            </p>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="fin-service-card">
+            <div class="fin-service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="fin-service-card__title">Custom Software Development</h3>
+            <p class="fin-service-card__desc">
+              Build secure, scalable financial applications tailored specifically around your business rules and workflows.
+            </p>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="fin-service-card">
+            <div class="fin-service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </div>
+            <h3 class="fin-service-card__title">System Integration</h3>
+            <p class="fin-service-card__desc">
+              Connect ERP, accounting, banking, payment gateway, CRM, API, and legacy third-party financial systems.
+            </p>
+          </div>
+
+          <!-- Service 5 -->
+          <div class="fin-service-card">
+            <div class="fin-service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-4V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v6H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v6a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-6h4a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2z"/></svg>
+            </div>
+            <h3 class="fin-service-card__title">Cloud & Infrastructure</h3>
+            <p class="fin-service-card__desc">
+              Build resilient, high-availability cloud infrastructure designed for financial data protection and zero downtime.
+            </p>
+          </div>
+
+          <!-- Service 6 -->
+          <div class="fin-service-card">
+            <div class="fin-service-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3 class="fin-service-card__title">Support & Optimization</h3>
+            <p class="fin-service-card__desc">
+              Maintain, monitor, optimize, and continuously improve your financial technology platform with 24/7 technical oversight.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         7. WHY CHOOSE US
+    ═══════════════════════════════════════ -->
+    <section class="fin-section" id="why-us">
+      <div class="container">
+        <div class="fin-section-header fin-section-header--center">
+          <div class="fin-badge">THE HEGRIX DIFFERENCE</div>
+          <h2 class="fin-section-title">
+            Why businesses choose us for financial technology.
+          </h2>
+          <p class="fin-section-subtitle">
+            We combine deep financial engineering knowledge with modern enterprise software development standards.
+          </p>
+        </div>
+
+        <div class="fin-why-grid">
+          <div class="fin-why-card">
+            <div class="fin-why-card__num">01</div>
+            <h3 class="fin-why-card__title">Finance-First Thinking</h3>
+            <p class="fin-why-card__desc">
+              We understand financial workflows, double-entry ledgers, and build technology around real operational needs.
+            </p>
+          </div>
+
+          <div class="fin-why-card">
+            <div class="fin-why-card__num">02</div>
+            <h3 class="fin-why-card__title">Security by Design</h3>
+            <p class="fin-why-card__desc">
+              Security, access control, data protection, and auditability are embedded throughout our software architecture.
+            </p>
+          </div>
+
+          <div class="fin-why-card">
+            <div class="fin-why-card__num">03</div>
+            <h3 class="fin-why-card__title">Built to Scale</h3>
+            <p class="fin-why-card__desc">
+              Design systems capable of supporting increasing transaction volumes, multi-entity structures, and complex data.
+            </p>
+          </div>
+
+          <div class="fin-why-card">
+            <div class="fin-why-card__num">04</div>
+            <h3 class="fin-why-card__title">Seamless Integration</h3>
+            <p class="fin-why-card__desc">
+              Connect your existing financial ecosystem through robust APIs instead of forcing teams to replace everything.
+            </p>
+          </div>
+
+          <div class="fin-why-card">
+            <div class="fin-why-card__num">05</div>
+            <h3 class="fin-why-card__title">Automation at the Core</h3>
+            <p class="fin-why-card__desc">
+              Reduce repetitive work and boost operational efficiency through intelligent, event-driven financial automation.
+            </p>
+          </div>
+
+          <div class="fin-why-card">
+            <div class="fin-why-card__num">06</div>
+            <h3 class="fin-why-card__title">Data-Driven Decisions</h3>
+            <p class="fin-why-card__desc">
+              Transform complex financial data into clear executive dashboards, automated alerts, and actionable insights.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         8. SECURITY SECTION
+    ═══════════════════════════════════════ -->
+    <section class="fin-section fin-section--dark" id="security">
+      <div class="container">
+        <div class="fin-section-header fin-section-header--center text-white">
+          <div class="fin-badge fin-badge--cyan">ENTERPRISE DEFENSE</div>
+          <h2 class="fin-section-title text-white">
+            Security is built into every layer.
+          </h2>
+          <p class="fin-section-subtitle text-slate-300">
+            Financial technology requires absolute trust. Our software architecture is designed to support security, privacy, access controls, encryption, auditability, and resilience requirements.
+          </p>
+        </div>
+
+        <div class="fin-security-grid">
+          <!-- Card 1 -->
+          <div class="fin-security-card">
+            <div class="fin-security-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3 class="fin-security-card__title">Data Encryption</h3>
+            <p class="fin-security-card__desc">
+              Protect sensitive information during transmission and storage using industry-standard AES-256 and TLS 1.3 standards.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="fin-security-card">
+            <div class="fin-security-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="fin-security-card__title">Role-Based Access</h3>
+            <p class="fin-security-card__desc">
+              Control system access with granular RBAC, multi-factor authentication (MFA), and least-privilege permission models.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="fin-security-card">
+            <div class="fin-security-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3 class="fin-security-card__title">Audit Trails</h3>
+            <p class="fin-security-card__desc">
+              Maintain immutable visibility into all critical financial activities, system changes, approvals, and data access.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="fin-security-card">
+            <div class="fin-security-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <h3 class="fin-security-card__title">Secure APIs</h3>
+            <p class="fin-security-card__desc">
+              Design external integrations with OAuth 2.0 authentication, rate limiting, IP whitelisting, and payload verification.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="fin-security-card">
+            <div class="fin-security-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3 class="fin-security-card__title">Monitoring</h3>
+            <p class="fin-security-card__desc">
+              Track infrastructure health, unusual transaction spikes, and operational security events with real-time alerting.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="fin-security-card">
+            <div class="fin-security-card__icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+            </div>
+            <h3 class="fin-security-card__title">Backup & Resilience</h3>
+            <p class="fin-security-card__desc">
+              Design automated multi-region backups, point-in-time recovery, and fault-tolerant infrastructure for continuity.
+            </p>
+          </div>
+        </div>
+
+        <div class="fin-security-disclaimer">
+          <span>* Software architectures are designed to support security and compliance requirements across banking, payment, and financial regulations.</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         9. FINANCE INDUSTRIES SECTION
+    ═══════════════════════════════════════ -->
+    <section class="fin-section fin-section--light" id="industries">
+      <div class="container">
+        <div class="fin-section-header fin-section-header--center">
+          <div class="fin-badge">INDUSTRIES SERVED</div>
+          <h2 class="fin-section-title">
+            Built for organizations across the financial ecosystem.
+          </h2>
+          <p class="fin-section-subtitle">
+            Tailored financial software engineered for specific industry workflows and operational models.
+          </p>
+        </div>
+
+        <div class="fin-ind-grid">
+          <!-- 1. Banks -->
+          <div class="fin-ind-card">
+            <div class="fin-ind-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M8 10v11M12 10v11M16 10v11M20 10v11"/></svg></div>
+            <h3 class="fin-ind-card__title">Banks</h3>
+            <p class="fin-ind-card__desc">Core banking integrations, customer portals, and internal workflows.</p>
+            <span class="fin-ind-card__arrow">→</span>
+          </div>
+
+          <!-- 2. FinTech Companies -->
+          <div class="fin-ind-card">
+            <div class="fin-ind-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            <h3 class="fin-ind-card__title">FinTech Companies</h3>
+            <p class="fin-ind-card__desc">Scalable SaaS products, digital wallets, and modern financial applications.</p>
+            <span class="fin-ind-card__arrow">→</span>
+          </div>
+
+          <!-- 3. Credit & Lending -->
+          <div class="fin-ind-card">
+            <div class="fin-ind-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <h3 class="fin-ind-card__title">Credit & Lending</h3>
+            <p class="fin-ind-card__desc">Loan origination platforms, underwriting algorithms, and servicing dashboards.</p>
+            <span class="fin-ind-card__arrow">→</span>
+          </div>
+
+          <!-- 4. Insurance -->
+          <div class="fin-ind-card">
+            <div class="fin-ind-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3 class="fin-ind-card__title">Insurance</h3>
+            <p class="fin-ind-card__desc">Claims processing portals, policy billing engines, and risk scoring systems.</p>
+            <span class="fin-ind-card__arrow">→</span>
+          </div>
+
+          <!-- 5. Accounting Firms -->
+          <div class="fin-ind-card">
+            <div class="fin-ind-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/></svg></div>
+            <h3 class="fin-ind-card__title">Accounting Firms</h3>
+            <p class="fin-ind-card__desc">Multi-client accounting portals, automated reconciliation, and audit software.</p>
+            <span class="fin-ind-card__arrow">→</span>
+          </div>
+
+          <!-- 6. Investment & Wealth Management -->
+          <div class="fin-ind-card">
+            <div class="fin-ind-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+            <h3 class="fin-ind-card__title">Investment & Wealth</h3>
+            <p class="fin-ind-card__desc">Portfolio tracking, investor reporting dashboards, and asset performance tools.</p>
+            <span class="fin-ind-card__arrow">→</span>
+          </div>
+
+          <!-- 7. Payments -->
+          <div class="fin-ind-card">
+            <div class="fin-ind-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
+            <h3 class="fin-ind-card__title">Payments</h3>
+            <p class="fin-ind-card__desc">Payment processing gateways, payout engines, and cross-border settlement.</p>
+            <span class="fin-ind-card__arrow">→</span>
+          </div>
+
+          <!-- 8. Financial Services -->
+          <div class="fin-ind-card">
+            <div class="fin-ind-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+            <h3 class="fin-ind-card__title">Financial Services</h3>
+            <p class="fin-ind-card__desc">Advisory portals, client billing systems, and custom operational platforms.</p>
+            <span class="fin-ind-card__arrow">→</span>
+          </div>
+
+          <!-- 9. Corporate Finance Teams -->
+          <div class="fin-ind-card">
+            <div class="fin-ind-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+            <h3 class="fin-ind-card__title">Corporate Finance Teams</h3>
+            <p class="fin-ind-card__desc">Enterprise FP&A software, cash forecasting, and consolidation dashboards.</p>
+            <span class="fin-ind-card__arrow">→</span>
+          </div>
+
+          <!-- 10. Startups -->
+          <div class="fin-ind-card">
+            <div class="fin-ind-card__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-3.05 11a22.35 22.35 0 0 1-3.95 2z"/></svg></div>
+            <h3 class="fin-ind-card__title">Startups</h3>
+            <p class="fin-ind-card__desc">Fast-to-market FinTech MVPs, API architecture, and scalable growth platforms.</p>
+            <span class="fin-ind-card__arrow">→</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         10. INTEGRATIONS SECTION
+    ═══════════════════════════════════════ -->
+    <section class="fin-section" id="integrations">
+      <div class="container">
+        <div class="fin-section-header fin-section-header--center">
+          <div class="fin-badge">SYSTEM CONNECTIVITY</div>
+          <h2 class="fin-section-title">
+            Connect the systems your business already relies on.
+          </h2>
+          <p class="fin-section-subtitle">
+            Your financial technology ecosystem doesn't need to become more complicated. We help connect your existing platforms, data sources, and workflows.
+          </p>
+        </div>
+
+        <div class="fin-integ-grid">
+          <!-- 1. Accounting -->
+          <div class="fin-integ-card">
+            <div class="fin-integ-card__badge">Accounting</div>
+            <h3 class="fin-integ-card__title">General Ledger & Accounting</h3>
+            <p class="fin-integ-card__desc">Connect enterprise accounting platforms, GL systems, and financial ledgers.</p>
+            <div class="fin-integ-card__pills">
+              <span>QuickBooks</span><span>Xero</span><span>NetSuite</span><span>Custom GL</span>
+            </div>
+          </div>
+
+          <!-- 2. ERP -->
+          <div class="fin-integ-card">
+            <div class="fin-integ-card__badge">ERP</div>
+            <h3 class="fin-integ-card__title">Enterprise ERP Platforms</h3>
+            <p class="fin-integ-card__desc">Integrate operational ERP data with financial reporting and cash planning.</p>
+            <div class="fin-integ-card__pills">
+              <span>SAP</span><span>Oracle</span><span>Odoo</span><span>Microsoft Dynamics</span>
+            </div>
+          </div>
+
+          <!-- 3. Banking -->
+          <div class="fin-integ-card">
+            <div class="fin-integ-card__badge">Banking</div>
+            <h3 class="fin-integ-card__title">Banking APIs & Open Banking</h3>
+            <p class="fin-integ-card__desc">Sync bank feeds, statement reconciliation, ACH transfers, and wire payouts.</p>
+            <div class="fin-integ-card__pills">
+              <span>Plaid</span><span>Plaid / MX</span><span>Open Banking</span><span>Direct ISO20022</span>
+            </div>
+          </div>
+
+          <!-- 4. Payments -->
+          <div class="fin-integ-card">
+            <div class="fin-integ-card__badge">Payments</div>
+            <h3 class="fin-integ-card__title">Payment Gateways</h3>
+            <p class="fin-integ-card__desc">Process credit cards, digital wallets, global payouts, and multi-currency transactions.</p>
+            <div class="fin-integ-card__pills">
+              <span>Stripe</span><span>Adyen</span><span>PayPal</span><span>Authorise.Net</span>
+            </div>
+          </div>
+
+          <!-- 5. CRM -->
+          <div class="fin-integ-card">
+            <div class="fin-integ-card__badge">CRM</div>
+            <h3 class="fin-integ-card__title">Customer Relationship Data</h3>
+            <p class="fin-integ-card__desc">Link customer contracts, revenue records, and billing status with sales CRM.</p>
+            <div class="fin-integ-card__pills">
+              <span>Salesforce</span><span>HubSpot</span><span>Zoho CRM</span><span>Dynamics 365</span>
+            </div>
+          </div>
+
+          <!-- 6. Payroll -->
+          <div class="fin-integ-card">
+            <div class="fin-integ-card__badge">Payroll</div>
+            <h3 class="fin-integ-card__title">Payroll & HR Systems</h3>
+            <p class="fin-integ-card__desc">Automate payroll expense distribution, tax withholdings, and employee reimbursements.</p>
+            <div class="fin-integ-card__pills">
+              <span>Gusto</span><span>ADP</span><span>Rippling</span><span>Workday</span>
+            </div>
+          </div>
+
+          <!-- 7. Analytics -->
+          <div class="fin-integ-card">
+            <div class="fin-integ-card__badge">Analytics</div>
+            <h3 class="fin-integ-card__title">Business Intelligence</h3>
+            <p class="fin-integ-card__desc">Stream clean financial metrics into central enterprise reporting platforms.</p>
+            <div class="fin-integ-card__pills">
+              <span>Power BI</span><span>Tableau</span><span>Looker</span><span>Snowflake</span>
+            </div>
+          </div>
+
+          <!-- 8. APIs -->
+          <div class="fin-integ-card">
+            <div class="fin-integ-card__badge">APIs</div>
+            <h3 class="fin-integ-card__title">Custom Third-Party APIs</h3>
+            <p class="fin-integ-card__desc">Build custom REST / GraphQL middleware connectors for proprietary legacy systems.</p>
+            <div class="fin-integ-card__pills">
+              <span>REST APIs</span><span>GraphQL</span><span>Webhooks</span><span>gRPC</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         11. AUTOMATION SECTION
+    ═══════════════════════════════════════ -->
+    <section class="fin-section fin-section--light" id="automation">
+      <div class="container">
+        <div class="fin-section-header fin-section-header--center">
+          <div class="fin-badge">INTELLIGENT WORKFLOWS</div>
+          <h2 class="fin-section-title">
+            Automate the work. Accelerate the business.
+          </h2>
+          <p class="fin-section-subtitle">
+            Turn repetitive financial processes into intelligent workflows that run faster, more consistently, and with greater visibility.
+          </p>
+        </div>
+
+        <!-- Workflow Step-by-Step Visualization -->
+        <div class="fin-workflow-wrap">
+          <div class="fin-workflow-flow">
+            <div class="fin-wf-step">
+              <div class="fin-wf-step__num">1</div>
+              <div class="fin-wf-step__card">
+                <span class="fin-wf-step__title">Invoice Received</span>
+                <span class="fin-wf-step__desc">Email / API ingestion</span>
+              </div>
+            </div>
+
+            <div class="fin-wf-arrow">→</div>
+
+            <div class="fin-wf-step">
+              <div class="fin-wf-step__num">2</div>
+              <div class="fin-wf-step__card">
+                <span class="fin-wf-step__title">Data Extracted</span>
+                <span class="fin-wf-step__desc">OCR & parsing</span>
+              </div>
+            </div>
+
+            <div class="fin-wf-arrow">→</div>
+
+            <div class="fin-wf-step">
+              <div class="fin-wf-step__num">3</div>
+              <div class="fin-wf-step__card">
+                <span class="fin-wf-step__title">Validation</span>
+                <span class="fin-wf-step__desc">3-Way PO Matching</span>
+              </div>
+            </div>
+
+            <div class="fin-wf-arrow">→</div>
+
+            <div class="fin-wf-step">
+              <div class="fin-wf-step__num">4</div>
+              <div class="fin-wf-step__card">
+                <span class="fin-wf-step__title">Approval</span>
+                <span class="fin-wf-step__desc">Rule-based routing</span>
+              </div>
+            </div>
+
+            <div class="fin-wf-arrow">→</div>
+
+            <div class="fin-wf-step">
+              <div class="fin-wf-step__num">5</div>
+              <div class="fin-wf-step__card">
+                <span class="fin-wf-step__title">Payment</span>
+                <span class="fin-wf-step__desc">ACH / Bank payout</span>
+              </div>
+            </div>
+
+            <div class="fin-wf-arrow">→</div>
+
+            <div class="fin-wf-step">
+              <div class="fin-wf-step__num">6</div>
+              <div class="fin-wf-step__card">
+                <span class="fin-wf-step__title">Reconciliation</span>
+                <span class="fin-wf-step__desc">GL auto-posting</span>
+              </div>
+            </div>
+
+            <div class="fin-wf-arrow">→</div>
+
+            <div class="fin-wf-step">
+              <div class="fin-wf-step__num">7</div>
+              <div class="fin-wf-step__card">
+                <span class="fin-wf-step__title">Reporting</span>
+                <span class="fin-wf-step__desc">Real-time audit log</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Value Pills -->
+          <div class="fin-wf-values">
+            <div class="fin-wf-value-tag">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Less Manual Work</span>
+            </div>
+            <div class="fin-wf-value-tag">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              <span>Faster Processing</span>
+            </div>
+            <div class="fin-wf-value-tag">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>Better Visibility</span>
+            </div>
+            <div class="fin-wf-value-tag">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Fewer Errors</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         12. PROCESS SECTION
+    ═══════════════════════════════════════ -->
+    <section class="fin-section" id="process">
+      <div class="container">
+        <div class="fin-section-header fin-section-header--center">
+          <div class="fin-badge">METHODOLOGY</div>
+          <h2 class="fin-section-title">
+            A smarter way to build financial software.
+          </h2>
+          <p class="fin-section-subtitle">
+            A structured, risk-mitigated delivery process designed specifically for sensitive financial systems.
+          </p>
+        </div>
+
+        <div class="fin-process-timeline">
+          <!-- Step 01 -->
+          <div class="fin-process-item">
+            <div class="fin-process-item__num">01</div>
+            <div class="fin-process-item__content">
+              <h3 class="fin-process-item__title">Discover</h3>
+              <p class="fin-process-item__desc">
+                Understand your financial workflows, users, legacy data structures, compliance needs, and core business objectives.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="fin-process-item">
+            <div class="fin-process-item__num">02</div>
+            <div class="fin-process-item__content">
+              <h3 class="fin-process-item__title">Strategize</h3>
+              <p class="fin-process-item__desc">
+                Define technology architecture, integration patterns, security standards, compliance requirements, and delivery milestones.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="fin-process-item">
+            <div class="fin-process-item__num">03</div>
+            <div class="fin-process-item__content">
+              <h3 class="fin-process-item__title">Design</h3>
+              <p class="fin-process-item__desc">
+                Create intuitive, fast, high-clarity interfaces for finance operations, administrators, and end-user customers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="fin-process-item">
+            <div class="fin-process-item__num">04</div>
+            <div class="fin-process-item__content">
+              <h3 class="fin-process-item__title">Develop</h3>
+              <p class="fin-process-item__desc">
+                Build secure, modular financial software using modern frameworks, clean code practices, and comprehensive unit tests.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 05 -->
+          <div class="fin-process-item">
+            <div class="fin-process-item__num">05</div>
+            <div class="fin-process-item__content">
+              <h3 class="fin-process-item__title">Integrate</h3>
+              <p class="fin-process-item__desc">
+                Connect banking APIs, payment processors, ERPs, accounting tools, and internal microservices into a coherent engine.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 06 -->
+          <div class="fin-process-item">
+            <div class="fin-process-item__num">06</div>
+            <div class="fin-process-item__content">
+              <h3 class="fin-process-item__title">Optimize</h3>
+              <p class="fin-process-item__desc">
+                Continuously monitor, tune performance, enhance automation, maintain security patches, and support business scale.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         13. METRICS SECTION
+    ═══════════════════════════════════════ -->
+    <section class="fin-section fin-section--dark" id="metrics">
+      <div class="container">
+        <div class="fin-metrics-grid">
+          <div class="fin-metric-box">
+            <span class="fin-metric-box__num">50+</span>
+            <span class="fin-metric-box__label">Financial Technology Projects</span>
+          </div>
+
+          <div class="fin-metric-box">
+            <span class="fin-metric-box__num">99.9%</span>
+            <span class="fin-metric-box__label">Platform Reliability</span>
+          </div>
+
+          <div class="fin-metric-box">
+            <span class="fin-metric-box__num">10M+</span>
+            <span class="fin-metric-box__label">Sample Transactions Processed</span>
+          </div>
+
+          <div class="fin-metric-box">
+            <span class="fin-metric-box__num">24/7</span>
+            <span class="fin-metric-box__label">Technology Monitoring</span>
+          </div>
+        </div>
+
+        <div class="fin-metrics-note">
+          <span>* Note: Replace all sample metrics with verified company data before publishing.</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         14. CASE STUDIES
+    ═══════════════════════════════════════ -->
+    <section class="fin-section fin-section--light" id="case-studies">
+      <div class="container">
+        <div class="fin-section-header fin-section-header--center">
+          <div class="fin-badge">PROVEN IMPACT</div>
+          <h2 class="fin-section-title">
+            Technology that creates measurable business impact.
+          </h2>
+          <p class="fin-section-subtitle">
+            See how modern financial software transforms operational efficiency and clarity.
+          </p>
+        </div>
+
+        <div class="fin-cases-grid">
+          <!-- Case 01 -->
+          <div class="fin-case-card">
+            <div class="fin-case-card__tag">Case Study 01</div>
+            <h3 class="fin-case-card__title">Automating Financial Operations</h3>
+            
+            <div class="fin-case-card__block">
+              <span class="fin-case-card__lbl">Challenge:</span>
+              <p>Manual finance workflows, delayed invoicing, and fragmented multi-entity reporting across spreadsheets.</p>
+            </div>
+
+            <div class="fin-case-card__block">
+              <span class="fin-case-card__lbl">Solution:</span>
+              <p>Connected financial operations platform with automated approval routing and real-time ledger sync.</p>
+            </div>
+
+            <div class="fin-case-card__result">
+              <span class="fin-case-card__lbl font-bold text-blue-600">Result:</span>
+              <p class="font-semibold text-slate-900">75% Reduction in Monthly Reconciliation Time [Sample Outcome]</p>
+            </div>
+          </div>
+
+          <!-- Case 02 -->
+          <div class="fin-case-card">
+            <div class="fin-case-card__tag">Case Study 02</div>
+            <h3 class="fin-case-card__title">Modernizing a Payment Experience</h3>
+            
+            <div class="fin-case-card__block">
+              <span class="fin-case-card__lbl">Challenge:</span>
+              <p>Disconnected payment gateways, manual payout tracking, and high transaction failure rates.</p>
+            </div>
+
+            <div class="fin-case-card__block">
+              <span class="fin-case-card__lbl">Solution:</span>
+              <p>Unified payment orchestration engine with intelligent transaction retry and instant bank settlement.</p>
+            </div>
+
+            <div class="fin-case-card__result">
+              <span class="fin-case-card__lbl font-bold text-blue-600">Result:</span>
+              <p class="font-semibold text-slate-900">99.8% Payment Authorization Rate Achieved [Sample Outcome]</p>
+            </div>
+          </div>
+
+          <!-- Case 03 -->
+          <div class="fin-case-card">
+            <div class="fin-case-card__tag">Case Study 03</div>
+            <h3 class="fin-case-card__title">Building Real-Time Financial Visibility</h3>
+            
+            <div class="fin-case-card__block">
+              <span class="fin-case-card__lbl">Challenge:</span>
+              <p>Executive leadership lacked centralized visibility into daily cash flow and entity margin performance.</p>
+            </div>
+
+            <div class="fin-case-card__block">
+              <span class="fin-case-card__lbl">Solution:</span>
+              <p>Centralized financial analytics dashboard with automated ERP data ingestion and predictive forecasting.</p>
+            </div>
+
+            <div class="fin-case-card__result">
+              <span class="fin-case-card__lbl font-bold text-blue-600">Result:</span>
+              <p class="font-semibold text-slate-900">Real-Time Executive Reporting Enabled Across 12 Entities [Sample Outcome]</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="fin-cases-cta">
+          <a href="#contact" class="fin-btn fin-btn--secondary">
+            <span>View All Case Studies →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         15. TESTIMONIALS
+    ═══════════════════════════════════════ -->
+    <section class="fin-section" id="testimonials">
+      <div class="container">
+        <div class="fin-section-header fin-section-header--center">
+          <div class="fin-badge">CLIENT FEEDBACK</div>
+          <h2 class="fin-section-title">
+            What our clients say
+          </h2>
+          <p class="fin-section-subtitle">
+            Feedback from leaders modernizing their financial technology infrastructure.
+          </p>
+        </div>
+
+        <div class="fin-testimonials-grid">
+          <!-- Card 1 -->
+          <div class="fin-testimonial-card">
+            <div class="fin-testimonial-card__stars">★★★★★</div>
+            <p class="fin-testimonial-card__quote">
+              “Hegrix helped us transform our complex financial reporting into an automated, real-time dashboard. The engineering quality and attention to security were top-tier.”
+            </p>
+            <div class="fin-testimonial-card__author">
+              <div class="fin-testimonial-card__avatar">VP</div>
+              <div>
+                <span class="fin-testimonial-card__name">VP of Finance [Sample Placeholder]</span>
+                <span class="fin-testimonial-card__role">Global Enterprise Operations</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="fin-testimonial-card">
+            <div class="fin-testimonial-card__stars">★★★★★</div>
+            <p class="fin-testimonial-card__quote">
+              “The custom payment integration built by Hegrix allowed our FinTech platform to process high transaction volumes seamlessly with zero downtime.”
+            </p>
+            <div class="fin-testimonial-card__author">
+              <div class="fin-testimonial-card__avatar">CT</div>
+              <div>
+                <span class="fin-testimonial-card__name">Chief Technology Officer [Sample Placeholder]</span>
+                <span class="fin-testimonial-card__role">High-Growth FinTech Startup</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="fin-testimonial-card">
+            <div class="fin-testimonial-card__stars">★★★★★</div>
+            <p class="fin-testimonial-card__quote">
+              “Replacing our legacy billing workflow with an automated system cut our monthly reconciliation cycle from weeks down to hours. Highly recommended partner.”
+            </p>
+            <div class="fin-testimonial-card__author">
+              <div class="fin-testimonial-card__avatar">CF</div>
+              <div>
+                <span class="fin-testimonial-card__name">Chief Financial Officer [Sample Placeholder]</span>
+                <span class="fin-testimonial-card__role">Commercial Services Firm</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fin-testimonial-disclaimer">
+          <span>* Clearly labeled sample client feedback for illustrative demonstration purposes.</span>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         16. FAQ SECTION
+    ═══════════════════════════════════════ -->
+    <section class="fin-section fin-section--light fin-section--faq" id="faq">
+      <div class="container">
+        <div class="fin-section-header fin-section-header--center fin-section-header--sm">
+          <div class="fin-badge">COMMON QUESTIONS</div>
+          <h2 class="fin-section-title fin-section-title--sm">
+            Frequently asked questions
+          </h2>
+          <p class="fin-section-subtitle fin-section-subtitle--sm">
+            Quick answers to common questions about our finance software development services.
+          </p>
+        </div>
+
+        <div class="fin-faq-wrap">
+          {finFaqs.map((item, index) => (
+            <details class="fin-faq-item" open={index === 0}>
+              <summary class="fin-faq-item__question">
+                <span>{item.question}</span>
+                <svg class="fin-faq-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </summary>
+              <div class="fin-faq-item__answer">
+                <p>{item.answer}</p>
+              </div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         17. FINAL CTA
+    ═══════════════════════════════════════ -->
+    <section class="fin-final-cta" id="final-cta">
+      <div class="container fin-final-cta__wrap">
+        <div class="fin-final-cta__bg-grid"></div>
+        <div class="fin-final-cta__content">
+          <div class="fin-badge fin-badge--cyan mb-4">START YOUR TRANSFORMATION</div>
+          <h2 class="fin-final-cta__title">
+            Ready to modernize your financial operations?
+          </h2>
+          <p class="fin-final-cta__sub">
+            Let's turn financial complexity into secure, scalable, intelligent technology.
+          </p>
+          <div class="fin-final-cta__actions">
+            <a href="#contact" class="fin-btn fin-btn--primary fin-btn--lg">
+              <span>Talk to a Finance Technology Expert</span>
+            </a>
+            <a href="#contact" class="fin-btn fin-btn--secondary-dark fin-btn--lg">
+              <span>Schedule a Consultation</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         18. CONTACT / LEAD FORM
+    ═══════════════════════════════════════ -->
+    <section class="fin-section" id="contact">
+      <div class="container">
+        <div class="fin-contact-box">
+          <div class="fin-contact-info">
+            <div class="fin-badge">GET IN TOUCH</div>
+            <h2 class="fin-contact-info__title">Let's build your next financial solution.</h2>
+            <p class="fin-contact-info__desc">
+              Tell us about your business, current challenges, and what you'd like to build. Our finance software architects will get back to you promptly.
+            </p>
+
+            <div class="fin-contact-highlights">
+              <div class="fin-contact-hl">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Direct Access to Finance Software Architects</span>
+              </div>
+              <div class="fin-contact-hl">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Strict Confidentiality & Mutual NDA Available</span>
+              </div>
+              <div class="fin-contact-hl">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Clear Architectural Blueprint & Roadmap</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Component -->
+          <form class="fin-form" id="finLeadForm">
+            <div class="fin-form-grid">
+              
+              <div class="fin-form-group">
+                <label for="finName">Full Name *</label>
+                <input type="text" id="finName" name="name" placeholder="John Doe" required />
+              </div>
+
+              <div class="fin-form-group">
+                <label for="finEmail">Work Email *</label>
+                <input type="email" id="finEmail" name="email" placeholder="john@company.com" required />
+              </div>
+
+              <div class="fin-form-group">
+                <label for="finCompany">Company Name *</label>
+                <input type="text" id="finCompany" name="company" placeholder="Acme Financial" required />
+              </div>
+
+              <div class="fin-form-group">
+                <label for="finPhone">Phone Number</label>
+                <input type="tel" id="finPhone" name="phone" placeholder="+1 (555) 000-0000" />
+              </div>
+
+              <div class="fin-form-group fin-form-group--full">
+                <label for="finIndustry">Industry Sector</label>
+                <select id="finIndustry" name="industry">
+                  <option value="Banking">Banking</option>
+                  <option value="FinTech">FinTech Startup</option>
+                  <option value="Lending">Credit & Lending</option>
+                  <option value="Insurance">Insurance</option>
+                  <option value="Accounting">Accounting Firm</option>
+                  <option value="Wealth Management">Wealth & Investment</option>
+                  <option value="Payments">Payments Processor</option>
+                  <option value="Corporate Finance">Corporate Finance</option>
+                  <option value="Other">Other Financial Services</option>
+                </select>
+              </div>
+
+              <div class="fin-form-group fin-form-group--full">
+                <label for="finSolution">What are you looking to build? *</label>
+                <select id="finSolution" name="solution" required>
+                  <option value="">Select Primary Objective</option>
+                  <option value="Custom Finance Software">Custom Finance Software Development</option>
+                  <option value="Payment System Integration">Payment System & Gateway Integration</option>
+                  <option value="Financial Analytics & Dashboards">Financial Analytics & Dashboards</option>
+                  <option value="Finance Automation Workflow">Finance Automation & ERP Sync</option>
+                  <option value="Legacy Modernization">Legacy System Modernization</option>
+                  <option value="FinTech MVP">FinTech MVP Development</option>
+                </select>
+              </div>
+
+              <div class="fin-form-group fin-form-group--full">
+                <label for="finMessage">Project Description / Requirements *</label>
+                <textarea id="finMessage" name="message" rows="4" placeholder="Briefly describe your existing workflow, challenges, systems involved, or target timeline..." required></textarea>
+              </div>
+
+            </div>
+
+            <div class="fin-form-status" id="finFormStatus" hidden></div>
+
+            <button type="submit" class="fin-btn fin-btn--primary fin-btn--full" id="finSubmitBtn">
+              <span id="finSubmitText">Start the Conversation</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sticky Mobile CTA Bar -->
+    <div class="fin-mobile-sticky-cta">
+      <a href="#contact" class="fin-btn fin-btn--primary fin-btn--full">
+        <span>Talk to a Finance Expert</span>
+      </a>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="fin-success-modal" id="finSuccessModal" hidden>
+      <div class="fin-success-modal__backdrop" id="finModalBackdrop"></div>
+      <div class="fin-success-modal__content">
+        <button class="fin-success-modal__close" id="finModalClose">&times;</button>
+        <div class="fin-success-modal__icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3 class="fin-success-modal__title">Inquiry Received!</h3>
+        <p class="fin-success-modal__desc">
+          Thank you for reaching out. One of our financial software experts will review your details and contact you within 24 business hours.
+        </p>
+        <button class="fin-btn fin-btn--primary" id="finModalBtn">Got it</button>
+      </div>
+    </div>
+
+  </div>
+
+</Layout>
+
+
+<style is:inline>
+  /* ════════════════════════════════════════════════════════════
+     FINANCE SOFTWARE SOLUTIONS - DEDICATED STYLESHEET
+     Color Palette: Deep Navy, Dark Blue, Royal Blue, Emerald, Cyan
+  ════════════════════════════════════════════════════════════ */
+  
+  :root {
+    --fin-navy-dark: #0B132B;
+    --fin-navy-main: #0F172A;
+    --fin-navy-card: #1E293B;
+    --fin-blue-primary: #2563EB;
+    --fin-blue-hover: #1D4ED8;
+    --fin-blue-electric: #1265F3;
+    --fin-cyan-accent: #06B6D4;
+    --fin-cyan-light: #38BDF8;
+    --fin-bg-light: #F8FAFC;
+    --fin-bg-slate: #F1F5F9;
+    --fin-text-dark: #0F172A;
+    --fin-text-muted: #64748B;
+    --fin-text-slate: #475569;
+    --fin-border-light: #E2E8F0;
+    --fin-radius: 12px;
+  }
+
+  .fin-page {
+    font-family: var(--font-sans, Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif);
+    color: var(--fin-text-dark);
+    background-color: #FFFFFF;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Gradient Text Utility */
+  .fin-gradient-text {
+    background: linear-gradient(135deg, #2563EB 0%, #06B6D4 50%, #1D4ED8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Badge Component */
+  .fin-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.85rem;
+    background: rgba(37, 99, 235, 0.08);
+    color: #2563EB;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .fin-badge--cyan {
+    background: rgba(6, 182, 212, 0.1);
+    color: #38BDF8;
+    border-color: rgba(56, 189, 248, 0.3);
+  }
+
+  /* Section Layouts */
+  .fin-section {
+    padding: 5rem 0;
+  }
+  .fin-section--light {
+    background-color: var(--fin-bg-light);
+  }
+  .fin-section--dark {
+    background-color: var(--fin-navy-main);
+    color: #FFFFFF;
+  }
+
+  .fin-section-header {
+    margin-bottom: 3.5rem;
+  }
+  .fin-section-header--center {
+    text-align: center;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .fin-section-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: var(--fin-text-dark);
+    margin-bottom: 1rem;
+  }
+  .fin-section-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--fin-text-slate);
+  }
+
+  /* Buttons */
+  .fin-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+  }
+  .fin-btn--lg {
+    padding: 0.9rem 1.85rem;
+    font-size: 1rem;
+    border-radius: 10px;
+  }
+  .fin-btn--full {
+    width: 100%;
+  }
+  .fin-btn--primary {
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+    color: #FFFFFF;
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.3);
+  }
+  .fin-btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px -5px rgba(37, 99, 235, 0.4);
+    background: linear-gradient(135deg, #1D4ED8 0%, #1E40AF 100%);
+  }
+  .fin-btn--secondary {
+    background: #FFFFFF;
+    color: #0F172A;
+    border: 1px solid #CBD5E1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  .fin-btn--secondary:hover {
+    background: #F8FAFC;
+    border-color: #94A3B8;
+    color: #2563EB;
+  }
+  .fin-btn--secondary-dark {
+    background: rgba(255, 255, 255, 0.08);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .fin-btn--secondary-dark:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+
+  /* ════════════════════════════════════════════════════════════
+     1. HERO STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-hero {
+    position: relative;
+    padding: 4rem 0 5rem 0;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+    border-bottom: 1px solid var(--fin-border-light);
+  }
+  .fin-hero__wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+  
+  .fin-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: #2563EB;
+    margin-bottom: 1.25rem;
+  }
+  .fin-eyebrow__pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #06B6D4;
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7);
+    animation: pulseGlow 2s infinite;
+  }
+  @keyframes pulseGlow {
+    0% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.7); }
+    70% { box-shadow: 0 0 0 8px rgba(6, 182, 212, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
+  }
+
+  .fin-hero__title {
+    font-size: 3.125rem;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: var(--fin-navy-main);
+    margin-bottom: 1.25rem;
+  }
+
+  .fin-hero__lead {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--fin-text-slate);
+    margin-bottom: 2rem;
+  }
+
+  .fin-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .fin-hero__pillars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px dashed #CBD5E1;
+  }
+  .fin-hero-pillar {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #334155;
+  }
+  .fin-hero-pillar svg {
+    color: #2563EB;
+  }
+
+  /* USP Banner */
+  .fin-usp-banner {
+    background: rgba(37, 99, 235, 0.04);
+    border: 1px solid rgba(37, 99, 235, 0.15);
+    border-left: 4px solid #2563EB;
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+  }
+  .fin-usp-banner__header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .fin-usp-banner__tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #2563EB;
+    letter-spacing: 0.08em;
+  }
+  .fin-usp-banner__line {
+    height: 1px;
+    flex: 1;
+    background: rgba(37, 99, 235, 0.15);
+  }
+  .fin-usp-banner__main {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--fin-navy-main);
+    margin-bottom: 0.35rem;
+  }
+  .fin-usp-banner__sub {
+    font-size: 0.875rem;
+    color: var(--fin-text-slate);
+    line-height: 1.5;
+  }
+
+  /* Hero Dashboard Mockup */
+  .fin-hero__visual {
+    position: relative;
+  }
+  .fin-hero-dashboard {
+    position: relative;
+    background: var(--fin-navy-dark);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(11, 19, 43, 0.4);
+  }
+  .fin-hero-dashboard__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1.25rem;
+  }
+  .fin-hero-dashboard__title-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .fin-hero-dashboard__status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #38BDF8;
+    border-radius: 50%;
+  }
+  .fin-hero-dashboard__title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #E2E8F0;
+  }
+  .fin-demo-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #94A3B8;
+    border-radius: 4px;
+  }
+
+  /* Dashboard Metrics Grid */
+  .fin-dash-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .fin-dash-metric {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 0.85rem 1rem;
+  }
+  .fin-dash-metric__label {
+    font-size: 0.75rem;
+    color: #94A3B8;
+    display: block;
+    margin-bottom: 0.35rem;
+  }
+  .fin-dash-metric__val-wrap {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .fin-dash-metric__val {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    font-variant-numeric: tabular-nums;
+  }
+  .fin-dash-metric__badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+  }
+  .fin-dash-metric__badge--up {
+    background: rgba(6, 182, 212, 0.15);
+    color: #38BDF8;
+  }
+  .fin-dash-metric__badge--neutral {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60A5FA;
+  }
+
+  /* Chart Box */
+  .fin-chart-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .fin-chart-box__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+  .fin-chart-box__title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #CBD5E1;
+  }
+  .fin-chart-box__legend {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 0.7rem;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: #94A3B8;
+  }
+  .legend-item--rev::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #06B6D4;
+    border-radius: 50%;
+  }
+  .legend-item--exp::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #3B82F6;
+    border-radius: 50%;
+  }
+  .fin-chart-graphic {
+    height: 120px;
+    width: 100%;
+  }
+  .fin-chart-svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  /* Activity Stream */
+  .fin-stream {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .fin-stream__item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0.75rem;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 6px;
+    font-size: 0.75rem;
+  }
+  .fin-stream__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+  }
+  .fin-stream__dot--cyan { background: #06B6D4; }
+  .fin-stream__dot--blue { background: #3B82F6; }
+  .fin-stream__text { color: #CBD5E1; flex: 1; }
+  .fin-stream__val { color: #FFFFFF; font-weight: 700; font-variant-numeric: tabular-nums; }
+
+  /* Floating UI Cards */
+  .fin-float-card {
+    position: absolute;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 0.65rem 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    animation: floatAnim 4s ease-in-out infinite;
+  }
+  @keyframes floatAnim {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  .fin-float-card--1 { top: -20px; right: -15px; animation-delay: 0s; }
+  .fin-float-card--2 { bottom: 120px; left: -25px; animation-delay: 1s; }
+  .fin-float-card--3 { bottom: 20px; right: -20px; animation-delay: 2s; }
+  .fin-float-card--4 { top: 40%; left: -30px; animation-delay: 1.5s; }
+
+  .fin-float-card__icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fin-float-card__icon--blue { background: #DBEAFE; color: #2563EB; }
+  .fin-float-card__icon--cyan { background: #CFFAFE; color: #0891B2; }
+
+  .fin-float-card__title { font-size: 0.72rem; color: #64748B; display: block; }
+  .fin-float-card__sub { font-size: 0.85rem; font-weight: 800; color: #0F172A; }
+
+
+  /* ════════════════════════════════════════════════════════════
+     2. TRUST STRIP STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-trust-strip {
+    padding: 3.5rem 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--fin-border-light);
+  }
+  .fin-trust-strip__title {
+    text-align: center;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--fin-navy-main);
+    margin-bottom: 2rem;
+  }
+  .fin-trust-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+  .fin-trust-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.6rem;
+    padding: 1.25rem 0.75rem;
+    background: var(--fin-bg-light);
+    border: 1px solid var(--fin-border-light);
+    border-radius: 10px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #334155;
+    transition: all 0.2s ease;
+  }
+  .fin-trust-card svg { color: #2563EB; }
+  .fin-trust-card:hover {
+    border-color: #2563EB;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.08);
+  }
+
+  .fin-logos {
+    text-align: center;
+  }
+  .fin-logos__label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #94A3B8;
+    margin-bottom: 1.25rem;
+    display: block;
+  }
+  .fin-logos__row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .fin-logo-item {
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: #94A3B8;
+    padding: 0.4rem 0.8rem;
+    border: 1px dashed #CBD5E1;
+    border-radius: 6px;
+    background: #F8FAFC;
+  }
+
+
+  /* ════════════════════════════════════════════════════════════
+     3. PROBLEM SECTION STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-problem-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  .fin-problem-card {
+    background: #FFFFFF;
+    border: 1px solid var(--fin-border-light);
+    border-radius: var(--fin-radius);
+    padding: 2rem 1.5rem;
+    transition: all 0.25s ease;
+  }
+  .fin-problem-card:hover {
+    border-color: #2563EB;
+    box-shadow: 0 12px 30px -5px rgba(37, 99, 235, 0.1);
+    transform: translateY(-3px);
+  }
+  .fin-problem-card__icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(37, 99, 235, 0.08);
+    color: #2563EB;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+  .fin-problem-card__title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--fin-navy-main);
+    margin-bottom: 0.75rem;
+  }
+  .fin-problem-card__desc {
+    font-size: 0.925rem;
+    color: var(--fin-text-slate);
+    line-height: 1.55;
+  }
+
+
+  /* ════════════════════════════════════════════════════════════
+     4. SOLUTIONS SECTION STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  .fin-solution-card {
+    background: #FFFFFF;
+    border: 1px solid var(--fin-border-light);
+    border-radius: var(--fin-radius);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s ease;
+  }
+  .fin-solution-card:hover {
+    border-color: #06B6D4;
+    box-shadow: 0 15px 35px -5px rgba(6, 182, 212, 0.12);
+    transform: translateY(-4px);
+  }
+  .fin-solution-card__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+  .fin-solution-card__num {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: #CBD5E1;
+  }
+  .fin-solution-card__icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(6, 182, 212, 0.08);
+    color: #0891B2;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fin-solution-card__title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--fin-navy-main);
+    margin-bottom: 0.75rem;
+  }
+  .fin-solution-card__desc {
+    font-size: 0.885rem;
+    color: var(--fin-text-slate);
+    line-height: 1.55;
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+  .fin-solution-card__link {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #2563EB;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: gap 0.2s ease;
+  }
+  .fin-solution-card__link:hover {
+    gap: 0.5rem;
+    color: #1D4ED8;
+  }
+
+
+  /* ════════════════════════════════════════════════════════════
+     5. DASHBOARD SHOWCASE STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-showcase-console {
+    background: #0B132B;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.5);
+  }
+  .fin-showcase-console__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1.75rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .fin-console-tabs {
+    display: flex;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.3rem;
+    border-radius: 8px;
+  }
+  .fin-tab-btn {
+    background: none;
+    border: none;
+    color: #94A3B8;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .fin-tab-btn.active {
+    background: #2563EB;
+    color: #FFFFFF;
+  }
+  .fin-console-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: #94A3B8;
+  }
+  .fin-live-pulse {
+    width: 8px;
+    height: 8px;
+    background-color: #38BDF8;
+    border-radius: 50%;
+  }
+
+  /* KPIs Bar */
+  .fin-console-kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .fin-kpi-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.25rem;
+  }
+  .fin-kpi-card__label {
+    font-size: 0.78rem;
+    color: #94A3B8;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  .fin-kpi-card__val {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 0.4rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .fin-kpi-card__change {
+    font-size: 0.72rem;
+    font-weight: 700;
+    display: block;
+  }
+  .fin-kpi-card__change--up { color: #38BDF8; }
+  .fin-kpi-card__change--down { color: #60A5FA; }
+  .fin-kpi-card__change--neutral { color: #94A3B8; }
+
+  /* Body Visuals */
+  .fin-console-body {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .fin-console-chart {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 1.25rem;
+  }
+  .fin-chart-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .fin-chart-head__title { font-size: 0.85rem; font-weight: 700; color: #E2E8F0; }
+  .fin-chart-head__tag { font-size: 0.7rem; color: #38BDF8; background: rgba(56, 189, 248, 0.12); padding: 0.2rem 0.5rem; border-radius: 4px; }
+
+  /* Bar Charts */
+  .fin-bars-visual {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 180px;
+    padding-top: 1rem;
+    border-bottom: 1px stroke rgba(255, 255, 255, 0.1);
+  }
+  .fin-bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    height: 100%;
+    justify-content: flex-end;
+  }
+  .fin-bar-col {
+    display: flex;
+    gap: 0.4rem;
+    align-items: flex-end;
+    height: 140px;
+  }
+  .fin-bar {
+    width: 24px;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.5s ease;
+  }
+  .fin-bar--rev { background: linear-gradient(180deg, #2563EB 0%, #1D4ED8 100%); }
+  .fin-bar--exp { background: linear-gradient(180deg, #06B6D4 0%, #0891B2 100%); }
+  .fin-bar-label { font-size: 0.75rem; color: #94A3B8; }
+
+  /* Side Progress */
+  .fin-console-side {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .fin-side-title { font-size: 0.85rem; font-weight: 700; color: #E2E8F0; }
+  .fin-progress-item__info { display: flex; justify-content: space-between; font-size: 0.75rem; color: #CBD5E1; margin-bottom: 0.35rem; }
+  .fin-progress-bar { height: 6px; background: rgba(255, 255, 255, 0.1); border-radius: 3px; overflow: hidden; }
+  .fin-progress-fill { height: 100%; border-radius: 3px; }
+
+  /* Table */
+  .fin-console-table-wrap {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 1.25rem;
+  }
+  .fin-table-title { font-size: 0.85rem; font-weight: 700; color: #E2E8F0; display: block; margin-bottom: 1rem; }
+  .fin-console-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    text-align: left;
+  }
+  .fin-console-table th { padding: 0.6rem 0.8rem; color: #94A3B8; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+  .fin-console-table td { padding: 0.75rem 0.8rem; color: #E2E8F0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+  
+  .fin-status-pill {
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+  }
+  .fin-status-pill--success { background: rgba(37, 99, 235, 0.15); color: #60A5FA; }
+  .fin-status-pill--pending { background: rgba(234, 179, 8, 0.15); color: #FACC15; }
+
+
+  /* ════════════════════════════════════════════════════════════
+     6. SERVICES SECTION STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .fin-service-card {
+    background: #FFFFFF;
+    border: 1px solid var(--fin-border-light);
+    border-radius: var(--fin-radius);
+    padding: 2rem;
+    transition: all 0.25s ease;
+  }
+  .fin-service-card:hover {
+    border-color: #2563EB;
+    box-shadow: 0 12px 30px -5px rgba(37, 99, 235, 0.1);
+    transform: translateY(-3px);
+  }
+  .fin-service-card__icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(37, 99, 235, 0.08);
+    color: #2563EB;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+  .fin-service-card__title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--fin-navy-main);
+    margin-bottom: 0.75rem;
+  }
+  .fin-service-card__desc {
+    font-size: 0.925rem;
+    color: var(--fin-text-slate);
+    line-height: 1.6;
+  }
+
+
+  /* ════════════════════════════════════════════════════════════
+     7. WHY CHOOSE US STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .fin-why-card {
+    background: var(--fin-bg-light);
+    border: 1px solid var(--fin-border-light);
+    border-radius: var(--fin-radius);
+    padding: 2rem;
+    position: relative;
+    transition: all 0.25s ease;
+  }
+  .fin-why-card:hover {
+    background: #FFFFFF;
+    border-color: #06B6D4;
+    box-shadow: 0 10px 25px rgba(6, 182, 212, 0.1);
+    transform: translateY(-3px);
+  }
+  .fin-why-card__num {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #CBD5E1;
+    margin-bottom: 1rem;
+  }
+  .fin-why-card__title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--fin-navy-main);
+    margin-bottom: 0.75rem;
+  }
+  .fin-why-card__desc {
+    font-size: 0.9rem;
+    color: var(--fin-text-slate);
+    line-height: 1.55;
+  }
+
+
+  /* ════════════════════════════════════════════════════════════
+     8. SECURITY SECTION STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-security-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .fin-security-card {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--fin-radius);
+    padding: 1.75rem;
+    transition: all 0.25s ease;
+  }
+  .fin-security-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #06B6D4;
+    transform: translateY(-3px);
+  }
+  .fin-security-card__icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(6, 182, 212, 0.12);
+    color: #38BDF8;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+  .fin-security-card__title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 0.6rem;
+  }
+  .fin-security-card__desc {
+    font-size: 0.885rem;
+    color: #94A3B8;
+    line-height: 1.55;
+  }
+
+  .fin-security-disclaimer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #64748B;
+  }
+
+
+  /* ════════════════════════════════════════════════════════════
+     9. FINANCE INDUSTRIES STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-ind-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+  }
+  .fin-ind-card {
+    background: #FFFFFF;
+    border: 1px solid var(--fin-border-light);
+    border-radius: var(--fin-radius);
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all 0.25s ease;
+  }
+  .fin-ind-card:hover {
+    border-color: #2563EB;
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.12);
+    transform: translateY(-3px);
+  }
+  .fin-ind-card__icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(37, 99, 235, 0.08);
+    color: #2563EB;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .fin-ind-card__title {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--fin-navy-main);
+    margin-bottom: 0.5rem;
+  }
+  .fin-ind-card__desc {
+    font-size: 0.8rem;
+    color: var(--fin-text-slate);
+    line-height: 1.45;
+    flex: 1;
+    margin-bottom: 1rem;
+  }
+  .fin-ind-card__arrow {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #2563EB;
+  }
+
+
+  /* ════════════════════════════════════════════════════════════
+     10. INTEGRATIONS STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-integ-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  .fin-integ-card {
+    background: #FFFFFF;
+    border: 1px solid var(--fin-border-light);
+    border-radius: var(--fin-radius);
+    padding: 1.5rem;
+    transition: all 0.25s ease;
+  }
+  .fin-integ-card:hover {
+    border-color: #06B6D4;
+    box-shadow: 0 10px 25px rgba(6, 182, 212, 0.1);
+  }
+  .fin-integ-card__badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #0891B2;
+    background: rgba(6, 182, 212, 0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+  }
+  .fin-integ-card__title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--fin-navy-main);
+    margin-bottom: 0.5rem;
+  }
+  .fin-integ-card__desc {
+    font-size: 0.85rem;
+    color: var(--fin-text-slate);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  .fin-integ-card__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .fin-integ-card__pills span {
+    font-size: 0.72rem;
+    font-weight: 700;
+    background: var(--fin-bg-slate);
+    color: #334155;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+  }
+
+
+  /* ════════════════════════════════════════════════════════════
+     11. AUTOMATION STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-workflow-wrap {
+    background: #FFFFFF;
+    border: 1px solid var(--fin-border-light);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  }
+  .fin-workflow-flow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .fin-wf-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 110px;
+  }
+  .fin-wf-step__num {
+    width: 32px;
+    height: 32px;
+    background: #2563EB;
+    color: #FFFFFF;
+    border-radius: 50%;
+    font-size: 0.85rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+  }
+  .fin-wf-step__card {
+    background: var(--fin-bg-light);
+    border: 1px solid var(--fin-border-light);
+    border-radius: 8px;
+    padding: 0.75rem 0.5rem;
+    width: 100%;
+  }
+  .fin-wf-step__title {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--fin-navy-main);
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  .fin-wf-step__desc {
+    font-size: 0.7rem;
+    color: var(--fin-text-muted);
+  }
+  .fin-wf-arrow {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #CBD5E1;
+  }
+
+  .fin-wf-values {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed #CBD5E1;
+  }
+  .fin-wf-value-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.885rem;
+    font-weight: 700;
+    color: #0F172A;
+  }
+  .fin-wf-value-tag svg { color: #2563EB; }
+
+
+  /* ════════════════════════════════════════════════════════════
+     12. PROCESS SECTION STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-process-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+  .fin-process-item {
+    background: #FFFFFF;
+    border: 1px solid var(--fin-border-light);
+    border-radius: var(--fin-radius);
+    padding: 2rem;
+    display: flex;
+    gap: 1.25rem;
+    transition: all 0.25s ease;
+  }
+  .fin-process-item:hover {
+    border-color: #2563EB;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.08);
+  }
+  .fin-process-item__num {
+    font-size: 1.75rem;
+    font-weight: 900;
+    color: #2563EB;
+    opacity: 0.6;
+  }
+  .fin-process-item__title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--fin-navy-main);
+    margin-bottom: 0.5rem;
+  }
+  .fin-process-item__desc {
+    font-size: 0.885rem;
+    color: var(--fin-text-slate);
+    line-height: 1.55;
+  }
+
+
+  /* ════════════════════════════════════════════════════════════
+     13. METRICS STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .fin-metric-box__num {
+    font-size: 3.25rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #60A5FA 0%, #38BDF8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .fin-metric-box__label {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #CBD5E1;
+  }
+
+  .fin-metrics-note {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #64748B;
+  }
+
+
+  /* ════════════════════════════════════════════════════════════
+     14. CASE STUDIES STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .fin-case-card {
+    background: #FFFFFF;
+    border: 1px solid var(--fin-border-light);
+    border-radius: var(--fin-radius);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .fin-case-card__tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #2563EB;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+  }
+  .fin-case-card__title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--fin-navy-main);
+    margin-bottom: 1.25rem;
+  }
+  .fin-case-card__block {
+    margin-bottom: 1rem;
+    font-size: 0.885rem;
+    line-height: 1.5;
+  }
+  .fin-case-card__lbl {
+    font-weight: 700;
+    color: #334155;
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+  .fin-case-card__block p { color: var(--fin-text-slate); }
+  
+  .fin-case-card__result {
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--fin-border-light);
+    background: rgba(37, 99, 235, 0.05);
+    padding: 0.85rem;
+    border-radius: 8px;
+  }
+
+  .fin-cases-cta {
+    text-align: center;
+  }
+
+
+  /* ════════════════════════════════════════════════════════════
+     15. TESTIMONIALS STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .fin-testimonial-card {
+    background: #FFFFFF;
+    border: 1px solid var(--fin-border-light);
+    border-radius: var(--fin-radius);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .fin-testimonial-card__stars {
+    color: #F59E0B;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .fin-testimonial-card__quote {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #334155;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+  .fin-testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .fin-testimonial-card__avatar {
+    width: 40px;
+    height: 40px;
+    background: #2563EB;
+    color: #FFFFFF;
+    font-weight: 800;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+  }
+  .fin-testimonial-card__name {
+    font-size: 0.885rem;
+    font-weight: 800;
+    color: var(--fin-navy-main);
+    display: block;
+  }
+  .fin-testimonial-card__role {
+    font-size: 0.75rem;
+    color: var(--fin-text-muted);
+  }
+
+  .fin-testimonial-disclaimer {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #94A3B8;
+  }
+
+
+  /* ════════════════════════════════════════════════════════════
+     16. FAQ SECTION STYLING (Compact & Sleek)
+  ════════════════════════════════════════════════════════════ */
+  .fin-section--faq {
+    padding: 3.5rem 0;
+  }
+  .fin-section-header--sm {
+    margin-bottom: 2rem;
+  }
+  .fin-section-title--sm {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .fin-section-subtitle--sm {
+    font-size: 0.95rem;
+  }
+  .fin-faq-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .fin-faq-item {
+    background: #FFFFFF;
+    border: 1px solid var(--fin-border-light);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+  }
+  .fin-faq-item[open] {
+    border-color: #2563EB;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.06);
+  }
+  .fin-faq-item__question {
+    padding: 0.75rem 1.15rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--fin-navy-main);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    user-select: none;
+  }
+  .fin-faq-item__question::-webkit-details-marker { display: none; }
+  .fin-faq-chevron {
+    color: #2563EB;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+  .fin-faq-item[open] .fin-faq-chevron {
+    transform: rotate(180deg);
+  }
+  .fin-faq-item__answer {
+    padding: 0 1.15rem 0.85rem 1.15rem;
+    font-size: 0.85rem;
+    color: var(--fin-text-slate);
+    line-height: 1.5;
+  }
+  .fin-faq-item__answer p { margin: 0; }
+
+
+  /* ════════════════════════════════════════════════════════════
+     17. FINAL CTA STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-final-cta {
+    position: relative;
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #0B132B 0%, #0F172A 50%, #1E293B 100%);
+    color: #FFFFFF;
+    overflow: hidden;
+  }
+  .fin-final-cta__bg-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(rgba(56, 189, 248, 0.15) 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.6;
+  }
+  .fin-final-cta__content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .fin-final-cta__title {
+    font-size: 2.75rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  .fin-final-cta__sub {
+    font-size: 1.2rem;
+    color: #94A3B8;
+    margin-bottom: 2.25rem;
+  }
+  .fin-final-cta__actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+
+  /* ════════════════════════════════════════════════════════════
+     18. CONTACT FORM STYLING
+  ════════════════════════════════════════════════════════════ */
+  .fin-contact-box {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    background: #FFFFFF;
+    border: 1px solid var(--fin-border-light);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.06);
+  }
+  .fin-contact-info__title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--fin-navy-main);
+    margin-bottom: 1rem;
+  }
+  .fin-contact-info__desc {
+    font-size: 1rem;
+    color: var(--fin-text-slate);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+  .fin-contact-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .fin-contact-hl {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #334155;
+  }
+  .fin-contact-hl svg { color: #2563EB; }
+
+  /* Form */
+  .fin-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .fin-form-group--full {
+    grid-column: span 2;
+  }
+  .fin-form-group label {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--fin-navy-main);
+    margin-bottom: 0.4rem;
+  }
+  .fin-form-group input,
+  .fin-form-group select,
+  .fin-form-group textarea {
+    width: 100%;
+    padding: 0.75rem 0.875rem;
+    font-size: 0.875rem;
+    font-family: inherit;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    background: #F8FAFC;
+    color: #0F172A;
+    transition: all 0.2s ease;
+  }
+  .fin-form-group input:focus,
+  .fin-form-group select:focus,
+  .fin-form-group textarea:focus {
+    outline: none;
+    border-color: #2563EB;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+  }
+
+  /* Sticky Mobile CTA */
+  .fin-mobile-sticky-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.75rem 1rem;
+    background: #FFFFFF;
+    border-top: 1px solid var(--fin-border-light);
+    box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+  }
+
+  /* Success Modal */
+  .fin-success-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  .fin-success-modal[hidden] {
+    display: none;
+  }
+  .fin-success-modal__backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(4px);
+  }
+  .fin-success-modal__content {
+    position: relative;
+    z-index: 2;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    max-width: 460px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3);
+  }
+  .fin-success-modal__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #64748B;
+    cursor: pointer;
+  }
+  .fin-success-modal__icon {
+    width: 64px;
+    height: 64px;
+    background: #EAF3FF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem auto;
+  }
+  .fin-success-modal__title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0F172A;
+    margin-bottom: 0.75rem;
+  }
+  .fin-success-modal__desc {
+    font-size: 0.9375rem;
+    color: #475569;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .fin-form-status {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+  .fin-form-status--error {
+    background: #FEE2E2;
+    color: #991B1B;
+    border: 1px solid #FCA5A5;
+  }
+
+
+  /* ════════════════════════════════════════════════════════════
+     RESPONSIVE BREAKPOINTS
+  ════════════════════════════════════════════════════════════ */
+  @media (max-width: 1024px) {
+    .fin-hero__wrap { grid-template-columns: 1fr; gap: 3rem; }
+    .fin-trust-grid { grid-template-columns: repeat(3, 1fr); }
+    .fin-problem-grid { grid-template-columns: repeat(2, 1fr); }
+    .fin-solutions-grid { grid-template-columns: repeat(2, 1fr); }
+    .fin-console-kpis { grid-template-columns: repeat(2, 1fr); }
+    .fin-console-body { grid-template-columns: 1fr; }
+    .fin-services-grid { grid-template-columns: repeat(2, 1fr); }
+    .fin-why-grid { grid-template-columns: repeat(2, 1fr); }
+    .fin-security-grid { grid-template-columns: repeat(2, 1fr); }
+    .fin-ind-grid { grid-template-columns: repeat(3, 1fr); }
+    .fin-integ-grid { grid-template-columns: repeat(2, 1fr); }
+    .fin-process-timeline { grid-template-columns: repeat(2, 1fr); }
+    .fin-metrics-grid { grid-template-columns: repeat(2, 1fr); }
+    .fin-cases-grid { grid-template-columns: 1fr; }
+    .fin-testimonials-grid { grid-template-columns: 1fr; }
+    .fin-contact-box { grid-template-columns: 1fr; gap: 2rem; padding: 2rem; }
+  }
+
+  @media (max-width: 768px) {
+    .fin-hero__title { font-size: 2.25rem; }
+    .fin-section-title { font-size: 1.75rem; }
+    .fin-trust-grid { grid-template-columns: repeat(2, 1fr); }
+    .fin-problem-grid { grid-template-columns: 1fr; }
+    .fin-solutions-grid { grid-template-columns: 1fr; }
+    .fin-console-kpis { grid-template-columns: 1fr; }
+    .fin-services-grid { grid-template-columns: 1fr; }
+    .fin-why-grid { grid-template-columns: 1fr; }
+    .fin-security-grid { grid-template-columns: 1fr; }
+    .fin-ind-grid { grid-template-columns: repeat(2, 1fr); }
+    .fin-integ-grid { grid-template-columns: 1fr; }
+    .fin-process-timeline { grid-template-columns: 1fr; }
+    .fin-metrics-grid { grid-template-columns: 1fr; }
+    .fin-form-grid { grid-template-columns: 1fr; }
+    .fin-form-group--full { grid-column: span 1; }
+    .fin-float-card { display: none; }
+    .fin-mobile-sticky-cta { display: block; }
+    .fin-final-cta__title { font-size: 1.85rem; }
+  }
+
+</style>
+
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    
+    /* 1. Dashboard Tab Filtering */
+    const tabs = document.querySelectorAll('#finDashboardTabs .fin-tab-btn');
+    const kpiRevenue = document.getElementById('kpiRevenue');
+    const kpiExpenses = document.getElementById('kpiExpenses');
+    const kpiProfit = document.getElementById('kpiProfit');
+    const kpiCash = document.getElementById('kpiCash');
+
+    const periodData = {
+      today: { rev: "$84.2K", exp: "$42.1K", profit: "$42.1K", cash: "$1.24M" },
+      "7days": { rev: "$612.4K", exp: "$340.2K", profit: "$272.2K", cash: "$1.24M" },
+      "30days": { rev: "$2.84M", exp: "$1.72M", profit: "$684K", cash: "$1.24M" },
+      quarter: { rev: "$8.45M", exp: "$5.10M", profit: "$3.35M", cash: "$1.24M" },
+      year: { rev: "$34.2M", exp: "$21.8M", profit: "$12.4M", cash: "$1.24M" }
+    };
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const period = tab.dataset.period;
+        if (periodData[period]) {
+          if (kpiRevenue) kpiRevenue.textContent = periodData[period].rev;
+          if (kpiExpenses) kpiExpenses.textContent = periodData[period].exp;
+          if (kpiProfit) kpiProfit.textContent = periodData[period].profit;
+          if (kpiCash) kpiCash.textContent = periodData[period].cash;
+        }
+      });
+    });
+
+    /* 2. Lead Form Submission to Supabase API & Success Modal */
+    const form = document.getElementById('finLeadForm');
+    const modal = document.getElementById('finSuccessModal');
+    const backdrop = document.getElementById('finModalBackdrop');
+    const closeBtn = document.getElementById('finModalClose');
+    const gotItBtn = document.getElementById('finModalBtn');
+    const statusBox = document.getElementById('finFormStatus');
+    const submitBtn = document.getElementById('finSubmitBtn');
+    const submitText = document.getElementById('finSubmitText');
+
+    function closeModal() {
+      if (modal) modal.hidden = true;
+    }
+
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        if (statusBox) {
+          statusBox.hidden = true;
+          statusBox.textContent = '';
+          statusBox.className = 'fin-form-status';
+        }
+
+        if (submitBtn) submitBtn.disabled = true;
+        if (submitText) submitText.textContent = 'Submitting Request...';
+
+        const formData = new FormData(form);
+        const name = formData.get('name') || '';
+        const email = formData.get('email') || '';
+        const company = formData.get('company') || '';
+        const phone = formData.get('phone') || '';
+        const industry = formData.get('industry') || '';
+        const solution = formData.get('solution') || '';
+        const message = formData.get('message') || '';
+
+        const payload = {
+          fullName: name,
+          email: email,
+          companyName: company,
+          mobileNumber: phone || 'N/A',
+          message: `[Industry Sector: ${industry}] [Objective: ${solution}]\n${message}`.trim(),
+          sourcePage: "Finance Software Solutions (/industries/finance/)"
+        };
+
+        try {
+          const response = await fetch('/api/leads', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+
+          const result = await response.json();
+
+          if (!response.ok) {
+            throw new Error(result.message || 'Error submitting request. Please try again.');
+          }
+
+          form.reset();
+          if (modal) modal.hidden = false;
+        } catch (err) {
+          if (statusBox) {
+            statusBox.hidden = false;
+            statusBox.className = 'fin-form-status fin-form-status--error';
+            statusBox.textContent = err.message || 'Connection error. Please try again.';
+          }
+        } finally {
+          if (submitBtn) submitBtn.disabled = false;
+          if (submitText) submitText.textContent = 'Start the Conversation';
+        }
+      });
+    }
+
+    if (backdrop) backdrop.addEventListener('click', closeModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (gotItBtn) gotItBtn.addEventListener('click', closeModal);
+  });
+</script>
