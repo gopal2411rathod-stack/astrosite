@@ -1,0 +1,3277 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export const prerender = true;
+
+const retailFaqs = [
+  {
+    question: "What are retail software solutions?",
+    answer: "Retail software solutions are integrated technology platforms that help retail businesses manage their operations — including point-of-sale, inventory, orders, customers, eCommerce, warehouses, analytics, and multi-store management — from a single connected system."
+  },
+  {
+    question: "What software does a modern retail business need?",
+    answer: "Modern retailers typically need POS software, inventory management, order management, customer CRM, eCommerce integration, warehouse management, analytics, loyalty programs, and finance/accounting — ideally all connected in one unified platform."
+  },
+  {
+    question: "Can you build custom retail software?",
+    answer: "Yes. Hegrix builds fully custom retail applications tailored to your specific workflows, products, and operational requirements — instead of forcing your business to adapt to off-the-shelf software limitations."
+  },
+  {
+    question: "Can you develop a custom POS system?",
+    answer: "Yes. We design and build custom POS systems for stores, chains, restaurants, and high-volume retail environments with offline capabilities, barcode scanning, payment gateway integration, and real-time sync."
+  },
+  {
+    question: "Can you integrate retail software with eCommerce?",
+    answer: "Absolutely. We connect physical store operations with your online store across Shopify, Magento, WooCommerce, or custom platforms — creating unified inventory, orders, and customer data across all channels."
+  },
+  {
+    question: "Can you connect multiple stores?",
+    answer: "Yes. We build multi-store management platforms that centralize inventory, pricing, orders, reporting, and operations across all your locations from a single dashboard."
+  },
+  {
+    question: "Can you integrate Odoo with retail systems?",
+    answer: "Yes. We implement, customize, and integrate Odoo ERP for retail businesses, connecting it with POS, eCommerce, payment gateways, warehouses, and third-party logistics systems."
+  },
+  {
+    question: "Can you integrate Shopify, Magento, or WooCommerce?",
+    answer: "Yes. We build deep integrations between your physical retail operations and eCommerce platforms — synchronizing products, inventory, orders, and customer data in real time."
+  },
+  {
+    question: "Can you migrate our existing retail data?",
+    answer: "Yes. We handle full data migration from your existing systems — products, customers, orders, inventory, transactions, and history — with validation, testing, and zero data loss."
+  },
+  {
+    question: "Do you provide mobile retail applications?",
+    answer: "Yes. We build mobile apps for retail staff, warehouse teams, customers, and field operations using Flutter and React Native — with offline support, barcode scanning, and real-time sync."
+  },
+  {
+    question: "Can you integrate payment gateways?",
+    answer: "Yes. We integrate all major payment gateways including Stripe, PayPal, Square, Razorpay, and custom payment processors into your POS, eCommerce, and order management systems."
+  },
+  {
+    question: "Do you provide post-launch support?",
+    answer: "Yes. We provide 24/7 technical monitoring, system maintenance, security updates, performance optimization, and ongoing feature development after your retail platform goes live."
+  }
+];
+
+const retailSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "Retail Software Solutions",
+    provider: {
+      "@type": "Organization",
+      name: "Hegrix",
+      url: "https://hegrix.com"
+    },
+    areaServed: "Global",
+    serviceType: "Custom Retail Software Development, Retail POS, Inventory Management, eCommerce Integration, Multi-Store Management & Retail Analytics",
+    description: "Build connected retail software solutions that help businesses manage stores, inventory, POS, customers, eCommerce, warehouses, orders, analytics, and operations from one ecosystem.",
+    url: "https://hegrix.com/industries/retail/"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: retailFaqs.map(f => ({
+      "@type": "Question",
+      name: f.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.answer
+      }
+    }))
+  }
+];
+---
+
+<Layout
+  title="Retail Software Solutions | Custom POS, Inventory & eCommerce Technology | Hegrix"
+  description="Build connected retail software solutions that manage stores, POS, inventory, customers, eCommerce, warehouses, orders, and analytics from one unified platform."
+  keywords="Retail software solutions, Retail management software, Retail POS software, Retail ERP software, Retail inventory management software, Custom retail software, Retail automation software, Multi-store retail software, Omnichannel retail solutions, Retail software development, Retail business management software"
+  path="/industries/retail/"
+  schema={retailSchema}
+>
+
+  <div class="rt-page">
+
+    <!-- ═══════════════════════════════════════
+         1. HERO SECTION
+    ═══════════════════════════════════════ -->
+    <section class="rt-hero">
+      <div class="container rt-hero__wrap">
+        
+        <div class="rt-hero__content">
+          <div class="rt-eyebrow">
+            <span class="rt-eyebrow__pulse"></span>
+            RETAIL TECHNOLOGY SOLUTIONS
+          </div>
+          
+          <h1 class="rt-hero__title">
+            Powerful Retail Software Built for the <span class="rt-gradient-text">Way You Do Business</span>
+          </h1>
+
+          <p class="rt-hero__lead">
+            From point-of-sale and inventory management to eCommerce, customer engagement, warehouse operations, and business intelligence — Hegrix builds connected retail software solutions that help businesses operate smarter, serve customers better, and grow faster.
+          </p>
+
+          <div class="rt-hero__actions">
+            <a href="#contact" class="rt-btn rt-btn--primary rt-btn--lg">
+              <span>Get Free Consultation</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#solutions" class="rt-btn rt-btn--secondary rt-btn--lg">
+              <span>Explore Retail Solutions</span>
+            </a>
+          </div>
+
+          <div class="rt-hero__trust">
+            <div class="rt-trust-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <strong>250+</strong> Projects Delivered
+            </div>
+            <div class="rt-trust-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <strong>15+</strong> Industries Served
+            </div>
+            <div class="rt-trust-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <strong>10+</strong> Years Experience
+            </div>
+            <div class="rt-trust-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <strong>98%</strong> Client Satisfaction
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right: Retail Tech Ecosystem Dashboard -->
+        <div class="rt-hero__visual">
+          <!-- Main Dashboard Card -->
+          <div class="rt-dashboard">
+            <div class="rt-dashboard__header">
+              <div class="rt-dashboard__title-wrap">
+                <span class="rt-dashboard__dot"></span>
+                <span class="rt-dashboard__title">Retail Command Center</span>
+              </div>
+              <span class="rt-demo-badge">Sample Data</span>
+            </div>
+
+            <div class="rt-dash-metrics">
+              <div class="rt-dash-metric">
+                <span class="rt-dash-metric__lbl">Today's Sales</span>
+                <span class="rt-dash-metric__val">$48,920</span>
+                <span class="rt-dash-metric__up">↑ 12.4%</span>
+              </div>
+              <div class="rt-dash-metric">
+                <span class="rt-dash-metric__lbl">Orders</span>
+                <span class="rt-dash-metric__val">1,284</span>
+                <span class="rt-dash-metric__up">↑ 8.1%</span>
+              </div>
+              <div class="rt-dash-metric">
+                <span class="rt-dash-metric__lbl">Inventory</span>
+                <span class="rt-dash-metric__val">42,187</span>
+                <span class="rt-dash-metric__neutral">Synced</span>
+              </div>
+              <div class="rt-dash-metric">
+                <span class="rt-dash-metric__lbl">Customers</span>
+                <span class="rt-dash-metric__val">8,641</span>
+                <span class="rt-dash-metric__up">↑ 5.2%</span>
+              </div>
+            </div>
+
+            <!-- Module Pills Grid -->
+            <div class="rt-module-grid">
+              <div class="rt-module-pill rt-module-pill--blue">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                POS
+              </div>
+              <div class="rt-module-pill rt-module-pill--emerald">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                Inventory
+              </div>
+              <div class="rt-module-pill rt-module-pill--violet">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                Customers
+              </div>
+              <div class="rt-module-pill rt-module-pill--amber">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                eCommerce
+              </div>
+              <div class="rt-module-pill rt-module-pill--cyan">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                Orders
+              </div>
+              <div class="rt-module-pill rt-module-pill--rose">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                Sales
+              </div>
+              <div class="rt-module-pill rt-module-pill--blue">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                Warehouse
+              </div>
+              <div class="rt-module-pill rt-module-pill--emerald">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
+                Analytics
+              </div>
+              <div class="rt-module-pill rt-module-pill--violet">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                CRM
+              </div>
+            </div>
+
+            <!-- Mini Chart -->
+            <div class="rt-dash-chart">
+              <span class="rt-dash-chart__label">Sales Trend (7 Days)</span>
+              <svg viewBox="0 0 260 60" class="rt-chart-svg" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="rtRevGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#3B82F6" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#3B82F6" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,45 Q40,30 80,35 T160,15 T240,8 L260,5 L260,60 L0,60 Z" fill="url(#rtRevGrad)"/>
+                <path d="M0,45 Q40,30 80,35 T160,15 T240,8 L260,5" fill="none" stroke="#3B82F6" stroke-width="2.5"/>
+                <circle cx="260" cy="5" r="3" fill="#3B82F6"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Floating Cards -->
+          <div class="rt-float-card rt-float-card--1">
+            <div class="rt-float-card__icon rt-float-card__icon--emerald">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <div>
+              <span class="rt-float-card__val">Real-Time Inventory</span>
+              <span class="rt-float-card__sub">42,187 SKUs Synced</span>
+            </div>
+          </div>
+
+          <div class="rt-float-card rt-float-card--2">
+            <div class="rt-float-card__icon rt-float-card__icon--blue">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <div>
+              <span class="rt-float-card__val">+18.4% Revenue</span>
+              <span class="rt-float-card__sub">vs last month</span>
+            </div>
+          </div>
+
+          <div class="rt-float-card rt-float-card--3">
+            <div class="rt-float-card__icon rt-float-card__icon--violet">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            </div>
+            <div>
+              <span class="rt-float-card__val">Customer Analytics</span>
+              <span class="rt-float-card__sub">360° View Active</span>
+            </div>
+          </div>
+
+          <div class="rt-float-card rt-float-card--4">
+            <div class="rt-float-card__icon rt-float-card__icon--amber">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/></svg>
+            </div>
+            <div>
+              <span class="rt-float-card__val">12 Stores Online</span>
+              <span class="rt-float-card__sub">Multi-Store Connected</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         2. TRUST STRIP
+    ═══════════════════════════════════════ -->
+    <section class="rt-trust-strip" id="trust">
+      <div class="container">
+        <h2 class="rt-trust-strip__title">Technology Trusted by Retail Businesses</h2>
+
+        <div class="rt-logo-strip">
+          <div class="rt-logo-item">FASHION HUB</div>
+          <div class="rt-logo-item">MEGA MART</div>
+          <div class="rt-logo-item">LUXE RETAIL</div>
+          <div class="rt-logo-item">TECH STORE</div>
+          <div class="rt-logo-item">HOME DÉCOR CO</div>
+          <div class="rt-logo-item">SPORT ZONE</div>
+          <div class="rt-logo-item">PHARMA CHAIN</div>
+          <div class="rt-logo-item">JEWEL WORLD</div>
+        </div>
+
+        <div class="rt-stats-grid">
+          <div class="rt-stat-box">
+            <span class="rt-stat-box__num" data-target="250">0</span><span class="rt-stat-box__plus">+</span>
+            <span class="rt-stat-box__label">Projects</span>
+          </div>
+          <div class="rt-stat-box">
+            <span class="rt-stat-box__num" data-target="100">0</span><span class="rt-stat-box__plus">+</span>
+            <span class="rt-stat-box__label">Businesses Served</span>
+          </div>
+          <div class="rt-stat-box">
+            <span class="rt-stat-box__num" data-target="15">0</span><span class="rt-stat-box__plus">+</span>
+            <span class="rt-stat-box__label">Countries</span>
+          </div>
+          <div class="rt-stat-box">
+            <span class="rt-stat-box__num" data-target="99">0</span><span class="rt-stat-box__plus">%</span>
+            <span class="rt-stat-box__label">System Reliability</span>
+          </div>
+          <div class="rt-stat-box">
+            <span class="rt-stat-box__num-static">24/7</span>
+            <span class="rt-stat-box__label">Technical Support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         3. CHALLENGES WE SOLVE
+    ═══════════════════════════════════════ -->
+    <section class="rt-section rt-section--light" id="challenges">
+      <div class="container">
+        <div class="rt-section-header rt-section-header--center">
+          <div class="rt-badge">THE RETAIL CHALLENGE</div>
+          <h2 class="rt-section-title">Your Retail Business Is Complex.<br>Your Software Shouldn't Be.</h2>
+          <p class="rt-section-subtitle">We replace fragmented, disconnected retail systems with a connected technology ecosystem that simplifies operations and drives growth.</p>
+        </div>
+
+        <div class="rt-challenge-grid">
+          <div class="rt-challenge-card">
+            <div class="rt-challenge-card__before">
+              <span class="rt-challenge-tag rt-challenge-tag--problem">Challenge</span>
+              <div class="rt-challenge-card__icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </div>
+              <h3>Disconnected Store Systems</h3>
+            </div>
+            <div class="rt-challenge-card__arrow">→</div>
+            <div class="rt-challenge-card__after">
+              <span class="rt-challenge-tag rt-challenge-tag--solution">Solution</span>
+              <h3>Connected Retail Ecosystem</h3>
+              <p>Unify POS, inventory, eCommerce, and warehouse in one platform.</p>
+            </div>
+          </div>
+
+          <div class="rt-challenge-card">
+            <div class="rt-challenge-card__before">
+              <span class="rt-challenge-tag rt-challenge-tag--problem">Challenge</span>
+              <div class="rt-challenge-card__icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              </div>
+              <h3>Inventory Inaccuracies</h3>
+            </div>
+            <div class="rt-challenge-card__arrow">→</div>
+            <div class="rt-challenge-card__after">
+              <span class="rt-challenge-tag rt-challenge-tag--solution">Solution</span>
+              <h3>Real-Time Inventory</h3>
+              <p>Track stock levels, movements, and alerts across all locations instantly.</p>
+            </div>
+          </div>
+
+          <div class="rt-challenge-card">
+            <div class="rt-challenge-card__before">
+              <span class="rt-challenge-tag rt-challenge-tag--problem">Challenge</span>
+              <div class="rt-challenge-card__icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <h3>Manual Processes</h3>
+            </div>
+            <div class="rt-challenge-card__arrow">→</div>
+            <div class="rt-challenge-card__after">
+              <span class="rt-challenge-tag rt-challenge-tag--solution">Solution</span>
+              <h3>Workflow Automation</h3>
+              <p>Automate purchasing, replenishment, approvals, and reporting.</p>
+            </div>
+          </div>
+
+          <div class="rt-challenge-card">
+            <div class="rt-challenge-card__before">
+              <span class="rt-challenge-tag rt-challenge-tag--problem">Challenge</span>
+              <div class="rt-challenge-card__icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <h3>Slow Checkout</h3>
+            </div>
+            <div class="rt-challenge-card__arrow">→</div>
+            <div class="rt-challenge-card__after">
+              <span class="rt-challenge-tag rt-challenge-tag--solution">Solution</span>
+              <h3>Fast POS</h3>
+              <p>High-speed POS with offline capability, barcode scanning, and instant payments.</p>
+            </div>
+          </div>
+
+          <div class="rt-challenge-card">
+            <div class="rt-challenge-card__before">
+              <span class="rt-challenge-tag rt-challenge-tag--problem">Challenge</span>
+              <div class="rt-challenge-card__icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              </div>
+              <h3>Poor Customer Visibility</h3>
+            </div>
+            <div class="rt-challenge-card__arrow">→</div>
+            <div class="rt-challenge-card__after">
+              <span class="rt-challenge-tag rt-challenge-tag--solution">Solution</span>
+              <h3>360° Customer Management</h3>
+              <p>Unified customer profiles, purchase history, loyalty, and preferences.</p>
+            </div>
+          </div>
+
+          <div class="rt-challenge-card">
+            <div class="rt-challenge-card__before">
+              <span class="rt-challenge-tag rt-challenge-tag--problem">Challenge</span>
+              <div class="rt-challenge-card__icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 6h22M1 12h22M1 18h22"/></svg>
+              </div>
+              <h3>Multiple Sales Channels</h3>
+            </div>
+            <div class="rt-challenge-card__arrow">→</div>
+            <div class="rt-challenge-card__after">
+              <span class="rt-challenge-tag rt-challenge-tag--solution">Solution</span>
+              <h3>Omnichannel Commerce</h3>
+              <p>Connect physical, online, mobile, and marketplace in one unified platform.</p>
+            </div>
+          </div>
+
+          <div class="rt-challenge-card">
+            <div class="rt-challenge-card__before">
+              <span class="rt-challenge-tag rt-challenge-tag--problem">Challenge</span>
+              <div class="rt-challenge-card__icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </div>
+              <h3>Difficult Reporting</h3>
+            </div>
+            <div class="rt-challenge-card__arrow">→</div>
+            <div class="rt-challenge-card__after">
+              <span class="rt-challenge-tag rt-challenge-tag--solution">Solution</span>
+              <h3>Live Business Intelligence</h3>
+              <p>Real-time dashboards for sales, inventory, customers, and performance.</p>
+            </div>
+          </div>
+
+          <div class="rt-challenge-card">
+            <div class="rt-challenge-card__before">
+              <span class="rt-challenge-tag rt-challenge-tag--problem">Challenge</span>
+              <div class="rt-challenge-card__icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+              </div>
+              <h3>Complex Warehouse Operations</h3>
+            </div>
+            <div class="rt-challenge-card__arrow">→</div>
+            <div class="rt-challenge-card__after">
+              <span class="rt-challenge-tag rt-challenge-tag--solution">Solution</span>
+              <h3>Smart Warehouse Management</h3>
+              <p>Optimize receiving, picking, packing, transfers, and fulfillment.</p>
+            </div>
+          </div>
+
+          <div class="rt-challenge-card">
+            <div class="rt-challenge-card__before">
+              <span class="rt-challenge-tag rt-challenge-tag--problem">Challenge</span>
+              <div class="rt-challenge-card__icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-3.05 11a22.35 22.35 0 0 1-3.95 2z"/></svg>
+              </div>
+              <h3>Limited Scalability</h3>
+            </div>
+            <div class="rt-challenge-card__arrow">→</div>
+            <div class="rt-challenge-card__after">
+              <span class="rt-challenge-tag rt-challenge-tag--solution">Solution</span>
+              <h3>Scalable Architecture</h3>
+              <p>Cloud-native platforms that grow with your stores, SKUs, and users.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         4. COMPLETE RETAIL SOFTWARE SOLUTIONS (BENTO)
+    ═══════════════════════════════════════ -->
+    <section class="rt-section" id="solutions">
+      <div class="container">
+        <div class="rt-section-header rt-section-header--center">
+          <div class="rt-badge">COMPLETE SOLUTIONS</div>
+          <h2 class="rt-section-title">Everything You Need to Run a Modern Retail Business</h2>
+          <p class="rt-section-subtitle">A connected suite of retail software solutions designed to simplify operations, delight customers, and accelerate growth.</p>
+        </div>
+
+        <div class="rt-bento-grid">
+          <div class="rt-bento-card rt-bento-card--wide">
+            <div class="rt-bento-card__icon rt-bento-card__icon--blue">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="rt-bento-card__title">Point of Sale Software</h3>
+            <p class="rt-bento-card__desc">Fast, intuitive POS systems for stores, chains, and high-volume retail environments with offline mode, barcode scanning, and seamless payment integration.</p>
+            <a href="#contact" class="rt-bento-card__link">Explore Solution →</a>
+          </div>
+
+          <div class="rt-bento-card">
+            <div class="rt-bento-card__icon rt-bento-card__icon--emerald">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3 class="rt-bento-card__title">Retail Inventory Management</h3>
+            <p class="rt-bento-card__desc">Track products, stock levels, warehouses, transfers, and replenishment in real time across all locations.</p>
+            <a href="#contact" class="rt-bento-card__link">Explore Solution →</a>
+          </div>
+
+          <div class="rt-bento-card">
+            <div class="rt-bento-card__icon rt-bento-card__icon--violet">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3 class="rt-bento-card__title">Multi-Store Management</h3>
+            <p class="rt-bento-card__desc">Manage multiple locations from a centralized platform with unified pricing, promotions, and reporting.</p>
+            <a href="#contact" class="rt-bento-card__link">Explore Solution →</a>
+          </div>
+
+          <div class="rt-bento-card rt-bento-card--tall">
+            <div class="rt-bento-card__icon rt-bento-card__icon--amber">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </div>
+            <h3 class="rt-bento-card__title">Retail eCommerce</h3>
+            <p class="rt-bento-card__desc">Connect physical stores with online commerce and create unified customer experiences across all channels.</p>
+            <a href="#contact" class="rt-bento-card__link">Explore Solution →</a>
+          </div>
+
+          <div class="rt-bento-card">
+            <div class="rt-bento-card__icon rt-bento-card__icon--cyan">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3 class="rt-bento-card__title">Order Management</h3>
+            <p class="rt-bento-card__desc">Centralize and automate orders across online and offline channels from a single dashboard.</p>
+            <a href="#contact" class="rt-bento-card__link">Explore Solution →</a>
+          </div>
+
+          <div class="rt-bento-card">
+            <div class="rt-bento-card__icon rt-bento-card__icon--rose">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="rt-bento-card__title">Customer Management</h3>
+            <p class="rt-bento-card__desc">Manage customer profiles, purchase history, loyalty programs, and personalized engagement at scale.</p>
+            <a href="#contact" class="rt-bento-card__link">Explore Solution →</a>
+          </div>
+
+          <div class="rt-bento-card">
+            <div class="rt-bento-card__icon rt-bento-card__icon--blue">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </div>
+            <h3 class="rt-bento-card__title">Warehouse Management</h3>
+            <p class="rt-bento-card__desc">Optimize receiving, picking, packing, stock transfers, and fulfillment operations.</p>
+            <a href="#contact" class="rt-bento-card__link">Explore Solution →</a>
+          </div>
+
+          <div class="rt-bento-card">
+            <div class="rt-bento-card__icon rt-bento-card__icon--emerald">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
+            <h3 class="rt-bento-card__title">Retail Analytics</h3>
+            <p class="rt-bento-card__desc">Real-time visibility into sales, inventory, customers, and business performance from executive dashboards.</p>
+            <a href="#contact" class="rt-bento-card__link">Explore Solution →</a>
+          </div>
+
+          <div class="rt-bento-card">
+            <div class="rt-bento-card__icon rt-bento-card__icon--violet">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h3 class="rt-bento-card__title">Purchase Management</h3>
+            <p class="rt-bento-card__desc">Automate purchasing, supplier management, and stock replenishment workflows.</p>
+            <a href="#contact" class="rt-bento-card__link">Explore Solution →</a>
+          </div>
+
+          <div class="rt-bento-card rt-bento-card--wide">
+            <div class="rt-bento-card__icon rt-bento-card__icon--amber">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3 class="rt-bento-card__title">Loyalty & Rewards Programs</h3>
+            <p class="rt-bento-card__desc">Build customer loyalty through points, rewards, promotions, and personalized offers that drive repeat business and long-term retention.</p>
+            <a href="#contact" class="rt-bento-card__link">Explore Solution →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         5. RETAIL SOFTWARE FEATURES
+    ═══════════════════════════════════════ -->
+    <section class="rt-section rt-section--dark" id="features">
+      <div class="container">
+        <div class="rt-section-header rt-section-header--center">
+          <div class="rt-badge rt-badge--cyan">PLATFORM CAPABILITIES</div>
+          <h2 class="rt-section-title rt-text-white">Every Feature Your Retail Business Needs</h2>
+          <p class="rt-section-subtitle rt-text-slate">A comprehensive retail technology platform with the features modern retail businesses require to compete and grow.</p>
+        </div>
+
+        <div class="rt-features-grid">
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3>Real-Time Inventory</h3>
+            <p>Live stock levels across all locations with automatic alerts and reorder points.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><path d="M9 9h6M9 12h3"/></svg>
+            </div>
+            <h3>Barcode Management</h3>
+            <p>Scan, print, and manage barcodes and QR codes for all products and locations.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Point of Sale (POS)</h3>
+            <p>Fast, reliable POS with offline mode, receipt printing, and payment integration.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </div>
+            <h3>Multi-Store</h3>
+            <p>Centralized management of all store locations, pricing, staff, and reporting.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <h3>Multi-Warehouse</h3>
+            <p>Manage stock across multiple warehouses with transfers and fulfillment routing.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/></svg>
+            </div>
+            <h3>Product Variants</h3>
+            <p>Manage size, color, material, and custom attribute variants with unified stock tracking.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
+            <h3>Order Management</h3>
+            <p>Centralized order processing across all sales channels with automated routing.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            </div>
+            <h3>Customer CRM</h3>
+            <p>360° customer profiles with purchase history, preferences, and segmentation.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Loyalty Programs</h3>
+            <p>Points, tiers, rewards, and redemption programs that retain customers.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3>Discount Management</h3>
+            <p>Configure percentage, fixed, and conditional discounts with rule-based automation.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+            </div>
+            <h3>Gift Cards</h3>
+            <p>Issue, manage, and redeem physical and digital gift cards across all channels.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+            </div>
+            <h3>Promotions</h3>
+            <p>Seasonal, category, and bundle promotions with scheduled start/end management.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h3>Purchase Management</h3>
+            <p>Automate purchase orders, vendor management, and GRN processing.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3>Sales Analytics</h3>
+            <p>Deep sales performance analytics by product, category, store, and period.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>
+            </div>
+            <h3>Financial Reporting</h3>
+            <p>P&L, cash flow, and financial performance reports for retail operations.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Employee Management</h3>
+            <p>Staff roles, attendance, commission tracking, and performance management.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+            </div>
+            <h3>Mobile Applications</h3>
+            <p>Native mobile apps for staff, warehouse teams, and customer-facing retail operations.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </div>
+            <h3>API Integrations</h3>
+            <p>Connect payment gateways, marketplaces, 3PL, and third-party systems via API.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+            </div>
+            <h3>Automated Workflows</h3>
+            <p>Trigger-based automation for ordering, alerts, notifications, and approvals.</p>
+          </div>
+          <div class="rt-feature-card">
+            <div class="rt-feature-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3>Role-Based Access</h3>
+            <p>Granular permission controls for staff, managers, and administrators across all modules.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         6. RETAIL INDUSTRY VERTICALS
+    ═══════════════════════════════════════ -->
+    <section class="rt-section rt-section--light" id="industries">
+      <div class="container">
+        <div class="rt-section-header rt-section-header--center">
+          <div class="rt-badge">INDUSTRY VERTICALS</div>
+          <h2 class="rt-section-title">Built for Every Type of Retail Business</h2>
+          <p class="rt-section-subtitle">Whether you manage a single store or hundreds of locations, we build retail software tailored to your industry's unique challenges.</p>
+        </div>
+
+        <div class="rt-industry-grid">
+          <div class="rt-industry-card">
+            <div class="rt-industry-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.38 3.46L16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.57a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.57a2 2 0 0 0-1.34-2.23z"/></svg>
+            </div>
+            <h3>Fashion & Apparel</h3>
+            <p>Size/color variants, seasonal collections, style management, and multi-store distribution.</p>
+            <span class="rt-industry-card__arrow">→</span>
+          </div>
+          <div class="rt-industry-card">
+            <div class="rt-industry-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Electronics & Appliances</h3>
+            <p>Serial tracking, warranty management, repair services, and technical product catalog.</p>
+            <span class="rt-industry-card__arrow">→</span>
+          </div>
+          <div class="rt-industry-card">
+            <div class="rt-industry-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            </div>
+            <h3>Grocery & Supermarkets</h3>
+            <p>Perishables management, batch tracking, expiry alerts, and high-volume POS.</p>
+            <span class="rt-industry-card__arrow">→</span>
+          </div>
+          <div class="rt-industry-card">
+            <div class="rt-industry-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <h3>Furniture & Home Décor</h3>
+            <p>Customization options, lead time management, delivery tracking, and showroom POS.</p>
+            <span class="rt-industry-card__arrow">→</span>
+          </div>
+          <div class="rt-industry-card">
+            <div class="rt-industry-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3>Pharmacy & Healthcare</h3>
+            <p>Prescription management, batch/expiry control, regulatory compliance, and patient records.</p>
+            <span class="rt-industry-card__arrow">→</span>
+          </div>
+          <div class="rt-industry-card">
+            <div class="rt-industry-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+            </div>
+            <h3>Beauty & Cosmetics</h3>
+            <p>Shade/variant management, appointment booking, loyalty tiers, and personalized product matching.</p>
+            <span class="rt-industry-card__arrow">→</span>
+          </div>
+          <div class="rt-industry-card">
+            <div class="rt-industry-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Jewelry & Luxury Retail</h3>
+            <p>Item-level tracking, hallmarking, certifications, consignment, and high-value customer management.</p>
+            <span class="rt-industry-card__arrow">→</span>
+          </div>
+          <div class="rt-industry-card">
+            <div class="rt-industry-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h3>Sports & Fitness</h3>
+            <p>Rental management, equipment tracking, membership integration, and seasonal inventory.</p>
+            <span class="rt-industry-card__arrow">→</span>
+          </div>
+          <div class="rt-industry-card">
+            <div class="rt-industry-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3>Books & Stationery</h3>
+            <p>ISBN catalog management, publisher integration, subscription boxes, and institutional billing.</p>
+            <span class="rt-industry-card__arrow">→</span>
+          </div>
+          <div class="rt-industry-card">
+            <div class="rt-industry-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3m-5 14h6a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2z"/></svg>
+            </div>
+            <h3>Automotive Retail</h3>
+            <p>Parts catalog, VIN tracking, workshop integration, and dealership management.</p>
+            <span class="rt-industry-card__arrow">→</span>
+          </div>
+          <div class="rt-industry-card">
+            <div class="rt-industry-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            </div>
+            <h3>Department Stores</h3>
+            <p>Department-level P&L, concession management, multi-brand operations, and unified analytics.</p>
+            <span class="rt-industry-card__arrow">→</span>
+          </div>
+          <div class="rt-industry-card">
+            <div class="rt-industry-card__icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"/></svg>
+            </div>
+            <h3>Wholesale & Distribution</h3>
+            <p>B2B pricing tiers, bulk order management, route planning, and distributor portals.</p>
+            <span class="rt-industry-card__arrow">→</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         7. OMNICHANNEL RETAIL
+    ═══════════════════════════════════════ -->
+    <section class="rt-omni" id="omnichannel">
+      <div class="container">
+        <div class="rt-omni__content">
+          <div class="rt-section-header">
+            <div class="rt-badge rt-badge--cyan">OMNICHANNEL COMMERCE</div>
+            <h2 class="rt-section-title rt-text-white">Connect Every Customer Touchpoint</h2>
+            <p class="rt-section-subtitle rt-text-slate">Hegrix connects your online and offline retail operations into one unified ecosystem — giving customers a seamless experience across every channel and giving you a single view of your entire retail business.</p>
+          </div>
+
+          <div class="rt-omni-hub">
+            <div class="rt-omni-center">
+              <div class="rt-omni-core">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                <span>Customer</span>
+              </div>
+              <div class="rt-omni-ring"></div>
+            </div>
+
+            <div class="rt-omni-nodes">
+              <div class="rt-omni-node">
+                <div class="rt-omni-node__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                </div>
+                <span>Physical Store</span>
+              </div>
+              <div class="rt-omni-node">
+                <div class="rt-omni-node__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg>
+                </div>
+                <span>Online Store</span>
+              </div>
+              <div class="rt-omni-node">
+                <div class="rt-omni-node__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+                </div>
+                <span>Mobile App</span>
+              </div>
+              <div class="rt-omni-node">
+                <div class="rt-omni-node__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/></svg>
+                </div>
+                <span>POS Terminal</span>
+              </div>
+              <div class="rt-omni-node">
+                <div class="rt-omni-node__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                </div>
+                <span>Marketplace</span>
+              </div>
+              <div class="rt-omni-node">
+                <div class="rt-omni-node__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 2H3v16h5l3 3 3-3h5V2z"/><path d="M9.5 9h5M12 7v5"/></svg>
+                </div>
+                <span>Social Commerce</span>
+              </div>
+              <div class="rt-omni-node">
+                <div class="rt-omni-node__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                </div>
+                <span>Warehouse</span>
+              </div>
+              <div class="rt-omni-node">
+                <div class="rt-omni-node__icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.61 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 6.14 6.14l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <span>Customer Support</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="rt-omni__cta">
+            <a href="#contact" class="rt-btn rt-btn--primary rt-btn--lg">
+              Build My Omnichannel Solution
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         8. CUSTOM RETAIL SOFTWARE DEVELOPMENT
+    ═══════════════════════════════════════ -->
+    <section class="rt-section" id="custom-development">
+      <div class="container">
+        <div class="rt-custom-wrap">
+          <div class="rt-custom-content">
+            <div class="rt-badge">CUSTOM DEVELOPMENT</div>
+            <h2 class="rt-section-title">Software Built Around Your Retail Business</h2>
+            <p class="rt-section-subtitle">We don't force your retail business to adapt to standard software limitations. Instead, we build technology around the way you operate — your processes, your customers, your products, your stores.</p>
+            <a href="#contact" class="rt-btn rt-btn--primary" style="margin-top:1.5rem;">
+              Discuss Your Custom Solution
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <div class="rt-custom-grid">
+            <div class="rt-custom-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/></svg>
+              Custom POS
+            </div>
+            <div class="rt-custom-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              Custom Retail ERP
+            </div>
+            <div class="rt-custom-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/></svg>
+              Retail Mobile Apps
+            </div>
+            <div class="rt-custom-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              Custom Dashboards
+            </div>
+            <div class="rt-custom-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              Customer Portals
+            </div>
+            <div class="rt-custom-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10z"/></svg>
+              Retail Marketplace
+            </div>
+            <div class="rt-custom-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Order Management Systems
+            </div>
+            <div class="rt-custom-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+              Warehouse Applications
+            </div>
+            <div class="rt-custom-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83"/></svg>
+              Retail Automation
+            </div>
+            <div class="rt-custom-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/></svg>
+              Custom Integrations
+            </div>
+            <div class="rt-custom-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/></svg>
+              API Development
+            </div>
+            <div class="rt-custom-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3z"/></svg>
+              Third-Party Integrations
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         9. TECHNOLOGY & PLATFORM EXPERTISE
+    ═══════════════════════════════════════ -->
+    <section class="rt-section rt-section--light" id="technology">
+      <div class="container">
+        <div class="rt-section-header rt-section-header--center">
+          <div class="rt-badge">TECHNOLOGY STACK</div>
+          <h2 class="rt-section-title">Our Retail Technology Ecosystem</h2>
+          <p class="rt-section-subtitle">We work with the best-in-class technologies to build scalable, connected, and future-proof retail software solutions.</p>
+        </div>
+
+        <div class="rt-tech-groups">
+          <div class="rt-tech-group">
+            <span class="rt-tech-group__label">ERP</span>
+            <div class="rt-tech-group__cards">
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                <span>Odoo</span>
+              </div>
+            </div>
+          </div>
+          <div class="rt-tech-group">
+            <span class="rt-tech-group__label">eCommerce</span>
+            <div class="rt-tech-group__cards">
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#95BF47" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/></svg>
+                <span>Shopify</span>
+              </div>
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#EE672F" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
+                <span>Magento</span>
+              </div>
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7F54B3" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                <span>WooCommerce</span>
+              </div>
+            </div>
+          </div>
+          <div class="rt-tech-group">
+            <span class="rt-tech-group__label">Frontend</span>
+            <div class="rt-tech-group__cards">
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#61DAFB" stroke-width="2"><circle cx="12" cy="12" r="2"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10"/></svg>
+                <span>React</span>
+              </div>
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                <span>Next.js</span>
+              </div>
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#42B883" stroke-width="2"><polygon points="12 2 22 19 2 19 12 2"/></svg>
+                <span>Vue.js</span>
+              </div>
+            </div>
+          </div>
+          <div class="rt-tech-group">
+            <span class="rt-tech-group__label">Backend</span>
+            <div class="rt-tech-group__cards">
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3776AB" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/></svg>
+                <span>Python</span>
+              </div>
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#68A063" stroke-width="2"><polyline points="16 18 22 12 16 6"/></svg>
+                <span>Node.js</span>
+              </div>
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF2D20" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+                <span>Laravel / PHP</span>
+              </div>
+            </div>
+          </div>
+          <div class="rt-tech-group">
+            <span class="rt-tech-group__label">Mobile</span>
+            <div class="rt-tech-group__cards">
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#02569B" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/></svg>
+                <span>Flutter</span>
+              </div>
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#61DAFB" stroke-width="2"><circle cx="12" cy="12" r="2"/></svg>
+                <span>React Native</span>
+              </div>
+            </div>
+          </div>
+          <div class="rt-tech-group">
+            <span class="rt-tech-group__label">Cloud</span>
+            <div class="rt-tech-group__cards">
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF9900" stroke-width="2"><polyline points="16 16 12 12 8 16"/></svg>
+                <span>AWS</span>
+              </div>
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0089D6" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+                <span>Azure</span>
+              </div>
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4285F4" stroke-width="2"><polygon points="12 2 22 19 2 19 12 2"/></svg>
+                <span>Google Cloud</span>
+              </div>
+            </div>
+          </div>
+          <div class="rt-tech-group">
+            <span class="rt-tech-group__label">Integration</span>
+            <div class="rt-tech-group__cards">
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/></svg>
+                <span>REST API</span>
+              </div>
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#E535AB" stroke-width="2"><polygon points="12 2 22 19 2 19 12 2"/></svg>
+                <span>GraphQL</span>
+              </div>
+              <div class="rt-tech-card">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="2"><path d="M4 4h16v16H4z"/></svg>
+                <span>Webhooks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         10. BUSINESS BENEFITS
+    ═══════════════════════════════════════ -->
+    <section class="rt-section rt-section--dark" id="benefits">
+      <div class="container">
+        <div class="rt-section-header rt-section-header--center">
+          <div class="rt-badge rt-badge--cyan">BUSINESS OUTCOMES</div>
+          <h2 class="rt-section-title rt-text-white">Turn Retail Technology Into Business Growth</h2>
+          <p class="rt-section-subtitle rt-text-slate">The right retail software doesn't just organize your operations — it actively drives performance improvement across every area of your business.</p>
+        </div>
+
+        <div class="rt-benefits-grid">
+          <div class="rt-benefit-card">
+            <div class="rt-benefit-card__num">40%</div>
+            <h3>Increase Operational Efficiency</h3>
+            <p>Streamline store operations, inventory, and fulfillment workflows to eliminate bottlenecks.</p>
+          </div>
+          <div class="rt-benefit-card">
+            <div class="rt-benefit-card__num">60%</div>
+            <h3>Reduce Manual Work</h3>
+            <p>Automate repetitive tasks including reordering, reporting, approvals, and notifications.</p>
+          </div>
+          <div class="rt-benefit-card">
+            <div class="rt-benefit-card__num">99%</div>
+            <h3>Improve Inventory Accuracy</h3>
+            <p>Eliminate stockouts and overstock with real-time inventory tracking across all locations.</p>
+          </div>
+          <div class="rt-benefit-card">
+            <div class="rt-benefit-card__num">2x</div>
+            <h3>Speed Up Checkout</h3>
+            <p>Faster POS reduces queue times and improves in-store customer experience significantly.</p>
+          </div>
+          <div class="rt-benefit-card">
+            <div class="rt-benefit-card__num">35%</div>
+            <h3>Increase Customer Retention</h3>
+            <p>Personalized engagement, loyalty programs, and omnichannel experiences drive repeat business.</p>
+          </div>
+          <div class="rt-benefit-card">
+            <div class="rt-benefit-card__num">Real-Time</div>
+            <h3>Improve Decision Making</h3>
+            <p>Live dashboards give leadership the visibility to make faster, more informed business decisions.</p>
+          </div>
+          <div class="rt-benefit-card">
+            <div class="rt-benefit-card__num">All</div>
+            <h3>Connect Sales Channels</h3>
+            <p>Unified commerce across physical stores, online, mobile, and marketplaces in one platform.</p>
+          </div>
+          <div class="rt-benefit-card">
+            <div class="rt-benefit-card__num">30%</div>
+            <h3>Reduce Operational Costs</h3>
+            <p>Eliminate redundant processes, reduce errors, and optimize workforce productivity at scale.</p>
+          </div>
+          <div class="rt-benefit-card">
+            <div class="rt-benefit-card__num">∞</div>
+            <h3>Scale Across Locations</h3>
+            <p>Cloud-native architecture supports growth from one store to hundreds with no re-platforming.</p>
+          </div>
+        </div>
+
+        <p class="rt-metrics-note">* Figures are illustrative ranges based on retail transformation outcomes. Replace with verified client data before publishing.</p>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         11. BEFORE VS AFTER
+    ═══════════════════════════════════════ -->
+    <section class="rt-section rt-section--light" id="transformation">
+      <div class="container">
+        <div class="rt-section-header rt-section-header--center">
+          <div class="rt-badge">TRANSFORMATION</div>
+          <h2 class="rt-section-title">Before vs After Hegrix</h2>
+          <p class="rt-section-subtitle">See the operational transformation that connected retail software delivers across your business.</p>
+        </div>
+
+        <div class="rt-comparison">
+          <div class="rt-comparison__col rt-comparison__col--before">
+            <div class="rt-comparison__head">
+              <span class="rt-comp-tag rt-comp-tag--before">BEFORE</span>
+              <h3>Fragmented Operations</h3>
+            </div>
+            <ul class="rt-comp-list">
+              <li class="rt-comp-list__item rt-comp-list__item--bad">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                Disconnected Systems
+              </li>
+              <li class="rt-comp-list__item rt-comp-list__item--bad">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                Manual Inventory Counting
+              </li>
+              <li class="rt-comp-list__item rt-comp-list__item--bad">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                Excel-Based Reporting
+              </li>
+              <li class="rt-comp-list__item rt-comp-list__item--bad">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                Slow Checkout Process
+              </li>
+              <li class="rt-comp-list__item rt-comp-list__item--bad">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                Limited Customer Data
+              </li>
+              <li class="rt-comp-list__item rt-comp-list__item--bad">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                Multiple Isolated Databases
+              </li>
+              <li class="rt-comp-list__item rt-comp-list__item--bad">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                Manual Repetitive Processes
+              </li>
+            </ul>
+          </div>
+
+          <div class="rt-comparison__divider">
+            <div class="rt-comp-arrow">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+            <span>Hegrix</span>
+          </div>
+
+          <div class="rt-comparison__col rt-comparison__col--after">
+            <div class="rt-comparison__head">
+              <span class="rt-comp-tag rt-comp-tag--after">AFTER HEGRIX</span>
+              <h3>Connected Retail Operations</h3>
+            </div>
+            <ul class="rt-comp-list">
+              <li class="rt-comp-list__item rt-comp-list__item--good">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Connected Retail Ecosystem
+              </li>
+              <li class="rt-comp-list__item rt-comp-list__item--good">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Real-Time Inventory Sync
+              </li>
+              <li class="rt-comp-list__item rt-comp-list__item--good">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Live Analytics Dashboards
+              </li>
+              <li class="rt-comp-list__item rt-comp-list__item--good">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Fast POS with Offline Mode
+              </li>
+              <li class="rt-comp-list__item rt-comp-list__item--good">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                360° Customer Insights
+              </li>
+              <li class="rt-comp-list__item rt-comp-list__item--good">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Centralized Unified Data
+              </li>
+              <li class="rt-comp-list__item rt-comp-list__item--good">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Intelligent Automated Workflows
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         12. HOW WE DELIVER
+    ═══════════════════════════════════════ -->
+    <section class="rt-section" id="process">
+      <div class="container">
+        <div class="rt-section-header rt-section-header--center">
+          <div class="rt-badge">OUR DELIVERY PROCESS</div>
+          <h2 class="rt-section-title">How We Deliver Retail Software</h2>
+          <p class="rt-section-subtitle">A proven, structured delivery methodology that ensures your retail platform is delivered on time, on budget, and built to scale.</p>
+        </div>
+
+        <div class="rt-process-timeline">
+          <div class="rt-process-item">
+            <div class="rt-process-item__num">01</div>
+            <div class="rt-process-item__content">
+              <h3>Discovery</h3>
+              <p>Understand your business, customers, stores, products, and operational challenges in depth.</p>
+            </div>
+          </div>
+          <div class="rt-process-item">
+            <div class="rt-process-item__num">02</div>
+            <div class="rt-process-item__content">
+              <h3>Business Analysis</h3>
+              <p>Map existing processes and identify automation, integration, and improvement opportunities.</p>
+            </div>
+          </div>
+          <div class="rt-process-item">
+            <div class="rt-process-item__num">03</div>
+            <div class="rt-process-item__content">
+              <h3>Solution Architecture</h3>
+              <p>Design the right technology ecosystem, platform selection, integrations, and data model.</p>
+            </div>
+          </div>
+          <div class="rt-process-item">
+            <div class="rt-process-item__num">04</div>
+            <div class="rt-process-item__content">
+              <h3>UI/UX Design</h3>
+              <p>Create intuitive, fast, role-based interfaces for store staff, managers, and administrators.</p>
+            </div>
+          </div>
+          <div class="rt-process-item">
+            <div class="rt-process-item__num">05</div>
+            <div class="rt-process-item__content">
+              <h3>Development</h3>
+              <p>Build and customize the POS, ERP, eCommerce, warehouse, and analytics solution.</p>
+            </div>
+          </div>
+          <div class="rt-process-item">
+            <div class="rt-process-item__num">06</div>
+            <div class="rt-process-item__content">
+              <h3>Integration</h3>
+              <p>Connect ERP, POS, eCommerce, payment gateways, marketplaces, APIs, and third-party systems.</p>
+            </div>
+          </div>
+          <div class="rt-process-item">
+            <div class="rt-process-item__num">07</div>
+            <div class="rt-process-item__content">
+              <h3>Testing</h3>
+              <p>Functional, security, performance, and user acceptance testing across all modules.</p>
+            </div>
+          </div>
+          <div class="rt-process-item">
+            <div class="rt-process-item__num">08</div>
+            <div class="rt-process-item__content">
+              <h3>Deployment</h3>
+              <p>Go-live with staff training, data migration, and hypercare support for your retail operations.</p>
+            </div>
+          </div>
+          <div class="rt-process-item">
+            <div class="rt-process-item__num">09</div>
+            <div class="rt-process-item__content">
+              <h3>Support & Optimization</h3>
+              <p>Continuously improve, monitor, and scale the platform as your retail business grows.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         13. CASE STUDIES
+    ═══════════════════════════════════════ -->
+    <section class="rt-section rt-section--light" id="case-studies">
+      <div class="container">
+        <div class="rt-section-header rt-section-header--center">
+          <div class="rt-badge">PROVEN IMPACT</div>
+          <h2 class="rt-section-title">Retail Transformation in Action</h2>
+          <p class="rt-section-subtitle">See how connected retail software transforms operations and delivers measurable business outcomes.</p>
+        </div>
+
+        <div class="rt-cases-grid">
+          <div class="rt-case-card">
+            <div class="rt-case-card__tag">Case Study 01 · Fashion Retail</div>
+            <h3 class="rt-case-card__title">Unified Retail Operations for a Fashion Chain</h3>
+            <div class="rt-case-card__block">
+              <span class="rt-case-card__lbl">Challenge:</span>
+              <p>12 physical stores running on separate POS systems with no centralized inventory or customer data.</p>
+            </div>
+            <div class="rt-case-card__block">
+              <span class="rt-case-card__lbl">Solution:</span>
+              <p>Connected retail platform with unified POS, real-time inventory, CRM, and executive analytics dashboard.</p>
+            </div>
+            <div class="rt-case-card__block">
+              <span class="rt-case-card__lbl">Technology:</span>
+              <p>Odoo ERP · Custom POS · React Dashboard · REST API</p>
+            </div>
+            <div class="rt-case-card__result">
+              <div class="rt-case-card__metric">
+                <span class="rt-case-card__metric-num">40%</span>
+                <span>Faster Order Processing <em>[Sample Outcome]</em></span>
+              </div>
+              <div class="rt-case-card__metric">
+                <span class="rt-case-card__metric-num">60%</span>
+                <span>Better Inventory Accuracy <em>[Sample Outcome]</em></span>
+              </div>
+            </div>
+            <a href="#contact" class="rt-btn rt-btn--outline" style="margin-top:1rem;">View Case Study →</a>
+          </div>
+
+          <div class="rt-case-card">
+            <div class="rt-case-card__tag">Case Study 02 · Electronics Retail</div>
+            <h3 class="rt-case-card__title">Omnichannel Commerce Platform</h3>
+            <div class="rt-case-card__block">
+              <span class="rt-case-card__lbl">Challenge:</span>
+              <p>Disconnected online and offline channels with duplicate orders, manual reconciliation, and poor visibility.</p>
+            </div>
+            <div class="rt-case-card__block">
+              <span class="rt-case-card__lbl">Solution:</span>
+              <p>Shopify + Odoo integration with unified order management, inventory sync, and customer unification.</p>
+            </div>
+            <div class="rt-case-card__block">
+              <span class="rt-case-card__lbl">Technology:</span>
+              <p>Shopify · Odoo · Python · Custom API Layer</p>
+            </div>
+            <div class="rt-case-card__result">
+              <div class="rt-case-card__metric">
+                <span class="rt-case-card__metric-num">2x</span>
+                <span>Faster Checkout Speed <em>[Sample Outcome]</em></span>
+              </div>
+              <div class="rt-case-card__metric">
+                <span class="rt-case-card__metric-num">35%</span>
+                <span>Reduction in Manual Work <em>[Sample Outcome]</em></span>
+              </div>
+            </div>
+            <a href="#contact" class="rt-btn rt-btn--outline" style="margin-top:1rem;">View Case Study →</a>
+          </div>
+
+          <div class="rt-case-card">
+            <div class="rt-case-card__tag">Case Study 03 · Wholesale Distribution</div>
+            <h3 class="rt-case-card__title">B2B Wholesale Management System</h3>
+            <div class="rt-case-card__block">
+              <span class="rt-case-card__lbl">Challenge:</span>
+              <p>Manual B2B order processing, inconsistent pricing, no route planning, and limited distributor visibility.</p>
+            </div>
+            <div class="rt-case-card__block">
+              <span class="rt-case-card__lbl">Solution:</span>
+              <p>Custom wholesale platform with tier pricing, distributor portal, route optimization, and automated invoicing.</p>
+            </div>
+            <div class="rt-case-card__block">
+              <span class="rt-case-card__lbl">Technology:</span>
+              <p>Custom ERP · React · Node.js · Flutter Mobile App</p>
+            </div>
+            <div class="rt-case-card__result">
+              <div class="rt-case-card__metric">
+                <span class="rt-case-card__metric-num">50%</span>
+                <span>Faster Order Processing <em>[Sample Outcome]</em></span>
+              </div>
+              <div class="rt-case-card__metric">
+                <span class="rt-case-card__metric-num">3x</span>
+                <span>Distributor Visibility Improvement <em>[Sample Outcome]</em></span>
+              </div>
+            </div>
+            <a href="#contact" class="rt-btn rt-btn--outline" style="margin-top:1rem;">View Case Study →</a>
+          </div>
+        </div>
+
+        <div class="rt-section-cta">
+          <a href="#contact" class="rt-btn rt-btn--secondary">View All Case Studies →</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         14. WHY HEGRIX
+    ═══════════════════════════════════════ -->
+    <section class="rt-section" id="why-hegrix">
+      <div class="container">
+        <div class="rt-section-header rt-section-header--center">
+          <div class="rt-badge">THE HEGRIX DIFFERENCE</div>
+          <h2 class="rt-section-title">Why Leading Businesses Choose Hegrix</h2>
+          <p class="rt-section-subtitle">We combine deep retail domain expertise with modern enterprise software engineering to deliver technology that makes a real difference.</p>
+        </div>
+
+        <div class="rt-why-grid">
+          <div class="rt-why-card">
+            <div class="rt-why-card__num">01</div>
+            <h3>Retail Domain Expertise</h3>
+            <p>We understand retail workflows — from the stockroom to the storefront — and build software that reflects real operations.</p>
+          </div>
+          <div class="rt-why-card">
+            <div class="rt-why-card__num">02</div>
+            <h3>Experienced Development Team</h3>
+            <p>Seasoned retail technology specialists who have built and deployed complex multi-store, multi-channel solutions.</p>
+          </div>
+          <div class="rt-why-card">
+            <div class="rt-why-card__num">03</div>
+            <h3>Business-First Approach</h3>
+            <p>We start with your business outcomes and work backward to the technology — not the other way around.</p>
+          </div>
+          <div class="rt-why-card">
+            <div class="rt-why-card__num">04</div>
+            <h3>Scalable Architecture</h3>
+            <p>Cloud-native, API-first platforms that scale seamlessly from one location to hundreds without re-engineering.</p>
+          </div>
+          <div class="rt-why-card">
+            <div class="rt-why-card__num">05</div>
+            <h3>Custom Solutions</h3>
+            <p>No generic off-the-shelf compromises. Every solution is built around your specific workflows and requirements.</p>
+          </div>
+          <div class="rt-why-card">
+            <div class="rt-why-card__num">06</div>
+            <h3>Integration Expertise</h3>
+            <p>Deep experience connecting POS, ERP, eCommerce, payment gateways, and third-party retail systems.</p>
+          </div>
+          <div class="rt-why-card">
+            <div class="rt-why-card__num">07</div>
+            <h3>Agile Delivery</h3>
+            <p>Iterative delivery methodology with transparent milestones, continuous feedback, and fast implementation cycles.</p>
+          </div>
+          <div class="rt-why-card">
+            <div class="rt-why-card__num">08</div>
+            <h3>Transparent Communication</h3>
+            <p>Clear project visibility through regular updates, live dashboards, and dedicated account management.</p>
+          </div>
+          <div class="rt-why-card">
+            <div class="rt-why-card__num">09</div>
+            <h3>Dedicated Support</h3>
+            <p>24/7 technical monitoring, SLA-backed maintenance, and a dedicated team available when you need help.</p>
+          </div>
+          <div class="rt-why-card">
+            <div class="rt-why-card__num">10</div>
+            <h3>Long-Term Partnership</h3>
+            <p>We don't just build and leave. We're a long-term technology partner that grows with your retail business.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         15. TESTIMONIALS
+    ═══════════════════════════════════════ -->
+    <section class="rt-section rt-section--light" id="testimonials">
+      <div class="container">
+        <div class="rt-section-header rt-section-header--center">
+          <div class="rt-badge">CLIENT FEEDBACK</div>
+          <h2 class="rt-section-title">What Retail Leaders Say About Hegrix</h2>
+          <p class="rt-section-subtitle">Real feedback from retail business leaders who trusted Hegrix to transform their technology.</p>
+        </div>
+
+        <div class="rt-testimonials-grid">
+          <div class="rt-testimonial-card">
+            <div class="rt-testimonial-card__stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="rt-testimonial-card__quote">"Hegrix built us a complete retail management platform that connected our 8 stores and online shop in ways we didn't think were possible. Our inventory accuracy went from 70% to near-perfect. The team understood retail operations from day one."</blockquote>
+            <div class="rt-testimonial-card__author">
+              <div class="rt-testimonial-card__avatar">SR</div>
+              <div>
+                <strong>Sarah R.</strong>
+                <span>Operations Director · Fashion Retail Chain</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="rt-testimonial-card">
+            <div class="rt-testimonial-card__stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="rt-testimonial-card__quote">"The Shopify + Odoo integration Hegrix built transformed our business. We now have one view of inventory, orders, and customers across physical and online. Communication was excellent throughout and support has been outstanding post-launch."</blockquote>
+            <div class="rt-testimonial-card__author">
+              <div class="rt-testimonial-card__avatar">MK</div>
+              <div>
+                <strong>Marcus K.</strong>
+                <span>CEO · Electronics Retail Group</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="rt-testimonial-card">
+            <div class="rt-testimonial-card__stars">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="#F59E0B" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <blockquote class="rt-testimonial-card__quote">"We needed a wholesale distribution platform that understood our complex B2B pricing and routing requirements. Hegrix delivered exactly that — on time and with exceptional quality. The mobile app for our drivers was a game-changer."</blockquote>
+            <div class="rt-testimonial-card__author">
+              <div class="rt-testimonial-card__avatar">PT</div>
+              <div>
+                <strong>Priya T.</strong>
+                <span>Managing Director · FMCG Wholesale Distributor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         16. FAQ
+    ═══════════════════════════════════════ -->
+    <section class="rt-section" id="faq">
+      <div class="container">
+        <div class="rt-section-header rt-section-header--center">
+          <div class="rt-badge">FREQUENTLY ASKED</div>
+          <h2 class="rt-section-title">Retail Software Questions Answered</h2>
+          <p class="rt-section-subtitle">Everything you need to know about building or upgrading your retail technology infrastructure.</p>
+        </div>
+
+        <div class="rt-faq-list" id="rtFaqList">
+          {retailFaqs.map((faq, i) => (
+            <div class="rt-faq-item" id={`rtFaq${i}`}>
+              <button class="rt-faq-item__q" aria-expanded="false" aria-controls={`rtFaqA${i}`}>
+                <span>{faq.question}</span>
+                <svg class="rt-faq-item__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+              <div class="rt-faq-item__a" id={`rtFaqA${i}`} role="region" hidden>
+                <p>{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         17. SEO CONTENT
+    ═══════════════════════════════════════ -->
+    <section class="rt-section rt-section--light rt-seo-section" id="retail-software-guide">
+      <div class="container">
+        <div class="rt-seo-content">
+          <h2 class="rt-seo-content__heading">Understanding Retail Software Solutions</h2>
+
+          <div class="rt-seo-grid">
+            <div class="rt-seo-block">
+              <h3>What Is Retail Software?</h3>
+              <p>Retail software is a category of business management technology designed to help retail businesses run their operations more efficiently. Modern retail management software covers everything from point-of-sale transactions and inventory tracking to customer relationship management, eCommerce integration, warehouse operations, and business analytics. Unlike generic business software, retail software solutions are purpose-built for the challenges retailers face — managing products, stores, staff, customers, and sales channels simultaneously.</p>
+            </div>
+
+            <div class="rt-seo-block">
+              <h3>Benefits of Retail Management Software</h3>
+              <p>The right retail business management software delivers significant operational improvements: real-time inventory accuracy eliminates costly stockouts and overstock, automated workflows reduce manual effort by up to 60%, centralized customer data enables personalized marketing and loyalty programs, unified reporting gives leadership instant visibility into business performance, and connected omnichannel commerce creates seamless customer experiences that drive higher conversion and retention rates.</p>
+            </div>
+
+            <div class="rt-seo-block">
+              <h3>Retail POS Software</h3>
+              <p>Retail POS software is the frontline technology of every retail business. Modern retail point-of-sale systems go far beyond simple transaction processing — they manage product lookups, barcode scanning, promotions, loyalty redemption, payment processing, staff management, and real-time inventory deduction. For chain retailers, a unified POS platform across all locations eliminates data fragmentation and enables centralized reporting and stock management.</p>
+            </div>
+
+            <div class="rt-seo-block">
+              <h3>Retail Inventory Management</h3>
+              <p>Retail inventory management software gives businesses real-time visibility into stock levels across all locations, warehouses, and sales channels. Advanced inventory systems support multi-warehouse management, product variants, batch and serial tracking, automatic reorder triggers, supplier integration, and stock transfer workflows — eliminating the manual errors and delays that cost retailers revenue and customer trust.</p>
+            </div>
+
+            <div class="rt-seo-block">
+              <h3>Multi-Store Retail Management</h3>
+              <p>Growing retail businesses need multi-store retail software that provides centralized control while allowing location-level flexibility. Multi-store retail management platforms enable uniform pricing and promotions across all locations, centralized inventory visibility with location-level control, consolidated financial reporting, and unified customer profiles that follow customers across all stores and online channels.</p>
+            </div>
+
+            <div class="rt-seo-block">
+              <h3>Omnichannel Retail Software</h3>
+              <p>Omnichannel retail solutions connect physical stores, online stores, mobile applications, marketplaces, and social commerce into one unified platform. Customers can browse online, purchase in-store, return via any channel, and earn loyalty points across all touchpoints — while retailers see a single, accurate view of inventory, orders, and customer behavior across every channel in real time.</p>
+            </div>
+
+            <div class="rt-seo-block">
+              <h3>Retail ERP Solutions</h3>
+              <p>Retail ERP software integrates all core business functions — inventory, purchasing, sales, finance, HR, and analytics — into a single connected platform. Modern retail ERP solutions like Odoo can be customized and extended to match specific retail workflows, integrated with existing systems, and scaled as the business grows. A well-implemented retail ERP eliminates data silos and gives decision-makers a complete view of business performance.</p>
+            </div>
+
+            <div class="rt-seo-block">
+              <h3>Custom Retail Software Development</h3>
+              <p>For retail businesses with unique workflows, products, or operational models, custom retail software development offers advantages that off-the-shelf solutions cannot match. Custom retail applications are built around your specific processes, integrate with your existing systems, support your exact data model, and can evolve with your business — without the limitations, licensing costs, or compromises of standard retail software packages.</p>
+            </div>
+
+            <div class="rt-seo-block">
+              <h3>Retail Automation Software</h3>
+              <p>Retail automation software eliminates the manual, repetitive processes that slow retail operations: automatic purchase order generation when inventory falls below reorder points, automated customer loyalty notifications, scheduled promotional pricing updates, triggered warehouse picking tasks, and real-time alert systems for stock discrepancies. Automation reduces labor costs, eliminates errors, and frees staff to focus on customer service and higher-value activities.</p>
+            </div>
+
+            <div class="rt-seo-block">
+              <h3>How to Choose Retail Software</h3>
+              <p>Choosing the right retail software requires evaluating several critical factors: Does it support your specific industry and product types? Can it scale with your store growth plans? Does it provide the omnichannel connectivity your customers expect? Is it flexible enough to match your workflows, or will you need to change your processes to fit the software? Does it integrate with your existing systems? And does the vendor have proven retail domain expertise to support your implementation and long-term growth?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         18. FINAL CTA
+    ═══════════════════════════════════════ -->
+    <section class="rt-final-cta">
+      <div class="rt-final-cta__bg"></div>
+      <div class="container rt-final-cta__content">
+        <div class="rt-badge rt-badge--cyan">START TODAY</div>
+        <h2 class="rt-final-cta__title">Ready to Build a Smarter Retail Business?</h2>
+        <p class="rt-final-cta__desc">Tell us about your retail business and our experts will help you identify the right technology, integrations, and software strategy for your next stage of growth.</p>
+        <div class="rt-final-cta__actions">
+          <a href="#contact" class="rt-btn rt-btn--white">
+            Book Free Consultation
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="tel:+1234567890" class="rt-btn rt-btn--outline-white">
+            Talk to a Retail Expert
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         19. CONTACT FORM
+    ═══════════════════════════════════════ -->
+    <section class="rt-section" id="contact">
+      <div class="container">
+        <div class="rt-contact-wrap">
+          <div class="rt-contact-left">
+            <div class="rt-badge">GET STARTED</div>
+            <h2 class="rt-section-title">Let's Build Your Retail Solution</h2>
+            <p class="rt-section-subtitle">Tell us about your retail business and our consultants will design the right technology strategy for your operations.</p>
+
+            <div class="rt-contact-trust">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Your information is confidential and will only be used to understand your project requirements.
+            </div>
+
+            <div class="rt-contact-points">
+              <div class="rt-contact-point">
+                <div class="rt-contact-point__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span>Free 60-minute retail technology consultation</span>
+              </div>
+              <div class="rt-contact-point">
+                <div class="rt-contact-point__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span>Response within 24 business hours</span>
+              </div>
+              <div class="rt-contact-point">
+                <div class="rt-contact-point__icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <span>No obligation, no pressure</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="rt-contact-right">
+            <form class="rt-form" id="rtContactForm" novalidate>
+              <div class="rt-form-grid">
+                <div class="rt-form-group">
+                  <label for="rtName">Full Name *</label>
+                  <input type="text" id="rtName" name="name" placeholder="Your full name" required>
+                </div>
+                <div class="rt-form-group">
+                  <label for="rtEmail">Business Email *</label>
+                  <input type="email" id="rtEmail" name="email" placeholder="you@company.com" required>
+                </div>
+                <div class="rt-form-group">
+                  <label for="rtPhone">Phone Number</label>
+                  <input type="tel" id="rtPhone" name="phone" placeholder="+1 (555) 000-0000">
+                </div>
+                <div class="rt-form-group">
+                  <label for="rtCompany">Company Name *</label>
+                  <input type="text" id="rtCompany" name="company" placeholder="Your company name" required>
+                </div>
+                <div class="rt-form-group">
+                  <label for="rtBusinessType">Business Type</label>
+                  <select id="rtBusinessType" name="businessType">
+                    <option value="">Select business type</option>
+                    <option value="fashion">Fashion & Apparel</option>
+                    <option value="electronics">Electronics & Appliances</option>
+                    <option value="grocery">Grocery & Supermarket</option>
+                    <option value="furniture">Furniture & Home Décor</option>
+                    <option value="pharmacy">Pharmacy & Healthcare</option>
+                    <option value="beauty">Beauty & Cosmetics</option>
+                    <option value="jewelry">Jewelry & Luxury</option>
+                    <option value="sports">Sports & Fitness</option>
+                    <option value="books">Books & Stationery</option>
+                    <option value="automotive">Automotive Retail</option>
+                    <option value="department">Department Store</option>
+                    <option value="wholesale">Wholesale & Distribution</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="rt-form-group">
+                  <label for="rtStores">Number of Stores</label>
+                  <select id="rtStores" name="stores">
+                    <option value="">Select store count</option>
+                    <option value="1">1 Store</option>
+                    <option value="2-5">2–5 Stores</option>
+                    <option value="6-20">6–20 Stores</option>
+                    <option value="21-50">21–50 Stores</option>
+                    <option value="50+">50+ Stores</option>
+                  </select>
+                </div>
+                <div class="rt-form-group">
+                  <label for="rtCurrentSoftware">Current Software</label>
+                  <input type="text" id="rtCurrentSoftware" name="currentSoftware" placeholder="e.g. Quickbooks, custom system, none">
+                </div>
+                <div class="rt-form-group">
+                  <label for="rtRequiredSolution">Required Solution</label>
+                  <select id="rtRequiredSolution" name="requiredSolution">
+                    <option value="">Select required solution</option>
+                    <option value="pos">POS System</option>
+                    <option value="inventory">Inventory Management</option>
+                    <option value="ecommerce">eCommerce Integration</option>
+                    <option value="erp">Full Retail ERP</option>
+                    <option value="omnichannel">Omnichannel Platform</option>
+                    <option value="analytics">Analytics & Reporting</option>
+                    <option value="custom">Custom Development</option>
+                    <option value="integration">System Integration</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="rt-form-group rt-form-group--full">
+                  <label for="rtDetails">Project Details</label>
+                  <textarea id="rtDetails" name="details" rows="4" placeholder="Describe your retail business, current challenges, and what you're looking to achieve..."></textarea>
+                </div>
+              </div>
+
+              <div class="rt-form-status" id="rtFormStatus" hidden></div>
+
+              <button type="submit" class="rt-btn rt-btn--primary rt-btn--full" id="rtSubmitBtn">
+                <span id="rtSubmitText">Discuss My Retail Project</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════
+         20. RELATED SOLUTIONS
+    ═══════════════════════════════════════ -->
+    <section class="rt-section rt-section--light" id="related">
+      <div class="container">
+        <div class="rt-section-header rt-section-header--center">
+          <div class="rt-badge">EXPLORE MORE</div>
+          <h2 class="rt-section-title">Related Solutions & Services</h2>
+          <p class="rt-section-subtitle">Explore our complete ecosystem of industry solutions and technology services.</p>
+        </div>
+
+        <div class="rt-related-wrap">
+          <span class="rt-related-label">Industry Solutions</span>
+          <div class="rt-related-grid">
+            <a href="/industries/retail/" class="rt-related-card rt-related-card--active">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/></svg>
+              Hegrix Retail360
+            </a>
+            <a href="/industries/" class="rt-related-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20h20M6 20V10M10 20V4M14 20V8M18 20V14"/></svg>
+              Hegrix Manufacturing360
+            </a>
+            <a href="/industries/" class="rt-related-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7V8z"/></svg>
+              Hegrix Logistics360
+            </a>
+            <a href="/industries/" class="rt-related-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/></svg>
+              Hegrix Wholesale360
+            </a>
+            <a href="/industries/healthcare/" class="rt-related-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              Hegrix Healthcare360
+            </a>
+            <a href="/industries/travel-hospitality/" class="rt-related-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+              Hegrix Hospitality360
+            </a>
+          </div>
+
+          <span class="rt-related-label" style="margin-top:2.5rem;">Related Services</span>
+          <div class="rt-related-grid">
+            <a href="/services/odoo-implementation/" class="rt-related-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              Odoo Implementation
+            </a>
+            <a href="/services/odoo-development/" class="rt-related-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              Odoo Development
+            </a>
+            <a href="/services/odoo-integration/" class="rt-related-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/></svg>
+              Odoo Integration
+            </a>
+            <a href="/services/custom-software-development/" class="rt-related-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3z"/></svg>
+              Custom Software Development
+            </a>
+            <a href="/services/" class="rt-related-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/></svg>
+              eCommerce Development
+            </a>
+            <a href="/services/" class="rt-related-card">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/></svg>
+              Mobile App Development
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="rt-mobile-sticky">
+      <a href="#contact" class="rt-btn rt-btn--primary rt-btn--full">Talk to a Retail Expert</a>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="rt-success-modal" id="rtSuccessModal" hidden>
+      <div class="rt-success-modal__backdrop" id="rtModalBackdrop"></div>
+      <div class="rt-success-modal__content">
+        <button class="rt-success-modal__close" id="rtModalClose">&times;</button>
+        <div class="rt-success-modal__icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Inquiry Received!</h3>
+        <p>Thank you for reaching out. One of our retail software experts will contact you within 24 business hours.</p>
+        <button class="rt-btn rt-btn--primary" id="rtModalBtn">Got it</button>
+      </div>
+    </div>
+
+  </div>
+
+</Layout>
+
+
+<style is:inline>
+/* ════════════════════════════════════════════════════════════
+   RETAIL SOFTWARE SOLUTIONS — DEDICATED STYLESHEET
+   Color Palette: Deep Navy, Royal Blue, Emerald, Violet, Amber
+════════════════════════════════════════════════════════════ */
+
+:root {
+  --rt-navy: #0B1426;
+  --rt-navy-card: #1A2942;
+  --rt-blue: #2563EB;
+  --rt-blue-hover: #1D4ED8;
+  --rt-emerald: #10B981;
+  --rt-violet: #7C3AED;
+  --rt-amber: #F59E0B;
+  --rt-cyan: #06B6D4;
+  --rt-rose: #F43F5E;
+  --rt-bg-light: #F8FAFC;
+  --rt-bg-slate: #F1F5F9;
+  --rt-text-dark: #0F172A;
+  --rt-text-muted: #64748B;
+  --rt-text-slate: #475569;
+  --rt-border: #E2E8F0;
+  --rt-radius: 14px;
+  --rt-radius-sm: 10px;
+}
+
+.rt-page {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  color: var(--rt-text-dark);
+  background: #FFFFFF;
+  overflow-x: hidden;
+}
+
+/* ── Gradient Text ── */
+.rt-gradient-text {
+  background: linear-gradient(135deg, #2563EB 0%, #7C3AED 50%, #06B6D4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Badge ── */
+.rt-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.32rem 0.9rem;
+  background: rgba(37,99,235,0.08);
+  color: #2563EB;
+  border: 1px solid rgba(37,99,235,0.2);
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.rt-badge--cyan {
+  background: rgba(6,182,212,0.1);
+  color: #06B6D4;
+  border-color: rgba(6,182,212,0.3);
+}
+
+/* ── Sections ── */
+.rt-section { padding: 5.5rem 0; }
+.rt-section--light { background: var(--rt-bg-light); }
+.rt-section--dark { background: var(--rt-navy); color: #fff; }
+.rt-section-header { margin-bottom: 3.5rem; }
+.rt-section-header--center { text-align: center; max-width: 780px; margin-left: auto; margin-right: auto; }
+.rt-section-title { font-size: clamp(1.75rem,4vw,2.5rem); font-weight: 800; line-height: 1.2; letter-spacing: -0.02em; color: var(--rt-text-dark); margin-bottom: 1rem; }
+.rt-section-subtitle { font-size: 1.05rem; line-height: 1.7; color: var(--rt-text-slate); }
+.rt-text-white { color: #FFFFFF !important; }
+.rt-text-slate { color: #94A3B8 !important; }
+.rt-section-cta { text-align: center; margin-top: 3rem; }
+
+/* ── Buttons ── */
+.rt-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.rt-btn--lg { padding: 0.9rem 2rem; font-size: 1rem; }
+.rt-btn--full { width: 100%; justify-content: center; border-radius: var(--rt-radius); }
+.rt-btn--primary {
+  background: linear-gradient(135deg, #2563EB, #1D4ED8);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.35);
+}
+.rt-btn--primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(37,99,235,0.4); }
+.rt-btn--secondary {
+  background: transparent;
+  color: var(--rt-blue);
+  border: 2px solid rgba(37,99,235,0.3);
+}
+.rt-btn--secondary:hover { background: rgba(37,99,235,0.05); border-color: var(--rt-blue); }
+.rt-btn--outline {
+  background: transparent;
+  color: var(--rt-blue);
+  border: 1.5px solid rgba(37,99,235,0.3);
+  border-radius: var(--rt-radius-sm);
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+}
+.rt-btn--outline:hover { background: rgba(37,99,235,0.05); }
+.rt-btn--white { background: #fff; color: var(--rt-navy); box-shadow: 0 4px 16px rgba(0,0,0,0.15); }
+.rt-btn--white:hover { transform: translateY(-1px); }
+.rt-btn--outline-white { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.4); }
+.rt-btn--outline-white:hover { background: rgba(255,255,255,0.1); }
+
+/* ── HERO ── */
+.rt-hero {
+  background: linear-gradient(135deg, #0B1426 0%, #1A2942 50%, #0F1E3A 100%);
+  padding: 7rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.rt-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 40%, rgba(37,99,235,0.15) 0%, transparent 65%),
+              radial-gradient(ellipse at 20% 80%, rgba(124,58,237,0.1) 0%, transparent 55%);
+}
+.rt-hero__wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.rt-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #60A5FA;
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+.rt-eyebrow__pulse {
+  width: 8px; height: 8px;
+  background: #3B82F6;
+  border-radius: 50%;
+  animation: rtPulse 2s ease-in-out infinite;
+}
+@keyframes rtPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(59,130,246,0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(59,130,246,0); }
+}
+.rt-hero__title {
+  font-size: clamp(2rem, 4.5vw, 3.25rem);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  margin-bottom: 1.25rem;
+  max-width: 600px;
+}
+.rt-hero__lead {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #94A3B8;
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+.rt-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+.rt-hero__trust {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.rt-trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  color: #CBD5E1;
+}
+.rt-trust-pill strong { color: #fff; }
+
+/* ── Hero Dashboard ── */
+.rt-hero__visual { position: relative; }
+.rt-dashboard {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 1.5rem;
+  backdrop-filter: blur(20px);
+  position: relative;
+  z-index: 2;
+}
+.rt-dashboard__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.rt-dashboard__title-wrap { display: flex; align-items: center; gap: 0.5rem; }
+.rt-dashboard__dot {
+  width: 8px; height: 8px;
+  background: #10B981;
+  border-radius: 50%;
+  animation: rtPulse 2s infinite;
+}
+.rt-dashboard__title { font-size: 0.85rem; font-weight: 600; color: #E2E8F0; }
+.rt-demo-badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  background: rgba(245,158,11,0.15);
+  color: #F59E0B;
+  border: 1px solid rgba(245,158,11,0.3);
+  border-radius: 9999px;
+  padding: 0.2rem 0.6rem;
+  letter-spacing: 0.04em;
+}
+
+.rt-dash-metrics {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.rt-dash-metric {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.rt-dash-metric__lbl { font-size: 0.65rem; color: #64748B; text-transform: uppercase; letter-spacing: 0.06em; }
+.rt-dash-metric__val { font-size: 1.05rem; font-weight: 700; color: #E2E8F0; }
+.rt-dash-metric__up { font-size: 0.65rem; color: #10B981; font-weight: 600; }
+.rt-dash-metric__neutral { font-size: 0.65rem; color: #60A5FA; font-weight: 600; }
+
+.rt-module-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.rt-module-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 9999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+.rt-module-pill--blue { background: rgba(37,99,235,0.15); color: #93C5FD; border: 1px solid rgba(37,99,235,0.25); }
+.rt-module-pill--emerald { background: rgba(16,185,129,0.15); color: #6EE7B7; border: 1px solid rgba(16,185,129,0.25); }
+.rt-module-pill--violet { background: rgba(124,58,237,0.15); color: #C4B5FD; border: 1px solid rgba(124,58,237,0.25); }
+.rt-module-pill--amber { background: rgba(245,158,11,0.15); color: #FCD34D; border: 1px solid rgba(245,158,11,0.25); }
+.rt-module-pill--cyan { background: rgba(6,182,212,0.15); color: #67E8F9; border: 1px solid rgba(6,182,212,0.25); }
+.rt-module-pill--rose { background: rgba(244,63,94,0.15); color: #FDA4AF; border: 1px solid rgba(244,63,94,0.25); }
+
+.rt-dash-chart { }
+.rt-dash-chart__label { font-size: 0.7rem; color: #64748B; display: block; margin-bottom: 0.4rem; }
+.rt-chart-svg { width: 100%; height: 48px; display: block; }
+
+/* Floating Cards */
+.rt-float-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1rem;
+  background: rgba(15,23,42,0.92);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  backdrop-filter: blur(16px);
+  z-index: 3;
+  white-space: nowrap;
+}
+.rt-float-card--1 { top: -18px; right: -20px; animation: rtFloat1 4s ease-in-out infinite; }
+.rt-float-card--2 { bottom: 20px; left: -24px; animation: rtFloat2 4.5s ease-in-out infinite; }
+.rt-float-card--3 { top: 50%; right: -28px; transform: translateY(-50%); animation: rtFloat1 5s ease-in-out infinite; }
+.rt-float-card--4 { bottom: -16px; right: 24px; animation: rtFloat2 3.8s ease-in-out infinite; }
+@keyframes rtFloat1 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes rtFloat2 { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+.rt-float-card--3 { animation: rtFloat3 5s ease-in-out infinite; }
+@keyframes rtFloat3 { 0%,100% { transform: translateY(-50%) translateX(0); } 50% { transform: translateY(-50%) translateX(-4px); } }
+.rt-float-card__icon {
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.rt-float-card__icon--emerald { background: rgba(16,185,129,0.2); color: #10B981; }
+.rt-float-card__icon--blue { background: rgba(37,99,235,0.2); color: #3B82F6; }
+.rt-float-card__icon--violet { background: rgba(124,58,237,0.2); color: #8B5CF6; }
+.rt-float-card__icon--amber { background: rgba(245,158,11,0.2); color: #F59E0B; }
+.rt-float-card__val { display: block; font-size: 0.8rem; font-weight: 700; color: #E2E8F0; }
+.rt-float-card__sub { display: block; font-size: 0.67rem; color: #94A3B8; }
+
+/* ── Trust Strip ── */
+.rt-trust-strip {
+  background: var(--rt-navy);
+  padding: 3.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.rt-trust-strip__title {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #94A3B8;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.75rem;
+}
+.rt-logo-strip {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 3rem;
+}
+.rt-logo-item {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #475569;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+.rt-stats-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+}
+.rt-stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.25rem 2.5rem;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+.rt-stat-box:last-child { border-right: none; }
+.rt-stat-box__num { font-size: 2.25rem; font-weight: 900; color: #fff; line-height: 1; }
+.rt-stat-box__plus { font-size: 1.5rem; font-weight: 900; color: #3B82F6; display: inline; }
+.rt-stat-box__num-static { font-size: 2.25rem; font-weight: 900; color: #fff; line-height: 1; }
+.rt-stat-box__label { font-size: 0.8rem; color: #64748B; margin-top: 0.3rem; text-align: center; }
+
+/* ── Challenge Cards ── */
+.rt-challenge-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+}
+.rt-challenge-card {
+  background: #fff;
+  border: 1px solid var(--rt-border);
+  border-radius: var(--rt-radius);
+  overflow: hidden;
+  display: flex;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.rt-challenge-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(37,99,235,0.12); border-color: rgba(37,99,235,0.2); }
+.rt-challenge-card__before {
+  flex: 1;
+  padding: 1.25rem;
+  background: #FAFBFC;
+}
+.rt-challenge-tag {
+  display: inline-block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 9999px;
+  margin-bottom: 0.6rem;
+}
+.rt-challenge-tag--problem { background: rgba(239,68,68,0.1); color: #EF4444; }
+.rt-challenge-tag--solution { background: rgba(16,185,129,0.1); color: #10B981; }
+.rt-challenge-card__icon {
+  width: 40px; height: 40px;
+  background: rgba(37,99,235,0.08);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.6rem;
+  color: var(--rt-blue);
+}
+.rt-challenge-card__before h3 { font-size: 0.88rem; font-weight: 700; color: var(--rt-text-dark); }
+.rt-challenge-card__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.5rem;
+  font-size: 1.2rem;
+  color: #CBD5E1;
+  flex-shrink: 0;
+}
+.rt-challenge-card__after {
+  flex: 1.1;
+  padding: 1.25rem;
+  background: rgba(37,99,235,0.03);
+  border-left: 1px solid rgba(37,99,235,0.1);
+}
+.rt-challenge-card__after h3 { font-size: 0.88rem; font-weight: 700; color: var(--rt-blue); margin-bottom: 0.4rem; }
+.rt-challenge-card__after p { font-size: 0.8rem; color: var(--rt-text-muted); line-height: 1.5; }
+
+/* ── Bento Grid ── */
+.rt-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.rt-bento-card {
+  background: #fff;
+  border: 1px solid var(--rt-border);
+  border-radius: var(--rt-radius);
+  padding: 1.75rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.rt-bento-card--wide { grid-column: span 2; }
+.rt-bento-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+  border-color: rgba(37,99,235,0.2);
+}
+.rt-bento-card__icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.rt-bento-card__icon--blue { background: rgba(37,99,235,0.1); color: var(--rt-blue); }
+.rt-bento-card__icon--emerald { background: rgba(16,185,129,0.1); color: var(--rt-emerald); }
+.rt-bento-card__icon--violet { background: rgba(124,58,237,0.1); color: var(--rt-violet); }
+.rt-bento-card__icon--amber { background: rgba(245,158,11,0.1); color: var(--rt-amber); }
+.rt-bento-card__icon--cyan { background: rgba(6,182,212,0.1); color: var(--rt-cyan); }
+.rt-bento-card__icon--rose { background: rgba(244,63,94,0.1); color: var(--rt-rose); }
+.rt-bento-card__title { font-size: 1.05rem; font-weight: 700; color: var(--rt-text-dark); margin-bottom: 0.6rem; }
+.rt-bento-card__desc { font-size: 0.9rem; line-height: 1.6; color: var(--rt-text-muted); flex: 1; margin-bottom: 1rem; }
+.rt-bento-card__link { font-size: 0.85rem; font-weight: 600; color: var(--rt-blue); text-decoration: none; margin-top: auto; }
+.rt-bento-card__link:hover { text-decoration: underline; }
+
+/* ── Features Grid ── */
+.rt-features-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.rt-feature-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--rt-radius);
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+}
+.rt-feature-card:hover {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(59,130,246,0.3);
+  transform: translateY(-2px);
+}
+.rt-feature-card__icon {
+  width: 40px; height: 40px;
+  background: rgba(59,130,246,0.15);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #60A5FA;
+  margin-bottom: 0.75rem;
+}
+.rt-feature-card h3 { font-size: 0.88rem; font-weight: 700; color: #E2E8F0; margin-bottom: 0.4rem; }
+.rt-feature-card p { font-size: 0.78rem; line-height: 1.55; color: #64748B; }
+
+/* ── Industry Grid ── */
+.rt-industry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.rt-industry-card {
+  background: #fff;
+  border: 1px solid var(--rt-border);
+  border-radius: var(--rt-radius);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+.rt-industry-card:hover {
+  border-color: rgba(37,99,235,0.3);
+  box-shadow: 0 10px 30px rgba(37,99,235,0.1);
+  transform: translateY(-2px);
+}
+.rt-industry-card__icon {
+  width: 44px; height: 44px;
+  background: rgba(37,99,235,0.08);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rt-blue);
+  margin-bottom: 0.85rem;
+}
+.rt-industry-card h3 { font-size: 0.95rem; font-weight: 700; color: var(--rt-text-dark); margin-bottom: 0.5rem; }
+.rt-industry-card p { font-size: 0.82rem; line-height: 1.55; color: var(--rt-text-muted); padding-bottom: 1.5rem; }
+.rt-industry-card__arrow {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.25rem;
+  font-size: 1.1rem;
+  color: var(--rt-blue);
+  opacity: 0;
+  transition: opacity 0.2s ease, right 0.2s ease;
+}
+.rt-industry-card:hover .rt-industry-card__arrow { opacity: 1; right: 1rem; }
+
+/* ── Omnichannel ── */
+.rt-omni {
+  background: linear-gradient(135deg, #0B1426 0%, #1A2942 60%, #0F1E3A 100%);
+  padding: 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.rt-omni::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(37,99,235,0.15) 0%, transparent 70%);
+}
+.rt-omni__content { position: relative; z-index: 1; text-align: center; }
+.rt-omni-hub {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem 0;
+  min-height: 300px;
+}
+.rt-omni-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.rt-omni-core {
+  width: 90px; height: 90px;
+  background: linear-gradient(135deg, #2563EB, #7C3AED);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  gap: 0.3rem;
+  box-shadow: 0 0 40px rgba(37,99,235,0.4);
+}
+.rt-omni-ring {
+  position: absolute;
+  width: 200px; height: 200px;
+  border: 1px solid rgba(59,130,246,0.2);
+  border-radius: 50%;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  animation: rtRing 8s linear infinite;
+}
+@keyframes rtRing { to { transform: translate(-50%,-50%) rotate(360deg); } }
+.rt-omni-nodes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+.rt-omni-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--rt-radius);
+  color: #CBD5E1;
+  font-size: 0.78rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  min-width: 100px;
+}
+.rt-omni-node:hover { background: rgba(37,99,235,0.15); border-color: rgba(37,99,235,0.4); }
+.rt-omni-node__icon {
+  width: 38px; height: 38px;
+  background: rgba(37,99,235,0.15);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #60A5FA;
+}
+.rt-omni__cta { margin-top: 3rem; }
+
+/* ── Custom Development ── */
+.rt-custom-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+.rt-custom-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+.rt-custom-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: #F8FAFC;
+  border: 1px solid var(--rt-border);
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--rt-text-dark);
+  transition: all 0.2s ease;
+  cursor: default;
+}
+.rt-custom-pill:hover { background: rgba(37,99,235,0.06); border-color: rgba(37,99,235,0.25); color: var(--rt-blue); }
+.rt-custom-pill svg { color: var(--rt-blue); }
+
+/* ── Technology ── */
+.rt-tech-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.rt-tech-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+.rt-tech-group__label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #94A3B8;
+  min-width: 90px;
+  padding-top: 0.5rem;
+}
+.rt-tech-group__cards { display: flex; flex-wrap: wrap; gap: 0.75rem; flex: 1; }
+.rt-tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border: 1px solid var(--rt-border);
+  border-radius: var(--rt-radius-sm);
+  min-width: 90px;
+  transition: all 0.2s ease;
+}
+.rt-tech-card:hover { border-color: rgba(37,99,235,0.3); box-shadow: 0 4px 16px rgba(0,0,0,0.06); transform: translateY(-2px); }
+.rt-tech-card span { font-size: 0.78rem; font-weight: 600; color: var(--rt-text-slate); }
+
+/* ── Benefits ── */
+.rt-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+.rt-benefit-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--rt-radius);
+  padding: 2rem 1.75rem;
+  transition: all 0.3s ease;
+}
+.rt-benefit-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(59,130,246,0.3); transform: translateY(-2px); }
+.rt-benefit-card__num {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #3B82F6;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, #3B82F6, #06B6D4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.rt-benefit-card h3 { font-size: 1rem; font-weight: 700; color: #E2E8F0; margin-bottom: 0.5rem; }
+.rt-benefit-card p { font-size: 0.85rem; line-height: 1.6; color: #64748B; }
+.rt-metrics-note { text-align: center; font-size: 0.78rem; color: #475569; font-style: italic; }
+
+/* ── Comparison ── */
+.rt-comparison {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.rt-comparison__col { border-radius: var(--rt-radius); overflow: hidden; }
+.rt-comparison__col--before { border: 1px solid #FECACA; }
+.rt-comparison__col--after { border: 1px solid #A7F3D0; }
+.rt-comparison__head {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.rt-comparison__col--before .rt-comparison__head { background: #FEF2F2; }
+.rt-comparison__col--after .rt-comparison__head { background: #ECFDF5; }
+.rt-comparison__head h3 { font-size: 1rem; font-weight: 700; }
+.rt-comp-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+}
+.rt-comp-tag--before { background: rgba(239,68,68,0.1); color: #DC2626; }
+.rt-comp-tag--after { background: rgba(16,185,129,0.1); color: #059669; }
+.rt-comp-list { list-style: none; padding: 1.25rem 1.5rem; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+.rt-comp-list__item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+}
+.rt-comp-list__item--bad { color: #64748B; }
+.rt-comp-list__item--good { color: var(--rt-text-dark); font-weight: 500; }
+.rt-comparison__divider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-top: 6rem;
+}
+.rt-comp-arrow {
+  width: 56px; height: 56px;
+  background: linear-gradient(135deg, #2563EB, #7C3AED);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(37,99,235,0.3);
+}
+.rt-comparison__divider span {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--rt-blue);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── Process Timeline ── */
+.rt-process-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+.rt-process-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid var(--rt-border);
+  border-radius: var(--rt-radius);
+  transition: all 0.3s ease;
+}
+.rt-process-item:hover { border-color: rgba(37,99,235,0.3); box-shadow: 0 8px 24px rgba(37,99,235,0.08); transform: translateY(-2px); }
+.rt-process-item__num {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: rgba(37,99,235,0.15);
+  line-height: 1;
+  flex-shrink: 0;
+  min-width: 40px;
+}
+.rt-process-item__content h3 { font-size: 0.95rem; font-weight: 700; color: var(--rt-text-dark); margin-bottom: 0.4rem; }
+.rt-process-item__content p { font-size: 0.82rem; line-height: 1.55; color: var(--rt-text-muted); }
+
+/* ── Case Studies ── */
+.rt-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.rt-case-card {
+  background: #fff;
+  border: 1px solid var(--rt-border);
+  border-radius: var(--rt-radius);
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+.rt-case-card:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.08); transform: translateY(-3px); border-color: rgba(37,99,235,0.2); }
+.rt-case-card__tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--rt-blue);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+.rt-case-card__title { font-size: 1.05rem; font-weight: 800; color: var(--rt-text-dark); margin-bottom: 1.25rem; }
+.rt-case-card__block { margin-bottom: 0.85rem; }
+.rt-case-card__lbl { display: block; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #94A3B8; margin-bottom: 0.3rem; }
+.rt-case-card__block p { font-size: 0.85rem; line-height: 1.55; color: var(--rt-text-slate); }
+.rt-case-card__result {
+  border-top: 1px solid var(--rt-border);
+  padding-top: 1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.rt-case-card__metric {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--rt-text-slate);
+}
+.rt-case-card__metric-num { font-size: 1.5rem; font-weight: 900; color: var(--rt-blue); }
+.rt-case-card__metric em { font-style: italic; font-size: 0.72rem; color: #94A3B8; }
+
+/* ── Why Hegrix ── */
+.rt-why-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.rt-why-card {
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid var(--rt-border);
+  border-radius: var(--rt-radius);
+  transition: all 0.3s ease;
+}
+.rt-why-card:hover { border-color: rgba(37,99,235,0.3); box-shadow: 0 8px 24px rgba(37,99,235,0.08); transform: translateY(-2px); }
+.rt-why-card__num { font-size: 1.75rem; font-weight: 900; color: rgba(37,99,235,0.1); margin-bottom: 0.6rem; }
+.rt-why-card h3 { font-size: 0.9rem; font-weight: 700; color: var(--rt-text-dark); margin-bottom: 0.5rem; }
+.rt-why-card p { font-size: 0.8rem; line-height: 1.55; color: var(--rt-text-muted); }
+
+/* ── Testimonials ── */
+.rt-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.rt-testimonial-card {
+  background: #fff;
+  border: 1px solid var(--rt-border);
+  border-radius: var(--rt-radius);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: all 0.3s ease;
+}
+.rt-testimonial-card:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.08); transform: translateY(-2px); }
+.rt-testimonial-card__stars { display: flex; gap: 0.2rem; }
+.rt-testimonial-card__quote {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--rt-text-slate);
+  font-style: italic;
+  flex: 1;
+  margin: 0;
+}
+.rt-testimonial-card__author { display: flex; align-items: center; gap: 0.85rem; }
+.rt-testimonial-card__avatar {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, #2563EB, #7C3AED);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+.rt-testimonial-card__author strong { display: block; font-size: 0.9rem; color: var(--rt-text-dark); }
+.rt-testimonial-card__author span { display: block; font-size: 0.78rem; color: var(--rt-text-muted); margin-top: 0.15rem; }
+
+/* ── FAQ ── */
+.rt-faq-list {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.rt-faq-item {
+  background: #fff;
+  border: 1px solid var(--rt-border);
+  border-radius: var(--rt-radius-sm);
+  overflow: hidden;
+}
+.rt-faq-item__q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--rt-text-dark);
+  transition: color 0.2s ease;
+}
+.rt-faq-item__q:hover { color: var(--rt-blue); }
+.rt-faq-item__q[aria-expanded="true"] { color: var(--rt-blue); }
+.rt-faq-item__q[aria-expanded="true"] .rt-faq-item__chevron { transform: rotate(180deg); }
+.rt-faq-item__chevron { flex-shrink: 0; transition: transform 0.3s ease; color: var(--rt-text-muted); }
+.rt-faq-item__a { padding: 0 1.5rem 1.25rem; }
+.rt-faq-item__a p { font-size: 0.9rem; line-height: 1.7; color: var(--rt-text-slate); margin: 0; }
+
+/* ── SEO Content ── */
+.rt-seo-content__heading {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--rt-text-dark);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+.rt-seo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.rt-seo-block h3 { font-size: 1rem; font-weight: 700; color: var(--rt-blue); margin-bottom: 0.6rem; }
+.rt-seo-block p { font-size: 0.9rem; line-height: 1.75; color: var(--rt-text-slate); }
+
+/* ── Final CTA ── */
+.rt-final-cta {
+  background: linear-gradient(135deg, #0B1426 0%, #1E2F6B 50%, #0B1426 100%);
+  padding: 7rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.rt-final-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(37,99,235,0.2) 0%, transparent 70%);
+}
+.rt-final-cta__content { position: relative; z-index: 1; }
+.rt-final-cta__title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+.rt-final-cta__desc { font-size: 1.05rem; line-height: 1.7; color: #94A3B8; max-width: 620px; margin: 0 auto 2.5rem; }
+.rt-final-cta__actions { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+
+/* ── Contact ── */
+.rt-contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: start;
+}
+.rt-contact-trust {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--rt-text-muted);
+  margin-top: 2rem;
+  padding: 1rem;
+  background: rgba(16,185,129,0.05);
+  border: 1px solid rgba(16,185,129,0.15);
+  border-radius: var(--rt-radius-sm);
+  line-height: 1.6;
+}
+.rt-contact-points { margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.rt-contact-point { display: flex; align-items: center; gap: 0.75rem; font-size: 0.88rem; color: var(--rt-text-slate); }
+.rt-contact-point__icon {
+  width: 28px; height: 28px;
+  background: rgba(37,99,235,0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rt-blue);
+  flex-shrink: 0;
+}
+
+/* ── Form ── */
+.rt-form { }
+.rt-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 1.5rem; }
+.rt-form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+.rt-form-group--full { grid-column: 1 / -1; }
+.rt-form-group label { font-size: 0.82rem; font-weight: 600; color: var(--rt-text-dark); }
+.rt-form-group input,
+.rt-form-group select,
+.rt-form-group textarea {
+  padding: 0.75rem 1rem;
+  border: 1.5px solid var(--rt-border);
+  border-radius: var(--rt-radius-sm);
+  font-size: 0.9rem;
+  color: var(--rt-text-dark);
+  background: #fff;
+  transition: border-color 0.2s;
+  outline: none;
+  font-family: inherit;
+}
+.rt-form-group input:focus,
+.rt-form-group select:focus,
+.rt-form-group textarea:focus { border-color: var(--rt-blue); box-shadow: 0 0 0 3px rgba(37,99,235,0.08); }
+.rt-form-group textarea { resize: vertical; }
+.rt-form-status {
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--rt-radius-sm);
+  font-size: 0.88rem;
+  margin-bottom: 1rem;
+}
+.rt-form-status.success { background: rgba(16,185,129,0.1); color: #059669; border: 1px solid rgba(16,185,129,0.2); }
+.rt-form-status.error { background: rgba(239,68,68,0.1); color: #DC2626; border: 1px solid rgba(239,68,68,0.2); }
+
+/* ── Related ── */
+.rt-related-wrap { }
+.rt-related-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #94A3B8;
+  margin-bottom: 1rem;
+}
+.rt-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+.rt-related-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border: 1.5px solid var(--rt-border);
+  border-radius: var(--rt-radius-sm);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--rt-text-dark);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.rt-related-card:hover { border-color: rgba(37,99,235,0.3); color: var(--rt-blue); transform: translateY(-1px); }
+.rt-related-card--active { border-color: rgba(37,99,235,0.4); color: var(--rt-blue); background: rgba(37,99,235,0.04); }
+.rt-related-card svg { flex-shrink: 0; }
+
+/* ── Mobile Sticky CTA ── */
+.rt-mobile-sticky {
+  display: none;
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border-top: 1px solid var(--rt-border);
+  z-index: 100;
+  box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+}
+
+/* ── Success Modal ── */
+.rt-success-modal { position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center; padding: 1rem; }
+.rt-success-modal[hidden] { display: none; }
+.rt-success-modal__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+.rt-success-modal__content {
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  padding: 2.5rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+}
+.rt-success-modal__close {
+  position: absolute;
+  top: 1rem; right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #94A3B8;
+  line-height: 1;
+}
+.rt-success-modal__icon {
+  width: 64px; height: 64px;
+  background: rgba(37,99,235,0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+.rt-success-modal__content h3 { font-size: 1.3rem; font-weight: 800; color: var(--rt-text-dark); margin-bottom: 0.75rem; }
+.rt-success-modal__content p { font-size: 0.9rem; line-height: 1.7; color: var(--rt-text-muted); margin-bottom: 1.5rem; }
+
+/* ── Responsive ── */
+@media (max-width: 1200px) {
+  .rt-features-grid { grid-template-columns: repeat(4, 1fr); }
+  .rt-why-grid { grid-template-columns: repeat(4, 1fr); }
+  .rt-industry-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 1024px) {
+  .rt-hero__wrap { grid-template-columns: 1fr; gap: 3rem; }
+  .rt-hero__visual { display: none; }
+  .rt-challenge-grid { grid-template-columns: repeat(2, 1fr); }
+  .rt-bento-grid { grid-template-columns: repeat(2, 1fr); }
+  .rt-bento-card--wide { grid-column: span 2; }
+  .rt-features-grid { grid-template-columns: repeat(3, 1fr); }
+  .rt-comparison { grid-template-columns: 1fr; gap: 1rem; }
+  .rt-comparison__divider { flex-direction: row; padding-top: 0; justify-content: center; }
+  .rt-comparison__divider span { display: none; }
+  .rt-process-timeline { grid-template-columns: repeat(2, 1fr); }
+  .rt-cases-grid { grid-template-columns: repeat(2, 1fr); }
+  .rt-why-grid { grid-template-columns: repeat(3, 1fr); }
+  .rt-contact-wrap { grid-template-columns: 1fr; }
+  .rt-custom-wrap { grid-template-columns: 1fr; }
+  .rt-related-grid { grid-template-columns: repeat(2, 1fr); }
+  .rt-tech-group { flex-direction: column; gap: 0.75rem; }
+  .rt-testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .rt-section { padding: 3.5rem 0; }
+  .rt-hero { padding: 5rem 0 3.5rem; }
+  .rt-challenge-grid { grid-template-columns: 1fr; }
+  .rt-bento-grid { grid-template-columns: 1fr; }
+  .rt-bento-card--wide { grid-column: span 1; }
+  .rt-features-grid { grid-template-columns: repeat(2, 1fr); }
+  .rt-industry-grid { grid-template-columns: repeat(2, 1fr); }
+  .rt-stats-grid { flex-direction: column; gap: 0; }
+  .rt-stat-box { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); padding: 1rem 2rem; }
+  .rt-stat-box:last-child { border-bottom: none; }
+  .rt-process-timeline { grid-template-columns: 1fr; }
+  .rt-cases-grid { grid-template-columns: 1fr; }
+  .rt-why-grid { grid-template-columns: repeat(2, 1fr); }
+  .rt-testimonials-grid { grid-template-columns: 1fr; }
+  .rt-benefits-grid { grid-template-columns: repeat(2, 1fr); }
+  .rt-seo-grid { grid-template-columns: 1fr; }
+  .rt-form-grid { grid-template-columns: 1fr; }
+  .rt-final-cta__actions { flex-direction: column; align-items: center; }
+  .rt-omni-nodes { gap: 0.6rem; }
+  .rt-omni-node { min-width: 80px; padding: 0.75rem 0.85rem; }
+  .rt-mobile-sticky { display: block; }
+  .rt-related-grid { grid-template-columns: 1fr; }
+  .rt-benefits-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .rt-features-grid { grid-template-columns: 1fr; }
+  .rt-industry-grid { grid-template-columns: 1fr; }
+  .rt-why-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+
+<script>
+// ── FAQ Accordion ──
+const faqList = document.getElementById('rtFaqList');
+if (faqList) {
+  faqList.addEventListener('click', (e) => {
+    const btn = e.target.closest('.rt-faq-item__q');
+    if (!btn) return;
+    const item = btn.closest('.rt-faq-item');
+    const answer = item.querySelector('.rt-faq-item__a');
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+
+    // Close all
+    faqList.querySelectorAll('.rt-faq-item__q').forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      b.closest('.rt-faq-item').querySelector('.rt-faq-item__a').hidden = true;
+    });
+
+    if (!isOpen) {
+      btn.setAttribute('aria-expanded', 'true');
+      answer.hidden = false;
+    }
+  });
+}
+
+// ── Animated Stats Counter ──
+const animateCounters = () => {
+  const statNums = document.querySelectorAll('.rt-stat-box__num[data-target]');
+  statNums.forEach(el => {
+    const target = parseInt(el.getAttribute('data-target'), 10);
+    const duration = 1800;
+    const step = target / (duration / 16);
+    let current = 0;
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      el.textContent = Math.floor(current);
+    }, 16);
+  });
+};
+
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounters();
+      statObserver.disconnect();
+    }
+  });
+}, { threshold: 0.3 });
+
+const statsGrid = document.querySelector('.rt-stats-grid');
+if (statsGrid) statObserver.observe(statsGrid);
+
+// ── Contact Form ──
+const rtForm = document.getElementById('rtContactForm');
+const rtStatus = document.getElementById('rtFormStatus');
+const rtSubmitBtn = document.getElementById('rtSubmitBtn');
+const rtSubmitText = document.getElementById('rtSubmitText');
+const rtModal = document.getElementById('rtSuccessModal');
+
+if (rtForm) {
+  rtForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    rtSubmitBtn.disabled = true;
+    rtSubmitText.textContent = 'Sending…';
+
+    const formData = new FormData(rtForm);
+    const data = Object.fromEntries(formData.entries());
+    data.subject = 'Retail Software Solutions Inquiry';
+    data.page = '/industries/retail/';
+
+    try {
+      const res = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (res.ok) {
+        rtForm.reset();
+        if (rtModal) rtModal.hidden = false;
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      rtStatus.textContent = 'Something went wrong. Please try again or contact us directly.';
+      rtStatus.className = 'rt-form-status error';
+      rtStatus.hidden = false;
+    } finally {
+      rtSubmitBtn.disabled = false;
+      rtSubmitText.textContent = 'Discuss My Retail Project';
+    }
+  });
+}
+
+// Modal close
+const rtModalClose = document.getElementById('rtModalClose');
+const rtModalBackdrop = document.getElementById('rtModalBackdrop');
+const rtModalBtn = document.getElementById('rtModalBtn');
+[rtModalClose, rtModalBackdrop, rtModalBtn].forEach(el => {
+  if (el) el.addEventListener('click', () => { if (rtModal) rtModal.hidden = true; });
+});
+</script>
+
