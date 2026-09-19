@@ -236,6 +236,12 @@ const testimonials = [
       <div class="hp-hero__orb hp-hero__orb--3" aria-hidden="true"></div>
       <div class="hp-hero__grid-lines" aria-hidden="true"></div>
 
+      <!-- Scroll Indicator -->
+      <div class="hp-scroll-hint" aria-hidden="true">
+        <span class="hp-scroll-hint__text">Scroll</span>
+        <div class="hp-scroll-hint__arrow"></div>
+      </div>
+
       <div class="container">
         <div class="hp-hero__inner">
           <!-- Left: Content -->
@@ -419,7 +425,7 @@ const testimonials = [
     ═══════════════════════════════════════════════ -->
     <section class="hp-section" aria-labelledby="services-heading">
       <div class="container">
-        <div class="hp-section__header">
+        <div class="hp-section__header hp-reveal">
           <p class="hp-eyebrow">What We Do</p>
           <h2 id="services-heading" class="hp-section__title">Enterprise Digital Services</h2>
           <p class="hp-section__desc">Complete end-to-end technology capabilities designed to transform your operations and drive measurable growth.</p>
@@ -472,6 +478,7 @@ const testimonials = [
             <p class="hp-eyebrow">Why Choose Us</p>
             <h2 id="why-heading" class="hp-section__title hp-section__title--left">Why Global Enterprises Partner With Hegrix</h2>
             <p class="hp-section__desc hp-section__desc--left">We combine deep domain expertise, senior engineering talent, and a business-first strategy to deliver outcomes that matter.</p>
+
 
             <div class="hp-why__checks">
               <div class="hp-why__check">
@@ -531,7 +538,7 @@ const testimonials = [
     ═══════════════════════════════════════════════ -->
     <section class="hp-section" aria-labelledby="industries-heading">
       <div class="container">
-        <div class="hp-section__header">
+        <div class="hp-section__header hp-reveal">
           <p class="hp-eyebrow">Industries We Serve</p>
           <h2 id="industries-heading" class="hp-section__title">Tailored Solutions for Every Sector</h2>
           <p class="hp-section__desc">Deep industry expertise to solve specific compliance, operational, and reporting challenges across verticals.</p>
@@ -570,7 +577,7 @@ const testimonials = [
     ═══════════════════════════════════════════════ -->
     <section class="hp-tech" aria-labelledby="tech-heading">
       <div class="container">
-        <div class="hp-section__header">
+        <div class="hp-section__header hp-reveal">
           <p class="hp-eyebrow hp-eyebrow--light">Technology Stack</p>
           <h2 id="tech-heading" class="hp-section__title hp-section__title--light">Enterprise-Grade Technology</h2>
           <p class="hp-section__desc hp-section__desc--light">Modern, robust platforms chosen for speed, security, scalability, and long-term maintainability.</p>
@@ -599,7 +606,7 @@ const testimonials = [
     ═══════════════════════════════════════════════ -->
     <section class="hp-section" aria-labelledby="cases-heading">
       <div class="container">
-        <div class="hp-section__header">
+        <div class="hp-section__header hp-reveal">
           <p class="hp-eyebrow">Success Stories</p>
           <h2 id="cases-heading" class="hp-section__title">Featured Business Transformations</h2>
           <p class="hp-section__desc">Explore how growth-focused companies unlocked new efficiency with Hegrix digital solutions.</p>
@@ -642,7 +649,7 @@ const testimonials = [
     ═══════════════════════════════════════════════ -->
     <section class="hp-section hp-section--alt" aria-labelledby="testi-heading">
       <div class="container">
-        <div class="hp-section__header">
+        <div class="hp-section__header hp-reveal">
           <p class="hp-eyebrow">Client Testimonials</p>
           <h2 id="testi-heading" class="hp-section__title">What Enterprise Leaders Say</h2>
           <p class="hp-section__desc">Real feedback from executive partners who accelerated their business with Hegrix.</p>
@@ -674,7 +681,7 @@ const testimonials = [
     ═══════════════════════════════════════════════ -->
     <section class="hp-section" aria-labelledby="process-heading">
       <div class="container">
-        <div class="hp-section__header">
+        <div class="hp-section__header hp-reveal">
           <p class="hp-eyebrow">Delivery Process</p>
           <h2 id="process-heading" class="hp-section__title">Our Proven 7-Step Methodology</h2>
           <p class="hp-section__desc">A disciplined, transparent process from initial discovery through deployment and continuous growth support.</p>
@@ -703,7 +710,7 @@ const testimonials = [
     ═══════════════════════════════════════════════ -->
     <section class="hp-section hp-section--alt" aria-labelledby="blog-heading">
       <div class="container">
-        <div class="hp-section__header">
+        <div class="hp-section__header hp-reveal">
           <p class="hp-eyebrow">Latest Insights</p>
           <h2 id="blog-heading" class="hp-section__title">Digital Transformation Guides</h2>
           <p class="hp-section__desc">Articles, whitepapers, and guides on Odoo ERP, AI automation, and cloud architecture.</p>
@@ -810,4 +817,61 @@ const testimonials = [
     </section>
 
   </div>
+
+  <script>
+    // Scroll-triggered reveal animations
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('hp-visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    document.querySelectorAll('.hp-reveal').forEach((el) => {
+      revealObserver.observe(el);
+    });
+
+    // Animated stat counters
+    const counterObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const final = el.textContent || '';
+            const numMatch = final.match(/([\d,.]+)/);
+            if (numMatch) {
+              const numStr = numMatch[1];
+              const num = parseFloat(numStr.replace(/,/g, ''));
+              const prefix = final.substring(0, final.indexOf(numStr));
+              const suffix = final.substring(final.indexOf(numStr) + numStr.length);
+              const hasComma = numStr.includes(',');
+              const duration = 1600;
+              const start = performance.now();
+              const step = (now: number) => {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = Math.round(num * eased);
+                const formatted = hasComma ? current.toLocaleString() : current.toString();
+                el.textContent = prefix + formatted + suffix;
+                if (progress < 1) requestAnimationFrame(step);
+                else el.textContent = final;
+              };
+              requestAnimationFrame(step);
+            }
+            counterObserver.unobserve(el);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    document.querySelectorAll('.hp-stat__num').forEach((el) => {
+      counterObserver.observe(el);
+    });
+  </script>
 </Layout>
