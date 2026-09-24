@@ -9309,7 +9309,7 @@ summary:focus-visible {
   .hp-stats__card { grid-template-columns: repeat(2, 1fr); }
   .hp-ind-grid { grid-template-columns: 1fr; }
   .hp-why__right { grid-template-columns: 1fr; }
-}═══════════════════════ */
+}
 @media (max-width: 1024px) {
   .hp-hero__inner {
     grid-template-columns: 1fr;
