@@ -84,8 +84,8 @@ const validateLead = (payload: LeadPayload, refererHeader = "") => {
 };
 
 const readSupabaseConfig = () => {
-  const url = process.env.SUPABASE_URL;
-  const key = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY;
+  const url = import.meta.env.SUPABASE_URL;
+  const key = import.meta.env.SUPABASE_SERVICE_ROLE_KEY || import.meta.env.SUPABASE_ANON_KEY;
 
   if (!url || !key) {
     throw new Error("Supabase is not configured. Add SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY environment variables.");

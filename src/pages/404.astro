@@ -1,0 +1,35 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+export const prerender = true;
+---
+
+<Layout
+  title="Page Not Found | Hegrix"
+  description="The page you're looking for doesn't exist. Explore Hegrix services, solutions, and industries."
+  keywords="404, page not found"
+  path="/404/"
+>
+  <section class="error-page">
+    <div class="container narrow" style="text-align:center; padding: 8rem 1.5rem;">
+      <p class="eyebrow">404 — Page Not Found</p>
+      <h1 style="font-size: clamp(2.4rem, 5vw, 3.6rem); margin-bottom: 1rem;">
+        This page doesn't exist.
+      </h1>
+      <p class="lead" style="max-width: 520px; margin: 0 auto 2.5rem;">
+        The URL may have changed, or the page may have been removed. Let's get you back on track.
+      </p>
+      <div class="hero-actions" style="justify-content: center;">
+        <a class="button" href="/">Back to Home</a>
+        <a class="button button-ghost" href="/services/">Explore Services</a>
+      </div>
+
+      <div style="margin-top: 3rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+        <a href="/solutions/" style="color: var(--accent, #7c3aed); text-decoration: underline; text-underline-offset: 3px;">Solutions</a>
+        <a href="/industries/" style="color: var(--accent, #7c3aed); text-decoration: underline; text-underline-offset: 3px;">Industries</a>
+        <a href="/blog/" style="color: var(--accent, #7c3aed); text-decoration: underline; text-underline-offset: 3px;">Blog</a>
+        <a href="/contact-us/" style="color: var(--accent, #7c3aed); text-decoration: underline; text-underline-offset: 3px;">Contact Us</a>
+      </div>
+    </div>
+  </section>
+</Layout>
